@@ -10,7 +10,9 @@ The FalseWork Papers project operates with **no external funding** at present.
 
 ## GitHub Sponsors
 
-GitHub Sponsors is enabled on the `thefalsework` organization at $0/month. This costs nothing, exposes no expectation, and leaves the mechanism available should the project ever become fundable. If you are a funder or foundation interested in supporting specific open validation targets, please reach out at `chris@falsework.dev`.
+GitHub Sponsors is **deferred**, not planned. Enabling Sponsors on the `thefalsework` organization requires full bank, tax, and identity verification through Stripe Express even for a $0/month goal; at the project's current stage (no incoming funding, no active bounties, no concrete funders asking), that setup overhead is not justified.
+
+If a concrete funder, foundation, or bounty offer does emerge, Sponsors can be enabled in an afternoon. Until then, please reach out directly at `chris@falsework.dev` — direct contact is the cleanest path.
 
 ## Targets that would benefit from funding
 
