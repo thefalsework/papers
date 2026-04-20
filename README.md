@@ -71,6 +71,19 @@ You may read, copy, translate, redistribute, and build on any of the content, co
 
 ---
 
+## See it applied
+
+The papers describe a framework; the framework runs live as an instrument:
+
+- **[falsework.dev/kernels](https://falsework.dev/kernels)** — the registered-kernels instrument. Each kernel from the papers (the Fifth, the Cut, the Mark, Gravity, the Conditional Branch, the Wave Function, Syntax) appears here with its four-criteria evidence, field topology, and the works empirically classified against its territories. This is where the abstract categorical sketch becomes a working navigational object.
+- **[falsework.dev/thesis](https://falsework.dev/thesis)** — the narrative argument with historical and scholarly precedents cited inline (Spencer-Brown, Bruner, Meyer & Land, Feynman, Hurwitz/Frobenius, Baker, Lakatos, and the domain-specific precursors each kernel inherits).
+- **[falsework.dev/theory](https://falsework.dev/theory)** — the full technical exposition. Dual-register: a 3-minute summary and a complete reading. Links back to each paper in this repository at the relevant citation.
+- **[falsework.dev/structural-profile](https://falsework.dev/structural-profile)** — the seven-stage analysis pipeline that generates structural profiles of specific works. This is where the framework becomes a testable instrument: profiles are hypotheses the papers predict, and their empirical behavior is part of the framework's validation record.
+
+The site is a separate codebase (proprietary). The papers in this repository are the formal record; the site is the applied instrument. Links are one-way: papers point at live URLs, the site points at paper markdown files in this repository.
+
+---
+
 ## Contact
 
 - **Author:** Chris Brink — Independent researcher
