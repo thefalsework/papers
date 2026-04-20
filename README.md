@@ -1,0 +1,86 @@
+# The FalseWork Papers
+
+An open-source research programme on structural incompleteness across domains of sustained human practice — music, cinema, painting, architecture, software, physics, knowledge production — and the shared mathematical and epistemological floor underneath them.
+
+This repository holds the papers themselves, the open validation items they contain, and the infrastructure for anyone who wants to read, comment, verify, correct, or formalize their claims.
+
+> **Project status.** Working drafts. Arguments marked `[REQUIRES FORMAL VALIDATION]` need external expert engagement before the claims can be advanced as settled. Nothing in this repository is peer-reviewed in the traditional sense; validation happens here, in the open.
+
+---
+
+## The papers
+
+All five papers are authored by **Chris Brink** (independent researcher), distributed under **CC-BY-4.0**, and cite each other as a coherent series. The Markdown source is authoritative; each released DOCX is preserved in the per-paper `archive/` subdirectory.
+
+| # | Paper | Current version | Source |
+|---|---|---|---|
+| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.3 | [archive](papers/paper1-kernels-and-commas/archive/v11.3.docx) |
+| 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [archive](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
+| 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.1 | [archive](papers/paper3-distinction-operation/archive/v9.1.docx) |
+| 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.1 | [archive](papers/paper4-mathematics-as-comma/archive/v5.1.docx) |
+| 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.1 | [archive](papers/pythagorean-shared-floor/archive/v1.1.docx) |
+
+A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md).
+
+---
+
+## What this project is
+
+The papers make claims that cross mathematics, physics, philosophy, formal logic, musicology, and the practice-based creative domains. Most interdisciplinary work of this kind is either published privately and never validated, or locked inside closed peer-review processes whose outputs are binary (accept/reject) rather than structured. This project operates on a different premise: **validation is a distributed, open, modular process**, and the honest state of a research programme is legible to anyone who wants to inspect it.
+
+Concretely:
+
+- Every `[REQUIRES FORMAL VALIDATION]` flag in the papers is mirrored as a structured entry in [`validation/OPEN.md`](validation/OPEN.md), with an authoritative claim statement in [`validation/claims/`](validation/claims/) and a matching [GitHub Issue](https://github.com/thefalsework/papers/issues) for discussion.
+- Any mathematician, philosopher, logician, or domain expert who wants to verify, correct, or dispute a claim can do so by opening an issue or PR. Acceptance criteria are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- Resolved validations move to [`validation/RESOLVED.md`](validation/RESOLVED.md) with the validator's name (with permission) and a pointer to the revision that absorbed their feedback.
+- The `lean/` directory hosts a Lean 4 formalization target — currently a placeholder describing what a rigorous categorical formalization of the music-kernel endofunctor would look like; open to collaborators. See [`lean/README.md`](lean/README.md).
+- Outreach drafts for specific validator engagements (mathematicians, Lean community, philosophers) live in [`docs/outreach/`](docs/outreach/) — also version-controlled, also open to improvement.
+
+---
+
+## How to engage
+
+### If you just want to read
+
+- Start with [Paper 1 § 1](papers/paper1-kernels-and-commas/paper1.md) for the framework. [Paper 2 § 1](papers/paper2-epistemic-dependency/paper2.md) extends it to AI-assisted knowledge production. [Paper 3 § 1](papers/paper3-distinction-operation/paper3.md) lays the Spencer-Brown / categorical foundation. [Paper 4 § 1](papers/paper4-mathematics-as-comma/paper4.md) is the strongest ontological claim. The [Pythagorean companion](papers/pythagorean-shared-floor/pythagorean.md) is the technical unification of the Pythagorean comma and the irrationality of √2.
+- Each paper's top matter includes a revision history and explicit `[REQUIRES FORMAL VALIDATION]` markers. Nothing is hidden.
+
+### If you want to validate or correct a specific claim
+
+- Browse [`validation/OPEN.md`](validation/OPEN.md) for the current open items.
+- Each claim has an authoritative statement at [`validation/claims/[slug].md`](validation/claims/) and a GitHub Issue for discussion.
+- Follow the instructions in [`CONTRIBUTING.md`](CONTRIBUTING.md) for what counts as a valid verification, correction, or disproof.
+
+### If you want to formalize the mathematics
+
+- The highest-leverage target is the six-point music-kernel formalization in Lean 4. See [`lean/README.md`](lean/README.md) for the full specification.
+- Any categorical, number-theoretic, or set-theoretic formalization contribution is welcome. Acceptance criterion: passing `lake build` with the claimed theorem proved.
+
+### If you want to propose a new open research direction
+
+- Open an issue using the **Open Research Direction** template. It will be added to `validation/OPEN.md` after a brief review.
+
+---
+
+## Licensing
+
+- **Papers** (all prose, figures, citations in `papers/`, `validation/`, `docs/`): [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE).
+- **Code** (`lean/`, any future tooling): [Apache License 2.0](LICENSE-CODE).
+
+You may read, copy, translate, redistribute, and build on any of the content, commercial or not, provided you give appropriate credit and indicate changes.
+
+---
+
+## Contact
+
+- **Author:** Chris Brink — Independent researcher
+- **Email:** `chris@falsework.dev`
+- **Site:** [falsework.dev](https://falsework.dev)
+- **Preferred channel for validation and correction:** [GitHub Issues](https://github.com/thefalsework/papers/issues)
+- **Email is fine for pre-submission discussion or any interaction you would prefer to start privately.** Anything that becomes part of the project's validation record will be moved to a public issue with your consent.
+
+---
+
+## Acknowledgements
+
+See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) (created on first merged contribution). Every validator, corrector, and formalizer who contributes substantively to the project will be credited by name with their permission. The author gratefully accepts reference-letter requests from graduate-student contributors.

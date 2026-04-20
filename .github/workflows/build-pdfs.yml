@@ -1,0 +1,70 @@
+name: Build paper PDFs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'papers/**/*.md'
+      - '.github/workflows/build-pdfs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic lmodern
+
+      - name: Build PDFs for each paper
+        run: |
+          set -e
+          mkdir -p build/pdf
+          for md in papers/*/*.md; do
+            dir=$(dirname "$md")
+            name=$(basename "$md" .md)
+            out="build/pdf/${name}-latest.pdf"
+            echo "Building $out from $md"
+            pandoc "$md" \
+              --pdf-engine=xelatex \
+              --toc \
+              --number-sections \
+              --highlight-style=tango \
+              -V mainfont='DejaVu Serif' \
+              -V sansfont='DejaVu Sans' \
+              -V monofont='DejaVu Sans Mono' \
+              -V geometry:margin=1in \
+              -V fontsize=11pt \
+              -o "$out" || {
+                echo "PDF build failed for $md; producing plain output without XeLaTeX fallback fonts"
+                pandoc "$md" \
+                  --pdf-engine=xelatex \
+                  --toc \
+                  --number-sections \
+                  -V geometry:margin=1in \
+                  -V fontsize=11pt \
+                  -o "$out"
+              }
+          done
+          ls -la build/pdf/
+
+      - name: Upload PDFs as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdfs
+          path: build/pdf/*.pdf
+          retention-days: 90
+
+      - name: Attach to latest release (if tagged)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/pdf/*.pdf
+          fail_on_unmatched_files: false

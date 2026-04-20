@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Author email
+    url: mailto:chris@falsework.dev
+    about: For pre-submission discussion, sensitive matters, or anything you'd prefer to start privately. Public record items should use an issue template above.
+  - name: Contribution guide
+    url: https://github.com/thefalsework/papers/blob/main/CONTRIBUTING.md
+    about: Full acceptance criteria for validations, corrections, formalizations, translations, and open research directions.
+  - name: FalseWork site
+    url: https://falsework.dev
+    about: The public-facing site for the research programme.

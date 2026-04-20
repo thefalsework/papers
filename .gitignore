@@ -1,0 +1,33 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor cruft
+.vscode/
+.idea/
+*.swp
+*~
+
+# Pandoc / PDF build artifacts
+papers/**/*-latest.pdf
+papers/**/*.tmp.pdf
+*.aux
+*.log
+*.toc
+*.out
+
+# Lean build artifacts
+lean/.lake/
+lean/build/
+lean/lake-packages/
+
+# Temporary files
+_*.txt
+_p*.txt
+*.bak
+
+# Node / JS (in case any tooling lands here)
+node_modules/
+package-lock.json

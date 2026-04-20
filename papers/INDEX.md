@@ -1,0 +1,133 @@
+# Papers — Index
+
+Five papers forming a coherent research programme on structural incompleteness in creative and epistemic domains. All authored by Chris Brink; all distributed under CC-BY-4.0. Markdown is authoritative; DOCX snapshots archive bit-exact released versions.
+
+---
+
+## Paper 1 — Kernels and Commas
+
+**Full title.** *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations.*
+
+**Current version.** v11.3
+
+**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal).
+
+**Paper source.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md)
+**Archive.** [`paper1-kernels-and-commas/archive/v11.3.docx`](paper1-kernels-and-commas/archive/v11.3.docx)
+
+**Open validation items this paper carries.**
+- § 2 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
+- § 5 (applied to six kernels) — Extension of G∧R∧C to practice domains is structural analogy, not derivation. Tracked at [`validation/claims/g-r-c-practice-domains.md`](../validation/claims/g-r-c-practice-domains.md).
+
+**Versions since v11.0.** See the revision history in the paper's top matter.
+
+---
+
+## Paper 2 — Epistemic Dependency
+
+**Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
+
+**Current version.** v8.2
+
+**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system (human or computational); what differs between systems is the maturity of the correction mechanism available to detect and address it.
+
+**Paper source.** [`paper2-epistemic-dependency/paper2.md`](paper2-epistemic-dependency/paper2.md)
+**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx)
+
+**Open validation items this paper carries.**
+- § 2.3 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
+- § 6.4 — Inherited-validity detection framework for AI-assisted scholarship; methodological, not formal.
+
+---
+
+## Paper 3 — The Distinction Operation
+
+**Full title.** *The Distinction Operation and the Generative Floor: Spencer-Brown, Cantor, and the Categorical Form of Incompleteness.*
+
+**Current version.** v9.1
+
+**One-line gloss.** A seven-level hierarchy of instantiations of the distinction operation (set-theoretic, formal-logical, physical, computational, Gödelian, domain-kernel, epistemic). The categorical formalization in § 4 proposes D1–D4 conditions; § 5 develops the set-theoretic root and the arithmetical ladder ℕ → ℤ → ℚ → ℝ → ℂ → ℍ → 𝕆 via Cantor, Cayley–Dickson, Hurwitz, Frobenius, Baker, and Hankel.
+
+**Paper source.** [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md)
+**Archive.** [`paper3-distinction-operation/archive/v9.1.docx`](paper3-distinction-operation/archive/v9.1.docx)
+
+**Open validation items this paper carries.**
+- § 4 — D1–D4 categorical formalization. A rigorous external formalization (Lambek, Weyl, ℤ/12ℤ) of the music-kernel case has been proposed and is tracked as the six-point music-kernel check at [`validation/claims/music-kernel-umbrella.md`](../validation/claims/music-kernel-umbrella.md). A v10.0 pass to § 4 depends on human verification of this formalization.
+- § 5.2 — Arithmetical-ladder D4 question as open research direction. Tracked at [`validation/claims/ladder-wide-d4.md`](../validation/claims/ladder-wide-d4.md).
+- § 5.1 — Continuum Hypothesis as in-extension Gödel-type undecidable construct (new at v9.1).
+- § 9 — Cantor cumulative caveat applied to `P(formation)` (canonical statement in Paper 4 § 2.5).
+
+---
+
+## Paper 4 — Mathematics as Comma
+
+**Full title.** *Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems.*
+
+**Current version.** v5.1
+
+**One-line gloss.** Proposes Level 0 — the universe as unmarked state prior to any distinction — and reframes physical symmetry breaking as decoherence-scale description of asymmetric process. Extends the framework to engage Wigner's unreasonable-effectiveness question with Feynman's forced-invention bridge.
+
+**Paper source.** [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md)
+**Archive.** [`paper4-mathematics-as-comma/archive/v5.1.docx`](paper4-mathematics-as-comma/archive/v5.1.docx)
+
+**Open validation items this paper carries.**
+- § 2.5 — Cantor cumulative caveat (canonical statement for the whole series). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
+- § 6.3 — Higgs VEV magnitude "explanatory debt." Tracked at [`validation/claims/paper4-higgs-vev-debt.md`](../validation/claims/paper4-higgs-vev-debt.md).
+- § 3, § 6 — Process-primacy and Level-0 ontology require engagement with philosophy of physics.
+
+---
+
+## Paper 5 — Pythagorean Companion
+
+**Full title.** *The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor.*
+
+**Current version.** v1.1
+
+**One-line gloss.** Unifies the Pythagorean comma (rank-2 Diophantine obstruction) and the irrationality of √2 (rank-1) under the fundamental theorem of arithmetic as shared qualitative floor, with Baker's 1966 theorem supplying the effective quantitative floor for rank ≥ 2. Bridges the number-theoretic observation to the five-position typology of the main series.
+
+**Paper source.** [`pythagorean-shared-floor/pythagorean.md`](pythagorean-shared-floor/pythagorean.md)
+**Archive.** [`pythagorean-shared-floor/archive/v1.1.docx`](pythagorean-shared-floor/archive/v1.1.docx)
+
+**Open validation items this paper carries.**
+- § 4 — Baker's 1966 theorem application to the rank-2 case. Tracked at [`validation/claims/music-kernel-06-baker.md`](../validation/claims/music-kernel-06-baker.md).
+- § 6 — Position-mapping for foundations of mathematics (Kronecker, Dedekind, Brouwer, Lakatos) is presented as structural observation, not settled taxonomy.
+- § 7.5 — Three explanatory debts named; listed individually at [`validation/claims/pythagorean-explanatory-debts.md`](../validation/claims/pythagorean-explanatory-debts.md).
+
+---
+
+## Cross-reference graph
+
+```
+Paper 1 (v11.3)
+  ├─ forward-refs Paper 3 § 4 (Russell/Gödel distinction)
+  ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
+  └─ ground for Papers 2–5
+
+Paper 2 (v8.2)
+  ├─ refs Paper 1 (kernel–comma framework)
+  ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
+  └─ refs Paper 5 (Pythagorean inherited-validity contrast)
+
+Paper 3 (v9.1)
+  ├─ refs Paper 1 (five-position framework)
+  ├─ refs Paper 4 (Level-0 / process primacy)
+  ├─ refs Paper 5 (Pythagorean as Level-1 instantiation)
+  └─ ground for categorical and arithmetical-ladder claims
+
+Paper 4 (v5.1)
+  ├─ refs Paper 3 v9.1 (all levels; arithmetical ladder)
+  ├─ refs Paper 1, 2 for inherited caveats
+  └─ forward-refs Paper 5 (Pythagorean Wigner bridge)
+
+Paper 5 (v1.1)
+  ├─ refs Paper 1 v11.3 (Lakatos framing, Commitment hedge)
+  ├─ refs Paper 3 v9.1 (Russell/Gödel distinction, ladder)
+  └─ stands alone as number-theoretic technical paper
+```
+
+---
+
+## Next revisions anticipated
+
+- **Paper 3 v10.0.** Revision of § 4 (D1–D4 categorical formalization) conditional on human verification of the externally-proposed formalization (Lambek, Weyl, ℤ/12ℤ). Tracked at [`validation/claims/music-kernel-umbrella.md`](../validation/claims/music-kernel-umbrella.md).
+- **Any paper.** Revisions driven by merged validation or correction PRs, with acknowledgements added to the revision note.
