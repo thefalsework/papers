@@ -5,7 +5,7 @@
 **Related papers:** Paper 5 (Pythagorean) § 2–§ 4
 **Domain(s):** Category theory, number theory
 **Time estimate for a competent validator:** ~1 hour
-**GitHub issue:** (to be filled in when issue is filed)
+**GitHub issue:** [#1](https://github.com/thefalsework/papers/issues/1)
 
 ---
 
