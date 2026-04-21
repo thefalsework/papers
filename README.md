@@ -27,11 +27,15 @@ A paper-by-paper overview with abstracts, current open validation items, and cro
 
 ---
 
-## Disclosure
+## Start here
 
-The series was developed with substantial AI assistance. Claude (Anthropic) was the primary development collaborator — used for drafting, structural editing, and sustained dialogue through the framework's formation. Other systems used in supporting roles include GPT (OpenAI, for independent formalization attempts and cross-checking), Grok (xAI, for adversarial review), and Gemini (Google, in the specific documented incident [Paper 2 § 7](papers/paper2-epistemic-dependency/paper2.md) treats as a case of inherited validity without correction architecture).
+Depending on your background and what brought you here:
 
-[Paper 2](papers/paper2-epistemic-dependency/paper2.md) is the canonical disclosure: it documents the AI-assisted development of this framework as a live case study and treats epistemic dependency in AI-assisted scholarship as a **structural condition** rather than a peripheral limitation. What differs between knowledge-producing systems is not the presence of epistemic dependency but the maturity of the correction mechanism available to detect and address it. Correction architecture — dependency prediction, expert correspondence, contemporaneous documentation — is built into the framework's design and into how this repository operates: the validation queue, the PR workflow, and the public commit history are the correction mechanism Paper 2 argues for.
+- **Curious, want the gist first** → [**falsework.dev/thesis**](https://falsework.dev/thesis) (the narrative argument, ≈10-minute read) or [**falsework.dev/theory**](https://falsework.dev/theory) (the full technical exposition; includes a 3-minute summary at the top).
+- **Mathematician / category theorist / logician** → [Paper 3 § 4](papers/paper3-distinction-operation/paper3.md) (the six-point music-kernel categorical claim needing verification) and [Paper 5](papers/pythagorean-shared-floor/pythagorean.md) (Baker's theorem applied to the Pythagorean comma and the irrationality of √2). Concrete open items: [Issue #1](https://github.com/thefalsework/papers/issues/1), [Issue #2](https://github.com/thefalsework/papers/issues/2), [Issue #4](https://github.com/thefalsework/papers/issues/4).
+- **Philosopher / humanist / reception studies** → [Paper 2](papers/paper2-epistemic-dependency/paper2.md) (epistemic dependency as structural condition in AI-assisted scholarship) and [Paper 6](papers/paper6-canonical-confrontation/paper6.md) (canonical status as the structural trace of kernel-level confrontation — exploratory companion). Open item with a testable empirical prediction: [Issue #8](https://github.com/thefalsework/papers/issues/8).
+- **Practitioner** (composer, architect, filmmaker, software engineer) → [**falsework.dev/kernels**](https://falsework.dev/kernels) (the registered kernels as a working navigational instrument) and [**falsework.dev/structural-profile**](https://falsework.dev/structural-profile) (the analysis pipeline that generates structural profiles of specific works).
+- **Lean 4 / formalization contributor** → [`lean/README.md`](lean/README.md) — full specification for the music-kernel endofunctor formalization target. Entry point for anyone who wants to turn the D1–D4 categorical sketch into a verified theorem.
 
 ---
 
@@ -49,7 +53,22 @@ Concretely:
 
 ---
 
+## See it applied
+
+The papers describe a framework; the framework runs live as an instrument:
+
+- **[falsework.dev/kernels](https://falsework.dev/kernels)** — the registered-kernels instrument. Each kernel from the papers (the Fifth, the Cut, the Mark, Gravity, the Conditional Branch, the Wave Function, Syntax) appears here with its four-criteria evidence, field topology, and the works empirically classified against its territories. This is where the abstract categorical sketch becomes a working navigational object.
+- **[falsework.dev/thesis](https://falsework.dev/thesis)** — the narrative argument with historical and scholarly precedents cited inline (Spencer-Brown, Bruner, Meyer & Land, Feynman, Hurwitz/Frobenius, Baker, Lakatos, and the domain-specific precursors each kernel inherits).
+- **[falsework.dev/theory](https://falsework.dev/theory)** — the full technical exposition. Dual-register: a 3-minute summary and a complete reading. Links back to each paper in this repository at the relevant citation.
+- **[falsework.dev/structural-profile](https://falsework.dev/structural-profile)** — the seven-stage analysis pipeline that generates structural profiles of specific works. This is where the framework becomes a testable instrument: profiles are hypotheses the papers predict, and their empirical behavior is part of the framework's validation record.
+
+The site is a separate codebase (proprietary). The papers in this repository are the formal record; the site is the applied instrument. Links are one-way: papers point at live URLs, the site points at paper markdown files in this repository.
+
+---
+
 ## How to engage
+
+**Currently open:** [`validation/OPEN.md`](validation/OPEN.md) · [all validation-claim issues ↗](https://github.com/thefalsework/papers/issues?q=is%3Aissue+is%3Aopen+label%3Avalidation) · [all open-research-direction issues ↗](https://github.com/thefalsework/papers/issues?q=is%3Aissue+is%3Aopen+label%3Aopen-direction)
 
 ### If you just want to read
 
@@ -73,25 +92,20 @@ Concretely:
 
 ---
 
+## Disclosure
+
+The series was developed with substantial AI assistance. Claude (Anthropic) was the primary development collaborator — used for drafting, structural editing, and sustained dialogue through the framework's formation. Other systems used in supporting roles include GPT (OpenAI, for independent formalization attempts and cross-checking), Grok (xAI, for adversarial review), and Gemini (Google, in the specific documented incident [Paper 2 § 7](papers/paper2-epistemic-dependency/paper2.md) treats as a case of inherited validity without correction architecture).
+
+[Paper 2](papers/paper2-epistemic-dependency/paper2.md) is the canonical disclosure: it documents the AI-assisted development of this framework as a live case study and treats epistemic dependency in AI-assisted scholarship as a **structural condition** rather than a peripheral limitation. What differs between knowledge-producing systems is not the presence of epistemic dependency but the maturity of the correction mechanism available to detect and address it. Correction architecture — dependency prediction, expert correspondence, contemporaneous documentation — is built into the framework's design and into how this repository operates: the validation queue, the PR workflow, and the public commit history are the correction mechanism Paper 2 argues for.
+
+---
+
 ## Licensing
 
 - **Papers** (all prose, figures, citations in `papers/`, `validation/`, `docs/`): [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE).
 - **Code** (`lean/`, any future tooling): [Apache License 2.0](LICENSE-CODE).
 
 You may read, copy, translate, redistribute, and build on any of the content, commercial or not, provided you give appropriate credit and indicate changes.
-
----
-
-## See it applied
-
-The papers describe a framework; the framework runs live as an instrument:
-
-- **[falsework.dev/kernels](https://falsework.dev/kernels)** — the registered-kernels instrument. Each kernel from the papers (the Fifth, the Cut, the Mark, Gravity, the Conditional Branch, the Wave Function, Syntax) appears here with its four-criteria evidence, field topology, and the works empirically classified against its territories. This is where the abstract categorical sketch becomes a working navigational object.
-- **[falsework.dev/thesis](https://falsework.dev/thesis)** — the narrative argument with historical and scholarly precedents cited inline (Spencer-Brown, Bruner, Meyer & Land, Feynman, Hurwitz/Frobenius, Baker, Lakatos, and the domain-specific precursors each kernel inherits).
-- **[falsework.dev/theory](https://falsework.dev/theory)** — the full technical exposition. Dual-register: a 3-minute summary and a complete reading. Links back to each paper in this repository at the relevant citation.
-- **[falsework.dev/structural-profile](https://falsework.dev/structural-profile)** — the seven-stage analysis pipeline that generates structural profiles of specific works. This is where the framework becomes a testable instrument: profiles are hypotheses the papers predict, and their empirical behavior is part of the framework's validation record.
-
-The site is a separate codebase (proprietary). The papers in this repository are the formal record; the site is the applied instrument. Links are one-way: papers point at live URLs, the site points at paper markdown files in this repository.
 
 ---
 
