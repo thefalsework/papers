@@ -1,0 +1,29 @@
+Paper 6 v2.1: refine Bloom-music claim in section 4
+
+Absorb the Korsyn 1991 / Straus 1990 programme of Bloomian musicology as
+corroborative rather than counter-evidence of the structural relocation.
+
+Prior v2.0 framing said the interpersonal agon model "maps poorly" to
+music, architecture, and mathematics - overstated for music, where
+Korsyn (Music Analysis 1991) and Straus (Remaking the Past, Harvard 1990)
+are the canonical systematic applications. v2.1 reframes: these analyses
+are productive but recurrently strain toward structural vocabulary at the
+moments where the interpersonal reading is least load-bearing, which
+reads the Korsyn-Straus programme as documenting pressure toward the
+structural relocation rather than as a domain where the Bloomian model
+succeeds. Architecture and mathematics remain as domains where the
+interpersonal model simply doesn't fit; music is now treated as a domain
+where it partially fits and partially strains, with the strain visible
+in the literature's own structural vocabulary.
+
+- papers/paper6-canonical-confrontation/paper6.md: section 4 paragraph
+  refined; Korsyn 1991 and Straus 1990 added to References; version
+  stamp bumped to v2.1 with revision note
+- papers/paper6-canonical-confrontation/archive/v2.1.docx: new DOCX
+  snapshot; v2.0.docx removed (prior versions live in git history and
+  are recoverable via the canonical-confrontation-v2.0 tag)
+- papers/INDEX.md: version and archive link bumped to v2.1
+- README.md: papers table row bumped to v2.1
+
+No changes to the paper's claims, structure, or validation items.
+Posthumous-canonization issue #8 and claim file unaffected.

@@ -6,7 +6,7 @@ Chris Brink
 
 FalseWork (falsework.dev)
 
-*Version 2.0. Initial public version entering the FalseWork papers repository. Companion paper to Brink 2026a--d (Papers 1--4) and the Pythagorean companion (Brink 2026e).*
+*Version 2.1. Revisions from version 2.0: refinement to § 4 absorbing the Korsyn 1991 / Straus 1990 programme of Bloomian musicology as corroborative rather than counter-evidence of the structural relocation --- the Bloomian-music literature's recurrent strain toward structural (rather than interpersonal) accounts of musical influence is now treated as supporting the paper's thesis rather than as a domain the interpersonal agon model simply fails to reach. Korsyn (1991) and Straus (1990) added to References. No other substantive changes. Companion paper to Brink 2026a--d (Papers 1--4) and the Pythagorean companion (Brink 2026e).*
 
 *Exploratory / practitioner-outcome register. The paper proposes a structural account of canonical persistence and locates its empirically testable content in the proxy feature program of Brink 2026a § 4.4; it does not itself constitute a formal proof. One testable sub-claim --- posthumous canonical rehabilitation correlates with recognition of kernel-level confrontation --- is stated in § 5 and tracked at [`validation/claims/posthumous-canonization.md`](../../validation/claims/posthumous-canonization.md).*
 
@@ -68,7 +68,7 @@ Harold Bloom's theory of poetic influence proposes that strong poets achieve can
 
 Bloom's identification of agon as the mechanism of canonical production is structurally sound. His location of it is not. The struggle is not against Milton. It is against the generative constraint that Milton happened to confront visibly enough to leave a trace. The precursor is not the opponent; the precursor is evidence that the kernel's limit can be engaged and survived. What Bloom reads as competitive anxiety is actually navigational orientation --- the later practitioner locating where the kernel's limit was last encountered in order to confront it themselves.
 
-This relocation preserves what Bloom gets right --- the centrality of struggle, the non-arbitrary structure of canonical sequences, the inadequacy of merely sociological accounts --- while eliminating what he gets wrong: the psychologisation of a structural condition, the implicit masculinist framing of combat between strong poets, and the inability to account for canonical status in domains (music, architecture, mathematics) where the interpersonal agon model maps poorly.
+This relocation preserves what Bloom gets right --- the centrality of struggle, the non-arbitrary structure of canonical sequences, the inadequacy of merely sociological accounts --- while eliminating what he gets wrong: the psychologisation of a structural condition, the implicit masculinist framing of combat between strong poets, and the limited reach of the interpersonal agon model in domains where canonical production is more obviously constrained by the kernel than by a precursor person --- paradigmatically mathematics and architecture, and, on the evidence of the Korsyn--Straus programme of Bloomian musicology and its critics, music as well. Korsyn (1991) reads Brahms's Op. 118 No. 5 as a Bloomian misreading of Chopin; Straus (1990) applies the six revisionary ratios systematically to Stravinsky, Schoenberg, and Bartók. Both analyses are productive, but both recurrently strain toward structural vocabulary --- tonal tradition as constraint system, modernism as confrontation with the exhausted materials of the common-practice kernel --- at the moments where the interpersonal reading is least load-bearing. Read on the account proposed here, the Korsyn--Straus programme is not a domain in which Bloom's model succeeds; it is the literature that most clearly documents the pressure toward the structural relocation this paper names directly.
 
 ### 4.1 The Revisionary Ratios as Positional Navigation
 
@@ -148,4 +148,8 @@ Brink, C. (2026d). Mathematics as comma: The distinction operation and the unrea
 
 Brink, C. (2026e). The Pythagorean comma, the irrationality of √2, and a shared Diophantine floor. *The FalseWork Papers*. https://github.com/thefalsework/papers/blob/main/papers/pythagorean-shared-floor/pythagorean.md
 
+Korsyn, K. (1991). Towards a new poetics of musical influence. *Music Analysis*, 10(1), 3--72.
+
 Spencer-Brown, G. (1969). *Laws of form*. Allen & Unwin.
+
+Straus, J. N. (1990). *Remaking the past: Musical modernism and the influence of the tonal tradition*. Harvard University Press.

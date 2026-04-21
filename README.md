@@ -19,7 +19,7 @@ All papers are authored by **Chris Brink** (independent researcher), distributed
 | 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.1 | [archive](papers/paper3-distinction-operation/archive/v9.1.docx) |
 | 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.1 | [archive](papers/paper4-mathematics-as-comma/archive/v5.1.docx) |
 | 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.1 | [archive](papers/pythagorean-shared-floor/archive/v1.1.docx) |
-| 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.0 | [archive](papers/paper6-canonical-confrontation/archive/v2.0.docx) |
+| 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.1 | [archive](papers/paper6-canonical-confrontation/archive/v2.1.docx) |
 
 A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md).
 
