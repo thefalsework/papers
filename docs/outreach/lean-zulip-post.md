@@ -47,4 +47,10 @@ Happy to answer anything here.
 
 | Date | Channel / topic | Permalink | Notes |
 |---|---|---|---|
-| 2026-04-19 | `#new members` > *Music-kernel + Pythagorean comma formalization target* | [link](https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901) | Initial post. Bare-URL variant (no `[text](url)` markdown). Awaiting response. |
+| 2026-04-19 | `#new members` > *Music-kernel + Pythagorean comma formalization target* | [link](https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901) | Initial post. Bare-URL variant (no `[text](url)` markdown). |
+
+## Responses received
+
+| Date | Contributor | Venue | Summary | Resolution |
+|---|---|---|---|---|
+| 2026-04-19 | **suhr** (Zulip display name; placeholder pending consent) | Lean Zulip, same topic as initial post ([message link](https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901)) | Three substantive corrections to Paper 5 v1.1: (i) prose at § 2.2 skipped the 24/41 convergent; (ii) "practically usable temperaments" claims at §§ 2.2, 4.2, 7.1 conflated Pythagorean-comma optimization with general musical practicality (31-TET/41-TET/53-TET optimize different harmonic targets); (iii) the "53-TET is impractical for keyboard construction" remark is outdated given Bosanquet 1875, Lumatone, and Kite guitar. | [Issue #9](https://github.com/thefalsework/papers/issues/9) · Paper 5 v1.1 → [v1.2](https://github.com/thefalsework/papers/blob/main/papers/pythagorean-shared-floor/archive/v1.2.docx) · listed in [`ACKNOWLEDGEMENTS.md`](../../ACKNOWLEDGEMENTS.md). Reply posted to Zulip topic asking for preferred attribution form. |

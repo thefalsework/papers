@@ -20,7 +20,7 @@ All papers are authored by **Chris Brink** (independent researcher), distributed
 | 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [archive](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
 | 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.1 | [archive](papers/paper3-distinction-operation/archive/v9.1.docx) |
 | 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.2 | [archive](papers/paper4-mathematics-as-comma/archive/v5.2.docx) |
-| 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.1 | [archive](papers/pythagorean-shared-floor/archive/v1.1.docx) |
+| 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.2 | [archive](papers/pythagorean-shared-floor/archive/v1.2.docx) |
 | 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.1 | [archive](papers/paper6-canonical-confrontation/archive/v2.1.docx) |
 
 A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md).
@@ -144,4 +144,4 @@ BibTeX, RIS, and EndNote entries for any version can be exported directly from t
 
 ## Acknowledgements
 
-See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) (created on first merged contribution). Every validator, corrector, and formalizer who contributes substantively to the project will be credited by name with their permission. The author gratefully accepts reference-letter requests from graduate-student contributors.
+See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) for the running record of external contributions. Every validator, corrector, and formalizer who contributes substantively to the project is credited there by name (with their permission, or by the handle under which their contribution was made). The author gratefully accepts reference-letter requests from graduate-student contributors.

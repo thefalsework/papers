@@ -81,12 +81,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor.*
 
-**Current version.** v1.1
+**Current version.** v1.2
 
-**One-line gloss.** Unifies the Pythagorean comma (rank-2 Diophantine obstruction) and the irrationality of √2 (rank-1) under the fundamental theorem of arithmetic as shared qualitative floor, with Baker's 1966 theorem supplying the effective quantitative floor for rank ≥ 2. Bridges the number-theoretic observation to the five-position typology of the main series.
+**One-line gloss.** Unifies the Pythagorean comma (rank-2 Diophantine obstruction) and the irrationality of √2 (rank-1) under the fundamental theorem of arithmetic as shared qualitative floor, with Baker's 1966 theorem supplying the effective quantitative floor for rank ≥ 2. Bridges the number-theoretic observation to the five-position typology of the main series. v1.2 corrects the convergent-sequence narration at § 2.2 (restoring 24/41 between 7/12 and 31/53) and re-scopes three "practically usable temperaments" claims to the Pythagorean-comma optimization specifically, acknowledging that 31-TET, 41-TET, and 53-TET answer different harmonic optimizations over extended prime bases.
 
 **Paper source.** [`pythagorean-shared-floor/pythagorean.md`](pythagorean-shared-floor/pythagorean.md)
-**Archive.** [`pythagorean-shared-floor/archive/v1.1.docx`](pythagorean-shared-floor/archive/v1.1.docx)
+**Archive.** [`pythagorean-shared-floor/archive/v1.2.docx`](pythagorean-shared-floor/archive/v1.2.docx)
 
 **Open validation items this paper carries.**
 - § 4 — Baker's 1966 theorem application to the rank-2 case. Tracked at [`validation/claims/music-kernel-06-baker.md`](../validation/claims/music-kernel-06-baker.md).
@@ -138,7 +138,7 @@ Paper 4 (v5.2)
   ├─ refs Paper 1, 2 for inherited caveats
   └─ forward-refs Paper 5 (Pythagorean Wigner bridge)
 
-Paper 5 (v1.1)
+Paper 5 (v1.2)
   ├─ refs Paper 1 v11.3 (Lakatos framing, Commitment hedge)
   ├─ refs Paper 3 v9.1 (Russell/Gödel distinction, ladder)
   └─ stands alone as number-theoretic technical paper
