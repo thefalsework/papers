@@ -25,6 +25,14 @@ A paper-by-paper overview with abstracts, current open validation items, and cro
 
 ---
 
+## Disclosure
+
+The series was developed with substantial AI assistance. Claude (Anthropic) was the primary development collaborator — used for drafting, structural editing, and sustained dialogue through the framework's formation. Other systems used in supporting roles include GPT (OpenAI, for independent formalization attempts and cross-checking), Grok (xAI, for adversarial review), and Gemini (Google, in the specific documented incident [Paper 2 § 7](papers/paper2-epistemic-dependency/paper2.md) treats as a case of inherited validity without correction architecture).
+
+[Paper 2](papers/paper2-epistemic-dependency/paper2.md) is the canonical disclosure: it documents the AI-assisted development of this framework as a live case study and treats epistemic dependency in AI-assisted scholarship as a **structural condition** rather than a peripheral limitation. What differs between knowledge-producing systems is not the presence of epistemic dependency but the maturity of the correction mechanism available to detect and address it. Correction architecture — dependency prediction, expert correspondence, contemporaneous documentation — is built into the framework's design and into how this repository operates: the validation queue, the PR workflow, and the public commit history are the correction mechanism Paper 2 argues for.
+
+---
+
 ## What this project is
 
 The papers make claims that cross mathematics, physics, philosophy, formal logic, musicology, and the practice-based creative domains. Most interdisciplinary work of this kind is either published privately and never validated, or locked inside closed peer-review processes whose outputs are binary (accept/reject) rather than structured. This project operates on a different premise: **validation is a distributed, open, modular process**, and the honest state of a research programme is legible to anyone who wants to inspect it.
