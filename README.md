@@ -97,21 +97,24 @@ The site is a separate codebase (proprietary). The papers in this repository are
 
 ## How to cite
 
-Every tagged release of this repository is archived to Zenodo and assigned a permanent Digital Object Identifier (DOI). The **DOI badge at the top of this README** resolves to the most recent release. Each release also has its own version-specific DOI — citing a specific version is preferred when the claim you are citing might be revised later.
+Every tagged release of this repository is archived to Zenodo and assigned a permanent Digital Object Identifier (DOI). Two DOI variants are available:
 
-**For the latest release** (auto-resolves — recommended when citing the project as a whole):
+- **Concept DOI** — `10.5281/zenodo.19673672` — always resolves to the most recent release. Use this when citing the project as a whole.
+- **Version DOI** — e.g. `10.5281/zenodo.19673673` for Release 2026.04 — resolves to one specific release. Use this when citing a specific claim at a specific version, because subsequent revisions may alter it.
 
-> Brink, C. (2026). *The FalseWork Papers* [Software / working-paper series]. Zenodo. https://doi.org/10.5281/zenodo.[concept-DOI]
+**Project-level citation** (concept DOI — follows the latest release):
 
-**For a specific release** (preferred when citing a specific claim at a specific version):
+> Brink, C. (2026). *The FalseWork Papers*. Zenodo. https://doi.org/10.5281/zenodo.19673672
 
-> Brink, C. (2026). *The FalseWork Papers* (Release 2026.04) [Software / working-paper series]. Zenodo. https://doi.org/10.5281/zenodo.[version-DOI]
+**Release-level citation** (version DOI — pinned to Release 2026.04):
 
-**For a specific paper at a specific version** (most precise):
+> Brink, C. (2026). *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
 
-> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.3). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.[version-DOI]
+**Paper-at-version citation** (most precise — pinned to a specific paper inside a specific release):
 
-The exact DOI for each release is visible in the Zenodo record reached by clicking the DOI badge. BibTeX, RIS, and EndNote entries can be exported from Zenodo directly. Version-specific DOIs and the concept DOI can both be resolved programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access.
+> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.3). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
+
+BibTeX, RIS, and EndNote entries for any version can be exported directly from the [Zenodo record page](https://zenodo.org/records/19673673). Both concept and version DOIs resolve programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access. Each subsequent release (per-paper or collection-wide) will receive its own version DOI under the same concept DOI.
 
 ---
 
