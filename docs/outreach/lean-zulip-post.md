@@ -40,3 +40,11 @@ The broader theoretical framing is not a prerequisite — the six points stand o
 Happy to answer anything here.
 
 — Chris Brink / [@ChrisBrink](https://github.com/node0000)  (`chris@falsework.dev`)
+
+---
+
+## Posting log
+
+| Date | Channel / topic | Permalink | Notes |
+|---|---|---|---|
+| 2026-04-19 | `#new members` > *Music-kernel + Pythagorean comma formalization target* | [link](https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901) | Initial post. Bare-URL variant (no `[text](url)` markdown). Awaiting response. |
