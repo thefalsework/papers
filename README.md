@@ -1,5 +1,7 @@
 # The FalseWork Papers
 
+[![DOI](https://zenodo.org/badge/1216426192.svg)](https://zenodo.org/badge/latestdoi/1216426192) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 An open-source research programme on structural incompleteness across domains of sustained human practice — music, cinema, painting, architecture, software, physics, knowledge production — and the shared mathematical and epistemological floor underneath them.
 
 This repository holds the papers themselves, the open validation items they contain, and the infrastructure for anyone who wants to read, comment, verify, correct, or formalize their claims.
@@ -90,6 +92,26 @@ The papers describe a framework; the framework runs live as an instrument:
 - **[falsework.dev/structural-profile](https://falsework.dev/structural-profile)** — the seven-stage analysis pipeline that generates structural profiles of specific works. This is where the framework becomes a testable instrument: profiles are hypotheses the papers predict, and their empirical behavior is part of the framework's validation record.
 
 The site is a separate codebase (proprietary). The papers in this repository are the formal record; the site is the applied instrument. Links are one-way: papers point at live URLs, the site points at paper markdown files in this repository.
+
+---
+
+## How to cite
+
+Every tagged release of this repository is archived to Zenodo and assigned a permanent Digital Object Identifier (DOI). The **DOI badge at the top of this README** resolves to the most recent release. Each release also has its own version-specific DOI — citing a specific version is preferred when the claim you are citing might be revised later.
+
+**For the latest release** (auto-resolves — recommended when citing the project as a whole):
+
+> Brink, C. (2026). *The FalseWork Papers* [Software / working-paper series]. Zenodo. https://doi.org/10.5281/zenodo.[concept-DOI]
+
+**For a specific release** (preferred when citing a specific claim at a specific version):
+
+> Brink, C. (2026). *The FalseWork Papers* (Release 2026.04) [Software / working-paper series]. Zenodo. https://doi.org/10.5281/zenodo.[version-DOI]
+
+**For a specific paper at a specific version** (most precise):
+
+> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.3). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.[version-DOI]
+
+The exact DOI for each release is visible in the Zenodo record reached by clicking the DOI badge. BibTeX, RIS, and EndNote entries can be exported from Zenodo directly. Version-specific DOIs and the concept DOI can both be resolved programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access.
 
 ---
 
