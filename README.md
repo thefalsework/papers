@@ -10,7 +10,7 @@ This repository holds the papers themselves, the open validation items they cont
 
 ## The papers
 
-All five papers are authored by **Chris Brink** (independent researcher), distributed under **CC-BY-4.0**, and cite each other as a coherent series. The Markdown source is authoritative; each released DOCX is preserved in the per-paper `archive/` subdirectory.
+All papers are authored by **Chris Brink** (independent researcher), distributed under **CC-BY-4.0**, and cite each other as a coherent series. Papers 1–5 form the core research programme; paper 6 is an exploratory / practitioner-outcome companion. The Markdown source is authoritative; each released DOCX is preserved in the per-paper `archive/` subdirectory.
 
 | # | Paper | Current version | Source |
 |---|---|---|---|
@@ -19,6 +19,7 @@ All five papers are authored by **Chris Brink** (independent researcher), distri
 | 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.1 | [archive](papers/paper3-distinction-operation/archive/v9.1.docx) |
 | 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.1 | [archive](papers/paper4-mathematics-as-comma/archive/v5.1.docx) |
 | 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.1 | [archive](papers/pythagorean-shared-floor/archive/v1.1.docx) |
+| 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.0 | [archive](papers/paper6-canonical-confrontation/archive/v2.0.docx) |
 
 A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md).
 
@@ -42,7 +43,7 @@ Concretely:
 
 ### If you just want to read
 
-- Start with [Paper 1 § 1](papers/paper1-kernels-and-commas/paper1.md) for the framework. [Paper 2 § 1](papers/paper2-epistemic-dependency/paper2.md) extends it to AI-assisted knowledge production. [Paper 3 § 1](papers/paper3-distinction-operation/paper3.md) lays the Spencer-Brown / categorical foundation. [Paper 4 § 1](papers/paper4-mathematics-as-comma/paper4.md) is the strongest ontological claim. The [Pythagorean companion](papers/pythagorean-shared-floor/pythagorean.md) is the technical unification of the Pythagorean comma and the irrationality of √2.
+- Start with [Paper 1 § 1](papers/paper1-kernels-and-commas/paper1.md) for the framework. [Paper 2 § 1](papers/paper2-epistemic-dependency/paper2.md) extends it to AI-assisted knowledge production. [Paper 3 § 1](papers/paper3-distinction-operation/paper3.md) lays the Spencer-Brown / categorical foundation. [Paper 4 § 1](papers/paper4-mathematics-as-comma/paper4.md) is the strongest ontological claim. The [Pythagorean companion](papers/pythagorean-shared-floor/pythagorean.md) is the technical unification of the Pythagorean comma and the irrationality of √2. The [Canonical Confrontation companion](papers/paper6-canonical-confrontation/paper6.md) is an exploratory practitioner-outcome paper applying the kernel/comma topology to the question of canonical persistence.
 - Each paper's top matter includes a revision history and explicit `[REQUIRES FORMAL VALIDATION]` markers. Nothing is hidden.
 
 ### If you want to validate or correct a specific claim

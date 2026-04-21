@@ -69,6 +69,18 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 
 ---
 
+## Domain: Humanities / reception studies
+
+### `posthumous-canonization` — Posthumous / delayed canonical rehabilitation as a testable prediction
+- **Authoritative statement:** [`claims/posthumous-canonization.md`](claims/posthumous-canonization.md)
+- **GitHub issue:** [#8](https://github.com/thefalsework/papers/issues/8)
+- **Paper:** Paper 6 § 5, § 7 (v2.0, exploratory companion)
+- **What's asked:** systematic historical test of the claim that posthumous / delayed canonical rehabilitation correlates with structural markers of kernel-level confrontation — using Bach, El Greco, and the Homeric epics as paradigm cases and seeking both matched and counter-example cases across music, visual art, and literature.
+- **Status:** awaiting historian of music / art / literature or reception-studies scholar
+- **Register note:** Paper 6 is the exploratory / practitioner-outcome companion. This item is its single empirically bounded sub-claim; the rest of Paper 6 is structural-interpretive and is not tracked as a validation item.
+
+---
+
 ## Domain: Physics / foundations of physics
 
 ### `paper4-higgs-vev-debt` — Higgs VEV magnitude explanatory debt

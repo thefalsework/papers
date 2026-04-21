@@ -1,6 +1,6 @@
 # Papers — Index
 
-Five papers forming a coherent research programme on structural incompleteness in creative and epistemic domains. All authored by Chris Brink; all distributed under CC-BY-4.0. Markdown is authoritative; DOCX snapshots archive bit-exact released versions.
+Six papers in total. Papers 1–5 form a coherent research programme on structural incompleteness in creative and epistemic domains. Paper 6 is an exploratory / practitioner-outcome companion that applies the framework to the question of canonical persistence. All authored by Chris Brink; all distributed under CC-BY-4.0. Markdown is authoritative; DOCX snapshots archive bit-exact released versions.
 
 ---
 
@@ -95,6 +95,25 @@ Five papers forming a coherent research programme on structural incompleteness i
 
 ---
 
+## Paper 6 — Canonical Confrontation (exploratory / practitioner-outcome companion)
+
+**Full title.** *Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status.*
+
+**Current version.** v2.0
+
+**Register.** Exploratory / practitioner-outcome. This paper is **not** in the same register as Papers 1–5. It proposes a structural account of why certain works sustain canonical status across centuries — locating the mechanism in direct practitioner confrontation with the kernel at the point where the comma is operative — and relocates Harold Bloom's *agon* from the interpersonal to the structural. The paper is internally consistent with the framework of Papers 1–5 but does not itself constitute a formal proof; its empirically testable content is located in the proxy feature program of Paper 1 § 4.4 and in one sub-claim about posthumous canonization.
+
+**One-line gloss.** Canonical status is the structural trace of kernel-level confrontation: canonical works persist not because they resolve their domain's comma but because they instantiate a confrontation with a comma that remains open.
+
+**Paper source.** [`paper6-canonical-confrontation/paper6.md`](paper6-canonical-confrontation/paper6.md)
+**Archive.** [`paper6-canonical-confrontation/archive/v2.0.docx`](paper6-canonical-confrontation/archive/v2.0.docx)
+
+**Open validation items this paper carries.**
+- § 5, § 7 — Posthumous / delayed canonization as a testable prediction of the structural account. Tracked at [`validation/claims/posthumous-canonization.md`](../validation/claims/posthumous-canonization.md).
+- Whole paper — Exploratory register: the account is structurally consistent with Paper 1's kernel/comma topology but is not a derivation from it. Critique and counter-examples welcome via PR or issue.
+
+---
+
 ## Cross-reference graph
 
 ```
@@ -123,6 +142,13 @@ Paper 5 (v1.1)
   ├─ refs Paper 1 v11.3 (Lakatos framing, Commitment hedge)
   ├─ refs Paper 3 v9.1 (Russell/Gödel distinction, ladder)
   └─ stands alone as number-theoretic technical paper
+
+Paper 6 (v2.0, exploratory companion)
+  ├─ refs Paper 1 (kernel/comma topology, proxy feature program § 4.4)
+  ├─ refs Paper 3 (Cantor / distinction-operation grounding for comma irresolvability)
+  ├─ refs Paper 4 (Level-0 extension of comma irresolvability)
+  └─ applies the framework to the question of canonical persistence
+     (not a derivation; see Paper 6 register note above)
 ```
 
 ---
