@@ -27,6 +27,8 @@ lean/lake-packages/
 _*.txt
 _p*.txt
 *.bak
+.commit-msg-tmp
+.issue*-body.md
 
 # Node / JS (in case any tooling lands here)
 node_modules/
