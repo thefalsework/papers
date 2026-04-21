@@ -1,0 +1,42 @@
+{
+  "title": "The FalseWork Papers",
+  "description": "An open research programme on kernels, commas, and the structural limits of generative systems. Six CC-BY-4.0 papers with an open validation queue and a Lean 4 formalization target. Papers 1-5 form the core series; paper 6 is an exploratory practitioner-outcome companion. The repository maintains authoritative Markdown sources, per-paper release archives, public validation items, and a correction architecture described in Paper 2.",
+  "creators": [
+    {
+      "name": "Brink, Chris",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "keywords": [
+    "kernels and commas",
+    "philosophy of mathematics",
+    "category theory",
+    "distinction operation",
+    "Spencer-Brown",
+    "epistemic dependency",
+    "AI-assisted scholarship",
+    "Pythagorean comma",
+    "canonical analysis",
+    "open research programme",
+    "formal methods",
+    "Lean 4",
+    "digital humanities",
+    "music theory"
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://falsework.dev",
+      "relation": "isSupplementedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/thefalsework/papers",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
