@@ -63,12 +63,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems.*
 
-**Current version.** v5.1
+**Current version.** v5.2
 
-**One-line gloss.** Proposes Level 0 — the universe as unmarked state prior to any distinction — and reframes physical symmetry breaking as decoherence-scale description of asymmetric process. Extends the framework to engage Wigner's unreasonable-effectiveness question with Feynman's forced-invention bridge.
+**One-line gloss.** Proposes Level 0 — the universe as unmarked state prior to any distinction — and reframes physical symmetry breaking as decoherence-scale description of asymmetric process. Extends the framework to engage Wigner's unreasonable-effectiveness question with Feynman's forced-invention bridge. § 7 positions the hypothesis against Wolfram's 2026 ruliad programme, naming three substantive convergences and three specific divergences.
 
 **Paper source.** [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md)
-**Archive.** [`paper4-mathematics-as-comma/archive/v5.1.docx`](paper4-mathematics-as-comma/archive/v5.1.docx)
+**Archive.** [`paper4-mathematics-as-comma/archive/v5.2.docx`](paper4-mathematics-as-comma/archive/v5.2.docx)
 
 **Open validation items this paper carries.**
 - § 2.5 — Cantor cumulative caveat (canonical statement for the whole series). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
@@ -133,7 +133,7 @@ Paper 3 (v9.1)
   ├─ refs Paper 5 (Pythagorean as Level-1 instantiation)
   └─ ground for categorical and arithmetical-ladder claims
 
-Paper 4 (v5.1)
+Paper 4 (v5.2)
   ├─ refs Paper 3 v9.1 (all levels; arithmetical ladder)
   ├─ refs Paper 1, 2 for inherited caveats
   └─ forward-refs Paper 5 (Pythagorean Wigner bridge)

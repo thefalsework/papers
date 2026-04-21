@@ -2,7 +2,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 5.1. Revisions from version 5.0: § 3.2 Wigner subsection expanded with a Feynman/forced-invention bridge, positioning Wigner's unreasonable-effectiveness observation against the descriptive datum from Feynman (Vol. I Ch. 22, 1963) that number-system extensions are forced rather than chosen, with cross-reference to Brink 2026c (v9.1) § 5.2 as the rigorous Level-1 instantiation. No substantive revision of the cumulative Cantor caveat at § 2.5, the Prigogine precedent at § 2.4, the process-primacy argument of § 3--§ 6, or the Higgs VEV explanatory debt at § 6.3.*
+*Version 5.2. Revisions from version 5.1: § 7 closes with a positioning paragraph engaging Wolfram 2026 ("What Ultimately Is There? Metaphysics and the Ruliad," Wolfram Institute's Templeton-funded Computational Metaphysics programme) at its three substantive convergences --- observer-relativity of law, pockets-of-reducibility mechanism, Wigner dissolution --- and three specific divergences --- ruliad-monism vs. kernel-pluralism, ruliad-as-object vs. process primacy, observer-relative slice vs. domain-intrinsic structure. Wolfram 2026 added to the reference list. No other changes.*
 
 *Working draft --- concept stage. This paper proposes a foundational claim that requires engagement with philosophy of mathematics, foundations of physics, and formal epistemology before it can be advanced as settled. Arguments marked \[REQUIRES FORMAL VALIDATION\] need external expert engagement.*
 
@@ -233,6 +233,10 @@ Each level inherits the irresolvable asymmetry of the distinction operation. Eac
 
 This paper is itself an instance of Level 0: a distinction-drawing system generating mathematics as the comma of its own generative activity. The reflexive move is the paper's strongest epistemological commitment. The paper uses mathematics to argue that mathematics is the formal residue of what distinction-drawing stabilizes. If the argument holds, it applies to itself --- the paper is part of what it describes.
 
+Wolfram's 2026 essay "What Ultimately Is There? Metaphysics and the Ruliad" --- written as a launching statement for the Wolfram Institute's Templeton-funded Computational Metaphysics programme --- develops a set of moves that share structural territory with the present hypothesis. Both accounts treat the laws a system attributes to the universe as observer-dependent on computational bounds. Both locate tractable physical law in pockets of computational reducibility within an otherwise irreducible substrate. Both dissolve Wigner's unreasonable-effectiveness puzzle by treating effectiveness as structurally necessary rather than surprising (Wolfram extends the same move to mathematics itself, on lines parallel to Section 3 of this paper). The convergence on these three moves is substantive and will be the most salient point of contact for readers familiar with either framework.
+
+The frameworks diverge on three specific commitments. Wolfram is a ruliad-monist: the space of all possible computations is the ultimate foundational construct, and physics is an observer-relative slice of it. The present paper is a kernel-pluralist: kernels (Brink 2026a § 3) are domain-specific structural features not reducible to slices of a prior totality. Wolfram's ruliad is a necessary abstract object that observers sample; the present paper commits to process primacy as ontological substrate (§ 2) and explicitly declines the ruliad-as-object framing --- reality is continuous asymmetric process, not a static space of possible computations that minds cut slices of. And the kernel criteria pick out features structural at scales intrinsic to the practice domains themselves rather than observer-relative in the sense the ruliad's manifestation is --- the Fifth, the Cut, the Mark, and the Pythagorean comma (Brink 2026e § 4) are the formal residue of distinction-drawing at specific domain scales, not what a computationally bounded observer happens to sample from a deeper totality. Whether this distinction survives sustained engagement with the ruliad programme is an open question \[REQUIRES FORMAL VALIDATION\].
+
 ## 8. The Formal Questions
 
 Before this hypothesis can be advanced as more than a structurally compelling proposal with thermodynamic grounding, five questions require formal engagement.
@@ -308,6 +312,8 @@ Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natur
 Wilson, K. G. (1971). Renormalization group and critical phenomena I. *Physical Review B*, 4(9), 3174--3183.
 
 Wolfram, S. (2002). *A new kind of science*. Wolfram Media.
+
+Wolfram, S. (2026). What ultimately is there? Metaphysics and the ruliad. *Stephen Wolfram Writings*, 4 February 2026. https://writings.stephenwolfram.com/2026/02/what-ultimately-is-there-metaphysics-and-the-ruliad/
 
 Zurek, W. H. (1981). Pointer basis of quantum apparatus: Into what mixture does the wave packet collapse? *Physical Review D*, 24(6), 1516--1525.
 
