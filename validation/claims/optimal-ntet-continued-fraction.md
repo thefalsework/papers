@@ -1,0 +1,114 @@
+# `optimal-ntet-continued-fraction` — Optimal N-TET ↔ continued-fraction convergents of log₂(3/2)
+
+**Status:** OPEN
+**Paper:** Paper 5 (Pythagorean) § 2.2, § 4.2, § 7.1 (v1.2)
+**Related claims:** [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md), [`music-kernel-06-baker`](music-kernel-06-baker.md)
+**Domain:** Number theory (elementary; Diophantine approximation)
+**Time estimate for a validator:** 30 minutes to assess the statement; proof is classical
+**GitHub issue:** pending
+
+---
+
+## Background
+
+Paper 5 § 2.2 narrates, in prose, the relationship between the continued-fraction convergents of `α = log₂(3/2)` and the equal temperaments (N-TETs) that minimize the Pythagorean comma. Specifically: the convergents
+
+```
+0/1, 1/1, 1/2, 3/5, 7/12, 24/41, 31/53, …
+```
+
+are presented as picking out the denominators `N ∈ {1, 2, 5, 12, 41, 53, …}` for which N-TET is "optimal" as an approximation to `α`. The prose is correct as a narration of the classical facts but does not state the underlying theorem precisely enough to be formalized.
+
+This claim file isolates that theorem as a first-class statement so that a specialist (number theory, Diophantine approximation) can evaluate whether the statement is correctly formulated before anyone tries to prove or formalize it. The prompt is Chris Henson's observation (Lean Zulip, 2026-04-19) that "the most interesting part is likely thinking about and setting up the exact statement of what you want to verify."
+
+## Claim (statement to verify or correct)
+
+Let `α = log₂(3/2) ∈ (0, 1)`. Let `p_n / q_n` denote the `n`-th convergent of the simple continued-fraction expansion of `α`, with `q_n > 0` and `gcd(p_n, q_n) = 1`.
+
+**(C1) Best-approximation property (classical).**
+For every `n ≥ 1`, the convergent `p_n / q_n` is a best rational approximation to `α` of the second kind: for all integers `p, q` with `0 < q < q_{n+1}` and `(p, q) ≠ (p_n, q_n)`,
+
+```
+| q_n · α − p_n | < | q · α − p |.
+```
+
+Equivalently, `(p_n, q_n)` is the pair minimizing `| q · α − p |` among all `(p, q)` with `1 ≤ q ≤ q_n` (and realising strict improvement over the previous convergent).
+
+**(C2) Musical interpretation as strict best-so-far N-TETs for the Pythagorean comma.**
+Call an integer `N ≥ 1` a *Pythagorean-comma-optimal temperament* if, for every integer `M` with `1 ≤ M < N`,
+
+```
+min_{k ∈ ℤ} | M · α − k | > min_{k ∈ ℤ} | N · α − k |.
+```
+
+Then the set of Pythagorean-comma-optimal temperaments is exactly `{ q_n : n ≥ 1 }`, i.e., the sequence of continued-fraction denominators of `α`. In particular, the sequence begins `1, 2, 5, 12, 41, 53, …` (and continues).
+
+**(C3) Scope.**
+The statement (C2) describes optimization against the Pythagorean comma alone: approximation of `α = log₂(3/2)` by rationals. It does *not* describe optimization over the 5-, 7-, 11-, or higher-limit subgroups of the free multiplicative group on primes, which are Baker-type problems over extended prime bases. In that broader sense, temperaments such as 19-TET, 22-TET, 31-TET, 72-TET are optimal for problems that are not (C2). See `music-kernel-06-baker.md` for the rank-2 quantitative floor that underwrites the Pythagorean specifically, and Paper 5 § 4 and § 6.1 for the broader microtonal context.
+
+## What a validator should confirm
+
+For each of (C1), (C2), (C3), a specialist should state one of:
+
+1. **Confirmed as stated.** The statement is precise, classical, and the paper can cite it as given.
+2. **Confirmed with amendment.** The statement is correct but the phrasing needs tightening (e.g., edge cases at small `n`, treatment of `0/1` or `1/1`, convention on simple vs. generalized continued fractions). Propose the exact rewording.
+3. **Requires a specific correction.** The statement is wrong in a specific way (e.g., best-approximation-of-the-first-kind vs. second-kind confusion, or the "strict best-so-far" characterization in (C2) is not equivalent to the convergent-denominator characterization). Propose the correct statement.
+4. **Out of scope.** The validator is not a Diophantine-approximation specialist; pass.
+
+A partial response that addresses only (C2) is a complete and useful response. (C1) is textbook (Khinchin, Hardy & Wright); (C2) is the specifically musical reformulation and is the statement the paper most needs audited. (C3) is a scoping note rather than a theorem and can be confirmed with a sentence.
+
+## Proposed Lean signature (tentative)
+
+The statement, once confirmed, is elementary enough for a Lean 4 formalization against mathlib4. A rough signature:
+
+```lean
+-- α = log₂(3/2), viewed as a real number in (0, 1)
+noncomputable def α : ℝ := Real.logb 2 (3/2)
+
+-- The n-th convergent denominator of α
+noncomputable def q_n (n : ℕ) : ℕ := sorry  -- from mathlib's continued fractions
+
+-- (C1) Best-approximation property of convergents
+theorem best_approximation_of_α (n : ℕ) (p q : ℤ) (hq : 0 < q) (hqlt : q < q_n (n+1))
+    (hne : (p, q) ≠ (p_n n, q_n n)) :
+    |(q_n n : ℝ) * α - p_n n| < |(q : ℝ) * α - p| := sorry
+
+-- (C2) Strict best-so-far characterization: N minimizes the Pythagorean comma
+-- among all M < N iff N is a continued-fraction denominator of α.
+theorem pythagorean_optimal_iff_convergent_denominator (N : ℕ) (hN : 1 ≤ N) :
+    (∀ M : ℕ, 1 ≤ M → M < N →
+        (⨅ k : ℤ, |(M : ℝ) * α - k|) > (⨅ k : ℤ, |(N : ℝ) * α - k|))
+    ↔ (∃ n : ℕ, N = q_n n) := sorry
+```
+
+The signature is tentative and is part of what a validator is asked to assess: whether it is stated in the right form for a proof to exist. Mathlib4 has the continued-fractions framework (`Mathlib/NumberTheory/ContinuedFractions/`); the best-approximation-of-the-second-kind theorem for simple continued fractions is classical and should be locatable or addable. The `α` irrationality used implicitly by (C2) is [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md).
+
+## Why this matters
+
+Paper 5's central argument at § 2.2 and § 4.2 rests on an implicit claim that the continued-fraction structure of `α` picks out the Pythagorean-comma-optimal temperaments. If (C2) is stated wrongly, the paper's narrative of "why 12, 41, 53 and not arbitrary other N" is unsound. If it is correct, the paper gains a precise theorem to cite rather than a prose gesture — which is the step that takes Paper 5 § 2.2 from "narrated classical facts" to "claim with an acceptance criterion."
+
+This is also the first concrete place where Paper 5 § 2.2's informal content can be turned into a Lean formalization target. It is substantially more tractable than the Baker-theorem formalization ([`music-kernel-06-baker`](music-kernel-06-baker.md)) because it does not require transcendence theory — only elementary continued-fraction machinery already in mathlib4.
+
+## Acceptance criteria
+
+- **Paper-level:** If (C1), (C2), (C3) are confirmed (with or without amendment), Paper 5 § 2.2 adds a boxed theorem stating (C2) with citation (likely Khinchin's *Continued Fractions* or Hardy & Wright's *An Introduction to the Theory of Numbers*), and § 4.2 and § 7.1 are retained as currently worded in v1.2. If a specific correction is required, the prose at § 2.2 and § 4.2 is revised accordingly and the v1.3 revision note credits the validator.
+- **Formalization-level:** The Lean signature above (refined per validator feedback) becomes a Tier 1 target in [`lean/README.md`](../../lean/README.md) alongside the three existing Tier 1 targets.
+
+## Caveats
+
+- The claim is phrased for `α = log₂(3/2)`. The analogous claim holds for any irrational in `(0, 1)`; the paper's interest is specifically in `α` because of its musical role.
+- "Best approximation of the second kind" is the relevant notion; the paper does not claim convergents are best approximations of the first kind in the strongest sense. A validator should confirm the distinction is being handled correctly.
+- (C2)'s use of `min_{k ∈ ℤ} | M · α − k |` is the natural cents-distance on the circle ℝ/ℤ; formalization may prefer `Int.fract` or `UnitAddCircle`-based phrasing. The choice is stylistic and does not affect the mathematical content.
+
+## Related claims
+
+- [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md) — irrationality of `α`, required implicitly by (C2).
+- [`music-kernel-06-baker`](music-kernel-06-baker.md) — quantitative floor on the Pythagorean comma (rank-2 Diophantine); the present claim is the *qualitative* optimal-denominator characterization, complementary to Baker's quantitative bound.
+- [`pythagorean-explanatory-debts`](pythagorean-explanatory-debts.md) — Debt 1 asks whether rank-1 and rank-≥2 Diophantine cases admit a uniform framework; the present claim is a step in that direction for the rank-2 continued-fraction case specifically.
+
+## Outreach context
+
+Origin: Chris Henson, Lean Zulip thread "Music-kernel + Pythagorean comma formalization target," 2026-04-19. Henson observed that the continued-fraction / optimal N-TET relationship is a natural place to focus on setting up the exact statement of what one would want to verify, before attempting a proof. This file is the first-pass answer.
+
+## Changelog
+- 2026-04-20: Claim created in response to Chris Henson's Lean Zulip suggestion; tentative Lean signature included as starting point for validator feedback on formulation.
