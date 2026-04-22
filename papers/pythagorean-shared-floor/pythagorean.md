@@ -2,6 +2,8 @@
 
 FalseWork (falsework.dev)
 
+*Version 1.3. Revisions from version 1.2: added a *Further reading --- community resources* subsection to the References, naming the Xenharmonic Wiki (https://en.xen.wiki/) as a community reference for microtonal practice covering the 31-, 41-, and 53-TET systems discussed in §§ 2.2, 4.2, and 7.1. Pointer contributed by **suhr** via Lean Zulip (2026-04-19, same thread as the v1.2 corrections).*
+
 *Version 1.2. Revisions from version 1.1: corrected the convergent sequence narration at § 2.2 (restoring the 24/41 convergent between 7/12 and 31/53 and the corresponding 41-TET); re-scoped the "practically usable temperaments" claim at §§ 2.2, 4.2, and 7.1 to "equal temperaments that minimize the Pythagorean comma specifically," with explicit acknowledgement that microtonal practice (31-TET, 41-TET, and others) optimizes additional harmonic targets (5-, 7-, and 11-limit subgroups) that correspond to Baker-type problems over extended prime bases; removed the outdated claim that 53-TET is impractical for keyboard construction, noting Bosanquet's 1875 generalized keyboard and modern instruments (Lumatone, Kite guitar). Corrections gratefully received from **suhr** via Lean Zulip (2026-04-19; topic permalink: https://leanprover.zulipchat.com/\#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901). Tracked at GitHub issue #9. Attribution uses reviewer's Lean Zulip display name as placeholder pending confirmation of preferred credit form.*
 
 *Version 1.1. Revisions from version 1.0: new § 5.1 paragraph adopting the Lakatos 'hard core / protective belt' terminology for both the Pythagorean school's integer-ratio programme and the wider FalseWork framework (cross-referenced to Brink 2026a, v11.3, § 3.3); a Russell-type-vs-Gödel-type paragraph at § 5.3 cross-referenced to Brink 2026c (v9.0) § 4, noting that the same Diophantine obstruction can be Russell-type or Gödel-type depending on the absorbing framework; a Commitment-assignment hedge at § 6.3 cross-referenced to Brink 2026a (v11.3) § 3.4; and a new § 7.5 ('Explanatory debts') naming three open questions the paper does not settle. The \[REVIEW: number theorist\] flag on the unified-framework debt is explicit.*
@@ -376,3 +378,7 @@ Brink, C. (2026b). Epistemic dependency as structural condition: A live case stu
 Brink, C. (2026c). The distinction operation and the generative floor: Asymmetry, incompleteness, and the structural unity of domain kernels. Manuscript.
 
 Brink, C. (2026d). Mathematics as comma: The distinction operation and the unreasonable effectiveness of formal systems. Manuscript.
+
+**Further reading --- community resources.**
+
+Xenharmonic Wiki. *Community-maintained reference on alternate tunings and microtonal practice.* https://en.xen.wiki/ (accessed 2026-04). Detailed entries on the 31-, 41-, and 53-TET systems discussed in §§ 2.2, 4.2, and 7.1, as well as the broader landscape of equal-temperament approximations to higher-prime harmonic limits (5-, 7-, 11-limit subgroups). Pointer contributed by **suhr** via Lean Zulip chat (2026-04-19).

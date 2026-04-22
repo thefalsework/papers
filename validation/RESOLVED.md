@@ -25,6 +25,7 @@ Each entry names the contributor's scope carefully, to avoid overstating what th
 - **Resolution:** corrected. Paper 5 v1.1 → v1.2. Tracked at [Issue #9](https://github.com/thefalsework/papers/issues/9). Archived at [`papers/pythagorean-shared-floor/archive/v1.2.docx`](../papers/pythagorean-shared-floor/archive/v1.2.docx).
 - **Scope limits:** the corrections resolved the three specific errors listed. The six-point music-kernel check ([`music-kernel-umbrella`](claims/music-kernel-umbrella.md)) and the Pythagorean explanatory debts ([`pythagorean-explanatory-debts`](claims/pythagorean-explanatory-debts.md)) remain open.
 - **Crediting:** [`ACKNOWLEDGEMENTS.md`](../ACKNOWLEDGEMENTS.md) under Corrections.
+- **Follow-on pointer (2026-04-19, same Zulip thread):** suhr additionally recommended the Xenharmonic Wiki (`https://en.xen.wiki/`) as a community reference for continued microtonal practice. Integrated into Paper 5 v1.3 as a new *Further reading — community resources* subsection in the References (not a correction; a resource addition).
 
 ---
 
