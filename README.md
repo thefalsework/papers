@@ -71,6 +71,8 @@ The site is a separate codebase (proprietary). The papers in this repository are
 
 **Currently open:** [`validation/OPEN.md`](validation/OPEN.md) · [all validation-claim issues ↗](https://github.com/thefalsework/papers/issues?q=is%3Aissue+is%3Aopen+label%3Avalidation) · [all open-research-direction issues ↗](https://github.com/thefalsework/papers/issues?q=is%3Aissue+is%3Aopen+label%3Aopen-direction)
 
+**Already resolved:** [`validation/RESOLVED.md`](validation/RESOLVED.md) tracks four categories of completed engagement — **corrections** (a specialist identified an error; a paper was revised), **validations** (a specialist reviewed a specific open claim and confirmed/corrected it), **corroboration** (independent scholarly work converges on a claim without reviewing FalseWork), and **formalizations** (machine-checkable proof of a paper claim). Scope limits are stated explicitly in every entry to guard against overstating what an external engagement produced.
+
 ### If you just want to read
 
 - Start with [Paper 1 § 1](papers/paper1-kernels-and-commas/paper1.md) for the framework. [Paper 2 § 1](papers/paper2-epistemic-dependency/paper2.md) extends it to AI-assisted knowledge production. [Paper 3 § 1](papers/paper3-distinction-operation/paper3.md) lays the Spencer-Brown / categorical foundation. [Paper 4 § 1](papers/paper4-mathematics-as-comma/paper4.md) is the strongest ontological claim. The [Pythagorean companion](papers/pythagorean-shared-floor/pythagorean.md) is the technical unification of the Pythagorean comma and the irrationality of √2. The [Canonical Confrontation companion](papers/paper6-canonical-confrontation/paper6.md) is an exploratory practitioner-outcome paper applying the kernel/comma topology to the question of canonical persistence.
