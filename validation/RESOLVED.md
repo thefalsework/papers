@@ -26,6 +26,7 @@ Each entry names the contributor's scope carefully, to avoid overstating what th
 - **Scope limits:** the corrections resolved the three specific errors listed. The six-point music-kernel check ([`music-kernel-umbrella`](claims/music-kernel-umbrella.md)) and the Pythagorean explanatory debts ([`pythagorean-explanatory-debts`](claims/pythagorean-explanatory-debts.md)) remain open.
 - **Crediting:** [`ACKNOWLEDGEMENTS.md`](../ACKNOWLEDGEMENTS.md) under Corrections.
 - **Follow-on pointer (2026-04-19, same Zulip thread):** suhr additionally recommended the Xenharmonic Wiki (`https://en.xen.wiki/`) as a community reference for continued microtonal practice. Integrated into Paper 5 v1.3 as a new *Further reading — community resources* subsection in the References (not a correction; a resource addition).
+- **Follow-on theoretical pointer (2026-04-19, same Zulip thread):** suhr additionally noted that the classical continued-fraction characterization of optimal N-TETs generalizes via the theory of MOS (Moment of Symmetry) scales and the Stern-Brocot tree, with Xen Wiki references at `5L_2s` and `Scale_tree`. Integrated into [`claims/optimal-ntet-continued-fraction.md`](claims/optimal-ntet-continued-fraction.md) as a new *Broader theoretical context* subsection (not a correction of the claim statements; a refinement of framing relevant to how the claim would slot into a broader Lean xenharmonic library should one emerge). No paper change.
 
 ---
 
