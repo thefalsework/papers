@@ -57,6 +57,8 @@ References (community-maintained):
 - Xenharmonic Wiki, "5L 2s (diatonic)," https://en.xen.wiki/w/5L_2s
 - Xenharmonic Wiki, "Scale tree," https://en.xen.wiki/w/Scale_tree
 
+A further generalization, outside Paper 5's current scope but noted here for theoretical completeness, optimizes across all prime harmonics simultaneously via peaks of `|ζ(s)|` along specific lines in the critical strip (reparameterized by octave divisions); see Xenharmonic Wiki, "The Riemann zeta function and tuning," https://en.xen.wiki/w/The_Riemann_zeta_function_and_tuning. Together with the MOS / scale-tree picture above, this completes a natural trajectory of temperament-optimization frameworks: **continued fractions of `log₂(3/2)`** (single prime, 3-limit; the (C2) statement of this file) → **MOS / scale tree** (single generator, any specific harmonic limit) → **Riemann zeta** (no fixed generator, all prime harmonics simultaneously). Pointer contributed by **suhr** (Lean Zulip, 2026-04-19, same thread).
+
 **Implication for the formalization target.** The MOS / scale-tree framing generalizes naturally to other generators (perfect fourth, major third, and so on), which the raw continued-fraction phrasing of (C2) does not. A validator should consider whether the statement most worth formalizing is (C2) as given here --- specifically about `α = log₂(3/2)` --- or a generator-parameterized MOS version with (C2) as the fifth-generator, 3-limit special case. Either is acceptable; the choice affects how the statement slots into a broader Lean library of xenharmonic theory should one emerge. The current (C1), (C2), (C3) statements remain correct for the case the paper needs; this is a refinement-of-framing question, not a correction.
 
 ## What a validator should confirm
@@ -126,3 +128,4 @@ Origin: Chris Henson, Lean Zulip thread "Music-kernel + Pythagorean comma formal
 ## Changelog
 - 2026-04-20: Claim created in response to Chris Henson's Lean Zulip suggestion; tentative Lean signature included as starting point for validator feedback on formulation.
 - 2026-04-19: Added *Broader theoretical context* subsection (MOS scales / Stern-Brocot tree) in response to follow-on pointer from suhr (Lean Zulip, same thread as the Paper 5 v1.2 corrections). Not a modification of (C1), (C2), or (C3); a refinement of framing for formalization targeting.
+- 2026-04-19: Extended *Broader theoretical context* with the Riemann zeta function generalization (all-harmonics optimization), completing the three-framework trajectory (continued fractions → MOS / scale tree → Riemann zeta). Outside Paper 5's current scope; noted for theoretical completeness. Pointer from suhr (Lean Zulip, same thread).
