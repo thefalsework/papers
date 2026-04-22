@@ -8,16 +8,17 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations.*
 
-**Current version.** v11.3
+**Current version.** v11.4
 
-**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal).
+**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal). v11.4 adds § 5.4 naming Ellis (2016) and Cartwright (1999) as independent philosophy-of-science precedent for the paper's domain-dependent-formalism posture, hedged and tracked as an open validation claim.
 
 **Paper source.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md)
-**Archive.** [`paper1-kernels-and-commas/archive/v11.3.docx`](paper1-kernels-and-commas/archive/v11.3.docx)
+**Archive.** [`paper1-kernels-and-commas/archive/v11.4.docx`](paper1-kernels-and-commas/archive/v11.4.docx)
 
 **Open validation items this paper carries.**
 - § 2 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
 - § 5 (applied to six kernels) — Extension of G∧R∧C to practice domains is structural analogy, not derivation. Tracked at [`validation/claims/g-r-c-practice-domains.md`](../validation/claims/g-r-c-practice-domains.md).
+- § 5.4 — Ellis/Cartwright scholarly precedent for domain-dependent formalism is adjacent support, not endorsement. Tracked at [`validation/claims/ellis-cartwright-philosophical-support.md`](../validation/claims/ellis-cartwright-philosophical-support.md).
 
 **Versions since v11.0.** See the revision history in the paper's top matter.
 
@@ -44,17 +45,18 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *The Distinction Operation and the Generative Floor: Spencer-Brown, Cantor, and the Categorical Form of Incompleteness.*
 
-**Current version.** v9.1
+**Current version.** v9.2
 
-**One-line gloss.** A seven-level hierarchy of instantiations of the distinction operation (set-theoretic, formal-logical, physical, computational, Gödelian, domain-kernel, epistemic). The categorical formalization in § 4 proposes D1–D4 conditions; § 5 develops the set-theoretic root and the arithmetical ladder ℕ → ℤ → ℚ → ℝ → ℂ → ℍ → 𝕆 via Cantor, Cayley–Dickson, Hurwitz, Frobenius, Baker, and Hankel.
+**One-line gloss.** A seven-level hierarchy of instantiations of the distinction operation (set-theoretic, formal-logical, physical, computational, Gödelian, domain-kernel, epistemic). The categorical formalization in § 4 proposes D1–D4 conditions; § 5 develops the set-theoretic root and the arithmetical ladder ℕ → ℤ → ℚ → ℝ → ℂ → ℍ → 𝕆 via Cantor, Cayley–Dickson, Hurwitz, Frobenius, Baker, and Hankel. v9.2 appends a concluding paragraph to § 7.3 naming Ellis (2016) and Cartwright (1999) as scholarly precedent for the adopted analogy-not-identity register, hedged and tracked as an open validation claim.
 
 **Paper source.** [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md)
-**Archive.** [`paper3-distinction-operation/archive/v9.1.docx`](paper3-distinction-operation/archive/v9.1.docx)
+**Archive.** [`paper3-distinction-operation/archive/v9.2.docx`](paper3-distinction-operation/archive/v9.2.docx)
 
 **Open validation items this paper carries.**
 - § 4 — D1–D4 categorical formalization. A rigorous external formalization (Lambek, Weyl, ℤ/12ℤ) of the music-kernel case has been proposed and is tracked as the six-point music-kernel check at [`validation/claims/music-kernel-umbrella.md`](../validation/claims/music-kernel-umbrella.md). A v10.0 pass to § 4 depends on human verification of this formalization.
 - § 5.2 — Arithmetical-ladder D4 question as open research direction. Tracked at [`validation/claims/ladder-wide-d4.md`](../validation/claims/ladder-wide-d4.md).
 - § 5.1 — Continuum Hypothesis as in-extension Gödel-type undecidable construct (new at v9.1).
+- § 7.3 — Ellis/Cartwright scholarly precedent for the analogy-not-identity register is adjacent support, not endorsement. Tracked at [`validation/claims/ellis-cartwright-philosophical-support.md`](../validation/claims/ellis-cartwright-philosophical-support.md).
 - § 9 — Cantor cumulative caveat applied to `P(formation)` (canonical statement in Paper 4 § 2.5).
 
 ---
@@ -117,7 +119,7 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 ## Cross-reference graph
 
 ```
-Paper 1 (v11.3)
+Paper 1 (v11.4)
   ├─ forward-refs Paper 3 § 4 (Russell/Gödel distinction)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   └─ ground for Papers 2–5
@@ -127,20 +129,20 @@ Paper 2 (v8.2)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   └─ refs Paper 5 (Pythagorean inherited-validity contrast)
 
-Paper 3 (v9.1)
+Paper 3 (v9.2)
   ├─ refs Paper 1 (five-position framework)
   ├─ refs Paper 4 (Level-0 / process primacy)
   ├─ refs Paper 5 (Pythagorean as Level-1 instantiation)
   └─ ground for categorical and arithmetical-ladder claims
 
 Paper 4 (v5.2)
-  ├─ refs Paper 3 v9.1 (all levels; arithmetical ladder)
+  ├─ refs Paper 3 v9.2 (all levels; arithmetical ladder)
   ├─ refs Paper 1, 2 for inherited caveats
   └─ forward-refs Paper 5 (Pythagorean Wigner bridge)
 
 Paper 5 (v1.2)
-  ├─ refs Paper 1 v11.3 (Lakatos framing, Commitment hedge)
-  ├─ refs Paper 3 v9.1 (Russell/Gödel distinction, ladder)
+  ├─ refs Paper 1 v11.4 (Lakatos framing, Commitment hedge)
+  ├─ refs Paper 3 v9.2 (Russell/Gödel distinction, ladder)
   └─ stands alone as number-theoretic technical paper
 
 Paper 6 (v2.1, exploratory companion)

@@ -16,9 +16,9 @@ All papers are authored by **Chris Brink** (independent researcher), distributed
 
 | # | Paper | Current version | Source |
 |---|---|---|---|
-| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.3 | [archive](papers/paper1-kernels-and-commas/archive/v11.3.docx) |
+| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.4 | [archive](papers/paper1-kernels-and-commas/archive/v11.4.docx) |
 | 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [archive](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
-| 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.1 | [archive](papers/paper3-distinction-operation/archive/v9.1.docx) |
+| 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.2 | [archive](papers/paper3-distinction-operation/archive/v9.2.docx) |
 | 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.2 | [archive](papers/paper4-mathematics-as-comma/archive/v5.2.docx) |
 | 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.2 | [archive](papers/pythagorean-shared-floor/archive/v1.2.docx) |
 | 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.1 | [archive](papers/paper6-canonical-confrontation/archive/v2.1.docx) |
@@ -34,6 +34,7 @@ Depending on your background and what brought you here:
 - **Curious, want the gist first** → [**falsework.dev/thesis**](https://falsework.dev/thesis) (the narrative argument, ≈10-minute read) or [**falsework.dev/theory**](https://falsework.dev/theory) (the full technical exposition; includes a 3-minute summary at the top).
 - **Mathematician / category theorist / logician** → [Paper 3 § 4](papers/paper3-distinction-operation/paper3.md) (the six-point music-kernel categorical claim needing verification) and [Paper 5](papers/pythagorean-shared-floor/pythagorean.md) (Baker's theorem applied to the Pythagorean comma and the irrationality of √2). Concrete open items: [Issue #1](https://github.com/thefalsework/papers/issues/1), [Issue #2](https://github.com/thefalsework/papers/issues/2), [Issue #4](https://github.com/thefalsework/papers/issues/4).
 - **Philosopher / humanist / reception studies** → [Paper 2](papers/paper2-epistemic-dependency/paper2.md) (epistemic dependency as structural condition in AI-assisted scholarship) and [Paper 6](papers/paper6-canonical-confrontation/paper6.md) (canonical status as the structural trace of kernel-level confrontation — exploratory companion). Open item with a testable empirical prediction: [Issue #8](https://github.com/thefalsework/papers/issues/8).
+- **Philosopher of science (emergence, multi-level ontology, philosophy of physics)** → [Paper 1 § 5.4](papers/paper1-kernels-and-commas/paper1.md) and [Paper 3 § 7.3](papers/paper3-distinction-operation/paper3.md) cite Ellis (2016) and Cartwright (1999) as adjacent scholarly precedent for the paper's domain-dependent-formalism posture. Whether the citations are correctly scoped is an open validation claim: [Issue #10](https://github.com/thefalsework/papers/issues/10).
 - **Practitioner** (composer, architect, filmmaker, software engineer) → [**falsework.dev/kernels**](https://falsework.dev/kernels) (the registered kernels as a working navigational instrument) and [**falsework.dev/structural-profile**](https://falsework.dev/structural-profile) (the analysis pipeline that generates structural profiles of specific works).
 - **Lean 4 / formalization contributor** → [`lean/README.md`](lean/README.md) — full specification for the music-kernel endofunctor formalization target. Entry point for anyone who wants to turn the D1–D4 categorical sketch into a verified theorem.
 
@@ -126,7 +127,7 @@ Every tagged release of this repository is archived to Zenodo and assigned a per
 
 **Paper-at-version citation** (most precise — pinned to a specific paper inside a specific release):
 
-> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.3). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
+> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.4). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
 
 BibTeX, RIS, and EndNote entries for any version can be exported directly from the [Zenodo record page](https://zenodo.org/records/19673673). Both concept and version DOIs resolve programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access. Each subsequent release (per-paper or collection-wide) will receive its own version DOI under the same concept DOI.
 

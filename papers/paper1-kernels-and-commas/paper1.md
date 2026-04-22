@@ -6,6 +6,8 @@ Chris Brink
 
 FalseWork (falsework.dev)
 
+*Version 11.4. Revisions from version 11.3: new § 5.4 ("Scholarly Precedent for Domain-Dependent Formalism") citing Ellis (2016) on multi-level emergence and Cartwright (1999) on the dappled-world thesis as independent philosophy-of-science precedent for the paper's methodological commitment that different domains admit different degrees of formalism. The citations are presented as adjacent scholarly support rather than endorsement, flagged `[REVIEW: philosopher of science]`, and tracked as an open validation claim at `validation/claims/ellis-cartwright-philosophical-support.md` (GitHub issue [#10](https://github.com/thefalsework/papers/issues/10)). No substantive revisions to the five-position derivation, the falsifiability conditions of § 3.3, or the empirical demonstrations of § 4.*
+
 *Version 11.3. Revisions from version 11.2: Section 2 now defers to Brink 2026d (v5.0) § 2.5 as the canonical cumulative statement of the Cantor extension's \[REQUIRES FORMAL VALIDATION\] status across the four-paper series, and carries a forward-reference to Brink 2026c (v9.0) § 4 for the Russell-type / Gödel-type distinction applied to the Incompleteness Condition and all subsequent commas in the framework. No substantive changes to the five-position derivation or to the falsifiability conditions of Section 3.3.*
 
 ## Abstract
@@ -252,6 +254,14 @@ This problem is structural rather than contingent. It cannot be eliminated by im
 
 The epistemic dependency problem as it applies specifically to AI classification systems --- and its structural parallel to human knowledge production --- is the subject of subsequent work. The framework here identifies the problem precisely, names the correction mechanism currently in use, and treats the Tymoczko exchange as evidence that genuine correction is possible rather than as evidence that the problem is solved.
 
+### 5.4 Scholarly Precedent for Domain-Dependent Formalism
+
+The three open problems above arise in a framework that is explicit about a methodological commitment: that different domains admit different degrees of formalism, and that the extension of the Incompleteness Condition (G ∧ R ∧ C) across music, cinema, architecture, literature, software, and physics involves progressively looser formal grounding --- fully formal for software and physics where the condition follows from Gödel (1931) and Wolfram (2002), respectively, and progressively more structurally analogous for music, cinema, architecture, and literature, where the G ∧ R ∧ C mapping is presented as structural analogy rather than first-principles derivation. The cumulative series (Brink 2026a–e) treats this differential grounding as a feature of the problem rather than a defect of the analysis: physics and computation admit full formalism because the underlying systems are themselves formal; practice domains admit structural analogy because the underlying systems are not.
+
+This methodological commitment --- that formalism is domain-dependent, that the single-formalism ideal is inadequate for cross-domain work, and that structural analogy at appropriate registers is a legitimate rather than defective methodological posture --- has adjacent scholarly precedent in contemporary philosophy of science, independent of the present framework. George F. R. Ellis's work on multi-level emergence and top-down causation (Ellis 2016; Ellis & Drossel 2019, 2020) argues, on independent grounds in philosophy of physics and cosmology, that different organizational levels require different formalisms and that higher-level descriptions are not reducible to lower-level physics. Nancy Cartwright's *Dappled World* (Cartwright 1999) argues, on independent grounds in philosophy of science, that scientific laws are local and domain-specific, that the universe is a "dappled" patchwork of different kinds of order, and that the single-formalism ideal is a methodological error rather than a regulative goal.
+
+These are not endorsements of the present framework. Neither Ellis nor Cartwright has evaluated the G ∧ R ∧ C mapping, the kernel/comma topology, or the five-position derivation. Their relevance is narrower: they establish that the methodological posture --- *domain-dependent formalism is a principled stance, not a retreat from rigour* --- has standing in contemporary philosophy of science independent of the present paper. The specific mapping between their frameworks and the present paper's typology is tracked as an open validation claim at `validation/claims/ellis-cartwright-philosophical-support.md` (GitHub issue [#10](https://github.com/thefalsework/papers/issues/10)) and requires independent assessment by a philosopher of science before it can be advanced beyond adjacent support. \[REVIEW: philosopher of science\]
+
 ## 6. Conclusion
 
 This paper has proposed and derived a framework for structural classification of creative and scientific works across domains. Three claims are established.
@@ -288,6 +298,8 @@ Brink, C. (2026e). The Pythagorean comma, the irrationality of √2, and a share
 
 Cantor, G. (1891). Über eine elementare Frage der Mannigfaltigkeitslehre. *Jahresbericht der Deutschen Mathematiker-Vereinigung*, 1, 75--78.
 
+Cartwright, N. (1999). *The dappled world: A study of the boundaries of science*. Cambridge University Press.
+
 Cubitt, T. S., Perez-Garcia, D., & Wolf, M. M. (2015). Undecidability of the spectral gap. *Nature*, 528, 207--211.
 
 Cutting, J. E. (forthcoming). *Four cinematic forms and their psychological bases*. University of Texas Press.
@@ -299,6 +311,12 @@ Cutting, J. E. Personal correspondence. 2026.
 Dennett, D. C. (1991). Real patterns. *Journal of Philosophy*, 88(1), 27--51.
 
 Eisenstein, S. (1949). *Film form: Essays in film theory* (J. Leyda, Trans.). Harcourt Brace.
+
+Ellis, G. F. R. (2016). *How can physics underlie the mind? Top-down causation in the human context*. Springer.
+
+Ellis, G. F. R., & Drossel, B. (2019). How downwards causation occurs in digital computers. *Foundations of Physics*, 49(11), 1253--1277.
+
+Ellis, G. F. R., & Drossel, B. (2020). Contextual wavefunction collapse: An integrated theory of quantum measurement. *New Journal of Physics*, 22, 033051.
 
 Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, 38, 173--198.
 
