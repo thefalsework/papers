@@ -34,7 +34,7 @@ Entries are in chronological order of the engagement producing them, most recent
 
 **Venue.** Lean Zulip (Lean prover community chat), `#new members` channel. Thread permalink: https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901
 
-**Engagement type(s).** Correction (1); venue-norm observation (1); refinement request leading to new validation claim (1).
+**Engagement type(s).** Correction (1); venue-norm observation (1); refinement request leading to new validation claim (1); follow-on theoretical pointers from a single contributor (3).
 
 **Contributors named in this entry.**
 - **suhr** (Zulip display name; placeholder pending confirmation of preferred credit form).
@@ -49,19 +49,31 @@ Entries are in chronological order of the engagement producing them, most recent
 
 3. **Venue-norm observation — AI-drafted post form in Lean Zulip.** Lean Zulip moderators raised concern about AI-drafted posts in that venue, noting that the community has moved from "discouraged" to "disallowed" on this practice. Author response: committed to not drafting Zulip posts with AI assistance going forward, without making a broader programme-level commitment. Rationale recorded: Paper 2's correction architecture treats AI disclosure as the primary transparency requirement and does not constrain drafting *form* across venues; Lean Zulip's norm constrains drafting form in that venue. The two are compatible if the programme respects each venue's norm on drafting form in that venue specifically. Not recorded in `RESOLVED.md` (it is not a paper-level claim change); recorded here as architectural data about the operating environment.
 
+4. **Follow-on theoretical pointers from suhr (same thread, 2026-04-19, after the v1.1 → v1.2 corrections landed).** Three further contributions from the same contributor, documented in canonical form at [`validation/RESOLVED.md`](../../validation/RESOLVED.md) under the suhr entry:
+   - *(i) Xenharmonic Wiki as community reference.* Integrated into Paper 5 v1.2 → v1.3 as a new *Further reading — community resources* subsection in References.
+   - *(ii) MOS (Moment of Symmetry) scales and the Stern-Brocot tree as generalization of the continued-fraction framework.* Integrated into [`validation/claims/optimal-ntet-continued-fraction.md`](../../validation/claims/optimal-ntet-continued-fraction.md) as a new *Broader theoretical context* subsection (not a correction of the claim; a refinement of framing for formalization targeting).
+   - *(iii) Riemann zeta function approach as a further generalization (all-harmonics optimization).* Integrated as a one-paragraph extension to the same *Broader theoretical context* subsection, completing a three-framework trajectory from single-prime (3-limit) → single-generator-any-limit (MOS) → all-harmonics (Riemann zeta).
+
 **Scope limits on this entry.**
 - suhr's corrections closed three specific errors. The six-point music-kernel check ([`music-kernel-umbrella`](../../validation/claims/music-kernel-umbrella.md)) and the three Pythagorean explanatory debts ([`pythagorean-explanatory-debts`](../../validation/claims/pythagorean-explanatory-debts.md)) remain open.
 - Chris Henson's suggestion prompted the new claim file; he did not endorse or review its content. The claim file is open for review.
 - No formalization was produced in this engagement. The Lean signatures on `music-kernel-01-irrationality.md` and `optimal-ntet-continued-fraction.md` are tentative starting points, not verified proofs.
 - Moderator positions are stated factually. Neither moderator reviewed paper content; their intervention was venue-norm only. The venue-norm observation is not a validation of the correction architecture's design or its content, and should not be read as one.
+- The three follow-on theoretical pointers from suhr are technical context, not validation of any claim. suhr did not review or endorse the claim file `optimal-ntet-continued-fraction.md`; the pointers enriched its *Broader theoretical context* subsection.
+
+**Candidate pattern surfaced (AI synthesis; not yet paper content).**
+
+During the processing of suhr's three follow-on theoretical pointers, an AI-assisted chat thread on 2026-04-19 produced the following reading: the three frameworks — continued fractions of `log₂(3/2)` (3-limit; the case Paper 5 addresses), MOS / scale tree (any single generator, any specific harmonic limit), Riemann zeta (all prime harmonics simultaneously) — constitute a progressive-generalization trajectory in which each framework handles more of the underlying Diophantine irresolution without any of them closing the Pythagorean comma. All three are approximation-selection apparatus, not resolution apparatus. If the reading holds, the stratification is a potential instance of the FalseWork thesis in the temperament literature itself: working theorists have produced three layered optimization frameworks rather than one master framework, matching the structural-incompleteness pattern Papers 2 and 3 predict.
+
+The reading is preserved here and is **not integrated into any paper**. Reasons: (a) it emerged from AI synthesis in a chat thread, not from the author's independent reading of the microtonal literature, and the project's disclosure discipline requires author-voice write-up for paper claims; (b) object-level incompleteness (the Pythagorean comma itself) and meta-level incompleteness (the layered theorizing about it) are conflated in the synthesis and need disentangling before any publication; (c) Paper 5 has had three version bumps in the week of the engagement and should not absorb further substantive content live. If the reading survives maturation, candidate homes are Paper 5 § 4 or § 7 (as technical observation), Paper 2 (as case study of correction-architecture outcome), or Paper 3 (as empirical illustration of the music-kernel non-closure). Maturation here means at minimum: author-voice independent writing, resolution of the object/meta conflation, and at least one independent reading — ideally from a working microtonal theorist — confirming the "none of the three frameworks closes the comma" characterization.
 
 **Primary sources and repo artefacts.**
 - Thread permalink: https://leanprover.zulipchat.com/#narrow/channel/113489-new-members/topic/Music-kernel.20.2B.20Pythagorean.20comma.20formalization.20target/near/588730901
 - Draft / log file: [`docs/outreach/lean-zulip-post.md`](../outreach/lean-zulip-post.md)
 - Canonical correction record: [`validation/RESOLVED.md`](../../validation/RESOLVED.md)
 - GitHub issue: [#9](https://github.com/thefalsework/papers/issues/9)
-- Claim file prompted by Henson: [`validation/claims/optimal-ntet-continued-fraction.md`](../../validation/claims/optimal-ntet-continued-fraction.md)
-- Paper revision: [`papers/pythagorean-shared-floor/archive/v1.2.docx`](../../papers/pythagorean-shared-floor/archive/v1.2.docx)
+- Claim file prompted by Henson (with Broader theoretical context subsection added during suhr follow-ons): [`validation/claims/optimal-ntet-continued-fraction.md`](../../validation/claims/optimal-ntet-continued-fraction.md)
+- Paper revisions: [`papers/pythagorean-shared-floor/archive/v1.2.docx`](../../papers/pythagorean-shared-floor/archive/v1.2.docx), [`papers/pythagorean-shared-floor/archive/v1.3.docx`](../../papers/pythagorean-shared-floor/archive/v1.3.docx)
 
 ---
 
@@ -132,3 +144,4 @@ Further patterns will be added as the record accumulates.
 
 ## Changelog
 - 2026-04-21: File created. Initial entries: Lean Zulip thread (2026-04-18/19), Tymoczko correspondence (2026), Cutting correspondence (2026).
+- 2026-04-19: Lean Zulip entry extended. Added Outcome 4 (three follow-on theoretical pointers from suhr producing Paper 5 v1.3 and claim-file *Broader theoretical context* subsection); added scope-limit bullet on follow-on pointers; added *Candidate pattern surfaced (AI synthesis; not yet paper content)* subsection documenting the three-framework-trajectory reading of the temperament optimization literature with explicit disclosure of AI-synthesis origin and reasons for non-integration into any paper at this time.
