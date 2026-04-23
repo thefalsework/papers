@@ -5,7 +5,7 @@
 **Related claims:** [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md), [`music-kernel-06-baker`](music-kernel-06-baker.md)
 **Domain:** Number theory (elementary; Diophantine approximation)
 **Time estimate for a validator:** 30 minutes to assess the statement; proof is classical
-**GitHub issue:** pending
+**GitHub issue:** [#11](https://github.com/thefalsework/papers/issues/11)
 
 ---
 
