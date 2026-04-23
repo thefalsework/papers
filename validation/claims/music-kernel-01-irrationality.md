@@ -26,11 +26,12 @@ An equivalent chain: `log₂ 3` is irrational (standard; a corollary of the Gelf
 
 ## Proposed Lean 4 signatures (tightened against mathlib4)
 
-The claim is elementary enough to state directly against mathlib4. Three equivalent forms are given; a validator or Lean contributor is explicitly invited to say which is preferred, and to flag any phrasing issue, before a proof is attempted. All imports are current mathlib4 (`Mathlib.NumberTheory.Real.Irrational`, not the older `Mathlib.NumberTheory.Irrational`).
+The claim is elementary enough to state directly against mathlib4. Three equivalent forms are given; a validator or Lean contributor is explicitly invited to say which is preferred, and to flag any phrasing issue, before a proof is attempted.
+
+**Compilation status.** The block below has been verified to type-check against current mathlib4 via the `live.lean-lang.org` web editor with `import Mathlib` (2026-04-19). Narrowing to specific imports is a downstream refinement and does not affect the statements.
 
 ```lean
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.NumberTheory.Real.Irrational
+import Mathlib
 
 open Real
 
@@ -84,3 +85,4 @@ This is the foundational datum. If `α` were rational, every downstream claim (F
 - 2026-04-20: Claim created.
 - 2026-04-21: Added tentative Lean signature block (Tier 1 formalization target). Equivalent forms included to invite statement-level feedback from Lean collaborators per Chris Henson's suggestion on Lean Zulip (2026-04-19).
 - 2026-04-19: Tightened the Lean 4 signature block against current mathlib4. Fixed the import path (`Mathlib.NumberTheory.Real.Irrational`, not the older `Mathlib.NumberTheory.Irrational`). Added explicit proof sketches for each form and four specific statement-level questions for a validator.
+- 2026-04-19: Verified the Lean signature block type-checks against current mathlib4 via `live.lean-lang.org` (using `import Mathlib`). All three forms (`Irrational (Real.logb 2 (3/2))`, `Irrational (Real.logb 2 3)`, and the rank-2 linear-form-in-logs statement) elaborate with only the expected `sorry` warnings. Block updated to use `import Mathlib` consistently with the verified configuration.

@@ -76,7 +76,7 @@ A partial response that addresses only (C2) is a complete and useful response. (
 
 The signatures below are bound to live mathlib4 primitives (no free `sorry`s in the definitions; `sorry` appears only in proof positions). They are intended to type-check as Lean 4 statements with `import Mathlib` and to give a validator something concrete to either endorse, tighten, or reject.
 
-**Compilation status.** These signatures have been written against the current mathlib4 API docs but have *not* been type-checked locally against a live `lake build`. Naming issues (e.g., `Mathlib.NumberTheory.Real.Irrational` vs an older path) or coercion-elaboration issues may remain. A validator who spots such an issue and flags it is giving useful feedback about the carrier itself, not just the math — both kinds of feedback are welcomed. The informal content of (C1) and (C2) is independent of the specific Lean syntax.
+**Compilation status.** These signatures have been verified to type-check against current mathlib4 via the `live.lean-lang.org` web editor with `import Mathlib` (2026-04-19). The block below uses `import Mathlib` as a diagnostic; narrowing to specific imports is a downstream refinement and does not affect the mathematical content. All `sorry`s appear only in proof positions; every definition elaborates cleanly and the theorem statements typecheck.
 
 **Primitives used (with sources).** `Real.logb`, `Real.log`, `Irrational`, `round`, `Int.fract`, `Real.convergent` — all from mathlib4:
 
@@ -88,10 +88,7 @@ The signatures below are bound to live mathlib4 primitives (no free `sorry`s in 
 Legendre's theorem — that any rational `q` with `|ξ − q| < 1/(2 q.den²)` is a convergent of `ξ` — is in mathlib as `Real.exists_rat_eq_convergent`. The stronger *best-approximation-of-the-second-kind* statement below (C1) is classical and derivable from mathlib's continued-fraction API but does not appear to be named in current mathlib4; it is proposed as a small lemma the formalization would need to establish.
 
 ```lean
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.NumberTheory.Real.Irrational
-import Mathlib.NumberTheory.DiophantineApproximation.Basic
-import Mathlib.Algebra.Order.Round
+import Mathlib
 
 open Real
 
@@ -191,3 +188,4 @@ Origin: Chris Henson, Lean Zulip thread "Music-kernel + Pythagorean comma formal
 - 2026-04-19: Added *Broader theoretical context* subsection (MOS scales / Stern-Brocot tree) in response to follow-on pointer from suhr (Lean Zulip, same thread as the Paper 5 v1.2 corrections). Not a modification of (C1), (C2), or (C3); a refinement of framing for formalization targeting.
 - 2026-04-19: Extended *Broader theoretical context* with the Riemann zeta function generalization (all-harmonics optimization), completing the three-framework trajectory (continued fractions → MOS / scale tree → Riemann zeta). Outside Paper 5's current scope; noted for theoretical completeness. Pointer from suhr (Lean Zulip, same thread).
 - 2026-04-19: Tightened the Lean 4 signature block against current mathlib4 (`Real.convergent`, `Irrational`, `Real.logb`, `round`). All `sorry`s now appear only in proof positions; definitions are bound to live mathlib primitives. Explicit note added on which classical theorem (best-approximation-of-the-second-kind) appears to need a separate lemma vs. being already in mathlib (Legendre). Four specific statement-level questions for a validator enumerated.
+- 2026-04-19: Verified the Lean signature block type-checks against current mathlib4 via `live.lean-lang.org` (using `import Mathlib`). All four definitions elaborate; the two theorems and the sanity-check example carry only the expected `sorry` warnings. Claim file updated to drop the "not locally type-checked" caveat; block now uses `import Mathlib` consistently with the verified configuration.
