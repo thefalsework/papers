@@ -17,6 +17,14 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 - **Status:** awaiting category theorist + number theorist
 - **Sub-items:** [`music-kernel-01`](claims/music-kernel-01-irrationality.md), [`02`](claims/music-kernel-02-fixed-points.md), [`03`](claims/music-kernel-03-terminal-coalgebra.md), [`04`](claims/music-kernel-04-colimit-escape.md), [`05`](claims/music-kernel-05-z12z-cycle.md), [`06`](claims/music-kernel-06-baker.md) — see also issue [#2](https://github.com/thefalsework/papers/issues/2) for number-theory focus on point 6
 
+### `lawvere-unification-of-formal-groundings` — Cantor and Gödel as Lawvere instances; G ∧ R ∧ C as domain-facing analog of Lawvere's hypothesis
+- **Authoritative statement:** [`claims/lawvere-unification-of-formal-groundings.md`](claims/lawvere-unification-of-formal-groundings.md)
+- **GitHub issue:** (pending)
+- **Paper:** Paper 1 § 2 and § 2.1 (v11.5)
+- **What's asked:** verify three claims. (1) Cantor's diagonal argument, Cantor's theorem, and Gödel's first incompleteness theorem are instances of Lawvere's fixed-point theorem per Yanofsky 2003. (2) Wolfram's PCE is a universality-class claim rather than a Lawvere instance; its consequences (halting problem, Rice's theorem) are Lawvere instances. (3) G ∧ R ∧ C corresponds to Lawvere's categorical hypothesis (G ↔ B^A, R ↔ point-surjection, C ↔ cartesian closure); the extension-to-practice problem is reformulable as specifying the ambient CCC and endofunctor for each kernel. Claims 1 and 2 are standard literature; Claim 3 is speculative and the one where pushback is most likely and most useful.
+- **Time estimate for validator:** ~2–6 hours (three primary texts plus two adjacent paper sections)
+- **Status:** awaiting category theorist or mathematical logician; AI-synthesis origin disclosed in the claim file
+
 ---
 
 ## Domain: Set theory / formal logic

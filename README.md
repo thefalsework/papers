@@ -16,7 +16,7 @@ All papers are authored by **Chris Brink** (independent researcher), distributed
 
 | # | Paper | Current version | Source |
 |---|---|---|---|
-| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.4 | [archive](papers/paper1-kernels-and-commas/archive/v11.4.docx) |
+| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.5 | [archive](papers/paper1-kernels-and-commas/archive/v11.5.docx) |
 | 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [archive](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
 | 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.2 | [archive](papers/paper3-distinction-operation/archive/v9.2.docx) |
 | 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.2 | [archive](papers/paper4-mathematics-as-comma/archive/v5.2.docx) |

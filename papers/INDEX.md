@@ -8,12 +8,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations.*
 
-**Current version.** v11.4
+**Current version.** v11.5
 
-**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal). v11.4 adds § 5.4 naming Ellis (2016) and Cartwright (1999) as independent philosophy-of-science precedent for the paper's domain-dependent-formalism posture, hedged and tracked as an open validation claim.
+**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal). v11.5 adds Lawvere (1969) / Yanofsky (2003) / Barreto (2025) to § 2 and § 2.1, identifying the Cantor and Gödel groundings as two instances of Lawvere's fixed-point theorem, distinguishing Wolfram's PCE as a universality claim whose consequences are Lawvere instances, and reformulating the extension-to-practice question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence. Hedged `[REVIEW: category theorist]` and tracked as an open validation claim. v11.4 adds § 5.4 naming Ellis (2016) and Cartwright (1999) as independent philosophy-of-science precedent for the paper's domain-dependent-formalism posture, hedged and tracked as an open validation claim.
 
 **Paper source.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md)
-**Archive.** [`paper1-kernels-and-commas/archive/v11.4.docx`](paper1-kernels-and-commas/archive/v11.4.docx)
+**Archive.** [`paper1-kernels-and-commas/archive/v11.5.docx`](paper1-kernels-and-commas/archive/v11.5.docx)
 
 **Open validation items this paper carries.**
 - § 2 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
@@ -119,7 +119,7 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 ## Cross-reference graph
 
 ```
-Paper 1 (v11.4)
+Paper 1 (v11.5)
   ├─ forward-refs Paper 3 § 4 (Russell/Gödel distinction)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   └─ ground for Papers 2–5
