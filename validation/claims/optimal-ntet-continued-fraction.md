@@ -72,31 +72,90 @@ For each of (C1), (C2), (C3), a specialist should state one of:
 
 A partial response that addresses only (C2) is a complete and useful response. (C1) is textbook (Khinchin, Hardy & Wright); (C2) is the specifically musical reformulation and is the statement the paper most needs audited. (C3) is a scoping note rather than a theorem and can be confirmed with a sentence.
 
-## Proposed Lean signature (tentative)
+## Proposed Lean 4 signatures (tightened against mathlib4)
 
-The statement, once confirmed, is elementary enough for a Lean 4 formalization against mathlib4. A rough signature:
+The signatures below are bound to live mathlib4 primitives (no free `sorry`s in the definitions; `sorry` appears only in proof positions). They are intended to type-check as Lean 4 statements with `import Mathlib` and to give a validator something concrete to either endorse, tighten, or reject.
+
+**Primitives used (with sources).** `Real.logb`, `Real.log`, `Irrational`, `round`, `Int.fract`, `Real.convergent` — all from mathlib4:
+
+- `Real.convergent : ℝ → ℕ → ℚ`, from `Mathlib.NumberTheory.DiophantineApproximation.Basic`. This is the direct recursive definition returning the `n`-th convergent of a real number as a rational; `(ξ.convergent n).num` and `(ξ.convergent n).den` give numerator and denominator.
+- `Irrational`, from `Mathlib.NumberTheory.Real.Irrational`.
+- `Real.logb`, from `Mathlib.Analysis.SpecialFunctions.Log.Basic`.
+- `round : ℝ → ℤ`, from `Mathlib.Algebra.Order.Round`.
+
+Legendre's theorem — that any rational `q` with `|ξ − q| < 1/(2 q.den²)` is a convergent of `ξ` — is in mathlib as `Real.exists_rat_eq_convergent`. The stronger *best-approximation-of-the-second-kind* statement below (C1) is classical and derivable from mathlib's continued-fraction API but does not appear to be named in current mathlib4; it is proposed as a small lemma the formalization would need to establish.
 
 ```lean
--- α = log₂(3/2), viewed as a real number in (0, 1)
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.NumberTheory.Real.Irrational
+import Mathlib.NumberTheory.DiophantineApproximation.Basic
+import Mathlib.Algebra.Order.Round
+
+open Real
+
+/-- The fundamental irrational of the Pythagorean comma: `α = log₂(3/2)`. -/
 noncomputable def α : ℝ := Real.logb 2 (3/2)
 
--- The n-th convergent denominator of α
-noncomputable def q_n (n : ℕ) : ℕ := sorry  -- from mathlib's continued fractions
+/-- The `n`-th convergent denominator of `α`, via mathlib's `Real.convergent`. -/
+noncomputable def qConv (n : ℕ) : ℕ := (α.convergent n).den
 
--- (C1) Best-approximation property of convergents
-theorem best_approximation_of_α (n : ℕ) (p q : ℤ) (hq : 0 < q) (hqlt : q < q_n (n+1))
-    (hne : (p, q) ≠ (p_n n, q_n n)) :
-    |(q_n n : ℝ) * α - p_n n| < |(q : ℝ) * α - p| := sorry
+/-- The `n`-th convergent numerator of `α`, via mathlib's `Real.convergent`. -/
+noncomputable def pConv (n : ℕ) : ℤ := (α.convergent n).num
 
--- (C2) Strict best-so-far characterization: N minimizes the Pythagorean comma
--- among all M < N iff N is a continued-fraction denominator of α.
-theorem pythagorean_optimal_iff_convergent_denominator (N : ℕ) (hN : 1 ≤ N) :
+/-- The Pythagorean-comma error of `N`-TET: how close `N` equal divisions
+of the octave come to tracking the perfect fifth in `log₂` coordinates.
+Equivalently the distance from `N · α` to the nearest integer. -/
+noncomputable def pythagoreanCommaError (N : ℕ) : ℝ :=
+  |(N : ℝ) * α - (round ((N : ℝ) * α) : ℝ)|
+
+/-- (C1) Best-approximation of the second kind for convergents of `α`:
+the convergent `(pConv n, qConv n)` strictly beats every other integer
+pair `(a, b)` with `1 ≤ b < qConv (n+1)` on the quantity `|b α − a|`.
+
+This is the classical "best-approximation-of-the-second-kind" theorem
+(Khinchin, *Continued Fractions*, Thm. 16; Hardy & Wright, *An Introduction
+to the Theory of Numbers*, §10.15). Mathlib4 has Legendre's theorem
+(`Real.exists_rat_eq_convergent`), which gives the converse direction;
+this stronger form appears to need a separate small lemma. -/
+theorem convergent_best_approx_second_kind
+    (n : ℕ) (hn : 1 ≤ n) (a b : ℤ)
+    (hb_pos : 0 < b) (hb_lt : b < (qConv (n+1) : ℤ))
+    (hne : (a, b) ≠ (pConv n, (qConv n : ℤ))) :
+    |((qConv n : ℤ) : ℝ) * α - (pConv n : ℝ)|
+      < |(b : ℝ) * α - (a : ℝ)| := by
+  sorry
+
+/-- (C2) The Pythagorean-comma-optimal temperaments are exactly the
+strict record-holders in the convergent-denominator sequence of `α`.
+
+A natural number `N ≥ 1` is a *strict best-so-far Pythagorean temperament*
+iff `pythagoreanCommaError N < pythagoreanCommaError M` for every
+`1 ≤ M < N`. The theorem asserts this is equivalent to `N` being the
+denominator of some convergent of `α` that strictly improves on all
+prior convergent denominators (necessary to handle the initial
+`q₀ = q₁ = 1` case for `α ∈ (0, 1)`). -/
+theorem best_tet_iff_record_convergent_denominator (N : ℕ) (hN : 1 ≤ N) :
     (∀ M : ℕ, 1 ≤ M → M < N →
-        (⨅ k : ℤ, |(M : ℝ) * α - k|) > (⨅ k : ℤ, |(N : ℝ) * α - k|))
-    ↔ (∃ n : ℕ, N = q_n n) := sorry
+        pythagoreanCommaError N < pythagoreanCommaError M)
+    ↔ (∃ n : ℕ, N = qConv n ∧ ∀ m : ℕ, m < n → qConv m < N) := by
+  sorry
+
+/-- (C2-first-few) A sanity-check corollary that should be verifiable by
+computation once `qConv 0 … qConv 5` are evaluated: the first six record
+holders for `pythagoreanCommaError` are `1, 2, 5, 12, 41, 53`. -/
+example : qConv 0 = 1 ∧ qConv 2 = 2 ∧ qConv 3 = 5 ∧ qConv 4 = 12
+    ∧ qConv 5 = 41 ∧ qConv 6 = 53 := by
+  sorry
 ```
 
-The signature is tentative and is part of what a validator is asked to assess: whether it is stated in the right form for a proof to exist. Mathlib4 has the continued-fractions framework (`Mathlib/NumberTheory/ContinuedFractions/`); the best-approximation-of-the-second-kind theorem for simple continued fractions is classical and should be locatable or addable. The `α` irrationality used implicitly by (C2) is [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md).
+**What a validator is specifically asked to assess about the signature** (independent of proving anything):
+
+1. Is `Real.convergent` the right mathlib primitive to hang this on, or should it be `GenContFract.of α` + `.convs n` (from `Mathlib.Algebra.ContinuedFractions.Computation.Basic`)? Both exist; `Real.convergent` has the cleaner type because it returns `ℚ` directly.
+2. Is the `pythagoreanCommaError` definition (`|Nα − round(Nα)|`) the right distance to use, or should it be expressed via `Int.fract` or `AddCircle` / `UnitAddCircle` from `Mathlib.Topology.Instances.AddCircle`? These are provably equivalent but affect downstream proof ergonomics.
+3. Does (C2) need the "strict improvement over all prior convergent denominators" clause, or is there a cleaner statement? For `α ∈ (0, 1)` the 0-th convergent is `⌊α⌋ = 0` with denominator 1, and the 1-st convergent has denominator 1 as well before the denominators start strictly growing; the record-holder clause is there to paper over this edge. A different parameterization (e.g., skipping `n = 0` or using `convergent` only from `n ≥ 2`) might simplify.
+4. Is (C1) correctly stated as a strict inequality with the `(a, b) ≠ (pConv n, qConv n)` exclusion, or is it cleaner to state the non-strict `≤` version (as ProofWiki does) with an equality-iff clause?
+
+The `α` irrationality used implicitly by (C2) is [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md).
 
 ## Why this matters
 
@@ -129,3 +188,4 @@ Origin: Chris Henson, Lean Zulip thread "Music-kernel + Pythagorean comma formal
 - 2026-04-20: Claim created in response to Chris Henson's Lean Zulip suggestion; tentative Lean signature included as starting point for validator feedback on formulation.
 - 2026-04-19: Added *Broader theoretical context* subsection (MOS scales / Stern-Brocot tree) in response to follow-on pointer from suhr (Lean Zulip, same thread as the Paper 5 v1.2 corrections). Not a modification of (C1), (C2), or (C3); a refinement of framing for formalization targeting.
 - 2026-04-19: Extended *Broader theoretical context* with the Riemann zeta function generalization (all-harmonics optimization), completing the three-framework trajectory (continued fractions → MOS / scale tree → Riemann zeta). Outside Paper 5's current scope; noted for theoretical completeness. Pointer from suhr (Lean Zulip, same thread).
+- 2026-04-19: Tightened the Lean 4 signature block against current mathlib4 (`Real.convergent`, `Irrational`, `Real.logb`, `round`). All `sorry`s now appear only in proof positions; definitions are bound to live mathlib primitives. Explicit note added on which classical theorem (best-approximation-of-the-second-kind) appears to need a separate lemma vs. being already in mathlib (Legendre). Four specific statement-level questions for a validator enumerated.

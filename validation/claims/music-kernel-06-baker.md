@@ -46,5 +46,55 @@ This claim does double duty:
 
 If Baker's theorem does *not* apply as claimed, the paper retains the FTA-based qualitative argument but loses the effective-bound framing. The author would revise the paper to reflect that.
 
+## Proposed Lean 4 signatures (statement-only; partial targets only)
+
+**Important caveat about mathlib4 scope.** Baker's 1966 theorem on linear forms in logarithms of algebraic numbers is **not** currently in mathlib4 (verified 2026-04). Mathlib4 contains the Lindemann–Weierstrass theorem (`Mathlib.NumberTheory.Transcendental.Lindemann`) and related transcendence results, but the Baker bound — which requires a substantially heavier machinery around heights, Kummer theory, and the interpolation determinants of Gelfond / Baker / Wüstholz — is long-horizon mathlib territory, not a short PR. This claim therefore has two distinct formalization sub-targets with very different difficulties.
+
+**Sub-target A (Tier 1; elementary; fits on a page).** The qualitative non-vanishing `|12 log 3 − 19 log 2| ≠ 0`, which follows from FTA alone with no transcendence theory. This is a restatement of Form C from [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md#proposed-lean-4-signatures-tightened-against-mathlib4) and is already formalizable today:
+
+```lean
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+
+open Real
+
+/-- (A) Qualitative floor: the Pythagorean comma is nonzero.
+Proof by FTA: if `12 log 3 = 19 log 2` then `3^12 = 2^19`, contradiction. -/
+theorem pythagorean_comma_nonzero :
+    (12 : ℝ) * Real.log 3 - 19 * Real.log 2 ≠ 0 := by
+  sorry
+```
+
+**Sub-target B (Tier 3; blocked on Baker's theorem not being in mathlib).** The effective quantitative bound. The statement is presented below as a *statement-only target* — it cannot be proven against current mathlib4 because the hypothesis `Baker1966` is an axiom the repo would have to introduce (or the formalization target would have to wait on upstream mathlib development):
+
+```lean
+/-- (B) Effective quantitative floor via Baker's 1966 theorem.
+
+This theorem cannot be formalized against current mathlib4 because
+Baker's theorem on linear forms in logarithms is not in mathlib.
+The target below is a specification of what one would prove once
+the theorem is available, and is written as a parametrised statement
+taking Baker's bound as a hypothesis rather than deriving it. -/
+theorem pythagorean_comma_lower_bound
+    (Baker1966 : ∀ (a₁ a₂ : ℕ) (b₁ b₂ : ℤ),
+      1 < a₁ → 1 < a₂ → (b₁ ≠ 0 ∨ b₂ ≠ 0) →
+      ∃ C : ℝ, 0 < C ∧
+        C ≤ |(b₁ : ℝ) * Real.log a₁ + (b₂ : ℝ) * Real.log a₂| ∨
+        (b₁ : ℝ) * Real.log a₁ + (b₂ : ℝ) * Real.log a₂ = 0) :
+    ∃ C : ℝ, 0 < C ∧ C ≤ |(12 : ℝ) * Real.log 3 - 19 * Real.log 2| := by
+  sorry
+```
+
+The hypothesis above is a cartoon of Baker's theorem, not its real statement. Any serious formalization target would need the full statement with algebraic numbers of given heights and degrees, explicit bound formulas, and the Kummer-theoretic dependencies. The Baker hypothesis as written is *not* suitable as a real target; it is included here to make explicit that Paper 5 § 4's "effective lower bound" claim is *structurally specifiable* but not *provable today* in mathlib4.
+
+**Statement-level questions for a validator**:
+
+1. Is the decomposition into Sub-target A (elementary; formalizable now) vs. Sub-target B (blocked on Baker) correctly placed for what Paper 5 § 4 actually needs?
+2. For the paper's argument, does the *qualitative* non-vanishing (A) suffice, or is the *effective* lower bound (B) doing real work that would be lost if the paper used only (A)?
+3. Does a tracking issue for "Baker's theorem in mathlib4" already exist on the leanprover-community side? If so, this claim's Sub-target B should point at it rather than attempting to specify its own statement.
+4. Is there a weaker-than-Baker but stronger-than-FTA intermediate result (e.g. a specific Gelfond or Mahler bound for the `log 2, log 3` case) that *is* in mathlib4 and that would give an effective-but-not-optimal bound Paper 5 § 4 could cite instead?
+
+The separation between (A) and (B) in the formalization directly mirrors the paper's separation between the qualitative and quantitative floor claims. Feedback that confirms, amends, or rejects either sub-target is independently useful.
+
 ## Changelog
 - 2026-04-20: Claim created.
+- 2026-04-19: Added Lean 4 signature block splitting the claim into two sub-targets. Sub-target A (qualitative, FTA-only) is formalizable against current mathlib4 today. Sub-target B (effective Baker bound) is explicitly marked as blocked on Baker's theorem not being in mathlib4, with a cartoon hypothesis shown to make the structural specification explicit without pretending the proof is achievable without upstream development.
