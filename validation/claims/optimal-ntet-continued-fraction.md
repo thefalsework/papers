@@ -76,6 +76,8 @@ A partial response that addresses only (C2) is a complete and useful response. (
 
 The signatures below are bound to live mathlib4 primitives (no free `sorry`s in the definitions; `sorry` appears only in proof positions). They are intended to type-check as Lean 4 statements with `import Mathlib` and to give a validator something concrete to either endorse, tighten, or reject.
 
+**Compilation status.** These signatures have been written against the current mathlib4 API docs but have *not* been type-checked locally against a live `lake build`. Naming issues (e.g., `Mathlib.NumberTheory.Real.Irrational` vs an older path) or coercion-elaboration issues may remain. A validator who spots such an issue and flags it is giving useful feedback about the carrier itself, not just the math — both kinds of feedback are welcomed. The informal content of (C1) and (C2) is independent of the specific Lean syntax.
+
 **Primitives used (with sources).** `Real.logb`, `Real.log`, `Irrational`, `round`, `Int.fract`, `Real.convergent` — all from mathlib4:
 
 - `Real.convergent : ℝ → ℕ → ℚ`, from `Mathlib.NumberTheory.DiophantineApproximation.Basic`. This is the direct recursive definition returning the `n`-th convergent of a real number as a rational; `(ξ.convergent n).num` and `(ξ.convergent n).den` give numerator and denominator.
