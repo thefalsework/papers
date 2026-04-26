@@ -72,6 +72,10 @@ theorem pythagorean_comma_nonzero :
 
 See [`lean/README.md`](../../lean/README.md) for the broader Tier-1 formalization context.
 
+## Validation record
+
+- **2026-04-26** — Posted to Lean Zulip, stream `#Is there code for X?`, topic `Irrational (Real.logb 2 (3/2))`: <https://leanprover.zulipchat.com/#narrow/channel/217875-Is-there-code-for-X.3F/topic/Irrational.20.28Real.2Elogb.202.20.283.2F2.29.29/with/591010576>. Asked (1) whether mathlib has an existing `Irrational.logb` / `Nat.log_irrational` lemma covering this case, and (2) which of Form A / log-ratio form / rank-2 linear-form-in-logs form is the idiomatic statement. Awaiting response.
+
 ## Why it matters
 
 This is the foundational datum. If `α` were rational, every downstream claim (Fix(D) = {∅}, no terminal coalgebra, colimit escape, ℤ/12ℤ quotient being a true quotient, the Pythagorean comma being non-zero) would collapse or simplify. The irrationality of `α` is what forces the music-kernel category-theoretic machinery to be non-trivial.
@@ -82,6 +86,7 @@ This is the foundational datum. If `α` were rational, every downstream claim (F
 - [`optimal-ntet-continued-fraction`](optimal-ntet-continued-fraction.md) — the Diophantine-approximation structure of `α` that picks out Pythagorean-comma-optimal temperaments; depends on the irrationality stated here.
 
 ## Changelog
+- 2026-04-26: Posted statement-level question to Lean Zulip (`#Is there code for X?`). See Validation record above for thread URL.
 - 2026-04-20: Claim created.
 - 2026-04-21: Added tentative Lean signature block (Tier 1 formalization target). Equivalent forms included to invite statement-level feedback from Lean collaborators per Chris Henson's suggestion on Lean Zulip (2026-04-19).
 - 2026-04-19: Tightened the Lean 4 signature block against current mathlib4. Fixed the import path (`Mathlib.NumberTheory.Real.Irrational`, not the older `Mathlib.NumberTheory.Irrational`). Added explicit proof sketches for each form and four specific statement-level questions for a validator.
