@@ -1,6 +1,6 @@
 # `music-kernel-06-baker` — Baker's 1966 theorem applied to the Pythagorean comma
 
-**Status:** OPEN
+**Status:** PARTIAL — Sub-target A (qualitative non-vanishing) CONFIRMED via reduction to `music-kernel-01-irrationality` (Lean Zulip, 2026-04-26). Sub-target B (effective Baker bound) remains OPEN, blocked on Baker's theorem not being in current mathlib4.
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
 **Paper:** Paper 5 (Pythagorean) § 4 (v1.1); Paper 3 § 5 (v9.1)
 **Domain:** Number theory (transcendence)
@@ -29,6 +29,21 @@ The bound can be expressed in cents (hundredths of an equal-tempered semitone) a
 for some explicit `C > 0`.
 
 The paper claims this is the *effective quantitative Diophantine floor* on the Pythagorean comma, distinct from but continuous with the rank-1 qualitative floor supplied by FTA alone.
+
+## Validation record
+
+- **2026-04-26** — Sub-target A (qualitative non-vanishing of the Pythagorean comma, `12 log 3 − 19 log 2 ≠ 0`) **CONFIRMED via reduction to [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md)**. The reduction:
+
+  `12 · log 3 = 19 · log 2`
+  `↔ log 3 / log 2 = 19/12` (dividing by `log 2 ≠ 0`)
+  `↔ Real.logb 2 3 = 19/12 ∈ ℚ`
+  `↔ Real.logb 2 3` is rational.
+
+  But `Real.logb 2 3` is irrational (this is exactly the statement Confirmed-as-stated in `music-kernel-01-irrationality` via Kevin Buzzard's Zulip response of 2026-04-26 endorsing Form A as idiomatic and the `loogle` searches confirming no shorter mathlib citation). Hence `12 log 3 − 19 log 2 ≠ 0`.
+
+  The same reduction additionally falls out as a corollary of Snir Broshi's WIP scaffold `Real.irrational_logb_rat_rat_iff` for the case `b = 2, x = 3`: the multiplicative-independence condition holds (`2^kb = 3^kx → kb = kx = 0` by FTA), and the iff would yield `Irrational (Real.logb 2 3)` directly. If that scaffold matures into a merged mathlib lemma, Sub-target A becomes a one-line citation; if it does not, the reduction above stands on Buzzard's Confirmed-as-stated alone.
+
+- **Sub-target B** (effective Baker quantitative bound) — remains OPEN. Blocked on Baker's 1966 theorem on linear forms in logarithms not being in current mathlib4 (verified 2026-04). No external validation possible until that upstream development lands. The statement-only target in this file remains a structural specification, not a closeable claim.
 
 ## What a validator should confirm
 
@@ -96,5 +111,6 @@ The hypothesis above is a cartoon of Baker's theorem, not its real statement. An
 The separation between (A) and (B) in the formalization directly mirrors the paper's separation between the qualitative and quantitative floor claims. Feedback that confirms, amends, or rejects either sub-target is independently useful.
 
 ## Changelog
+- 2026-04-26: **Sub-target A flipped from OPEN to CONFIRMED via reduction to `music-kernel-01-irrationality`.** Sub-target B remains OPEN, blocked on upstream mathlib development. Top-level status updated to PARTIAL. Validation record section added documenting the reduction.
 - 2026-04-20: Claim created.
 - 2026-04-19: Added Lean 4 signature block splitting the claim into two sub-targets. Sub-target A (qualitative, FTA-only) is formalizable against current mathlib4 today. Sub-target B (effective Baker bound) is explicitly marked as blocked on Baker's theorem not being in mathlib4, with a cartoon hypothesis shown to make the structural specification explicit without pretending the proof is achievable without upstream development.

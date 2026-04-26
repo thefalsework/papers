@@ -1,6 +1,6 @@
 # `music-kernel-umbrella` — Six-point formalization of the music-kernel endofunctor
 
-**Status:** OPEN
+**Status:** PARTIAL — 1 of 6 points CONFIRMED AS STATED (Point 1, Lean Zulip 2026-04-26); 1 of 6 points PARTIAL with one sub-target confirmed (Point 6, Sub-target A confirmed via reduction to Point 1; Sub-target B blocked on upstream mathlib). Points 2, 3, 4, 5 remain OPEN.
 **Paper:** Paper 3 § 4 (v9.1), targeted for v10.0 revision
 **Related papers:** Paper 5 (Pythagorean) § 2–§ 4
 **Domain(s):** Category theory, number theory
@@ -17,23 +17,23 @@ The point is not to validate the philosophical framing. It is to validate six sp
 
 ## The six points to verify
 
-### Point 1 — Irrationality of `α = log₂(3/2)`
-See [`music-kernel-01-irrationality.md`](music-kernel-01-irrationality.md).
+### Point 1 — Irrationality of `α = log₂(3/2)` — **CONFIRMED AS STATED**
+See [`music-kernel-01-irrationality.md`](music-kernel-01-irrationality.md). Confirmed via Lean Zulip thread on 2026-04-26: Kevin Buzzard endorsed Form A (`Irrational (Real.logb 2 (3/2))`) as the idiomatic statement and confirmed via two `loogle` searches that no existing mathlib lemma collapses the citation. Snir Broshi additionally shared a WIP scaffold for a stronger iff version (`Real.irrational_logb_rat_rat_iff` over ℚ) plus three `Decidable` instances; the scaffold is not yet a merged mathlib PR but is publicly archived in the same Zulip thread. The Confirmed-as-stated determination rests on Buzzard's response and is independent of whether Snir's scaffold matures.
 
-### Point 2 — `Fix(D) = {∅}` by cardinality argument
-See [`music-kernel-02-fixed-points.md`](music-kernel-02-fixed-points.md).
+### Point 2 — `Fix(D) = {∅}` by cardinality argument — OPEN
+See [`music-kernel-02-fixed-points.md`](music-kernel-02-fixed-points.md). Depends on Point 1 (uses the irrationality of `α`). With Point 1 now confirmed, the irrationality hypothesis can be discharged by reference, but the cardinality argument itself still needs validation.
 
-### Point 3 — No terminal coalgebra via Lambek's lemma
-See [`music-kernel-03-terminal-coalgebra.md`](music-kernel-03-terminal-coalgebra.md).
+### Point 3 — No terminal coalgebra via Lambek's lemma — OPEN
+See [`music-kernel-03-terminal-coalgebra.md`](music-kernel-03-terminal-coalgebra.md). Depends on Point 2.
 
-### Point 4 — Colimit of the iteration escapes via Weyl equidistribution
-See [`music-kernel-04-colimit-escape.md`](music-kernel-04-colimit-escape.md).
+### Point 4 — Colimit of the iteration escapes via Weyl equidistribution — OPEN
+See [`music-kernel-04-colimit-escape.md`](music-kernel-04-colimit-escape.md). Depends on Point 1 (uses irrationality of `α` for density of `{nα}`).
 
-### Point 5 — `ℤ/12ℤ` quotient: structure and correction
+### Point 5 — `ℤ/12ℤ` quotient: structure and correction — OPEN
 See [`music-kernel-05-z12z-cycle.md`](music-kernel-05-z12z-cycle.md). **Note.** The external reviewer's draft asserted `D_12^12 = id_{C_12}`; for the stated definition `D_12(Y) = Y ∪ (Y + 7)` this appears incorrect (iteration monotonically grows `Y`). The corrected statement and the structural claim the paper needs are in that sub-claim file.
 
-### Point 6 — Baker's 1966 theorem applied to the Pythagorean comma
-See [`music-kernel-06-baker.md`](music-kernel-06-baker.md).
+### Point 6 — Baker's 1966 theorem applied to the Pythagorean comma — **PARTIAL**
+See [`music-kernel-06-baker.md`](music-kernel-06-baker.md). Sub-target A (qualitative non-vanishing `12 log 3 − 19 log 2 ≠ 0`) **CONFIRMED via reduction to Point 1** on 2026-04-26: the equation rearranges to `Real.logb 2 3 = 19/12 ∈ ℚ`, contradicted by Point 1's confirmed irrationality. Sub-target B (effective quantitative Baker bound) remains OPEN, blocked on Baker's 1966 theorem not being in current mathlib4.
 
 ## What a validation response should cover
 
@@ -65,4 +65,5 @@ Credit will be given in the revision note to any validator whose confirmation co
 - The status of the broader G∧R∧C ↔ D1–D3 mapping (Paper 1, Paper 3 § 7) is not resolved by this claim. See [`g-r-c-practice-domains.md`](g-r-c-practice-domains.md).
 
 ## Changelog
+- 2026-04-26: **Status updated from OPEN to PARTIAL.** Point 1 flipped to CONFIRMED AS STATED via Lean Zulip thread (Kevin Buzzard + Snir Broshi). Point 6 Sub-target A flipped to CONFIRMED via reduction to Point 1; Sub-target B remains OPEN. Per-point status annotations added inline. See `music-kernel-01-irrationality.md` and `music-kernel-06-baker.md` for full validation records.
 - 2026-04-20: Claim created; associated with first-wave issue.
