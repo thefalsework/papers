@@ -8,14 +8,14 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 
 ## Domain: Category theory
 
-### `music-kernel-umbrella` — Six-point formalization of the music-kernel endofunctor
+### `music-kernel-umbrella` — Formalization of the music-kernel endofunctor (post-calibration split)
 - **Authoritative statement:** [`claims/music-kernel-umbrella.md`](claims/music-kernel-umbrella.md)
 - **GitHub issue:** [#1](https://github.com/thefalsework/papers/issues/1)
 - **Paper:** Paper 3 § 4 (v9.2); targeted for v10.0 revision
-- **What's asked:** verification that a set of six elementary mathematical claims (irrationality of log₂(3/2); Fix(D) = {∅}; no terminal coalgebra via Lambek; colimit escapes via Weyl; ℤ/12ℤ quotient with D_12^12 = id failure note; Baker's 1966 application to the Pythagorean comma) are correctly stated and supported.
-- **Time estimate for validator:** ~1 hour
-- **Status:** awaiting category theorist + number theorist
-- **Sub-items:** [`music-kernel-01`](claims/music-kernel-01-irrationality.md), [`02`](claims/music-kernel-02-fixed-points.md), [`03`](claims/music-kernel-03-terminal-coalgebra.md), [`04`](claims/music-kernel-04-colimit-escape.md), [`05`](claims/music-kernel-05-z12z-cycle.md), [`06`](claims/music-kernel-06-baker.md) — see also issue [#2](https://github.com/thefalsework/papers/issues/2) for number-theory focus on point 6
+- **What's asked:** verification of the LLM-supplied formalization of the music-kernel endofunctor `D`. After the 2026-04-26 calibration pass (see umbrella file's "Calibration note"), the originally-flat six-point list now splits into **background facts** (Point 1, Point 6 Sub-target A — textbook FTA results, cite don't validate; Lean expression confirmed idiomatic via Zulip 2026-04-26) and a **genuine validation queue** (Points 2, 3, 4, 5, and Point 6 Sub-target B): cardinality argument for `Fix(D) = {∅}`; no terminal coalgebra via Lambek; colimit escape via Weyl; the `ℤ/12ℤ` corrected structural claim (where the LLM draft asserted `D_12^12 = id`, which the author identified as false); and the effective Baker quantitative bound (blocked on upstream mathlib).
+- **Time estimate for validator:** ~1 hour for the genuine queue
+- **Status:** awaiting category theorist + number theorist for the genuine queue (Points 2–5 and 6B). Background facts (Point 1, 6A) require citation only.
+- **Sub-items:** [`music-kernel-01`](claims/music-kernel-01-irrationality.md) (background fact), [`02`](claims/music-kernel-02-fixed-points.md), [`03`](claims/music-kernel-03-terminal-coalgebra.md), [`04`](claims/music-kernel-04-colimit-escape.md), [`05`](claims/music-kernel-05-z12z-cycle.md), [`06`](claims/music-kernel-06-baker.md) (Sub-target A background; Sub-target B in queue, blocked) — see also issue [#2](https://github.com/thefalsework/papers/issues/2) for number-theory focus on Sub-target B
 
 ### `lawvere-unification-of-formal-groundings` — Cantor and Gödel as Lawvere instances; G ∧ R ∧ C as domain-facing analog of Lawvere's hypothesis
 - **Authoritative statement:** [`claims/lawvere-unification-of-formal-groundings.md`](claims/lawvere-unification-of-formal-groundings.md)
@@ -41,13 +41,13 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 
 ## Domain: Number theory
 
-### `music-kernel-06-baker` — Baker's 1966 theorem applied to the Pythagorean comma
+### `music-kernel-06-baker` — Baker's 1966 theorem applied to the Pythagorean comma (Sub-target B only)
 - **Authoritative statement:** [`claims/music-kernel-06-baker.md`](claims/music-kernel-06-baker.md)
 - **GitHub issue:** [#2](https://github.com/thefalsework/papers/issues/2)
 - **Paper:** Paper 5 (Pythagorean) § 4 (v1.2); Paper 3 § 5 (v9.2)
-- **What's asked:** verify that Baker's 1966 theorem on linear forms in logarithms of algebraic numbers applies to |12 log 3 − 19 log 2| and that the resulting effective lower bound is qualitatively the right tool, not misapplied.
+- **What's asked:** verify that Baker's 1966 theorem on linear forms in logarithms of algebraic numbers applies to |12 log 3 − 19 log 2| and that the resulting effective lower bound is qualitatively the right tool, not misapplied. (Sub-target A — qualitative non-vanishing — was reclassified as a background fact in the 2026-04-26 calibration pass and is no longer an open validation item; this entry now tracks Sub-target B only.)
 - **Time estimate for validator:** ~30 min – 1 hour
-- **Status:** awaiting number theorist
+- **Status:** awaiting number theorist; full Lean formalization blocked on Baker's theorem not being in current mathlib4, but reference-level confirmation of the cited claim against standard number-theory texts is not blocked
 
 ### `pythagorean-explanatory-debts` — Three debts from Pythagorean companion § 7.5
 - **Authoritative statement:** [`claims/pythagorean-explanatory-debts.md`](claims/pythagorean-explanatory-debts.md)
