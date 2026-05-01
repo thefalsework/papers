@@ -1,7 +1,7 @@
 # `g-r-c-practice-domains` — Extension of G∧R∧C to practice domains
 
 **Status:** OPEN (open research direction)
-**Paper:** Paper 1 § 3 and § 5 (v11.3); downgraded to structural analogy at Paper 3 § 7 (v9.1)
+**Paper:** Paper 1 § 3 and § 5 (v11.5); downgraded to structural analogy at Paper 3 § 7 (v9.1); Paper 1 § 2.1 (v11.5) reframes the question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence
 **Domain:** Formal logic, category theory, philosophy of mathematics
 **Time estimate:** unbounded
 
@@ -17,11 +17,11 @@ Paper 1 proposes that domains with self-limiting generative operations satisfy a
 
 These are modeled on the Gödel / Turing / Rice incompleteness conditions for recursively enumerable systems. The paper claims the five-position topology follows from G∧R∧C.
 
-Paper 3 § 7 (v9.1) explicitly downgrades the mapping between G∧R∧C and the categorical D1∧D2∧D3 conditions from *derivation* to *structural analogy*. The question remains whether G∧R∧C can be extended from recursively enumerable systems to the practice domains (music, cinema, painting, architecture, software) the paper targets.
+Paper 3 § 7 (v9.1) explicitly downgrades the mapping between G∧R∧C and the categorical D1∧D2∧D3 conditions from *derivation* to *structural analogy*. The question remains whether G∧R∧C can be extended from recursively enumerable systems to the practice domains (music, cinema, architecture, literature, software, physics) the paper targets.
 
 ## The open question
 
-What is a precise definition of **generative sufficiency** (the **G** in G∧R∧C) for a domain whose constructs are not recursively enumerable — e.g., architecture (physical buildings under gravity), cinema (edited temporal sequences with viewer cognition), painting (marks on a 2D surface)?
+What is a precise definition of **generative sufficiency** (the **G** in G∧R∧C) for a domain whose constructs are not recursively enumerable — e.g., architecture (physical buildings under gravity), cinema (edited temporal sequences with viewer cognition), literature (sequences of marks under syntactic and semantic constraints)?
 
 And, following that: does the G∧R∧C-derived five-position topology hold for such domains as a theorem, as a structural observation, or as an analogy?
 
