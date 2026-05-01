@@ -277,7 +277,7 @@ This paper also does not claim that Prigogine's program failed for contingent re
 
 Bishop, E. (1967). *Foundations of constructive analysis*. McGraw-Hill.
 
-Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. MetaArXiv. https://osf.io/preprints/metaarxiv
+Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. Manuscript.
 
 Brink, C. (2026b). Epistemic dependency as structural condition: A live case study in AI-assisted theoretical framework development. Manuscript.
 

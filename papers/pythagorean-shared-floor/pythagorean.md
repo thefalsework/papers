@@ -371,7 +371,7 @@ Lakatos, I. (1978). *The methodology of scientific research programmes* (Philoso
 
 **FalseWork programme (cited only in Section 8).**
 
-Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. MetaArXiv. https://osf.io/preprints/metaarxiv
+Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. Manuscript.
 
 Brink, C. (2026b). Epistemic dependency as structural condition: A live case study in AI-assisted theoretical framework development. Manuscript.
 

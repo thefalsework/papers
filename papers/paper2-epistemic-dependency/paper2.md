@@ -348,7 +348,7 @@ A third paper in preparation (Brink 2026c) develops the argument one level furth
 
 ## References
 
-Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. MetaArXiv. https://osf.io/preprints/metaarxiv
+Brink, C. (2026a). Kernels and commas: A structural derivation of universal positions in domains with self-limiting generative operations. Manuscript.
 
 Brink, C. (2026c). The distinction operation and the generative floor: Asymmetry, incompleteness, and the structural unity of domain kernels. Manuscript.
 
