@@ -8,15 +8,17 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations.*
 
-**Current version.** v11.5
+**Current version.** v11.6
 
-**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal). v11.5 adds Lawvere (1969) / Yanofsky (2003) / Barreto (2025) to § 2 and § 2.1, identifying the Cantor and Gödel groundings as two instances of Lawvere's fixed-point theorem, distinguishing Wolfram's PCE as a universality claim whose consequences are Lawvere instances, and reformulating the extension-to-practice question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence. Hedged `[REVIEW: category theorist]` and tracked as an open validation claim. v11.4 adds § 5.4 naming Ellis (2016) and Cartwright (1999) as independent philosophy-of-science precedent for the paper's domain-dependent-formalism posture, hedged and tracked as an open validation claim.
+**One-line gloss.** Every domain organized around a minimal generative operation encounters a structural limit it cannot resolve from within its own rules; this limit (the *comma*) induces exactly five structurally distinct positions (Infrastructure, Distribution, Exploitation, Commitment, Refusal). v11.6 adds a candidate seventh domain to § 2.1 — generative AI under Levin's threshold-logic apparatus (Levin 2026a, 2026b) — for which the kernel-comma layer is independently *derivable* rather than postulated by structural analogy as in the original six. Names the candidate kernel **The Threshold** and the candidate comma as manifold-membership undecidability; full four-criteria specification deferred to a future revision. Hedged `[REVIEW: AI/ML researcher]` and tracked as an open validation claim. v11.5 adds Lawvere (1969) / Yanofsky (2003) / Barreto (2025) to § 2 and § 2.1, identifying the Cantor and Gödel groundings as two instances of Lawvere's fixed-point theorem, distinguishing Wolfram's PCE as a universality claim whose consequences are Lawvere instances, and reformulating the extension-to-practice question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence. v11.4 adds § 5.4 naming Ellis (2016) and Cartwright (1999) as independent philosophy-of-science precedent for the paper's domain-dependent-formalism posture, hedged and tracked as an open validation claim.
 
 **Paper source.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md)
-**Archive.** [`paper1-kernels-and-commas/archive/v11.5.docx`](paper1-kernels-and-commas/archive/v11.5.docx)
+**Archive.** [`paper1-kernels-and-commas/archive/v11.6.docx`](paper1-kernels-and-commas/archive/v11.6.docx)
 
 **Open validation items this paper carries.**
 - § 2 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
+- § 2.1 — Lawvere unification of Cantor and Gödel groundings, and the G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence. Tracked at [`validation/claims/lawvere-unification-of-formal-groundings.md`](../validation/claims/lawvere-unification-of-formal-groundings.md).
+- § 2.1 — Candidate seventh kernel (**The Threshold**, GenAI) under Levin's threshold-logic mechanism. Full four-criteria specification deferred. Tracked at [`validation/claims/threshold-kernel-candidate.md`](../validation/claims/threshold-kernel-candidate.md).
 - § 5 (applied to six kernels) — Extension of G∧R∧C to practice domains is structural analogy, not derivation. Tracked at [`validation/claims/g-r-c-practice-domains.md`](../validation/claims/g-r-c-practice-domains.md).
 - § 5.4 — Ellis/Cartwright scholarly precedent for domain-dependent formalism is adjacent support, not endorsement. Tracked at [`validation/claims/ellis-cartwright-philosophical-support.md`](../validation/claims/ellis-cartwright-philosophical-support.md).
 
@@ -119,9 +121,10 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 ## Cross-reference graph
 
 ```
-Paper 1 (v11.5)
+Paper 1 (v11.6)
   ├─ forward-refs Paper 3 § 4 (Russell/Gödel distinction)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
+  ├─ engages Levin (2026a, 2026b) at § 2.1 (candidate seventh kernel: The Threshold)
   └─ ground for Papers 2–5
 
 Paper 2 (v8.2)
