@@ -20,7 +20,7 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 ### `lawvere-unification-of-formal-groundings` — Cantor and Gödel as Lawvere instances; G ∧ R ∧ C as domain-facing analog of Lawvere's hypothesis
 - **Authoritative statement:** [`claims/lawvere-unification-of-formal-groundings.md`](claims/lawvere-unification-of-formal-groundings.md)
 - **GitHub issue:** (pending)
-- **Paper:** Paper 1 § 2 and § 2.1 (v11.5)
+- **Paper:** Paper 1 § 2 and § 2.1 (v11.6)
 - **What's asked:** verify three claims. (1) Cantor's diagonal argument, Cantor's theorem, and Gödel's first incompleteness theorem are instances of Lawvere's fixed-point theorem per Yanofsky 2003. (2) Wolfram's PCE is a universality-class claim rather than a Lawvere instance; its consequences (halting problem, Rice's theorem) are Lawvere instances. (3) G ∧ R ∧ C corresponds to Lawvere's categorical hypothesis (G ↔ B^A, R ↔ point-surjection, C ↔ cartesian closure); the extension-to-practice problem is reformulable as specifying the ambient CCC and endofunctor for each kernel. Claims 1 and 2 are standard literature; Claim 3 is speculative and the one where pushback is most likely and most useful.
 - **Time estimate for validator:** ~2–6 hours (three primary texts plus two adjacent paper sections)
 - **Status:** awaiting category theorist or mathematical logician; AI-synthesis origin disclosed in the claim file
@@ -71,9 +71,10 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 ### `g-r-c-practice-domains` — Extension of G∧R∧C beyond formal systems
 - **Authoritative statement:** [`claims/g-r-c-practice-domains.md`](claims/g-r-c-practice-domains.md)
 - **GitHub issue:** [#7](https://github.com/thefalsework/papers/issues/7)
-- **Paper:** Paper 1 § 3 and § 5 (v11.4); downgraded to structural analogy at Paper 3 § 7 (v9.2)
-- **What's asked:** precise definition of "generative sufficiency" for non-recursively-enumerable systems (architecture, cinema, painting); whether the G∧R∧C mapping to D1–D3 can be upgraded from structural analogy to derivation in any formal setting.
+- **Paper:** Paper 1 § 3 and § 5 (v11.6); downgraded to structural analogy at Paper 3 § 7 (v9.2); Paper 1 § 2.1 (v11.5) reframes the question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence; Paper 1 § 2.1 (v11.6) introduces the candidate seventh kernel (`threshold-kernel-candidate`) as one specific instance for which the extension is independently derivable rather than postulated
+- **What's asked:** precise definition of "generative sufficiency" for non-recursively-enumerable systems (literature, cinema, architecture); whether the G∧R∧C mapping to D1–D3 can be upgraded from structural analogy to derivation in any formal setting.
 - **Status:** open research direction
+- **Related:** [`threshold-kernel-candidate`](claims/threshold-kernel-candidate.md) — generative AI as one specific instance where the extension is grounded in independent mathematical work (Levin 2026)
 
 ---
 
@@ -98,6 +99,19 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 - **What's asked:** systematic historical test of the claim that posthumous / delayed canonical rehabilitation correlates with structural markers of kernel-level confrontation — using Bach, El Greco, and the Homeric epics as paradigm cases and seeking both matched and counter-example cases across music, visual art, and literature.
 - **Status:** awaiting historian of music / art / literature or reception-studies scholar
 - **Register note:** Paper 6 is the exploratory / practitioner-outcome companion. This item is its single empirically bounded sub-claim; the rest of Paper 6 is structural-interpretive and is not tracked as a validation item.
+
+---
+
+## Domain: Generative AI / philosophy of computation
+
+### `threshold-kernel-candidate` — The Threshold as candidate seventh kernel (GenAI)
+- **Authoritative statement:** [`claims/threshold-kernel-candidate.md`](claims/threshold-kernel-candidate.md)
+- **GitHub issue:** (pending)
+- **Paper:** Paper 1 § 2.1 (v11.6); candidate seventh kernel proposed in light of Levin (2026, arXiv:2604.02476 and arXiv:2602.17116)
+- **What's asked:** four sub-questions, each independently tractable. (1) Four-criteria validation — does The Threshold satisfy each of prior, monogenic, inescapable, and self-limiting at the level of formal precision the framework requires? Sketched in § 2.1 prose; specialist audit pending. (2) Comma formulation — is manifold-membership undecidability the correct comma description, or do alternative formulations (entropy-based, computational-irreducibility-based, information-theoretic) fit better? (3) Domain-medium framing — the original six domains have practitioners engaging with passive media governed by their kernels; GenAI's medium is itself a navigator of its own kernel. Does the practitioner-position-toward-medium classification carry through cleanly when the medium is non-passive, or does this require a multi-level account? (4) Topology applicability — does the five-position partition (Infrastructure, Distribution, Exploitation, Commitment, Refusal) match observable GenAI practitioner stances? The substrate / deployment / navigation / constraint / refusal mapping (registered on the platform at [falsework.dev/kernels](https://falsework.dev/kernels) and sketched in correspondence with Levin) is a prediction the framework makes, not a confirmed reading.
+- **Time estimate for validator:** variable; each sub-question is independently tractable. Sub-question 1 (four-criteria audit) is the closest analog to the audits Tymoczko ran on The Fifth and Cutting on The Cut.
+- **Status:** awaiting AI/ML researcher or philosopher of computation; Levin engagement is ongoing. Full § 3-style kernel specification deferred until validation supports it; if the candidate fails validation, Paper 1 v12.x will retract the seventh-domain framing and recharacterize Levin's contribution as a parallel framework that engages the same structure under a different theoretical apparatus.
+- **Platform mirror:** the candidate is registered as `the-threshold` (status: `proposed`) on the FalseWork platform — kernel specification, five-territory topology, and pathway structure are publicly inspectable at [falsework.dev/kernels](https://falsework.dev/kernels) and seeded in the platform repo at `db/0167_threshold_kernel_genai.sql`.
 
 ---
 
