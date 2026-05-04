@@ -38,13 +38,23 @@ wolfram/
 │   ├── cutting.wl             Cutting, F1 film primitives — KernelTheCut
 │   ├── nks.wl                 Wolfram, A New Kind of Science — KernelTheConditionalBranch
 │   └── methodology.wl         FalseWork methodology self-core — KernelOfMethodology
-└── notebook-script.wl         demo script: loads corpus, runs all four queries
+├── notebook-script.wl         demo script: loads corpus, runs all four queries
+├── paste-cells/               multi-cell version for Wolfram Cloud
+│   ├── README.md              workflow instructions
+│   ├── 1-setup.wl             algebra + kernels + four cores (load only)
+│   ├── 2-queries.wl           Q1–Q4 with text output
+│   ├── 3-vis-transfer.wl      Tymoczko ↔ Cutting transfer network graph
+│   ├── 4-vis-removal.wl       Tymoczko removal-cascade graph
+│   └── 5-vis-self-transfer.wl methodology self-transfer graph
+└── results/
+    └── wolfram-cloud-run-2026-05-04-with-graphs.nb   reference evaluated run
 ```
 
 ## Running the demo
 
-In a Wolfram Language session (Mathematica 13+, Wolfram Engine, or
-Wolfram Cloud notebook), set the working directory to `wolfram/` and:
+### Option A — local Mathematica or Wolfram Engine
+
+Set the working directory to `wolfram/` and:
 
 ```mathematica
 SetDirectory[NotebookDirectory[]]
@@ -54,6 +64,26 @@ Get["notebook-script.wl"]
 The script loads the algebra, instantiates the four-work corpus, and
 runs the four queries with formatted output. Expected total runtime:
 under 1 second on a laptop.
+
+### Option B — Wolfram Cloud (recommended for reviewers without a
+local Mathematica install)
+
+Wolfram Cloud has per-cell output limits that truncate single-cell
+runs of the full prototype once the visualisations are included. Use
+the multi-cell workflow in `paste-cells/` instead: paste each `.wl`
+file into its own cell in a fresh cloud notebook and evaluate them in
+order. See `paste-cells/README.md` for the full procedure.
+
+The five cells are:
+
+1. `paste-cells/1-setup.wl`           — algebra + kernels + four cores (load only)
+2. `paste-cells/2-queries.wl`         — runs Q1–Q4 with text output
+3. `paste-cells/3-vis-transfer.wl`    — Tymoczko ↔ Cutting transfer network graph
+4. `paste-cells/4-vis-removal.wl`     — Tymoczko removal-cascade graph
+5. `paste-cells/5-vis-self-transfer.wl` — methodology self-transfer graph
+
+A reference evaluated run (all five cells, with graphs rendered) is
+saved to `results/wolfram-cloud-run-2026-05-04-with-graphs.nb`.
 
 ## What this prototype does
 

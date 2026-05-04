@@ -380,7 +380,164 @@ Print[""];
 
 
 (* ============================================================
-   SECTION 6 - Beyond V1: schema mutation
+   SECTION 6 - Visualizations
+
+   Three Graph renderings of the query outputs above. The
+   framework's structure is graph-shaped: mechanisms link via
+   composition rules, transfers traverse cores, removals
+   cascade through dependencies. Wolfram Language renders
+   these natively; the diagrams are the same data the queries
+   above already returned, in the form best read visually.
+   ============================================================ *)
+
+Print["================================================================"];
+Print["6. VISUALIZATIONS"];
+Print["================================================================"];
+Print[""];
+
+(* ---- 6.1  Tymoczko <-> Cutting transfer network ----------- *)
+
+Print["6.1  Transfer network (Q2): Tymoczko (music) <-> Cutting (film)"];
+Print[""];
+
+Module[{tEdges, tStyles, allVerts, vstyles},
+  tEdges = DirectedEdge[#["From"], #["To"]] & /@ transferTC;
+  tStyles = MapThread[
+    #1 -> Directive[
+      Thickness[0.003 + 0.012 * #2],
+      ColorData["TemperatureMap"][#2]
+    ] &,
+    {tEdges, #["Confidence"] & /@ transferTC}
+  ];
+  allVerts = Join[
+    Keys[field[TymoczkoCore, "Mechanisms"]],
+    Keys[field[CuttingCore, "Mechanisms"]]
+  ];
+  vstyles = Join[
+    Map[# -> Lighter[Blue, 0.6] &,
+        Keys[field[TymoczkoCore, "Mechanisms"]]],
+    Map[# -> Lighter[Red, 0.6] &,
+        Keys[field[CuttingCore, "Mechanisms"]]]
+  ];
+  Print @ Graph[
+    allVerts,
+    tEdges,
+    VertexLabels -> Placed["Name", Tooltip],
+    EdgeStyle -> tStyles,
+    VertexStyle -> vstyles,
+    VertexShapeFunction -> "Rectangle",
+    GraphLayout -> "BipartiteEmbedding",
+    ImageSize -> 720,
+    PlotLabel -> Style[
+      "Transfer candidates: edge thickness/colour = confidence",
+      14, Bold
+    ]
+  ]
+];
+Print[""];
+Print["Cool/thin edges  : low-confidence (0.30) two-predicate matches."];
+Print["Hot/thick edges  : high-confidence (0.92) three-predicate matches"];
+Print["                   with comma_shape_match firing on"];
+Print["                   BoundaryDiscriminationAtLimit."];
+Print[""];
+
+
+(* ---- 6.2  Removal cascade in Tymoczko --------------------- *)
+
+Print["6.2  Removal cascade (Q3): voice_leading_parsimony out of Tymoczko"];
+Print[""];
+
+Module[{mIds, cIds, edges, vstyles},
+  mIds = Keys[field[TymoczkoCore, "Mechanisms"]];
+  cIds = Keys[field[TymoczkoCore, "Constraints"]];
+
+  (* Edges: mechanism -> the constraint(s) it depends on *)
+  edges = Flatten @ Table[
+    Module[{mech, deps},
+      mech = field[TymoczkoCore, "Mechanisms"][m];
+      deps = field[mech, "Compatibility"];
+      If[!ListQ[deps], deps = {}];
+      DirectedEdge[m, #] & /@ Intersection[deps, cIds]
+    ],
+    {m, mIds}
+  ];
+
+  (* Post-removal status colours: red = removed, yellow = degraded,
+     green = surviving constraint, default = surviving mechanism. *)
+  vstyles = Join[
+    {"voice_leading_parsimony" -> Directive[Red, EdgeForm[Black]]},
+    Map[# -> Directive[Yellow, EdgeForm[Black]] &,
+        deltaTymoczko["MechanismsDegraded"]],
+    Map[# -> Directive[LightGreen, EdgeForm[Black]] &, cIds]
+  ];
+
+  Print @ Graph[
+    Join[mIds, cIds],
+    edges,
+    VertexLabels -> Placed["Name", Tooltip],
+    VertexStyle -> vstyles,
+    VertexShapeFunction -> "Rectangle",
+    ImageSize -> 720,
+    PlotLabel -> Style[
+      "Removal cascade: red = removed, yellow = degraded, " <>
+      "green = surviving constraint",
+      14, Bold
+    ]
+  ]
+];
+Print[""];
+Print["The constraint bounded_parameter_space (green) survives the"];
+Print["removal because two other mechanisms still depend on it."];
+Print["The two yellow mechanisms are marked degraded because their"];
+Print["composition rules referenced the removed mechanism."];
+Print[""];
+
+
+(* ---- 6.3  Methodology self-transfer graph ----------------- *)
+
+Print["6.3  Methodology self-transfer graph (Q4): procedural isomorphism"];
+Print[""];
+
+Module[{stEdges, stStyles, methodMechs},
+  methodMechs = Keys[field[MethodologyCore, "Mechanisms"]];
+  stEdges = DirectedEdge[#["From"], #["To"]] & /@
+    recursiveResult["SelfTransfers"];
+  stStyles = MapThread[
+    #1 -> Directive[
+      Thickness[0.002 + 0.008 * #2],
+      ColorData["TemperatureMap"][#2]
+    ] &,
+    {stEdges, #["Confidence"] & /@ recursiveResult["SelfTransfers"]}
+  ];
+
+  Print @ Graph[
+    methodMechs,
+    stEdges,
+    VertexLabels -> Placed["Name", Tooltip],
+    EdgeStyle -> stStyles,
+    VertexStyle -> Lighter[Orange, 0.5],
+    VertexShapeFunction -> "Rectangle",
+    GraphLayout -> "CircularEmbedding",
+    ImageSize -> 720,
+    PlotLabel -> Style[
+      "Methodology self-transfers (" <>
+      ToString[Length[stEdges]] <>
+      " edges) - internal symmetry of the pipeline",
+      14, Bold
+    ]
+  ]
+];
+Print[""];
+Print["Density of edges between methodology mechanisms is the"];
+Print["algebraic signature of procedural isomorphism: most pairs of"];
+Print["mechanisms pass the transfer-compatibility predicate against"];
+Print["each other. The pipeline has internal symmetry that prompt"];
+Print["inspection alone does not surface."];
+Print[""];
+
+
+(* ============================================================
+   SECTION 7 - Beyond V1: schema mutation
 
    The deeper question Ellynne pressed: can recursion ALTER the
    method, improve the schema, or produce new formal distinctions
@@ -392,7 +549,7 @@ Print[""];
    ============================================================ *)
 
 Print["================================================================"];
-Print["6. BEYOND V1 - schema mutation under recursion"];
+Print["7. BEYOND V1 - schema mutation under recursion"];
 Print["================================================================"];
 Print[""];
 Print["The V1 prototype demonstrates failure-mode detection under"];
@@ -416,20 +573,21 @@ Print[""];
 
 
 (* ============================================================
-   SECTION 7 - Closing
+   SECTION 8 - Closing
    ============================================================ *)
 
 Print["================================================================"];
-Print["7. SUMMARY"];
+Print["8. SUMMARY"];
 Print["================================================================"];
 Print[""];
-Print["Four queries demonstrated:"];
+Print["Four queries demonstrated, plus visualisations:"];
 Print[""];
 Print["  1. mechanism + constraint match            - Section 2"];
 Print["  2. transfer candidates (centerpiece)       - Section 3"];
 Print["  3. computational removal test              - Section 4"];
 Print["  4. recursive self-application failure      - Section 5"];
 Print["     mode detection"];
+Print["  +  three Graph renderings of (2-4)         - Section 6"];
 Print[""];
 Print["Centerpiece result:"];
 Print[""];
