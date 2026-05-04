@@ -275,11 +275,18 @@ RowBox[{RowBox[{"(*"," ",RowBox[{"===","===","===","===","===","===","===","==="
 {"AppendTo","[",RowBox[{"basis",","," ",RowBox[{"\"cross_domain:\""," ","<>","\n","                       ",RowBox[
 {"field","[",RowBox[{"srcKernel",","," ","\"Domain\""}],"]"}]," ","<>"," ","\"->\""," ","<>","\n","                       ",RowBox[
 {"field","[",RowBox[{"tgtKernel",","," ","\"Domain\""}],"]"}]}]}],"]"}]}],"\n","    ","]"}],";","\n","\n","    ",RowBox[
-{"(*"," ",RowBox[{RowBox[{RowBox[{"(","5",")"}]," ","Runtime"," ","transfer"}],"-",RowBox[
-{"conditions"," ","predicate"," ",RowBox[{"(",RowBox[{"mechanism","-","supplied"}],")"}]}]}]," ","*)"}],"\n","    ",RowBox[
-{"runtime"," ","="," ",RowBox[{"field","[",RowBox[{"mA",","," ","\"TransferConditions\""}],"]"}]}],";","\n","    ",RowBox[
-{"If","[",RowBox[{RowBox[{RowBox[{"!",RowBox[{"MissingQ","[","runtime","]"}]}]," ","&&"," ",RowBox[
-{"TrueQ","[",RowBox[{"runtime","[",RowBox[{"mB",","," ","coreB"}],"]"}],"]"}]}],",","\n","      ",RowBox[
+{"(*"," ",RowBox[{RowBox[{RowBox[{RowBox[{"(","5",")"}]," ","Runtime"," ","transfer"}],"-",RowBox[
+{"conditions"," ","predicate"," ",RowBox[{RowBox[{"(",RowBox[{"mechanism","-","supplied"}],")"}],".","\n","       ",RowBox[
+{"Note",":"," ",RowBox[{RowBox[{"the"," ","call"," ","is"," ",RowBox[{"runtime","[",RowBox[
+{"mA",","," ","coreB"}],"]"}]}]," ","-"," ",RowBox[{"the"," ","mechanism"," ","asks","\n","       ","whether"," ","IT"," ",RowBox[
+{"(",RowBox[{"the"," ","source"}],")"}]," ","could"," ","transfer"," ","to"," ","the"," ","target"," ",RowBox[
+{"core","."," ","A"}],"\n","       ","prior"," ","version"," ","called"," ",RowBox[
+{"runtime","[",RowBox[{"mB",","," ","coreB"}],"]"}]," ","which"," ","trivially"," ","asked","\n","       ","whether"," ","the"," ","target"," ","mechanism"," ","could"," ","transfer"," ","to"," ","its"," ","own"," ","core"}]}]}]}]}]}],",","\n","       ",RowBox[
+{"making"," ","the"," ","predicate"," ","effectively"," ","a"," ","free"," ",RowBox[
+{"pass","."}]}]}]," ","*)"}],"\n","    ",RowBox[{"runtime"," ","="," ",RowBox[{"field","[",RowBox[
+{"mA",","," ","\"TransferConditions\""}],"]"}]}],";","\n","    ",RowBox[{"If","[",RowBox[
+{RowBox[{RowBox[{"!",RowBox[{"MissingQ","[","runtime","]"}]}]," ","&&"," ",RowBox[
+{"TrueQ","[",RowBox[{"runtime","[",RowBox[{"mA",","," ","coreB"}],"]"}],"]"}]}],",","\n","      ",RowBox[
 {"AppendTo","[",RowBox[{"basis",","," ","\"runtime_predicate\""}],"]"}]}],"\n","    ","]"}],";","\n","\n","    ",RowBox[
 {"If","[",RowBox[{RowBox[{RowBox[{"Length","[","basis","]"}]," ","\[GreaterEqual]"," ","2"}],","," ","basis",","," ","None"}],"]"}]}]}],"\n","  ","]"}]}],";"}],RowBox[
 {"\n","\n","\n"}],RowBox[{RowBox[{RowBox[{"TransferConfidence","[","basis_List","]"}]," ",":=","\n","  ",RowBox[
@@ -931,36 +938,36 @@ RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowB
 {RowBox[{"corpus"," ","="," ",RowBox[{"{",RowBox[{"TymoczkoCore",","," ","CuttingCore",","," ","NKSCore",","," ","MethodologyCore"}],"}"}]}],";"}]}]],"\n",RowBox[
 {RowBox[{RowBox[{"Print","[",RowBox[{"\"Setup complete. Corpus loaded: \"",","," ",RowBox[
 {"Length","[","corpus","]"}],","," ","\" cores.\""}],"]"}],";"}],"\n"}]}],"Input",
-CellLabel -> "In[1]:= ",ExpressionUUID -> "5b991288-b4d0-48b0-afc7-1f9a429e6965"],Cell[
+CellLabel -> "In[131]:= ",ExpressionUUID -> "da893922-45fb-4423-a500-f145dd3fbc40"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"FalseWork algebra loaded. Types defined: Kernel, Comma, \"","\[InvisibleSpace]","\"Mechanism, Constraint, FailureMode, Core. \"","\[InvisibleSpace]","\"Queries available: FindWorksByType, TransferCandidates, \"","\[InvisibleSpace]","\"RemoveAndProject, RecursiveAnalysis.\""}],
 SequenceForm["FalseWork algebra loaded. Types defined: Kernel, Comma, ","Mechanism, Constraint, FailureMode, Core. ",
 "Queries available: FindWorksByType, TransferCandidates, ","RemoveAndProject, RecursiveAnalysis."],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "dad44ea9-e275-46bb-b62a-e467bb96670e"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "c8945a1f-f150-4881-aa7d-2f98f4222040"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Kernels and commas loaded: \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" kernels, \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" commas. All well-formed.\""}],
 SequenceForm["Kernels and commas loaded: ",4," kernels, ",4," commas. All well-formed."],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "5a7615ae-e0bf-45d7-ac53-25edef32457f"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "16983e71-2ef4-4c9a-890d-c0e4bb3046ad"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Tymoczko core loaded: \"","\[InvisibleSpace]","3","\[InvisibleSpace]","\" mechanisms, \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\" constraints.\""}],
 SequenceForm["Tymoczko core loaded: ",3," mechanisms, ",1," constraints."],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "4900ecb4-d626-4369-ae84-68bb197d354a"],Cell[
+StandardForm],"Print",ExpressionUUID -> "451f5fe7-cd41-4d68-9ae1-6a80bb876730"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Cutting core loaded: \"","\[InvisibleSpace]","3","\[InvisibleSpace]","\" mechanisms, \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\" constraints.\""}],
 SequenceForm["Cutting core loaded: ",3," mechanisms, ",1," constraints."],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "fb46a7f4-8288-447f-9ef3-48e5f6646e00"],Cell[
+StandardForm],"Print",ExpressionUUID -> "14d94613-5b2d-453f-aa0f-9f20c349530a"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"NKS core loaded: \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" mechanisms, \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\" constraints.\""}],
 SequenceForm["NKS core loaded: ",4," mechanisms, ",1," constraints."],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "bb750a7b-3f42-4e38-837f-478da3a13484"],Cell[
+StandardForm],"Print",ExpressionUUID -> "11ce616a-fd36-4e8b-8378-651f3fb006ff"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Methodology core loaded: \"","\[InvisibleSpace]","6","\[InvisibleSpace]","\" mechanisms, \"","\[InvisibleSpace]","1","\[InvisibleSpace]","\" constraints.\""}],
 SequenceForm["Methodology core loaded: ",6," mechanisms, ",1," constraints."],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "eee1e1d8-23df-409e-bb51-24f596dd0608"],Cell[
+StandardForm],"Print",ExpressionUUID -> "3e7843b7-0f67-4f81-b3ba-de86d6e9c322"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Setup complete. Corpus loaded: \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" cores.\""}],
 SequenceForm["Setup complete. Corpus loaded: ",4," cores."],Editable -> False],StandardForm],
-"Print",ExpressionUUID -> "2983b11a-be4a-436f-96dc-83dae416ea42"]},Open],ExpressionUUID -> "420975c9-02d1-439c-9718-e229277d0139"],Cell[
+"Print",ExpressionUUID -> "8334a9aa-1093-4ece-8750-b051c05a437c"]},Open],ExpressionUUID -> "4f3ae10d-24d6-43fd-b33d-8d98c1b949ed"],Cell[
 CellGroupData[
 {Cell[
 BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowBox[
@@ -1046,230 +1053,230 @@ BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)
 {RowBox[{"Print","[","\"interpretively in Jan 4, 2026 with Stephen Wolfram.\"","]"}],";"}],RowBox[
 {"\n","\n"}],RowBox[{RowBox[{"Print","[","\"\"","]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"Cell 2 complete. Globals saved: transferTC, deltaTymoczko,\"","]"}],";"}],"\n",RowBox[
 {RowBox[{RowBox[{"Print","[","\"deltaCutting, recursiveResult.\"","]"}],";"}],"\n"}]}],
-"Input",CellLabel -> "In[61]:= ",ExpressionUUID -> "5ff12b22-fff2-4c63-9741-7a5f5aa1ed76"],Cell[
+"Input",CellLabel -> "In[191]:= ",ExpressionUUID -> "7c098d72-8c83-462d-a1fb-40e27d71621b"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "2b0600a5-441e-4b91-a52e-b01febf78a68"],Cell[
+"Print",ExpressionUUID -> "baf027c4-3b1c-435c-9661-cca1e2b5f1f8"],Cell[
 BoxData["\"1. CORPUS\"",
-StandardForm],"Print",ExpressionUUID -> "0005cde0-9cbd-4d99-b10d-2f14fd24c9ff"],Cell[
+StandardForm],"Print",ExpressionUUID -> "c77994ac-6316-4b8a-bfbc-2e8501c656a3"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "26ee87b7-add5-4487-bf64-16ef2e957219"],Cell[
+"Print",ExpressionUUID -> "31c99c26-f641-44b5-85bf-2f293fbb6097"],Cell[
 BoxData[TagBox[
 GridBox[{{StyleBox["\"Title\"",Bold,StripOnInput -> False],StyleBox["\"Domain\"",
 Bold,StripOnInput -> False],StyleBox["\"Kernel\"",Bold,StripOnInput -> False],StyleBox[
 "\"#Mech\"",Bold,StripOnInput -> False]},{"\"A Geometry of Music\"","\"music\"","\"the-fifth\"","3"},{"\"Perceptual Processes in Film Viewing (Six Component Processes)\"","\"film\"","\"the-cut\"","3"},{"\"A New Kind of Science\"","\"computational_science\"","\"the-conditional-branch\"","4"},{"\"FalseWork Methodology (self-applied core)\"","\"self_referential_analysis\"","\"the-methodology\"","6"}},
 GridBoxAlignment -> {"Columns" -> {{Left}}},AutoDelete -> False,GridBoxFrame -> {"Columns" -> {{True}},"Rows" -> {{True}}},
 GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}},BaseStyle -> "Text"],
-"Grid"],StandardForm],"Print",ExpressionUUID -> "7842305f-3cc5-4bb0-9ebf-0a5a5613e26a"],Cell[
+"Grid"],StandardForm],"Print",ExpressionUUID -> "e9eb3561-c43a-4963-972f-8a3972aaa37e"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "ff2a2cba-bf8d-40ce-9e2d-2264742b5f65"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "b1f1d736-1ced-4f7a-bda6-e64dc315b413"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "8839f9b8-a7e3-48ed-9912-fe8f7ec48740"],Cell[
+"Print",ExpressionUUID -> "7b98e1b3-e322-4ecd-8283-fe0f04b28bc5"],Cell[
 BoxData["\"2. QUERY 1 - mechanism + constraint match\"",
-StandardForm],"Print",ExpressionUUID -> "2a397d13-5790-48eb-a542-df835c381ec1"],Cell[
+StandardForm],"Print",ExpressionUUID -> "78d4c564-79f4-4648-9a52-048b8f5953e3"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "7ed5380b-140f-478b-9423-bce618226de1"],Cell[
+"Print",ExpressionUUID -> "0c30361b-8e65-4d36-b0ff-a0210aca8155"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"Returned \"","\[InvisibleSpace]","4","\[InvisibleSpace]","\" cores:\""}],
-SequenceForm["Returned ",4," cores:"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "6661ff99-72de-4067-bfee-22fdd9e871d5"],Cell[
+SequenceForm["Returned ",4," cores:"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "0b7eed01-50f0-49ac-a431-d5213e3df2f9"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"A Geometry of Music\"","\[InvisibleSpace]","\"  (\"","\[InvisibleSpace]","\"music\"","\[InvisibleSpace]","\")\""}],
 SequenceForm["  - ","A Geometry of Music","  (","music",")"],Editable -> False],StandardForm],
-"Print",ExpressionUUID -> "dc12d021-e837-4d2f-8014-7463ac3e10b2"],Cell[
+"Print",ExpressionUUID -> "879a380c-4828-48f3-a14a-3f6b9c3f97c3"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"Perceptual Processes in Film Viewing (Six Component Processes)\"","\[InvisibleSpace]","\"  (\"","\[InvisibleSpace]","\"film\"","\[InvisibleSpace]","\")\""}],
 SequenceForm["  - ","Perceptual Processes in Film Viewing (Six Component Processes)",
-"  (","film",")"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "c8ac110a-d1a2-4e27-8371-4d8fad27cb7c"],Cell[
+"  (","film",")"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "c30735bf-c3b0-4c86-9531-bcd8810f599b"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"A New Kind of Science\"","\[InvisibleSpace]","\"  (\"","\[InvisibleSpace]","\"computational_science\"","\[InvisibleSpace]","\")\""}],
 SequenceForm["  - ","A New Kind of Science","  (","computational_science",")"],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "b14f5238-b573-41c9-aae3-c1465c1ab029"],Cell[
+StandardForm],"Print",ExpressionUUID -> "0d86095b-5c23-40e0-b108-2ea621c57d54"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"FalseWork Methodology (self-applied core)\"","\[InvisibleSpace]","\"  (\"","\[InvisibleSpace]","\"self_referential_analysis\"","\[InvisibleSpace]","\")\""}],
 SequenceForm["  - ","FalseWork Methodology (self-applied core)","  (","self_referential_analysis",
-")"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "9969836c-8ac6-4564-bcdd-4ae793b8f764"],Cell[
+")"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "dddda892-a0c6-4c72-8f3c-e6506de1450a"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "955f14a0-85cb-4fe8-af9d-b45f0db7cf21"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "791db9b2-5dc5-4737-8b01-ee6d3c36b525"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "531fd95e-1a40-4c3c-b1a7-f5fc6def4e07"],Cell[
+"Print",ExpressionUUID -> "d912a0e1-e7b1-4097-8c28-e0217d1b2af3"],Cell[
 BoxData["\"3. QUERY 2 - transfer candidates [CENTERPIECE]\"",
-StandardForm],"Print",ExpressionUUID -> "24bae57a-8dfc-4a1a-95b5-e22323358d8d"],Cell[
+StandardForm],"Print",ExpressionUUID -> "4362f745-58e5-4262-8556-c5f5b82f0cae"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "f18f958a-142f-4a83-a6ea-5fe322d052eb"],Cell[
+"Print",ExpressionUUID -> "a4a8cbe8-dcf6-48cd-a401-620a0aa6dd46"],Cell[
 BoxData["\"Tymoczko (music) <-> Cutting (film)\"",
-StandardForm],"Print",ExpressionUUID -> "f158af07-2d12-497a-895a-ff0f163c0c28"],Cell[
+StandardForm],"Print",ExpressionUUID -> "576a5455-6237-4e4a-bdd8-6f2351a596f2"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"Returned \"","\[InvisibleSpace]","9","\[InvisibleSpace]","\" candidates.\""}],
 SequenceForm["Returned ",9," candidates."],Editable -> False],StandardForm],"Print",
-ExpressionUUID -> "3fa5fb41-6cce-4aed-9a96-43c451c2685b"],Cell[
+ExpressionUUID -> "cb5725ef-0d4a-414a-855d-df9521d22603"],Cell[
 BoxData["\"\"",StandardForm],
-"Print",ExpressionUUID -> "434ab09c-432f-478c-807c-aa39f5580e7a"],Cell[
+"Print",ExpressionUUID -> "ba304536-ab6c-45ee-b91b-5f471b6fe9e4"],Cell[
 BoxData["\"Top 3 by confidence:\"",
-StandardForm],"Print",ExpressionUUID -> "4a60508b-1d93-4964-ad11-25621ca4acf6"],Cell[
+StandardForm],"Print",ExpressionUUID -> "e09c2b24-346a-4e06-b97c-b7b93b2552da"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  \"","\[InvisibleSpace]","\"iterated_fifth_generation\"","\[InvisibleSpace]","\" -> \"","\[InvisibleSpace]","\"synchronous_temporal_segmentation\"","\[InvisibleSpace]","\"  conf=\"","\[InvisibleSpace]",TagBox[
 InterpretationBox[StyleBox["\"0.92\"",ShowStringCharacters -> False],0.92`,AutoDelete -> True],
 Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  ","iterated_fifth_generation",
 " -> ","synchronous_temporal_segmentation","  conf=",NumberForm[0.92`,{3,2}]],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "d7da659b-f1b6-414a-8612-04e6d1068ae5"],Cell[
+StandardForm],"Print",ExpressionUUID -> "11c86418-d76a-4c2d-af1d-a3700cd6ed97"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"    basis: \"","\[InvisibleSpace]","\"shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate\""}],
 SequenceForm["    basis: ","shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "e6e38686-8803-4b63-9777-abfd119c468e"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "d90bb731-43c7-4587-b854-ca040c225f67"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  \"","\[InvisibleSpace]","\"tonal_hierarchy\"","\[InvisibleSpace]","\" -> \"","\[InvisibleSpace]","\"shot_continuity_hierarchy\"","\[InvisibleSpace]","\"  conf=\"","\[InvisibleSpace]",TagBox[
 InterpretationBox[StyleBox["\"0.92\"",ShowStringCharacters -> False],0.92`,AutoDelete -> True],
 Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  ","tonal_hierarchy"," -> ",
 "shot_continuity_hierarchy","  conf=",NumberForm[0.92`,{3,2}]],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "ff43e7ed-47e1-4782-9dc7-0958a79f870f"],Cell[
+StandardForm],"Print",ExpressionUUID -> "ac3f5091-87a2-491d-9bb2-b5849a123284"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"    basis: \"","\[InvisibleSpace]","\"shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate\""}],
 SequenceForm["    basis: ","shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "b4b83dea-c632-4efd-9fb5-10b33e5c5fda"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "ef3678ca-58cc-4fad-9e6d-3f96f1270ae4"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  \"","\[InvisibleSpace]","\"voice_leading_parsimony\"","\[InvisibleSpace]","\" -> \"","\[InvisibleSpace]","\"cut_dissolve_discrimination\"","\[InvisibleSpace]","\"  conf=\"","\[InvisibleSpace]",TagBox[
 InterpretationBox[StyleBox["\"0.92\"",ShowStringCharacters -> False],0.92`,AutoDelete -> True],
 Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  ","voice_leading_parsimony",
 " -> ","cut_dissolve_discrimination","  conf=",NumberForm[0.92`,{3,2}]],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "ea23d326-bdb7-40e1-bc53-75fa05198b82"],Cell[
+StandardForm],"Print",ExpressionUUID -> "c8cdd7a6-3228-4e5f-8fc0-553b94159c79"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"    basis: \"","\[InvisibleSpace]","\"shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate\""}],
 SequenceForm["    basis: ","shared_mechanism_type | comma_shape_match:BoundaryDiscriminationAtLimit | cross_domain:music->film | runtime_predicate"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "26b223c4-24c4-4113-b7af-7c8a5b45c2fb"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "fc27ad27-bac0-454f-a09e-999ae96aeaa1"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "4e74ce62-ae0a-4427-9104-d54514ae8999"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "8bd78a2b-0395-4c74-8450-cfb1b84b5790"],Cell[
 BoxData[
 "\"KEY RESULT: 0.92 confidence on the centerpiece transfer is a\"",StandardForm],
-"Print",ExpressionUUID -> "48a1b7cf-c3cd-445f-988f-860a3d05b1c6"],Cell[
+"Print",ExpressionUUID -> "20ac5a23-0954-4927-b71d-d25b1a29c7c7"],Cell[
 BoxData["\"coherence demonstration of Paper 1 sec 4.3's cross-domain claim\"",
-StandardForm],"Print",ExpressionUUID -> "a7a668fb-cbd6-4334-a2fd-5ace0e94f518"],Cell[
+StandardForm],"Print",ExpressionUUID -> "c40d192d-8b23-48e7-8057-d851dcc36c4e"],Cell[
 BoxData[
 "\"('the same abstract structure: a sub-symmetry made available by a\"",StandardForm],
-"Print",ExpressionUUID -> "45521eee-f192-4b62-9914-74dcdeb44c9b"],Cell[
+"Print",ExpressionUUID -> "8ea292cc-5658-481c-85c6-593de09a33cf"],Cell[
 BoxData["\"closed generative field at its boundary'), encoded in the comma's\"",
-StandardForm],"Print",ExpressionUUID -> "dff6ccf5-63d2-4964-b0e6-3963ba733c73"],Cell[
+StandardForm],"Print",ExpressionUUID -> "5ea72fed-1664-43d9-8dbd-254353627ebe"],Cell[
 BoxData[
 "\"IrreducibilityKind field. Not an empirical proof; Paper 1 sec. 4.3\"",StandardForm],
-"Print",ExpressionUUID -> "a26515af-f258-4665-9e78-52db780de10d"],Cell[
+"Print",ExpressionUUID -> "738f4bd7-fa83-4b06-9d2d-c94a220d0aa4"],Cell[
 BoxData["\"names cross-domain comma equivalence as the open empirical question.\"",
-StandardForm],"Print",ExpressionUUID -> "040624e5-41b5-43b8-99c0-e56ce34802d1"],Cell[
+StandardForm],"Print",ExpressionUUID -> "2c6cba1d-1095-496f-9692-0dadf1865def"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "deb2bd97-20a2-497e-b53d-fe38b1dc09e9"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "d4c41e0b-3c3b-4956-af06-579d7e8a6cce"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "bf426c06-aab9-44cc-a0f2-f563044cde3e"],Cell[
+"Print",ExpressionUUID -> "0c278ddc-f329-4079-b079-eb93788687de"],Cell[
 BoxData["\"4. QUERY 3 - computational removal test\"",
-StandardForm],"Print",ExpressionUUID -> "578cd768-2745-454f-8829-bcab62a76d9f"],Cell[
+StandardForm],"Print",ExpressionUUID -> "5f77510e-e3f3-425e-a42d-b992e0db3309"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "7f12381d-4a98-48ff-87e4-3301ec4cb269"],Cell[
+"Print",ExpressionUUID -> "a60b2627-4aff-4ba2-bf91-1bb1f96a4a40"],Cell[
 BoxData["\"RemoveAndProject[TymoczkoCore, voice_leading_parsimony]:\"",
-StandardForm],"Print",ExpressionUUID -> "6726342b-137a-44b4-ac76-5210b902ca69"],Cell[
+StandardForm],"Print",ExpressionUUID -> "e45494e0-39ce-47e4-ba27-a0603b8a6e7f"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  Constraints dropped: \"","\[InvisibleSpace]","\"(none)\""}],
 SequenceForm["  Constraints dropped: ","(none)"],Editable -> False],StandardForm],
-"Print",ExpressionUUID -> "a7d5c757-2ae0-4502-a89c-66eedf94fc75"],Cell[
+"Print",ExpressionUUID -> "4d07c12b-d78e-43fc-9aff-b669e1c8441f"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  Mechanisms degraded: \"","\[InvisibleSpace]","\"iterated_fifth_generation, tonal_hierarchy\""}],
 SequenceForm["  Mechanisms degraded: ","iterated_fifth_generation, tonal_hierarchy"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "333cc1f0-b295-43fc-b8f6-4862972c8c12"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "314a4e88-d8c9-4c34-b431-21340ec65891"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  Failure modes surfaced: \"","\[InvisibleSpace]","\"loss_of_three_way_discrimination\""}],
 SequenceForm["  Failure modes surfaced: ","loss_of_three_way_discrimination"],Editable -> False],
-StandardForm],"Print",ExpressionUUID -> "5c1be92a-3b82-4ba8-9734-210eeedee1ee"],Cell[
+StandardForm],"Print",ExpressionUUID -> "0b343a64-a127-4842-8eee-529d50ca11bc"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "28f999ac-8187-4295-b6b7-915b48b939b1"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "e7ffc72e-4665-4657-86ee-153fa59dcfcb"],Cell[
 BoxData[
 "\"RemoveAndProject[CuttingCore, cut_dissolve_discrimination]:\"",StandardForm],"Print",
-ExpressionUUID -> "6a5239be-8f00-4622-9ff9-da6fcb3a63d5"],Cell[
+ExpressionUUID -> "82e1ee77-955a-4751-960e-d4564d96116a"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  Mechanisms degraded: \"","\[InvisibleSpace]","\"shot_continuity_hierarchy, synchronous_temporal_segmentation\""}],
 SequenceForm["  Mechanisms degraded: ","shot_continuity_hierarchy, synchronous_temporal_segmentation"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "9a3e3691-7c8b-4540-85c8-3267eb80373c"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "027166b3-edf5-44e1-bc16-14ac3931a730"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  Failure modes surfaced: \"","\[InvisibleSpace]","\"loss_of_perceptual_primitive_at_shot_boundary\""}],
 SequenceForm["  Failure modes surfaced: ","loss_of_perceptual_primitive_at_shot_boundary"],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "e785dced-3c32-4d58-bde3-e02bddd81099"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "72c99d10-975f-4156-a4de-72ef1abab9dd"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "42b84980-973d-4826-b052-7f0871c90c37"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "df307b6e-9e73-41ab-b725-8cfea5bb28cb"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "406da99b-2554-48a2-8a2f-7047c3d4b98b"],Cell[
+"Print",ExpressionUUID -> "dc2a7fda-8981-4a09-97f2-65af2a952e05"],Cell[
 BoxData["\"5. QUERY 4 - recursive self-application\"",
-StandardForm],"Print",ExpressionUUID -> "765ca4c3-a6ee-4466-a33f-dae9ce7b40b7"],Cell[
+StandardForm],"Print",ExpressionUUID -> "95e875b2-866c-425e-85ed-f66569a2d214"],Cell[
 BoxData[
 "\"================================================================\"",StandardForm],
-"Print",ExpressionUUID -> "8a38beea-48b4-4d79-8dcb-966bf02c7383"],Cell[
+"Print",ExpressionUUID -> "50e18103-7e19-4cf3-af1a-89ae23995467"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"30","\[InvisibleSpace]","\" non-trivial self-transfer candidates in the methodology core.\""}],
 SequenceForm[30," non-trivial self-transfer candidates in the methodology core."],
-Editable -> False],StandardForm],"Print",ExpressionUUID -> "c788076e-4ee8-4138-8b9f-4e54d703c72e"],Cell[
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "37cd4170-5542-440c-a29c-c7098c9c8cfd"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "bb45d90b-9c94-43ea-bb9e-593d0b6c5e8e"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "43a04a59-c466-49f1-9d1b-c997155ef777"],Cell[
 BoxData[
 "\"Load-bearing mechanisms (removal causes constraint or mech collapse):\"",StandardForm],
-"Print",ExpressionUUID -> "f4189178-67ed-49e0-a636-64ff65159d22"],Cell[
+"Print",ExpressionUUID -> "5977512a-866f-47ee-ad77-3552f39bca03"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"staged_sequential_processing\""}],SequenceForm[
-"  - ","staged_sequential_processing"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "78fa2d86-65a2-4ddf-b585-22639ebf86ba"],Cell[
+"  - ","staged_sequential_processing"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "09b0e38b-bddd-447e-aeb1-9effde899af5"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"procedural_isomorphism\""}],
 SequenceForm["  - ","procedural_isomorphism"],Editable -> False],StandardForm],"Print",
-ExpressionUUID -> "f65c6f33-31ba-43f4-b1df-64bdc2f31ba0"],Cell[
+ExpressionUUID -> "f1dcdf64-f07f-4f90-a4f3-cfebc03fecb1"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"prompt_output_pairing\""}],SequenceForm[
-"  - ","prompt_output_pairing"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "2f006dd1-39e6-4204-bb0a-41a514de8b51"],Cell[
+"  - ","prompt_output_pairing"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "c4306b71-31cc-4fba-aeb1-fc673298d153"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"temperature_graduation\""}],
 SequenceForm["  - ","temperature_graduation"],Editable -> False],StandardForm],"Print",
-ExpressionUUID -> "330df869-bd47-4ce4-9696-3baeb59d60a0"],Cell[
+ExpressionUUID -> "c605fe73-cbe3-47a9-9f8f-90ca5768c938"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"complete_documentation\""}],SequenceForm[
-"  - ","complete_documentation"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "8971a8bb-0a9b-44c1-8244-61143b181fce"],Cell[
+"  - ","complete_documentation"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "181b3337-922d-4c83-b102-8ff1b89b74dc"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "50c33529-3bae-4f70-93a6-72b5f7ee766f"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "3bf42956-01cf-4b60-a1e0-97117cd22205"],Cell[
 BoxData[
-"\"Latent failure modes (re-derived computationally):\"",StandardForm],"Print",ExpressionUUID -> "43c26f5e-6b23-4160-a63e-ec138922b6ec"],Cell[
+"\"Latent failure modes (re-derived computationally):\"",StandardForm],"Print",ExpressionUUID -> "1af958d0-34bb-4a20-beca-42bc6edd3247"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"loss_of_pipeline_coherence\""}],
 SequenceForm["  - ","loss_of_pipeline_coherence"],Editable -> False],StandardForm],
-"Print",ExpressionUUID -> "12931ad4-0af6-4d54-bb80-1a39bfe157a6"],Cell[
+"Print",ExpressionUUID -> "372f6373-d5eb-4778-9eac-f0284768ae5e"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"variety_in_uniformity\""}],SequenceForm[
-"  - ","variety_in_uniformity"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "223042b4-1523-427a-b5c3-01a6dd58a771"],Cell[
+"  - ","variety_in_uniformity"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "b63497f6-d61b-483c-a0fd-eb152012077e"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"loss_of_input_output_discipline\""}],
 SequenceForm["  - ","loss_of_input_output_discipline"],Editable -> False],StandardForm],
-"Print",ExpressionUUID -> "d432cf72-6962-453d-bfc0-402cade5696b"],Cell[
+"Print",ExpressionUUID -> "d93caf7f-c4d3-4be4-9310-3e5c3d1d6e54"],Cell[
 BoxData[InterpretationBox[
 RowBox[{"\"  - \"","\[InvisibleSpace]","\"transparency_as_opacity\""}],SequenceForm[
-"  - ","transparency_as_opacity"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "68e4e7e8-421b-469d-a8b1-21f8b2029eda"],Cell[
+"  - ","transparency_as_opacity"],Editable -> False],StandardForm],"Print",ExpressionUUID -> "294e1592-7b0d-4705-a181-0d9bab17ae0e"],Cell[
 BoxData[
 InterpretationBox[RowBox[{"\"  - \"","\[InvisibleSpace]","\"methodology_blind_spot\""}],
 SequenceForm["  - ","methodology_blind_spot"],Editable -> False],StandardForm],"Print",
-ExpressionUUID -> "788de5a0-3303-4644-9288-1c2a494435f5"],Cell[
+ExpressionUUID -> "444ac49e-28bc-4b55-8a02-2b09cdcaa4a2"],Cell[
 BoxData["\"\"",StandardForm],
-"Print",ExpressionUUID -> "676c9109-73b5-4f83-b456-74312baf28a0"],Cell[
+"Print",ExpressionUUID -> "6cfa376a-1b25-417e-9f1c-330e645dd5d8"],Cell[
 BoxData["\"These re-derive variety_in_uniformity, transparency_as_opacity,\"",
-StandardForm],"Print",ExpressionUUID -> "130a3741-9e9e-4754-acf8-74f7cc81ce05"],Cell[
+StandardForm],"Print",ExpressionUUID -> "f7f7d1c7-c543-4397-add1-3e77ea81d2ec"],Cell[
 BoxData[
 "\"and methodology_blind_spot - the same failures Brink surfaced\"",StandardForm],
-"Print",ExpressionUUID -> "c246c389-35cd-489c-9372-c6806ea72502"],Cell[
+"Print",ExpressionUUID -> "cbc57290-1bb6-458e-ad19-7213c5c71532"],Cell[
 BoxData["\"interpretively in Jan 4, 2026 with Stephen Wolfram.\"",
-StandardForm],"Print",ExpressionUUID -> "785b9225-a37f-4b47-9bfc-fcaac6e40dcc"],Cell[
+StandardForm],"Print",ExpressionUUID -> "647ec7bf-9095-42f7-a57b-03c82096d9dc"],Cell[
 BoxData[
-"\"\"",StandardForm],"Print",ExpressionUUID -> "1e1b6ed1-1f37-4873-aa39-4c87db99e336"],Cell[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "97d2c10c-b4ca-44e4-bbb5-b16369261a37"],Cell[
 BoxData[
 "\"Cell 2 complete. Globals saved: transferTC, deltaTymoczko,\"",StandardForm],"Print",
-ExpressionUUID -> "643c9a18-d2ef-4ab3-8cf0-bc69a22fa23c"],Cell[
+ExpressionUUID -> "8b2cd2bc-a22c-4db7-9331-efcec5761890"],Cell[
 BoxData["\"deltaCutting, recursiveResult.\"",
-StandardForm],"Print",ExpressionUUID -> "fe45b8d2-5960-4ec8-9f62-0f147f449c64"]},
-Open],ExpressionUUID -> "f59201ff-c12a-40f7-a94a-e6770285a615"],Cell[
+StandardForm],"Print",ExpressionUUID -> "52dfcc26-8963-41df-bb4d-c87e4b0957ce"]},
+Open],ExpressionUUID -> "7aed7047-21f9-4b1d-8fed-62546fb7b9f8"],Cell[
 CellGroupData[
 {Cell[
 BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowBox[
@@ -1305,10 +1312,10 @@ BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)
 {"GraphLayout"," ","\[Rule]"," ","\"BipartiteEmbedding\""}],",","\n","    ",RowBox[
 {"ImageSize"," ","\[Rule]"," ","720"}],",","\n","    ",RowBox[{"PlotLabel"," ","\[Rule]"," ",RowBox[
 {"Style","[","\n","      ",RowBox[{"\"Transfer candidates: edge thickness/colour = confidence\"",",","\n","      ","14",","," ","Bold"}],"\n","    ","]"}]}]}],"\n","  ","]"}]}]}],"\n","]"}],"\n"}]}],
-"Input",CellLabel -> "In[122]:= ",ExpressionUUID -> "e1e79c27-d0a0-43e4-a6b7-4985b20d06de"],Cell[
+"Input",CellLabel -> "In[252]:= ",ExpressionUUID -> "fad2816b-5e91-4875-952c-810e8553a5fb"],Cell[
 BoxData[
 "\"6.1  Transfer network: Tymoczko (music) <-> Cutting (film)\"",StandardForm],"Print",
-ExpressionUUID -> "f82c2be0-5486-4b35-95d9-25151dc2c44f"],Cell[
+ExpressionUUID -> "e1f90411-de33-488c-a273-ce90aca8c037"],Cell[
 BoxData[GraphicsBox[
 NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[Graph[
 {"voice_leading_parsimony","iterated_fifth_generation","tonal_hierarchy","cut_dissolve_discrimination","shot_continuity_hierarchy","synchronous_temporal_segmentation"},
@@ -1380,9 +1387,9 @@ TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"shot_continuity_hier
 Slot[1],"synchronous_temporal_segmentation","Tooltip"]]]}}],MouseAppearanceTag["NetworkGraphics"]],
 AllowKernelInitialization -> False]],{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 720,PlotLabel -> FormBox[
 StyleBox["\"Transfer candidates: edge thickness/colour = confidence\"",14,Bold,StripOnInput -> False],
-TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},ExpressionUUID -> "a04a1b25-1645-4a10-b6fd-dd6c7c40fd96"],
-StandardForm],"Output",CellLabel -> "Out[124]= ",ExpressionUUID -> "65e99014-4132-491e-b2a1-006b2110462e"]},
-Open],ExpressionUUID -> "c82d8cfb-a737-4666-83b8-6d4442098e5d"],Cell[
+TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},ExpressionUUID -> "2d648c68-acfb-4e3d-b2af-ab37a1ad5f09"],
+StandardForm],"Output",CellLabel -> "Out[254]= ",ExpressionUUID -> "bee700e5-9a0f-4b85-bc77-1c32470f15b6"]},
+Open],ExpressionUUID -> "2b1059ac-eabe-4a25-a8f3-49172b0af32a"],Cell[
 CellGroupData[
 {Cell[
 BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowBox[
@@ -1416,10 +1423,10 @@ BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)
 {"VertexStyle"," ","\[Rule]"," ","vstyles"}],",","\n","    ",RowBox[{"VertexShapeFunction"," ","\[Rule]"," ","\"Rectangle\""}],",","\n","    ",RowBox[
 {"ImageSize"," ","\[Rule]"," ","720"}],",","\n","    ",RowBox[{"PlotLabel"," ","\[Rule]"," ",RowBox[
 {"Style","[","\n","      ",RowBox[{RowBox[{"\"Removal cascade: red = removed, yellow = degraded, \""," ","<>","\n","      ","\"green = surviving constraint\""}],",","\n","      ","14",","," ","Bold"}],"\n","    ","]"}]}]}],"\n","  ","]"}]}]}],"\n","]"}],"\n"}]}],
-"Input",CellLabel -> "In[125]:= ",ExpressionUUID -> "e137948a-fa32-4177-98f1-4afd3aeb4675"],Cell[
+"Input",CellLabel -> "In[255]:= ",ExpressionUUID -> "8967b8b6-6cc2-4aaf-95f5-4f0b5452c40b"],Cell[
 BoxData[
 "\"6.2  Removal cascade: voice_leading_parsimony out of Tymoczko\"",StandardForm],
-"Print",ExpressionUUID -> "4e820b88-22a2-4e1b-9cf7-7918b6678479"],Cell[
+"Print",ExpressionUUID -> "63228a98-9cab-4b96-84b9-f423cd035894"],Cell[
 BoxData[GraphicsBox[
 NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[Graph[
 {"voice_leading_parsimony","iterated_fifth_generation","tonal_hierarchy","bounded_parameter_space"},
@@ -1449,9 +1456,9 @@ Slot[1],"bounded_parameter_space","Tooltip"]]]}}],MouseAppearanceTag["NetworkGra
 AllowKernelInitialization -> False]],{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 720,PlotLabel -> FormBox[
 StyleBox["\"Removal cascade: red = removed, yellow = degraded, green = surviving constraint\"",
 14,Bold,StripOnInput -> False],TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},
-ExpressionUUID -> "8c1160f6-48c3-4d47-a7a0-d00a5316f827"],StandardForm],"Output",
-CellLabel -> "Out[127]= ",ExpressionUUID -> "f509da3a-4de6-4d0a-b943-402121aa94bf"]},
-Open],ExpressionUUID -> "bc94e706-4f57-445c-ba78-98c3f543e68f"],Cell[
+ExpressionUUID -> "fc38a2d3-6c50-4b1a-86d2-cc65b4629fa5"],StandardForm],"Output",
+CellLabel -> "Out[257]= ",ExpressionUUID -> "2cccb96f-56e9-49de-bf41-70f7aca6be7c"]},
+Open],ExpressionUUID -> "4ce3c4f3-bf3b-461a-8f34-535f258cef43"],Cell[
 CellGroupData[
 {Cell[
 BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowBox[
@@ -1480,10 +1487,10 @@ BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)
 {"ImageSize"," ","\[Rule]"," ","720"}],",","\n","    ",RowBox[{"PlotLabel"," ","\[Rule]"," ",RowBox[
 {"Style","[","\n","      ",RowBox[{RowBox[{"\"Methodology self-transfers (\""," ","<>","\n","      ",RowBox[
 {"ToString","[",RowBox[{"Length","[","stEdges","]"}],"]"}]," ","<>","\n","      ","\" edges) - internal symmetry\""}],",","\n","      ","14",","," ","Bold"}],"\n","    ","]"}]}]}],"\n","  ","]"}]}]}],"\n","]"}],"\n"}]}],
-"Input",CellLabel -> "In[128]:= ",ExpressionUUID -> "cb103ca8-9839-493f-8f11-cabee95ddf41"],Cell[
+"Input",CellLabel -> "In[258]:= ",ExpressionUUID -> "2f58b4b0-8696-4596-bed7-b0892b2fcaa4"],Cell[
 BoxData[
 "\"6.3  Methodology self-transfer graph: procedural isomorphism\"",StandardForm],
-"Print",ExpressionUUID -> "813bdfef-a9a6-4ec5-bb64-2149bd741297"],Cell[
+"Print",ExpressionUUID -> "2792dca2-2462-4c4f-8b71-0fad3c63482b"],Cell[
 BoxData[GraphicsBox[
 NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[Graph[
 {"staged_sequential_processing","procedural_isomorphism","prompt_output_pairing","temperature_graduation","complete_documentation","external_only_analysis"},
@@ -1651,7 +1658,464 @@ RectangleBox[{-0.889966875122018`,-0.5159610261146491`},{-0.8420839324468588`,-0
 1],"external_only_analysis","Tooltip"]]]}}],MouseAppearanceTag["NetworkGraphics"]],
 AllowKernelInitialization -> False]],{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 720,PlotLabel -> FormBox[
 StyleBox["\"Methodology self-transfers (30 edges) - internal symmetry\"",14,Bold,
-StripOnInput -> False],TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"}],StandardForm],
-"Output",CellLabel -> "Out[130]= ",ExpressionUUID -> "9b30a03e-124e-436b-bc72-c70ad7140714"]},
-Open],ExpressionUUID -> "c005a000-57b4-4ac2-9e10-ffd995f96c7c"]},StyleDefinitions -> "Default.nb",
+StripOnInput -> False],TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},ExpressionUUID -> "7aff77b1-b961-4a69-8fe0-203de4b1ecae"],
+StandardForm],"Output",CellLabel -> "Out[260]= ",ExpressionUUID -> "78884a8d-8247-44d0-8397-dfb53823258f"]},
+Open],ExpressionUUID -> "4f70759b-2989-4b7b-91ba-47b9c12407c3"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{StyleBox[RowBox[{RowBox[{"(*"," ",RowBox[{"::","Package","::"}]," ","*)"}],"\n","\n",RowBox[
+{"(*"," ",RowBox[{RowBox[{RowBox[{"===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","==="}],"=","\n","   ",RowBox[
+{RowBox[{RowBox[{"CELL"," ",RowBox[{"6"," ","/"," ","6"}]}]," ","-"," ",RowBox[{"VISUALISATION"," ","6.4","\n","   ","Discrimination"," ",RowBox[
+{"panel","."," ","Compares"}]," ","Tymoczko"}]}],"<->",RowBox[{RowBox[{"Cutting"," ",RowBox[
+{"(","centerpiece",")"}],"\n","   ","to"," ","Tymoczko"}],"<->",RowBox[{RowBox[{"NKS"," ","and"," ","Cutting"}],"<->","NKS"}]}]}]}],","," ",RowBox[
+{RowBox[{RowBox[{"to"," ","show"," ","that"," ","the"," ",RowBox[{"algebra","'"}],"s","\n","   ","high"}],"-",RowBox[
+{"confidence"," ","verdict"," ","is"," ","specific"," ","to"," ","the"," ","comma"}],"-",RowBox[
+{"equal"," ",RowBox[{"pair",".","\n","   ","Self"}]}],"-",RowBox[{"contained",":"," ",RowBox[
+{RowBox[{"re","-",RowBox[{"runs"," ","the"," ","three"," ","TransferCandidates"," ",RowBox[
+{"queries","."}]}]}],"\n","   ","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","===","==="}]}]}],"="}]}]," ","*)"}],"\n","\n",RowBox[
+{RowBox[{"transferTC"," ","="," ",RowBox[{"TransferCandidates","[",RowBox[{"TymoczkoCore",","," ","CuttingCore"}],"]"}]}],";"}]}]],"\n",RowBox[
+{RowBox[{"transferTN"," ","="," ",RowBox[{"TransferCandidates","[",RowBox[{"TymoczkoCore",","," ","NKSCore"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"transferCN"," ","="," ",RowBox[{"TransferCandidates","[",RowBox[{"CuttingCore",","," ","NKSCore"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{"maxConf","[","ts_","]"}]," ",":="," ",RowBox[
+{"If","[",RowBox[{RowBox[{RowBox[{"Length","[","ts","]"}]," ","=="," ","0"}],","," ","0",","," ",RowBox[
+{"Max","[",RowBox[{RowBox[{RowBox[{"#","[","\"Confidence\"","]"}]," ","&"}]," ","/@"," ","ts"}],"]"}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"minConf","[","ts_","]"}]," ",":="," ",RowBox[{"If","[",RowBox[{RowBox[
+{RowBox[{"Length","[","ts","]"}]," ","=="," ","0"}],","," ","0",","," ",RowBox[{"Min","[",RowBox[
+{RowBox[{RowBox[{"#","[","\"Confidence\"","]"}]," ","&"}]," ","/@"," ","ts"}],"]"}]}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"Print","[","\"6.4  Discrimination panel: where does comma-shape equivalence fire?\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"  pair                                      candidates   max conf   min conf\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[",RowBox[{"\"  Tymoczko (music)   <->  Cutting (film)        \"",",","\n","      ",RowBox[
+{"Length","[","transferTC","]"}],","," ","\"          \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"maxConf","[","transferTC","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}],","," ","\"       \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"minConf","[","transferTC","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}]}],"]"}],";"}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"  Tymoczko (music)   <->  NKS (computation)     \"",",","\n","      ",RowBox[
+{"Length","[","transferTN","]"}],","," ","\"         \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"maxConf","[","transferTN","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}],","," ","\"       \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"minConf","[","transferTN","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}]}],"]"}],";"}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"  Cutting (film)     <->  NKS (computation)     \"",",","\n","      ",RowBox[
+{"Length","[","transferCN","]"}],","," ","\"         \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"maxConf","[","transferCN","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}],","," ","\"       \"",",","\n","      ",RowBox[
+{"NumberForm","[",RowBox[{RowBox[{"minConf","[","transferCN","]"}],","," ",RowBox[
+{"{",RowBox[{"3",","," ","2"}],"}"}]}],"]"}]}],"]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"\"","]"}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{"renderPanel","[",RowBox[{"transfers_",","," ","leftCore_",","," ","rightCore_",","," ","label_"}],"]"}]," ",":=","\n","  ",RowBox[
+{"Module","[",RowBox[{RowBox[{"{",RowBox[{"tEdges",","," ","tStyles",","," ","allVerts",","," ","vstyles"}],"}"}],",","\n","    ",RowBox[
+{RowBox[{"tEdges"," ","="," ",RowBox[{RowBox[{RowBox[{"DirectedEdge","[",RowBox[{RowBox[
+{"#","[","\"From\"","]"}],","," ",RowBox[{"#","[","\"To\"","]"}]}],"]"}]," ","&"}]," ","/@"," ","transfers"}]}],";","\n","    ",RowBox[
+{"tStyles"," ","="," ",RowBox[{"MapThread","[","\n","      ",RowBox[{RowBox[{RowBox[
+{"#1"," ","\[Rule]"," ",RowBox[{"Directive","[","\n","        ",RowBox[{RowBox[{"Thickness","[",RowBox[
+{"0.003"," ","+"," ",RowBox[{"0.012"," ","*"," ","#2"}]}],"]"}],",","\n","        ",RowBox[
+{RowBox[{"ColorData","[","\"TemperatureMap\"","]"}],"[","#2","]"}]}],"\n","      ","]"}]}]," ","&"}],",","\n","      ",RowBox[
+{"{",RowBox[{"tEdges",","," ",RowBox[{RowBox[{RowBox[{"#","[","\"Confidence\"","]"}]," ","&"}]," ","/@"," ","transfers"}]}],"}"}]}],"\n","    ","]"}]}],";","\n","    ",RowBox[
+{"allVerts"," ","="," ",RowBox[{"Join","[","\n","      ",RowBox[{RowBox[{"Keys","[",RowBox[
+{"field","[",RowBox[{"leftCore",","," ","\"Mechanisms\""}],"]"}],"]"}],",","\n","      ",RowBox[
+{"Keys","[",RowBox[{"field","[",RowBox[{"rightCore",","," ","\"Mechanisms\""}],"]"}],"]"}]}],"\n","    ","]"}]}],";","\n","    ",RowBox[
+{"vstyles"," ","="," ",RowBox[{"Join","[","\n","      ",RowBox[{RowBox[{"Map","[",RowBox[
+{RowBox[{RowBox[{"#"," ","\[Rule]"," ",RowBox[{"Lighter","[",RowBox[{"Blue",","," ","0.6"}],"]"}]}]," ","&"}],",","\n","          ",RowBox[
+{"Keys","[",RowBox[{"field","[",RowBox[{"leftCore",","," ","\"Mechanisms\""}],"]"}],"]"}]}],"]"}],",","\n","      ",RowBox[
+{"Map","[",RowBox[{RowBox[{RowBox[{"#"," ","\[Rule]"," ",RowBox[{"Lighter","[",RowBox[
+{"Red",","," ","0.6"}],"]"}]}]," ","&"}],",","\n","          ",RowBox[{"Keys","[",RowBox[
+{"field","[",RowBox[{"rightCore",","," ","\"Mechanisms\""}],"]"}],"]"}]}],"]"}]}],"\n","    ","]"}]}],";","\n","    ",RowBox[
+{"Graph","[","\n","      ",RowBox[{"allVerts",",","\n","      ","tEdges",",","\n","      ",RowBox[
+{"VertexLabels"," ","\[Rule]"," ",RowBox[{"Placed","[",RowBox[{"\"Name\"",","," ","Tooltip"}],"]"}]}],",","\n","      ",RowBox[
+{"EdgeStyle"," ","\[Rule]"," ","tStyles"}],",","\n","      ",RowBox[{"VertexStyle"," ","\[Rule]"," ","vstyles"}],",","\n","      ",RowBox[
+{"VertexShapeFunction"," ","\[Rule]"," ","\"Rectangle\""}],",","\n","      ",RowBox[
+{"GraphLayout"," ","\[Rule]"," ","\"BipartiteEmbedding\""}],",","\n","      ",RowBox[
+{"ImageSize"," ","\[Rule]"," ","520"}],",","\n","      ",RowBox[{"PlotLabel"," ","\[Rule]"," ",RowBox[
+{"Style","[",RowBox[{"label",","," ","12",","," ","Bold"}],"]"}]}]}],"\n","    ","]"}]}]}],"\n","  ","]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"Print","[","\"A. Tymoczko <-> Cutting (centerpiece)\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   Both commas have IrreducibilityKind = BoundaryDiscriminationAtLimit.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   comma_shape_match fires on every pair; max confidence 0.92.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print"," ","@"," ",RowBox[{"renderPanel","[",RowBox[{"transferTC",","," ","TymoczkoCore",","," ","CuttingCore",",","\n","  ",RowBox[
+{"\"Tymoczko<->Cutting (centerpiece): \""," ","<>","\n","  ",RowBox[{"ToString","[",RowBox[
+{"Length","[","transferTC","]"}],"]"}]," ","<>"," ","\" candidates\""}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],RowBox[{"\n","\n"}],RowBox[{RowBox[{"Print","[","\"B. Tymoczko <-> NKS\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   IrreducibilityKinds differ (Boundary... vs BehaviouralPredicate...).\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   comma_shape_match never fires; max confidence drops to 0.68.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print"," ","@"," ",RowBox[{"renderPanel","[",RowBox[{"transferTN",","," ","TymoczkoCore",","," ","NKSCore",",","\n","  ",RowBox[
+{"\"Tymoczko<->NKS: \""," ","<>","\n","  ",RowBox[{"ToString","[",RowBox[{"Length","[","transferTN","]"}],"]"}]," ","<>"," ","\" candidates\""}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],RowBox[{"\n","\n"}],RowBox[{RowBox[{"Print","[","\"C. Cutting <-> NKS\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   IrreducibilityKinds also differ.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"   comma_shape_match never fires; max confidence drops to 0.68.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print"," ","@"," ",RowBox[{"renderPanel","[",RowBox[{"transferCN",","," ","CuttingCore",","," ","NKSCore",",","\n","  ",RowBox[
+{"\"Cutting<->NKS: \""," ","<>","\n","  ",RowBox[{"ToString","[",RowBox[{"Length","[","transferCN","]"}],"]"}]," ","<>"," ","\" candidates\""}]}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],RowBox[{"\n","\n"}],RowBox[{RowBox[{"Print","[","\"================================================================\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"What this panel shows\"","]"}],";"}],"\n",RowBox[{RowBox[
+{"Print","[","\"================================================================\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"The centerpiece pair (A) is the only one in which mechanism\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"edges reach 0.92 confidence. The other two pairs (B, C) cap at\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"0.68 - the next confidence tier, where shared mechanism Type\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"plus cross-domain fire but comma_shape_match does not.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"The discriminating predicate is comma_shape_match. Tymoczko's\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"CommaPythagorean and Cutting's CommaShotBoundary share the\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"IrreducibilityKind 'BoundaryDiscriminationAtLimit', which is\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"the framework's articulated cross-domain claim from Paper 1\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"sec. 4.3. NKS's CommaRice has IrreducibilityKind\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"'BehaviouralPredicateUndecidability' - a different abstract\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"structural shape, which the algebra correctly identifies as\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"NOT comma-shape-equivalent to the other two.\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"\"","]"}],";"}],"\n",RowBox[{RowBox[{"Print","[","\"Honest reading: the panel demonstrates that the algebra\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"discriminates on comma-shape, and that the high-confidence\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"centerpiece result is specific to the framework's claim, not\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"a uniform output. It does not establish the cross-domain\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"homology empirically; that remains the framework's open\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"question. It does establish that the framework's claim is\"","]"}],";"}],"\n",RowBox[
+{RowBox[{"Print","[","\"machine-checkable and that its computational signature is\"","]"}],";"}],"\n",RowBox[
+{RowBox[{RowBox[{"Print","[","\"the centerpiece's heat, not the panel's edge counts.\"","]"}],";"}],"\n"}]}],
+"Input",CellLabel -> "In[261]:= ",ExpressionUUID -> "d6b5fa02-6a35-4039-b24b-1e7529c035eb"],Cell[
+BoxData[
+"\"6.4  Discrimination panel: where does comma-shape equivalence fire?\"",StandardForm],
+"Print",ExpressionUUID -> "5ecffbcc-46d8-43f0-be67-b53c7b0ca0ff"],Cell[
+BoxData["\"\"",
+StandardForm],"Print",ExpressionUUID -> "e6988fe2-18f1-47a5-8c5d-06b503626790"],Cell[
+BoxData[
+"\"  pair                                      candidates   max conf   min conf\"",
+StandardForm],"Print",ExpressionUUID -> "42550d92-166b-49cc-8c67-065b4f56029b"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"  Tymoczko (music)   <->  Cutting (film)        \"","\[InvisibleSpace]","9","\[InvisibleSpace]","\"          \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.92\"",ShowStringCharacters -> False],0.92`,AutoDelete -> True],
+Function[NumberForm[Slot[1],{3,2}]]],"\[InvisibleSpace]","\"       \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.62\"",ShowStringCharacters -> False],0.62`,AutoDelete -> True],
+Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  Tymoczko (music)   <->  Cutting (film)        ",
+9,"          ",NumberForm[0.92`,{3,2}],"       ",NumberForm[0.62`,{3,2}]],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "12230e61-2bea-4833-b24e-c0bb1dccebf6"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"  Tymoczko (music)   <->  NKS (computation)     \"","\[InvisibleSpace]","11","\[InvisibleSpace]","\"         \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.68\"",ShowStringCharacters -> False],0.68`,AutoDelete -> True],
+Function[NumberForm[Slot[1],{3,2}]]],"\[InvisibleSpace]","\"       \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.30\"",ShowStringCharacters -> False],0.30000000000000004`,
+AutoDelete -> True],Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  Tymoczko (music)   <->  NKS (computation)     ",
+11,"         ",NumberForm[0.68`,{3,2}],"       ",NumberForm[0.30000000000000004`,
+{3,2}]],Editable -> False],StandardForm],"Print",ExpressionUUID -> "bffaf6f4-6782-4486-ac25-ca086d4dd285"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"  Cutting (film)     <->  NKS (computation)     \"","\[InvisibleSpace]","8","\[InvisibleSpace]","\"         \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.68\"",ShowStringCharacters -> False],0.68`,AutoDelete -> True],
+Function[NumberForm[Slot[1],{3,2}]]],"\[InvisibleSpace]","\"       \"","\[InvisibleSpace]",TagBox[
+InterpretationBox[StyleBox["\"0.30\"",ShowStringCharacters -> False],0.30000000000000004`,
+AutoDelete -> True],Function[NumberForm[Slot[1],{3,2}]]]}],SequenceForm["  Cutting (film)     <->  NKS (computation)     ",
+8,"         ",NumberForm[0.68`,{3,2}],"       ",NumberForm[0.30000000000000004`,{3,2}]],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "dd9fe063-d6e9-4e18-82e2-1feff9fd645f"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "a6dc8cb9-1e7b-42e5-b117-a2a755d939d9"],Cell[
+BoxData[
+"\"A. Tymoczko <-> Cutting (centerpiece)\"",StandardForm],"Print",ExpressionUUID -> "01c769b4-f744-49c6-9683-efdfb8315d89"],Cell[
+BoxData[
+"\"   Both commas have IrreducibilityKind = BoundaryDiscriminationAtLimit.\"",StandardForm],
+"Print",ExpressionUUID -> "abc9c36f-f3e5-443f-bfc2-11e52d7d2a4d"],Cell[
+BoxData["\"   comma_shape_match fires on every pair; max confidence 0.92.\"",
+StandardForm],"Print",ExpressionUUID -> "cce5c730-2a74-4bde-b5fc-a574bdf97c48"],Cell[
+BoxData[
+GraphicsBox[NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[
+Graph[{"voice_leading_parsimony","iterated_fifth_generation","tonal_hierarchy","cut_dissolve_discrimination","shot_continuity_hierarchy","synchronous_temporal_segmentation"},
+{{{2,6},{3,5},{1,4},{2,4},{2,5},{3,4},{3,6},{1,5},{1,6}},Null},{EdgeStyle -> {DirectedEdge[
+"voice_leading_parsimony","cut_dissolve_discrimination"] -> Directive[Thickness[0.01404`],
+RGBColor[0.8567615599999999`,0.43729979999999974`,0.20198823999999996`]],DirectedEdge[
+"tonal_hierarchy","shot_continuity_hierarchy"] -> Directive[Thickness[0.01404`],RGBColor[
+0.8567615599999999`,0.43729979999999974`,0.20198823999999996`]],DirectedEdge["iterated_fifth_generation",
+"shot_continuity_hierarchy"] -> Directive[Thickness[0.010440000000000001`],RGBColor[
+0.99405924`,0.98970164`,0.59476312`]],DirectedEdge["voice_leading_parsimony","synchronous_temporal_segmentation"] -> Directive[
+Thickness[0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]],DirectedEdge[
+"iterated_fifth_generation","cut_dissolve_discrimination"] -> Directive[Thickness[
+0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]],DirectedEdge[
+"tonal_hierarchy","cut_dissolve_discrimination"] -> Directive[Thickness[0.010440000000000001`],
+RGBColor[0.99405924`,0.98970164`,0.59476312`]],DirectedEdge["iterated_fifth_generation",
+"synchronous_temporal_segmentation"] -> Directive[Thickness[0.01404`],RGBColor[0.8567615599999999`,
+0.43729979999999974`,0.20198823999999996`]],DirectedEdge["tonal_hierarchy","synchronous_temporal_segmentation"] -> Directive[
+Thickness[0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]],DirectedEdge[
+"voice_leading_parsimony","shot_continuity_hierarchy"] -> Directive[Thickness[0.010440000000000001`],
+RGBColor[0.99405924`,0.98970164`,0.59476312`]]},GraphLayout -> "BipartiteEmbedding",ImageSize -> 520,PlotLabel -> Style[
+"Tymoczko<->Cutting (centerpiece): 9 candidates",12,Bold],VertexLabels -> {Placed[
+"Name",Tooltip]},VertexShapeFunction -> {"Rectangle"},VertexStyle -> {"voice_leading_parsimony" -> RGBColor[
+0.6`,0.6`,1.`],"tonal_hierarchy" -> RGBColor[0.6`,0.6`,1.`],"cut_dissolve_discrimination" -> RGBColor[
+1.`,0.6`,0.6`],"synchronous_temporal_segmentation" -> RGBColor[1.`,0.6`,0.6`],"iterated_fifth_generation" -> RGBColor[
+0.6`,0.6`,1.`],"shot_continuity_hierarchy" -> RGBColor[1.`,0.6`,0.6`]}}]]]},TagBox[
+GraphicsGroupBox[{{Arrowheads[Medium],Directive[Opacity[0.7`],Hue[0.6`,0.7`,0.7`],
+CapForm["Round"]],StyleBox[ArrowBox[{{0.`,-0.35901699437494755`},{1.0770509831248427`,-0.35901699437494755`}},
+0.014654997652510743`],{Directive[Thickness[0.01404`],RGBColor[0.8567615599999999`,
+0.43729979999999974`,0.20198823999999996`]]},StripOnInput -> False],StyleBox[ArrowBox[
+{{0.`,-0.35901699437494755`},{1.0770509831248427`,0.`}},0.014654997652510743`],{Directive[
+Thickness[0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]]},
+StripOnInput -> False],StyleBox[ArrowBox[{{0.`,-0.35901699437494755`},{1.0770509831248427`,0.35901699437494755`}},
+0.014654997652510743`],{Directive[Thickness[0.010440000000000001`],RGBColor[0.99405924`,
+0.98970164`,0.59476312`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0770509831248427`,-0.35901699437494755`}},
+0.014654997652510743`],{Directive[Thickness[0.010440000000000001`],RGBColor[0.99405924`,
+0.98970164`,0.59476312`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0770509831248427`,0.`}},
+0.014654997652510743`],{Directive[Thickness[0.010440000000000001`],RGBColor[0.99405924`,
+0.98970164`,0.59476312`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0770509831248427`,0.35901699437494755`}},
+0.014654997652510743`],{Directive[Thickness[0.01404`],RGBColor[0.8567615599999999`,
+0.43729979999999974`,0.20198823999999996`]]},StripOnInput -> False],StyleBox[ArrowBox[
+{{0.`,0.35901699437494755`},{1.0770509831248427`,-0.35901699437494755`}},0.014654997652510743`],
+{Directive[Thickness[0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]]},
+StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.35901699437494755`},{1.0770509831248427`,0.`}},
+0.014654997652510743`],{Directive[Thickness[0.01404`],RGBColor[0.8567615599999999`,
+0.43729979999999974`,0.20198823999999996`]]},StripOnInput -> False],StyleBox[ArrowBox[
+{{0.`,0.35901699437494755`},{1.0770509831248427`,0.35901699437494755`}},0.014654997652510743`],
+{Directive[Thickness[0.010440000000000001`],RGBColor[0.99405924`,0.98970164`,0.59476312`]]},
+StripOnInput -> False]},{Directive[Hue[0.6`,0.5`,1.`],EdgeForm[Directive[GrayLevel[
+0],Opacity[0.7`]]]],TagBox[TooltipBox[StyleBox[RectangleBox[{-0.015517004614431427`,-0.36936169342789715`},
+{0.015517004614431427`,-0.34867229532199795`}],{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],
+"\"voice_leading_parsimony\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"voice_leading_parsimony","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[
+{-0.015517004614431427`,-0.010344699052949588`},{0.015517004614431427`,0.010344699052949588`}],
+{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],"\"iterated_fifth_generation\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"iterated_fifth_generation",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{-0.015517004614431427`,0.34867229532199795`},
+{0.015517004614431427`,0.36936169342789715`}],{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],
+"\"tonal_hierarchy\"",TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],
+"tonal_hierarchy","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.0615339785104112`,-0.36936169342789715`},
+{1.0925679877392742`,-0.34867229532199795`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"cut_dissolve_discrimination\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"cut_dissolve_discrimination","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[
+{1.0615339785104112`,-0.010344699052949588`},{1.0925679877392742`,0.010344699052949588`}],
+{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],"\"shot_continuity_hierarchy\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"shot_continuity_hierarchy",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.0615339785104112`,0.34867229532199795`},
+{1.0925679877392742`,0.36936169342789715`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"synchronous_temporal_segmentation\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"synchronous_temporal_segmentation","Tooltip"]]]}}],MouseAppearanceTag["NetworkGraphics"]],
+AllowKernelInitialization -> False]],{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 520,PlotLabel -> FormBox[
+StyleBox["\"Tymoczko<->Cutting (centerpiece): 9 candidates\"",12,Bold,StripOnInput -> False],
+TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},ExpressionUUID -> "ce722f65-6557-41ba-8aca-4ca82625cdc4"],
+StandardForm],"Print",ExpressionUUID -> "8439ed30-8224-4e22-a6c5-b243d46d14b7"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "89147a87-ab2a-402b-876a-0e66d45949e5"],Cell[
+BoxData[
+"\"B. Tymoczko <-> NKS\"",StandardForm],"Print",ExpressionUUID -> "05523127-68c5-4c21-bcd4-16bbc04af85d"],Cell[
+BoxData[
+"\"   IrreducibilityKinds differ (Boundary... vs BehaviouralPredicate...).\"",StandardForm],
+"Print",ExpressionUUID -> "3b404f5e-3067-4e98-b25a-84a3fa05a695"],Cell[
+BoxData["\"   comma_shape_match never fires; max confidence drops to 0.68.\"",
+StandardForm],"Print",ExpressionUUID -> "238c6fc5-29fe-4a42-a9dc-30d4cdb6a718"],Cell[
+BoxData[
+GraphicsBox[NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[
+Graph[{"voice_leading_parsimony","iterated_fifth_generation","tonal_hierarchy","systematic_rule_enumeration","rule_to_behaviour_mapping","spacetime_diagram_as_primary_evidence","synchronous_time_stepping"},
+{{{2,7},{2,4},{1,5},{2,5},{1,7},{1,4},{2,6},{3,5},{3,7},{3,4},{1,6}},Null},{EdgeStyle -> {DirectedEdge[
+"tonal_hierarchy","systematic_rule_enumeration"] -> Directive[Thickness[0.006600000000000001`],
+RGBColor[0.7489340000000002`,0.8037922000000001`,0.9756104`]],DirectedEdge["voice_leading_parsimony",
+"spacetime_diagram_as_primary_evidence"] -> Directive[Thickness[0.006600000000000001`],
+RGBColor[0.7489340000000002`,0.8037922000000001`,0.9756104`]],DirectedEdge["voice_leading_parsimony",
+"rule_to_behaviour_mapping"] -> Directive[Thickness[0.01116`],RGBColor[0.9866566`,
+0.9666517199999999`,0.40266383999999983`]],DirectedEdge["voice_leading_parsimony",
+"systematic_rule_enumeration"] -> Directive[Thickness[0.007200000000000001`],RGBColor[
+0.8431270000000001`,0.8777506`,0.9848994`]],DirectedEdge["iterated_fifth_generation",
+"rule_to_behaviour_mapping"] -> Directive[Thickness[0.007200000000000001`],RGBColor[
+0.8431270000000001`,0.8777506`,0.9848994`]],DirectedEdge["iterated_fifth_generation",
+"synchronous_time_stepping"] -> Directive[Thickness[0.01116`],RGBColor[0.9866566`,
+0.9666517199999999`,0.40266383999999983`]],DirectedEdge["voice_leading_parsimony",
+"synchronous_time_stepping"] -> Directive[Thickness[0.007200000000000001`],RGBColor[
+0.8431270000000001`,0.8777506`,0.9848994`]],DirectedEdge["tonal_hierarchy","rule_to_behaviour_mapping"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]],DirectedEdge["iterated_fifth_generation","systematic_rule_enumeration"] -> Directive[
+Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,0.40266383999999983`]],DirectedEdge[
+"iterated_fifth_generation","spacetime_diagram_as_primary_evidence"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]],DirectedEdge["tonal_hierarchy","synchronous_time_stepping"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]]},GraphLayout -> "BipartiteEmbedding",ImageSize -> 520,PlotLabel -> Style[
+"Tymoczko<->NKS: 11 candidates",12,Bold],VertexLabels -> {Placed["Name",Tooltip]},VertexShapeFunction -> {"Rectangle"},VertexStyle -> {"voice_leading_parsimony" -> RGBColor[
+0.6`,0.6`,1.`],"spacetime_diagram_as_primary_evidence" -> RGBColor[1.`,0.6`,0.6`],"systematic_rule_enumeration" -> RGBColor[
+1.`,0.6`,0.6`],"tonal_hierarchy" -> RGBColor[0.6`,0.6`,1.`],"synchronous_time_stepping" -> RGBColor[
+1.`,0.6`,0.6`],"iterated_fifth_generation" -> RGBColor[0.6`,0.6`,1.`],"rule_to_behaviour_mapping" -> RGBColor[
+1.`,0.6`,0.6`]}}]]]},TagBox[GraphicsGroupBox[{{Arrowheads[Medium],Directive[Opacity[
+0.7`],Hue[0.6`,0.7`,0.7`],CapForm["Round"]],StyleBox[ArrowBox[{{0.`,-0.2560113295832984`},{1.0240453183331937`,-0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.007200000000000001`],RGBColor[0.8431270000000001`,
+0.8777506`,0.9848994`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,-0.2560113295832984`},{1.0240453183331937`,-0.1280056647916492`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,-0.2560113295832984`},{1.0240453183331937`,0.1280056647916492`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,-0.2560113295832984`},{1.0240453183331937`,0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.007200000000000001`],RGBColor[0.8431270000000001`,
+0.8777506`,0.9848994`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0240453183331937`,-0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0240453183331937`,-0.1280056647916492`}},
+0.01416776390182925`],{Directive[Thickness[0.007200000000000001`],RGBColor[0.8431270000000001`,
+0.8777506`,0.9848994`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0240453183331937`,0.1280056647916492`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.`},{1.0240453183331937`,0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.2560113295832984`},{1.0240453183331937`,-0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.2560113295832984`},{1.0240453183331937`,-0.1280056647916492`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.`,0.2560113295832984`},{1.0240453183331937`,0.38401699437494763`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False]},{Directive[Hue[0.6`,0.5`,
+1.`],EdgeForm[Directive[GrayLevel[0],Opacity[0.7`]]]],TagBox[TooltipBox[StyleBox[
+RectangleBox[{-0.015001111774534849`,-0.2660120991018495`},{0.015001111774534849`,-0.2460105600647474`}],
+{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],"\"voice_leading_parsimony\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"voice_leading_parsimony","Tooltip"]]],TagBox[TooltipBox[
+StyleBox[RectangleBox[{-0.015001111774534849`,-0.010000769518551035`},{0.015001111774534849`,0.010000769518551035`}],
+{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],"\"iterated_fifth_generation\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"iterated_fifth_generation",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{-0.015001111774534849`,0.2460105600647474`},
+{0.015001111774534849`,0.2660120991018495`}],{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],
+"\"tonal_hierarchy\"",TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],
+"tonal_hierarchy","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.009044206558659`,-0.3940177638934987`},
+{1.0390464301077285`,-0.3740162248563966`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"systematic_rule_enumeration\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"systematic_rule_enumeration","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[
+{1.009044206558659`,-0.13800643431020024`},{1.0390464301077285`,-0.11800489527309818`}],
+{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],"\"rule_to_behaviour_mapping\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"rule_to_behaviour_mapping",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.009044206558659`,0.11800489527309818`},
+{1.0390464301077285`,0.13800643431020024`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"spacetime_diagram_as_primary_evidence\"",TooltipStyle -> "TextStyling"],Function[
+Annotation[Slot[1],"spacetime_diagram_as_primary_evidence","Tooltip"]]],TagBox[TooltipBox[
+StyleBox[RectangleBox[{1.009044206558659`,0.3740162248563966`},{1.0390464301077285`,0.3940177638934987`}],
+{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],"\"synchronous_time_stepping\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"synchronous_time_stepping",
+"Tooltip"]]]}}],MouseAppearanceTag["NetworkGraphics"]],AllowKernelInitialization -> False]],
+{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 520,PlotLabel -> FormBox[
+StyleBox["\"Tymoczko<->NKS: 11 candidates\"",12,Bold,StripOnInput -> False],TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},
+ExpressionUUID -> "a3d8cc2f-620c-43b1-9f85-2a56c2d6a77e"],StandardForm],"Print",ExpressionUUID -> "d46a2b15-16dd-4f2c-943f-e9b45190d71b"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "325f78eb-985e-4fca-9ace-3805f56a63e3"],Cell[
+BoxData[
+"\"C. Cutting <-> NKS\"",StandardForm],"Print",ExpressionUUID -> "42432f0e-c696-41ab-ba9e-7b2916334554"],Cell[
+BoxData[
+"\"   IrreducibilityKinds also differ.\"",StandardForm],"Print",ExpressionUUID -> "1ecc2ec1-2dd6-46b2-9e8c-0d0ab03660ae"],Cell[
+BoxData[
+"\"   comma_shape_match never fires; max confidence drops to 0.68.\"",StandardForm],
+"Print",ExpressionUUID -> "571f9ab5-917a-45c9-baec-3de76cd76b3d"],Cell[
+BoxData[GraphicsBox[
+NamespaceBox["NetworkGraphics",DynamicModuleBox[{Set[Typeset`graph,HoldComplete[Graph[
+{"cut_dissolve_discrimination","shot_continuity_hierarchy","synchronous_temporal_segmentation","systematic_rule_enumeration","rule_to_behaviour_mapping","spacetime_diagram_as_primary_evidence","synchronous_time_stepping"},
+{{{1,5},{3,7},{3,4},{1,6},{1,7},{1,4},{3,5},{3,6}},Null},{EdgeStyle -> {DirectedEdge[
+"cut_dissolve_discrimination","synchronous_time_stepping"] -> Directive[Thickness[
+0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,0.9756104`]],DirectedEdge[
+"synchronous_temporal_segmentation","systematic_rule_enumeration"] -> Directive[Thickness[
+0.01116`],RGBColor[0.9866566`,0.9666517199999999`,0.40266383999999983`]],DirectedEdge[
+"synchronous_temporal_segmentation","spacetime_diagram_as_primary_evidence"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]],DirectedEdge["cut_dissolve_discrimination","rule_to_behaviour_mapping"] -> Directive[
+Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,0.40266383999999983`]],DirectedEdge[
+"synchronous_temporal_segmentation","synchronous_time_stepping"] -> Directive[Thickness[
+0.01116`],RGBColor[0.9866566`,0.9666517199999999`,0.40266383999999983`]],DirectedEdge[
+"cut_dissolve_discrimination","spacetime_diagram_as_primary_evidence"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]],DirectedEdge["synchronous_temporal_segmentation","rule_to_behaviour_mapping"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]],DirectedEdge["cut_dissolve_discrimination","systematic_rule_enumeration"] -> Directive[
+Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,0.8037922000000001`,
+0.9756104`]]},GraphLayout -> "BipartiteEmbedding",ImageSize -> 520,PlotLabel -> Style[
+"Cutting<->NKS: 8 candidates",12,Bold],VertexLabels -> {Placed["Name",Tooltip]},VertexShapeFunction -> {"Rectangle"},VertexStyle -> {"spacetime_diagram_as_primary_evidence" -> RGBColor[
+1.`,0.6`,0.6`],"systematic_rule_enumeration" -> RGBColor[1.`,0.6`,0.6`],"cut_dissolve_discrimination" -> RGBColor[
+0.6`,0.6`,1.`],"synchronous_temporal_segmentation" -> RGBColor[0.6`,0.6`,1.`],"synchronous_time_stepping" -> RGBColor[
+1.`,0.6`,0.6`],"rule_to_behaviour_mapping" -> RGBColor[1.`,0.6`,0.6`],"shot_continuity_hierarchy" -> RGBColor[
+0.6`,0.6`,1.`]}}]]]},TagBox[GraphicsGroupBox[{{Arrowheads[Medium],Directive[Opacity[
+0.7`],Hue[0.6`,0.7`,0.7`],CapForm["Round"]],StyleBox[ArrowBox[{{0.11201495669269312`,-0.62403761585929`},{1.1360602750258868`,-0.8800489454425884`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.62403761585929`},{1.1360602750258868`,-0.62403761585929`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.62403761585929`},{1.1360602750258868`,-0.3680262862759915`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.62403761585929`},{1.1360602750258868`,-0.11201495669269307`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.3680262862759915`},{1.1360602750258868`,-0.8800489454425884`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.3680262862759915`},{1.1360602750258868`,-0.62403761585929`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.3680262862759915`},{1.1360602750258868`,-0.3680262862759915`}},
+0.01416776390182925`],{Directive[Thickness[0.006600000000000001`],RGBColor[0.7489340000000002`,
+0.8037922000000001`,0.9756104`]]},StripOnInput -> False],StyleBox[ArrowBox[{{0.11201495669269312`,-0.3680262862759915`},{1.1360602750258868`,-0.11201495669269307`}},
+0.01416776390182925`],{Directive[Thickness[0.01116`],RGBColor[0.9866566`,0.9666517199999999`,
+0.40266383999999983`]]},StripOnInput -> False]},{Directive[Hue[0.6`,0.5`,1.`],EdgeForm[
+Directive[GrayLevel[0],Opacity[0.7`]]]],TagBox[TooltipBox[StyleBox[RectangleBox[{0.09701384491815827`,-0.634038385377841`},
+{0.12701606846722796`,-0.614036846340739`}],{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],
+"\"cut_dissolve_discrimination\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"cut_dissolve_discrimination","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[
+{0.09701384491815827`,-1.1140796283465255`},{0.12701606846722796`,-1.0940780893094233`}],
+{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],"\"shot_continuity_hierarchy\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"shot_continuity_hierarchy",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{0.09701384491815827`,-0.37802705579454254`},
+{0.12701606846722796`,-0.35802551675744043`}],{RGBColor[0.6`,0.6`,1.`]},StripOnInput -> False],
+"\"synchronous_temporal_segmentation\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"synchronous_temporal_segmentation","Tooltip"]]],TagBox[TooltipBox[StyleBox[
+RectangleBox[{1.121059163251352`,-0.8900497149611394`},{1.1510613868004216`,-0.8700481759240374`}],
+{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],"\"systematic_rule_enumeration\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"systematic_rule_enumeration",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.121059163251352`,-0.634038385377841`},
+{1.1510613868004216`,-0.614036846340739`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"rule_to_behaviour_mapping\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"rule_to_behaviour_mapping","Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[
+{1.121059163251352`,-0.37802705579454254`},{1.1510613868004216`,-0.35802551675744043`}],
+{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],"\"spacetime_diagram_as_primary_evidence\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"spacetime_diagram_as_primary_evidence",
+"Tooltip"]]],TagBox[TooltipBox[StyleBox[RectangleBox[{1.121059163251352`,-0.1220157262112441`},
+{1.1510613868004216`,-0.10201418717414204`}],{RGBColor[1.`,0.6`,0.6`]},StripOnInput -> False],
+"\"synchronous_time_stepping\"",TooltipStyle -> "TextStyling"],Function[Annotation[
+Slot[1],"synchronous_time_stepping","Tooltip"]]]}}],MouseAppearanceTag["NetworkGraphics"]],
+AllowKernelInitialization -> False]],{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> 520,PlotLabel -> FormBox[
+StyleBox["\"Cutting<->NKS: 8 candidates\"",12,Bold,StripOnInput -> False],TraditionalForm],DefaultBaseStyle -> "NetworkGraphics"},
+ExpressionUUID -> "946034c7-5f5f-4324-80cf-7bbd466d4ada"],StandardForm],"Print",ExpressionUUID -> "bcf77705-7dd4-4f21-a273-d4af91b56367"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "19b3b4d2-dede-45bd-9190-47fba87e072f"],Cell[
+BoxData[
+"\"================================================================\"",StandardForm],
+"Print",ExpressionUUID -> "008b6b36-c373-441b-bf4d-bc3d9c58ef65"],Cell[
+BoxData["\"What this panel shows\"",
+StandardForm],"Print",ExpressionUUID -> "9cb16281-9416-4f12-aab0-979f02f5e11f"],Cell[
+BoxData[
+"\"================================================================\"",StandardForm],
+"Print",ExpressionUUID -> "29d26424-cde6-41c4-8be4-8458ed89ac25"],Cell[
+BoxData["\"\"",
+StandardForm],"Print",ExpressionUUID -> "c742227b-101d-4aaf-ad15-49949c84d671"],Cell[
+BoxData[
+"\"The centerpiece pair (A) is the only one in which mechanism\"",StandardForm],"Print",
+ExpressionUUID -> "964c5d51-f4fc-4e08-8835-ff1c794d59dd"],Cell[
+BoxData["\"edges reach 0.92 confidence. The other two pairs (B, C) cap at\"",
+StandardForm],"Print",ExpressionUUID -> "befee2b1-02a9-4908-9190-eede623c4ea7"],Cell[
+BoxData[
+"\"0.68 - the next confidence tier, where shared mechanism Type\"",StandardForm],
+"Print",ExpressionUUID -> "4f622a9c-77b1-4ae8-be66-d7be0a7f054f"],Cell[
+BoxData["\"plus cross-domain fire but comma_shape_match does not.\"",
+StandardForm],"Print",ExpressionUUID -> "993bf585-5f91-4145-86cb-1ca444094651"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "8d81aa2d-1675-47c1-9ecf-2b2ebeab449a"],Cell[
+BoxData[
+"\"The discriminating predicate is comma_shape_match. Tymoczko's\"",StandardForm],
+"Print",ExpressionUUID -> "471256cd-b146-4760-8aa0-8870b8e3063f"],Cell[
+BoxData["\"CommaPythagorean and Cutting's CommaShotBoundary share the\"",
+StandardForm],"Print",ExpressionUUID -> "4943ca8f-69a6-4995-858b-af5749a9c9ed"],Cell[
+BoxData[
+"\"IrreducibilityKind 'BoundaryDiscriminationAtLimit', which is\"",StandardForm],
+"Print",ExpressionUUID -> "31e534f0-bb2e-4fa7-99b6-965a6df98dcd"],Cell[
+BoxData["\"the framework's articulated cross-domain claim from Paper 1\"",
+StandardForm],"Print",ExpressionUUID -> "eaec7c9a-5602-4710-8d39-684098342e92"],Cell[
+BoxData[
+"\"sec. 4.3. NKS's CommaRice has IrreducibilityKind\"",StandardForm],"Print",ExpressionUUID -> "56544ddb-9b57-48e6-a019-dec8629751cc"],Cell[
+BoxData[
+"\"'BehaviouralPredicateUndecidability' - a different abstract\"",StandardForm],"Print",
+ExpressionUUID -> "c69cc37b-c231-4932-8645-3d5b39331e9a"],Cell[
+BoxData["\"structural shape, which the algebra correctly identifies as\"",
+StandardForm],"Print",ExpressionUUID -> "bf307da5-776c-4bfd-b0d8-431cc50cd7b4"],Cell[
+BoxData[
+"\"NOT comma-shape-equivalent to the other two.\"",StandardForm],"Print",ExpressionUUID -> "1856d67a-c471-4529-aa6e-5040ea7f60b8"],Cell[
+BoxData[
+"\"\"",StandardForm],"Print",ExpressionUUID -> "f013ed67-7a6f-42eb-a086-59719439768f"],Cell[
+BoxData[
+"\"Honest reading: the panel demonstrates that the algebra\"",StandardForm],"Print",
+ExpressionUUID -> "3e603ff9-a6a4-4d20-80ce-a2c3195822f5"],Cell[
+BoxData["\"discriminates on comma-shape, and that the high-confidence\"",
+StandardForm],"Print",ExpressionUUID -> "e0820a91-4926-4bd7-9a37-a469ba3d5a8a"],Cell[
+BoxData[
+"\"centerpiece result is specific to the framework's claim, not\"",StandardForm],
+"Print",ExpressionUUID -> "72bc4fbc-9108-496e-9200-d08de4557585"],Cell[
+BoxData["\"a uniform output. It does not establish the cross-domain\"",
+StandardForm],"Print",ExpressionUUID -> "f055f974-bf3f-4449-8b3b-3ba9c87930e6"],Cell[
+BoxData[
+"\"homology empirically; that remains the framework's open\"",StandardForm],"Print",
+ExpressionUUID -> "4825313f-61f8-4261-82fb-e30e543754b9"],Cell[
+BoxData["\"question. It does establish that the framework's claim is\"",
+StandardForm],"Print",ExpressionUUID -> "350019fd-8a0c-4293-8de9-f2ae55c18f1f"],Cell[
+BoxData[
+"\"machine-checkable and that its computational signature is\"",StandardForm],"Print",
+ExpressionUUID -> "e7b7b2c4-6e0e-4044-ba8f-7dedab199c16"],Cell[
+BoxData["\"the centerpiece's heat, not the panel's edge counts.\"",
+StandardForm],"Print",ExpressionUUID -> "66b51671-f8fa-4d9c-858f-9d3728c94597"]},
+Open],ExpressionUUID -> "0b563f3f-e73a-4a3a-8775-5b1dd70b5b54"]},StyleDefinitions -> "Default.nb",
 FrontEndVersion -> "14.3 for Wolfram Cloud 1.75 (April 10, 2026)"]

@@ -45,9 +45,10 @@ wolfram/
 │   ├── 2-queries.wl           Q1–Q4 with text output
 │   ├── 3-vis-transfer.wl      Tymoczko ↔ Cutting transfer network graph
 │   ├── 4-vis-removal.wl       Tymoczko removal-cascade graph
-│   └── 5-vis-self-transfer.wl methodology self-transfer graph
+│   ├── 5-vis-self-transfer.wl methodology self-transfer graph
+│   └── 6-vis-discrimination.wl  cross-pair comparison panel
 └── results/
-    └── wolfram-cloud-run-2026-05-04-with-graphs.nb   reference evaluated run
+    └── wolfram-cloud-run-2026-05-04-v1.5.nb   reference evaluated run
 ```
 
 ## Running the demo
@@ -74,16 +75,29 @@ the multi-cell workflow in `paste-cells/` instead: paste each `.wl`
 file into its own cell in a fresh cloud notebook and evaluate them in
 order. See `paste-cells/README.md` for the full procedure.
 
-The five cells are:
+The six cells are:
 
-1. `paste-cells/1-setup.wl`           — algebra + kernels + four cores (load only)
-2. `paste-cells/2-queries.wl`         — runs Q1–Q4 with text output
-3. `paste-cells/3-vis-transfer.wl`    — Tymoczko ↔ Cutting transfer network graph
-4. `paste-cells/4-vis-removal.wl`     — Tymoczko removal-cascade graph
+1. `paste-cells/1-setup.wl`             — algebra + kernels + four cores (load only)
+2. `paste-cells/2-queries.wl`           — runs Q1–Q4 with text output
+3. `paste-cells/3-vis-transfer.wl`      — Tymoczko ↔ Cutting transfer network graph
+4. `paste-cells/4-vis-removal.wl`       — Tymoczko removal-cascade graph
 5. `paste-cells/5-vis-self-transfer.wl` — methodology self-transfer graph
+6. `paste-cells/6-vis-discrimination.wl` — discrimination panel: Tymoczko ↔ NKS
+   and Cutting ↔ NKS alongside the centerpiece, so the algebra's
+   discriminative behaviour is visible (the centerpiece is the only
+   pair where comma-shape match fires; off-pairs cap at lower confidence)
 
-A reference evaluated run (all five cells, with graphs rendered) is
-saved to `results/wolfram-cloud-run-2026-05-04-with-graphs.nb`.
+A reference evaluated run (all six cells, with graphs rendered) is saved
+to `results/wolfram-cloud-run-2026-05-04-v1.5.nb`. The numerical results
+in that notebook:
+
+| Query | Output |
+|---|---|
+| Q1 mechanism+constraint match | 4 cores returned |
+| Q2 Tymoczko ↔ Cutting (centerpiece) | 9 candidates, max conf 0.92, min 0.62 |
+| Q3 removal cascade (TymoczkoCore, voice_leading_parsimony) | 0 constraints dropped, 2 mechanisms degraded, 1 failure mode surfaced |
+| Q4 RecursiveAnalysis(MethodologyCore) | 30 self-transfers, 5 load-bearing mechanisms, 5 latent failures (re-derive `variety_in_uniformity`, `transparency_as_opacity`, `methodology_blind_spot`) |
+| Q2 discrimination panel | Tymoczko↔NKS: 11 candidates, max 0.68. Cutting↔NKS: 8 candidates, max 0.68. Centerpiece is the only pair reaching 0.92 because it is the only pair where comma_shape_match fires. |
 
 ## What this prototype does
 

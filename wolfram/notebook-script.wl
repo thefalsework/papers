@@ -435,10 +435,14 @@ Module[{tEdges, tStyles, allVerts, vstyles},
   ]
 ];
 Print[""];
-Print["Cool/thin edges  : low-confidence (0.30) two-predicate matches."];
-Print["Hot/thick edges  : high-confidence (0.92) three-predicate matches"];
-Print["                   with comma_shape_match firing on"];
-Print["                   BoundaryDiscriminationAtLimit."];
+Print["Cool/thin edges  : confidence 0.62  matches where comma-shape"];
+Print["                   and cross-domain fire but mechanism Type"];
+Print["                   does not align."];
+Print["Hot/thick edges  : confidence 0.92  matches where mechanism"];
+Print["                   Type also aligns. Comma_shape_match fires"];
+Print["                   on BoundaryDiscriminationAtLimit on every"];
+Print["                   pair, because both Tymoczko's and Cutting's"];
+Print["                   commas share that abstract structural shape."];
 Print[""];
 
 
@@ -536,6 +540,94 @@ Print["inspection alone does not surface."];
 Print[""];
 
 
+(* ---- 6.4  Discrimination panel: cross-pair comparison ---- *)
+
+Print["6.4  Discrimination panel (Q2 across all cross-pairs):"];
+Print["     where does comma-shape equivalence fire?"];
+Print[""];
+
+Module[{transferTN, transferCN, maxConf, minConf, renderPanel},
+  transferTN = TransferCandidates[TymoczkoCore, NKSCore];
+  transferCN = TransferCandidates[CuttingCore, NKSCore];
+
+  maxConf[ts_] :=
+    If[Length[ts] == 0, 0, Max[#["Confidence"] & /@ ts]];
+  minConf[ts_] :=
+    If[Length[ts] == 0, 0, Min[#["Confidence"] & /@ ts]];
+
+  Print["  pair                                  cand   max     min"];
+  Print["  Tymoczko (music)  <->  Cutting (film)     ",
+        Length[transferTC], "    ",
+        NumberForm[maxConf[transferTC], {3, 2}], "    ",
+        NumberForm[minConf[transferTC], {3, 2}]];
+  Print["  Tymoczko (music)  <->  NKS (compute)      ",
+        Length[transferTN], "   ",
+        NumberForm[maxConf[transferTN], {3, 2}], "    ",
+        NumberForm[minConf[transferTN], {3, 2}]];
+  Print["  Cutting (film)    <->  NKS (compute)      ",
+        Length[transferCN], "   ",
+        NumberForm[maxConf[transferCN], {3, 2}], "    ",
+        NumberForm[minConf[transferCN], {3, 2}]];
+  Print[""];
+
+  renderPanel[transfers_, leftCore_, rightCore_, label_] :=
+    Module[{tEdges, tStyles, allVerts, vstyles},
+      tEdges = DirectedEdge[#["From"], #["To"]] & /@ transfers;
+      tStyles = MapThread[
+        #1 -> Directive[
+          Thickness[0.003 + 0.012 * #2],
+          ColorData["TemperatureMap"][#2]
+        ] &,
+        {tEdges, #["Confidence"] & /@ transfers}
+      ];
+      allVerts = Join[
+        Keys[field[leftCore, "Mechanisms"]],
+        Keys[field[rightCore, "Mechanisms"]]
+      ];
+      vstyles = Join[
+        Map[# -> Lighter[Blue, 0.6] &,
+            Keys[field[leftCore, "Mechanisms"]]],
+        Map[# -> Lighter[Red, 0.6] &,
+            Keys[field[rightCore, "Mechanisms"]]]
+      ];
+      Graph[
+        allVerts,
+        tEdges,
+        VertexLabels -> Placed["Name", Tooltip],
+        EdgeStyle -> tStyles,
+        VertexStyle -> vstyles,
+        VertexShapeFunction -> "Rectangle",
+        GraphLayout -> "BipartiteEmbedding",
+        ImageSize -> 520,
+        PlotLabel -> Style[label, 12, Bold]
+      ]
+    ];
+
+  Print["A. Tymoczko <-> Cutting (centerpiece): comma matches"];
+  Print @ renderPanel[transferTC, TymoczkoCore, CuttingCore,
+    "Tymoczko<->Cutting: " <>
+    ToString[Length[transferTC]] <> " candidates"];
+
+  Print["B. Tymoczko <-> NKS: comma does NOT match"];
+  Print @ renderPanel[transferTN, TymoczkoCore, NKSCore,
+    "Tymoczko<->NKS: " <>
+    ToString[Length[transferTN]] <> " candidates"];
+
+  Print["C. Cutting <-> NKS: comma does NOT match"];
+  Print @ renderPanel[transferCN, CuttingCore, NKSCore,
+    "Cutting<->NKS: " <>
+    ToString[Length[transferCN]] <> " candidates"];
+];
+
+Print[""];
+Print["The centerpiece (A) is the only pair where edges reach 0.92."];
+Print["Off-pairs (B, C) cap at 0.68: shared Type plus cross-domain"];
+Print["fire, but comma_shape_match does not. The discriminating"];
+Print["predicate is comma_shape_match - the framework's articulated"];
+Print["cross-domain claim, machine-checkable, NOT firing uniformly."];
+Print[""];
+
+
 (* ============================================================
    SECTION 7 - Beyond V1: schema mutation
 
@@ -587,7 +679,11 @@ Print["  2. transfer candidates (centerpiece)       - Section 3"];
 Print["  3. computational removal test              - Section 4"];
 Print["  4. recursive self-application failure      - Section 5"];
 Print["     mode detection"];
-Print["  +  three Graph renderings of (2-4)         - Section 6"];
+Print["  +  four Graph renderings:                  - Section 6"];
+Print["       6.1 transfer network (Q2)"];
+Print["       6.2 removal cascade (Q3)"];
+Print["       6.3 methodology self-transfer (Q4)"];
+Print["       6.4 discrimination panel (Q2 across cross-pairs)"];
 Print[""];
 Print["Centerpiece result:"];
 Print[""];

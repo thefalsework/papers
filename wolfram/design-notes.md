@@ -35,14 +35,24 @@ Every choice below traces back to one of these:
 
 Six symbolic heads, each wrapping an Association.
 
-| Head | Role | Required keys |
+| Head | Role | Canonical fields |
 |---|---|---|
 | `Kernel` | Top-level generative operation in a domain | `Slug`, `Domain`, `Operation`, `Comma` |
-| `Comma` | Irreducibility witness for a kernel | `Slug`, `Kernel`, `Type`, `IrreducibilityKind`, `FormalGround` |
-| `Mechanism` | Operational shadow of a kernel in a specific work | `Id`, `Kernel`, `Type`, `Compatibility`, `RemovalSignature`, `TransferConditions`, `FailureMode` |
+| `Comma` | Irreducibility witness for a kernel | `Slug`, `Type`, `IrreducibilityKind`, `FormalGround` |
+| `Mechanism` | Operational shadow of a kernel in a specific work | `Id`, `Kernel`, `Type`, `Compatibility`, `CompositionRules`, `RemovalSignature`, `TransferConditions`, `FailureMode` |
 | `Constraint` | Dependency statement (removing A breaks B) | `Id`, `Type`, `DependedOnBy` |
 | `FailureMode` | Pattern that emerges under removal or misuse | `Id`, `TriggeredBy`, `Signature` |
-| `Core` | Full assembly: a structural core for one work | `Id`, `Title`, `Domain`, `Kernel`, `Mechanisms` |
+| `Core` | Full assembly: a structural core for one work | `Id`, `Title`, `Domain`, `Kernel`, `Mechanisms`, `Constraints`, `FailureModes` |
+
+The strict predicate-required subset is narrower: `KernelQ` requires
+`Slug`, `Domain`, `Operation`; `CommaQ` requires `Slug`, `Type`,
+`IrreducibilityKind`, `FormalGround`; `MechanismQ` requires `Id`,
+`Kernel`, `Type`; `CoreQ` requires `Id`, `Kernel`, `Mechanisms`.
+The remaining canonical fields above are universally present across
+the corpus and are what the queries operate on, but they are not
+strictly required for an object to pass its `*Q` predicate. Note
+that commas do not carry a back-reference to their kernel: the
+kernel→comma relationship is one-way to avoid circular construction.
 
 The `WellFormedCoreQ` predicate validates a core at construction
 time. A core that fails validation is rejected by the queries.
@@ -57,8 +67,8 @@ makes the algebra unintelligible.
 
 Concretely:
 
-- `TransferCompatibleQ` requires `CommaShapeMatchQ` between
-  the two kernels' commas. Without commas (the irreducibility
+- `KernelShapeMatchQ` requires `CommaShapeMatchQ` between the
+  two kernels' commas. Without commas (the irreducibility
   witnesses, formally grounded), no transfer claim has any
   basis.
 - `WellFormedCoreQ` requires `KernelQ[field[c, "Kernel"]]`. A

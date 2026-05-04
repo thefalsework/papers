@@ -383,9 +383,14 @@ TransferBasis[mA_?MechanismQ, mB_?MechanismQ, coreB_?CoreQ] :=
                        field[tgtKernel, "Domain"]]
     ];
 
-    (* (5) Runtime transfer-conditions predicate (mechanism-supplied) *)
+    (* (5) Runtime transfer-conditions predicate (mechanism-supplied).
+       Note: the call is runtime[mA, coreB] - the mechanism asks
+       whether IT (the source) could transfer to the target core. A
+       prior version called runtime[mB, coreB] which trivially asked
+       whether the target mechanism could transfer to its own core,
+       making the predicate effectively a free pass. *)
     runtime = field[mA, "TransferConditions"];
-    If[!MissingQ[runtime] && TrueQ[runtime[mB, coreB]],
+    If[!MissingQ[runtime] && TrueQ[runtime[mA, coreB]],
       AppendTo[basis, "runtime_predicate"]
     ];
 

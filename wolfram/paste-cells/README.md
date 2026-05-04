@@ -8,14 +8,14 @@ limit. Each `.wl` file is the contents of one cloud notebook cell.
 ## Workflow
 
 1. Open a fresh Wolfram Cloud notebook.
-2. For each file `1-setup.wl` ... `5-vis-self-transfer.wl`, in order:
+2. For each file `1-setup.wl` ... `6-vis-discrimination.wl`, in order:
    - Open the `.wl` file in any editor.
    - Copy its entire contents.
    - Paste into a new cell in the cloud notebook.
    - Press `Shift+Enter` to evaluate.
    - Wait until output appears below the cell before pasting the next one.
 
-Total: five cells, each with bounded output. Each visualisation cell is
+Total: six cells, each with bounded output. Each visualisation cell is
 self-contained (re-runs the query it needs), so visualisations can be
 re-evaluated independently if any one fails.
 
@@ -25,9 +25,10 @@ re-evaluated independently if any one fails.
 |------|------|--------------|------------|
 | 1 | `1-setup.wl` | Loads algebra, kernels, and four cores | small |
 | 2 | `2-queries.wl` | Runs Q1 through Q4 with text output | medium |
-| 3 | `3-vis-transfer.wl` | Renders the Tymoczko ↔ Cutting transfer network | small + 1 graph |
-| 4 | `4-vis-removal.wl` | Renders the Tymoczko removal cascade | small + 1 graph |
-| 5 | `5-vis-self-transfer.wl` | Renders the methodology self-transfer graph | small + 1 graph |
+| 3 | `3-vis-transfer.wl` | Tymoczko ↔ Cutting transfer network | small + 1 graph |
+| 4 | `4-vis-removal.wl` | Tymoczko removal cascade | small + 1 graph |
+| 5 | `5-vis-self-transfer.wl` | Methodology self-transfer graph | small + 1 graph |
+| 6 | `6-vis-discrimination.wl` | Cross-pair comparison: T↔C, T↔NKS, C↔NKS | small + 3 graphs |
 
 ## If the single-file bundle works locally
 
