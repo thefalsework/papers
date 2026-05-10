@@ -147,12 +147,22 @@ comma-object paper. Care should be taken not to overcommit to the
 finer-grained empirical structure (mechanism distinctions,
 direction language) before the categorical content is specified.
 
+## Register
+
+The dictionary's home register is **Heyting-algebraic / locale-theoretic /
+intuitionistic-logical** (one structure, four names). See
+[`Positions/REGISTER.md`](Positions/REGISTER.md) for the framing note,
+including the explicit hazard of conflating this register with
+manifold / measure-concentration "geometry" that shares the word but
+not the structure.
+
 ## Cross-reference
 
 * Paper 1 v11.7 § 1 — asymmetry principle
 * Paper 1 v11.7 § 4 — five-position theorem
 * Paper 3 v9.3 § 2 — distinction operation as primitive output
 * Paper 4 — mathematics as comma; comma-object construction
+* [`Positions/REGISTER.md`](Positions/REGISTER.md) — register note (Heyting / locale / intuitionistic)
 * `validation/claims/five-position-derivation-formalization.md` —
   open theorem this file targets
 

@@ -283,6 +283,10 @@ Outreach is deferred until the schema has been through one round of self-review 
 
 A first Lean 4 sketch of the five-position theorem candidate is in the repository at [`../../lean/FalseWorkPapers/Positions/`](../../lean/FalseWorkPapers/), with [`../../lean/FalseWorkPapers/Positions.lean`](../../lean/FalseWorkPapers/Positions.lean) as the index file. The sketch is *exploratory* and *sketch-quality* (most theorems carry `sorry`; the file is not yet `lake build`-clean). It is recorded here because it has surfaced one specific divergence from the v0.2 schema in this file, and because the divergence is a candidate amendment a validator should weigh against the v0.2 predicate.
 
+### Register
+
+The Lean sketch's formal register — and, by translation, the schema's register when read through the sketch — is **Heyting-algebraic / locale-theoretic / intuitionistic-logical** (one mathematical structure, four equivalent names). The framing note at [`../../lean/FalseWorkPapers/Positions/REGISTER.md`](../../lean/FalseWorkPapers/Positions/REGISTER.md) makes this register explicit, lists what it gives the framework (closure operators, pseudo-complements, the strict `Im(η) < ¬¬Im(η)` inequality in non-Boolean topoi), and lists what it explicitly *rules out* without further additions (metric, measure, smooth structure, high-dimensional Euclidean structure, point-set membership). The register note also flags the hazard of conflating locale-geometric content (the framework's home register, point-free topology) with manifold-geometric content (Levin's apparatus, Tymoczko's voice-leading orbifolds, physical spacetime) — these share the word "geometry" but are different mathematical structures, and bridges between them are open work, not assumed translations. A validator reading either register's claim about the five-position dictionary should expect the other register to require explicit translation, not implicit transfer.
+
 ### Register translation: distinction-structure vs. F-coalgebra
 
 The Lean sketch uses a slightly different register from the v0.2 schema, related by a translation:
