@@ -42,6 +42,8 @@ The directory [`FalseWorkPapers/Positions/`](FalseWorkPapers/) contains a first 
 
 **Relation to the validation claim.** The corresponding claim file at [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) defines the schema in the **F-coalgebra-with-comma-subcategory `L`** register. The Lean sketch uses a different but related register — the **distinction-structure** register with `D : C ⥤ C` and `η : 𝟭 ⟶ D`. The two are translatable but not identical. In one specific place — the **Exploitation** predicate — the Lean's closure-residue construction `img(D.map f) ≤ ¬¬Im(η) ∧ ¬(img ≤ Im(η))` is a tighter and *different* condition from the claim's "α factors through `L ↪ C`" predicate. The validation claim's v0.3 changelog records this divergence and flags the Commitment/Exploitation disjointness as an open problem the closure-residue construction inherits.
 
+**Expository companion.** [`../papers/comma-formal-structure-note.md`](../papers/comma-formal-structure-note.md) is the prose-and-context companion to this Lean sketch. It carries the closure-residue construction, the five-position predicates, the three signature theorems committed at this stage, the seven ranked open problems, and an honesty section on the classification-status asymmetry across domains and the register hazards — written for category theorists and topos theorists who want to assess the apparatus without reading Lean source. The two documents are reciprocal: the Lean is the formal commitment, the note is the prose statement of what the Lean commits to and what is still open. Changes to formal content should ideally land in both at once.
+
 ---
 
 ## The primary target

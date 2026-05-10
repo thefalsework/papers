@@ -89,6 +89,7 @@ This is a domain-by-domain open question, not a structural theorem. It is the op
 - The closure-residue construction: [`Exploitation.lean`](Exploitation.lean).
 - The non-Boolean residue theorem: [`Refusal.lean`](Refusal.lean) (`refusal_residue`).
 - Mathlib gap on `HeytingAlgebra (Subobject _)`: [`Setup.lean`](Setup.lean) (closing doc-section).
+- Expository companion: [`../../../papers/comma-formal-structure-note.md`](../../../papers/comma-formal-structure-note.md) — prose statement of this register, the closure-residue construction, the five-position predicates, the three signature theorems, and the ranked open problems. § 2 of the note carries a one-paragraph summary of this register and points back here for the full framing; the two documents are intentionally reciprocal.
 - Validation claim: [`../../../validation/claims/five-position-derivation-formalization.md`](../../../validation/claims/five-position-derivation-formalization.md) (v0.3 onwards).
 
 ## Provenance

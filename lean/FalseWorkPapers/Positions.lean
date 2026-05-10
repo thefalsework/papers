@@ -162,6 +162,11 @@ not the structure.
 * Paper 1 v11.7 § 4 — five-position theorem
 * Paper 3 v9.3 § 2 — distinction operation as primitive output
 * Paper 4 — mathematics as comma; comma-object construction
+* `papers/comma-formal-structure-note.md` — expository companion to this
+  Lean dictionary; prose statement of the closure-residue construction,
+  the five-position predicates, the three signature theorems, and the
+  ranked open problems, for category-theorist and topos-theorist readers
+  who want the apparatus without the Lean source
 * [`Positions/REGISTER.md`](Positions/REGISTER.md) — register note (Heyting / locale / intuitionistic)
 * `validation/claims/five-position-derivation-formalization.md` —
   open theorem this file targets
