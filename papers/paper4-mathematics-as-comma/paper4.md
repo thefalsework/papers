@@ -2,6 +2,8 @@
 
 FalseWork (falsework.dev)
 
+*Version 5.3. Revisions from version 5.2: § 6.3 adds a closing paragraph naming Smolin (2013), Carroll (2010), and Verlinde (2011) as scholarly company for the asymmetric-process / process-primacy framing, alongside the existing Penrose Weyl-curvature precedent. The addition is scoped as adjacent scholarly support for the methodological register, not as derivation; the asymmetry-first counter-current in contemporary theoretical physics has independent standing, and noting it strengthens the paper's positioning relative to the symmetry-first mainstream that the paper challenges. References list updated. No other changes.*
+
 *Version 5.2. Revisions from version 5.1: § 7 closes with a positioning paragraph engaging Wolfram 2026 ("What Ultimately Is There? Metaphysics and the Ruliad," Wolfram Institute's Templeton-funded Computational Metaphysics programme) at its three substantive convergences --- observer-relativity of law, pockets-of-reducibility mechanism, Wigner dissolution --- and three specific divergences --- ruliad-monism vs. kernel-pluralism, ruliad-as-object vs. process primacy, observer-relative slice vs. domain-intrinsic structure. Wolfram 2026 added to the reference list. No other changes.*
 
 *Working draft --- concept stage. This paper proposes a foundational claim that requires engagement with philosophy of mathematics, foundations of physics, and formal epistemology before it can be advanced as settled. Arguments marked \[REQUIRES FORMAL VALIDATION\] need external expert engagement.*
@@ -190,7 +192,7 @@ What the reframing changes is the ontological interpretation of conservation law
 
 ### 6.3 Supporting evidence
 
-Three existing physics considerations bear on this reframe: the observed CP asymmetry, Penrose's Weyl curvature hypothesis, and the Higgs mechanism.
+Three existing physics considerations bear directly on this reframe: the observed CP asymmetry, Penrose's Weyl curvature hypothesis, and the Higgs mechanism. A fourth subsection notes broader contemporary scholarly company for the asymmetric-process framing.
 
 CP violation --- the observed asymmetry between matter and antimatter --- is worth noting here. Most physicists read CP violation as asymmetry within a CPT-symmetric framework rather than as evidence against the symmetry-breaking picture tout court. The present argument does not require CP violation to overturn CPT symmetry. It requires only that the laws as we describe them contain asymmetries that complicate the narrative of a perfectly symmetric prior state. CP violation is one such complication --- it introduces asymmetry at the level of the laws themselves at certain scales, which at minimum makes the original high-symmetry state harder to characterize than the standard account suggests.
 
@@ -199,6 +201,8 @@ Penrose's Weyl curvature hypothesis is the most relevant formal precedent: Penro
 The Higgs mechanism requires direct engagement. The Higgs field's non-zero vacuum expectation value generates real, measurable, invariant particle masses. If the high-symmetry prior is a modeling artifact, how does a modeling artifact generate real physical mass? The answer is that the reframe does not dissolve the Higgs mechanism. The vacuum expectation value is real. The mass is real. What is being questioned is whether the zero-expectation-value state that precedes the breaking was a genuine ontological state or the minimum-description approximation of a process already asymmetric at a level the measurement apparatus at that energy scale could not resolve. Mass is a consequence of the Higgs field having a specific non-zero vacuum configuration --- a specific feature of an asymmetric process --- not a consequence of a prior symmetric state being disrupted. A precise phrasing note is required: this argument is not claiming that the vacuum has a hidden classical structure that the measurement apparatus lacks resolution to detect. That reading would be a hidden-variables claim and is not intended. The claim is ontological: the process was asymmetric at the level below the decoherence boundary; the zero-expectation-value description was a decoherence-scale artifact of how that process appeared at that energy scale, not a description of what the process was below that scale. The vacuum is not hiding a classical truth. It is a process that no decoherence-scale description can fully capture.
 
 An explanatory debt must be acknowledged here. The standard account of the Higgs mechanism uses the symmetric prior as part of the derivation of the vacuum expectation value's specific magnitude: the VEV is derived, in the standard treatment, from the parameters of the Higgs potential, which is itself formulated against a symmetric background. The process-primacy reframe preserves the Higgs mechanism's consequences but does not currently re-derive the VEV's magnitude from within its own ontological framework. This is an explanatory thinning, not a contradiction: the reframe is consistent with the empirical facts about particle masses but has not yet provided its own derivation of why the VEV has the magnitude it has. The standard account derives the magnitude from properties of the potential; the process-primacy account relocates rather than re-derives. Whether a derivation from within the process-primacy framework is available --- whether the VEV's magnitude can be derived from properties of the decoherence-scale appearance of a fundamentally asymmetric process --- is an open question that requires engagement with foundational quantum field theory. The reframe currently owes this derivation; paying the debt is a task the reframe has not yet completed.
+
+**Scholarly company for the asymmetric-process framing.** The process-primacy account developed in this section runs counter to the symmetry-first mainstream of contemporary theoretical physics, but the counter-current itself is not new and the present paper is not arguing into an empty field. Penrose's Weyl curvature hypothesis (Penrose 1979, restated through *The Road to Reality* 2004) treats the universe's low-entropy initial state as a boundary condition on the Weyl curvature tensor, structurally consistent with original asymmetry rather than broken symmetry, and was cited above. Smolin (2013, *Time Reborn*) argues that time and time-asymmetric process must be treated as fundamental rather than emergent, with timeless symmetric formulations of physics read as decoherence-scale or block-universe artifacts of an underlying directional dynamics --- a position whose programmatic shape is close to the present paper's, though Smolin's grounding is in foundational cosmology and quantum gravity rather than in the distinction-operation register. Carroll (2010, *From Eternity to Here*) presents the most accessible contemporary statement of the cosmological arrow-of-time problem and explicitly names the puzzle the standard symmetric-prior-plus-spontaneous-breaking account fails to resolve: why the universe's initial macrostate was low-entropy when a generic symmetric prior would have placed it at near-thermal equilibrium. Verlinde's emergent-gravity programme (Verlinde 2011, with subsequent revisions) treats spatial geometry and gravitational attraction as derived from an underlying informational / entropic substrate that is itself directional --- another instance of asymmetric process treated as fundamental and symmetric geometric structure treated as derived. These four scholars do not share a unified programme and have not engaged FalseWork. The citation is scoped as adjacent scholarly precedent for the methodological register --- a counter-current within foundational physics that grants asymmetric process explanatory priority over symmetric prior state --- not as endorsement of the present paper's specific claims. The recent decade's null results on supersymmetry at the LHC provide a separate, weaker, but non-negligible empirical tailwind for asymmetry-first programmes; whether that tailwind becomes a durable shift in the field's centre of gravity is open. The present paper's contribution distinct from this scholarly company is the connection to the distinction operation as the common generative structure across physical, mathematical, computational, and domain-practice levels --- not the asymmetry-first commitment in physics itself, which has independent standing in the work cited.
 
 ### 6.4 Ontological asymmetry and computational undecidability
 
@@ -289,21 +293,29 @@ Brouwer, L. E. J. (1912). Intuitionisme en Formalisme. \[English translation: In
 
 Cantor, G. (1891). Über eine elementare Frage der Mannigfaltigkeitslehre. *Jahresbericht der Deutschen Mathematiker-Vereinigung*, 1, 75--78.
 
+Carroll, S. (2010). *From eternity to here: The quest for the ultimate theory of time*. Dutton.
+
 Feynman, R. P., Leighton, R. B., & Sands, M. (1963). *The Feynman lectures on physics, Vol. I: Mainly mechanics, radiation, and heat* (Ch. 22, Algebra). Addison-Wesley.
 
 Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, 38, 173--198.
 
 Penrose, R. (1979). Singularities and time-asymmetry. In S. W. Hawking & W. Israel (Eds.), *General Relativity: An Einstein Centenary Survey*. Cambridge University Press.
 
+Penrose, R. (2004). *The road to reality: A complete guide to the laws of the universe*. Jonathan Cape.
+
 Prigogine, I. (1977). *Self-organization in nonequilibrium systems*. Wiley.
 
 Prigogine, I. (1997). *The end of certainty: Time, chaos, and the new laws of nature*. Free Press.
+
+Smolin, L. (2013). *Time reborn: From the crisis in physics to the future of the universe*. Houghton Mifflin Harcourt.
 
 Spencer-Brown, G. (1969). *Laws of form*. Allen and Unwin.
 
 Tegmark, M. (2008). The mathematical universe. *Foundations of Physics*, 38(2), 101--150.
 
 Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. *Proceedings of the London Mathematical Society*, 2(42), 230--265.
+
+Verlinde, E. (2011). On the origin of gravity and the laws of Newton. *Journal of High Energy Physics*, 2011(4), 29.
 
 Weyl, H. (1918). *Das Kontinuum*. Veit.
 
