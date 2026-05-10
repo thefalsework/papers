@@ -1,13 +1,46 @@
-# Lean 4 formalization — placeholder
+# Lean 4 formalization
 
-This directory is a deliberate placeholder. It exists from day one of the repository to signal that a Lean 4 formalization of the paper series' mathematical claims is a first-class target of the project, and to give any Lean contributor a single, well-defined place to propose work.
+This directory exists from day one of the repository to signal that a Lean 4 formalization of the paper series' mathematical claims is a first-class target of the project, and to give any Lean contributor a single, well-defined place to propose work.
 
 At this moment the directory contains:
 - This README describing the formalization target.
 - A skeletal `lakefile.lean` and `lean-toolchain` so a contributor can clone, `lake update`, and begin work without friction.
-- No actual proofs yet.
+- A first sketch of the **five-position formalization** under [`FalseWorkPapers/Positions/`](FalseWorkPapers/) — see *Sketch in flight* below.
+- No completed proofs yet.
 
 This README serves as the authoritative specification of what a Lean formalization of this project would cover. Contributions — partial or complete, bounded or ambitious — are warmly welcomed.
+
+---
+
+## Sketch in flight: the five-position formalization
+
+The directory [`FalseWorkPapers/Positions/`](FalseWorkPapers/) contains a first Lean 4 sketch of the five-position theorem candidate from Paper 1 v11.7 § 4, in the topos register described in Paper 3 v9.3 § 2.
+
+**Status.** Sketch quality. Most theorems carry `sorry`. Not yet expected to `lake build` cleanly. The point of the sketch is to make the formal shape visible, identify upstream Mathlib gaps, and localize each open framework decision to a specific file with documented candidates.
+
+**Files.**
+- [`FalseWorkPapers/Positions.lean`](FalseWorkPapers/Positions.lean) — index file; theorem-candidate statement; ranked open questions; framework-writeup-pending notes.
+- [`FalseWorkPapers/Positions/Setup.lean`](FalseWorkPapers/Positions/) — `DistinctionStructure` (idempotent endofunctor `D` with marking unit `η` and Spencer-Brown coherence), `NonTrivial` predicate, `kernelImage` subobject. Documents the upstream Mathlib gap.
+- [`FalseWorkPapers/Positions/Infrastructure.lean`](FalseWorkPapers/Positions/) — `IsInfrastructure` as `η`-iso at endpoints; signature theorem (`D` acts trivially); Deep Infrastructure level-stratified sketch.
+- [`FalseWorkPapers/Positions/Distribution.lean`](FalseWorkPapers/Positions/) — `IsDistribution` as image straddling `Im(η)` and `¬Im(η)`.
+- [`FalseWorkPapers/Positions/Exploitation.lean`](FalseWorkPapers/Positions/) — **closure-residue construction committed.** `IsExploitation Δ f` defined as `img(D.map f) ≤ ¬¬Im(η) ∧ ¬(img ≤ Im(η))`, at the level of generalized elements. Two signature theorems (non-Boolean dependence; Heyting disjointness from Refusal). A third theorem distinguishing Exploitation from Commitment was drafted as a "transverse-vs-pole" claim and withdrawn — geometric language without categorical content; documented in the file as open question 1.
+- [`FalseWorkPapers/Positions/Commitment.lean`](FalseWorkPapers/Positions/) — `IsCommitment` as colimit of iterated `D`-application. Spencer-Brown idempotency collapses the discrete iteration; continuous-iteration refinement flagged.
+- [`FalseWorkPapers/Positions/Refusal.lean`](FalseWorkPapers/Positions/) — `IsRefusal` as factoring through `(Im(η))ᶜ`. `refusal_residue` theorem stated: in non-Boolean topoi, `Im(η) < ¬¬Im(η)` strictly.
+
+**Settled by the sketch.**
+- Three positions (Infrastructure, Distribution, Refusal) and Exploitation have direct definitions in the topos register.
+- The closure-residue construction resolves the comma-object question for Exploitation.
+- Refusal and Exploitation occupy disjoint Heyting regions (`aᶜ ⊓ aᶜᶜ = ⊥` Heyting identity, not an additional commitment).
+
+**Documented open problems.**
+1. **Commitment/Exploitation disjointness within `¬¬Im(η)`** — central open problem post-closure-residue commitment. Three candidate hypotheses flagged in `Exploitation.lean`.
+2. **`HeytingAlgebra (Subobject _)` for topoi** — Mathlib upstream gap (verified 2026-05). Currently parameterized in as a local hypothesis. ~200–400 lines following Mac Lane–Moerdijk IV.8 would unblock Refusal, Distribution, and Exploitation simultaneously.
+3. **Continuous iteration of `D`** — needed for Commitment.
+4. **Hypothesis on `Δ`** to make `refusal_residue` provable.
+5. **Level structure** for Deep Infrastructure (Kurosawa case).
+6. **Balance condition** for Distribution.
+
+**Relation to the validation claim.** The corresponding claim file at [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) defines the schema in the **F-coalgebra-with-comma-subcategory `L`** register. The Lean sketch uses a different but related register — the **distinction-structure** register with `D : C ⥤ C` and `η : 𝟭 ⟶ D`. The two are translatable but not identical. In one specific place — the **Exploitation** predicate — the Lean's closure-residue construction `img(D.map f) ≤ ¬¬Im(η) ∧ ¬(img ≤ Im(η))` is a tighter and *different* condition from the claim's "α factors through `L ↪ C`" predicate. The validation claim's v0.3 changelog records this divergence and flags the Commitment/Exploitation disjointness as an open problem the closure-residue construction inherits.
 
 ---
 
@@ -77,3 +110,4 @@ The `lakefile.lean` declares a dependency on `mathlib4`. The `lean-toolchain` fi
 - 2026-04-19: Directory created as placeholder.
 - 2026-04-19: README tightened — version reference corrected to Paper 3 § 4 (v9.1); mathlib references aligned with current naming (`UnitAddCircle`, `Real.log`, `Real.logb`); Tier 3 scope clarified (qualitative non-vanishing promoted to Tier 1 alongside irrationality; Baker Tier 3 restricted to the effective bound).
 - 2026-04-19: Added Tier 1 point 3 (optimal N-TET ↔ convergent-denominator record-holders), reflecting the Henson suggestion. Pointed Tier 3 point 6 at the refined split between elementary sub-target A and Baker-blocked sub-target B. Updated Tier 1 point 1 to reference the three-forms formulation in the tightened claim file.
+- 2026-05-09: Added "Sketch in flight" section documenting the first concrete sketch under `FalseWorkPapers/Positions/` — five-position theorem candidate in the topos / distinction-structure register. Sketch-quality (sorries throughout), not yet `lake build`-clean. Closure-residue construction committed for Exploitation; Commitment/Exploitation disjointness within `¬¬Im(η)` flagged as the central open problem; `HeytingAlgebra (Subobject _)` for topoi flagged as a Mathlib upstream gap. Divergence in the Exploitation predicate from the F-coalgebra register of `validation/claims/five-position-derivation-formalization.md` recorded explicitly.

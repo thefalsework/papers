@@ -1,7 +1,7 @@
 # `five-position-derivation-formalization` — The five-position schema as a categorical object, with three concrete instantiations (math, music, physics)
 
-**Status:** OPEN (v0.2 — definitional; no theorem claimed; self-review tightening pass applied, no specialist consultation yet)
-**Papers:** Paper 1 § 3.4 (v11.5); Paper 3 § 4 (v9.2); feeds Paper 3 v10.0 revision
+**Status:** OPEN (v0.3 — first Lean 4 sketch in flight in the distinction-structure register; the closure-residue refinement of the Exploitation predicate is recorded as a divergence from the v0.2 schema and as a candidate amendment; no specialist consultation yet)
+**Papers:** Paper 1 § 3.4 (v11.7); Paper 3 § 4 (v9.3); feeds Paper 3 v10.0 revision
 **Domain(s):** Category theory; dynamical systems; mathematical logic; adjacent: number theory (math instantiation), music theory (music instantiation), foundations of quantum mechanics (physics instantiation)
 **Time estimate for a competent validator:** ~4–8 hours if the validator is already familiar with coalgebra / Lambek / Lawvere; longer if they are not
 **GitHub issue:** (pending)
@@ -279,7 +279,74 @@ Outreach is deferred until the schema has been through one round of self-review 
 
 ---
 
+## Lean 4 sketch in flight (2026-05-09)
+
+A first Lean 4 sketch of the five-position theorem candidate is in the repository at [`../../lean/FalseWorkPapers/Positions/`](../../lean/FalseWorkPapers/), with [`../../lean/FalseWorkPapers/Positions.lean`](../../lean/FalseWorkPapers/Positions.lean) as the index file. The sketch is *exploratory* and *sketch-quality* (most theorems carry `sorry`; the file is not yet `lake build`-clean). It is recorded here because it has surfaced one specific divergence from the v0.2 schema in this file, and because the divergence is a candidate amendment a validator should weigh against the v0.2 predicate.
+
+### Register translation: distinction-structure vs. F-coalgebra
+
+The Lean sketch uses a slightly different register from the v0.2 schema, related by a translation:
+
+| v0.2 schema | Lean sketch |
+|---|---|
+| Endofunctor `F : C → C` (the kernel) | `D : C ⥤ C` (the kernel as endofunctor in `DistinctionStructure`) |
+| Comma subcategory `L ⊂ C` | Subobject `kernelImage Δ Y := image.ι (η.app Y)` of `D.obj Y` (= `Im(η)` informally) |
+| `α : X → F(X)` (F-coalgebra carrying the work) | `f : X ⟶ Y` (an arbitrary morphism in the field), classified by `D.map f` |
+| D1 (non-triviality of F) | `DistinctionStructure.NonTrivial Δ := ∃ X, ¬ IsIso (η.app X)` |
+| D2 (non-idempotence / level hierarchy) | `D ⋙ D ≅ D` (Spencer-Brown idempotency on the *output* register, with level structure additional) |
+| D3 (fixed-point structure / comma generation) | Closure-residue construction (see below) |
+
+The two registers are not identical. The F-coalgebra register treats works as carriers `X` together with a structure map `α`; the distinction-structure register treats the kernel as ambient on the field and classifies works by where `D.map f` lands in the subobject lattice of `D.obj Y`. The Lean sketch's choice of register is motivated by the asymmetry-principle opening of Paper 1 v11.7 § 1 and the distinction-as-primitive-output passage in Paper 3 v9.3 § 2. Whether the translation is faithful — whether, for every (`F`, `α`) in the v0.2 register there is a `(Δ, f)` in the distinction-structure register classifying the same work into the same position — is itself an open question.
+
+### The Exploitation divergence (the substantive one)
+
+The v0.2 schema defines Exploitation as:
+
+> *Predicate:* α factors through the inclusion `L ↪ C` — the coalgebra's structural action lies entirely within the comma, and the practitioner uses L's internal geometry as generative material.
+
+The Lean sketch commits to a different predicate (file: [`../../lean/FalseWorkPapers/Positions/Exploitation.lean`](../../lean/FalseWorkPapers/Positions/)):
+
+> `IsExploitation Δ f := img(D.map f) ≤ ¬¬Im(η) ∧ ¬(img ≤ Im(η))`
+
+This is the **closure-residue construction**: Exploitation is the position whose action lies in the double-pseudo-complement of the kernel image but not in the kernel image itself. In a non-Boolean topos `Im(η) < ¬¬Im(η)` strictly, so the residue `¬¬Im(η) ∖ Im(η)` is non-trivial as a region of "elements characterized by being in the closure but not in the image" — though, as the Lean file notes, `¬¬a ⊓ ¬a = ⊥` is a Heyting identity, so the residue is empty as a strict sub-element and the construction is well-defined only at the level of generalized elements.
+
+These are not the same condition.
+
+- v0.2's "α factors through `L ↪ C`" reads Exploitation as *fully inside the comma*.
+- The closure-residue reads Exploitation as *aggressively struggling toward a closure the kernel cannot deliver* — work that lives in the closure of the kernel image without being reducible to the image itself. Concrete cases the Lean file motivates this from: Cézanne's late watercolours, Coltrane's *Giant Steps*, modernist abstraction movements as a class.
+
+The two readings agree on canonical cases (Coltrane *Giant Steps* sits inside `L` *and* in the closure-but-not-image; quantum computing exploits superposition structure that lives inside the measurement-problem comma *and* in its closure) but they pull apart at the boundary. The closure-residue reading is tighter against the empirical record of works the framework has classified as Exploitation; the v0.2 reading is closer to Paper 1 § 3.4's verbal derivation. A validator reviewing the schema is asked to weigh which register Paper 3 v10.0's § 4 should adopt.
+
+### What the Lean sketch settles, and what it leaves open
+
+**Settled by the sketch (as direct definitions in the topos register).**
+- *Infrastructure*: `η` invertible at endpoints; `D` acts trivially via naturality.
+- *Distribution*: `D.map f`'s image straddles `Im(η)` and `¬Im(η)`.
+- *Refusal*: `D.map f` factors through `(Im(η))ᶜ`. The `refusal_residue` theorem (`Im(η) < ¬¬Im(η)` strictly in non-Boolean topoi) provides a formal home for the framework's "asymptotic limit, never reached" claim about Refusal works.
+- *Exploitation/Refusal disjointness*: They occupy disjoint Heyting regions (`(Im(η))ᶜᶜ` and `(Im(η))ᶜ`). This is a Heyting-algebra identity (`aᶜ ⊓ aᶜᶜ = ⊥`), not an additional commitment.
+
+**Open problems the sketch surfaced that v0.2 did not name explicitly.**
+1. **Commitment/Exploitation disjointness within `¬¬Im(η)`.** Both positions live in the closure under the closure-residue commitment. The theorem candidate's disjointness claim now requires a categorical distinction between them that is not yet specified. A "transverse-direction vs pole-direction" framing was drafted on 2026-05-09 and *withdrawn* — it used evocative geometric language ("approach to the boundary along a pole," "transverse to all pole directions") without categorical content. The Lean file documents this as the framework's central open problem post-closure-residue commitment, with three candidate hypotheses listed. This is now the most important pressure point for the schema; it strengthens the v0.2 falsification condition 2 (Comm/Expl collapse) from "candidate concern" to "active open problem flagged by attempted formalization."
+2. **`HeytingAlgebra (Subobject _)` for topoi is a Mathlib upstream gap** (verified 2026-05). Mathlib's `CategoryTheory.Subobject.Lattice` provides `SemilatticeInf`, `SemilatticeSup`, `OrderTop` but no `HeytingAlgebra` instance for the subobject lattice of an object in an elementary topos. The Lean sketch parameterizes the instance in locally as a hypothesis. Discharging it upstream (~200–400 lines following Mac Lane–Moerdijk IV.8) would unblock Refusal, Distribution, and Exploitation simultaneously and is a self-contained PR target.
+3. **Continuous iteration of `D`.** Spencer-Brown idempotency `D ⋙ D ≅ D` collapses the discrete iterated diagram, so Commitment-as-colimit-of-iterated-`D`-application as currently sketched is degenerate. The framework needs to decide whether to relax idempotency, parameterize over an interval object, or move to an enriched setting. May also affect open problem 1 if the Commitment/Exploitation distinction lives in the iteration parameterization.
+4. **The hypothesis on `Δ`** that makes `refusal_residue` go through. Two candidate hypotheses are flagged in the Lean file.
+5. **Level structure for Deep Infrastructure** (Kurosawa case — sophisticated work above a transparent kernel).
+6. **Balance condition for Distribution** (three candidate refinements — anti-chain, equimeasure, categorical decomposition).
+
+**What the sketch does *not* do.**
+- It does not prove the theorem candidate. Most theorems carry `sorry`.
+- It does not adjudicate between the v0.2 "factors-through-L" Exploitation predicate and the closure-residue predicate. The Lean has chosen the closure-residue predicate as a working bet; the validation claim records that choice as a candidate amendment.
+- It does not establish the translation between the F-coalgebra and distinction-structure registers. That translation is itself open work.
+- It does not make the schema build cleanly under `lake build`. The point of the sketch is to make the formal shape visible, not to provide a verified formalization.
+
+### Acceptance for Paper 3 v10.0, updated
+
+The v0.2 acceptance criterion (replace D4 in Paper 3 § 4 with the v0.2 schema if confirmed) is unchanged. The Lean sketch adds a sub-question for the v10.0 revision: *should Paper 3 § 4 adopt the closure-residue Exploitation predicate as the canonical formulation, and treat the v0.2 "factors-through-L" predicate as the verbal-derivation-friendly version of it?* The closure-residue predicate is the tighter formulation in the Lean sketch and matches the empirical record of Exploitation works (Cézanne, *Giant Steps*, modernist abstraction); the "factors-through-L" predicate is the verbal-derivation-friendly version of it; the predicates agree on canonical cases but diverge at the boundary. A validator who reads the Lean sketch alongside this claim is asked to weigh which formulation should land in v10.0.
+
+---
+
 ## Changelog
 
 - 2026-04-27: v0.1 claim created. Definitional schema with three instantiations (math / music / physics). Level-1 object; derivation theorem explicitly deferred. AI-synthesis origin disclosed. Associated with pending Paper 3 v10.0 revision. Awaiting specialist validation from a category theorist or mathematical philosopher.
 - 2026-04-27: v0.2 self-review tightening pass (no specialist consultation; AI self-review only). Changes: (i) renamed the comma from `D` to `L` throughout the schema, math, music, and physics sections, matching Paper 1 § 3.4's existing convention and removing collision with the music kernel's functor `D` and with Paper 3's D-numbered conditions; (ii) Inf predicate fixed and then further simplified to "image(α) ⊂ C \ L, with bounded-reach extension across the work's extent," which (a) excludes the trivial empty-subcoalgebra case that made v0.1's predicate vacuous and (b) accommodates natural Inf works (diatonic music, bounded-n-TET, Copenhagen practice) where the work's chosen carrier is not strictly F-invariant under unbounded iteration but the work's actual reach stays below L; (iii) Dist predicate tightened with an explicit clause "image(α) is not entirely contained in L" to make Dist and Expl formally disjoint; (iv) Comm predicate made explicit about characterizing the no-terminal-coalgebra case via the universal property of the filtered diagram rather than by a (nonexistent) apex; (v) Ref predicate retyped — no longer says "α is not an F-coalgebra" (which conflicts with the fact that Schoenberg's rows live in the 12-tone subset that IS a D-coalgebra at the carrier level), now says "the practitioner articulates the work as a G-coalgebra for a modified G," with a closed candidate list of allowed G-modifications added to tight spot 3; (vi) physics setup now explicitly flags that F is not a clean endofunctor under strict Born-rule stochasticity, proposing the enlargement to the Chan category as a working resolution and noting the instantiation's looseness relative to math/music; added as tight spot 7. Tight-spots count increased from 7 to 8. No new positions; no structural claim revised.
+- 2026-05-09: v0.3 — added "Lean 4 sketch in flight" section recording the first concrete attempt at formalization (under `lean/FalseWorkPapers/Positions/`). The Lean sketch uses the distinction-structure register (`D : C ⥤ C` with marking unit `η : 𝟭 ⟶ D`) rather than the F-coalgebra register of v0.2; the registers are translatable in principle but the translation is itself open. The Exploitation predicate diverges substantively: the Lean sketch commits to the closure-residue construction (`img(D.map f) ≤ ¬¬Im(η) ∧ ¬(img ≤ Im(η))`), which is *not* equivalent to v0.2's "α factors through `L ↪ C`" — agreeing on canonical cases but pulling apart at the boundary. Recorded as a candidate amendment for Paper 3 v10.0's § 4 to consider, not as a replacement of the v0.2 predicate. Surfaced one new central open problem (Commitment/Exploitation disjointness within `¬¬Im(η)`) — strengthens v0.2 falsification condition 2 from "candidate concern" to "active open problem." Surfaced one Mathlib upstream gap (`HeytingAlgebra (Subobject _)` for topoi). No specialist consultation; AI-assisted self-review only. Paper version references bumped to current (Paper 1 v11.7, Paper 3 v9.3).
