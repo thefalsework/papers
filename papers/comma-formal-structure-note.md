@@ -4,13 +4,15 @@
 
 **Audience.** Category theorists, topos theorists, mathematical philosophers, and reviewers who want to assess the framework's formal apparatus without reading Lean source.
 
-**What this document is.** A focused expository description of the *closure-residue construction* — the framework's current commitment for the formal structure of the comma — and the five-position dictionary that sits inside it. It states the apparatus, gives the predicates, names the open problems honestly, and points at the Lean source for everything that has been mechanized.
+**What this document is.** A focused expository description of the *closure-residue construction* — the framework's current commitment for the formal structure of the comma — and the **four-position partition plus Commitment gate** dictionary that sits inside it. It states the apparatus, gives the predicates, names the open problems honestly, and points at the Lean source for everything that has been mechanized.
+
+**Architecture (revised 2026-05-10).** The framework's central architectural claim has been refined through formalization. The dictionary is now: a *four-position partition* over morphisms (Infrastructure, Distribution, Exploitation, Refusal) — disjoint and exhaustive in the topos register — plus a *Commitment gate*, a binary fixedness condition that applies *within each cell* rather than as a fifth cell of its own. The two-parameter unification question (whether the four cells' extension operators derive from a single uniform construction) was tested in Lean on 2026-05-10 and closed: negative on theorem-grade unification, positive on schema-level uniformity. The previously-named "central open problem" of Commitment/Exploitation disjointness *dissolves* under this architecture — Commitment is no longer a separate cell competing with Exploitation for the closure-residue region.
 
 **What this document is not.** A paper. Not in the sense of being polished, peer-reviewable expository writing. The companion to a paper. The published-paper version of this content is destined for Paper 3 § 4 in the v10.0 revision, conditional on the open problems clearing or the schema being revised by specialist engagement.
 
-**Companion to.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md) (the empirical dictionary), [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md) (the informal categorical framing), [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md) (the ontological account of comma-as-substrate), [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) (the schema specification with hedging), [`../lean/FalseWorkPapers/Positions.lean`](../lean/FalseWorkPapers/Positions.lean) (the Lean dictionary), [`../lean/FalseWorkPapers/Positions/REGISTER.md`](../lean/FalseWorkPapers/Positions/REGISTER.md) (the register note).
+**Companion to.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md) (the empirical dictionary), [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md) (the informal categorical framing), [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md) (the ontological account of comma-as-substrate), [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) (the schema specification with hedging), [`../lean/FalseWorkPapers/Positions.lean`](../lean/FalseWorkPapers/Positions.lean) (the Lean dictionary), [`../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../lean/FalseWorkPapers/Positions/MomentRelative.lean) (the two-parameter-unification exploration that closed the question), [`../lean/FalseWorkPapers/Positions/REGISTER.md`](../lean/FalseWorkPapers/Positions/REGISTER.md) (the register note).
 
-**Provenance.** Drafted May 2026 following the closure-residue commitment for the Exploitation predicate and the register-note clarification. Records framework state at that moment. Subsequent revisions either land here as patches or escalate to Paper 3 v10.0.
+**Provenance.** Drafted May 2026 following the closure-residue commitment for the Exploitation predicate and the register-note clarification. Revised 2026-05-10 to reflect the Commitment-as-gate reframe, the closure of the two-parameter-unification question, and the dissolution of the previously-named Commitment/Exploitation disjointness problem. Records framework state at those moments. Subsequent revisions either land here as patches or escalate to Paper 3 v10.0.
 
 ---
 
@@ -123,9 +125,16 @@ The five positions are characterized by where morphisms `f : X ⟶ Y` land relat
 
 ---
 
-## 5. The five-position dictionary
+## 5. The position dictionary: four cells plus a gate
 
-Each position is a different way for a morphism `f : X ⟶ Y` (the "work" or "practitioner stance" in the field) to relate to the kernel image and its Heyting structure. The plain-language definition is followed by the Lean predicate (italicized) and canonical examples from domains with at least adjacent specialist anchoring.
+The dictionary has two structural layers:
+
+* A **four-position partition** over morphisms: Infrastructure, Distribution, Exploitation, Refusal. These are four Heyting conditions on `Im(D.map f)` relative to `kernelImage Δ Y`. They are (claimed to be) disjoint and exhaustive over the morphism space of `C`. This is the framework's headline theorem candidate.
+* A **Commitment gate** that applies *within each cell*: a binary fixedness condition under cell-internal iteration of `D`. A morphism `f` classified in cell `P` is additionally either Commitment-yes or Commitment-no at `P`. The gate has uniform shape across the four cells; its content (which iteration is the relevant one) is cell-specific.
+
+This is a *4 × 2* architecture: four lattice cells, each with a binary gate. The previous "five positions" framing treated Commitment as a fifth lattice cell parallel to the other four; that framing was revised on 2026-05-10 when formalization testing showed that the gate's uniformity holds at schema level but not at theorem level (see §7, "Two-parameter unification: closed negative").
+
+Sections 5.1–5.4 give the four cells. Section 5.5 gives the Commitment gate. Each cell's plain-language definition is followed by the Lean predicate (italicized) and canonical examples from domains with at least adjacent specialist anchoring.
 
 ### Infrastructure
 
@@ -167,20 +176,6 @@ The image of the work under `D` lies in the closure of the kernel image but not 
 
 The empirical observation that the four mechanism-distinct Exploitation modes in painting (and the analogous Coltrane–Hendrix structural pairing in music) might admit *further* categorical refinement was held briefly in May 2026 under "transverse-vs-pole" framing. That framing was withdrawn — geometric vocabulary without categorical content. The further refinement is now documented as open work, not committed structure. See § 7 below.
 
-### Commitment
-
-The work is a colimit (or filtered diagram) of iterated `D`-applications, asymptotically pursuing a limit point that the kernel itself names without ever fully reaching it. The practitioner extends the kernel's own logic past the standard framework's stopping point — *following the kernel's existing rules further than the field's working apparatus does*, toward a closure that recedes as the work approaches it. Commitment does not add new constraints; it extends the kernel's existing logic toward its asymptotic limit.
-
-> *`IsCommitment Δ f := ∃ (g : X' ⟶ Y') (seq : ∀ n : ℕ, (iterD Δ n).map g ≅ (iterD Δ (n+1)).map g), True` — informally, `f` is a colimit of iterated `D`-application to a seed `g`. Caveat: Spencer-Brown idempotency `D ⋙ D ≅ D` collapses the discrete iterated diagram, so the predicate as stated is degenerate; a continuous-iteration refinement is needed (relax idempotency, parameterize over an interval object, or move to enriched setting). Open framework decision.*
-
-*Music:* Pythagorean tuning extended past 12 — Harry Partch's 43-tone scale, just-intonation traditions following the perfect-fifth chain toward the irrational limit `log₂(3/2)` (which does not exist in the category of finite pitch-class sets per [`../validation/claims/music-kernel-03-terminal-coalgebra.md`](../validation/claims/music-kernel-03-terminal-coalgebra.md)). Coltrane's late spiritual works (*Om*, *A Love Supreme* in some readings) extend the harmonic logic toward a limit point the standard tonal framework names but does not close on.
-
-*Cinema:* Sokurov's *Russian Ark* — the unbroken 96-minute take pursuing the cut's continuity-management logic past its normal stopping point. Tarkovsky's long takes extend the same logic.
-
-*Painting:* Newman's surface-pole works — the picture plane pursued asymptotically as resolved field, the kernel of mark-on-surface extended toward unification rather than refused.
-
-*Physics:* pilot-wave theory (Bohm, de Broglie) — extending Schrödinger's deterministic logic to cover the measurement event itself, committing to `F`'s deterministic character past where the standard framework imposes the Born postulate.
-
 ### Refusal
 
 The work factors through the strict pseudo-complement of the kernel image: `D.map f` factors through `(Im(η))ᶜ`. The practitioner rejects the kernel as a legitimate operation in the field. The work is structured by something *other* than the kernel — a different generative principle, an alternative organizing logic, an announced refusal of the kernel's authority.
@@ -196,6 +191,33 @@ The work factors through the strict pseudo-complement of the kernel image: `D.ma
 *Physics:* Many-Worlds (Everett) — the universal-unitary-evolution `G` replaces the Born-rule-augmented `F` as generative principle.
 
 The `refusal_residue` claim — that the kernel's closure has more in it than the kernel image — is what makes Refusal a structurally distinct *position* rather than an absence. The refusing work cannot escape the closure of what it refuses; the residue is what shows up under extended attention to the refusing work. Reinhardt's cruciform is this residue, made visible.
+
+### The Commitment gate
+
+A morphism `f` classified in cell `P ∈ {Infrastructure, Distribution, Exploitation, Refusal}` is additionally *Commitment-yes at `P`* when `f` is a fixed point of the `P`-restricted iteration of `D` — that is, when `f` is at the structural limit of its cell, with no further iteration within `P` producing new content. The gate is binary (yes/no per work). The work has either pursued its cell's logic to the cell's structural limit or it has not.
+
+> *Schema. For each cell `P`, the gate has the form: `IsCommitmentYes Δ P f := f ≅ colim_{n} (iter_P^n f)`, where `iter_P` is `D`-iteration restricted to the subcategory cut out by `P`. The shape of this schema is uniform across cells. The content of `iter_P` is cell-specific (the iteration takes place in a different subcategory for each cell). The Lean documents this in [`../lean/FalseWorkPapers/Positions/Commitment.lean`](../lean/FalseWorkPapers/Positions/Commitment.lean), with the open question of continuous iteration of `D` flagged (Spencer-Brown idempotency `D ⋙ D ≅ D` collapses the discrete diagram; continuous parameterization is the framework's intended target).*
+
+**Moment-relativization.** Commitment-yes is *moment-relative*. The structural limit a cell admits is the limit *as understood at the moment* of the work's making. Duchamp's *Fountain* (1917) is Refusal-Commitment-yes at its moment because the readymade-Refusal gesture is structurally complete in the urinal: no subsequent work reduces the artist's transformation further than zero. Subsequent canonical readymade works are Refusal-Commitment-yes at their later moments, with the boundary the work pushes against differently configured. The framework reading: each cell admits a sequence of moment-relative structural limits, and a work canonical at moment `t` is at the cell's structural limit *as of `t`*.
+
+**Schema-level uniformity (what the gate gets right).** Three uniformities hold across the four cells:
+
+1. The moment-relative kernel image `kernelImageAt : Moment → Subobject (D Y)` is a single construction shared by every cell.
+2. Every cell predicate lives in the same Heyting register: a condition on `(Im(D.map f), kernelImageAt t Y)`.
+3. The gate has uniform shape: binary fixedness under cell-restricted iteration.
+
+**Theorem-grade unity (what the gate does not have).** The four cell predicates are propositional-shape-distinct as Heyting conditions: `≤ a`, straddle-`a`-and-`aᶜ`, `≤ aᶜᶜ ∧ ¬(≤ a)`, `≤ aᶜ`. They are not specializations of a single Heyting expression parameterized by cell. Any uniform formula must internally case-split on cell. The case-split is structural (propositional-shape-distinct), not bookkeeping. The four cell-restricted iterations therefore differ in substance across cells; the gate's uniformity is schema-level, not theorem-grade. The 2026-05-10 Lean exploration in [`../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../lean/FalseWorkPapers/Positions/MomentRelative.lean) is the formal record of this.
+
+**Canonicity claim (open empirical).** The framework's strong canonicity claim is: *moment-relative Commitment-yes at the work's cell is necessary for canonicity*. Canonical works are at their cell's structural limit as of their moment. Commitment-yes-but-not-canonical works exist (sociological filtering, reception timing, accessibility) — so the condition is necessary but not sufficient. The strong claim is falsifiable; a canonical-but-not-Commitment-yes work would falsify it. The empirical test (counterexample search) is open work.
+
+**Empirical examples, pending reclassification.** Works previously classified as "Commitment" under the five-cell framing are candidates for reclassification under the gate framework as (cell, Commitment-yes). Examples include:
+
+* *Music:* Pythagorean tuning extensions (Partch's 43-tone scale; just-intonation traditions); Coltrane's late spiritual works. Likely (Exploitation, yes) or (Refusal, yes) depending on whether the work pursues the kernel's closure or substitutes an alternative generator.
+* *Cinema:* Sokurov's *Russian Ark*; Tarkovsky's long takes. Likely (Refusal, yes) or (Exploitation, yes) — the cut is either refused or its continuity-management closure is exploited past the standard stopping point.
+* *Painting:* Newman's surface-pole works; Rothko's image-pole works. Likely (Exploitation, yes) under the closure-residue reading.
+* *Physics:* pilot-wave theory (Bohm, de Broglie). Likely (Refusal, yes) — the Born postulate is refused; Schrödinger's deterministic generator is extended.
+
+The empirical reclassification of the trajectory artifacts (Coltrane, Painting, Kurosawa, Cinema) under the gate framework is pending work. The four-position partition's empirical adequacy is independently testable; the gate's empirical content tests the canonicity claim.
 
 ---
 
@@ -215,43 +237,59 @@ Three theorems are committed at the level of the closure-residue construction. A
 
 > *Content: The disjointness is a Heyting-algebra identity (`aᶜ ⊓ aᶜᶜ = ⊥`), not an additional commitment of the framework. Exploitation and Refusal are formally distinct positions in the topos register, not just empirically distinct stances.*
 
-A fourth theorem candidate — distinguishing Exploitation from Commitment within `(Im(η))ᶜᶜ` — was drafted in May 2026 as the "transverse-vs-pole" claim and *withdrawn*. See § 7.
+A fourth theorem candidate — distinguishing Exploitation from Commitment within `(Im(η))ᶜᶜ` — was drafted in May 2026 as the "transverse-vs-pole" claim and *withdrawn* on 2026-05-09, and the underlying problem subsequently *dissolved* on 2026-05-10 when Commitment was reframed as a binary gate across the four cells rather than a fifth cell. Under the gate framework, there is no cross-cell disjointness question for Commitment and Exploitation — Commitment is not a separate cell. The residual question is the *per-cell characterization* of the cell-restricted iteration whose fixed points give Commitment-yes at each cell. See § 7.
 
 ---
 
 ## 7. Open problems
 
-The closure-residue commitment makes the formalization viable in the topos register. It also surfaces specific open problems whose resolution determines what gets published in Paper 3 v10.0 versus what remains framework-internal sketch.
+The closure-residue commitment plus the gate reframe make the formalization viable in the topos register. They also surface specific open problems whose resolution determines what gets published in Paper 3 v10.0 versus what remains framework-internal sketch.
 
-**1. Commitment/Exploitation disjointness within `(Im(η))ᶜᶜ`.** This is the central open problem post-closure-residue commitment.
+**1. Per-cell restricted-iteration characterization.** This is what the previously-named "Commitment/Exploitation disjointness within `(Im(η))ᶜᶜ`" problem turned into when Commitment was reframed as a gate on 2026-05-10. The disjointness question dissolved (Commitment is not a separate cell); the residual question is local to each cell.
 
-Both positions live in the closure of the kernel image. Exploitation by predicate (`img ≤ (Im(η))ᶜᶜ ∧ ¬(img ≤ Im(η))`); Commitment by colimit construction (asymptotic approach to `Im(η)`'s closure as iterated-`D` colimit). The categorical content distinguishing them — what makes Coltrane *Giant Steps* an Exploitation work and Coltrane *Om* a Commitment work, when both live in the closure of the same kernel — is not yet specified.
+For each cell `P ∈ {Infrastructure, Distribution, Exploitation, Refusal}`, the gate requires a *cell-restricted iteration* `iter_P`: the action of `D` restricted to morphisms in `P`, with fixed points characterizing Commitment-yes-at-`P`. The four candidate iterations:
 
-A "transverse-vs-pole" framing was drafted on 2026-05-09 and withdrawn as evocative geometric language without categorical content. Three candidate hypotheses are documented in `Exploitation.lean`:
+- **Infrastructure-restricted iteration.** Within morphisms with `η` iso at endpoints. Likely trivial in the basic case (every Infrastructure morphism is a fixed point) and gets non-trivial only with the Deep Infrastructure / level-structure refinement.
+- **Distribution-restricted iteration.** Within morphisms whose image straddles `Im(η)` and `(Im(η))ᶜ`. Iterating may push the straddle balance or refine its component decomposition.
+- **Exploitation-restricted iteration.** Within morphisms in the closure-residue. Iterating expands residue coverage; fixed points are exhaustive coverage of the closure-residue territory.
+- **Refusal-restricted iteration.** Within morphisms factoring through `(Im(η))ᶜ`. Iterating under `D` may push out of `(Im(η))ᶜ` as the boundary evolves; fixed points are stable refusers.
 
-- **(H1)** The distinction is parametric: Commitment's morphism is the limit of a parameterized colimit cone with a *direction* (a pole subobject); Exploitation's is not aligned to any such pole.
-- **(H2)** The distinction lives in iteration-parameterization: with continuous iteration of `D`, Commitment is the colimit at a specific limit ordinal; Exploitation is *transverse* to all such limits.
-- **(H3)** The distinction does not live within the topos register at all and requires further structure (a fibration, a model structure, or an enrichment).
-
-This is the framework's central formal open problem. Its resolution determines whether the five-position dictionary is a categorical theorem or a four-position dictionary plus an empirical Commitment/Exploitation distinction.
+Each is local to its cell. None collides with the others because the four subcategories are disjoint by the four-position partition. This is open work but it is *four independent characterization problems*, not one cross-cell disjointness puzzle.
 
 **2. `HeytingAlgebra (Subobject _)` for elementary topoi.** Mathlib upstream gap (verified 2026-05). Mathlib provides `SemilatticeInf`, `SemilatticeSup`, and `OrderTop` instances on subobject lattices but lacks a `HeytingAlgebra` instance for the topos case. The classical construction (Mac Lane–Moerdijk Ch. IV.8) is mechanizable in roughly 200–400 lines and would unblock the formal statements of Refusal, Distribution, and Exploitation simultaneously. PR target: `Mathlib/CategoryTheory/Topos/Subobject.lean`. Effort estimate: 3–6 weeks of focused Mathlib-fluent work.
 
-**3. Continuous iteration of `D`.** Spencer-Brown idempotency `D ⋙ D ≅ D` is a structural axiom of the distinction structure. It collapses the discrete iterated-`D` diagram, making the Commitment-as-colimit predicate degenerate as currently stated. Three resolutions: (a) relax idempotency (move to a weaker distinction-structure axiom); (b) parameterize over an interval object (continuous-iteration in the synthetic-differential-geometry sense); (c) move to enriched category theory (where colimits over directed diagrams have richer behavior). Decision is framework-level.
+**3. Continuous iteration of `D`.** Spencer-Brown idempotency `D ⋙ D ≅ D` is a structural axiom of the distinction structure. It collapses the discrete iterated-`D` diagram, making the cell-restricted iterations of §7.1 degenerate as currently stated. Three resolutions: (a) relax idempotency (move to a weaker distinction-structure axiom); (b) parameterize over an interval object (continuous-iteration in the synthetic-differential-geometry sense); (c) move to enriched category theory (where colimits over directed diagrams have richer behavior). Decision is framework-level. Affects all four cell-restricted iterations symmetrically.
 
-**4. Non-trivial-distinction hypothesis for `refusal_residue`.** The proof sketch needs an additional hypothesis on `Δ` identifying when `kernelImage` plays the role of the non-Boolean witness. Two candidates in `Refusal.lean`. Smaller call than #1 or #3.
+**4. Two-parameter unification: closed negative (2026-05-10).** A side-question raised by the moment-relativization observation (works push their cell's boundary *as understood at their moment*) was whether the four cell-restricted iterations might all derive from a single uniform construction parameterized by `(cell, moment)`. The exploration in [`../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../lean/FalseWorkPapers/Positions/MomentRelative.lean) tested this and produced a negative result: the four cell predicates are propositional-shape-distinct Heyting conditions, not specializations of a single Heyting term parameterized by cell. Schema-level uniformity holds (uniform moment-relative kernel image, uniform Heyting register, uniform gate shape); theorem-grade unity does not. The question is closed; reopening it would require a categorical move outside the Heyting language (substantial commitment, not routine refinement).
 
-**5. Level structure for Deep Infrastructure.** Two paths in `Infrastructure.lean`: ad-hoc fibration over `ℕ`, or a general level-poset.
+**5. Non-trivial-distinction hypothesis for `refusal_residue`.** The proof sketch needs an additional hypothesis on `Δ` identifying when `kernelImage` plays the role of the non-Boolean witness. Two candidates in `Refusal.lean`. Smaller call than #1 or #3.
 
-**6. Balance condition for Distribution.** Three candidate refinements in `Distribution.lean`.
+**6. Level structure for Deep Infrastructure.** Two paths in `Infrastructure.lean`: ad-hoc fibration over `ℕ`, or a general level-poset. Also relevant to §7.1's Infrastructure-restricted iteration: with level structure, Infrastructure-Commitment-yes becomes non-trivial (fixed points are level-saturated systems).
 
-**7. Translation between distinction-structure and F-coalgebra registers.** The validation-claim v0.2 schema operates in the F-coalgebra register; the Lean operates in the distinction-structure register. The translation is not identical — see [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) v0.3 § "Register translation" for the table. Whether the translation is faithful (every `(F, α)` classifying into position `P` lifts to a `(Δ, f)` classifying into the same `P`) is itself open work.
+**7. Balance condition for Distribution.** Three candidate refinements in `Distribution.lean` (anti-chain, equimeasure, categorical decomposition). Also relevant to §7.1's Distribution-restricted iteration.
+
+**8. Categorical specification of `Moment`.** The moment-relativization currently lives as a working hypothesis: a filtered preorder `T` with a monotone `BoundaryState : T → (Y : C) → Subobject (D Y)`. Whether `Moment` should be made a derived construct (e.g., the indexing category of a filtered diagram of distinction structures, or sheaves over a temporal locale) rather than schematic data is open. Affects the canonicity claim's formal status.
+
+**9. Translation between distinction-structure and F-coalgebra registers.** The validation-claim v0.2 schema operates in the F-coalgebra register; the Lean operates in the distinction-structure register. The translation is not identical — see [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) v0.3 § "Register translation" for the table. Whether the translation is faithful (every `(F, α)` classifying into position `P` lifts to a `(Δ, f)` classifying into the same `P`) is itself open work.
+
+**10. Canonicity claim (empirical).** The strong canonicity claim — *moment-relative Commitment-yes at the work's cell is necessary for canonicity in general* — is empirically falsifiable. The test: a structured canonical-counterexample search (candidates include Stettheimer, Werefkin, late-canonized figures, technical-innovation cases, anonymous or collaborative works). Open empirical work, not formal work. Result calibrates how the claim should be stated in Paper 1 v11.8 and Paper 3 v10.0.
 
 ---
 
 ## 8. Honesty notes
 
-Three notes a reader should hold while reading the dictionary above.
+Four notes a reader should hold while reading the dictionary above.
+
+**Status of the framework's central claims.** The dictionary makes four substantive claims at four different epistemic levels. A reader should keep the four in separate boxes.
+
+| Claim | Status |
+|---|---|
+| **Four-position partition** over morphisms (Infrastructure, Distribution, Exploitation, Refusal disjoint and exhaustive in the topos register) | **Theorem candidate.** Headline structural claim. Disjointness sketched in Lean for each pair, most pairs carrying `sorry`. Exhaustiveness not yet stated as a Lean theorem. `HeytingAlgebra (Subobject _)` Mathlib gap blocks the cleanest formulation. Heyting-algebra identity `aᶜ ⊓ aᶜᶜ = ⊥` makes Refusal/Exploitation disjointness immediate. |
+| **Commitment as binary gate at each cell** (uniform shape, cell-specific content) | **Schema-level architecture.** No theorem-grade unity claim. The two-parameter unification was tested in Lean (2026-05-10) and found to fail at theorem level while holding at schema level. Operationally a binary fixedness condition per cell; predicate-shape uniform across cells. |
+| **Moment-relative Commitment-yes is necessary for canonicity** | **Open empirical claim.** Falsifiable by canonical-counterexample search. The motivating observation (Duchamp's *Fountain* pushes the boundary *as understood in 1917*) suggests the strong claim, but the empirical test is pending. Pending result, the claim should be stated as "necessary for canonicity *via structural completion*" rather than necessary in general. |
+| **Moment-relativization itself** | **Working hypothesis.** Categorical structure of `Moment` not yet specified. Current implementation is schematic data (filtered preorder + monotone boundary-state function); whether `Moment` should be a derived construct is open (see §7.8). |
+
+Each line has its own status. The headline is the partition; the gate is operationally useful but architecturally schema-level; the canonicity claim is testable but untested; the moment-relativization is a working hypothesis underwriting both the gate and the canonicity claim.
 
 **Classification status.** Most of the empirical classifications in § 5 are *structurally inferred* — produced by applying the framework's vocabulary to specific works. The level of independent grounding varies by domain:
 
@@ -262,7 +300,7 @@ Three notes a reader should hold while reading the dictionary above.
 
 A reader should treat the music classifications as having a different epistemic status from the painting classifications. The framework's correction architecture (Paper 2) is designed to handle this asymmetry over time as more specialists engage; it is not yet fully populated.
 
-**Disjointness of the dictionary.** The dictionary's claim that the five positions are *disjoint* depends on the resolution of open problem 1 (§ 7). Theorems 1–3 (§ 6) establish disjointness for some pairs; the Commitment/Exploitation pair within `(Im(η))ᶜᶜ` is open. A reader should hold the five-position structure as a *candidate* dictionary whose pairwise disjointness is partly theorem and partly open.
+**Disjointness of the dictionary.** The four-position partition's claim that Infrastructure, Distribution, Exploitation, Refusal are pairwise disjoint depends on (i) the Heyting-algebra identity `aᶜ ⊓ aᶜᶜ = ⊥` (Refusal/Exploitation disjointness, immediate), (ii) the boundary between Distribution (image straddles) and Exploitation (image in closure-residue) — currently demanding case-analysis on whether the straddle is contained in `(Im(η))ᶜᶜ` or genuinely reaches into `(Im(η))ᶜ`, with the resolution open, and (iii) Infrastructure's η-iso condition being incompatible with the other three predicates (open `sorry`s in the Lean). The Commitment-as-gate reframe (2026-05-10) eliminated the prior central disjointness problem (Commitment/Exploitation within `(Im(η))ᶜᶜ`) by making Commitment a gate inside each cell rather than a fifth cell competing for the closure region. A reader should hold the four-position partition as a *candidate* theorem with some pairwise disjointness immediate, some open. The gate's "yes/no" classification adds a binary annotation within each cell; it does not multiply cells.
 
 **The register's hazards.** The dictionary lives in the Heyting-algebraic / locale-theoretic / intuitionistic-logical register. Adjacent registers — manifold geometry, measure-concentration in high dimensions, Levin's apparatus, Tymoczko's voice-leading orbifolds — share vocabulary but not structure. Bridges between registers require explicit construction, not implicit transfer. See [`../lean/FalseWorkPapers/Positions/REGISTER.md`](../lean/FalseWorkPapers/Positions/REGISTER.md) for the framing-level discussion.
 
@@ -270,13 +308,13 @@ A reader should treat the music classifications as having a different epistemic 
 
 ## 9. What this document is and isn't, redux
 
-This is a sketch-quality formal apparatus with expository scaffolding. It records what has been settled in the closure-residue construction (the predicates, the three signature theorems, the registers and their hazards) and what has not (the central open problem, the Mathlib gap, the continuous-iteration question, the translation to the F-coalgebra register, the empirical-classification asymmetry).
+This is a sketch-quality formal apparatus with expository scaffolding. It records what has been settled (the closure-residue construction for Exploitation; the four-position partition as headline theorem candidate; the Commitment-as-gate reframe; the three signature theorems; the closure of the two-parameter unification question; the registers and their hazards) and what has not (the per-cell restricted-iteration characterizations, the Mathlib gap, the continuous-iteration question, the categorical specification of moments, the translation to the F-coalgebra register, the canonical-counterexample empirical test, the classification-anchoring asymmetry).
 
-The published-paper version is destined for Paper 3 § 4 in the v10.0 revision, conditional on at least open problem 1 (Commitment/Exploitation disjointness) clearing or being resolved by specialist engagement. Until then, this document and the Lean it points at are the framework's formal apparatus, with the validation claim ([`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md)) carrying the version-tracked schema and its hedges.
+The published-paper version is destined for Paper 3 § 4 in the v10.0 revision, conditional on at least the per-cell characterization (open problem 1) progressing or being engaged by specialist input. Until then, this document and the Lean it points at are the framework's formal apparatus, with the validation claim ([`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md)) carrying the version-tracked schema and its hedges.
 
-The document exists for category theorists or topos theorists who want to assess the apparatus. It is not for general readers — Paper 1 § 3.4 carries the verbal derivation of the five positions for that audience, and Paper 4 carries the ontological account of the comma's status. This document is what to send a Yanofsky, a Leinster, a Corfield, or a Mazzola when asking "is the apparatus coherent? what is it missing? where would a specialist push?"
+The document exists for category theorists or topos theorists who want to assess the apparatus. It is not for general readers — Paper 1 § 3.4 carries the verbal derivation of the dictionary for that audience, and Paper 4 carries the ontological account of the comma's status. This document is what to send a Yanofsky, a Leinster, a Corfield, or a Mazzola when asking "is the apparatus coherent? what is it missing? where would a specialist push?"
 
-If you are reading it to assess the framework's formal status: the apparatus is sketch-quality, the central open problem is named honestly, and the path from sketch to a Paper 3 v10.0 § 4 publishable-quality formalization is specified. Approximately 3–6 months of focused work on open problems 1–3, plus one round of specialist engagement, would close the path. Less work suffices for a more modest publishable artifact (a four-position dictionary plus the Commitment/Exploitation distinction as named open work).
+If you are reading it to assess the framework's formal status: the apparatus is sketch-quality, the open problems are named honestly, and the path from sketch to a Paper 3 v10.0 § 4 publishable-quality formalization is specified. The closure of the two-parameter unification question on 2026-05-10 and the dissolution of the prior central disjointness problem (Commitment/Exploitation in `(Im(η))ᶜᶜ`) under the gate reframe shortened the path materially: the headline theorem candidate is now the four-position partition (whose disjointness rests on a Heyting-algebra identity plus tractable Lean work), and the gate is documented honestly as schema-level architecture without claiming theorem-grade unity. Approximately 2–4 months of focused work on the Mathlib gap and the per-cell iteration characterizations, plus one round of specialist engagement, would close the path. Less work suffices for a more modest publishable artifact (the four-position partition plus the gate as documented schema, with the per-cell iterations as named open work).
 
 The framework is in a position to be evaluated, not yet in a position to claim resolution.
 
@@ -284,4 +322,8 @@ The framework is in a position to be evaluated, not yet in a position to claim r
 
 ## Provenance
 
-Draft created May 2026 following the closure-residue commitment for the Exploitation predicate (commit `205ada5`), the validation-claim v0.3 update recording the divergence from the F-coalgebra schema (commit `fe84c26`), and the register note clarification (commit `4917cdf`). The drafting was prompted in part by reflection on whether a separate "comma paper" was warranted; the conclusion was that the formal apparatus is sketch-quality, and that the appropriate venue is this expository companion document plus the Lean source plus the validation claim, with eventual escalation to Paper 3 § 4 v10.0 conditional on open problems clearing. Any further substantive change to the formal commitments — closure-residue, predicates, signature theorems, open problems — should land here as a patch, in the validation claim as a version bump, and in the Lean as commits, in that order or in parallel.
+Draft created May 2026 following the closure-residue commitment for the Exploitation predicate (commit `205ada5`), the validation-claim v0.3 update recording the divergence from the F-coalgebra schema (commit `fe84c26`), and the register note clarification (commit `4917cdf`). The drafting was prompted in part by reflection on whether a separate "comma paper" was warranted; the conclusion was that the formal apparatus is sketch-quality, and that the appropriate venue is this expository companion document plus the Lean source plus the validation claim, with eventual escalation to Paper 3 § 4 v10.0 conditional on open problems clearing.
+
+Revised 2026-05-10 following two related architectural moves: (i) the *Commitment-as-gate* reframe, which moved Commitment from a fifth lattice cell to a binary fixedness condition within each of the four cells, and dissolved the previously-named "Commitment/Exploitation disjointness within `(Im(η))ᶜᶜ`" problem (the dissolution being a consequence of the reframe rather than a solution); (ii) the *two-parameter unification* test in [`../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../lean/FalseWorkPapers/Positions/MomentRelative.lean), which closed the question of whether the four cell-restricted iterations derive from a single uniform construction (negative on theorem-grade, positive on schema-level). The revision reframes the dictionary as four-cells-plus-gate, replaces the dissolved central open problem with the per-cell characterization problem, and adds the four-claims-with-four-statuses table to §8.
+
+Any further substantive change to the formal commitments — closure-residue, predicates, signature theorems, open problems, gate architecture, moment-relativization — should land here as a patch, in the validation claim as a version bump, and in the Lean as commits, in that order or in parallel.

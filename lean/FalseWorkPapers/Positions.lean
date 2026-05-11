@@ -86,6 +86,34 @@ classifier dissent on multiple axes (e.g., Kurosawa's *Ikiru* and
   formalizable; the Commitment/Exploitation disjointness is now
   the framework's central open problem.
 
+## Two-parameter unification (closed 2026-05-10)
+
+The conversation of 2026-05-10 reopened the question of whether the
+four extension operators (Infrastructure's level-`n+1` iteration,
+Distribution's strategy-refinement, Exploitation's residue-coverage,
+Refusal's `D'`-iteration) might derive from a single underlying
+construction under *moment-relativization* — taking the boundary the
+position pushes against to be moment-dependent. The exploration in
+[`Positions/MomentRelative.lean`](Positions/MomentRelative.lean) runs
+the test the conversation specified (write `Pos[t] P` and check
+whether the right-hand side case-splits on `P`).
+
+**Result: negative on theorem-grade unification, positive on
+schema-level uniformity.** The four position predicates are
+propositional-shape-distinct (`≤ a`, straddle-`a`-and-`aᶜ`,
+`≤ aᶜᶜ ∧ ¬(≤ a)`, `≤ aᶜ`) and do not specialize from a single
+Heyting expression. The moment-relativized boundary state, the
+Heyting register, and the gate's fixed-point shape *are* uniform.
+The gate (Commitment-yes at position `P`) is operationally
+predicate-shape-uniform but does not derive from a single
+construction.
+
+The two-parameter-unification question is closed. The schema-level
+reading of Commitment-as-gate stands. The canonicity claim
+(moment-relative Commitment-yes as necessary for canonicity) is
+unaffected — it concerns each individual operator's fixed points,
+not their unification.
+
 ## Open questions, ranked
 
 1. **Commitment/Exploitation disjointness within `¬¬Im(η)`.** Both
@@ -168,6 +196,10 @@ not the structure.
   ranked open problems, for category-theorist and topos-theorist readers
   who want the apparatus without the Lean source
 * [`Positions/REGISTER.md`](Positions/REGISTER.md) — register note (Heyting / locale / intuitionistic)
+* [`Positions/MomentRelative.lean`](Positions/MomentRelative.lean) —
+  exploration file that closes the two-parameter-unification question
+  (2026-05-10) with a negative theorem-grade result and a positive
+  schema-level result. *Not* imported here; exploration only.
 * `validation/claims/five-position-derivation-formalization.md` —
   open theorem this file targets
 
