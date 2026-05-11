@@ -31,7 +31,7 @@ Two terms in this document are also standard category-theoretic vocabulary, used
 
 The fourth criterion is the structural one — what makes the kernel *generative through incompleteness*. Iterated perfect fifths do not return to the starting pitch (the Pythagorean comma is the irrational `log₂(3/2)`). Iterated cuts do not produce continuous experience. Iterated gravity-loaded structural decisions never resolve into stasis. The failure to close is what produces the work for the domain.
 
-Full development of the four criteria, with the empirical instantiations across six domains, is in Paper 1 § 3. The candidate seventh (generative AI under Levin's threshold logic) is in Paper 1 v11.7 § 2.1, and its formalization is the open work tracked at [`../validation/claims/threshold-kernel-candidate.md`](../validation/claims/threshold-kernel-candidate.md).
+Full development of the four criteria, with the empirical instantiations across six domains, is in Paper 1 § 3. The candidate seventh (generative AI under Levin's threshold logic) is in Paper 1 § 2.1 (introduced at v11.6, unchanged through v11.8), and its formalization is the open work tracked at [`../validation/claims/threshold-kernel-candidate.md`](../validation/claims/threshold-kernel-candidate.md).
 
 **Comma** in standard category theory denotes the comma category `(F ↓ G)` of a pair of functors. Lawvere–Mac Lane vocabulary.
 
@@ -111,7 +111,7 @@ DistinctionStructure C :=
   }
 ```
 
-The data is the endofunctor `D` (the kernel), the marking unit `η` (the act of drawing the distinction), and a Spencer-Brown-style idempotency witness (marking twice equals marking once). The *non-triviality* hypothesis is `∃ X, ¬ IsIso (η.app X)` — there is some object on which the kernel's marking is not invertible. Without non-triviality the five-position dictionary collapses to one.
+The data is the endofunctor `D` (the kernel), the marking unit `η` (the act of drawing the distinction), and a Spencer-Brown-style idempotency witness (marking twice equals marking once). The *non-triviality* hypothesis is `∃ X, ¬ IsIso (η.app X)` — there is some object on which the kernel's marking is not invertible. Without non-triviality the four-cell partition (and the gate that applies within each cell) collapses to a single trivial position.
 
 Spencer-Brown's *Laws of Form* (1969) gives the calculus of distinction-marking with two axioms — *calling* (marking twice is the same as marking once) and *crossing* (marking and unmarking cancel). The idempotency witness encodes calling at the natural-transformation level; the unit `η` encodes crossing.
 
@@ -121,7 +121,7 @@ The *kernel image* `Im(η)` at `Y` is the subobject of `D Y` cut out by the mark
 kernelImage Δ Y := Subobject.mk (image.ι (η.app Y))
 ```
 
-The five positions are characterized by where morphisms `f : X ⟶ Y` land relative to `kernelImage Δ Y` and its Heyting operations.
+The four cells (and the gate that applies within each cell) are characterized by where morphisms `f : X ⟶ Y` land relative to `kernelImage Δ Y` and its Heyting operations.
 
 ---
 

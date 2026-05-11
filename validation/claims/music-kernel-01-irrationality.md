@@ -3,7 +3,7 @@
 **Status:** BACKGROUND FACT (FTA-elementary; standard textbook result)
 **Lean formalization status:** CONFIRMED IDIOMATIC via Lean Zulip 2026-04-26 (Kevin Buzzard, "looks idiomatic" + two `loogle` searches confirming absence from current mathlib)
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
-**Paper:** Paper 3 § 4 (v9.1); Paper 5 § 4 (v1.1)
+**Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1); Paper 5 § 4 (v1.3; § 4 substantively unchanged since v1.1)
 **Domain:** Number theory (elementary)
 **Time estimate:** 5–10 minutes
 

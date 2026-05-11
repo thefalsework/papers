@@ -2,7 +2,7 @@
 
 **Status:** OPEN
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
-**Paper:** Paper 3 § 4 (v9.1); targeted for v10.0 revision
+**Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1 — the v9.4 architectural-status note refines the categorical object D1–D4 produces but not § 4 itself); targeted for v10.0 revision
 **Domain:** Category theory (elementary)
 **Time estimate:** 5–10 minutes
 
@@ -35,7 +35,7 @@ Therefore `Fix(D) = {∅}`.
 
 ## Implication for the paper
 
-Paper 3 § 4 (v9.1) carries language from earlier versions suggesting that `Fix(D)` is "the kernel — the minimal self-limiting operation of the domain." In the music-kernel setting this reading is false: `Fix(D)` is trivial (the empty set only). The v10.0 revision will reframe so that `Fix(D) = {∅}` is a *positive* result — the sign that the endofunctor is genuinely generative and has no non-trivial finite closure inside `C` — rather than an identification of the kernel with its fixed-point subcategory.
+Paper 3 § 4 (current v9.4; § 4 substantively unchanged since v9.1) carries language from earlier versions suggesting that `Fix(D)` is "the kernel — the minimal self-limiting operation of the domain." In the music-kernel setting this reading is false: `Fix(D)` is trivial (the empty set only). The v10.0 revision will reframe so that `Fix(D) = {∅}` is a *positive* result — the sign that the endofunctor is genuinely generative and has no non-trivial finite closure inside `C` — rather than an identification of the kernel with its fixed-point subcategory.
 
 ## What a validator should confirm
 

@@ -1,7 +1,7 @@
 # `optimal-ntet-continued-fraction` — Optimal N-TET ↔ continued-fraction convergents of log₂(3/2)
 
 **Status:** OPEN
-**Paper:** Paper 5 (Pythagorean) § 2.2, § 4.2, § 7.1 (v1.2)
+**Paper:** Paper 5 (Pythagorean) § 2.2, § 4.2, § 7.1 (v1.3; cited sections substantively unchanged since v1.2)
 **Related claims:** [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md), [`music-kernel-06-baker`](music-kernel-06-baker.md)
 **Domain:** Number theory (elementary; Diophantine approximation)
 **Time estimate for a validator:** 30 minutes to assess the statement; proof is classical

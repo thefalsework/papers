@@ -1,7 +1,7 @@
 # `g-r-c-practice-domains` — Extension of G∧R∧C to practice domains
 
 **Status:** OPEN (open research direction)
-**Paper:** Paper 1 § 3 and § 5 (v11.5); downgraded to structural analogy at Paper 3 § 7 (v9.1); Paper 1 § 2.1 (v11.5) reframes the question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence
+**Paper:** Paper 1 § 3 and § 5 (v11.8; §§ 3 and 5 substantively unchanged since v11.5); downgraded to structural analogy at Paper 3 § 7 (v9.4; § 7 substantively unchanged since v9.1); Paper 1 § 2.1 (v11.5) reframes the question through a G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence
 **Domain:** Formal logic, category theory, philosophy of mathematics
 **Time estimate:** unbounded
 

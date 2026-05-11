@@ -1,7 +1,7 @@
 # `cantor-cumulative-caveat` — Application of Cantor's power set theorem across four papers
 
 **Status:** OPEN
-**Paper:** canonical at Paper 4 § 2.5 (v5.1); invoked at Paper 1 § 2 (v11.3), Paper 2 § 2.3 (v8.2), Paper 3 § 9 (v9.1)
+**Paper:** canonical at Paper 4 § 2.5 (v5.3; § 2.5 substantively unchanged since v5.1); invoked at Paper 1 § 2 (v11.8; § 2 substantively unchanged since v11.5), Paper 2 § 2.3 (v8.2), Paper 3 § 9 (v9.4; § 9 substantively unchanged since v9.1)
 **Domain:** Set theory, formal logic, philosophy of mathematics
 **Time estimate for a competent validator:** 3–5 hours
 **GitHub issue:** [#3](https://github.com/thefalsework/papers/issues/3)

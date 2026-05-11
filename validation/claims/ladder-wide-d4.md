@@ -1,7 +1,7 @@
 # `ladder-wide-d4` — Does D4 hold for every rung of the arithmetical ladder?
 
 **Status:** OPEN (open research direction, not a one-hour validation)
-**Paper:** Paper 3 § 5.2 (v9.1)
+**Paper:** Paper 3 § 5.2 (v9.4; § 5.2 substantively unchanged since v9.1)
 **Domain:** Category theory, number theory, foundations of mathematics
 **Time estimate:** unbounded
 

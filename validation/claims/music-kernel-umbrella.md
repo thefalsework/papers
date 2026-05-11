@@ -1,7 +1,7 @@
 # `music-kernel-umbrella` — Six-point formalization of the music-kernel endofunctor
 
 **Status:** PARTIAL after calibration. Of the six original points: two (Point 1 and Point 6 Sub-target A) are now correctly classified as **background facts** — standard textbook results that require citation rather than validation, with the *Lean formalization* of those facts confirmed idiomatic via Lean Zulip 2026-04-26. The genuine **validation queue** consists of the remaining four points and one sub-target: Points 2, 3, 4, 5, and Point 6 Sub-target B (the effective Baker bound, blocked on upstream mathlib). See "Calibration note" below for the reasoning behind this split.
-**Paper:** Paper 3 § 4 (v9.1), targeted for v10.0 revision
+**Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1 — the v9.4 architectural-status note refines the categorical object D1–D4 produces but not § 4 itself), targeted for v10.0 revision
 **Related papers:** Paper 5 (Pythagorean) § 2–§ 4
 **Domain(s):** Category theory, number theory
 **Time estimate for a competent validator:** ~1 hour

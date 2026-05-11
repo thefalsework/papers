@@ -1,7 +1,7 @@
 # `paper4-higgs-vev-debt` — Higgs VEV magnitude explanatory debt
 
 **Status:** OPEN
-**Paper:** Paper 4 § 6.3 (v5.1)
+**Paper:** Paper 4 § 6.3 (v5.3; § 6.3 expanded in v5.3 with a scholarly-company paragraph naming Penrose / Smolin / Carroll / Verlinde — the VEV-magnitude debt itself is unchanged from v5.1)
 **Domain:** Physics (particle theory; quantum foundations)
 **Time estimate:** unbounded; open research engagement
 

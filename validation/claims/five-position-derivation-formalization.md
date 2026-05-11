@@ -1,7 +1,7 @@
 # `five-position-derivation-formalization` — The five-position schema as a categorical object, with three concrete instantiations (math, music, physics)
 
 **Status:** OPEN (v0.4 — two-parameter unification question (moment-relative `Pos[t] P`) tested in Lean 2026-05-10 and closed: negative on theorem-grade unification, positive on schema-level uniformity; the closure-residue Exploitation predicate and the Commitment-as-gate reframing both stand; no specialist consultation yet)
-**Papers:** Paper 1 § 3.4 (v11.7); Paper 3 § 4 (v9.3); feeds Paper 3 v10.0 revision
+**Papers:** Paper 1 § 3.4 (v11.8; architectural revision-note flags the four-cells-plus-gate refinement); Paper 3 § 4 (v9.4; architectural-status note); canonical prose statement at [`../../papers/comma-formal-structure-note.md`](../../papers/comma-formal-structure-note.md); feeds Paper 3 v10.0 revision
 **Domain(s):** Category theory; dynamical systems; mathematical logic; adjacent: number theory (math instantiation), music theory (music instantiation), foundations of quantum mechanics (physics instantiation)
 **Time estimate for a competent validator:** ~4–8 hours if the validator is already familiar with coalgebra / Lambek / Lawvere; longer if they are not
 **GitHub issue:** (pending)

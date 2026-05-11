@@ -1,7 +1,7 @@
 # `pythagorean-explanatory-debts` — Three open questions from Paper 5 § 7.5
 
 **Status:** OPEN
-**Paper:** Paper 5 (Pythagorean) § 7.5 (v1.1)
+**Paper:** Paper 5 (Pythagorean) § 7.5 (v1.3; § 7.5 substantively unchanged since v1.1)
 **Domain:** Number theory; foundations / philosophy of mathematics
 **Time estimate:** variable; each debt is independent
 

@@ -1,7 +1,7 @@
 # `ellis-cartwright-philosophical-support` — Ellis and Cartwright as scholarly precedent for domain-dependent formalism
 
 **Status:** OPEN
-**Papers:** Paper 1 § 5.4 (v11.4); Paper 3 § 7.3 (v9.2)
+**Papers:** Paper 1 § 5.4 (v11.8; § 5.4 substantively unchanged since v11.4); Paper 3 § 7.3 (v9.4; § 7.3 substantively unchanged since v9.2)
 **Domain(s):** Philosophy of science (emergence, multi-level ontology, philosophy of physics, philosophy of mathematics)
 **Time estimate for a competent validator:** ~2–4 hours (two primary texts plus the adjacent paper sections)
 **GitHub issue:** [#10](https://github.com/thefalsework/papers/issues/10)

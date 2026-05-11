@@ -1,7 +1,7 @@
 # `lawvere-unification-of-formal-groundings` — Cantor and Gödel as instances of Lawvere's fixed-point theorem; G ∧ R ∧ C as a domain-facing analog of Lawvere's hypothesis
 
 **Status:** OPEN
-**Papers:** Paper 1 § 2 and § 2.1 (v11.5)
+**Papers:** Paper 1 § 2 and § 2.1 (v11.8; §§ 2 and 2.1 substantively unchanged since v11.5)
 **Domain(s):** Category theory; mathematical logic; foundations of mathematics
 **Time estimate for a competent validator:** ~2–6 hours (three primary texts plus the two adjacent paper sections; more if the validator wants to assess Claim 3 in depth)
 **GitHub issue:** (pending)

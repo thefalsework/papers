@@ -291,8 +291,12 @@ This second point is where V2 could go interesting places.
 - Specification: Ellynne Dec, May 3 2026, on behalf of the
   Computational Metaphysics group.
 - Theoretical anchor: Paper 1 v11.6 (kernels and commas), Paper
-  2 v8.2 (distinction operation), `validation/OPEN.md` (open
+  3 v9.2 (distinction operation), `validation/OPEN.md` (open
   questions tracker), at <https://github.com/thefalsework/papers>.
+  (Versions cited reflect the framework state at the prototype's
+  2026-05-04 evaluation; the framework has since advanced to
+  Paper 1 v11.8 / Paper 3 v9.4 with the four-cells-plus-gate
+  architectural refinement — see [`../papers/comma-formal-structure-note.md`](../papers/comma-formal-structure-note.md).)
 - Empirical anchor: Tymoczko 2011 (voice-leading geometry),
   Cutting 2005 (six component processes in film viewing),
   Wolfram 2002 (NKS).

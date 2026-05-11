@@ -14,16 +14,18 @@ This repository holds the papers themselves, the open validation items they cont
 
 All papers are authored by **Chris Brink** (independent researcher), distributed under **CC-BY-4.0**, and cite each other as a coherent series. Papers 1–5 form the core research programme; paper 6 is an exploratory / practitioner-outcome companion. The Markdown source is authoritative; each released DOCX is preserved in the per-paper `archive/` subdirectory.
 
-| # | Paper | Current version | Source |
+| # | Paper | Current version | Latest DOCX archive |
 |---|---|---|---|
-| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.6 | [archive](papers/paper1-kernels-and-commas/archive/v11.6.docx) |
-| 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [archive](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
-| 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.2 | [archive](papers/paper3-distinction-operation/archive/v9.2.docx) |
-| 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.2 | [archive](papers/paper4-mathematics-as-comma/archive/v5.2.docx) |
-| 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.3 | [archive](papers/pythagorean-shared-floor/archive/v1.3.docx) |
-| 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.1 | [archive](papers/paper6-canonical-confrontation/archive/v2.1.docx) |
+| 1 | [Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations](papers/paper1-kernels-and-commas/paper1.md) | v11.8 | [v11.7](papers/paper1-kernels-and-commas/archive/v11.7.docx) † |
+| 2 | [Epistemic Dependency as Structural Condition](papers/paper2-epistemic-dependency/paper2.md) | v8.2 | [v8.2](papers/paper2-epistemic-dependency/archive/v8.2.docx) |
+| 3 | [The Distinction Operation and the Generative Floor](papers/paper3-distinction-operation/paper3.md) | v9.4 | [v9.3](papers/paper3-distinction-operation/archive/v9.3.docx) † |
+| 4 | [Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems](papers/paper4-mathematics-as-comma/paper4.md) | v5.3 | [v5.3](papers/paper4-mathematics-as-comma/archive/v5.3.docx) |
+| 5 | [The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor](papers/pythagorean-shared-floor/pythagorean.md) | v1.3 | [v1.3](papers/pythagorean-shared-floor/archive/v1.3.docx) |
+| 6 | [Canonical Confrontation: Kernel/Comma Topology and the Structural Production of Canonical Status](papers/paper6-canonical-confrontation/paper6.md) *(exploratory companion)* | v2.1 | [v2.1](papers/paper6-canonical-confrontation/archive/v2.1.docx) |
 
-A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md).
+† Paper 1 v11.8 and Paper 3 v9.4 are top-matter revision-note bumps recording an architectural refinement of the position dictionary (five positions → four-position partition + Commitment gate; see [`papers/comma-formal-structure-note.md`](papers/comma-formal-structure-note.md)). Body-level rewriting is deferred to Paper 1 v11.9 / Paper 3 v10.0; DOCX archives for v11.8 / v9.4 are deferred to those body-level revisions. The Markdown is authoritative; the latest DOCX archive (v11.7 / v9.3) carries the substrate against which v11.8 / v9.4 record their architectural note.
+
+A paper-by-paper overview with abstracts, current open validation items, and cross-reference graph lives at [`papers/INDEX.md`](papers/INDEX.md). The canonical statement of the refined four-cells-plus-gate architecture lives at [`papers/comma-formal-structure-note.md`](papers/comma-formal-structure-note.md), with the version-tracked validation status at [`validation/claims/five-position-derivation-formalization.md`](validation/claims/five-position-derivation-formalization.md) (currently v0.4).
 
 ---
 
@@ -36,7 +38,7 @@ Depending on your background and what brought you here:
 - **Philosopher / humanist / reception studies** → [Paper 2](papers/paper2-epistemic-dependency/paper2.md) (epistemic dependency as structural condition in AI-assisted scholarship) and [Paper 6](papers/paper6-canonical-confrontation/paper6.md) (canonical status as the structural trace of kernel-level confrontation — exploratory companion). Open item with a testable empirical prediction: [Issue #8](https://github.com/thefalsework/papers/issues/8).
 - **Philosopher of science (emergence, multi-level ontology, philosophy of physics)** → [Paper 1 § 5.4](papers/paper1-kernels-and-commas/paper1.md) and [Paper 3 § 7.3](papers/paper3-distinction-operation/paper3.md) cite Ellis (2016) and Cartwright (1999) as adjacent scholarly precedent for the paper's domain-dependent-formalism posture. Whether the citations are correctly scoped is an open validation claim: [Issue #10](https://github.com/thefalsework/papers/issues/10).
 - **Practitioner** (composer, architect, filmmaker, software engineer) → [**falsework.dev/kernels**](https://falsework.dev/kernels) (the registered kernels as a working navigational instrument) and [**falsework.dev/structural-profile**](https://falsework.dev/structural-profile) (the analysis pipeline that generates structural profiles of specific works).
-- **Lean 4 / formalization contributor** → [`lean/README.md`](lean/README.md) — full specification for the music-kernel endofunctor formalization target. Entry point for anyone who wants to turn the D1–D4 categorical sketch into a verified theorem.
+- **Lean 4 / formalization contributor** → [`lean/README.md`](lean/README.md) — formalization targets, including (i) the music-kernel endofunctor formalization (Paper 3 § 4, Tier 1–3 entries), and (ii) the in-flight four-position-partition + Commitment-gate sketch under [`lean/FalseWorkPapers/Positions/`](lean/FalseWorkPapers/) with the [`papers/comma-formal-structure-note.md`](papers/comma-formal-structure-note.md) expository companion.
 
 ---
 
@@ -49,7 +51,7 @@ Concretely:
 - Every `[REQUIRES FORMAL VALIDATION]` flag in the papers is mirrored as a structured entry in [`validation/OPEN.md`](validation/OPEN.md), with an authoritative claim statement in [`validation/claims/`](validation/claims/) and a matching [GitHub Issue](https://github.com/thefalsework/papers/issues) for discussion.
 - Any mathematician, philosopher, logician, or domain expert who wants to verify, correct, or dispute a claim can do so by opening an issue or PR. Acceptance criteria are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Resolved validations move to [`validation/RESOLVED.md`](validation/RESOLVED.md) with the validator's name (with permission) and a pointer to the revision that absorbed their feedback.
-- The `lean/` directory hosts a Lean 4 formalization target — currently a placeholder describing what a rigorous categorical formalization of the music-kernel endofunctor would look like; open to collaborators. See [`lean/README.md`](lean/README.md).
+- The `lean/` directory hosts Lean 4 formalization targets — the music-kernel endofunctor (six points, Tier 1–3) and the in-flight four-position-partition + Commitment-gate sketch under [`lean/FalseWorkPapers/Positions/`](lean/FalseWorkPapers/). Open to collaborators. See [`lean/README.md`](lean/README.md).
 - Outreach drafts for specific validator engagements (mathematicians, Lean community, philosophers) live in [`docs/outreach/`](docs/outreach/) — also version-controlled, also open to improvement.
 
 ---
@@ -88,7 +90,9 @@ The site is a separate codebase (proprietary). The papers in this repository are
 
 ### If you want to formalize the mathematics
 
-- The highest-leverage target is the six-point music-kernel formalization in Lean 4. See [`lean/README.md`](lean/README.md) for the full specification.
+- Two formalization targets are documented:
+  - **The six-point music-kernel formalization** (Lean 4 against current Mathlib). See [`lean/README.md`](lean/README.md) for the full specification — Tier 1 entries are accessible first-PR work.
+  - **The four-position-partition + Commitment-gate sketch** under [`lean/FalseWorkPapers/Positions/`](lean/FalseWorkPapers/), with the [`papers/comma-formal-structure-note.md`](papers/comma-formal-structure-note.md) expository companion. Sketch-quality; the `HeytingAlgebra (Subobject _)` Mathlib gap is the cleanest upstream-PR target (~200–400 lines following Mac Lane–Moerdijk IV.8) and unblocks three of the four cell predicates simultaneously.
 - Any categorical, number-theoretic, or set-theoretic formalization contribution is welcome. Acceptance criterion: passing `lake build` with the claimed theorem proved.
 
 ### If you want to propose a new open research direction

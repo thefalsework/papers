@@ -1,5 +1,20 @@
 # FalseWork Algebra Prototype (Wolfram Language)
 
+> **Note on framework version.** This prototype was assembled against
+> Paper 1 v11.6 (May 4, 2026) and references that version throughout its
+> source files and bundled artifacts. The framework has since advanced to
+> Paper 1 v11.8 (architectural revision-note bump recording the
+> *four-position partition + Commitment gate* refinement; see
+> [`../papers/comma-formal-structure-note.md`](../papers/comma-formal-structure-note.md)
+> for the canonical statement of the refined architecture). The
+> prototype's references reflect its 2026-05-04 evaluation state and are
+> left intact for reproducibility of the artifact at
+> [`results/wolfram-cloud-run-2026-05-04-v1.5.nb`](results/wolfram-cloud-run-2026-05-04-v1.5.nb).
+> The five-position-themed `PaperReference` annotations in the source
+> remain accurate to v11.6 § 3.4; the v11.8 architectural revision
+> retains the same empirical structure and refines its formal
+> description.
+
 A small Wolfram Language prototype that operationalises the FalseWork
 kernel/comma framework as a typed symbolic algebra over structural cores,
 demonstrating the four queries Ellynne Dec specified on behalf of the

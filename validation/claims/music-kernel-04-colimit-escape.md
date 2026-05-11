@@ -2,7 +2,7 @@
 
 **Status:** OPEN
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
-**Paper:** Paper 3 § 4 (v9.1); targeted for v10.0 revision
+**Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1); targeted for v10.0 revision
 **Domain:** Category theory, analysis (Weyl equidistribution)
 **Time estimate:** 10–15 minutes
 

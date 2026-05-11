@@ -1,7 +1,7 @@
 # `threshold-kernel-candidate` — The Threshold as Candidate Seventh Kernel (GenAI)
 
 **Status:** OPEN (open research direction)
-**Paper:** Paper 1 § 2.1 (v11.6); candidate seventh kernel proposed in light of Levin (2026a, 2026b)
+**Paper:** Paper 1 § 2.1 (v11.8; § 2.1 substantively unchanged since v11.6); candidate seventh kernel proposed in light of Levin (2026a, 2026b)
 **Domain:** Generative AI / philosophy of computation / philosophy of mind
 **Time estimate:** unbounded — multi-track validation problem
 

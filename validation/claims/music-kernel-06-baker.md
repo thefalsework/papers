@@ -4,7 +4,7 @@
 - **Sub-target A (qualitative non-vanishing `|12 log 3 − 19 log 2| ≠ 0`):** BACKGROUND FACT (FTA-elementary; standard textbook result). Lean formalization status: idiomatic statement confirmed via reduction to `music-kernel-01-irrationality` (Lean Zulip, 2026-04-26).
 - **Sub-target B (effective Baker quantitative bound):** OPEN — genuine validation target, blocked on Baker's theorem not being in current mathlib4.
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
-**Paper:** Paper 5 (Pythagorean) § 4 (v1.1); Paper 3 § 5 (v9.1)
+**Paper:** Paper 5 (Pythagorean) § 4 (v1.3; § 4 substantively unchanged since v1.1); Paper 3 § 5 (v9.4; § 5 substantively unchanged since v9.1)
 **Domain:** Number theory (transcendence)
 **Time estimate:** 30 min – 1 hour
 
