@@ -122,6 +122,8 @@ A note on the structure of falsification. The conditions specified above operate
 
 ### 3.4 Derivation of the Five Positions
 
+*Architectural status note. The derivation in this section produces a five-position dictionary. Under the v11.8 architectural refinement (top of this paper), the same verbal derivation is read as a four-position partition (Infrastructure, Distribution, Exploitation, Refusal) plus a Commitment gate operating within each cell as a binary fixedness condition; the encounter / non-encounter distinction and the field / geometry / limit partition of the encounter branch are unchanged. Section-level rewriting deferred to v11.9; the canonical revised statement is in [`../comma-formal-structure-note.md`](../comma-formal-structure-note.md).*
+
 Given a kernel K with a comma L --- the specific irresolvable gap K generates at its own boundary --- what are the structurally distinct positions a practitioner can occupy relative to L? Not stylistic positions. Not historical positions. Structural positions: how many fundamentally distinct relationships with a ceiling that cannot be broken through?
 
 The derivation follows from a structured decision tree --- one binary distinction followed by a partition of the encounter branch into three structural targets, with one target requiring a further binary distinction.
