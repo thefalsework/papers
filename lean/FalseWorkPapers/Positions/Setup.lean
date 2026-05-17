@@ -104,7 +104,7 @@ noncomputable def kernelImage (Δ : DistinctionStructure C) (Y : C) :
     Subobject (Δ.D.obj Y) :=
   Subobject.mk (image.ι (Δ.η.app Y))
 
-/-! ## Mathlib gap (verified 2026-05)
+/-! ## Mathlib gap (triaged 2026-05-17)
 
 Mathlib provides `SemilatticeInf`, `SemilatticeSup`, and `OrderTop`
 instances on `Subobject Y` under the standard limit hypotheses on `C`,
@@ -112,10 +112,21 @@ but does **not** yet provide a `HeytingAlgebra` instance for the
 case where `C` is a topos. The classical construction is in Mac
 Lane–Moerdijk Ch. IV.8 and is mechanizable in roughly 200–400 lines.
 
+The closest existing scaffold is Edward van de Meent's scratch
+project `edegeltje/CwFTT`, which builds `LE`, `PartialOrder`,
+`SemilatticeInf`, `And`, `Imp` (with full Heyting adjunction), and
+`Not` on `(X ⟶ Ω)` rather than `Subobject Y`. The two are order-
+isomorphic in any topos. The full upstream-dependency record —
+current state, options, posture, threshold conditions, and the six
+Heyting-gated `sorry`s in the sibling files — lives at
+`lean/HEYTING-GAP.md` in this repository.
+
 The sibling files work around this gap by *assuming* a local
 `[HeytingAlgebra (Subobject (Δ.D.obj _))]` hypothesis where needed.
-Once the upstream PR lands, those hypotheses become derivable from
-`HasClassifier C` plus the standard limits/colimits assumptions.
+Once the upstream instance lands (either via Edward's CwFTT path
+upstreaming or a parallel Mac Lane–Moerdijk IV.8 PR), those
+hypotheses become derivable from `HasClassifier C` plus the
+standard limits/colimits assumptions.
 
 The files that depend on this gap are **Refusal.lean**,
 **Distribution.lean**, **Exploitation.lean**, and **Partition.lean**
