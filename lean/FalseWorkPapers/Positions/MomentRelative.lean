@@ -87,8 +87,8 @@ two-parameter-unification question identified on 2026-05-10.
 
 ## Cross-reference
 
-* `Positions.lean` — five-position dictionary (settled definitions)
-* `Positions/Commitment.lean` — Commitment with continuous-iteration
+* `Positions.lean` — four-position-plus-gate dictionary (current architecture)
+* `Positions/CommitmentGate.lean` — gate schema with continuous-iteration
   open question
 * `papers/comma-formal-structure-note.md` — expository companion;
   this file's negative result is consistent with the schema-level
@@ -443,7 +443,7 @@ construction.
 /-- A schematic record of the uniform commitment gate at position `P`,
 moment `t`. The `fixedUnder` field is the binary fixedness condition
 in the `Pos' P`-restricted iteration; its full definition requires
-the iteration-and-colimit machinery from `Commitment.lean` and is
+the iteration-and-colimit machinery from `CommitmentGate.lean` and is
 left as a placeholder here.
 
 The structure is uniform across `P` and `t` — same shape, same
@@ -456,7 +456,7 @@ structure CommitmentGate
   inPosition : Pos' Δ B t f P
   fixedUnder : True  -- placeholder for the position-restricted-
                      -- iteration fixedness condition; see
-                     -- `Commitment.lean` for the iteration machinery
+                     -- `CommitmentGate.lean` for the iteration machinery
                      -- and the open question on continuous parameterization
 
 /-! ## Verdict

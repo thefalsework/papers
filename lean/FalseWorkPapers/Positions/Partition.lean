@@ -164,18 +164,44 @@ equivalent to `image(D.map f) ≤ (kernelImage Δ Y)ᶜ`.
 
 The current `IsRefusal` definition factors through the complement
 subobject; this lemma rewrites that factorization as the image-
-subobject containment used in the partition proof. -/
+subobject containment used in the partition proof.
+
+This is a standard image-factorization-through-mono equivalence:
+
+* (⇒) A factorization `D.map f = g ≫ m.arrow` (where `m` is a
+  subobject of `D Y`) implies `image(D.map f) ≤ m` because the image
+  of `D.map f` is the smallest subobject through which `D.map f`
+  factors, and `m` is one such subobject.
+
+* (⇐) A containment `image(D.map f) ≤ m` produces a factorization
+  via the composition of `factorThruImage (D.map f)` with the
+  subobject inclusion `image(D.map f) ⟶ m` (which exists by the
+  containment) and `m.arrow`.
+
+Both directions are routine but require the Mathlib image-and-
+subobject API (`Subobject.factorThru`, `Subobject.ofLE`,
+`image.factorThruImage`). Lemma names tentative pending verification. -/
 theorem isRefusal_iff_image_le_compl
     (Δ : DistinctionStructure C)
     [HeytingAlgebra (Subobject (Δ.D.obj _))]
     {X Y : C} (f : X ⟶ Y) :
     IsRefusal Δ f ↔
       Subobject.mk (image.ι (Δ.D.map f)) ≤ (kernelImage Δ Y)ᶜ := by
-  /- Proof: standard image-factorization-through-subobject lemma. The
-     factorization `D.map f = g ≫ (kᶜ).arrow` exists iff the image of
-     `D.map f` is contained in `kᶜ`. ≈ 20 lines using
-     `Subobject.factorThru_arrow` or its image-subobject analog. -/
-  sorry
+  constructor
+  · rintro ⟨g, hg⟩
+    -- `D.map f = g ≫ ((kᶜ).arrow)`, so `D.map f` factors through `kᶜ`.
+    -- Therefore the image of `D.map f` is bounded above by `kᶜ` in
+    -- the subobject lattice. The relevant lemma is
+    -- `Subobject.image_le_iff_factors_through` (or its analogue
+    -- via `image.lift` factoring through the mono `kᶜ.arrow`).
+    sorry
+  · intro h
+    -- From `image(D.map f) ≤ kᶜ`, get a morphism
+    -- `image(D.map f) ⟶ underlying(kᶜ)` realizing the inclusion (via
+    -- `Subobject.ofLE`), then compose with `factorThruImage (D.map f)`
+    -- to get `g : D X ⟶ underlying(kᶜ)` with
+    -- `D.map f = g ≫ (kᶜ).arrow`.
+    sorry
 
 /-! ## Status
 

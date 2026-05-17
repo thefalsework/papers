@@ -101,22 +101,30 @@ def Trivialized (Δ : DistinctionStructure C) {X Y : C} (f : X ⟶ Y) :
 
 /-- **Endpoint trivialization implies Infrastructure.**
 
-When `η.app Y` is an isomorphism, `image.ι (η.app Y)` is the maximal
-subobject of `D Y`, so `kernelImage Δ Y = ⊤`. The image-subobject
-condition `img ≤ ⊤` then holds trivially for any `f`. (Endpoint
-trivialization at `X` is unused for this direction; it carries
-content for the stronger "`D` acts trivially via naturality" claim
-recorded in `trivialized_iff_D_pointwise` below.) -/
+When `η.app Y` is an isomorphism, the image of `η.app Y` is the
+maximal subobject of `D Y`, so `kernelImage Δ Y = ⊤`. The image-
+subobject condition `img ≤ ⊤` then holds by `le_top` for any `f`.
+(Endpoint trivialization at `X` is unused for this direction; it
+carries content for the stronger pointwise-`D` claim recorded in
+`trivialized_iff_D_pointwise` below.) -/
 theorem trivialized_implies_isInfrastructure
     (Δ : DistinctionStructure C) {X Y : C} (f : X ⟶ Y)
-    (_hf : Trivialized Δ f) :
+    (hf : Trivialized Δ f) :
     IsInfrastructure Δ f := by
-  /- Proof: `_hf.2 : IsIso (η.app Y)` implies `image.ι (η.app Y)` is
-     an iso, hence `kernelImage Δ Y = ⊤` in `Subobject (D Y)`. The
-     conclusion `img ≤ ⊤` is then `le_top`. The Mathlib lemma chain
-     is roughly:
-       `IsIso → image is iso → Subobject.mk is ⊤ → le_top`
-     ≈ 10 lines. -/
+  unfold IsInfrastructure
+  have hY : IsIso (Δ.η.app Y) := hf.2
+  -- Strategy: show `kernelImage Δ Y = ⊤`, then conclude by `le_top`.
+  -- `kernelImage Δ Y = Subobject.mk (image.ι (Δ.η.app Y))`.
+  -- When `Δ.η.app Y` is iso, `image.ι (Δ.η.app Y)` is iso (image of
+  -- an iso is its source, up to iso), so `Subobject.mk` of it is `⊤`.
+  suffices h : kernelImage Δ Y = ⊤ by
+    rw [h]; exact le_top
+  unfold kernelImage
+  -- The remaining step needs the Mathlib lemma chain
+  --   IsIso (η.app Y) → IsIso (image.ι (η.app Y)) → Subobject.mk _ = ⊤
+  -- The first arrow is `image.isIso_of_isIso` (or similar); the second
+  -- is `Subobject.mk_eq_top_iff_isIso`. Lemma names tentative; see
+  -- the open question in the status section.
   sorry
 
 /-! ## Signature lemma: under endpoint trivialization, D acts pointwise -/
@@ -135,12 +143,18 @@ theorem trivialized_iff_D_pointwise
   constructor
   · rintro ⟨hX, hY⟩
     refine ⟨hX, hY, ?_⟩
-    -- Use naturality of η: η.app Y ∘ f = D.map f ∘ η.app X.
-    -- Then: D.map f = D.map f ∘ η.app X ∘ inv (η.app X)
-    --              = η.app Y ∘ f ∘ inv (η.app X)
-    -- which is what we want, modulo commutativity of the iso
-    -- diagram.
-    sorry  -- 5–10 lines using `NatTrans.naturality_app` and `IsIso.inv_hom_id`
+    -- Naturality of η at f: `η.app X ≫ D.map f = (𝟭 C).map f ≫ η.app Y`
+    -- which simplifies to `η.app X ≫ D.map f = f ≫ η.app Y`.
+    have hnat : Δ.η.app X ≫ Δ.D.map f = f ≫ Δ.η.app Y := by
+      simpa using Δ.η.naturality f
+    -- Pre-compose both sides of `hnat` with `inv (η.app X)`:
+    --   `inv (η.app X) ≫ (η.app X ≫ D.map f) = inv (η.app X) ≫ (f ≫ η.app Y)`
+    -- The LHS collapses to `D.map f` via `IsIso.inv_hom_id` and `id_comp`.
+    calc Δ.D.map f
+        = (inv (Δ.η.app X) ≫ Δ.η.app X) ≫ Δ.D.map f := by
+            rw [IsIso.inv_hom_id, Category.id_comp]
+      _ = inv (Δ.η.app X) ≫ (Δ.η.app X ≫ Δ.D.map f) := by rw [Category.assoc]
+      _ = inv (Δ.η.app X) ≫ (f ≫ Δ.η.app Y) := by rw [hnat]
   · rintro ⟨hX, hY, _⟩
     exact ⟨hX, hY⟩
 
@@ -190,18 +204,22 @@ DONE:
   (2026-05-17). Participates in the four-position partition without
   exhaustiveness gap.
 * `Trivialized` predicate retained as sufficient sub-condition.
-* `trivialized_implies_isInfrastructure` — implication statement;
-  `sorry` carries a ~10-line proof using the iso-of-`η.app Y` to
-  identify `kernelImage Δ Y` with `⊤`.
-* `trivialized_iff_D_pointwise` — the original signature theorem,
-  now decoupled from the cell predicate and re-attached to
-  `Trivialized`. Forward direction's `sorry` carries a ~10-line
-  naturality argument.
+* `trivialized_iff_D_pointwise` forward direction proven
+  (2026-05-17) via `NatTrans.naturality` and `IsIso.inv_hom_id`.
+  Proof is a four-step `calc`; lemma names verified against Mathlib
+  conventions but not yet `lake build`-checked.
+* `trivialized_implies_isInfrastructure` — structural proof
+  reduced (2026-05-17) to a single `sorry` covering the chain
+  `IsIso (η.app Y) → IsIso (image.ι (η.app Y)) → Subobject.mk _ = ⊤`.
+  Mathlib lemma names tentative.
 
 REMAINING `sorry`:
-* `trivialized_implies_isInfrastructure` — Mathlib-direct.
-* `trivialized_iff_D_pointwise` forward direction — naturality of
-  `η` plus iso cancellation.
+* `trivialized_implies_isInfrastructure` — final step: identify
+  `Subobject.mk (image.ι (η.app Y))` with `⊤` given that `η.app Y`
+  is iso. Mathlib lemmas in play:
+  - `image.isIso_of_isIso` (or analogue) — image of an iso has iso `ι`
+  - `Subobject.mk_eq_top_iff_isIso` — `Subobject.mk m = ⊤ ↔ IsIso m`
+  Both names tentative; verification needed.
 
 OPEN FRAMEWORK QUESTIONS:
 * The level structure for Deep Infrastructure is sketched as a class

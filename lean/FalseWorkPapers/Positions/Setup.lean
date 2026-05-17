@@ -7,7 +7,7 @@ Authors: Chris Brink (FalseWork)
 # Setup for the four-position partition + Commitment gate formalization
 
 Shared definitions used by `Infrastructure.lean`, `Distribution.lean`,
-`Exploitation.lean`, `Refusal.lean`, `Commitment.lean`, and
+`Exploitation.lean`, `Refusal.lean`, `CommitmentGate.lean`, and
 `Partition.lean`.
 
 The files together formalize the framework's structural dictionary in
@@ -36,7 +36,7 @@ binary gate inside each cell rather than a fifth cell of its own.
 Each sibling file consumes this setup. The four cell files define a
 predicate `IsXxx Δ f` plus a *signature theorem* characterising the
 cell. `Partition.lean` states the four-position partition theorem.
-`Commitment.lean` documents the gate schema.
+`CommitmentGate.lean` documents the gate schema.
 -/
 
 import Mathlib.CategoryTheory.Topos.Classifier
@@ -121,7 +121,7 @@ The files that depend on this gap are **Refusal.lean**,
 **Distribution.lean**, **Exploitation.lean**, and **Partition.lean**
 (the partition theorem requires the Heyting structure to perform the
 case-split that produces the four cells). **Infrastructure.lean** and
-**Commitment.lean** can be stated without the Heyting structure
+**CommitmentGate.lean** can be stated without the Heyting structure
 (image-subobject inequality and colimit machinery respectively, both
 already in Mathlib).
 -/

@@ -22,7 +22,7 @@ The architecture has **two structural layers**:
   *within each cell*, not as a fifth cell of its own. The gate's
   uniformity is schema-level (uniform shape across cells, content
   cell-specific); its theorem-grade unification was tested on
-  2026-05-10 and closed negative. See `Commitment.lean` and
+  2026-05-10 and closed negative. See `CommitmentGate.lean` and
   `MomentRelative.lean`.
 
 This index supersedes the earlier "five-position theorem" framing
@@ -53,9 +53,9 @@ iteration of `D`, i.e., at the structural limit of the cell) or
 
 | Layer            | File                                          |
 |------------------|-----------------------------------------------|
-| Partition theorem| `Partition.lean` — Theorem 0                  |
-| Commitment gate  | `Commitment.lean` — schema-level uniformity   |
-| Gate exploration | `MomentRelative.lean` — 2-parameter closed neg|
+| Partition theorem| `Partition.lean` — Theorem 0                       |
+| Commitment gate  | `CommitmentGate.lean` — schema-level uniformity    |
+| Gate exploration | `MomentRelative.lean` — 2-parameter closed neg     |
 
 ## Status of each cell predicate
 
@@ -111,7 +111,7 @@ image-subobject characterisation, Heyting trichotomy).
 > content of `iter_P` is cell-specific (the iteration takes place in
 > a different subcategory for each cell).*
 
-The schema is documented in `Commitment.lean`. The schema-level
+The schema is documented in `CommitmentGate.lean`. The schema-level
 uniformity vs. theorem-grade unification distinction is the result of
 the 2026-05-10 exploration in `MomentRelative.lean`.
 
@@ -194,5 +194,5 @@ import FalseWorkPapers.Positions.Infrastructure
 import FalseWorkPapers.Positions.Distribution
 import FalseWorkPapers.Positions.Exploitation
 import FalseWorkPapers.Positions.Refusal
-import FalseWorkPapers.Positions.Commitment
+import FalseWorkPapers.Positions.CommitmentGate
 import FalseWorkPapers.Positions.Partition
