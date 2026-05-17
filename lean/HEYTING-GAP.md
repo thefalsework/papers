@@ -2,7 +2,7 @@
 
 **Status:** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
 
-**Last update:** 2026-05-17.
+**Last update:** 2026-05-17 (afternoon — second Zulip follow-up from Edward van de Meent on `instCompleteLattice`; see Engagement record and Additional technical path below).
 
 ---
 
@@ -22,6 +22,7 @@ Available now in `Mathlib.CategoryTheory.Subobject.Lattice`:
 - `SemilatticeSup (Subobject Y)` — join via image of coproduct
 - `OrderTop (Subobject Y)` — top element via the identity subobject
 - `OrderBot (Subobject Y)` — bottom element when `C` has an initial object that is strict
+- `CompleteLattice (Subobject Y)` — `instCompleteLattice`, under the standard limit/colimit hypotheses (`HasPullbacks`, `HasImages`, well-poweredness as needed). Surfaced by Edward van de Meent in the second Zulip follow-up (2026-05-17 afternoon); not noted in our original triage. See `docs#CategoryTheory.Subobject.instCompleteLattice`.
 - Various `Subobject` ↔ `(Y ⟶ Ω)` correspondences via `Subobject.representativeIsoCorepresented` and friends
 
 **Not available:**
@@ -59,6 +60,22 @@ What CwFTT has, as of 2026-05:
 4. Transport across the `Subobject Y ≃o (Y ⟶ Ω)` order-isomorphism to produce `HeytingAlgebra (Subobject Y)`
 
 Edward's repository is **scratch** — not Mathlib. Direct dependency on it is fragile. Its value is as roadmap and proof-technique reference, not as importable library.
+
+---
+
+## Three technical paths to the instance
+
+(Distinct from the four *strategic postures* in the next section, which are about whether/when/how to engage. The technical paths are about how the proof itself would go.)
+
+**Path 1 — Mac Lane–Moerdijk IV.8 direct construction.** Build `HeytingAlgebra (Subobject Y)` from scratch by constructing the pseudo-complement explicitly via the subobject classifier and the internal exponential. ~200–400 lines. Self-contained: doesn't depend on Edward's work or on Mathlib's lattice instance graph for the Heyting structure (uses them only as targets).
+
+**Path 2 — Extend `instCompleteLattice` to `Order.Frame`.** Mathlib already has `CompleteLattice (Subobject Y)`. In Mathlib's order hierarchy, a complete lattice satisfying the frame law `a ⊓ ⨆ S = ⨆ {a ⊓ s | s ∈ S}` is automatically a complete Heyting algebra via the adjoint functor theorem on `⊓`, and the `HeytingAlgebra` instance falls out by typeclass resolution. The work shifts entirely to proving the frame law for `Subobject Y` in an elementary topos. That follows from pullback preserving colimits — standard topos theory; in particular, monomorphisms are stable under colimits in a regular category, and pullback along a fixed morphism is a left adjoint to its right Kan extension along the same — but **is not yet wired through Mathlib's `Subobject` API**. Surfaced by Edward 2026-05-17 afternoon. Likely the most idiomatic-for-Mathlib path because it slots into the existing instance graph instead of introducing parallel structure.
+
+  Caveat: before committing to this path, the exact derivation `CompleteLattice + Order.Frame → HeytingAlgebra` in current Mathlib needs to be verified — the conceptual story is standard but the typeclass plumbing changes between Mathlib versions, and the hypotheses on `instCompleteLattice` itself need checking against `[HasClassifier C]`.
+
+**Path 3 — CwFTT `(X ⟶ Ω)` transport.** Use Edward's existing `HImp (X ⟶ Ω)` Heyting structure on `(X ⟶ Ω)`; finish the missing CwFTT pieces (`Or.lean`, the `truth_not` sorry, the lattice/Heyting wrapper); transport across the order-isomorphism `Subobject Y ≃o (Y ⟶ Ω)` provided by the classifier. ~300–500 lines of new Lean total. Most direct lift of work already done. Depends on Edward's repo continuing to exist; for upstreaming to Mathlib, the `(X ⟶ Ω)` work itself would need to land first.
+
+All three paths terminate at the same `HeytingAlgebra (Subobject Y)` instance. Choosing between them is a question of which leverage we want to use — explicit topos-classical construction (1), idiomatic Mathlib instance-graph extension (2), or transport from existing CwFTT scaffold (3).
 
 ---
 
@@ -131,6 +148,7 @@ Re-evaluation cadence: quarterly. Next review 2026-08-17.
 
 - **2026-05 Zulip thread.** Author-drafted question on `leanprover.zulipchat.com` confirming the absence of `HeytingAlgebra (Subobject Y)` for elementary topoi. Edward van de Meent confirmed the gap and pointed to (i) Jaap van Oosten's topos-theory lecture notes as his source for the proofs and (ii) his scratch project `edegeltje/CwFTT` as scaffolding in progress.
 - **2026-05 follow-up.** Reviewed CwFTT contents (`Classifier/Semilattice.lean`, `Classifier/Ops/`). Identified that ~60–70 % of the operator-level work for a Heyting instance is already done on `(X ⟶ Ω)`. Recorded the threshold and posture above.
+- **2026-05-17 afternoon follow-up.** Edward pointed at `docs#CategoryTheory.Subobject.instCompleteLattice` — `CompleteLattice (Subobject Y)` is already in Mathlib under standard limit hypotheses; our original triage had missed it. His framing: "in theory you could try to extend that," with the caveat "the problem will be proving that elementary topoi satisfy those conditions." Interpreted as a third technical path: extend the complete-lattice instance to `Order.Frame` by proving the frame law on `Subobject Y` in a topos (which follows from pullback preserving colimits, but is not yet threaded through the `Subobject` API), and let `HeytingAlgebra` derive through Mathlib's existing instance graph. Path documented in `## Three technical paths to the instance` above. Authored reply on Zulip acknowledging the pointer and naming the frame-condition trade-off; posture (C) unchanged.
 - **Related Mathlib PRs in flight from Edward.**
   - [#37045](https://github.com/leanprover-community/mathlib4/pull/37045) — Pullback squares in cartesian monoidal categories
   - [#37844](https://github.com/leanprover-community/mathlib4/pull/37844) — Strict bicategory of partial maps in a category
