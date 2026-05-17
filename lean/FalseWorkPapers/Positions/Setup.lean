@@ -4,29 +4,39 @@ Released under the same license as the rest of the FalseWork Papers.
 
 Authors: Chris Brink (FalseWork)
 
-# Setup for the five-position formalization
+# Setup for the four-position partition + Commitment gate formalization
 
 Shared definitions used by `Infrastructure.lean`, `Distribution.lean`,
-`Exploitation.lean`, `Commitment.lean`, and `Refusal.lean`.
+`Exploitation.lean`, `Refusal.lean`, `Commitment.lean`, and
+`Partition.lean`.
 
-The five files together formalize the candidate dictionary from
-Paper 1 v11.7 § 4 (the five-position theorem) in the topos register
-described in Paper 3 v9.3 § 2 and the asymmetry-principle opening of
-Paper 1 v11.7 § 1.
+The files together formalize the framework's structural dictionary in
+the topos register described in `papers/comma-formal-structure-note.md`.
+The architecture has two layers: a four-position partition over
+morphisms (theorem-grade) plus a Commitment gate applied within each
+cell (schema-grade). This index in `Positions.lean`; the partition
+theorem in `Partition.lean`; the cell predicates in the four
+position files.
+
+The "five-position" framing of Paper 1 v11.7 §4 was superseded on
+2026-05-10 when the two-parameter-unification exploration in
+`MomentRelative.lean` showed that Commitment is best understood as a
+binary gate inside each cell rather than a fifth cell of its own.
 
 ## What this file provides
 
 * `DistinctionStructure C` — the topos endofunctor `D` with unit `η`
   and Spencer-Brown idempotency, parameterizing the framework's kernel.
 * `DistinctionStructure.NonTrivial Δ` — the formal hypothesis that the
-  kernel introduces a productive asymmetry. Without this, the five
-  positions collapse.
+  kernel introduces a productive asymmetry. Without this, the four
+  cells collapse (Infrastructure becomes the only inhabited cell).
 * `kernelImage Δ Y` — the subobject of `D Y` reached by `η.app Y`.
   Operationally, the framework's `Im(η)`.
 
-The five sibling files each consume this setup and define one of the
-five positions as a predicate `IsXxx Δ f` plus a candidate
-*signature theorem* characterising that position.
+Each sibling file consumes this setup. The four cell files define a
+predicate `IsXxx Δ f` plus a *signature theorem* characterising the
+cell. `Partition.lean` states the four-position partition theorem.
+`Commitment.lean` documents the gate schema.
 -/
 
 import Mathlib.CategoryTheory.Topos.Classifier
@@ -102,16 +112,18 @@ but does **not** yet provide a `HeytingAlgebra` instance for the
 case where `C` is a topos. The classical construction is in Mac
 Lane–Moerdijk Ch. IV.8 and is mechanizable in roughly 200–400 lines.
 
-The five sibling files work around this gap by *assuming* a local
+The sibling files work around this gap by *assuming* a local
 `[HeytingAlgebra (Subobject (Δ.D.obj _))]` hypothesis where needed.
 Once the upstream PR lands, those hypotheses become derivable from
 `HasClassifier C` plus the standard limits/colimits assumptions.
 
-The three position-files that depend on this gap are
-**Refusal.lean**, **Distribution.lean**, and **Exploitation.lean**.
-**Infrastructure.lean** and **Commitment.lean** can be stated without
-the Heyting structure (they use functor-iso and colimit machinery
-respectively, which are already in Mathlib).
+The files that depend on this gap are **Refusal.lean**,
+**Distribution.lean**, **Exploitation.lean**, and **Partition.lean**
+(the partition theorem requires the Heyting structure to perform the
+case-split that produces the four cells). **Infrastructure.lean** and
+**Commitment.lean** can be stated without the Heyting structure
+(image-subobject inequality and colimit machinery respectively, both
+already in Mathlib).
 -/
 
 end FalseWork.Positions

@@ -4,137 +4,135 @@ Released under the same license as the rest of the FalseWork Papers.
 
 Authors: Chris Brink (FalseWork)
 
-# The five-position dictionary
+# The four-position partition + Commitment gate dictionary
 
-This is the index file for the candidate formalization of the
-five-position theorem from Paper 1 v11.7 § 4 in the topos register
-described in Paper 3 v9.3 § 2 and the asymmetry-principle opening of
-Paper 1 v11.7 § 1.
+This is the index file for the framework's structural dictionary in
+the topos register, as committed in `papers/comma-formal-structure-note.md`
+(2026-05-17 revision).
+
+The architecture has **two structural layers**:
+
+* A **four-position partition** over morphisms — Infrastructure,
+  Distribution, Exploitation, Refusal — disjoint and exhaustive over
+  the morphism space of `C` (modulo the trivial-image edge case).
+  This is the theorem-grade core. See `Partition.lean` for the
+  partition theorem (Theorem 0).
+
+* A **Commitment gate** — a binary fixedness condition applied
+  *within each cell*, not as a fifth cell of its own. The gate's
+  uniformity is schema-level (uniform shape across cells, content
+  cell-specific); its theorem-grade unification was tested on
+  2026-05-10 and closed negative. See `Commitment.lean` and
+  `MomentRelative.lean`.
+
+This index supersedes the earlier "five-position theorem" framing
+(Paper 1 v11.7 §4) following the architectural refinement on
+2026-05-10. The reframe was driven by Lean exploration showing that
+treating Commitment as a fifth cell created a Commitment/Exploitation
+disjointness problem inside `(Im(η))ᶜᶜ` that *dissolves* once
+Commitment is recognized as a gate operating within each cell.
 
 ## The dictionary
 
-For a category `C` (a "field of practice") equipped with a non-trivial
-`DistinctionStructure Δ` (the kernel: an idempotent endofunctor `D`
-with marking unit `η`), every morphism `f : X ⟶ Y` falls into one of
-five disjoint structural classes:
+For a category `C` (a "field of practice") equipped with a
+non-trivial `DistinctionStructure Δ` (an idempotent endofunctor `D`
+with marking unit `η`), every morphism `f : X ⟶ Y` with non-trivial
+`D`-image falls into one of four disjoint structural cells:
 
-| Position       | Definition (informal)                                       | File                  |
-|----------------|-------------------------------------------------------------|-----------------------|
-| Infrastructure | `η` invertible at endpoints; `D` acts trivially             | `Infrastructure.lean` |
-| Distribution   | `D.map f` straddles `Im(η)` and `¬Im(η)`                    | `Distribution.lean`   |
-| Exploitation   | `img(D.map f) ≤ ¬¬Im(η)` and `img ⊄ Im(η)` (closure-residue)| `Exploitation.lean`   |
-| Commitment     | `f ≅ colim D^n(g)` (asymptotic, one pole pursued)           | `Commitment.lean`     |
-| Refusal        | `D.map f` factors through `(Im(η))ᶜ`                        | `Refusal.lean`        |
+| Cell           | Predicate (informal)                              | File                  |
+|----------------|---------------------------------------------------|-----------------------|
+| Infrastructure | `image(D.map f) ≤ Im(η)`                          | `Infrastructure.lean` |
+| Distribution   | `image(D.map f)` straddles `Im(η)` and `(Im(η))ᶜ` | `Distribution.lean`   |
+| Exploitation   | `image(D.map f) ≤ (Im(η))ᶜᶜ ∧ ¬(≤ Im(η))`         | `Exploitation.lean`   |
+| Refusal        | `image(D.map f) ≤ (Im(η))ᶜ`                       | `Refusal.lean`        |
 
-**Framework commitment (2026-05-09): closure-residue construction.**
-The comma object `L_d` is the closure-residue territory — defined
-at the level of generalized elements as the property
-`Im(D.map f) ≤ ¬¬Im(η) ∧ Im(D.map f) ⊄ Im(η)`. Note that
-`¬¬Im(η) ∖ Im(η)` is empty as a strict Heyting sub-element
-(`¬¬a ⊓ ¬a = ⊥` is a Heyting identity); the residue is well-defined
-only at the level of generalized elements, not as a single
-subobject. Exploitation factors into this territory; no separate
-`CommaObject` parameter is needed. Exploitation and Refusal occupy
-disjoint Heyting regions (`(Im(η))ᶜᶜ` and `(Im(η))ᶜ` respectively),
-both leveraging non-Boolean structure.
+Within each cell `P`, a morphism `f` is additionally either
+**Commitment-yes at `P`** (a fixed point of the cell-restricted
+iteration of `D`, i.e., at the structural limit of the cell) or
+**Commitment-no at `P`**. This is the gate.
 
-## The theorem candidate
+| Layer            | File                                          |
+|------------------|-----------------------------------------------|
+| Partition theorem| `Partition.lean` — Theorem 0                  |
+| Commitment gate  | `Commitment.lean` — schema-level uniformity   |
+| Gate exploration | `MomentRelative.lean` — 2-parameter closed neg|
 
-> *Theorem candidate (revised, Paper 1 v11.7 § 4).* Let `C` be an
-> elementary topos equipped with a non-trivial distinction structure
-> `Δ`. Suppose `C` is non-Boolean (so the internal logic is
-> intuitionistic but not classical) and equipped with a comma-object
-> structure `Λ : CommaObject Δ`. Then every morphism `f : X ⟶ Y` in
-> `C` falls into exactly one of the five disjoint classes
-> `IsInfrastructure`, `IsDistribution`, `IsExploitation Λ`,
-> `IsCommitment`, `IsRefusal` — modulo a hybrid region at adjacent-
-> position boundaries whose "thickness" is computable from `Δ`'s
-> behavior.
+## Status of each cell predicate
 
-The disjointness claim and the exhaustiveness claim (modulo the
-hybrid region) are the substantive content. The hybrid region
-explains the empirical observation that some works produce
-classifier dissent on multiple axes (e.g., Kurosawa's *Ikiru* and
-*Throne of Blood*).
-
-## Status of each position
-
-* **Infrastructure.** Cleanest standalone — `IsIso (η.app _)`, no
-  Heyting needed. Signature theorem `D.map f` is determined by `f`
-  via `η`'s naturality.
+* **Infrastructure (revised 2026-05-17).** Image-subobject condition
+  `img ≤ kernelImage`. The earlier endpoint-iso predicate
+  (`IsIso (η.app X) ∧ IsIso (η.app Y)`) was retired because it would
+  have left an exhaustiveness hole; it survives as the sufficient
+  sub-condition `Trivialized` (a degenerate case where the kernel is
+  transparent at the work's endpoints). Signature lemma:
+  `Trivialized` implies `D` acts pointwise via `η`'s naturality.
 
 * **Refusal.** Clean *given* Heyting structure on `Subobject _`.
-  Asymptotic-residue theorem follows from intuitionistic
-  `¬¬a > a` strict-inequality in non-Boolean topoi.
+  Asymptotic-residue theorem (`refusal_residue`) follows from the
+  intuitionistic strict inequality `Im(η) < (Im(η))ᶜᶜ` in non-Boolean
+  topoi.
 
 * **Distribution.** Clean given Heyting structure. Signature theorem:
-  Distribution sits strictly between Infrastructure (where image
-  ⊆ `Im(η)`) and Refusal (where image ⊆ `¬Im(η)`).
+  Distribution sits strictly between Infrastructure (image entirely
+  in `Im(η)`) and Refusal (image entirely in `(Im(η))ᶜ`).
 
-* **Commitment.** Needs continuous-iteration refinement of `D`
-  (Spencer-Brown's discrete idempotency collapses the iterated
-  diagram). With `Ind`-objects, the colimit-formulation works; needs
-  framework-level decision on the right hypothesis.
+* **Exploitation (closure-residue committed 2026-05-09).** Factors
+  into `(Im(η))ᶜᶜ` but not into `Im(η)` (at the level of generalized
+  elements). Two signature theorems committed: `exploitation_requires_nonBoolean`
+  and `exploitation_refusal_disjoint`. The earlier
+  Commitment/Exploitation disjointness problem inside `(Im(η))ᶜᶜ`
+  *dissolved* on 2026-05-10 with the gate reframe — Commitment is
+  no longer a separate cell competing with Exploitation for the
+  closure-residue region.
 
-* **Exploitation.** *Closure-residue committed 2026-05-09.*
-  Exploitation factors into `¬¬Im(η)` but not into `Im(η)` (at the
-  level of generalized elements). Two signature theorems committed
-  (non-Boolean dependence, disjointness from Refusal). A third
-  theorem distinguishing Exploitation from Commitment within
-  `¬¬Im(η)` was drafted and *withdrawn* — see open question 1
-  below. The closure-residue commitment makes Exploitation
-  formalizable; the Commitment/Exploitation disjointness is now
-  the framework's central open problem.
+## The partition theorem
 
-## Two-parameter unification (closed 2026-05-10)
+> *Theorem 0 (Four-position partition).* Let `Δ` be a non-trivial
+> distinction structure on an elementary topos `C` with the requisite
+> Heyting structure on its subobject lattices. For every morphism
+> `f : X ⟶ Y` in `C` with non-trivial `D`-image, exactly one of
+> `IsInfrastructure Δ f`, `IsDistribution Δ f`, `IsExploitation Δ f`,
+> `IsRefusal Δ f` holds. The four cells are pairwise disjoint
+> Heyting conditions on `(image(D.map f), kernelImage Δ Y)` and
+> exhaustive over the morphism space of `C` (modulo the trivial-image
+> edge case, in which every cell holds vacuously).
 
-The conversation of 2026-05-10 reopened the question of whether the
-four extension operators (Infrastructure's level-`n+1` iteration,
-Distribution's strategy-refinement, Exploitation's residue-coverage,
-Refusal's `D'`-iteration) might derive from a single underlying
-construction under *moment-relativization* — taking the boundary the
-position pushes against to be moment-dependent. The exploration in
-[`Positions/MomentRelative.lean`](Positions/MomentRelative.lean) runs
-the test the conversation specified (write `Pos[t] P` and check
-whether the right-hand side case-splits on `P`).
+The statement is in `Partition.lean`. The proof is `sorry` pending
+the Mathlib `HeytingAlgebra (Subobject Y)` instance for topoi (the
+upstream gap noted in `Setup.lean`) and two auxiliary lemmas (Refusal
+image-subobject characterisation, Heyting trichotomy).
 
-**Result: negative on theorem-grade unification, positive on
-schema-level uniformity.** The four position predicates are
-propositional-shape-distinct (`≤ a`, straddle-`a`-and-`aᶜ`,
-`≤ aᶜᶜ ∧ ¬(≤ a)`, `≤ aᶜ`) and do not specialize from a single
-Heyting expression. The moment-relativized boundary state, the
-Heyting register, and the gate's fixed-point shape *are* uniform.
-The gate (Commitment-yes at position `P`) is operationally
-predicate-shape-uniform but does not derive from a single
-construction.
+## The Commitment gate (schema-level)
 
-The two-parameter-unification question is closed. The schema-level
-reading of Commitment-as-gate stands. The canonicity claim
-(moment-relative Commitment-yes as necessary for canonicity) is
-unaffected — it concerns each individual operator's fixed points,
-not their unification.
+> *Schema. For each cell `P`, the gate has the form:*
+> `IsCommitmentYes Δ P f := f ≅ colim_{n} (iter_P^n f)`,
+> *where `iter_P` is `D`-iteration restricted to the subcategory cut
+> out by `P`. The shape of this schema is uniform across cells. The
+> content of `iter_P` is cell-specific (the iteration takes place in
+> a different subcategory for each cell).*
 
-## Open questions, ranked
+The schema is documented in `Commitment.lean`. The schema-level
+uniformity vs. theorem-grade unification distinction is the result of
+the 2026-05-10 exploration in `MomentRelative.lean`.
 
-1. **Commitment/Exploitation disjointness within `¬¬Im(η)`.** Both
-   positions live in the closure; the theorem candidate's
-   disjointness claim requires a categorical distinction between
-   them that is *not yet specified*. A "transverse direction vs
-   pole direction" framing was drafted 2026-05-09 and withdrawn
-   pending specification. Three candidate hypotheses are flagged in
-   `Exploitation.lean`. This is the framework's central open
-   problem post-closure-residue commitment.
+## Open problems, ranked
 
-2. **`HeytingAlgebra (Subobject _)` for topoi.** Mathlib gap;
+1. **`HeytingAlgebra (Subobject _)` for topoi.** Mathlib gap;
    PR-able. ~200–400 lines following Mac Lane–Moerdijk IV.8.
-   Unblocks Refusal, Distribution, and Exploitation simultaneously.
+   Unblocks Refusal, Distribution, Exploitation, *and* the partition
+   theorem in `Partition.lean`. This is the load-bearing gap.
+
+2. **Partition theorem proof.** Once the Heyting instance is in
+   place, the proof reduces to Heyting-algebra case-split (≈ 50–100
+   lines), the Refusal image-subobject characterisation
+   (`isRefusal_iff_image_le_compl`, ≈ 20 lines), and the Heyting
+   trichotomy lemma.
 
 3. **Continuous iteration of `D`.** Either relax Spencer-Brown
    idempotency, add interval-object parameterization, or work in an
-   enriched setting. Decision is framework-level. Affects Commitment
-   primarily; may also affect the resolution of open question 1 if
-   the Commitment/Exploitation distinction turns out to live in the
-   iteration parameterization.
+   enriched setting. Decision is framework-level. Affects the
+   Commitment gate's content (which iteration is the relevant one),
+   not the partition theorem.
 
 4. **Hypothesis on `Δ` to make `refusal_residue` go through.** Step 3
    of the proof sketch needs a hypothesis identifying when
@@ -143,65 +141,46 @@ not their unification.
 
 5. **Level structure for Deep Infrastructure.** Fibration of `C`
    over `ℕ` (or over a more general level-poset). Two paths
-   documented in `Infrastructure.lean`.
+   documented in `Infrastructure.lean`. Deep Infrastructure is a
+   refinement *within* Infrastructure, not a separate cell.
 
 6. **Balance condition for Distribution.** Three candidate
    refinements (anti-chain, equimeasure, categorical decomposition)
-   documented in `Distribution.lean`.
+   documented in `Distribution.lean`. The current "both intersections
+   non-trivial" predicate suffices for the partition theorem; a
+   stronger balance condition is a refinement within Distribution.
 
-## Framework writeup pending
-
-The closure-residue commitment for Exploitation has consequences that
-should land in the framework's exposition, not just the Lean files:
-
-* **Abstraction movements as Exploitation.** Modernist painting, late
-  modernist music, modernist literature, set-theoretic foundations in
-  mathematics — each is the specific form Exploitation takes when
-  practitioners aggressively pursue closure the underlying kernel
-  cannot deliver. The closure-residue construction provides the
-  formal home; whether the further empirical claim (the
-  four-mechanism cluster, the Coltrane–Hendrix pairing) reduces to
-  categorical content within the residue or operates at a different
-  level is part of open question 1.
-
-* **Exploitation/Refusal as disjoint Heyting regions.** Both depend
-  on non-Boolean topos structure; they occupy disjoint regions of
-  the subobject lattice (`(Im(η))ᶜ` for Refusal, `(Im(η))ᶜᶜ ∖ Im(η)`
-  at the level of generalized elements for Exploitation). This
-  disjointness is a Heyting theorem, not an additional commitment.
-
-These belong either as a section in Paper 1 or as a dedicated
-comma-object paper. Care should be taken not to overcommit to the
-finer-grained empirical structure (mechanism distinctions,
-direction language) before the categorical content is specified.
+7. **Per-cell Commitment-iteration content.** With the gate reframe,
+   each cell has its own cell-restricted iteration operator whose
+   fixed points constitute Commitment-yes at that cell. Specifying
+   these four operators categorically is open work, replacing the
+   dissolved Commitment/Exploitation disjointness problem.
 
 ## Register
 
 The dictionary's home register is **Heyting-algebraic / locale-theoretic /
 intuitionistic-logical** (one structure, four names). See
-[`Positions/REGISTER.md`](Positions/REGISTER.md) for the framing note,
-including the explicit hazard of conflating this register with
-manifold / measure-concentration "geometry" that shares the word but
-not the structure.
+`Positions/REGISTER.md` for the framing note, including the explicit
+hazard of conflating this register with manifold / measure-
+concentration "geometry" that shares the word but not the structure.
 
 ## Cross-reference
 
-* Paper 1 v11.7 § 1 — asymmetry principle
-* Paper 1 v11.7 § 4 — five-position theorem
-* Paper 3 v9.3 § 2 — distinction operation as primitive output
+* Paper 1 §3.4 — original five-position derivation (v11.7); the v11.8
+  top-matter notes the architectural refinement; v11.9 rewrite
+  pending the trajectory reclassification work
+* Paper 3 §2 — distinction operation as primitive output
+* Paper 3 §9 — original five-position framing; the v9.4 top-matter
+  notes the reframe; v10.0 rewrite pending specialist engagement
 * Paper 4 — mathematics as comma; comma-object construction
-* `papers/comma-formal-structure-note.md` — expository companion to this
-  Lean dictionary; prose statement of the closure-residue construction,
-  the five-position predicates, the three signature theorems, and the
-  ranked open problems, for category-theorist and topos-theorist readers
-  who want the apparatus without the Lean source
-* [`Positions/REGISTER.md`](Positions/REGISTER.md) — register note (Heyting / locale / intuitionistic)
-* [`Positions/MomentRelative.lean`](Positions/MomentRelative.lean) —
-  exploration file that closes the two-parameter-unification question
-  (2026-05-10) with a negative theorem-grade result and a positive
-  schema-level result. *Not* imported here; exploration only.
+* `papers/comma-formal-structure-note.md` — the expository companion
+  to this Lean dictionary (current architecture, 2026-05-17 revision)
+* `Positions/REGISTER.md` — register note (Heyting / locale / intuitionistic)
+* `Positions/MomentRelative.lean` — the 2026-05-10 exploration that
+  closed the two-parameter-unification question. *Not* imported here;
+  exploration only.
 * `validation/claims/five-position-derivation-formalization.md` —
-  open theorem this file targets
+  versioned status of the formal claims
 
 The empirical record against which the dictionary is tested:
 * `db/0121_curricula_and_glossary.sql` — Coltrane Trajectory
@@ -214,5 +193,6 @@ import FalseWorkPapers.Positions.Setup
 import FalseWorkPapers.Positions.Infrastructure
 import FalseWorkPapers.Positions.Distribution
 import FalseWorkPapers.Positions.Exploitation
-import FalseWorkPapers.Positions.Commitment
 import FalseWorkPapers.Positions.Refusal
+import FalseWorkPapers.Positions.Commitment
+import FalseWorkPapers.Positions.Partition

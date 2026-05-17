@@ -231,10 +231,19 @@ noncomputable def Pos
     (B : BoundaryState Δ (T := T)) (t : T)
     {X Y : C} (f : X ⟶ Y) : Position → Prop
   | .infrastructure =>
-      -- Infrastructure: η is iso at endpoints. Note this does *not*
-      -- reference `unifiedKernelImage B t Y` at all — the predicate
-      -- is moment-invariant in its η-formulation. (See discussion
-      -- below on whether to rephrase as a closure condition.)
+      -- Infrastructure (original η-formulation, retained here as
+      -- historical record of the 2026-05-10 exploration). Note this
+      -- does *not* reference `unifiedKernelImage B t Y` at all — the
+      -- predicate is moment-invariant in its η-formulation, which is
+      -- the structural anomaly that motivated the closure-reading
+      -- variant `Pos'` in §4 below.
+      --
+      -- The closure-reading `Pos'` was adopted as the official cell
+      -- predicate on 2026-05-17 (see `Infrastructure.lean`,
+      -- `Partition.lean`, and `papers/comma-formal-structure-note.md`
+      -- §5). This `Pos` definition is preserved unchanged as the
+      -- exploration's record of the negative theorem-grade
+      -- unification result.
       IsIso (Δ.η.app X) ∧ IsIso (Δ.η.app Y)
   | .distribution =>
       let img := Subobject.mk (image.ι (Δ.D.map f))
@@ -286,6 +295,18 @@ One might object: the Infrastructure case is the odd one out — it
 references `η` directly, not the kernel image. Could we re-express
 Infrastructure as a Heyting condition on `unifiedKernelImage` to
 bring it into line with the other three?
+
+**Update 2026-05-17.** Reading (1) below (the closure reading) was
+adopted as the official cell predicate on 2026-05-17. The original
+η-iso predicate is retained in this exploration file as the
+historical record of what was tested, and is preserved unchanged in
+`Pos` above; the closure reading is preserved in `Pos'` below and is
+the form used in `Infrastructure.lean` and `Partition.lean`. The
+predicate change strengthens the §6 schema-level uniformity result
+(all four cells are now conditions on `(img, a)`) but leaves the
+§5 theorem-grade non-unification result intact (the four
+propositional shapes remain irreducibly distinct, which is the load-
+bearing finding of this exploration).
 
 Two candidates:
 

@@ -12,7 +12,7 @@
 
 **Companion to.** [`paper1-kernels-and-commas/paper1.md`](paper1-kernels-and-commas/paper1.md) (the empirical dictionary), [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md) (the informal categorical framing), [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md) (the ontological account of comma-as-substrate), [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) (the schema specification with hedging), [`../lean/FalseWorkPapers/Positions.lean`](../lean/FalseWorkPapers/Positions.lean) (the Lean dictionary), [`../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../lean/FalseWorkPapers/Positions/MomentRelative.lean) (the two-parameter-unification exploration that closed the question), [`../lean/FalseWorkPapers/Positions/REGISTER.md`](../lean/FalseWorkPapers/Positions/REGISTER.md) (the register note).
 
-**Provenance.** Drafted May 2026 following the closure-residue commitment for the Exploitation predicate and the register-note clarification. Revised 2026-05-10 to reflect the Commitment-as-gate reframe, the closure of the two-parameter-unification question, and the dissolution of the previously-named Commitment/Exploitation disjointness problem. Records framework state at those moments. Subsequent revisions either land here as patches or escalate to Paper 3 v10.0.
+**Provenance.** Drafted May 2026 following the closure-residue commitment for the Exploitation predicate and the register-note clarification. Revised 2026-05-10 to reflect the Commitment-as-gate reframe, the closure of the two-parameter-unification question, and the dissolution of the previously-named Commitment/Exploitation disjointness problem. Revised 2026-05-17 to repair the Infrastructure predicate (originally stated as endpoint-iso, which would have left an exhaustiveness hole in the four-position partition for images that stay in the kernel image without the endpoints being trivialized) and to state the four-position partition theorem explicitly as Theorem 0 in §6. Records framework state at those moments. Subsequent revisions either land here as patches or escalate to Paper 3 v10.0.
 
 ---
 
@@ -138,9 +138,9 @@ Sections 5.1–5.4 give the four cells. Section 5.5 gives the Commitment gate. E
 
 ### Infrastructure
 
-The marking operation is reversible at the work's endpoints: `η` is an isomorphism at both `X` and `Y`, so `D` acts trivially on `f` via naturality. The practitioner works at a level of the field where the kernel's productive asymmetry has been absorbed into the operating apparatus. The gap exists in the surrounding lattice, but the work itself does not surface it — prior work (temperament systems, structural codes, prose conventions, perceptual norms) has already negotiated the comma's consequences into the system the practitioner inhabits.
+The image of the work under `D` lies entirely within the kernel image: `D`'s marking activity does not exceed what `η` already produces. The practitioner works at a level of the field where the kernel's productive asymmetry has been absorbed into the operating apparatus. The gap exists in the surrounding lattice, but the work itself does not surface it — prior work (temperament systems, structural codes, prose conventions, perceptual norms) has already negotiated the comma's consequences into the system the practitioner inhabits.
 
-> *`IsInfrastructure Δ f := IsIso (Δ.η.app X) ∧ IsIso (Δ.η.app Y)`. Signature theorem: under this hypothesis, `D.map f` is determined by `f` via `η`'s naturality alone. `D` does no extra work.*
+> *`IsInfrastructure Δ f := image(D.map f) ≤ kernelImage Δ Y`. Signature theorem: under this hypothesis, the work's marking activity does not exceed the kernel's native ground at `Y`. The condition `IsIso (Δ.η.app X) ∧ IsIso (Δ.η.app Y)` — `η` is an isomorphism at both endpoints, so `D` acts trivially on `f` via naturality — is a sufficient sub-condition (it forces `kernelImage Δ Y = ⊤` at `Y`, making the image-subobject inequality vacuous). The broader image-subobject condition is what carries the partition theorem; the endpoint-iso sub-case corresponds to a kernel that is transparent at the work's endpoints.*
 
 *Music:* tonal music within a fixed key, where the temperament system has already absorbed the Pythagorean comma. Bach's Well-Tempered Clavier within one key (without modulation across keys) instantiates this.
 
@@ -223,7 +223,11 @@ The empirical reclassification of the trajectory artifacts (Coltrane, Painting, 
 
 ## 6. Signature theorems committed
 
-Three theorems are committed at the level of the closure-residue construction. All three carry `sorry` in the Lean (`HeytingAlgebra (Subobject Y)` is upstream-Mathlib-pending) but the statements are stable.
+Four theorems are committed at the level of the closure-residue construction. All four carry `sorry` in the Lean (`HeytingAlgebra (Subobject Y)` is upstream-Mathlib-pending) but the statements are stable.
+
+**Theorem 0 (Four-position partition).** Let `Δ` be a non-trivial distinction structure on an elementary topos `C` with the requisite Heyting structure on its subobject lattices. For every morphism `f : X ⟶ Y` in `C` with non-trivial image (`image(D.map f) ≠ ⊥`), exactly one of `IsInfrastructure Δ f`, `IsDistribution Δ f`, `IsExploitation Δ f`, `IsRefusal Δ f` holds. The four cells are pairwise disjoint Heyting conditions on `(image(D.map f), kernelImage Δ Y)` and exhaustive over the morphism space of `C` (modulo the trivial-image edge case, in which every cell holds vacuously).
+
+> *Content: This is the framework's central structural claim. The four cells emerge from a case-split over the Heyting algebra `Sub(D Y)` of where `image(D.map f)` lies relative to `kernelImage Δ Y` and its pseudo-complements. The disjointness reduces to Heyting-algebra identities: `a ⊓ aᶜ = ⊥` (Infrastructure ⊥ Refusal, Refusal ⊥ Distribution-on-`a`), `aᶜ ⊓ aᶜᶜ = ⊥` (Exploitation ⊥ Refusal), and `aᶜᶜ ⊓ aᶜ = ⊥` (Exploitation ⊥ Distribution-on-`aᶜ`). The exhaustiveness reduces to the trichotomy `(img ≤ k) ∨ (img ⊓ k = ⊥) ∨ (img ⊓ k ≠ ⊥ ∧ img ⊓ kᶜ ≠ ⊥)`, with the middle case identifying Refusal (since `img ⊓ k = ⊥ ↔ img ≤ kᶜ`) and the first two refining further: `img ⊓ k ≠ ⊥ ∧ img ⊓ kᶜ = ⊥` is `img ≤ kᶜᶜ`, which is Infrastructure when `img ≤ k` and Exploitation when `¬(img ≤ k)`.*
 
 **Theorem 1 (Refusal residue, in non-Boolean topoi).** Let `Δ` be a non-trivial distinction structure on an elementary topos `C` that is non-Boolean (some subobject lattice in `C` admits an element with `aᶜᶜ ≠ a`). Then there exists `Y : C` with `Im(η.app Y) < ((Im(η.app Y))ᶜᶜ` strictly in the Heyting algebra `Subobject (D Y)`.
 
@@ -237,7 +241,7 @@ Three theorems are committed at the level of the closure-residue construction. A
 
 > *Content: The disjointness is a Heyting-algebra identity (`aᶜ ⊓ aᶜᶜ = ⊥`), not an additional commitment of the framework. Exploitation and Refusal are formally distinct positions in the topos register, not just empirically distinct stances.*
 
-A fourth theorem candidate — distinguishing Exploitation from Commitment within `(Im(η))ᶜᶜ` — was drafted in May 2026 as the "transverse-vs-pole" claim and *withdrawn* on 2026-05-09, and the underlying problem subsequently *dissolved* on 2026-05-10 when Commitment was reframed as a binary gate across the four cells rather than a fifth cell. Under the gate framework, there is no cross-cell disjointness question for Commitment and Exploitation — Commitment is not a separate cell. The residual question is the *per-cell characterization* of the cell-restricted iteration whose fixed points give Commitment-yes at each cell. See § 7.
+A further theorem candidate — distinguishing Exploitation from Commitment within `(Im(η))ᶜᶜ` — was drafted in May 2026 as the "transverse-vs-pole" claim and *withdrawn* on 2026-05-09, and the underlying problem subsequently *dissolved* on 2026-05-10 when Commitment was reframed as a binary gate across the four cells rather than a fifth cell. Under the gate framework, there is no cross-cell disjointness question for Commitment and Exploitation — Commitment is not a separate cell. The residual question is the *per-cell characterization* of the cell-restricted iteration whose fixed points give Commitment-yes at each cell. See § 7.
 
 ---
 
