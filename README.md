@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1216426192.svg)](https://zenodo.org/badge/latestdoi/1216426192) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-An open-source research programme on structural incompleteness across six domains of sustained human practice — music, cinema, architecture, literature, software, and physics — and the shared mathematical and epistemological floor underneath them.
+An open-source research programme on structural incompleteness in domains organized around a minimal generative operation, and on the shared mathematical and epistemological floor underneath.
 
 This repository holds the papers themselves, the open validation items they contain, and the infrastructure for anyone who wants to read, comment, verify, correct, or formalize their claims.
 
@@ -135,7 +135,7 @@ Every tagged release of this repository is archived to Zenodo and assigned a per
 
 **Paper-at-version citation** (most precise — pinned to a specific paper inside a specific release):
 
-> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.4). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
+> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.8). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
 
 BibTeX, RIS, and EndNote entries for any version can be exported directly from the [Zenodo record page](https://zenodo.org/records/19673673). Both concept and version DOIs resolve programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access. Each subsequent release (per-paper or collection-wide) will receive its own version DOI under the same concept DOI.
 
