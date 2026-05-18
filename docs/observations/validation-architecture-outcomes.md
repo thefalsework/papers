@@ -31,6 +31,51 @@ Entries are in chronological order of the engagement producing them, most recent
 
 ---
 
+### 2026-05-18 — Venue-norm revision: AI-assisted Lean Zulip drafting elevated to programme-level disclosed posture
+
+**Venue.** Lean Zulip. Relevant prior thread: 2026-04-18 to 2026-04-19 entry below, where the author committed in response to a moderator-raised concern to "not drafting Zulip posts with AI assistance going forward." Current thread: 2026-05-17 onward, "Heyting algebra on subobjects in an elementary topos," with Edward van de Meent and Fernando Chu engaging.
+
+**Engagement type(s).** Venue-norm observation (5) — specifically, revision of a prior venue-norm observation rather than a new observation.
+
+**Contributors named in this entry.** None directly at the revision point. Prior venue-norm-observation moderators (unnamed per attribution discipline) and current thread contributors (Edward van de Meent, Fernando Chu) are referenced as context.
+
+**Position before this entry.** April 2026 venue-specific commitment to not draft Lean Zulip posts with AI assistance. Made in response to moderator concern that the community had moved from "discouraged" to "disallowed" on AI-drafted posts. Recorded as compatible with Paper 2's disclosure-not-form posture because the venue norm constrained drafting form in that venue specifically.
+
+**Position after this entry.** AI-assisted drafting is permitted on Lean Zulip with author finalization and disclosed methodology. The venue-specific commitment is overridden by the programme-level posture that AI-assisted scholarship requires disclosed correction architecture (Paper 2). Practicing covert author-only drafting on a research subject that is itself the question of AI-assisted scholarship would be internally incoherent.
+
+**Reasoning.**
+
+1. **The empirical baseline has shifted.** AI assistance in scholarly drafting is a near-universal practice in 2026, regardless of whether individual venues acknowledge it. Pretending the practice does not exist is inconsistent with the project's empirical posture.
+
+2. **Practice has diverged from the April commitment.** The Lean Zulip thread on `HeytingAlgebra (Subobject Y)` opened 2026-05-17 has involved AI-drafted-then-author-finalized posts throughout. Continuing to publicly document the April commitment as the operating practice would be a misrepresentation. The choice was to honor the commitment retroactively (rewrite all subsequent posts author-only) or to revise the commitment with reasoning; the latter is more consistent with the disclosed-correction-architecture posture.
+
+3. **Transparency is the operative principle, not authorship form.** Paper 2 argues that AI-assisted scholarship is evaluable when the correction architecture is disclosed and operating. The methodology documents linked from individual outreach contexts (this file, `lean/HEYTING-GAP.md`) provide that disclosure. Mathematical content stands or falls on mathematical grounds independent of drafting form; transparency about drafting form lets reviewers calibrate accordingly. The math is the math.
+
+4. **The venue-norm tension is acknowledged, not denied.** Lean Zulip moderators may still consider AI-assisted posts to be "AI-drafted" by their original criterion. The project accepts that posting under this revised posture may produce moderator interaction. If so, the moderator response is itself data about the operating environment and is recorded under this category in subsequent entries. The disclosed posture handles either outcome cleanly because the methodology is already on record.
+
+**Outcomes.**
+
+1. **Position revision.** As above.
+
+2. **Downstream document update.** `lean/HEYTING-GAP.md` engagement-record line previously reading "author-drafted (not AI-drafted) posts" updated to reflect the new posture: "AI-assisted drafting, author-finalized; transparent per the venue-norm revision recorded at this file."
+
+3. **Disclosure ongoing.** All Lean Zulip outreach from 2026-05-18 forward operates under the revised posture, with disclosure visible in the linked methodology documents. Future entries record any moderator response or specialist reaction.
+
+**Scope limits on this entry.**
+
+- The revision is a venue-specific commitment elevated to programme-level posture. It does not modify any moderator's view or commit any moderator to accepting the revised practice as compliant with their venue norm.
+- The revision does not retroactively reclassify prior AI-drafted Lean Zulip posts (2026-05-17 onward) under the April commitment. Those posts diverged from the commitment as it stood; this entry discloses the divergence rather than concealing it. Acknowledging the divergence is the substantive act this entry performs.
+- The revision does not extend to venues with stricter, codified AI-disclosure-or-prohibition rules (e.g., journal editorial policies that explicitly forbid AI authorship). Such venues remain governed by their own rules; the programme respects them per Paper 2's venue-respect principle.
+
+**Primary sources and repo artefacts.**
+
+- Prior entry: 2026-04-18 to 2026-04-19 Lean Zulip thread (below) and the April venue-norm observation.
+- Paper 2's correction architecture: `papers/paper2-correction-architecture/paper2.md`.
+- Downstream update: `lean/HEYTING-GAP.md` (engagement-record line updated to match).
+- Current Zulip thread: link in `lean/HEYTING-GAP.md` once the reply is posted.
+
+---
+
 ### 2026-04-27 — Internal AI-synthesis integration: Lawvere's fixed-point theorem as unification of Paper 1 § 2's formal groundings
 
 **Venue.** Internal AI-assisted chat thread; no external contributor at the integration point.

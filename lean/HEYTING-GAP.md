@@ -2,7 +2,7 @@
 
 **Status:** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
 
-**Last update:** 2026-05-17 (afternoon — second Zulip follow-up from Edward van de Meent on `instCompleteLattice`; see Engagement record and Additional technical path below).
+**Last update:** 2026-05-18 (engagement-record posture updated to the revised AI-authorship policy recorded in `docs/observations/validation-architecture-outcomes.md`; technical state unchanged from 2026-05-17).
 
 ---
 
@@ -156,7 +156,7 @@ Re-evaluation cadence: quarterly. Next review 2026-08-17.
   
   These do not directly target the Heyting gap but indicate Edward is actively upstreaming related machinery; the partial-map work supports the same elementary-topos foundation our work depends on.
 
-Author conduct on Zulip follows the `docs/observations/validation-architecture-outcomes.md` venue-norm observation: author-drafted (not AI-drafted) posts, narrowly scoped questions, expectations calibrated to community pace.
+Author conduct on Zulip follows the `docs/observations/validation-architecture-outcomes.md` venue-norm observation (revised 2026-05-18): AI-assisted drafting, author-finalized, with disclosed methodology via this file and the linked observations log; narrowly scoped questions; expectations calibrated to community pace.
 
 ---
 
@@ -164,6 +164,6 @@ Author conduct on Zulip follows the `docs/observations/validation-architecture-o
 
 - `lean/README.md` — overview of the Lean formalisation
 - `papers/comma-formal-structure-note.md` § 6 — Theorem 0 (four-position partition) prose statement
-- `validation/claims/five-position-derivation-formalization.md` — the corresponding validation claim; v0.5 changelog references this gap
+- `validation/claims/five-position-derivation-formalization.md` — the corresponding validation claim; v0.6 changelog references this gap
 - `lean/FalseWorkPapers/Positions/Setup.lean` — the shared definitions used by all four cell files
 - `lean/FalseWorkPapers/Positions/Partition.lean` — the gated theorem itself
