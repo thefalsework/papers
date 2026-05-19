@@ -62,7 +62,7 @@ open CategoryTheory CategoryTheory.Limits
 universe v u
 
 variable {C : Type u} [Category.{v} C]
-  [HasImages C] [HasPullbacks C] [HasClassifier C]
+  [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
 
 /-! ## The Refusal position -/
 
@@ -71,7 +71,7 @@ variable {C : Type u} [Category.{v} C]
 image — the Refusal-act lives in the part of `D Y` that the marking
 morphism does not reach. -/
 def IsRefusal (Δ : DistinctionStructure C)
-    [HeytingAlgebra (Subobject (Δ.D.obj _))]  -- TODO: discharge via HasClassifier
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- TODO: discharge via HasSubobjectClassifier
     {X Y : C} (f : X ⟶ Y) : Prop :=
   ∃ (g : Δ.D.obj X ⟶ ((kernelImage Δ Y)ᶜ : Subobject (Δ.D.obj Y))),
     Δ.D.map f = g ≫ ((kernelImage Δ Y)ᶜ).arrow
@@ -88,9 +88,10 @@ formal residue. -/
 /-- A category with classifier is *non-Boolean* if some subobject
 fails the law of double negation. Equivalently, the internal logic of
 `C` is intuitionistic but not classical. -/
-def NonBoolean (C : Type u) [Category.{v} C] [HasClassifier C]
-    [HasImages C] [HasPullbacks C] : Prop :=
-  ∃ (Y : C) (S : Subobject Y) [HeytingAlgebra (Subobject Y)], Sᶜᶜ ≠ S
+def NonBoolean (C : Type u) [Category.{v} C] [HasSubobjectClassifier C]
+    [HasImages C] [HasPullbacks C]
+    [∀ Y : C, HeytingAlgebra (Subobject Y)] : Prop :=
+  ∃ (Y : C) (S : Subobject Y), Sᶜᶜ ≠ S
 
 /-- **Asymptotic-residue theorem (statement).**
 
@@ -102,10 +103,10 @@ The strict inequality `kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ` is the
 formal expression of "the kernel persists as residue even where it is
 refused." -/
 theorem refusal_residue (Δ : DistinctionStructure C)
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     (_hΔ : Δ.NonTrivial)
     (_hC : NonBoolean C) :
-    ∃ (Y : C) [HeytingAlgebra (Subobject (Δ.D.obj Y))],
-      kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ := by
+    ∃ Y : C, kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ := by
   /- Proof sketch:
 
      1. `_hC : NonBoolean C` provides some `Y₀` and `S₀ : Subobject Y₀`

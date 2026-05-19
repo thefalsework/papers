@@ -39,7 +39,7 @@ cell. `Partition.lean` states the four-position partition theorem.
 `CommitmentGate.lean` documents the gate schema.
 -/
 
-import Mathlib.CategoryTheory.Topos.Classifier
+import Mathlib.CategoryTheory.Subobject.Classifier.Defs
 import Mathlib.CategoryTheory.Subobject.Lattice
 import Mathlib.CategoryTheory.Limits.Shapes.Images
 import Mathlib.Order.Heyting.Basic
@@ -70,7 +70,7 @@ structure DistinctionStructure where
   η : 𝟭 C ⟶ D
   idempotent : D ⋙ D ≅ D
   coherent : ∀ X : C,
-    η.app (D.obj X) ≫ idempotent.hom.app X = D.map (η.app X)
+    η.app (D.obj X) ≫ idempotent.hom.app X = 𝟙 (D.obj X)
 
 namespace DistinctionStructure
 

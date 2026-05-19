@@ -97,7 +97,7 @@ open CategoryTheory CategoryTheory.Limits
 universe v u
 
 variable {C : Type u} [Category.{v} C]
-  [HasImages C] [HasPullbacks C] [HasClassifier C]
+  [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
 
 /-! ## The partition theorem -/
 
@@ -113,7 +113,7 @@ The four cells are pairwise disjoint Heyting conditions on
 space of `C` (modulo the trivial-image edge case). -/
 theorem four_position_partition
     (Δ : DistinctionStructure C)
-    [HeytingAlgebra (Subobject (Δ.D.obj _))]
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     {X Y : C} (f : X ⟶ Y)
     (_h_nontriv : Subobject.mk (image.ι (Δ.D.map f)) ≠ ⊥) :
     (IsInfrastructure Δ f ∨ IsDistribution Δ f ∨
@@ -183,7 +183,7 @@ subobject API (`Subobject.factorThru`, `Subobject.ofLE`,
 `image.factorThruImage`). Lemma names tentative pending verification. -/
 theorem isRefusal_iff_image_le_compl
     (Δ : DistinctionStructure C)
-    [HeytingAlgebra (Subobject (Δ.D.obj _))]
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     {X Y : C} (f : X ⟶ Y) :
     IsRefusal Δ f ↔
       Subobject.mk (image.ι (Δ.D.map f)) ≤ (kernelImage Δ Y)ᶜ := by

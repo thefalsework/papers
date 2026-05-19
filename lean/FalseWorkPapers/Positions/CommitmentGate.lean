@@ -192,18 +192,21 @@ cell, the predicate collapses under Spencer-Brown idempotency
 (`D ⋙ D ≅ D`), so every `f` with image in `Im(η)` is trivially
 "Commitment-yes." The non-trivial gate requires `iterCell P` to be
 genuinely cell-restricted, which is the per-cell open work. -/
-def IsCommitmentYes (Δ : DistinctionStructure C) (P : Cell) {X Y : C}
-    (f : X ⟶ Y) : Prop :=
-  ∃ (X' Y' : C) (g : X' ⟶ Y') (_seq_iso :
-      ∀ n : ℕ,
-        ((iterCell P Δ n).map g : (iterCell P Δ n).obj X' ⟶ (iterCell P Δ n).obj Y')
-          ≅ ((iterCell P Δ (n+1)).map g)),
-    -- f is isomorphic (in the arrow category) to the sequential
-    -- colimit of (iterCell P Δ n).map g over n
-    True  -- placeholder: actual condition wants HasFilteredColimits +
-          -- arrow-category colimit definition, parallel to the
-          -- pre-reframe IsCommitment definition in the old
-          -- Commitment.lean
+def IsCommitmentYes (_Δ : DistinctionStructure C) (_P : Cell) {X Y : C}
+    (_f : X ⟶ Y) : Prop :=
+  -- PLACEHOLDER. The real predicate quantifies over a seed `g : X' ⟶ Y'`
+  -- and a sequential iso-family relating `(iterCell P Δ n).map g` at
+  -- successive `n`, then asserts that `f` is canonically isomorphic in
+  -- the arrow category to the colimit of that sequence. Encoding this
+  -- requires `HasFilteredColimits`, the arrow-category colimit
+  -- construction, and a per-cell `iterCell` whose hom-types are
+  -- coherent across `n` (currently `iterCell P Δ n`'s codomain category
+  -- changes with `n`, which makes an iso family between successive
+  -- iterations ill-typed). The per-cell iteration content is four
+  -- independent open problems documented in the Status section below.
+  -- This stub keeps the schema visible and the module compiling while
+  -- the content work happens.
+  True
 
 /-- Commitment-no at cell `P` is the negation of Commitment-yes at
 `P`. The binary gate. -/
@@ -211,9 +214,9 @@ def IsCommitmentNo (Δ : DistinctionStructure C) (P : Cell) {X Y : C}
     (f : X ⟶ Y) : Prop :=
   ¬ IsCommitmentYes Δ P f
 
-/-! ## Schema-level uniformity claim -/
+/-! ## Schema-level uniformity claim
 
-/-- **Schema uniformity (informal).** The shape of `IsCommitmentYes`
+**Schema uniformity (informal).** The shape of `IsCommitmentYes`
 is identical across the four values of `Cell` — the same colimit
 condition, the same binary structure. What differs is the iteration
 operator `iterCell P` used to evaluate the condition.
@@ -222,8 +225,6 @@ This is a meta-statement about the definition's *form*, not a
 provable Lean theorem. The Lean evidence is the single `def
 IsCommitmentYes` parameterized by `Cell`, with no per-cell
 specialization in its body. -/
--- (No Lean code: meta-statement only. The definition above is the
--- formal evidence.)
 
 /-! ## Status
 

@@ -53,7 +53,7 @@ open CategoryTheory CategoryTheory.Limits
 universe v u
 
 variable {C : Type u} [Category.{v} C]
-  [HasImages C] [HasPullbacks C] [HasClassifier C]
+  [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
 
 /-! ## The Distribution position -/
 
@@ -65,7 +65,7 @@ The framework's "comma distributed across parallel registers" becomes
 the formal condition that neither pole is suppressed in `D.map f`'s
 codomain. -/
 noncomputable def IsDistribution (Δ : DistinctionStructure C)
-    [HeytingAlgebra (Subobject (Δ.D.obj _))]  -- TODO: discharge via HasClassifier
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- TODO: discharge via HasSubobjectClassifier
     {X Y : C} (f : X ⟶ Y) : Prop :=
   let img := Subobject.mk (image.ι (Δ.D.map f))
   img ⊓ kernelImage Δ Y ≠ ⊥ ∧ img ⊓ (kernelImage Δ Y)ᶜ ≠ ⊥
@@ -80,7 +80,7 @@ Equivalently: `f` is *not* in Infrastructure position (which would
 mean `img ⊆ Im(η)`) and *not* in Refusal position (which would mean
 `img ⊆ ¬Im(η)`). Distribution sits in between. -/
 theorem isDistribution_implies_neither_polar (Δ : DistinctionStructure C)
-    [HeytingAlgebra (Subobject (Δ.D.obj _))]
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     {X Y : C} (f : X ⟶ Y) (h : IsDistribution Δ f) :
     let img := Subobject.mk (image.ι (Δ.D.map f))
     ¬(img ≤ kernelImage Δ Y) ∧ ¬(img ≤ (kernelImage Δ Y)ᶜ) := by

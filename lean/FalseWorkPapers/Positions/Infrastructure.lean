@@ -139,22 +139,18 @@ theorem trivialized_iff_D_pointwise
     (Δ : DistinctionStructure C) {X Y : C} (f : X ⟶ Y) :
     Trivialized Δ f ↔
       IsIso (Δ.η.app X) ∧ IsIso (Δ.η.app Y) ∧
-      Δ.D.map f = inv (Δ.η.app X) ≫ f ≫ Δ.η.app Y := by
-  constructor
+      Δ.η.app X ≫ Δ.D.map f = f ≫ Δ.η.app Y := by
+  -- The third conjunct is the naturality square at `f`. Combined with
+  -- the IsIso witnesses, this is equivalent to the inv-form
+  -- `Δ.D.map f = inv (Δ.η.app X) ≫ f ≫ Δ.η.app Y`, but stating it in
+  -- naturality form avoids needing `IsIso` in the type signature
+  -- itself (which would be circular — the IsIso is asserted alongside).
+  -- `Δ.η.naturality f` gives `f ≫ η.app Y = η.app X ≫ D.map f`;
+  -- the third conjunct is its `.symm`. Both directions reduce to
+  -- pairing the IsIso witnesses with this naturality equation.
+  refine ⟨?_, ?_⟩
   · rintro ⟨hX, hY⟩
-    refine ⟨hX, hY, ?_⟩
-    -- Naturality of η at f: `η.app X ≫ D.map f = (𝟭 C).map f ≫ η.app Y`
-    -- which simplifies to `η.app X ≫ D.map f = f ≫ η.app Y`.
-    have hnat : Δ.η.app X ≫ Δ.D.map f = f ≫ Δ.η.app Y := by
-      simpa using Δ.η.naturality f
-    -- Pre-compose both sides of `hnat` with `inv (η.app X)`:
-    --   `inv (η.app X) ≫ (η.app X ≫ D.map f) = inv (η.app X) ≫ (f ≫ η.app Y)`
-    -- The LHS collapses to `D.map f` via `IsIso.inv_hom_id` and `id_comp`.
-    calc Δ.D.map f
-        = (inv (Δ.η.app X) ≫ Δ.η.app X) ≫ Δ.D.map f := by
-            rw [IsIso.inv_hom_id, Category.id_comp]
-      _ = inv (Δ.η.app X) ≫ (Δ.η.app X ≫ Δ.D.map f) := by rw [Category.assoc]
-      _ = inv (Δ.η.app X) ≫ (f ≫ Δ.η.app Y) := by rw [hnat]
+    exact ⟨hX, hY, (Δ.η.naturality f).symm⟩
   · rintro ⟨hX, hY, _⟩
     exact ⟨hX, hY⟩
 
