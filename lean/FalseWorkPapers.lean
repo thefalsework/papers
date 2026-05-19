@@ -1,1 +1,2 @@
 import FalseWorkPapers.Positions
+import FalseWorkPapers.Heyting.SubobjectInstance
