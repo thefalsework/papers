@@ -236,8 +236,8 @@ Before clicking "Create PR", verify in order:
 
 Drawing from the immediate file-history of the surrounding code:
 
-* **Charlie Conneen** (main author of
-  `Subobject/Classifier/Defs.lean`; GitHub handle to be looked up before opening).
+* **Charlie Conneen** (`@658060`; main author of
+  `Subobject/Classifier/Defs.lean`).
 * **Pablo Donato** (co-author of the classifier file).
 * **Klaus Gy** (co-author of the classifier file).
 * **Bhavik Mehta** (co-author of `Subobject/Lattice.lean`; runs the
