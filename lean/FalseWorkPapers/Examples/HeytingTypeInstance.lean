@@ -86,3 +86,4 @@ be retracted.
 #print axioms FalseWork.Positions.isDistribution_implies_neither_polar
 #print axioms FalseWork.Positions.exploitation_refusal_disjoint
 #print axioms FalseWork.Positions.trivialized_implies_isInfrastructure
+#print axioms FalseWork.Positions.refusal_residue

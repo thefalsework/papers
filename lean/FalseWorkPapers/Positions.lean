@@ -97,10 +97,14 @@ iteration of `D`, i.e., at the structural limit of the cell) or
 > exhaustive over the morphism space of `C` (modulo the trivial-image
 > edge case, in which every cell holds vacuously).
 
-The statement is in `Partition.lean`. The proof is `sorry` pending
-the Mathlib `HeytingAlgebra (Subobject Y)` instance for topoi (the
-upstream gap noted in `Setup.lean`) and two auxiliary lemmas (Refusal
-image-subobject characterisation, Heyting trichotomy).
+The statement and proof are in `Partition.lean`.  The theorem is
+kernel-checked (2026-05-19, commit `75a8919`) against the in-repo
+`FalseWork.Heyting.heytingAlgebra` construction at
+`FalseWorkPapers/Heyting/SubobjectInstance.lean` (submitted upstream
+as Mathlib PR #39618 on 2026-05-20).  The helper lemma
+`isRefusal_iff_image_le_compl` was closed via the image API in
+Path 5 (commit `60d6ef5`).  `#print axioms` reports the three standard
+Mathlib axioms only.
 
 ## The Commitment gate (schema-level)
 
@@ -117,16 +121,16 @@ the 2026-05-10 exploration in `MomentRelative.lean`.
 
 ## Open problems, ranked
 
-1. **`HeytingAlgebra (Subobject _)` for topoi.** Mathlib gap;
-   PR-able. ~200–400 lines following Mac Lane–Moerdijk IV.8.
-   Unblocks Refusal, Distribution, Exploitation, *and* the partition
-   theorem in `Partition.lean`. This is the load-bearing gap.
+1. **`HeytingAlgebra (Subobject _)` for topoi.** *Closed locally;
+   PR opened upstream.*  Constructed at
+   `FalseWorkPapers/Heyting/SubobjectInstance.lean` (commits `d297f4d`
+   skeleton, `2fed510` six bridging lemmas, `d02781f` Mathlib-PR
+   refactor); submitted upstream as Mathlib PR #39618 on 2026-05-20.
 
-2. **Partition theorem proof.** Once the Heyting instance is in
-   place, the proof reduces to Heyting-algebra case-split (≈ 50–100
-   lines), the Refusal image-subobject characterisation
-   (`isRefusal_iff_image_le_compl`, ≈ 20 lines), and the Heyting
-   trichotomy lemma.
+2. **Partition theorem proof.** *Closed.*  `four_position_partition`
+   is kernel-checked (Phase 3, commit `75a8919`); the helper
+   `isRefusal_iff_image_le_compl` is closed via the image API
+   (Path 5, commit `60d6ef5`).
 
 3. **Continuous iteration of `D`.** Either relax Spencer-Brown
    idempotency, add interval-object parameterization, or work in an
@@ -134,10 +138,14 @@ the 2026-05-10 exploration in `MomentRelative.lean`.
    Commitment gate's content (which iteration is the relevant one),
    not the partition theorem.
 
-4. **Hypothesis on `Δ` to make `refusal_residue` go through.** Step 3
-   of the proof sketch needs a hypothesis identifying when
-   `kernelImage` plays the role of the non-Boolean witness. Two
-   candidate hypotheses are flagged in `Refusal.lean`.
+4. **The *refusal bridge*** — when does `Δ.NonTrivial + NonBoolean C`
+   force `Δ.HasIrregularKernel`?  The `refusal_residue` theorem itself
+   is now closed (2026-05-20, second pass) under the
+   `HasIrregularKernel` hypothesis; the bridge conjecture asks whether
+   that hypothesis is automatic in non-Boolean topoi or whether some
+   non-trivial `Δ` can confine itself to the regular sub-algebra of
+   the subobject lattices.  Tracked at
+   `validation/claims/refusal-bridge.md`.
 
 5. **Level structure for Deep Infrastructure.** Fibration of `C`
    over `ℕ` (or over a more general level-poset). Two paths

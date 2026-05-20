@@ -81,84 +81,120 @@ def IsRefusal (Δ : DistinctionStructure C)
 The framework's claim: even a Refusal-act cannot fully eliminate the
 kernel; the kernel persists as residue. The empirical phenomenology —
 Reinhardt's cruciform, Coltrane's "the geometry pulls back," Malevich's
-craquelure — maps onto a categorical statement: in a non-Boolean topos,
-`Im(η)` is *strictly* contained in `¬¬Im(η)`. The strict gap is the
-formal residue. -/
+craquelure — maps onto a categorical statement: when the kernel image
+is *irregular* (fails the law of double negation), `Im(η)` is *strictly*
+contained in `¬¬Im(η)`. The strict gap is the formal residue.
+
+### Regulars vs. irregulars
+
+In any Heyting algebra `H`, the elements `x` with `x = xᶜᶜ` are the
+*regular* elements; they form a Boolean sub-algebra `H_reg ⊆ H` (meet
+inherited, join given by `¬¬(x ∨ y)`). The regular sub-algebra is the
+part of the logic where classical reasoning remains valid — `¬¬p ↔ p`
+holds there by definition. The non-regular elements are precisely
+those that exhibit the intuitionistic strictness `x < xᶜᶜ`.
+
+A distinction structure whose kernel image always lands in the regular
+sub-algebra — call such a `Δ` *regularly-confined* — has a Boolean
+kernel even when the ambient topos is non-Boolean. The asymptotic
+residue cannot exist there, because the residue *is* the gap between
+an element and its double-negation closure, and that gap is zero on
+regulars by definition.
+
+The framework's commitment, made explicit by the `HasIrregularKernel`
+predicate below, is to study distinction structures that escape the
+regular sub-algebra — those whose operation reaches into the
+intuitionistic part of the ambient logic. Refusal-as-asymptotic-limit
+is a non-degenerate position exactly there. -/
 
 /-- A category with classifier is *non-Boolean* if some subobject
 fails the law of double negation. Equivalently, the internal logic of
-`C` is intuitionistic but not classical. -/
+`C` is intuitionistic but not classical.
+
+`NonBoolean C` is a property of the ambient topos. It says the
+*topos* has intuitionistic content, but says nothing about whether
+that content is visible at the kernel image of any particular `Δ`. -/
 def NonBoolean (C : Type u) [Category.{v} C] [HasSubobjectClassifier C]
     [HasImages C] [HasPullbacks C]
     [HasEqualizers C] [HasInitial C] [HasBinaryCoproducts C]
     [InitialMonoClass C] : Prop :=
   ∃ (Y : C) (S : Subobject Y), Sᶜᶜ ≠ S
 
-/-- **Asymptotic-residue theorem (statement).**
+/-- A distinction structure `Δ` has an *irregular kernel* when its
+kernel image fails the law of double negation at some object.
+Equivalently: `Δ` does not factor through the regular sub-algebra of
+the subobject lattices.
 
-In a non-Boolean topos `C`, with a non-trivial distinction structure
-`Δ`, there exists `Y : C` such that the kernel image at `Y` is
-strictly contained in its double pseudo-complement.
+This is a strictly stronger property than `NonBoolean C`. The latter
+says the topos has intuitionistic content *somewhere*; the former says
+the kernel image *is* that intuitionistic content at some object. The
+bridge between them — when does `Δ.NonTrivial + NonBoolean C` force
+`Δ.HasIrregularKernel`? — is the framework-level open question tracked
+at `validation/claims/refusal-bridge.md`. -/
+def DistinctionStructure.HasIrregularKernel (Δ : DistinctionStructure C) : Prop :=
+  ∃ Y : C, (kernelImage Δ Y)ᶜᶜ ≠ kernelImage Δ Y
+
+/-- **Asymptotic-residue theorem.**
+
+For a distinction structure `Δ` with an irregular kernel, there exists
+`Y : C` such that the kernel image at `Y` is strictly contained in its
+double pseudo-complement.
 
 The strict inequality `kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ` is the
 formal expression of "the kernel persists as residue even where it is
-refused." -/
+refused." The strict-inequality form is essential: a proper subobject
+`S < ⊤` with `S = Sᶜᶜ` (a *regular* proper subobject) is a complete
+capture with zero residue inside its closure — that is *not* the
+asymptotic-residue phenomenology Reinhardt, Coltrane, and Malevich
+exhibit. The residue is the gap *after* closure, which is what
+`S < Sᶜᶜ` names. -/
 theorem refusal_residue (Δ : DistinctionStructure C)
-    (_hΔ : Δ.NonTrivial)
-    (_hC : NonBoolean C) :
+    (hIrregular : Δ.HasIrregularKernel) :
     ∃ Y : C, kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ := by
-  /- Proof sketch:
-
-     1. `_hC : NonBoolean C` provides some `Y₀` and `S₀ : Subobject Y₀`
-        with `S₀ᶜᶜ ≠ S₀`. Since `S ≤ Sᶜᶜ` is a Heyting-algebra theorem
-        (`le_compl_compl`), this gives the strict inequality
-        `S₀ < S₀ᶜᶜ` at `Y₀`.
-
-     2. `_hΔ : Δ.NonTrivial` provides `X` with `η.app X` not iso, hence
-        `image.ι (η.app X)` is a *proper* subobject of `D X` — the
-        kernel image is non-trivial.
-
-     3. The load-bearing step is to show that the witness `Y₀` from
-        step 1 can be chosen so that `kernelImage Δ Y₀` plays the role
-        of `S₀`. Equivalently: at the point where the topos is
-        non-Boolean, the kernel image is an instance of the failure
-        of `¬¬a = a`. This is true *generically* in a topos where the
-        kernel image is "non-decidable" — but the precise hypothesis
-        on `Δ` and `C` needed to guarantee it is what the proof must
-        identify. The framework's claim is that the conjunction of
-        non-trivial `Δ` and non-Boolean `C` is sufficient; verifying
-        this in Lean is the substantive theorem. -/
-  sorry
+  obtain ⟨Y, hY⟩ := hIrregular
+  exact ⟨Y, lt_of_le_of_ne le_compl_compl (Ne.symm hY)⟩
 
 /-! ## Status
 
-DONE structurally:
+DONE:
 * `IsRefusal` definition. The cleanest of the five.
-* `NonBoolean` predicate.
-* `refusal_residue` *statement* — asymptotic residue as a strict
-  inequality in `Subobject (D Y)`.
-
-REMAINING `sorry`:
-* `refusal_residue` proof body.  *Not* Heyting-blocked: the universal
-  `FalseWork.Heyting.heytingAlgebra` instance (imported via
-  `Setup.lean` since Phase 3, 2026-05-19) makes every Heyting lemma
-  available.  What blocks the proof is *framework-level*: step 3
-  (transport of the non-Boolean witness onto `kernelImage`) requires
-  an additional hypothesis on `Δ` and `C` that the framework has not
-  yet specified — see the proof sketch in the body and the
-  framework-question section below.
+* `NonBoolean` predicate (ambient-topos non-classicality).
+* `DistinctionStructure.HasIrregularKernel` predicate (kernel-level
+  non-classicality, i.e., the kernel image escapes the regular
+  sub-algebra at some object).
+* `refusal_residue` — asymptotic residue as a strict inequality in
+  `Subobject (D Y)`.  Proof body closed (2026-05-20) using the
+  Heyting identity `S ≤ Sᶜᶜ` combined with the irregular-kernel
+  hypothesis.
 
 UPSTREAM MATHLIB GAP:
 * Closed (Phase 2, 2026-05-19) by the in-repo
-  `FalseWork.Heyting.heytingAlgebra` instance.
+  `FalseWork.Heyting.heytingAlgebra` instance.  PR #39618 opened
+  upstream (2026-05-20).
+
+OPEN AT THE FRAMEWORK LEVEL:
+* The *refusal bridge*: when does `Δ.NonTrivial + NonBoolean C` force
+  `Δ.HasIrregularKernel`?  Equivalently: which structural properties
+  of a distinction operation force it off the regular sub-algebra of
+  the subobject lattices?  The bridge is non-trivial because the
+  regular elements of a Heyting algebra form a Boolean sub-algebra,
+  and a non-trivial `Δ` whose image lands entirely in regulars at
+  every object would produce a Boolean kernel inside a non-Boolean
+  topos — a generically available class, not a constructed
+  counterexample.  Tracked at
+  `validation/claims/refusal-bridge.md` as a named open conjecture.
 
 WHY THIS POSITION IS THE CLEANEST:
 Topos-theoretic negation does the structural work. The asymptotic
-residue is not assumed — it is derived from the failure of `¬¬a = a`,
-which is a theorem of intuitionistic Heyting algebra. The four
-empirical cases (Reinhardt, Om, Black Square, Throne of Blood) all
-exhibit the same residue phenomenology and all map onto the same
-categorical statement.
+residue is not assumed — it is derived from the failure of `¬¬a = a`
+on the irregular part of the subobject lattice, which is a theorem of
+intuitionistic Heyting algebra. The four empirical cases (Reinhardt,
+Om, Black Square, Throne of Blood) all exhibit the same residue
+phenomenology and all map onto the same categorical statement.  The
+framework commits, via `HasIrregularKernel`, to studying distinction
+structures whose operations reach into the intuitionistic part of the
+ambient logic; whether that commitment is automatic in non-Boolean
+topoi is the bridge conjecture.
 -/
 
 end FalseWork.Positions

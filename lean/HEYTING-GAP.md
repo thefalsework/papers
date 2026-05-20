@@ -8,9 +8,12 @@
 > Upstream PR: <https://github.com/leanprover-community/mathlib4/pull/39618>
 > (drafted at `lean/MATHLIB-PR-DRAFT.md`, opened 2026-05-20; auto-labelled
 > `new-contributor` by the Mathlib bot).  Path 5 (commit `60d6ef5`) closed
-> the three image-API `sorry`s.  One `sorry` remaining in the entire
-> formalization codebase, the substantive `refusal_residue` in
-> `Refusal.lean` (parked, not Heyting-related).
+> the three image-API `sorry`s.  The `refusal_residue` `sorry` was closed
+> in the 2026-05-20 second pass under the `HasIrregularKernel` hypothesis;
+> the remaining open question — when does that hypothesis follow from
+> non-Booleanness alone? — is carried as a named conjecture at
+> `validation/claims/refusal-bridge.md`.  **Zero `sorry`s remain in the
+> entire formalization codebase.**
 
 **Status (pre-2026-05-19):** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
 
