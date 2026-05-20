@@ -23,6 +23,8 @@ The directory [`FalseWorkPapers/Positions/`](FalseWorkPapers/) contains a first 
 * **`four_position_partition`** — every morphism with non-trivial `D`-image falls in exactly one of Infrastructure, Distribution, Exploitation, Refusal.  The headline structural theorem.
 * **`refusal_residue`** — the asymptotic-residue strict-inequality theorem closed under the `Δ.HasIrregularKernel` hypothesis (the kernel image escapes the regular sub-algebra at some object).  See *Refusal residue: closure and the bridge conjecture* below.
 
+A single-page orientation document showing the proof dependency, the cell geometry, and the proven/submitted/open ledger lives at [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
 The `HeytingAlgebra (Subobject _)` construction the partition theorem requires has been built locally at [`Heyting/SubobjectInstance.lean`](FalseWorkPapers/Heyting/SubobjectInstance.lean) following Mac Lane–Moerdijk IV.6 Proposition 2, and submitted upstream as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618) (opened 2026-05-20, CI green, awaiting review).  One framework-level open conjecture — the *refusal bridge* — is carried at [`../validation/claims/refusal-bridge.md`](../validation/claims/refusal-bridge.md): the question of when `Δ.HasIrregularKernel` follows from `Δ.NonTrivial + NonBoolean C`.  The earlier "sketch in flight" framing below is preserved as historical record.
 
 **Files.**
