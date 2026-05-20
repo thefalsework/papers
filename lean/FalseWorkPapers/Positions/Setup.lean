@@ -41,6 +41,7 @@ cell. `Partition.lean` states the four-position partition theorem.
 
 import Mathlib.CategoryTheory.Subobject.Classifier.Defs
 import Mathlib.CategoryTheory.Subobject.Lattice
+import Mathlib.CategoryTheory.Subobject.Limits
 import Mathlib.CategoryTheory.Limits.Shapes.Images
 import Mathlib.Order.Heyting.Basic
 -- The universal `HeytingAlgebra (Subobject Y)` instance is built here.

@@ -121,9 +121,11 @@ This is a standard image-factorization-through-mono equivalence:
   subobject inclusion `image(D.map f) ⟶ m` (which exists by the
   containment) and `m.arrow`.
 
-Both directions are routine but require the Mathlib image-and-
-subobject API (`Subobject.factorThru`, `Subobject.ofLE`,
-`image.factorThruImage`). Lemma names tentative pending verification. -/
+Both directions discharge directly from
+`CategoryTheory.Limits.imageSubobject_le` (forward) and the composition
+`factorThruImageSubobject ≫ Subobject.ofLE` (backward), the latter
+collapsed by `ofLE_arrow` and `imageSubobject_arrow_comp`.  Closed in
+Path 5 (2026-05-19). -/
 theorem isRefusal_iff_image_le_compl
     (Δ : DistinctionStructure C)
     {X Y : C} (f : X ⟶ Y) :
@@ -131,19 +133,19 @@ theorem isRefusal_iff_image_le_compl
       Subobject.mk (image.ι (Δ.D.map f)) ≤ (kernelImage Δ Y)ᶜ := by
   constructor
   · rintro ⟨g, hg⟩
-    -- `D.map f = g ≫ ((kᶜ).arrow)`, so `D.map f` factors through `kᶜ`.
-    -- Therefore the image of `D.map f` is bounded above by `kᶜ` in
-    -- the subobject lattice. The relevant lemma is
-    -- `Subobject.image_le_iff_factors_through` (or its analogue
-    -- via `image.lift` factoring through the mono `kᶜ.arrow`).
-    sorry
+    -- `hg : Δ.D.map f = g ≫ ((kernelImage Δ Y)ᶜ).arrow` is the factorisation
+    -- witness; `Subobject.imageSubobject_le` reads exactly this off:
+    -- `imageSubobject f ≤ X` when `h ≫ X.arrow = f`.  `imageSubobject _`
+    -- is `Subobject.mk (image.ι _)` (abbrev), so the goal unifies.
+    exact imageSubobject_le (Δ.D.map f) g hg.symm
   · intro h
-    -- From `image(D.map f) ≤ kᶜ`, get a morphism
-    -- `image(D.map f) ⟶ underlying(kᶜ)` realizing the inclusion (via
-    -- `Subobject.ofLE`), then compose with `factorThruImage (D.map f)`
-    -- to get `g : D X ⟶ underlying(kᶜ)` with
-    -- `D.map f = g ≫ (kᶜ).arrow`.
-    sorry
+    -- Build `g` as `factorThruImageSubobject (Δ.D.map f) ≫ ofLE _ _ h`;
+    -- the equation `g ≫ kᶜ.arrow = Δ.D.map f` then follows from
+    -- `ofLE_arrow` (collapses the second factor to `(imageSubobject _).arrow`)
+    -- and `imageSubobject_arrow_comp` (collapses the rest to `Δ.D.map f`).
+    refine ⟨factorThruImageSubobject (Δ.D.map f) ≫
+              Subobject.ofLE _ _ h, ?_⟩
+    rw [Category.assoc, Subobject.ofLE_arrow, imageSubobject_arrow_comp]
 
 /-! ## The partition theorem -/
 
@@ -231,24 +233,16 @@ theorem four_position_partition
 
 DONE:
 * `four_position_partition` — fully proven (Phase 3, 2026-05-19)
-  modulo the helper `isRefusal_iff_image_le_compl`.  The Heyting
+  via the helper `isRefusal_iff_image_le_compl`.  The Heyting
   case-split (`by_cases` on `img ≤ K`, `img ⊓ K = ⊥`, `img ⊓ Kᶜ = ⊥`)
   and the six pair-wise disjointness arguments are all discharged
   using the universal `FalseWork.Heyting.heytingAlgebra` instance.
-* `isRefusal_iff_image_le_compl` — statement final; proof carries
-  two image-API `sorry`s (forward and backward direction) flagged
-  below.  These are *not* Heyting-blocked.
+* `isRefusal_iff_image_le_compl` — both directions discharged in
+  Path 5 (2026-05-19): forward via `imageSubobject_le`, backward
+  via `factorThruImageSubobject ≫ Subobject.ofLE` collapsed by
+  `ofLE_arrow` + `imageSubobject_arrow_comp`.
 
-REMAINING `sorry`s in this file:
-* `isRefusal_iff_image_le_compl` forward direction — needs the
-  Mathlib image-factorization-through-mono lemma.
-* `isRefusal_iff_image_le_compl` backward direction — needs
-  `Subobject.ofLE` ∘ `image.factorThruImage` plumbing.
-
-Both are blocked by the same image-API gap as
-`Infrastructure.lean`'s remaining `sorry`; see Path 5 in the
-sequencing record.  The partition theorem itself contains *no
-direct* `sorry` and inherits its proof modulo this helper.
+REMAINING `sorry`s in this file: none.
 
 UPSTREAM MATHLIB GAP:
 * `HeytingAlgebra (Subobject _)` — closed Phase 2 (2026-05-19) by
@@ -256,12 +250,13 @@ UPSTREAM MATHLIB GAP:
   instance via `Setup.lean`.
 
 FRAMEWORK STATUS:
-* Theorem 0 is the framework's central structural claim. The cell
-  predicates are stable; the partition is a Heyting-algebra theorem
-  *and* an image-algebra theorem.  Phase 2 + Phase 3 closed the
-  Heyting side; the image side remains as Path 5 work.  The
-  Commitment gate (`Commitment.lean`) is orthogonal and lives at
-  schema level, not at theorem-grade partition level.
+* Theorem 0 is the framework's central structural claim, now
+  formally established in Lean.  The cell predicates are stable;
+  the partition is a Heyting-algebra theorem *and* an image-algebra
+  theorem.  Phase 2 + Phase 3 closed the Heyting side; Path 5
+  (2026-05-19) closed the image side.  The Commitment gate
+  (`Commitment.lean`) is orthogonal and lives at schema level, not
+  at theorem-grade partition level.
 -/
 
 end FalseWork.Positions

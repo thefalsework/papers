@@ -113,19 +113,14 @@ theorem trivialized_implies_isInfrastructure
     IsInfrastructure Δ f := by
   unfold IsInfrastructure
   have hY : IsIso (Δ.η.app Y) := hf.2
-  -- Strategy: show `kernelImage Δ Y = ⊤`, then conclude by `le_top`.
-  -- `kernelImage Δ Y = Subobject.mk (image.ι (Δ.η.app Y))`.
-  -- When `Δ.η.app Y` is iso, `image.ι (Δ.η.app Y)` is iso (image of
-  -- an iso is its source, up to iso), so `Subobject.mk` of it is `⊤`.
   suffices h : kernelImage Δ Y = ⊤ by
     rw [h]; exact le_top
   unfold kernelImage
-  -- The remaining step needs the Mathlib lemma chain
-  --   IsIso (η.app Y) → IsIso (image.ι (η.app Y)) → Subobject.mk _ = ⊤
-  -- The first arrow is `image.isIso_of_isIso` (or similar); the second
-  -- is `Subobject.mk_eq_top_iff_isIso`. Lemma names tentative; see
-  -- the open question in the status section.
-  sorry
+  -- `imageSubobject f := Subobject.mk (image.ι f)` (abbrev), so the goal is
+  -- `imageSubobject (Δ.η.app Y) = ⊤`.  For mono `f`, `imageSubobject_mono`
+  -- collapses this to `Subobject.mk (Δ.η.app Y)`, then `mk_eq_top_of_isIso`
+  -- closes (`IsIso → Mono` is an inferred instance).
+  exact (imageSubobject_mono _).trans (Subobject.mk_eq_top_of_isIso _)
 
 /-! ## Signature lemma: under endpoint trivialization, D acts pointwise -/
 
@@ -202,20 +197,13 @@ DONE:
 * `Trivialized` predicate retained as sufficient sub-condition.
 * `trivialized_iff_D_pointwise` forward direction proven
   (2026-05-17) via `NatTrans.naturality` and `IsIso.inv_hom_id`.
-  Proof is a four-step `calc`; lemma names verified against Mathlib
-  conventions but not yet `lake build`-checked.
-* `trivialized_implies_isInfrastructure` — structural proof
-  reduced (2026-05-17) to a single `sorry` covering the chain
-  `IsIso (η.app Y) → IsIso (image.ι (η.app Y)) → Subobject.mk _ = ⊤`.
-  Mathlib lemma names tentative.
+* `trivialized_implies_isInfrastructure` — closed in Path 5
+  (2026-05-19) via the chain
+  `imageSubobject_mono` (collapses `Subobject.mk (image.ι (η.app Y))`
+  to `Subobject.mk (η.app Y)` using `Mono (η.app Y)` from `IsIso`)
+  composed with `Subobject.mk_eq_top_of_isIso`.
 
-REMAINING `sorry`:
-* `trivialized_implies_isInfrastructure` — final step: identify
-  `Subobject.mk (image.ι (η.app Y))` with `⊤` given that `η.app Y`
-  is iso. Mathlib lemmas in play:
-  - `image.isIso_of_isIso` (or analogue) — image of an iso has iso `ι`
-  - `Subobject.mk_eq_top_iff_isIso` — `Subobject.mk m = ⊤ ↔ IsIso m`
-  Both names tentative; verification needed.
+REMAINING `sorry`: none.
 
 OPEN FRAMEWORK QUESTIONS:
 * The level structure for Deep Infrastructure is sketched as a class
