@@ -115,47 +115,86 @@ noncomputable def residual (P Q : Subobject X) : Subobject X :=
 
 /-- **E1.** If `R ≤ residual P Q`, then `R.arrow` equalizes the two
 characteristic morphisms `χ (P ⊓ Q).arrow` and `χ P.arrow`. -/
-theorem residual_E1 (R P Q : Subobject X) (_h : R ≤ residual P Q) :
+theorem residual_E1 (R P Q : Subobject X) (h : R ≤ residual P Q) :
     R.arrow ≫ χ (P ⊓ Q).arrow = R.arrow ≫ χ P.arrow := by
-  -- Phase 2:
-  --   `_h : R ≤ residual P Q` ⇒ `R.arrow` factors through `(residual P Q).arrow`.
-  --   `(residual P Q).arrow ≃ equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow)`
-  --     via `Subobject.underlyingIso` and `Subobject.mk_arrow`.
-  --   Postcompose the factorisation with `equalizer.condition`.
-  -- Mathlib hooks: `Subobject.le_def`, `Subobject.factorThru_arrow`,
-  --   `Subobject.underlyingIso_arrow`, `equalizer.condition`.
-  sorry
+  -- Step 1: `R ≤ residual P Q` ⇒ R factors through `residual P Q` =
+  -- `Subobject.mk (equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow))`.
+  have hfac : (residual P Q).Factors R.arrow :=
+    Subobject.factors_of_le R.arrow h (Subobject.factors_self R)
+  -- Step 2: Unfold the residual to expose the equalizer-based mono.
+  -- `(Subobject.mk f).Factors g` is definitionally `∃ h, h ≫ f = g`
+  -- (via `Subobject.mk_factors_iff = Iff.rfl`), so `obtain` destructures.
+  change (Subobject.mk (equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow))).Factors R.arrow at hfac
+  obtain ⟨g, hg⟩ := hfac
+  -- `hg` is displayed by Lean with the `MonoOver.mk _ .arrow` wrapper still
+  -- visible; coerce it via defeq to the underlying `equalizer.ι` form so
+  -- `equalizer.condition` can fire below.
+  change g ≫ equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow) = R.arrow at hg
+  -- Step 3: Substitute `R.arrow = g ≫ equalizer.ι _ _`, reassociate, and
+  -- close. The `rw [equalizer.condition ...]` form fails here because the
+  -- `[HasEqualizer ...]` instance synthesized in the lemma application
+  -- ends up syntactically distinct from the one in `hg` (even though
+  -- propositionally equal). `congr 1` sidesteps this by peeling off the
+  -- outer `g ≫` and letting term-mode `equalizer.condition _ _` close
+  -- the inner equation with the instance in scope.
+  rw [← hg, Category.assoc, Category.assoc]
+  congr 1
+  exact equalizer.condition _ _
 
 /-- **E2.** Equal characteristic morphisms (after precomposing with
 `R.arrow`) yield equal pullbacks in `Subobject (R : C)`. -/
 theorem residual_E2 (R P Q : Subobject X)
-    (_h : R.arrow ≫ χ (P ⊓ Q).arrow = R.arrow ≫ χ P.arrow) :
+    (h : R.arrow ≫ χ (P ⊓ Q).arrow = R.arrow ≫ χ P.arrow) :
     (Subobject.pullback R.arrow).obj (P ⊓ Q) =
       (Subobject.pullback R.arrow).obj P := by
-  -- Phase 2:
-  --   The identity `(pullback R.arrow).obj S = (pullback (R.arrow ≫ χ S.arrow)).obj truth_as_sub`
-  --     follows from pullback pasting (Beck-Chevalley for the classifier).
-  --   Apply with `S = P ⊓ Q` and `S = P`; equality of LHSs from `_h` forces equality of RHSs.
-  -- Mathlib hooks: `Subobject.Classifier.pullback_χ_obj_mk_truth`,
-  --   `Subobject.pullback_comp`, classifier-uniqueness argument.
-  sorry
+  -- Strategy (Beck-Chevalley for the classifier): every subobject `S` of `X`
+  -- is recovered as `(pullback (χ S.arrow)).obj truth_as_subobject` (this is
+  -- `pullback_χ_obj_mk_truth` + `mk_arrow`). Composing with `pullback_comp`,
+  --   `(pullback R.arrow).obj S = (pullback (R.arrow ≫ χ S.arrow)).obj truth_as_subobject`.
+  -- The hypothesis `h` then forces the two right-hand sides equal.
+  -- Bind the chosen classifier explicitly so `pullback_χ_obj_mk_truth` (stated
+  -- for `𝒞 : Classifier C`) unifies cleanly with `HasSubobjectClassifier.χ`,
+  -- which is definitionally `𝒞.χ` (cf. `Classifier/Defs.lean:191`).  The type
+  -- annotation on `𝒞` is required: `HasSubobjectClassifier.exists_classifier`
+  -- otherwise leaves `C` as an unsolvable instance-resolution metavariable.
+  set 𝒞 : Subobject.Classifier C :=
+    HasSubobjectClassifier.exists_classifier.some with h𝒞
+  -- Re-cast `h` against `𝒞.χ` to match the rewrite shape below.  This is just
+  -- a defeq retype; `χ` and `𝒞.χ` unfold to the same term.
+  have h' : R.arrow ≫ 𝒞.χ (P ⊓ Q).arrow = R.arrow ≫ 𝒞.χ P.arrow := h
+  -- The key Beck-Chevalley identity.
+  have key : ∀ (S : Subobject X),
+      (Subobject.pullback R.arrow).obj S =
+        (Subobject.pullback (R.arrow ≫ 𝒞.χ S.arrow)).obj 𝒞.truth_as_subobject := by
+    intro S
+    simp only [Subobject.pullback_comp,
+               Subobject.Classifier.pullback_χ_obj_mk_truth, Subobject.mk_arrow]
+  rw [key (P ⊓ Q), key P, h']
 
 /-- **E3.** Pullback equality
 `pullback R.arrow (P ⊓ Q) = pullback R.arrow P` (in `Subobject (R : C)`)
 gives `R ⊓ P ≤ Q` (in `Subobject X`). -/
 theorem residual_E3 (R P Q : Subobject X)
-    (_h : (Subobject.pullback R.arrow).obj (P ⊓ Q) =
-          (Subobject.pullback R.arrow).obj P) :
+    (h : (Subobject.pullback R.arrow).obj (P ⊓ Q) =
+         (Subobject.pullback R.arrow).obj P) :
     R ⊓ P ≤ Q := by
-  -- Phase 2:
-  --   `inf_pullback`: pullback R.arrow (P ⊓ Q) = pullback R.arrow P ⊓ pullback R.arrow Q.
-  --   With `_h`: pullback R.arrow P = pullback R.arrow P ⊓ pullback R.arrow Q,
-  --     hence `pullback R.arrow P ≤ pullback R.arrow Q` (via `inf_eq_left`).
-  --   Apply `map R.arrow` and `inf_eq_map_pullback` + `pullback_self R.arrow`
-  --     to lift to `R ⊓ P ≤ R ⊓ Q` in Subobject X; then `inf_le_right` gives `≤ Q`.
-  -- Mathlib hooks: `Subobject.inf_pullback`, `Subobject.inf_eq_map_pullback`,
-  --   `Subobject.pullback_self`, `inf_eq_left`, transitivity with `inf_le_right`.
-  sorry
+  -- Step 1: Unfold `(P ⊓ Q)` via `Subobject.inf_pullback` (this is the lemma
+  -- `residual_I1` cites; can't reference `residual_I1` here because E3 is
+  -- declared before I1 in file order) to get
+  -- `pullback R.arrow P ⊓ pullback R.arrow Q = pullback R.arrow P` in `h`.
+  rw [Subobject.inf_pullback] at h
+  -- Step 2: From the meet equality, extract
+  -- `pullback R.arrow P ≤ pullback R.arrow Q`.
+  have hPQ : (Subobject.pullback R.arrow).obj P ≤ (Subobject.pullback R.arrow).obj Q :=
+    inf_eq_left.mp h
+  -- Step 3: Lift via `inf_eq_map_pullback` and functoriality of
+  -- `Subobject.map R.arrow` (a functor between thin categories, hence
+  -- order-preserving on its objects).
+  have hRP_RQ : R ⊓ P ≤ R ⊓ Q := by
+    rw [Subobject.inf_eq_map_pullback R P, Subobject.inf_eq_map_pullback R Q]
+    exact leOfHom ((Subobject.map R.arrow).map (homOfLE hPQ))
+  -- Step 4: `R ⊓ Q ≤ Q` by `inf_le_right`; compose.
+  exact hRP_RQ.trans inf_le_right
 
 /-! ## Bridging lemmas: introduction half (`R ⊓ P ≤ Q → R ≤ residual P Q`) -/
 
@@ -170,20 +209,28 @@ theorem residual_I1 (R P Q : Subobject X) :
 
 /-- **I2.** `R ⊓ P ≤ Q` gives the pullback equality
 `pullback R.arrow P = pullback R.arrow (P ⊓ Q)` in `Subobject (R : C)`. -/
-theorem residual_I2 (R P Q : Subobject X) (_h : R ⊓ P ≤ Q) :
+theorem residual_I2 (R P Q : Subobject X) (h : R ⊓ P ≤ Q) :
     (Subobject.pullback R.arrow).obj P =
       (Subobject.pullback R.arrow).obj (P ⊓ Q) := by
-  -- Phase 2:
-  --   From `_h`: `R ⊓ P = R ⊓ P ⊓ Q` in Subobject X (i.e., `R ⊓ P ≤ Q ↔ R ⊓ P = R ⊓ P ⊓ Q`,
-  --     via `inf_eq_left.mpr`).
-  --   Pull back along `R.arrow`: `pullback R.arrow (R ⊓ P) = pullback R.arrow (R ⊓ P ⊓ Q)`.
-  --   Apply `inf_pullback` repeatedly + `pullback_self R.arrow` (so
-  --     `pullback R.arrow R = ⊤` in `Subobject (R : C)`):
-  --     LHS = ⊤ ⊓ pullback R.arrow P = pullback R.arrow P
-  --     RHS = ⊤ ⊓ pullback R.arrow P ⊓ pullback R.arrow Q = pullback R.arrow (P ⊓ Q) [by I1].
-  -- Mathlib hooks: `inf_eq_left.mpr` / `left_eq_inf`, `Subobject.inf_pullback`,
-  --   `Subobject.pullback_self`, `Subobject.mk_arrow`, `residual_I1`.
-  sorry
+  -- Step 1: `(Subobject.pullback R.arrow).obj R = ⊤` in `Subobject (R : C)`.
+  -- (`Subobject.pullback_self` gives the `mk`-form; `mk_arrow` folds it back.)
+  have hR : (Subobject.pullback R.arrow).obj R = ⊤ := by
+    have hps := Subobject.pullback_self R.arrow
+    rwa [Subobject.mk_arrow] at hps
+  -- Step 2: From `h : R ⊓ P ≤ Q`, derive `R ⊓ P = (R ⊓ P) ⊓ Q`.
+  have h1 : R ⊓ P = (R ⊓ P) ⊓ Q := (inf_eq_left.mpr h).symm
+  -- Step 3: Apply the pullback functor to `h1` (via `congrArg` rather than
+  -- `rw [h1]`, since the latter would rewrite `R ⊓ P` on both sides of the
+  -- target equation and leave a `Q ⊓ Q = Q` residue). Then unfold via
+  -- `inf_pullback` and collapse `pullback R.arrow R = ⊤`, `⊤ ⊓ _ = _`.
+  have h2 : (Subobject.pullback R.arrow).obj (R ⊓ P) =
+            (Subobject.pullback R.arrow).obj ((R ⊓ P) ⊓ Q) :=
+    congrArg (Subobject.pullback R.arrow).obj h1
+  simp only [Subobject.inf_pullback, hR, top_inf_eq] at h2
+  -- `h2 : pullback R.arrow P = pullback R.arrow P ⊓ pullback R.arrow Q`.
+  -- Convert the goal's RHS via `residual_I1`.
+  rw [residual_I1]
+  exact h2
 
 /-- **I3.** Pullback equality
 `pullback R.arrow P = pullback R.arrow (P ⊓ Q)` (in `Subobject (R : C)`)
@@ -191,21 +238,49 @@ forces `R.arrow ≫ χ P.arrow = R.arrow ≫ χ (P ⊓ Q).arrow` (classifier
 uniqueness), hence `R.arrow` factors through `equalizer.ι (χ (P ⊓ Q).arrow)
 (χ P.arrow)` = the underlying mono of `residual P Q`. -/
 theorem residual_I3 (R P Q : Subobject X)
-    (_h : (Subobject.pullback R.arrow).obj P =
-          (Subobject.pullback R.arrow).obj (P ⊓ Q)) :
+    (h : (Subobject.pullback R.arrow).obj P =
+         (Subobject.pullback R.arrow).obj (P ⊓ Q)) :
     R ≤ residual P Q := by
-  -- Phase 2:
-  --   From `_h` and classifier uniqueness (`χ` injects on `Subobject` via the
-  --     representable bijection), derive
-  --     R.arrow ≫ χ P.arrow = R.arrow ≫ χ (P ⊓ Q).arrow.
-  --   Hence R.arrow factors through `equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow)`
-  --     via `equalizer.lift R.arrow ‹eq›`.
-  --   That factorisation realises `R ≤ Subobject.mk (equalizer.ι ...) = residual P Q`
-  --     via `Subobject.mk_le_mk_of_comm` (or `Subobject.le_of_comm`).
-  -- Mathlib hooks: `Subobject.Classifier.pullback_χ_obj_mk_truth_arrow` (the
-  --   inverse of the `χ`-pullback identity used in E2), `equalizer.lift`,
-  --   `equalizer.lift_ι`, `Subobject.mk_arrow`, `Subobject.le_of_comm`.
-  sorry
+  -- Strategy: invert the Beck-Chevalley argument from E2 to extract the
+  -- characteristic-morphism equality, then use `equalizer.lift` to factor
+  -- `R.arrow` through the equalizer underlying `residual P Q`.
+  -- (The type annotation on `𝒞` is required — see the same `set` in E2.)
+  set 𝒞 : Subobject.Classifier C :=
+    HasSubobjectClassifier.exists_classifier.some with h𝒞
+  -- Step 1: Reverse the χ → pullback identity to recover the χ equality.
+  have hchi : R.arrow ≫ χ (P ⊓ Q).arrow = R.arrow ≫ χ P.arrow := by
+    have key : ∀ (S : Subobject X),
+        (Subobject.pullback R.arrow).obj S =
+          (Subobject.pullback (R.arrow ≫ 𝒞.χ S.arrow)).obj 𝒞.truth_as_subobject := by
+      intro S
+      simp only [Subobject.pullback_comp,
+                 Subobject.Classifier.pullback_χ_obj_mk_truth, Subobject.mk_arrow]
+    -- Translate `h` to the Beck-Chevalley side.
+    have hpb : (Subobject.pullback (R.arrow ≫ 𝒞.χ P.arrow)).obj 𝒞.truth_as_subobject =
+               (Subobject.pullback (R.arrow ≫ 𝒞.χ (P ⊓ Q).arrow)).obj 𝒞.truth_as_subobject := by
+      rw [← key P, ← key (P ⊓ Q)]; exact h
+    -- Apply `𝒞.χ ∘ (·).arrow` to both sides; that operation undoes
+    -- `(pullback ·).obj 𝒞.truth_as_subobject` via `χ_pullback_obj_mk_truth_arrow`.
+    -- Spell the resulting type explicitly so `congrArg`'s lambda binder type
+    -- is fixed before elaboration of `hpb` — without this, Lean leaves the
+    -- domain of the lambda as an unsolvable metavar (the pullbacks live in
+    -- `Subobject R.underlying`, not `Subobject X`).
+    have h2 :
+        𝒞.χ ((Subobject.pullback (R.arrow ≫ 𝒞.χ P.arrow)).obj
+              𝒞.truth_as_subobject).arrow =
+        𝒞.χ ((Subobject.pullback (R.arrow ≫ 𝒞.χ (P ⊓ Q).arrow)).obj
+              𝒞.truth_as_subobject).arrow :=
+      congrArg (fun S => 𝒞.χ S.arrow) hpb
+    -- `χ_pullback_obj_mk_truth_arrow` is `@[simp]`, so it fires forward.
+    simp only [Subobject.Classifier.χ_pullback_obj_mk_truth_arrow] at h2
+    -- `h2 : R.arrow ≫ 𝒞.χ P.arrow = R.arrow ≫ 𝒞.χ (P ⊓ Q).arrow`, defeq to the
+    -- `HasSubobjectClassifier.χ` form the goal demands.
+    exact h2.symm
+  -- Step 2: `R.arrow` factors through `equalizer.ι (χ (P ⊓ Q).arrow) (χ P.arrow)`
+  -- via `equalizer.lift`; that factorisation realises `R ≤ residual P Q`
+  -- through `Subobject.le_mk_of_comm` (recall `residual P Q := mk (equalizer.ι _ _)`).
+  exact Subobject.le_mk_of_comm (equalizer.lift R.arrow hchi)
+          (equalizer.lift_ι R.arrow hchi)
 
 /-! ## Galois connection: `R ≤ (P ⇒ Q) ↔ R ⊓ P ≤ Q` -/
 
