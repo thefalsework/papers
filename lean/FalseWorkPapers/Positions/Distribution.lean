@@ -65,7 +65,7 @@ The framework's "comma distributed across parallel registers" becomes
 the formal condition that neither pole is suppressed in `D.map f`'s
 codomain. -/
 noncomputable def IsDistribution (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- TODO: discharge via HasSubobjectClassifier
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- discharged universally by `FalseWork.Heyting.heytingAlgebra` for elementary topoi
     {X Y : C} (f : X ⟶ Y) : Prop :=
   let img := Subobject.mk (image.ι (Δ.D.map f))
   img ⊓ kernelImage Δ Y ≠ ⊥ ∧ img ⊓ (kernelImage Δ Y)ᶜ ≠ ⊥

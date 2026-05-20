@@ -71,7 +71,7 @@ variable {C : Type u} [Category.{v} C]
 image — the Refusal-act lives in the part of `D Y` that the marking
 morphism does not reach. -/
 def IsRefusal (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- TODO: discharge via HasSubobjectClassifier
+    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- discharged universally by `FalseWork.Heyting.heytingAlgebra` for elementary topoi
     {X Y : C} (f : X ⟶ Y) : Prop :=
   ∃ (g : Δ.D.obj X ⟶ ((kernelImage Δ Y)ᶜ : Subobject (Δ.D.obj Y))),
     Δ.D.map f = g ≫ ((kernelImage Δ Y)ᶜ).arrow
