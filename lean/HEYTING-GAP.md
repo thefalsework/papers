@@ -6,11 +6,31 @@
 > Phase 3 then wired the universal instance into all cell files via
 > `lean/FalseWorkPapers/Positions/Setup.lean`, retiring the abstract
 > `[∀ Y, HeytingAlgebra (Subobject Y)]` binder (see
-> `lean/PHASE-0-DECISIONS.md` § "Decision 2 superseded").
-> Three of the five "Heyting-blocked" cell sorries closed against the
-> new instance.  The other two turned out to be image-API-blocked, not
-> Heyting-blocked — they remain as a separate Path 5 gap.
-> Upstreaming the construction to Mathlib4 is parked as Phase 4 work.
+> `lean/PHASE-0-DECISIONS.md` § "Decision 2 superseded") and discharging
+> the `four_position_partition` theorem (commit `75a8919`).  Path 5
+> (commit `60d6ef5`) closed the three image-API `sorry`s in
+> `Infrastructure.lean` and the `isRefusal_iff_image_le_compl` helper.
+> Upstreaming the construction to Mathlib4 is drafted in
+> `lean/MATHLIB-PR-DRAFT.md`; PR not yet opened (opening gated on a
+> morning re-read of the draft).
+
+<!--
+Pre-staged for the morning, once the PR is opened.  Replace the status
+block above with this one (and delete this comment) the moment the
+PR URL is in hand:
+
+> **Status (YYYY-MM-DD): CLOSED locally; PR opened upstream.**  Local
+> construction at `lean/FalseWorkPapers/Heyting/SubobjectInstance.lean`
+> (six bridging lemmas at commit `2fed510`; consumed by all cell files
+> from commit `a57619f` onward).  Phase 0 Decision 2's abstract binder
+> retired; supersession recorded at `lean/PHASE-0-DECISIONS.md`.
+> Upstream PR: <PASTE-PR-URL-HERE> (drafted at
+> `lean/MATHLIB-PR-DRAFT.md`, opened YYYY-MM-DD).  Path 5 (commit
+> `60d6ef5`) closed the three image-API `sorry`s.  One `sorry`
+> remaining in the entire formalization codebase, the substantive
+> `refusal_residue` in `Refusal.lean` (parked, not Heyting-related).
+-->
+
 
 **Status (pre-2026-05-19):** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
 
