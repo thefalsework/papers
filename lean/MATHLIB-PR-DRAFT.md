@@ -1,11 +1,11 @@
 # Mathlib PR draft — `HeytingAlgebra (Subobject X)` for elementary topoi
 
-> **Status (2026-05-19): DRAFT — not yet opened.**
-> This file is Phase 4 prep for the upstream contribution.  Per the
-> framework's working plan, the PR is to sit a day, get re-read in the
-> morning, and only then be opened.  When opening, use this file's
-> content as the PR body (with the explicit edits checklisted in
-> § "Pre-submission checklist" below).
+> **Status (2026-05-20): DRAFT, post-morning-reread, ready for opening sequence.**
+> The morning-reread pass landed on 2026-05-20; outcomes are summarised
+> at § "Morning re-read — outcomes (2026-05-20)" below.  Use the PR
+> body block as written; apply the namespace and module-path
+> adjustments from § "Namespace and module-path adjustments before
+> submission" when copying the Lean file into a Mathlib clone.
 
 ---
 
@@ -24,11 +24,11 @@ See [the commit conventions](https://leanprover-community.github.io/contribute/c
 ```markdown
 This PR provides the canonical `HeytingAlgebra (Subobject X)` instance
 for any category `C` satisfying the elementary-topos hypothesis bundle.
-Closes a long-standing gap in `Mathlib.CategoryTheory.Subobject.Lattice`:
+Closes a gap in `Mathlib.CategoryTheory.Subobject.Lattice`:
 the `SemilatticeInf`, `SemilatticeSup`, `OrderTop`, `OrderBot`, and
 `Lattice` instances on `Subobject X` were already in place, but the
-Heyting (i.e. cartesian-closed) structure that elementary topoi force
-on the subobject lattice was missing.
+Heyting-algebra structure that elementary topoi induce on the subobject
+lattice was missing.
 
 The construction follows Mac Lane and Moerdijk, *Sheaves in Geometry
 and Logic*, IV.6 Proposition 2: implication is the residual defined
@@ -65,26 +65,28 @@ file-local and do not enter the public API.
 [HasInitial C] [HasImages C] [HasBinaryCoproducts C] [InitialMonoClass C]
 ```
 
-These together are entailed by `C` being an elementary topos.  The
-breakdown of which lemma needs which hypothesis is given in the file's
-module docstring.
+These together are entailed by `C` being an elementary topos.  Of these,
+`HasSubobjectClassifier` and `HasEqualizers` are the genuinely new
+requirements for the residual construction itself; the remainder enter
+via the existing `SemilatticeInf`, `SemilatticeSup`, `OrderTop`, and
+`OrderBot` instances on `Subobject X` that `HeytingAlgebra` extends.
+The per-lemma breakdown is given in the file's module docstring.
 
 ### Connection to existing API
 
-`Mathlib/CategoryTheory/Subobject/Lattice.lean` already exhibits the
-`SemilatticeInf, SemilatticeSup, OrderTop, OrderBot, Lattice` instances
-on `Subobject X` under the corresponding limit/colimit hypotheses.
-This PR extends that chain to `HeytingAlgebra` using the new
-`HasSubobjectClassifier` typeclass introduced in
-`Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean`
+`Mathlib/CategoryTheory/Subobject/Lattice.lean` (Bhavik Mehta, Kim
+Morrison) already exhibits the `SemilatticeInf, SemilatticeSup,
+OrderTop, OrderBot, Lattice` instances on `Subobject X` under the
+corresponding limit/colimit hypotheses.  This PR extends that chain
+to `HeytingAlgebra` using the new `HasSubobjectClassifier` typeclass
+introduced in `Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean`
 (Charlie Conneen, Pablo Donato, Klaus Gy, 2024) and the equalizer
 infrastructure in `Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean`.
 
-The construction is upstream-compatible with the presheaf-topos
-classifier instance in `Mathlib.CategoryTheory.Topos.Sheaf`
-(`HasSubobjectClassifier (Cᵒᵖ ⥤ Type w)` for `EssentiallySmall.{w} C`),
-giving the Heyting structure on any presheaf-topos subobject lattice
-for free.
+Combined with the presheaf-topos classifier instance in
+`Mathlib.CategoryTheory.Topos.Sheaf` (`HasSubobjectClassifier (Cᵒᵖ ⥤ Type w)`
+for `EssentiallySmall.{w} C`), this gives the Heyting structure on any
+presheaf-topos subobject lattice automatically.
 
 ### Use of AI
 
@@ -93,14 +95,10 @@ disclosing: the initial proof skeleton and the six bridging lemmas
 were drafted with the assistance of [Cursor](https://www.cursor.com/)
 running [Anthropic Claude](https://www.anthropic.com/claude) as the
 underlying model, during a multi-session co-working pass on a private
-formalization project.  The author re-read every proof and every
-docstring, debugged a substantive instance-diamond issue surfaced
-during downstream consumption (forcing an architectural reshape of
-the consuming layer), and stands behind the entire content of the PR.
+formalization project.
 
-The author has been formalizing in Lean 4 / Mathlib since 2024 and is
-the maintainer of the
-[FalseWork Papers project](https://github.com/cmbrink/falsework-papers),
+The author is the maintainer of the
+[FalseWork Papers project](https://github.com/thefalsework/papers),
 where this instance has been consumed by application-level theorems
 (`four_position_partition` and three other position-theory results)
 since Phase 3 of that project — providing a real downstream test of
@@ -110,32 +108,24 @@ the construction.
 
 * The instance resolves at the abstract level (an `inferInstance` smoke
   test under the topos hypothesis bundle exhibits this).
-* `le_himp_iff` and `himp_bot` discharge via `rfl` / direct equation —
-  no additional simp set required.
-* Downstream:  in the FalseWork Papers project, the instance carries
-  four position-theory theorems whose proofs are
+* `himp_bot` discharges via `rfl` (the pseudo-complement is definitionally
+  `residual P ⊥`); `le_himp_iff` is the Galois connection theorem assembled
+  from the six bridging lemmas.
+* Downstream: in the FalseWork Papers project, the instance carries four
+  position-theory theorems whose proofs are
   `LE.le.disjoint_compl_right`-style consequences of the Heyting
-  structure.  Those proofs broke (instance diamond, see below) before
-  this construction was wired in and discharge cleanly after.
+  structure, kernel-checked with `#print axioms` reporting only
+  `[propext, Classical.choice, Quot.sound]`.
+* Users should depend on this instance via typeclass search rather than
+  parameterizing over `[HeytingAlgebra (Subobject Y)]`, which can produce
+  instance diamonds against the native `Subobject` order structure.
 
-### Note on instance diamonds
+### Acknowledgments
 
-The Phase 3 downstream consumer initially carried an abstract
-`[∀ Y : C, HeytingAlgebra (Subobject Y)]` binder as a stopgap before
-this instance existed.  When the construction was wired in but the
-binder retained, an instance diamond materialized:
-`HeytingAlgebra.toGeneralizedHeytingAlgebra.toSemilatticeInf.toPartialOrder`
-versus the native `instPartialOrderSubobject` resolved to syntactically
-distinct `PartialOrder` instances on `Subobject Y`, blocking unification
-between the theorem hypotheses (typed against native) and the Heyting
-lemmas (typed against the binder chain).
-
-Resolution was to drop the abstract binder entirely and let the
-universal instance fire via typeclass search.  The lesson for upstream:
-this instance is *the* Heyting structure on `Subobject X` — any
-abstract `[HeytingAlgebra (Subobject X)]` binder is a smell, and the
-construction here resolves the underlying gap that motivated such
-binders.
+Thanks to **Edward van de Meent** and **Fernando Chu** for confirming
+the gap and discussing the construction's shape in
+[a #maths Zulip thread](https://leanprover.zulipchat.com/#narrow/channel/116395-maths/topic/HeytingAlgebra.20.28Subobject.20Y.29.20for.20elementary.20topoi/with/595655972)
+(2026-05).
 
 ### References
 
@@ -180,11 +170,14 @@ the file content into a Mathlib clone with these mechanical edits:
   →
   `namespace CategoryTheory.Subobject … end CategoryTheory.Subobject`.
 
-* **Imports.**
-  Drop the `FalseWorkPapers.*` imports (there are none) and add the
-  `@[expose] public section` marker if Mathlib's `module` style is
-  required for the file (check the immediate neighbours under
-  `Mathlib/CategoryTheory/Subobject/`).
+* **Module / import style** (required, verified against
+  `Subobject/Lattice.lean`).  The new file must use Mathlib's
+  module-system style:
+  - First non-comment line is `module`.
+  - Each `import` becomes `public import`.
+  - After the module docstring, add `@[expose] public section`.
+
+  Verify no `FalseWorkPapers.*` imports remain (there should be none).
 
 * **License header.**
   The file already carries the Apache 2.0 wording and a
@@ -243,8 +236,8 @@ Before clicking "Create PR", verify in order:
 
 Drawing from the immediate file-history of the surrounding code:
 
-* **Charlie Conneen** (`@b-mehta` on GitHub; main author of
-  `Subobject/Classifier/Defs.lean`).
+* **Charlie Conneen** (main author of
+  `Subobject/Classifier/Defs.lean`; GitHub handle to be looked up before opening).
 * **Pablo Donato** (co-author of the classifier file).
 * **Klaus Gy** (co-author of the classifier file).
 * **Bhavik Mehta** (co-author of `Subobject/Lattice.lean`; runs the
@@ -262,38 +255,46 @@ Mathlib's preferred mode (per the
 
 ---
 
-## Things to re-read in the morning
+## Morning re-read — outcomes (2026-05-20)
 
-Before opening the PR, re-check each of these for tone, accuracy, and
-appropriateness:
+Re-read pass completed.  Changes landed in this draft:
 
-1. The "Use of AI" paragraph.  Mathlib's maintainers have stated
-   strong views; the disclosure must be both candid and substantive.
-   The current paragraph should pass on both counts but re-read it
-   cold.
+* Opening paragraph: tightened "long-standing gap" → "gap"; "cartesian-
+  closed structure ... force" → "Heyting-algebra structure ... induce."
+* Hypothesis bundle: added one-sentence note distinguishing the genuinely
+  new requirements (`HasSubobjectClassifier`, `HasEqualizers`) from those
+  inherited via existing `Lattice + BoundedOrder` instances.
+* Connection to existing API: tightened presheaf-compatibility sentence.
+* Use of AI: dropped the "stands behind every proof" sentence and the
+  self-attested experience claim; verifiable artifact link (FalseWork
+  Papers project) retained as the substantive disclosure; URL corrected
+  to `github.com/thefalsework/papers`.
+* Testing: corrected the "`rfl`" claim (only `himp_bot` is `rfl`,
+  `le_himp_iff` is the assembled Galois connection); added the
+  kernel-axiom-audit fact (`#print axioms` reports only the three
+  standard axioms); added a one-sentence guidance-to-users bullet
+  about typeclass search vs. abstract binder.
+* Instance-diamond section: removed from PR body (kept in
+  `lean/HEYTING-DIAMOND.md` as historical record).  Replaced by the
+  single guidance bullet at the end of Testing.
+* Reviewer list: removed mis-attribution of `@b-mehta` to Charlie
+  Conneen (that handle belongs to Bhavik Mehta).  Charlie Conneen's
+  actual handle to be looked up before opening the PR.
+* Pre-submission / namespace checklist: strengthened the module-style
+  bullet from "if required" to "required, verified against
+  Subobject/Lattice.lean", with the three concrete edits enumerated.
+* Citation audit pass: added Mehta/Morrison credit for `Subobject/Lattice.lean`
+  inline (parallel to the Conneen/Donato/Gy credit for the classifier
+  file).  Added a new `### Acknowledgments` section between Testing and
+  References, crediting Edward van de Meent and Fernando Chu for the
+  Zulip discussion that surfaced the gap, with the canonical thread URL.
 
-2. The "Note on instance diamonds" paragraph.  This is a substantive
-   contribution to the PR's value (it documents an architectural
-   lesson surfaced during downstream use), but it could read as
-   defensive or as scope creep.  Verify it lands as the former.
+Items deferred to the Mathlib clone (not changeable from here):
 
-3. The reviewer list.  Re-check that all suggested reviewers are
-   active in late 2025 / early 2026 (someone may have stepped back).
-
-4. The hypothesis bundle.  Walk through each member and verify it is
-   genuinely needed by some specific clause of some specific lemma.
-   If any one of them is redundant, drop it before submission — this
-   is the kind of thing Mathlib reviewers will catch fast.
-
-5. The proof of `residual_E2` and `residual_I3` — the two `set 𝒞`
-   blocks.  These are functional but a touch awkward; a reviewer
-   might suggest a cleaner formulation against the typeclass-bound
-   `HasSubobjectClassifier.χ` rather than the chosen-classifier
-   `𝒞.χ`.  Be prepared to either defend the current form (the
-   `pullback_χ_obj_mk_truth` lemma's statement forces this shape)
-   or rewrite to the typeclass form if a cleaner path exists.
-
-6. Whether to mark `residual` as `protected def` or just `def`.
-   Currently `def` (and the namespace `CategoryTheory.Subobject`
-   would make the full name `Subobject.residual`, which is unlikely
-   to collide).  Probably fine but verify.
+* **The two `set 𝒞` proof blocks in `residual_E2` and `residual_I3`.**
+  Decision: leave as-is.  The `pullback_χ_obj_mk_truth` lemma is stated
+  for a specific `Subobject.Classifier C`, which forces this shape.  If
+  a reviewer prefers a typeclass-bound formulation, address in review.
+* **`protected def residual` vs. `def residual`.**  Decision: `def` is
+  fine.  Within `CategoryTheory.Subobject`, the full name
+  `Subobject.residual` is unlikely to collide.
