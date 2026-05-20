@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Chris Brink
 -/
 import FalseWorkPapers.Heyting.SubobjectInstance
+import FalseWorkPapers.Positions
 
 /-!
 # Sanity-check examples for `FalseWork.Heyting.heytingAlgebra`
@@ -63,3 +64,25 @@ example {C : Type*} [Category C]
     P ≤ Pᶜᶜ := le_compl_compl
 
 end FalseWork.Heyting.Examples
+
+/-! ## Kernel-axiomatic-dependence audit
+
+Empirical verification that `four_position_partition` does not
+transitively depend on `sorry`.  `#print axioms` exposes the full
+axiom set the Lean kernel needs to accept the theorem; if `sorryAx`
+appears in the output, the theorem is not kernel-checked in the
+strict sense (some link in its dependency chain is `sorry`).
+
+The expected output is exactly the three standard Mathlib axioms
+(`propext`, `Classical.choice`, `Quot.sound`).  If `sorryAx` appears,
+this audit fails and the four-position-partition status claim must
+be retracted.
+-/
+
+#print axioms FalseWork.Positions.four_position_partition
+#print axioms FalseWork.Positions.isRefusal_iff_image_le_compl
+#print axioms FalseWork.Heyting.heytingAlgebra
+#print axioms FalseWork.Heyting.le_residual_iff_inf_le
+#print axioms FalseWork.Positions.isDistribution_implies_neither_polar
+#print axioms FalseWork.Positions.exploitation_refusal_disjoint
+#print axioms FalseWork.Positions.trivialized_implies_isInfrastructure
