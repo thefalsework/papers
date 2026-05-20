@@ -43,6 +43,13 @@ import Mathlib.CategoryTheory.Subobject.Classifier.Defs
 import Mathlib.CategoryTheory.Subobject.Lattice
 import Mathlib.CategoryTheory.Limits.Shapes.Images
 import Mathlib.Order.Heyting.Basic
+-- The universal `HeytingAlgebra (Subobject Y)` instance is built here.
+-- Importing it from `Setup.lean` puts it in scope for every cell file
+-- (since every cell imports this module) and supersedes the abstract
+-- `[∀ Y, HeytingAlgebra (Subobject Y)]` binder that the cells previously
+-- carried as a stopgap for the Mathlib gap (now closed; see
+-- `lean/PHASE-0-DECISIONS.md` § "Decision 2 superseded").
+import FalseWorkPapers.Heyting.SubobjectInstance
 
 namespace FalseWork.Positions
 
@@ -104,37 +111,40 @@ noncomputable def kernelImage (Δ : DistinctionStructure C) (Y : C) :
     Subobject (Δ.D.obj Y) :=
   Subobject.mk (image.ι (Δ.η.app Y))
 
-/-! ## Mathlib gap (triaged 2026-05-17)
+/-! ## Mathlib gap — closed (Phase 2, 2026-05-19)
 
-Mathlib provides `SemilatticeInf`, `SemilatticeSup`, and `OrderTop`
-instances on `Subobject Y` under the standard limit hypotheses on `C`,
-but does **not** yet provide a `HeytingAlgebra` instance for the
-case where `C` is a topos. The classical construction is in Mac
-Lane–Moerdijk Ch. IV.8 and is mechanizable in roughly 200–400 lines.
+**Original gap (triaged 2026-05-17).**  Mathlib provides
+`SemilatticeInf`, `SemilatticeSup`, and `OrderTop` instances on
+`Subobject Y` under the standard limit hypotheses on `C`, but did
+not provide a `HeytingAlgebra` instance for the case where `C` is a
+topos.  The classical construction is in Mac Lane–Moerdijk Ch. IV.8.
 
-The closest existing scaffold is Edward van de Meent's scratch
-project `edegeltje/CwFTT`, which builds `LE`, `PartialOrder`,
-`SemilatticeInf`, `And`, `Imp` (with full Heyting adjunction), and
-`Not` on `(X ⟶ Ω)` rather than `Subobject Y`. The two are order-
-isomorphic in any topos. The full upstream-dependency record —
-current state, options, posture, threshold conditions, and the six
-Heyting-gated `sorry`s in the sibling files — lives at
-`lean/HEYTING-GAP.md` in this repository.
+**Closure.**  `lean/FalseWorkPapers/Heyting/SubobjectInstance.lean`
+mechanizes the construction in ≈320 lines.  Implication is the
+residual `Sub.mk (eq.ι (χ (P ⊓ Q).arrow) (χ P.arrow))`; the Heyting
+adjunction `R ≤ (P ⇒ Q) ↔ R ⊓ P ≤ Q` decomposes into six bridging
+lemmas (three elimination, three introduction).  The full
+construction is committed at `2fed510`.
 
-The sibling files work around this gap by *assuming* a local
-`[HeytingAlgebra (Subobject (Δ.D.obj _))]` hypothesis where needed.
-Once the upstream instance lands (either via Edward's CwFTT path
-upstreaming or a parallel Mac Lane–Moerdijk IV.8 PR), those
-hypotheses become derivable from `HasClassifier C` plus the
-standard limits/colimits assumptions.
+**Consumption.**  This `Setup.lean` file imports the new module,
+so every cell file gets the universal instance in scope
+automatically.  Cell files previously carried an abstract
+`[∀ Y, HeytingAlgebra (Subobject Y)]` binder as a stopgap (Phase-0
+Decision 2); that binder was retired in Phase 3 (2026-05-19) once
+Phase 2 closed the underlying gap and the binder's abstractness
+became actively counter-productive (it induced an instance diamond
+between the binder's Heyting `PartialOrder` and the native
+`instPartialOrderSubobject` — see `lean/HEYTING-DIAMOND.md`).
+See `lean/PHASE-0-DECISIONS.md` § "Decision 2 superseded" for the
+audit trail.
 
-The files that depend on this gap are **Refusal.lean**,
-**Distribution.lean**, **Exploitation.lean**, and **Partition.lean**
-(the partition theorem requires the Heyting structure to perform the
-case-split that produces the four cells). **Infrastructure.lean** and
-**CommitmentGate.lean** can be stated without the Heyting structure
-(image-subobject inequality and colimit machinery respectively, both
-already in Mathlib).
+**Cell-file consumers (post-Phase-3).**  `Distribution.lean`,
+`Exploitation.lean`, `Refusal.lean`, `Partition.lean` now consume
+the universal instance with no Heyting binder.  Their section
+variables include `[HasInitial C] [InitialMonoClass C]
+[HasBinaryCoproducts C] [HasEqualizers C]` so the instance fires
+via typeclass search.  `Infrastructure.lean` and `CommitmentGate.lean`
+do not depend on Heyting structure and are unchanged.
 -/
 
 end FalseWork.Positions

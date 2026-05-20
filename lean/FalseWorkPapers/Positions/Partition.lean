@@ -98,64 +98,7 @@ universe v u
 
 variable {C : Type u} [Category.{v} C]
   [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
-
-/-! ## The partition theorem -/
-
-/-- **Theorem 0 (Four-position partition).** Let `Δ` be a non-trivial
-distinction structure on a category `C` with the requisite Heyting
-structure on its subobject lattices. For every morphism `f : X ⟶ Y`
-in `C` whose `D`-image is non-trivial, exactly one of the four cell
-predicates holds: `IsInfrastructure Δ f`, `IsDistribution Δ f`,
-`IsExploitation Δ f`, `IsRefusal Δ f`.
-
-The four cells are pairwise disjoint Heyting conditions on
-`(image(D.map f), kernelImage Δ Y)` and exhaustive over the morphism
-space of `C` (modulo the trivial-image edge case). -/
-theorem four_position_partition
-    (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]
-    {X Y : C} (f : X ⟶ Y)
-    (_h_nontriv : Subobject.mk (image.ι (Δ.D.map f)) ≠ ⊥) :
-    (IsInfrastructure Δ f ∨ IsDistribution Δ f ∨
-      IsExploitation Δ f ∨ IsRefusal Δ f) ∧
-    (IsInfrastructure Δ f → ¬ IsDistribution Δ f) ∧
-    (IsInfrastructure Δ f → ¬ IsExploitation Δ f) ∧
-    (IsInfrastructure Δ f → ¬ IsRefusal Δ f) ∧
-    (IsDistribution Δ f → ¬ IsExploitation Δ f) ∧
-    (IsDistribution Δ f → ¬ IsRefusal Δ f) ∧
-    (IsExploitation Δ f → ¬ IsRefusal Δ f) := by
-  /- Proof structure:
-
-     Let `img := Subobject.mk (image.ι (Δ.D.map f))` and
-     `k := kernelImage Δ Y`.
-
-     EXHAUSTIVENESS. Case-split on `img ≤ k`:
-     * If `img ≤ k`: Infrastructure. Done.
-     * If `¬(img ≤ k)`: case-split on `img ⊓ k = ⊥`:
-       - If `img ⊓ k = ⊥`: this is equivalent to `img ≤ kᶜ` in a
-         Heyting algebra. Refusal. (Note: `IsRefusal` is currently
-         stated as a factorization condition; the equivalence with
-         `img ≤ kᶜ` is a separate lemma — see `Refusal.lean`.)
-       - If `img ⊓ k ≠ ⊥`: case-split on `img ⊓ kᶜ = ⊥`:
-         * If `img ⊓ kᶜ ≠ ⊥`: Distribution.
-         * If `img ⊓ kᶜ = ⊥`: equivalent to `img ≤ kᶜᶜ`. Combined
-           with `¬(img ≤ k)`: Exploitation.
-
-     DISJOINTNESS. Each pair-wise disjointness reduces to a Heyting
-     identity, listed in the file's docstring.
-
-     The proof depends on:
-     * Heyting structure on `Subobject (D Y)` — currently assumed via
-       the `[HeytingAlgebra (Subobject _)]` instance hypothesis (the
-       Mathlib gap, see `Setup.lean`).
-     * The equivalence `IsRefusal Δ f ↔ img ≤ kᶜ` — currently
-       `IsRefusal` is stated as a factorization through `kᶜ`; the
-       image-subobject characterisation is a separate lemma to add.
-     * Trichotomy in a Heyting algebra: for any `a, b`,
-       `(a ≤ b) ∨ (a ⊓ b = ⊥) ∨ (a ⊓ b ≠ ⊥ ∧ a ⊓ bᶜ ≠ ⊥)` — this
-       requires classical reasoning on the meta-propositions, which
-       is available since we are working in `Prop`. -/
-  sorry
+  [HasEqualizers C] [HasInitial C] [HasBinaryCoproducts C] [InitialMonoClass C]
 
 /-! ## Refusal characterization (helper lemma needed for the partition) -/
 
@@ -183,7 +126,6 @@ subobject API (`Subobject.factorThru`, `Subobject.ofLE`,
 `image.factorThruImage`). Lemma names tentative pending verification. -/
 theorem isRefusal_iff_image_le_compl
     (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     {X Y : C} (f : X ⟶ Y) :
     IsRefusal Δ f ↔
       Subobject.mk (image.ι (Δ.D.map f)) ≤ (kernelImage Δ Y)ᶜ := by
@@ -203,29 +145,123 @@ theorem isRefusal_iff_image_le_compl
     -- `D.map f = g ≫ (kᶜ).arrow`.
     sorry
 
+/-! ## The partition theorem -/
+
+/-- **Theorem 0 (Four-position partition).** Let `Δ` be a non-trivial
+distinction structure on a category `C` with the requisite Heyting
+structure on its subobject lattices. For every morphism `f : X ⟶ Y`
+in `C` whose `D`-image is non-trivial, exactly one of the four cell
+predicates holds: `IsInfrastructure Δ f`, `IsDistribution Δ f`,
+`IsExploitation Δ f`, `IsRefusal Δ f`.
+
+The four cells are pairwise disjoint Heyting conditions on
+`(image(D.map f), kernelImage Δ Y)` and exhaustive over the morphism
+space of `C` (modulo the trivial-image edge case). -/
+theorem four_position_partition
+    (Δ : DistinctionStructure C)
+    {X Y : C} (f : X ⟶ Y)
+    (h_nontriv : Subobject.mk (image.ι (Δ.D.map f)) ≠ ⊥) :
+    (IsInfrastructure Δ f ∨ IsDistribution Δ f ∨
+      IsExploitation Δ f ∨ IsRefusal Δ f) ∧
+    (IsInfrastructure Δ f → ¬ IsDistribution Δ f) ∧
+    (IsInfrastructure Δ f → ¬ IsExploitation Δ f) ∧
+    (IsInfrastructure Δ f → ¬ IsRefusal Δ f) ∧
+    (IsDistribution Δ f → ¬ IsExploitation Δ f) ∧
+    (IsDistribution Δ f → ¬ IsRefusal Δ f) ∧
+    (IsExploitation Δ f → ¬ IsRefusal Δ f) := by
+  -- Abbreviations for readability.
+  set img := Subobject.mk (image.ι (Δ.D.map f)) with himg_def
+  set K := kernelImage Δ Y with hK_def
+  -- The `IsRefusal ↔ img ≤ Kᶜ` equivalence (image-API helper).
+  have hRefuse : IsRefusal Δ f ↔ img ≤ Kᶜ :=
+    isRefusal_iff_image_le_compl Δ f
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
+  · -- EXHAUSTIVENESS.  Classical case-split on `img ≤ K`, then on the
+    -- two Heyting non-triviality flags `img ⊓ K = ⊥` and `img ⊓ Kᶜ = ⊥`.
+    by_cases h1 : img ≤ K
+    · exact Or.inl h1
+    · by_cases h2 : img ⊓ K = ⊥
+      · -- `img ⊓ K = ⊥` ⇒ `img ≤ Kᶜ` via the Heyting Galois connection
+        -- (`le_compl_iff_disjoint_right` ↔ `disjoint_iff`).
+        refine Or.inr (Or.inr (Or.inr ?_))
+        apply hRefuse.mpr
+        rw [le_compl_iff_disjoint_right, disjoint_iff]
+        exact h2
+      · by_cases h3 : img ⊓ Kᶜ = ⊥
+        · -- `img ⊓ Kᶜ = ⊥` ⇒ `img ≤ Kᶜᶜ` (same Galois move).  Combined
+          -- with `h1 : ¬(img ≤ K)` gives `IsExploitation`.
+          refine Or.inr (Or.inr (Or.inl ⟨?_, h1⟩))
+          rw [le_compl_iff_disjoint_right, disjoint_iff]
+          exact h3
+        · -- Both meets non-trivial ⇒ `IsDistribution`.
+          exact Or.inr (Or.inl ⟨h2, h3⟩)
+  · -- Infra → ¬Distribution.  `img ≤ K` forces `img ⊓ Kᶜ ≤ K ⊓ Kᶜ = ⊥`,
+    -- contradicting `IsDistribution.2`.
+    intro hInfra ⟨_, h_dist_hi⟩
+    exact h_dist_hi (hInfra.disjoint_compl_right.eq_bot)
+  · -- Infra → ¬Exploitation.  `IsExploitation.2 = ¬(img ≤ K)`.
+    intro hInfra ⟨_, h_neg⟩
+    exact h_neg hInfra
+  · -- Infra → ¬Refusal.  Via `hRefuse`: refusal ⇒ `img ≤ Kᶜ`.  Combined
+    -- with `img ≤ K` gives `img ≤ K ⊓ Kᶜ = ⊥`, contradicting `h_nontriv`.
+    intro hInfra hRef
+    have hKc : img ≤ Kᶜ := hRefuse.mp hRef
+    apply h_nontriv
+    exact le_bot_iff.mp ((le_inf hInfra hKc).trans (inf_compl_self K).le)
+  · -- Distribution → ¬Exploitation.  `IsExploitation.1 = img ≤ Kᶜᶜ` forces
+    -- `img ⊓ Kᶜ ≤ Kᶜᶜ ⊓ Kᶜ = ⊥` (via `compl_inf_self Kᶜ`), contradicting
+    -- `IsDistribution.2`.
+    intro ⟨_, h_dist_hi⟩ ⟨hClos, _⟩
+    apply h_dist_hi
+    exact le_bot_iff.mp ((inf_le_inf_right _ hClos).trans (compl_inf_self Kᶜ).le)
+  · -- Distribution → ¬Refusal.  Refusal ⇒ `img ≤ Kᶜ` ⇒ `img ⊓ K ≤ Kᶜ ⊓ K = ⊥`,
+    -- contradicting `IsDistribution.1`.
+    intro ⟨h_dist_lo, _⟩ hRef
+    have hKc : img ≤ Kᶜ := hRefuse.mp hRef
+    apply h_dist_lo
+    exact le_bot_iff.mp ((inf_le_inf_right _ hKc).trans (compl_inf_self K).le)
+  · -- Exploitation → ¬Refusal.  Refusal ⇒ `img ≤ Kᶜ`; combined with
+    -- `img ≤ Kᶜᶜ` gives `img ≤ Kᶜ ⊓ Kᶜᶜ = ⊥`, contradicting `h_nontriv`.
+    intro ⟨hClos, _⟩ hRef
+    have hKc : img ≤ Kᶜ := hRefuse.mp hRef
+    apply h_nontriv
+    exact le_bot_iff.mp ((le_inf hKc hClos).trans (inf_compl_self Kᶜ).le)
+
 /-! ## Status
 
 DONE:
-* `four_position_partition` — full statement of Theorem 0. The proof
-  structure is documented; the proof itself is `sorry` pending:
-  - The Mathlib `HeytingAlgebra (Subobject Y)` instance for topoi.
-  - The `isRefusal_iff_image_le_compl` characterisation lemma below.
-  - The Heyting-algebra trichotomy lemma (provable in Mathlib once
-    the instance is available).
-* `isRefusal_iff_image_le_compl` — helper lemma re-characterising
-  Refusal in image-subobject form. `sorry` pending standard image-
-  factorization lemmas.
+* `four_position_partition` — fully proven (Phase 3, 2026-05-19)
+  modulo the helper `isRefusal_iff_image_le_compl`.  The Heyting
+  case-split (`by_cases` on `img ≤ K`, `img ⊓ K = ⊥`, `img ⊓ Kᶜ = ⊥`)
+  and the six pair-wise disjointness arguments are all discharged
+  using the universal `FalseWork.Heyting.heytingAlgebra` instance.
+* `isRefusal_iff_image_le_compl` — statement final; proof carries
+  two image-API `sorry`s (forward and backward direction) flagged
+  below.  These are *not* Heyting-blocked.
+
+REMAINING `sorry`s in this file:
+* `isRefusal_iff_image_le_compl` forward direction — needs the
+  Mathlib image-factorization-through-mono lemma.
+* `isRefusal_iff_image_le_compl` backward direction — needs
+  `Subobject.ofLE` ∘ `image.factorThruImage` plumbing.
+
+Both are blocked by the same image-API gap as
+`Infrastructure.lean`'s remaining `sorry`; see Path 5 in the
+sequencing record.  The partition theorem itself contains *no
+direct* `sorry` and inherits its proof modulo this helper.
 
 UPSTREAM MATHLIB GAP:
-* `HeytingAlgebra (Subobject _)` for topoi (see `Setup.lean` note).
-  This is the load-bearing gap for the partition theorem.
+* `HeytingAlgebra (Subobject _)` — closed Phase 2 (2026-05-19) by
+  `FalseWork.Heyting.heytingAlgebra`; cell files now consume the
+  instance via `Setup.lean`.
 
 FRAMEWORK STATUS:
 * Theorem 0 is the framework's central structural claim. The cell
   predicates are stable; the partition is a Heyting-algebra theorem
-  modulo the Mathlib gap. The Commitment gate (`Commitment.lean`)
-  is orthogonal and lives at schema level, not at theorem-grade
-  partition level.
+  *and* an image-algebra theorem.  Phase 2 + Phase 3 closed the
+  Heyting side; the image side remains as Path 5 work.  The
+  Commitment gate (`Commitment.lean`) is orthogonal and lives at
+  schema level, not at theorem-grade partition level.
 -/
 
 end FalseWork.Positions

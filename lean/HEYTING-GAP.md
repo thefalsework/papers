@@ -1,8 +1,20 @@
 # Heyting gap — the upstream-Mathlib dependency that gates our partition proofs
 
-**Status:** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
+> **Status (2026-05-19): CLOSED locally.**  Phase 2 mechanized the
+> Mac Lane–Moerdijk IV.6 construction in
+> `lean/FalseWorkPapers/Heyting/SubobjectInstance.lean`; commit `2fed510`.
+> Phase 3 then wired the universal instance into all cell files via
+> `lean/FalseWorkPapers/Positions/Setup.lean`, retiring the abstract
+> `[∀ Y, HeytingAlgebra (Subobject Y)]` binder (see
+> `lean/PHASE-0-DECISIONS.md` § "Decision 2 superseded").
+> Three of the five "Heyting-blocked" cell sorries closed against the
+> new instance.  The other two turned out to be image-API-blocked, not
+> Heyting-blocked — they remain as a separate Path 5 gap.
+> Upstreaming the construction to Mathlib4 is parked as Phase 4 work.
 
-**Last update:** 2026-05-18 (engagement-record posture updated to the revised AI-authorship policy recorded in `docs/observations/validation-architecture-outcomes.md`; technical state unchanged from 2026-05-17).
+**Status (pre-2026-05-19):** open. Tracked as the single named upstream blocker for the four-position partition theorem and the per-cell disjointness corollaries.
+
+**Last update:** 2026-05-19 (Phase 2 + Phase 3 closure; see header).
 
 ---
 

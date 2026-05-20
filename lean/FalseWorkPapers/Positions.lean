@@ -197,8 +197,8 @@ import FalseWorkPapers.Positions.Refusal
 import FalseWorkPapers.Positions.CommitmentGate
 import FalseWorkPapers.Positions.Partition
 
--- Pulls the universal `HeytingAlgebra (Subobject Y)` instance into scope for
--- any downstream user importing the `Positions` index.  Cell files keep the
--- abstract `[∀ Y, HeytingAlgebra (Subobject Y)]` binder per Phase-0 Decision 2;
--- this import lets a topos-side call site discharge that binder for free.
-import FalseWorkPapers.Heyting.SubobjectInstance
+-- The universal `HeytingAlgebra (Subobject Y)` instance is brought in by
+-- `Setup.lean`, which every cell file imports.  That single import point
+-- supersedes the abstract `[∀ Y, HeytingAlgebra (Subobject Y)]` binder
+-- the cells previously carried (Phase-0 Decision 2, now superseded —
+-- see `lean/PHASE-0-DECISIONS.md`).

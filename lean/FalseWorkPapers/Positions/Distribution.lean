@@ -54,6 +54,7 @@ universe v u
 
 variable {C : Type u} [Category.{v} C]
   [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
+  [HasEqualizers C] [HasInitial C] [HasBinaryCoproducts C] [InitialMonoClass C]
 
 /-! ## The Distribution position -/
 
@@ -65,7 +66,6 @@ The framework's "comma distributed across parallel registers" becomes
 the formal condition that neither pole is suppressed in `D.map f`'s
 codomain. -/
 noncomputable def IsDistribution (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- discharged universally by `FalseWork.Heyting.heytingAlgebra` for elementary topoi
     {X Y : C} (f : X ⟶ Y) : Prop :=
   let img := Subobject.mk (image.ι (Δ.D.map f))
   img ⊓ kernelImage Δ Y ≠ ⊥ ∧ img ⊓ (kernelImage Δ Y)ᶜ ≠ ⊥
@@ -80,13 +80,18 @@ Equivalently: `f` is *not* in Infrastructure position (which would
 mean `img ⊆ Im(η)`) and *not* in Refusal position (which would mean
 `img ⊆ ¬Im(η)`). Distribution sits in between. -/
 theorem isDistribution_implies_neither_polar (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     {X Y : C} (f : X ⟶ Y) (h : IsDistribution Δ f) :
     let img := Subobject.mk (image.ι (Δ.D.map f))
     ¬(img ≤ kernelImage Δ Y) ∧ ¬(img ≤ (kernelImage Δ Y)ᶜ) := by
-  sorry  -- Proof: the meet conditions in `IsDistribution` directly
-         -- contradict the containment claims; standard lattice
-         -- manipulation, ~10 lines.
+  -- Both non-containments follow by contradiction with the corresponding
+  -- non-triviality clause of `IsDistribution`.  From `img ≤ K` we extract
+  -- `Disjoint img Kᶜ` via `LE.le.disjoint_compl_right`, whose `.eq_bot`
+  -- closes the equation that contradicts `h.2`.  Mirror argument for the
+  -- other side using `disjoint_compl_left.mono_left`.
+  obtain ⟨h_lo, h_hi⟩ := h
+  refine ⟨fun hle => h_hi ?_, fun hle => h_lo ?_⟩
+  · exact hle.disjoint_compl_right.eq_bot
+  · exact (disjoint_compl_left.mono_left hle).eq_bot
 
 /-! ## Status
 
@@ -95,10 +100,9 @@ DONE:
   the subobject lattice.
 * Signature theorem statement. Distribution is between Infrastructure
   and Refusal: neither pole contains the image.
-
-REMAINING `sorry`:
-* `isDistribution_implies_neither_polar` proof — straightforward
-  lattice manipulation, ~10 lines.
+* `isDistribution_implies_neither_polar` — proven (Phase 3,
+  2026-05-19) using the universal `FalseWork.Heyting.heytingAlgebra`
+  instance imported via `Setup.lean`.
 
 OPEN FRAMEWORK QUESTIONS:
 * The "balance" condition. Current definition asks both intersections
@@ -118,7 +122,9 @@ OPEN FRAMEWORK QUESTIONS:
   Decision is framework-level.
 
 UPSTREAM MATHLIB GAP:
-* `HeytingAlgebra (Subobject _)` for topoi (see `Setup.lean` note).
+* Closed (Phase 2, 2026-05-19) by the in-repo
+  `FalseWork.Heyting.heytingAlgebra` instance.  Now imported via
+  `Setup.lean`; no abstract binder needed in cell theorems.
 -/
 
 end FalseWork.Positions

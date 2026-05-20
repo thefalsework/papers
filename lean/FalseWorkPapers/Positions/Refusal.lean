@@ -63,6 +63,7 @@ universe v u
 
 variable {C : Type u} [Category.{v} C]
   [HasImages C] [HasPullbacks C] [HasSubobjectClassifier C]
+  [HasEqualizers C] [HasInitial C] [HasBinaryCoproducts C] [InitialMonoClass C]
 
 /-! ## The Refusal position -/
 
@@ -71,7 +72,6 @@ variable {C : Type u} [Category.{v} C]
 image — the Refusal-act lives in the part of `D Y` that the marking
 morphism does not reach. -/
 def IsRefusal (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]  -- discharged universally by `FalseWork.Heyting.heytingAlgebra` for elementary topoi
     {X Y : C} (f : X ⟶ Y) : Prop :=
   ∃ (g : Δ.D.obj X ⟶ ((kernelImage Δ Y)ᶜ : Subobject (Δ.D.obj Y))),
     Δ.D.map f = g ≫ ((kernelImage Δ Y)ᶜ).arrow
@@ -90,7 +90,8 @@ fails the law of double negation. Equivalently, the internal logic of
 `C` is intuitionistic but not classical. -/
 def NonBoolean (C : Type u) [Category.{v} C] [HasSubobjectClassifier C]
     [HasImages C] [HasPullbacks C]
-    [∀ Y : C, HeytingAlgebra (Subobject Y)] : Prop :=
+    [HasEqualizers C] [HasInitial C] [HasBinaryCoproducts C]
+    [InitialMonoClass C] : Prop :=
   ∃ (Y : C) (S : Subobject Y), Sᶜᶜ ≠ S
 
 /-- **Asymptotic-residue theorem (statement).**
@@ -103,7 +104,6 @@ The strict inequality `kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ` is the
 formal expression of "the kernel persists as residue even where it is
 refused." -/
 theorem refusal_residue (Δ : DistinctionStructure C)
-    [∀ Y : C, HeytingAlgebra (Subobject Y)]
     (_hΔ : Δ.NonTrivial)
     (_hC : NonBoolean C) :
     ∃ Y : C, kernelImage Δ Y < (kernelImage Δ Y)ᶜᶜ := by
@@ -139,15 +139,18 @@ DONE structurally:
   inequality in `Subobject (D Y)`.
 
 REMAINING `sorry`:
-* `refusal_residue` proof body — three-step sketch in the comment;
-  step 3 (transport of non-Boolean witness onto `kernelImage`) is the
-  load-bearing step that needs a hypothesis decision (see
-  `Setup.lean` and the framework-question section below).
+* `refusal_residue` proof body.  *Not* Heyting-blocked: the universal
+  `FalseWork.Heyting.heytingAlgebra` instance (imported via
+  `Setup.lean` since Phase 3, 2026-05-19) makes every Heyting lemma
+  available.  What blocks the proof is *framework-level*: step 3
+  (transport of the non-Boolean witness onto `kernelImage`) requires
+  an additional hypothesis on `Δ` and `C` that the framework has not
+  yet specified — see the proof sketch in the body and the
+  framework-question section below.
 
 UPSTREAM MATHLIB GAP:
-* `HeytingAlgebra (Subobject Y)` for topoi (see `Setup.lean` note).
-  Without this the `[HeytingAlgebra ...]` hypothesis must be carried;
-  with it, the hypothesis becomes derivable.
+* Closed (Phase 2, 2026-05-19) by the in-repo
+  `FalseWork.Heyting.heytingAlgebra` instance.
 
 WHY THIS POSITION IS THE CLEANEST:
 Topos-theoretic negation does the structural work. The asymptotic
