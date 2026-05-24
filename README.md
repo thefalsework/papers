@@ -29,6 +29,14 @@ A paper-by-paper overview with abstracts, current open validation items, and cro
 
 ---
 
+## Publishable artefacts
+
+Focused, peer-review-targeted mathematical papers extracted from the framework live under [`preprints/`](preprints/). These are narrower in scope and mathematics-only in voice, distinct from the broader framework essays above. The current preprint:
+
+- **[A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure](preprints/four-position-partition/paper.md)** — *Chris Brink, May 2026, preprint not yet submitted.* Formalizes the framework's central structural claim as a theorem about elementary topoi with non-trivial distinction structure. Kernel-checked in Lean 4 against Mathlib4; supporting `HeytingAlgebra (Subobject _)` instance upstreamed as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618). Self-contained and verifiable in an evening by a categorically literate reader. See [`preprints/README.md`](preprints/README.md) for the register and conventions.
+
+---
+
 ## Start here
 
 Depending on your background and what brought you here:

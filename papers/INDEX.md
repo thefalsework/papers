@@ -168,6 +168,16 @@ comma-formal-structure-note.md (revised 2026-05-10)
 
 ---
 
+## Preprints (separate register)
+
+Focused, peer-review-targeted mathematical papers extracted from the framework live in a separate register at [`../preprints/`](../preprints/). These are narrower in scope and written for mathematical venues; they are not framework essays. See [`../preprints/README.md`](../preprints/README.md) for the register and conventions.
+
+**Current preprint.**
+
+- **[A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure](../preprints/four-position-partition/paper.md)** — *Chris Brink, May 2026, preprint not yet submitted.* Formalizes the framework's central structural claim (the four-position partition over morphisms with non-trivial D-image) as a self-contained theorem in elementary topoi with non-trivial distinction structure. Kernel-checked in Lean 4 against Mathlib4; supporting `HeytingAlgebra (Subobject _)` instance upstreamed as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618). Companion to [`comma-formal-structure-note.md`](comma-formal-structure-note.md) (which states the same theorem alongside three others in a framework-internal register) and to the Lean source at [`../lean/FalseWorkPapers/Positions/`](../lean/FalseWorkPapers/).
+
+---
+
 ## Next revisions anticipated
 
 - **Paper 1 v11.9.** Section-level rewriting of § 3.4, § 4, and the empirical demonstrations to the four-cells-plus-gate framing, conditional on the trajectory-reclassification empirical work in the FalseWork application. The v11.8 top-matter revision-note records the architectural commitment; v11.9 propagates it into the body.
