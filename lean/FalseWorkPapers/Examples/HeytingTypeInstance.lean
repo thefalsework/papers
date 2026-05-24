@@ -87,3 +87,9 @@ be retracted.
 #print axioms FalseWork.Positions.exploitation_refusal_disjoint
 #print axioms FalseWork.Positions.trivialized_implies_isInfrastructure
 #print axioms FalseWork.Positions.refusal_residue
+
+/-! Spencer-Brown anchor (companion to
+`preprints/four-position-partition/spencer-brown-anchor.md`).
+Both audit lines must report only the standard three axioms. -/
+#print axioms FalseWork.Positions.boolean_partition_three_cells
+#print axioms FalseWork.Positions.DistinctionStructure.ofIdempotentMonad
