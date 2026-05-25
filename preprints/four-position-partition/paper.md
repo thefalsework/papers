@@ -187,7 +187,7 @@ The theorem establishes that whenever this structural intuition can be formalize
 
 **Mac Lane and Moerdijk.** The Heyting algebra structure on subobjects of an elementary topos (Mac Lane and Moerdijk 1992, IV.6, IV.8) is the standard reference for the construction the partition theorem depends on. The PR #39618 formalization follows IV.6 Proposition 2 directly.
 
-**Mathematical music theory.** Mazzola's topos-theoretic framework for music (Mazzola 2002) provides categorical apparatus for musical structure that operates in adjacent territory to the framework's interest in music as a domain instantiating the partition. Tymoczko's voice-leading geometry (Tymoczko 2011) provides a different but related categorical perspective. Whether either framework's specific categorical setting supports a non-trivial distinction structure of the kind required by the partition theorem is open work.
+**Mathematical music theory.** The framework's music application instantiates the partition theorem on a music topos drawn from existing infrastructure rather than constructing one independently. The relevant prior apparatus includes Mazzola's topos-theoretic framework for music (Mazzola 2002), the categorical reading of Lewin's transformational theory (Lewin 1987; Mazzola and Andreatta 2006), the Poly-Klumpenhouwer Network apparatus (Popoff, Andreatta, and Ehresmann 2018), Tymoczko's voice-leading geometry and groupoid formalization of musical space (Tymoczko 2011, 2026), the lattice-and-topology representation of musical relations via formal concept analysis and Q-analysis (Freund, Andreatta, and Giavitto 2017), and the application of mathematical-morphology operators to concept lattices (Atif, Bloch, Distel, and Hudelot 2013; for an overview situating these within the SMIR project, see Andreatta 2018). The structural-typological reading of the four cells in terms of practitioner-positions is the framework's contribution; the underlying categorical infrastructure on which the music application instantiates is drawn from this body of prior work and used instrumentally rather than re-derived. A standalone music-anchor paper is in preparation (see `music-anchor/feasibility.md`).
 
 **Reflective subcategories and idempotent monads.** As recorded in Remark 5.5, the distinction structures of Definition 3.1 are closely related to idempotent monads on C, and idempotent monads on a category correspond to reflective subcategories of it (Borceux 1994, Vol. 1, §4.2; Adámek and Rosický 1994). Sheafification for a Lawvere-Tierney topology on a topos is the canonical example. The framing of the partition theorem as a statement about reflection-induced morphism partitions — i.e., a structural statement about how morphisms of an elementary topos distribute relative to the kernel image of the reflection unit, organized by Heyting position in the parent topos's subobject lattice — does not appear in the standard literature on reflective subcategories or sheafifications surveyed by the author. Standard treatments focus on the algebraic properties of reflections (closure under limits, the localization equivalence, the Eilenberg-Moore correspondence) rather than on the closure-residue / non-Boolean structure of subobject lattices in the parent topos.
 
@@ -216,16 +216,23 @@ Thanks to Edward van de Meent and Fernando Chu for substantive engagement on the
 ## References
 
 - Adámek, J., and Rosický, J. (1994). *Locally Presentable and Accessible Categories*. London Mathematical Society Lecture Note Series 189, Cambridge University Press.
+- Andreatta, M. (2018). From music to mathematics and backwards: introducing algebra, topology and category theory into computational musicology. In *Imagine Math 6: Mathematics and Culture*, Springer.
+- Atif, J., Bloch, I., Distel, F., and Hudelot, C. (2013). Mathematical morphology operators over concept lattices. In *Formal Concept Analysis* (ICFCA 2013), Lecture Notes in Computer Science 7880, Springer, 28–43.
 - Awodey, S. (2010). *Category Theory* (2nd ed.). Oxford Logic Guides, Oxford University Press.
 - Borceux, F. (1994). *Handbook of Categorical Algebra*, 3 volumes. Encyclopedia of Mathematics and its Applications 50–52, Cambridge University Press.
 - Brink, C. (2026). *FalseWork Papers*. [github.com/thefalsework/papers](https://github.com/thefalsework/papers).
 - Brink, C. (2026, PR). *Heyting algebra structure on Subobject in elementary topoi*. Mathlib4 Pull Request #39618. [github.com/leanprover-community/mathlib4/pull/39618](https://github.com/leanprover-community/mathlib4/pull/39618).
+- Freund, A., Andreatta, M., and Giavitto, J.-L. (2017). Lattice-based and topological representations of binary relations with an application to music. *Annals of Mathematics and Artificial Intelligence*, 79(3-4), 217–243.
 - Johnstone, P. T. (2002a). *Sketches of an Elephant: A Topos Theory Compendium, Volume 1*. Oxford Logic Guides, Oxford University Press.
 - Johnstone, P. T. (2002b). *Sketches of an Elephant: A Topos Theory Compendium, Volume 2*. Oxford Logic Guides, Oxford University Press.
 - Kauffman, L. H. (1987). Self-reference and recursive forms. *Journal of Social and Biological Structures*, 10(1), 53–72.
 - Lawvere, F. W. (1969). Adjointness in foundations. *Dialectica*, 23(3-4), 281–296.
+- Lewin, D. (1987). *Generalized Musical Intervals and Transformations*. Yale University Press.
 - Mac Lane, S., and Moerdijk, I. (1992). *Sheaves in Geometry and Logic: A First Introduction to Topos Theory*. Universitext, Springer-Verlag.
 - Mathlib Community (2026). *Mathlib4*. [github.com/leanprover-community/mathlib4](https://github.com/leanprover-community/mathlib4).
 - Mazzola, G. (2002). *The Topos of Music: Geometric Logic of Concepts, Theory, and Performance*. Birkhäuser.
+- Mazzola, G., and Andreatta, M. (2006). From a categorical point of view: K-nets as limit denotators. *Perspectives of New Music* / categorical music-theory literature. (Citation details to be verified against original venue before external submission.)
+- Popoff, A., Andreatta, M., and Ehresmann, A. (2018). From K-nets to PK-nets: a categorical approach. *Journal of Mathematics and Music*. (Citation details to be verified against original venue before external submission.)
 - Spencer-Brown, G. (1969). *Laws of Form*. Allen and Unwin.
 - Tymoczko, D. (2011). *A Geometry of Music: Harmony and Counterpoint in the Extended Common Practice*. Oxford University Press.
+- Tymoczko, D. (2026). The concept of musical space. *Journal of Music Theory*, 70(1).
