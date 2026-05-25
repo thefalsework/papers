@@ -89,6 +89,7 @@ canonized figure (in the induced partition).
 import FalseWorkPapers.Positions.Setup
 import FalseWorkPapers.Positions.Partition
 import FalseWorkPapers.Positions.SpencerBrown
+import FalseWorkPapers.Positions.CommitmentGate
 
 namespace FalseWork.Positions
 
@@ -306,6 +307,112 @@ theorem canonization_separation
     g₁ = g₂ :=
   cg.isSeparator g₁ g₂ h_agree
 
+/-! ## Cross-layer connection: Commitment-yes ⇒ canonization-generator witness
+
+The framework's three layers of canonization (classification,
+Commitment gate, closure/generator) are formally distinct. The
+classification layer (`Partition.lean`) is theorem-grade and
+unconditional. The Commitment-gate layer (`CommitmentGate.lean`) is
+schema-grade: its predicate `IsCommitmentYes` has a uniform shape
+across cells but its content is held as four open per-cell iteration
+operators (currently placeholders). The closure/generator layer
+(this file) is conditional: the recursive partition and separation
+theorems fire given canonization-generator data, but identifying
+*which* morphisms admit such witnesses is open.
+
+The cross-layer connection — that being Commitment-yes is the
+structural source of canonization-generator witnesses — is the
+framework's intended architectural claim. The conditional theorem
+below records this connection at the type-level: a Commitment-yes
+morphism with a separator codomain admits a canonization-generator
+witness. The witness here is the trivial identity-monad
+construction (cf. `Examples/CanonizationGeneratorInstance.lean`),
+which means:
+
+* The theorem's proof does *not* use the commitment hypothesis. The
+  commitment predicate is currently `True` (placeholder), so any
+  hypothesis dependence would be vacuous. The hypothesis is carried
+  in the signature so that, when `IsCommitmentYes` is filled in with
+  cell-specific iteration content, the theorem will become
+  substantive without requiring a signature change.
+
+* The theorem produces *some* canonization-generator witness, not
+  necessarily the *empirical* canonization closure (which would be a
+  reflective subcategory of the ambient topos, not the identity
+  monad). The framework's empirical claim — that Bach's canonization
+  closure is the tonal-counterpoint reflective subcategory, etc. —
+  is *not* asserted by this theorem. The empirical content remains
+  open future work, cf. the closure-canonization companion document.
+
+The theorem is therefore honest in the same sense as
+`IsCommitmentYes`: the structural connection is in place, the
+content is open. The framework commits to the *shape* of the
+cross-layer alignment without committing to either layer's open
+substantive content.
+
+Cf. `preprints/four-position-partition/closure-canonization.md` §8b
+for the structural reading of this theorem. -/
+
+section CrossLayer
+
+variable {C : Type u} [Category.{v} C]
+
+/-- **Cross-layer alignment (conditional).** If a morphism `f : X ⟶ Y`
+is `IsCommitmentYes` at some cell `P` relative to a distinction
+structure `Δ`, and `Y` is a separator for `C`, then `f` admits a
+`CanonizationGenerator` witness relative to `Δ`.
+
+The witness produced here is the trivial identity-monad construction:
+`T := Monad.id C`, `μ_iso := IsIso.id _`. This is the always-available
+witness in any category. The theorem's structural content is the
+*signature*, which records the cross-layer dependency
+(commitment-yes ⇒ generator-witness exists) even though the current
+proof does not use the commitment hypothesis (because
+`IsCommitmentYes` is currently a placeholder `True`; see
+`CommitmentGate.lean`).
+
+When `IsCommitmentYes` is filled in with per-cell iteration content,
+this theorem will become substantive: it will assert that a
+non-trivially-Commitment-yes morphism admits *some* generator
+witness (and may then be refined to assert that it admits a
+structurally specific witness reflecting the cell's iteration
+content). The current form is the framework's commitment to the
+shape of the cross-layer connection.
+
+**What the trivial witness does and does not buy.** It buys
+*kernel-checked type inhabitation of the conclusion under the stated
+hypotheses* — a real (if currently trivial) implication theorem
+linking the two layers. It does *not* buy the structurally-correct
+empirical canonization closure for any specific Commitment-yes
+morphism; that remains open empirical/historical work.
+
+Cf. `preprints/four-position-partition/closure-canonization.md` §8b. -/
+def CanonizationGenerator.ofCommitmentYes
+    (Δ : DistinctionStructure C) (P : Cell) {X Y : C} (f : X ⟶ Y)
+    (_h_commit : IsCommitmentYes Δ P f)
+    (h_sep : ∀ {A B : C} (g₁ g₂ : A ⟶ B),
+      (∀ h : Y ⟶ A, h ≫ g₁ = h ≫ g₂) → g₁ = g₂) :
+    CanonizationGenerator Δ f where
+  T := Monad.id C
+  μ_iso := by
+    show IsIso (𝟙 (𝟭 C))
+    exact IsIso.id _
+  isSeparator := h_sep
+
+/-- Existential-form companion to `CanonizationGenerator.ofCommitmentYes`.
+Sometimes useful as the propositional form of the cross-layer claim
+(e.g., when downstream consumers need only the existence and not the
+specific witness). -/
+theorem commitment_yes_admits_canonization_generator
+    (Δ : DistinctionStructure C) (P : Cell) {X Y : C} (f : X ⟶ Y)
+    (h_commit : IsCommitmentYes Δ P f)
+    (h_sep : ∀ {A B : C} (g₁ g₂ : A ⟶ B),
+      (∀ h : Y ⟶ A, h ≫ g₁ = h ≫ g₂) → g₁ = g₂) :
+    Nonempty (CanonizationGenerator Δ f) :=
+  ⟨CanonizationGenerator.ofCommitmentYes Δ P f h_commit h_sep⟩
+
+end CrossLayer
+
 /-! ## Status
 
 DONE (kernel-checkable in this file):
@@ -321,6 +428,15 @@ DONE (kernel-checkable in this file):
 * `canonization_separation` — the conditional separation theorem.
   Direct application of the separator condition. Proof is a one-
   line unfolding of the definition.
+* `CanonizationGenerator.ofCommitmentYes` — the cross-layer
+  alignment definition: a Commitment-yes morphism with a separator
+  codomain admits a canonization-generator witness (the trivial
+  identity-monad construction). Records the framework's cross-layer
+  architectural claim at the type level even though the current
+  proof does not use the commitment hypothesis (because
+  `IsCommitmentYes` is currently a `True` placeholder).
+* `commitment_yes_admits_canonization_generator` — propositional
+  companion (`Nonempty (CanonizationGenerator Δ f)`).
 
 NOT FORMALIZED HERE (open framework work):
 * The `Generates Δ f T` predicate identifying which idempotent
@@ -372,12 +488,14 @@ partition); the generator component gives the figure's resolving
 behaviour within that territory (the separation theorem). The two
 components together are intended to capture the full canonization
 phenomenon. Connection to the Commitment gate (the predicate that
-*triggers* canonization for a given morphism) is structural intent
-documented in `CommitmentGate.lean` and `closure-canonization.md`
-but not formally lifted: a theorem of the form "commitment-yes
-implies canonization-generator-witness exists" would require
-specifying the `Generates` predicate and the per-cell iteration
-content, both of which are open work.
+*triggers* canonization for a given morphism) is now formally
+recorded by `CanonizationGenerator.ofCommitmentYes`: commitment-yes
+plus separator codomain implies the canonization-generator structure
+type is inhabited. The cross-layer claim is therefore established
+*at the level of inhabitation*; what remains open is the empirical
+content of "the right witness" — the actual reflective subcategory
+generated by a specific Commitment-yes figure — and the substantive
+content of `IsCommitmentYes` itself.
 
 CONNECTION TO `CommitmentGate.lean`:
 The closure/generator layer is conceptually downstream of the
@@ -387,11 +505,19 @@ closure/generator layer identifies *what such morphisms generate
 and resolve* (a reflective subcategory, the recursive partition,
 the separation theorem). The two layers are structurally distinct
 and currently formalized at different levels — the gate at schema
-level with placeholder content, the closure/generator layer at
-conditional theorem level. Bringing them into structural alignment
-(showing that commitment-yes morphisms automatically admit
-canonization-generator witnesses of a specific form) is the
-remaining substantial architectural integration step.
+level with placeholder content (`IsCommitmentYes := True`), the
+closure/generator layer at conditional theorem level. The cross-
+layer alignment definition `CanonizationGenerator.ofCommitmentYes`
+records the architectural connection between them in kernel-checked
+form: under the framework's intended reading, every Commitment-yes
+morphism with a separator codomain admits a canonization-generator
+witness. The substantive open work is twofold: (a) fill in the per-
+cell iteration content of `IsCommitmentYes` so the commitment
+hypothesis carries information; (b) refine the cross-layer
+construction so the witness it produces is the *empirically correct*
+canonization closure (a reflective subcategory of the ambient
+topos), not the trivial identity-monad one. Both are deferred as
+substantive future work.
 -/
 
 end FalseWork.Positions

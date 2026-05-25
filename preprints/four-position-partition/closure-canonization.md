@@ -216,6 +216,52 @@ What is *not* in the Lean tree:
 
 * An iteration of the recursion. The recursive partition theorem applies once; the framework does not currently formalize the higher-order recursion (canonization closures of canonization closures).
 
+### 8a. Concrete instantiation — kernel-checked existence
+
+A first kernel-checked concrete instantiation of `CanonizationGenerator` is provided at [`Examples/CanonizationGeneratorInstance.lean`](../../lean/FalseWorkPapers/Examples/CanonizationGeneratorInstance.lean). The file establishes that the canonization-generator structure type is inhabited and that the conditional separation theorem fires on a concrete witness, closing one open item from the framework's status ledger.
+
+**What the instantiation provides.** A two-part construction:
+
+* `idCanonizationGenerator` — a generic constructor that, in any category `C`, builds a `CanonizationGenerator` from (i) the identity monad on `C` (which is trivially idempotent and gives a degenerate distinction structure via the Spencer-Brown bridge), (ii) a morphism `f : X ⟶ Y`, and (iii) a proof that `Y` is a separator. Both the underlying `Δ` and the canonization closure use the identity monad.
+
+* `DiscretePUnit.canonizationGenerator` — the generic constructor instantiated to `C = Discrete PUnit` (the discrete category over a singleton), with `f` the identity morphism on the unique object. The separator condition is discharged by `Subsingleton` of hom-sets (every parallel pair in a discrete category is equal). A worked-example application of `canonization_separation` (the `separation_example` theorem) derives a concrete morphism-equality conclusion from the agreement hypothesis.
+
+Both `canonizationGenerator` and `separation_example` are audited in [`Examples/HeytingTypeInstance.lean`](../../lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean) via `#print axioms` and report only the standard three Mathlib axioms (`propext`, `Classical.choice`, `Quot.sound`).
+
+**What the instantiation does *not* show.** The example is structurally trivial: `Discrete PUnit` has one object and one morphism, and the identity-monad distinction structure carries no information beyond the identity. The kernel verifies *type inhabitation*, not *framework non-vacuity in the partition-theoretic sense*. In particular:
+
+* The four cells of the partition theorem are not exhibited as non-vacuously inhabited by this example. That question is the subject of the Phase 1.2 work (`examples/phase-1-2-progress.md`) and remains open under the structural obstruction documented there.
+
+* The `recursive_partition` theorem does not fire on this example: `Discrete PUnit` lacks the topos plumbing (`HasSubobjectClassifier`, `HasInitial`, `HasBinaryCoproducts`, etc.) that the partition theorem requires. Only `canonization_separation` fires concretely.
+
+* No structurally interesting canonization figure (Bach, Coltrane, Schoenberg, or any other empirical canon) is formalized. The framework's claims about specific empirical figures remain interpretive.
+
+**What kind of progress this represents.** The instantiation closes the "kernel-checked existence" item: prior to this file, every claim in the canonization layer was conditional on the existence of a `CanonizationGenerator` witness, with no concrete witness anywhere in the Lean tree. The structure type was inhabited only by assumption. After this file, the structure type is inhabited by an explicit, kernel-verified construction, and the conditional separation theorem is exercised on a concrete derivation. The deeper non-vacuity questions (four-cell inhabitation, M-set or presheaf instantiation, domain-specific figures) remain open as substantive future work.
+
+The trivial instantiation is the right shape for a first witness — it forces no premature commitments to a `Generates` predicate, to a specific empirical canon, or to a richer category-theoretic setting. Richer examples are the natural next step and are deliberately deferred.
+
+### 8b. Cross-layer alignment — Commitment-yes ⇒ canonization-generator witness
+
+The framework's three layers of canonization (classification, Commitment gate, closure/generator) are formally distinct. The cross-layer connection — that *being Commitment-yes is the structural source of canonization-generator witnesses* — is the framework's intended architectural claim. A conditional Lean theorem now records this connection in kernel-checked form.
+
+**Statement.** Let `Δ` be a distinction structure on `C`, `P` a cell tag, `f : X ⟶ Y` a morphism, and suppose `Y` is a separator for `C`. If `f` is `IsCommitmentYes Δ P f`, then there exists a `CanonizationGenerator Δ f`. Formally:
+
+> `CanonizationGenerator.ofCommitmentYes (Δ : DistinctionStructure C) (P : Cell) {X Y : C} (f : X ⟶ Y) (_h_commit : IsCommitmentYes Δ P f) (h_sep : ...) : CanonizationGenerator Δ f`
+
+The theorem is in [`CanonizationClosure.lean`](../../lean/FalseWorkPapers/Positions/CanonizationClosure.lean), kernel-checked against the standard three Mathlib axioms.
+
+**What this theorem is.** A signature-level commitment to the cross-layer connection. Its presence in the Lean tree means future formal work on either layer (filling in `IsCommitmentYes`'s per-cell iteration content, or refining the canonization-generator witness to the empirical reflective subcategory) will land in a tree where the architectural shape is already settled and kernel-verified. Without such a theorem, the cross-layer claim is informal; with it, the claim is at least an existence claim about inhabitation.
+
+**What this theorem is not.** A substantive mathematical theorem. Two unavoidable limitations follow from the current state of the two layers:
+
+1. **The proof does not use the commitment hypothesis.** Because `IsCommitmentYes` is currently defined as the placeholder `True` (per `CommitmentGate.lean`'s schema-level status), any hypothesis dependence would be vacuous. The hypothesis is carried in the signature so that, when the per-cell iteration content is added, the theorem will become substantive without a signature change. This is the same shape of pre-commitment used in `CommitmentGate.lean` itself: the schema is in place, the content is open.
+
+2. **The witness produced is the trivial identity-monad construction**, not the *empirical* canonization closure for the morphism in question. The theorem therefore does *not* assert that Bach's canonization closure is the tonal-counterpoint reflective subcategory, etc.; it asserts only that *some* canonization-generator witness exists (with the identity monad as the obvious always-available example). The framework's empirical claims about specific figures remain open.
+
+**The structural payoff.** The theorem is honest in the same sense as `IsCommitmentYes` is honest: it commits to the *shape* of the cross-layer connection without committing to either layer's open substantive content. It also closes one architectural item from the framework's status ledger: prior to this theorem, the connection between the Commitment gate and the canonization layer was documented only in prose; after this theorem, it is recorded at the type level and kernel-verified. Two follow-on items remain explicitly open: filling in `IsCommitmentYes`'s per-cell iteration content (substantive open work per `CommitmentGate.lean`'s status), and refining the cross-layer construction to produce an *empirically correct* witness for specific Commitment-yes morphisms rather than the trivial one (substantive open empirical/historical work).
+
+A companion propositional form, `commitment_yes_admits_canonization_generator`, lifts the constructive definition to a `Nonempty (CanonizationGenerator Δ f)` statement for downstream consumers that need only existence.
+
 ---
 
 ## 9. Open mathematical questions
@@ -252,13 +298,15 @@ If the closure framework is taken up as a serious research direction, the recomm
 
 2. **Prove existence and (where possible) uniqueness** of the selected closure under the framework's hypothesis bundle, or identify specific topos hypotheses under which existence holds.
 
-3. **Construct a concrete `CanonizationClosure` for one historical case** — Bach as Infrastructure-axis is probably the simplest, since the relevant musical structures admit some standard formalization in the topos-theoretic music literature (cf. Mazzola 2002 in the related-work paragraph of [`paper.md`](paper.md) §7.2). The point is to verify that the type signature in Lean can be instantiated for at least one non-trivial case.
+3. **Construct a structurally non-trivial `CanonizationClosure` (or `CanonizationGenerator`) for one historical case** — Bach as Infrastructure-axis is probably the simplest, since the relevant musical structures admit some standard formalization in the topos-theoretic music literature (cf. Mazzola 2002 in the related-work paragraph of [`paper.md`](paper.md) §7.2). The trivial identity-monad witness already in [`Examples/CanonizationGeneratorInstance.lean`](../../lean/FalseWorkPapers/Examples/CanonizationGeneratorInstance.lean) (§8a) establishes kernel-checked existence at the type level but is structurally degenerate; the point of step 3 is to verify that *non-trivial* instantiation is possible.
 
 4. **Mechanize the existence-and-uniqueness theorems** in Lean, and verify the recursive partition theorem on the concrete instance. This closes the conditional nature of `recursive_partition` for at least one case.
 
 5. **Iterate to other historical cases**, accumulating instantiations and constraining the `Generates` predicate empirically by which cases the predicate's various candidates do or don't fit.
 
-Steps 1–2 are the substantial new mathematics. Step 3 is the first interesting instantiation. Steps 4–5 are formal and empirical refinement of the framework as developed.
+6. **Fill in `IsCommitmentYes`'s per-cell iteration content** in `CommitmentGate.lean`, then refine `CanonizationGenerator.ofCommitmentYes` (§8b) to use the commitment hypothesis substantively rather than carrying it as a placeholder. This converts the current type-level cross-layer connection into a content-bearing theorem.
+
+Steps 1–2 are the substantial new mathematics. Step 3 is the first interesting (non-trivial) instantiation. Steps 4–5 are formal and empirical refinement of the framework as developed. Step 6 is the architectural integration of the Commitment gate with the canonization layer — substantive once the per-cell iteration content is in place.
 
 ---
 

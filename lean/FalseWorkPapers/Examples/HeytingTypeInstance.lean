@@ -5,6 +5,7 @@ Authors: Chris Brink
 -/
 import FalseWorkPapers.Heyting.SubobjectInstance
 import FalseWorkPapers.Positions
+import FalseWorkPapers.Examples.CanonizationGeneratorInstance
 
 /-!
 # Sanity-check examples for `FalseWork.Heyting.heytingAlgebra`
@@ -100,3 +101,24 @@ The conditional recursive partition theorem and the conditional
 separation theorem must report only the standard three axioms. -/
 #print axioms FalseWork.Positions.recursive_partition
 #print axioms FalseWork.Positions.canonization_separation
+
+/-! Concrete instantiation of `CanonizationGenerator`
+(companion to `Examples/CanonizationGeneratorInstance.lean`).  The
+worked-example witness and its application of `canonization_separation`
+must report only the standard three axioms.  These audit lines close
+the "concrete instantiation" item from the framework's status ledger;
+the structure type is now demonstrably inhabited and the conditional
+separation theorem fires on a kernel-checked concrete witness. -/
+#print axioms FalseWork.Positions.Examples.DiscretePUnit.canonizationGenerator
+#print axioms FalseWork.Positions.Examples.DiscretePUnit.separation_example
+
+/-! Cross-layer alignment (Commitment-yes ⇒ canonization-generator
+witness; companion to `preprints/four-position-partition/closure-
+canonization.md` §8b).  The conditional cross-layer definition and
+its propositional companion must report only the standard three
+axioms.  These audit lines close the cross-layer architectural item
+from the framework's status ledger: the connection between the
+Commitment gate and the canonization closure-and-generator layer is
+now formally recorded at the type level. -/
+#print axioms FalseWork.Positions.CanonizationGenerator.ofCommitmentYes
+#print axioms FalseWork.Positions.commitment_yes_admits_canonization_generator

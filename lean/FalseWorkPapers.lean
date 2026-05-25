@@ -1,3 +1,4 @@
 import FalseWorkPapers.Positions
 import FalseWorkPapers.Heyting.SubobjectInstance
 import FalseWorkPapers.Examples.HeytingTypeInstance
+import FalseWorkPapers.Examples.CanonizationGeneratorInstance
