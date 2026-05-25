@@ -93,3 +93,9 @@ be retracted.
 Both audit lines must report only the standard three axioms. -/
 #print axioms FalseWork.Positions.boolean_partition_three_cells
 #print axioms FalseWork.Positions.DistinctionStructure.ofIdempotentMonad
+
+/-! Canonization closure (companion to
+`preprints/four-position-partition/closure-canonization.md`).
+The conditional recursive partition theorem must report only the
+standard three axioms. -/
+#print axioms FalseWork.Positions.recursive_partition

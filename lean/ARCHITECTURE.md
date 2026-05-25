@@ -1,6 +1,6 @@
 # Architecture of the proven framework
 
-> **Status (2026-05-24).** Snapshot view of the FalseWork Lean formalization at the second-pass milestone, with the Spencer-Brown anchor companion theorems added. The entire tree is `sorry`-free; the load-bearing theorems plus two anchor theorems (Boolean collapse at partition level, idempotent-monad bridge) are kernel-checked; one framework-level conjecture (the *refusal bridge*) is carried as a named open item in the validation queue.
+> **Status (2026-05-24).** Snapshot view of the FalseWork Lean formalization with the Spencer-Brown anchor companion theorems and the canonization-closure layer added. The entire tree is `sorry`-free; the load-bearing theorems plus two anchor theorems (Boolean collapse at partition level, idempotent-monad bridge) plus the conditional recursive partition theorem (canonization closure) are kernel-checked. One framework-level conjecture (the *refusal bridge*) is carried as a named open item in the validation queue. The canonization-closure layer is *conditional*: its recursive partition theorem is kernel-checked given the data of a canonization-closure witness, but the load-bearing predicate identifying *which* idempotent monads count as canonization closures of a given morphism is open mathematical work.
 
 This document is a single-page orientation for anyone — a new Lean contributor, a category-theory reviewer, the author six months on — who wants to see how the proven framework fits together without reading the source files first. It carries three views of the same artefact at three levels of abstraction:
 
@@ -229,6 +229,10 @@ PROVEN / SUBMITTED / OPEN — snapshot 2026-05-20 (post-second-pass)
   │  preprints/four-position-partition/spencer-brown-anchor.md):    │
   │  ✓ FalseWork.Positions.boolean_partition_three_cells            │
   │  ✓ FalseWork.Positions.DistinctionStructure.ofIdempotentMonad   │
+  │                                                                 │
+  │  Canonization closure (companion to                             │
+  │  preprints/four-position-partition/closure-canonization.md):    │
+  │  ✓ FalseWork.Positions.recursive_partition     (conditional)    │
   │                                                                 │
   │  Tree is sorry-free.  Audit at Examples/HeytingTypeInstance.lean│
   └─────────────────────────────────────────────────────────────────┘
