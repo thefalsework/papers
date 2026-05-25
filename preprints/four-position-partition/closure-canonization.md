@@ -116,6 +116,36 @@ Three candidate predicates are surveyed below. Each has tradeoffs; the framework
 
 **Weaknesses.** Inherits the open-ness of the per-cell iteration content. Cannot be specified independently of the schema-grade work in `CommitmentGate.lean`.
 
+### 5a. The generator refinement (the resolution layer)
+
+The closure framework as developed in §§3–5 specifies the *region* of structural reach a canonization figure has within the ambient topos. A natural refinement adds the condition that, within that region, the figure also acts as a *resolving instrument* — distinctions among later morphisms become legible through composition with maps out of the canonization codomain. This refinement parallels the closure layer in form (an additional structural condition on the canonization data) but addresses a structurally distinct question: not "where does the canonization have reach?" but "within that reach, what does the canonization enable detection of?"
+
+**The categorical condition.** An object `G ∈ C` is a *separator* (or *generator*, in some sources) if morphisms in `C` are determined by their composition with maps out of `G`: for any parallel pair `g₁, g₂ : A ⟶ B`, if `h ≫ g₁ = h ≫ g₂` for every `h : G ⟶ A`, then `g₁ = g₂`. Equivalently, maps out of `G` distinguish any pair of distinct parallel morphisms in `C`. This is the standard categorical separator definition (Mac Lane 1971, Borceux 1994); it identifies an object whose morphisms-out resolve equality.
+
+**The refined canonization data.** A *canonization-generator witness* for `f : X ⟶ Y` relative to `Δ` carries the data of a canonization closure (per §§3–5) *together with* a witness that `Y` is a separator for `C`. The two-layer structure is:
+
+> *Canonization-yes (with resolution)*: `f` admits an idempotent monad `T_f` with `IsIso T_f.μ` (the closure data) *and* `Y` is a separator for the ambient category `C` (the resolution data).
+
+The closure data gives the *region* where the canonization figure has structural reach; the separator data gives the *resolution* with which the figure can be used to distinguish morphisms within that region.
+
+**The Spencer-Brown reading.** Within the calculus of distinctions, the closure layer says the canonization figure has *drawn a stable mark* that organizes a sub-region of the form-space. The generator layer says the canonization figure is *the form against which other forms in that region are compared* — the mark whose calling resolves the distinctions of forms operating in its territory. Bach is not merely the source of the tonal-counterpoint region (closure); within that region, Bach-mediated comparisons resolve equalities and distinctions among later tonal works (generator).
+
+**Concrete examples (informal, illustrative).**
+
+* *Bach as separator.* Maps from the structurally-rich Bach codomain into any tonal-music object resolve distinctions among later tonal morphisms. Two tonal works are structurally equal iff they agree under all Bach-mediated comparisons (the chorale harmonization test, the fugue construction test, the well-tempered organization test). This is the formal reading of "tonal music is taught through Bach" — pedagogy is the operational form of the separator condition.
+
+* *Coltrane as separator.* Within the post-bop jazz topos, maps from the late-Coltrane codomain (with its sheets-of-sound structure and harmonic-spiritual organization) resolve distinctions among post-1960 improvisational morphisms. Whether a later solo agrees with another, as a structural matter, becomes decidable through Coltrane-mediated comparison.
+
+* *Schoenberg as separator.* Within the post-tonal topos, maps from the Schoenberg codomain (twelve-tone procedure, set-class organization, hexachordal combinatoriality) resolve distinctions among post-tonal works. Two atonal works are structurally equal iff they agree under all Schoenberg-mediated comparisons.
+
+These illustrations are interpretive in the same sense as §6's worked example: no specific Lean topos is formally constructed, no specific separator condition is verified for any specific codomain object. The illustrations show what the generator refinement *would* assert if the formal apparatus were filled in.
+
+**The conditional separation theorem.** Given a canonization-generator witness for `f`, parallel morphisms in `C` are determined by their composition with maps out of the canonization codomain `Y`. This is the framework's resolution theorem; its statement is `canonization_separation` in [`CanonizationClosure.lean`](../../lean/FalseWorkPapers/Positions/CanonizationClosure.lean), kernel-checked against the standard three Mathlib axioms.
+
+**Why this refinement is mathematically tractable now.** Unlike the closure's `Generates` predicate (which involves substantive open mathematics about smallest reflective subcategories), the separator condition is mathematically standard and concretely formalizable. Mathlib has separator-related apparatus in `CategoryTheory.Generator` and the separator definition admits no ambiguity. The framework's open question for the generator layer is therefore not *what does separator mean* but *which canonization figures' codomains satisfy it*. This is an empirical/historical question rather than a mathematical-foundations question.
+
+**Two layers together.** The full canonization apparatus, as developed in this document, is the conjunction of the closure layer (§§3–5) and the generator layer (this section). Both are formalized in `CanonizationClosure.lean`; the file's `CanonizationGenerator` structure extends `CanonizationClosure` with the separator field, and the two conditional theorems (`recursive_partition` and `canonization_separation`) deliver the framework's structural and resolution content respectively. The framework's empirical canonization figures — Bach, Coltrane, Schoenberg, and others — are conjectured to admit canonization-generator witnesses; verifying this for any specific case is open work.
+
 ### 5.4 Comparison
 
 Candidates 5.1 and 5.2 are reasonable first targets. Candidate 5.3 is conceptually attractive but operationally blocked by the per-cell iteration content. The framework's choice between 5.1 and 5.2 turns on whether the canonization-axis intuition is "the territory of the codomain" (5.1) or "the territory of the structural signature" (5.2). The empirical canon-formation data the framework's broader work collects is not currently in a form that distinguishes these.
@@ -174,11 +204,15 @@ The Lean formalization in [`CanonizationClosure.lean`](../../lean/FalseWorkPaper
 
 * **`recursive_partition`** — the conditional recursive partition theorem. Given a canonization-closure witness, the four-position partition theorem applies to the induced distinction structure. Kernel-checked against the three standard Mathlib axioms.
 
+* **`CanonizationGenerator Δ f`** — the generator-refinement structure (per §5a). Extends `CanonizationClosure` with an `isSeparator` field witnessing that the codomain `Y` of `f` is a separator for the ambient category `C`.
+
+* **`canonization_separation`** — the conditional separation theorem. Given a canonization-generator witness, parallel morphisms in `C` are determined by their composition with maps out of `Y`. Kernel-checked against the three standard Mathlib axioms.
+
 What is *not* in the Lean tree:
 
-* The `Generates Δ f T_f` predicate of §5. This is the load-bearing piece left open.
+* The `Generates Δ f T_f` predicate of §5. This is the load-bearing piece left open for the closure layer.
 
-* A construction of `CanonizationClosure` for any specific morphism in any specific topos. The framework's empirical canon-formation work (Bach, Coltrane, Schoenberg) is interpretive; the formal closure data for these figures has not been constructed.
+* A construction of `CanonizationClosure` or `CanonizationGenerator` for any specific morphism in any specific topos. The framework's empirical canon-formation work (Bach, Coltrane, Schoenberg) is interpretive; the formal closure-with-separator data for these figures has not been constructed.
 
 * An iteration of the recursion. The recursive partition theorem applies once; the framework does not currently formalize the higher-order recursion (canonization closures of canonization closures).
 

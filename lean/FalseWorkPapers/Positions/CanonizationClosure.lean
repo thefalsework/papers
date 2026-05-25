@@ -225,6 +225,87 @@ theorem recursive_partition
 
 end RecursivePartition
 
+/-! ## The generator refinement (the resolution layer)
+
+The closure layer specifies the *region* of structural reach a
+canonization figure has within the ambient topos. A natural
+refinement adds the condition that, *within that region*, the figure
+also acts as a *resolving instrument* — distinctions among later
+morphisms become legible through composition with maps out of the
+canonization codomain. This is the Spencer-Brown "measuring
+instrument" intuition (§5 of the closure-canonization companion
+document) formalized as the standard categorical *separator* condition.
+
+An object `G` in a category `C` is a separator if morphisms in `C`
+are determined by their composition with maps out of `G`: for any
+parallel pair `g₁, g₂ : A ⟶ B`, if `h ≫ g₁ = h ≫ g₂` for every
+`h : G ⟶ A`, then `g₁ = g₂`. Equivalently (contrapositively), maps
+out of `G` distinguish any pair of distinct parallel morphisms.
+
+The generator refinement says: a canonization-yes-with-resolution
+figure `f : X ⟶ Y` is one that admits a canonization closure
+*and* whose codomain `Y` is a separator for the ambient category.
+The two conditions together capture the full canonization
+phenomenon: the closure gives the region, the separator condition
+gives the resolution within the region.
+
+Unlike the closure's `Generates` predicate (left open in `§5` of the
+companion document), the separator condition is mathematically
+standard and concretely formalizable today. The conditional
+separation theorem below is therefore *unconditional* in form
+(the proof is a direct unfolding of the separator definition),
+while the question of *which `f` admit canonization-generator
+witnesses* remains open empirical/historical work. -/
+
+/-- A *canonization-generator witness* refines a canonization-closure
+witness with the additional condition that the codomain `Y` of `f`
+acts as a separator for the ambient category `C`. This is the
+formalization of the "measuring instrument" intuition: within the
+territory the canonization closure organizes, the canonization
+figure's codomain resolves equality among morphisms.
+
+The two-layer canonization-yes definition (closure + separator) is
+intended to capture the full historical canonization phenomenon:
+the closure gives the structural territory the figure organizes,
+and the separator condition gives the figure's role as a measuring
+instrument within that territory. Cf.
+`preprints/four-position-partition/closure-canonization.md` §5a. -/
+structure CanonizationGenerator (Δ : DistinctionStructure C)
+    {X Y : C} (f : X ⟶ Y) extends CanonizationClosure Δ f where
+  /-- The codomain `Y` is a separator for `C`: parallel morphisms in
+  `C` agreeing under all post-composition with maps out of `Y` are
+  themselves equal. This is the standard categorical separator
+  condition. -/
+  isSeparator : ∀ {A B : C} (g₁ g₂ : A ⟶ B),
+    (∀ h : Y ⟶ A, h ≫ g₁ = h ≫ g₂) → g₁ = g₂
+
+/-- **Conditional separation theorem.** Given a canonization-
+generator witness, parallel morphisms in `C` are determined by their
+composition with maps out of the canonization codomain `Y`. This is
+the Spencer-Brown "measuring instrument" content of canonization
+formalized: the canonization figure's codomain resolves distinctions
+among morphisms.
+
+The proof is direct: the separation condition is the defining
+property of the separator. This theorem packages the property into
+a named result connecting it explicitly to the canonization-generator
+witness data.
+
+**Relationship to the closure layer.** The closure layer's
+`recursive_partition` theorem classifies morphisms relative to the
+canonization closure. The generator layer's separation theorem says
+that, within the same canonization data, equality of morphisms is
+detectable from the canonization codomain. The two are independent
+consequences of the same canonization-generator data: classification
++ resolution. -/
+theorem canonization_separation
+    {Δ : DistinctionStructure C} {X Y : C} {f : X ⟶ Y}
+    (cg : CanonizationGenerator Δ f)
+    {A B : C} (g₁ g₂ : A ⟶ B)
+    (h_agree : ∀ h : Y ⟶ A, h ≫ g₁ = h ≫ g₂) :
+    g₁ = g₂ :=
+  cg.isSeparator g₁ g₂ h_agree
+
 /-! ## Status
 
 DONE (kernel-checkable in this file):
@@ -235,15 +316,21 @@ DONE (kernel-checkable in this file):
 * `recursive_partition` — the conditional recursive partition
   theorem. Direct application of `four_position_partition` to the
   induced distinction structure. Proof is one-line composition.
+* `CanonizationGenerator` — refinement of the closure structure
+  with the separator condition on the canonization codomain.
+* `canonization_separation` — the conditional separation theorem.
+  Direct application of the separator condition. Proof is a one-
+  line unfolding of the definition.
 
 NOT FORMALIZED HERE (open framework work):
 * The `Generates Δ f T` predicate identifying which idempotent
   monads count as canonization closures of `f`. Three candidates
   surveyed in `closure-canonization.md` §5; selection deferred
   pending substantive mathematical and historical work.
-* A construction of `CanonizationClosure` for any specific morphism.
-  The framework's empirical canon-formation work has not yet been
-  lifted to formal closure constructions.
+* A construction of `CanonizationClosure` (or `CanonizationGenerator`)
+  for any specific morphism. The framework's empirical canon-
+  formation work has not yet been lifted to formal closure
+  constructions.
 * Existence and uniqueness theorems for canonization closures under
   the framework's elementary-topos hypothesis bundle. Open.
 * Iteration of the recursion (closures of closures producing third-
@@ -252,27 +339,59 @@ NOT FORMALIZED HERE (open framework work):
   direction.
 
 WHY THE CONDITIONAL FORM IS HONEST:
-The recursive partition theorem is mathematically trivial given the
-existing bridge in `SpencerBrown.lean` and the partition theorem in
-`Partition.lean` — it composes them. The substantive contribution
-of this file is therefore not the *proof* of the recursive partition,
-but the *identification of the right object* (`CanonizationClosure`)
-on which to apply existing infrastructure. The framework's
-mathematical work is concentrated in specifying the `Generates`
-predicate, which this file deliberately leaves open.
+Both conditional theorems (`recursive_partition` and
+`canonization_separation`) are mathematically trivial given the
+existing infrastructure. The recursive partition is a one-line
+composition of `DistinctionStructure.ofIdempotentMonad` and
+`four_position_partition`. The separation theorem is a one-line
+unfolding of the separator definition. The substantive contribution
+of this file is therefore not the proofs themselves but the
+*identification of the right objects* (`CanonizationClosure`,
+`CanonizationGenerator`) on which to apply existing infrastructure,
+and the *separation* of the conditional theorems (which the
+framework gives once the data is provided) from the open
+constructions (which the framework does not yet provide). The
+mathematical work is concentrated in (a) specifying the `Generates`
+predicate for the closure layer and (b) verifying for specific
+morphisms that they admit closure-with-separator witnesses; this
+file deliberately leaves both as open.
+
+ARCHITECTURE — THE THREE LAYERS OF CANONIZATION:
+The framework's canonization apparatus is now organized into three
+layers, each addressing a structurally distinct question:
+
+| Layer            | Question                          | File               |
+|------------------|-----------------------------------|--------------------|
+| Classification   | Which cell?                       | Partition.lean     |
+| Commitment gate  | At cell's structural limit?       | CommitmentGate.lean|
+| Closure/Generator| Consequences for the rest of C?   | this file          |
+
+The closure component of the third layer gives the structural
+territory the canonization figure organizes (the recursive
+partition); the generator component gives the figure's resolving
+behaviour within that territory (the separation theorem). The two
+components together are intended to capture the full canonization
+phenomenon. Connection to the Commitment gate (the predicate that
+*triggers* canonization for a given morphism) is structural intent
+documented in `CommitmentGate.lean` and `closure-canonization.md`
+but not formally lifted: a theorem of the form "commitment-yes
+implies canonization-generator-witness exists" would require
+specifying the `Generates` predicate and the per-cell iteration
+content, both of which are open work.
 
 CONNECTION TO `CommitmentGate.lean`:
-The closure layer is conceptually downstream of the Commitment gate:
-the gate identifies *which* morphisms are commitment-yes (binary
-fixedness in cell-restricted iteration); the closure layer
-identifies *what such morphisms generate* (a reflective subcategory
-and the recursive partition). The two layers are structurally
-distinct and currently formalized at different levels — the gate at
-schema level with placeholder content, the closure layer at
+The closure/generator layer is conceptually downstream of the
+Commitment gate: the gate identifies *which* morphisms are
+commitment-yes (binary fixedness in cell-restricted iteration); the
+closure/generator layer identifies *what such morphisms generate
+and resolve* (a reflective subcategory, the recursive partition,
+the separation theorem). The two layers are structurally distinct
+and currently formalized at different levels — the gate at schema
+level with placeholder content, the closure/generator layer at
 conditional theorem level. Bringing them into structural alignment
-(e.g., showing that commitment-yes morphisms automatically admit
-canonization closures of a specific form) is a substantial open
-problem.
+(showing that commitment-yes morphisms automatically admit
+canonization-generator witnesses of a specific form) is the
+remaining substantial architectural integration step.
 -/
 
 end FalseWork.Positions

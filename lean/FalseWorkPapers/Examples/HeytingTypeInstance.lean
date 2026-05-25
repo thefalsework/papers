@@ -96,6 +96,7 @@ Both audit lines must report only the standard three axioms. -/
 
 /-! Canonization closure (companion to
 `preprints/four-position-partition/closure-canonization.md`).
-The conditional recursive partition theorem must report only the
-standard three axioms. -/
+The conditional recursive partition theorem and the conditional
+separation theorem must report only the standard three axioms. -/
 #print axioms FalseWork.Positions.recursive_partition
+#print axioms FalseWork.Positions.canonization_separation
