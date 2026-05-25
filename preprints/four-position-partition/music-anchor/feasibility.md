@@ -1,8 +1,8 @@
 # Music-Anchor Feasibility Memo
 
 **Author:** Chris Brink
-**Date:** May 2026
-**Status:** Scoping document (Step A of the music-anchor test plan); no computation performed yet.
+**Date:** May 2026 (initial scoping); updated May 2026 with Step B outcome and Path B redirection.
+**Status:** Step A (scoping) complete. Step B (initial Wolfram empirical test) complete with a documented negative result: the natural lattice-level construction on Z/12 is not Heyting (§11). Path B (subgroup-lattice route in Z/12-Sets) is the active forward direction (§12).
 
 ---
 
@@ -257,6 +257,168 @@ For honest scope-limiting:
 - It does not address the *canonization closure* layer (`FalseWork.Positions.CanonizationClosure`); that layer applies once a non-trivial canonical figure is identified within a cell, and is downstream of the present test.
 
 The test scoped here is the *minimum* concrete computation that would move the music anchor from "claimed application" to "demonstrated application." It is not a full music-domain treatment, and it should not be presented as one.
+
+---
+
+## 11. Step B outcome (May 2026): the diatonic-closure Moore lattice is not Heyting
+
+The initial Step B implementation lived at `wolfram/music-anchor/four-position-music.wl` (v1) and `four-position-music-v2.wl` (v2). The construction sidestepped the full `[G_chrom, Set]` presheaf-topos setup of §3.1–§4.1 and worked directly at the *lattice level* via a Moore closure operator
+
+```
+diatonicClosure[P] = intersection of all 12 diatonic scales containing P,
+                      or Z/12 if no scale contains P.
+```
+
+The closed sets under this closure form a complete lattice of 92 elements, with 54 non-regular elements (`P ≠ ¬¬P` under the lattice's apparent Heyting operations) — sufficient material *in principle* for the four-position partition to apply non-vacuously.
+
+### 11.1 What v2 ran
+
+Removed all Tymoczko-prediction anchoring (per user direction: "stick to math"). For four mathematically-picked non-regular kernels (`{0}`, `{0,7}`, `{0,2,7}`, `{3,5,8,10}`), v2 classified all 92 closed sets and 12 pitch-class test inputs into the four cells of Definition 4.1 of `paper.md`. Each kernel produced an UNCLASSIFIED count in the lattice partition (22, 18, 13, 7 respectively) — a category that should be empty if the four cells truly partition `Sub(D(Y)) ∖ {⊥}` as Theorem 5.1 asserts.
+
+### 11.2 Diagnosis: the lattice is not Heyting
+
+The UNCLASSIFIED counts are the symptom; the cause is that the closed-set lattice is **non-distributive**, hence not a Heyting algebra. Two concrete witnesses (both kernel-computable in v2 §9):
+
+**Witness 1 (Heyting identity failure).** Take kernel `a = {0}` and test set `X = D_11 = B-major = {1,3,4,6,8,10,11}`.
+
+- `X ⊓ a = X ∩ {0} = ∅ = ⊥`
+- `¬a = D_2 = D-major = {1,2,4,6,7,9,11}` (the largest closed set disjoint from `{0}`)
+- `X ⊆ ¬a`? **No** — `X` contains `3, 8, 10`, none of which are in `D-major`.
+
+In a Heyting algebra, `b ⊓ a = ⊥ ⟺ b ≤ aᶜ`. Here the implication fails: `X ⊓ a = ⊥` but `X ⊄ aᶜ`.
+
+**Witness 2 (distributivity failure).** Take
+- `P = {0,1,3,5,8,10} = D_1 ∩ D_8` (closed)
+- `Q = D_0 = C-major`
+- `R = D_3 = Eb-major`
+
+Then:
+- `Q ⊔ R = closure({0,2,3,4,5,7,8,9,10,11}) = Z/12` (no diatonic scale contains 10 chromatic pitches)
+- `P ⊓ (Q ⊔ R) = P = {0,1,3,5,8,10}`
+- `P ⊓ Q = {0,5}`, `P ⊓ R = {0,3,5,8,10}`
+- `(P ⊓ Q) ⊔ (P ⊓ R) = closure({0,3,5,8,10}) = {0,3,5,8,10}`
+
+`P ⊓ (Q ⊔ R) = {0,1,3,5,8,10} ≠ {0,3,5,8,10} = (P ⊓ Q) ⊔ (P ⊓ R)`. The lattice fails distributivity, hence cannot be Heyting.
+
+### 11.3 What this means
+
+The diatonic-closure Moore-closure construction on `Z/12` does **not** satisfy the hypothesis of Theorem 5.1. The four-position partition theorem requires `Sub(D(Y))` to carry a Heyting algebra structure (paper.md §2, building on Mac Lane and Moerdijk 1992, IV.6 Proposition 2). The lattice here is a complete lattice but not a distributive one; the apparent "Heyting operations" computed in v2 (`heytingNot[P]` as the largest closed set disjoint from `P`) do not satisfy the Heyting identities, and the four position predicates do not partition the lattice.
+
+This is a clean negative result at the lattice-level construction. It is **not** a refutation of the four-position partition theorem (which is a theorem about elementary topoi, independently kernel-checked in Lean against Mathlib4) and it is **not** a refutation of the music application (which was never claimed at this construction level). It is a refutation of the specific *shortcut* — sidestepping the presheaf-topos apparatus by working directly with a Moore closure on `Z/12` — that v1/v2 attempted.
+
+The framework's machinery is genuinely picky about what counts as a distinction structure. Not every natural-looking closure on `Z/12` qualifies; distributivity is a real constraint.
+
+### 11.4 What survives from v2
+
+- The 92-element closed-set lattice of `diatonicClosure` is correctly computed.
+- The two diagnostic witnesses (§9 of v2.wl) are reproducible and certify the diagnosis.
+- The Coltrane test was *not run* in v2 (v2 stripped that section per the math-only directive). The Coltrane test as scoped in §6 of this memo is deferred to the topos-level construction.
+
+---
+
+## 12. Path B: the subgroup-lattice route in `Z/12`-Sets
+
+The forward direction is to drop the lattice-level shortcut and instantiate the partition theorem on a music-derived elementary topos where `Sub(D(Y))` is Heyting *by construction*. The smallest such instance that retains musical content is:
+
+### 12.1 The construction
+
+- **Topos.** `Z/12-Sets` = the category of (left) `Z/12`-actions on sets. This is the presheaf topos on the one-object groupoid `B(Z/12)` (a single object with automorphism group `Z/12`), equivalently the presheaf topos on the connected transposition-only groupoid of §3.1 (which is equivalent to `B(Z/12)`). The inversion and full dihedral structure of §3.1 is deferred to a richer follow-up topos.
+
+- **Object Y.** `Y := Z/12` with the regular `Z/12`-action (left multiplication by elements of `Z/12`).
+
+- **Subobject lattice `Sub(Y)`.** The sub-`Z/12`-sets of `Y` are exactly the subgroups of `Z/12` (by elementary group theory). The lattice of subgroups of `Z/12` is isomorphic to the divisor lattice of 12:
+
+  ```
+                  Z/12  (order 12, = full chromatic)
+                  /    \
+              <2>      <3>
+            (order 6,   (order 4,
+            whole-      diminished
+            tone        7th)
+            hexachord)  /
+              |    /  
+              |  /   
+              <6>     <4>
+            (order 2,  (order 3,
+            tritone)   augmented triad)
+                  \    /
+                   {0}  (order 1, trivial)
+  ```
+
+  Six elements, distributive (divisor lattices are always distributive), hence Heyting; non-Boolean (12 = 2²·3 is not squarefree, so the divisor lattice is not Boolean).
+
+### 12.2 Heyting structure on `Sub(Y)`
+
+Computing in the divisor lattice (with subgroup-order labels): meet is gcd, join is lcm, `¬a = lcm{b : gcd(a,b) = 1}`.
+
+| `a` (order) | subgroup        | `¬a` (order) | subgroup        | `¬¬a` (order) | regular? |
+|-------------|-----------------|--------------|-----------------|---------------|----------|
+| 1           | `{0}`           | 12           | `Z/12`          | 1             | yes      |
+| 2           | `<6>` (tritone) | 3            | `<4>` (aug)     | 4             | **no**   |
+| 3           | `<4>` (aug)     | 4            | `<3>` (dim7)    | 3             | yes      |
+| 4           | `<3>` (dim7)    | 3            | `<4>` (aug)     | 4             | yes      |
+| 6           | `<2>` (whole)   | 1            | `{0}`           | 12            | **no**   |
+| 12          | `Z/12`          | 1            | `{0}`           | 12            | yes      |
+
+Two non-regular elements: the tritone (order 2) and the whole-tone hexachord (order 6). Both have non-trivial closure residue. The lattice is provably non-Boolean.
+
+### 12.3 The partition at kernel `a = <6>` (tritone)
+
+With kernel `a = <6>` (subgroup of order 2, the tritone `{0, 6}`):
+
+- `¬a = <4>` (augmented triad `{0, 4, 8}`)
+- `¬¬a = <3>` (diminished 7th `{0, 3, 6, 9}`)
+- Closure residue `¬¬a ∖ a` is exactly the diminished 7th (which strictly contains the tritone)
+
+The four cells of Definition 4.1 of `paper.md`, applied to candidate subobjects `X ∈ Sub(Y) ∖ {⊥}`:
+
+- **Infrastructure** (`X ≤ a = <6>`): `X ∈ {<6>}`, i.e., the **tritone** itself.
+- **Refusal** (`X ≤ ¬a = <4>`): `X ∈ {<4>}`, i.e., the **augmented triad**.
+- **Exploitation** (`X ≤ ¬¬a = <3>`, `X ⊄ <6>`): `X ∈ {<3>}`, i.e., the **diminished 7th**.
+- **Distribution** (`X ⊓ <6> ≠ ⊥` ∧ `X ⊓ <4> ≠ ⊥`): `X` must contain a multiple of 6 and a multiple of 4, so `X ⊇ <gcd(6,4)> = <2>`. Therefore `X ∈ {<2>, Z/12}`, i.e., the **whole-tone hexachord** and the **full chromatic**.
+
+All four cells are inhabited. Excluding the trivial subobject `{0} = ⊥`, every non-bottom element of `Sub(Y)` lands in exactly one of the four cells. The partition is exhaustive and disjoint, as Theorem 5.1 requires.
+
+### 12.4 Why this is a non-vacuous music witness
+
+Each subgroup of `Z/12` is a transposition-symmetric pitch-class set with established musical significance:
+
+- `<6>` tritone — the smallest non-trivial symmetric set
+- `<4>` augmented triad — symmetric by major third
+- `<3>` diminished 7th — symmetric by minor third
+- `<2>` whole-tone hexachord — symmetric by whole step
+- `Z/12` — full chromatic
+
+With the tritone chosen as kernel, the partition reads:
+
+| Cell           | Subgroup           | Musical reading                              |
+|----------------|--------------------|----------------------------------------------|
+| Infrastructure | tritone            | operating in the kernel's territory          |
+| Refusal        | augmented triad    | operating in the strict complement           |
+| Exploitation   | diminished 7th     | the closure-residue: contains the tritone, but is not the tritone, sitting in the double-negation closure |
+| Distribution   | whole-tone, Z/12   | straddling kernel and complement             |
+
+This is a *lattice-level* witness of the four-position partition on music-domain material. It establishes Theorem 5.1 is **non-vacuous in a music-derived elementary topos**, which is the structural claim §11 was unable to deliver.
+
+### 12.5 What this witness does *not* establish
+
+Two important caveats:
+
+1. **No distinction structure yet.** The kernel `a = <6>` was chosen on lattice criteria (smallest non-regular element), not derived as the image `Im(η_Y)` of a specific distinction-structure unit. To upgrade to a full Definition-3.1 instance, we need to exhibit a concrete idempotent monad on `Z/12-Sets` whose unit at `Y` has image exactly `<6>` (or another chosen non-regular element). Candidates worth checking:
+   - The reflection onto sub-`Z/12`-sets stabilized by a chosen subgroup.
+   - The double-negation sheafification (always gives an idempotent monad, but lands in the Boolean part and would collapse Exploitation).
+   - A bespoke reflective subcategory determined by the kernel choice.
+   This is the next concrete formalization task. By Remark 5.5 of `paper.md` and the kernel-checked `DistinctionStructure.ofIdempotentMonad` constructor, *any* idempotent monad on the topos producing the right kernel image will suffice.
+
+2. **No Coltrane classification yet.** The §6 Coltrane test classifies specific works against the partition. With `Z/12-Sets` as the topos, each work would be encoded as a morphism `f: X → Y` for some sub-`Z/12`-set `X`, and classified by where `Im(D.map f) ∈ Sub(D(Y))` lands. This requires (i) the distinction structure of caveat 1 and (ii) a defended pitch-class encoding of each work as a `Z/12`-set. Both deferred.
+
+### 12.6 Plan for v3
+
+- **`wolfram/music-anchor/four-position-music-v3-path-b.wl`** (next): a self-contained kernel-checkable script that builds the divisor lattice of 12, certifies it is Heyting (via direct distributivity and idempotency checks), enumerates the cells at multiple kernel choices (including the tritone), and prints the partition with musical labels. This is the empirical companion to §12.3.
+- **Next Lean work** (deferred): identify a concrete idempotent monad on `Z/12-Sets` whose unit's image at `Y = Z/12` is the tritone subgroup. Use `DistinctionStructure.ofIdempotentMonad` to lift to a full distinction structure and re-run the partition theorem against it in Lean.
+- **Coltrane test** (deferred further): once the distinction structure is in place, encode the three reference works and classify. This is the §6 test, postponed until the topos-side structure is in hand.
+
+The lattice-level v3 deliverable certifies the non-vacuity claim of Theorem 5.1 on music-domain material. The Lean-side work upgrades that to a full distinction-structure witness. The Coltrane test is the third stage.
 
 ---
 
