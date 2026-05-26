@@ -85,10 +85,20 @@ ClearAll["Global`*"];
                            in Sigma_{V'} is in P }.
    ============================================================ *)
 
-(* lift a subset of Sigma_{vSub} up to a subset of Sigma_{vBig} *)
-liftProj[cc_, vBig_, vSub_, sub_] := Module[{rest},
-  rest = cc["restrict"][{vBig, vSub}];
-  Select[cc["spectra"][vBig], MemberQ[sub, rest[#]] &]
+(* lift a subset of Sigma_{vSub} up to a subset of Sigma_{vBig}.
+   The vBig === vSub case must be the identity lift (sub itself);
+   handling this explicitly because the "restrict" association is
+   only populated for proper inclusions vSub strictly below vBig.
+   Without this guard, liftProj returns {} for the V leq V case,
+   which then corrupts Doering Prop. 2 at minimal contexts (the
+   NOT becomes the full spectrum instead of the Boolean complement
+   of the local component) and corrupts double-negation downstream. *)
+liftProj[cc_, vBig_, vSub_, sub_] := If[vBig === vSub,
+  sub,
+  Module[{rest},
+    rest = cc["restrict"][{vBig, vSub}];
+    Select[cc["spectra"][vBig], MemberQ[sub, rest[#]] &]
+  ]
 ];
 
 (* candidate tuples in the product of PowerSet[Sigma_V] over V *)
