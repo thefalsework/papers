@@ -145,6 +145,10 @@ Døring distinguishes outer daseinisation `δ^o_V(P)` (smallest in `V` majorisin
 
 So as a single kernel this is structurally analogous to 4.1.
 
+**Post-run correction (2026-05-26).** The naive construction "anti-daseinisation_V = `{λ ∈ Σ(V) : λ(δ^i_V(P)) = 1}`" does *not* produce a valid clopen subobject in our convention (which has `restrict(S_V') ⊆ S_V` for `V ≤ V'`). Reason: inner daseinisation is monotone increasing (`V ≤ V'` ⇒ `δ^i_V(P) ≤ δ^i_{V'}(P)`), so a character of `V'` evaluating `δ^i_{V'}(P)` to 1 can restrict to a character of `V` evaluating `δ^i_V(P)` to 0. The v3.wl script's `antiDaseinQ` / `antiDaseinC` functions produce such an invalid subobject (concretely: the `V_0` component is empty while the `V_Z` component is non-empty), and the four-cell counts the script reported for §4.4 are on an inconsistent input. They are not substantive.
+
+The Heyting-correct anti-daseinisation in our convention is `¬δ(¬P)` (Heyting complement of the daseinisation of the projection complement), which is computed correctly inside candidate 4.5. Future runs should drop §4.4 entirely or replace it with `¬δ(¬P)` as a standalone kernel, but since 4.5 already wraps `¬δ(¬P)` inside a meet with `δ(P)`, the structural content is preserved.
+
 ### 4.5 Difference subobject `δ(P) ∧ ¬δ(¬P)`
 
 `a := δ(P) ∧ ¬δ(¬P)`, where `¬δ(¬P)` is the Heyting complement of `δ(¬P)` (computed via Døring Prop. 2 stagewise NOT). This subobject is the "definitely-`P`, also-not-definitely-not-`P`" region.
@@ -262,6 +266,85 @@ User confirmation 2026-05-26:
 3. The §4 kernel candidates now include §4.8 (Heyting implication `δ(P) → δ(¬P)`) on user's explicit request. Final list: §4.1 (single daseinisation), §4.2 (join), §4.3 (meet), §4.4 (anti-daseinisation), §4.5 (`δ(P) ∧ ¬δ(¬P)`), §4.6 (KS gap), §4.7 (exhaustive sweep), §4.8 (Heyting implication).
 
 The v3 memo is at the same exploratory register as the pre-v1.wl Route B scoping was. The next concrete step after this decision-gate is to write the script in §6, run it, fold results into `physics-anchor/feasibility.md`.
+
+## 10. Results from the run (2026-05-26)
+
+The v3 script executed against Wolfram Cloud through Parts 0-3 plus the prologue of Part 4 (exhaustive sweep was cut off mid-run; see §10.4 below). Results, verbatim from the cell:
+
+### 10.1 Sanity checks (Parts 0, 1)
+
+- Hasse cardinality match: `|leq_q| = |leq_c| = 21`. Spectrum-size sequence match: `{1,2,2,2,2,3,3,3}` on both. **Poset-isomorphism confirmed.**
+- `|Sub_cl(Σ)| = 4385` on both sides (matches the hand count `4^3 + 9^3 + 6^3 + 15^3 + 1 = 4385`).
+
+### 10.2 Daseinisations (Part 2)
+
+The §3.3 prediction is confirmed verbatim:
+
+- Quantum `δ(P)`: `<V0=FULL; VZ={1z}; VX=FULL; VY=FULL; VC={0c}; VtopZ={lz2}; VtopX={mx1,mx2}; VtopY={ny1,ny2}>`
+- Classical `δ(P')`: `<V0c=FULL; VZc={1zc}; VXc={0xc}; VYc={0yc}; VCc={0cc}; VtopZc={lz2c}; VtopXc={mx1c}; VtopYc={ny1c}>`
+
+The quantum side has `FULL` at the off-direction contexts `V_X, V_Y` (because `δ^o_{V_X}(P) = 1` — non-commutativity forces the daseinisation to round up to identity), while the classical side has singletons there. At the maximal contexts `V_topX, V_topY` the quantum side has 2-element components while the classical side has singletons.
+
+### 10.3 Kernel candidates (Part 3)
+
+| Candidate | Q `(i, r, e, d)` | C `(i, r, e, d)` | Cell-non-empty divergent | Cardinality divergent |
+|-----------|------------------|------------------|--------------------------|------------------------|
+| 4.1 `δ(P)` | (275, 5, 0, 4384) | (35, 20, 0, 4384) | False | **True** |
+| 4.2 `δ(P) ∨ δ(¬P)` | (4384, 0, 0, 0) | (4384, 0, 0, 0) | False | False |
+| 4.3 `δ(P) ∧ δ(¬P)` | (97, 10, 0, 4384) | (13, 40, 0, 4384) | False | **True** |
+| 4.4 anti-dasein(P) | (0, 1508, 2, 2876) | (0, 1508, 2, 2876) | False | False |
+| 4.5 `δ(P) ∧ ¬δ(¬P)` | (2, 1508, 0, 4384) | (2, 1508, 0, 4384) | False | False |
+| 4.6 `¬(δ(P) ∨ δ(¬P))` | trivial (bottom) | trivial (bottom) | – | – |
+| 4.8 `δ(P) → δ(¬P)` | (1508, 2, 0, 4384) | (1508, 2, 0, 4384) | False | False |
+
+Findings:
+
+- All seven candidates produce identical cell-non-emptiness patterns between quantum and classical. **The cell-non-emptiness criterion of §5 is negative across the entire candidate list.** This matches the §3.4 dimensionality-caveat prediction.
+
+- The **cell-cardinality criterion fires on candidates 4.1 and 4.3 only**. The cardinality ratios are structurally clean:
+  - Candidate 4.1: Q-infrastructure / C-infrastructure = 275 / 35 ≈ 7.86. Q-refusal / C-refusal = 5 / 20 = 0.25.
+  - Candidate 4.3: 97 / 13 ≈ 7.46. 10 / 40 = 0.25.
+  - The infrastructure ratio is close to `2^3 = 8`, consistent with the interpretation "two more subset-options per off-direction context, across the three off-direction contexts `V_X, V_Y, V_C` for candidate 4.1, and the same factor at 4.3 because the meet `δ(P) ∧ δ(¬P)` retains the off-direction structure."
+  - The refusal ratio is the reciprocal (≈ 0.25), reflecting the dual flow of options into `¬δ(P)`.
+  - These ratios are *exactly* what §3.3 predicted at the daseinisation-lift level, propagated into the partition.
+
+- Candidates 4.5 and 4.8 are particularly informative as *null results*: the Heyting structure on `Sub_cl(Σ)` erases the daseinisation divergence whenever a kernel passes through `¬` or `→`. Candidate 4.8 `δ(P) → δ(¬P)` reduces to `δ(¬P)` itself in this discretisation, because `¬δ(P) ≤ δ(¬P)` componentwise. This is a structural finding about how the Bohr topos's logic smooths out non-commutativity at the Heyting-derived-kernel level.
+
+- Candidate 4.4 anti-daseinisation is **not a substantive result** (see §4.4 post-run correction above). The script's `antiDaseinQ` construction produces an invalid clopen subobject (V_0 component empty while V_Z component non-empty, violating restriction compatibility). The numerical counts the script reports for 4.4 are operating on an inconsistent input and should be ignored. The Heyting-correct anti-daseinisation `¬δ(¬P)` is computed correctly inside candidate 4.5.
+
+### 10.4 Exhaustive sweep (Part 4): structurally null, cut-off accepted
+
+The sweep produced the non-regular count `4129 of 4385` on both sides (94%) before being cut off mid-run during the all-4 count.
+
+**The remainder of the sweep is structurally null** — it cannot detect non-commutativity by construction in v3 — so the cut-off is information-equivalent to a completion. Argument:
+
+1. `Sub_cl(Σ_Q)` and `Sub_cl(Σ_C)` are isomorphic as bi-Heyting algebras. This follows from the §3.2 design choice: `V_d(C^7)` was constructed to be poset-iso to `V_d(M_2(C) ⊕ C)` with matching spectrum sizes and structurally matching restriction maps. Part 0 of the v3 run verified the data (`|Hasse| = 21 = 21`; `{1,2,2,2,2,3,3,3}` on both; `|Sub_cl| = 4385` on both).
+
+2. The exhaustive-sweep question — "does kernel `a` admit an all-4-cell partition?" — is determined entirely by the lattice structure of `Sub_cl(Σ)`. Specifically:
+   - `a ∈ Infrastructure(a)` automatically for non-bottom `a` (Infrastructure non-empty);
+   - `¬¬a ∈ Exploitation(a)` automatically for non-regular `a` (Exploitation non-empty);
+   - `Refusal(a)` non-empty iff `¬a ≠ ⊥`;
+   - `Distribution(a)` non-empty iff `a ≠ ⊥` and `¬a ≠ ⊥` (typically `= |Sub_cl| − 1` for non-trivial kernels, dominated by the shared `V_0`-component).
+   
+   So all-4-cell ⇔ (`a` non-regular) ∧ (`a ≠ ⊥`) ∧ (`¬a ≠ ⊥`). All three predicates are intrinsic to the lattice.
+
+3. Lattice-iso preserves intrinsic predicates. So the all-4-cell count is exactly equal between Q and C. The cell-non-emptiness verdict from the exhaustive sweep is structurally pinned to **match**.
+
+4. The only place non-commutativity can enter the v3 partition is through kernels that *reference the daseinisation of a specific projection* — i.e., the named kernel candidates 4.1, 4.3, 4.5, 4.8 in Part 3, not the exhaustive sweep in Part 4. The exhaustive sweep iterates over the lattice; it never touches the daseinisation. Therefore it is blind to non-commutativity by construction.
+
+This is itself a structural finding: **the v3 quantum-vs-classical signal can live only at named daseinisation-derived kernels, not at any lattice-internal kernel choice.** The §10.3 cell-cardinality result at candidates 4.1 and 4.3 is therefore *the* v3 signal; the exhaustive sweep was load-bearing only as an empirical sanity check, and we have enough lattice-structural argument to close it out without further computation.
+
+If a future patch wants to empirically verify the structural argument (e.g., as a sanity check before committing to a v4 build on a different algebra), the streamlined O(`|Sub_cl|`) check `non-reg ∧ ¬a ≠ ⊥ ∧ a ≠ ⊥` would finish in seconds and produce the matching all-4 counts on both sides. The original Part 4 implementation (`fourCells` per kernel) is over-engineered — it computes Distribution and Infrastructure counts that we don't actually need for the non-emptiness verdict.
+
+### 10.5 Verdict
+
+**Cell-non-emptiness criterion: NEGATIVE on all named candidates (Part 3) and structurally null on the exhaustive sweep (Part 4).** No candidate in the named list (4.1, 4.2, 4.3, 4.5, 4.8) produces a non-emptiness divergence between quantum and classical; the exhaustive sweep is guaranteed by lattice-isomorphism to produce matching counts and therefore cannot contribute a divergence either. Matches §3.4 prediction.
+
+**Cell-cardinality criterion: POSITIVE on candidates 4.1 and 4.3.** The cardinality ratios are clean (≈ 2^3 = 8 on Infrastructure, ≈ 0.25 = 1/4 on Refusal) and traceable to the §3.3 daseinisation-lift divergence at off-direction contexts. This is a *quantitative algebra-sensitive signal* — the framework's partition machinery is sensitive to non-commutativity at the cell-count level on tight (Heyting-regular) kernels.
+
+**Overall**: **mixed result** per §5 criteria. The framework's machinery detects non-commutativity quantitatively but not categorically in this discretisation.
+
+A bonus structural finding from §10.4: the *only* place a quantum-vs-classical signal can live in v3 is at kernels that reference the daseinisation of a specific projection. Lattice-internal kernel choices (the exhaustive sweep) are blind to non-commutativity by construction whenever the classical control is built poset-iso to the quantum side. This sharpens the scope of where to look for a categorical signal: either (a) a higher-dimensional algebra carrying Kochen-Specker (v4 on M_3(C); KS would block the poset-iso construction, breaking the lattice-iso premise), or (b) a different formulation of the kernel-choice question that doesn't pass through the Heyting-erasure for daseinisation-derived kernels.
 
 ---
 

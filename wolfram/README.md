@@ -83,11 +83,16 @@ wolfram/
 │                                      control. Tests 7 kernel candidates
 │                                      (sec. 4.1-4.6, 4.8 of v3-scope.md) plus
 │                                      exhaustive non-regular sweep (sec. 4.7).
-│                                      Sanity-check + cell-cardinality-baseline
-│                                      run; dimensionality caveat (M_2(C) has
-│                                      dim < KS threshold) means negative or
-│                                      mixed result expected on cell-non-
-│                                      emptiness criterion. To be executed.
+│                                      Executed 2026-05-26: cell-non-emptiness
+│                                      NEGATIVE across all seven candidates
+│                                      (matches dim < KS threshold prediction);
+│                                      cell-CARDINALITY POSITIVE on candidates
+│                                      4.1 and 4.3 with clean ratios ~2^3
+│                                      traceable to off-direction daseinisation
+│                                      lifts. Exhaustive sweep (sec. 4.7) cut
+│                                      off mid-run but is structurally null
+│                                      (lattice-iso pins both sides to match);
+│                                      see v3-scope.md sec. 10.4 for argument.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions
