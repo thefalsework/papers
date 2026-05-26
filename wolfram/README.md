@@ -60,8 +60,15 @@ wolfram/
 │   └── methodology.wl         FalseWork methodology self-core — KernelOfMethodology
 ├── music-anchor/              divisor-lattice Layer-L/T/D computational companion to
 │                              preprints/four-position-partition/music-anchor/feasibility.md
-├── physics-anchor/            Route-B finite-physics-lattice exploration companion to
+├── physics-anchor/            Route-B + Route-A-checkpoint companions to
 │                              preprints/four-position-partition/physics-anchor/feasibility.md
+│   ├── four-position-physics-v1.wl  Route B: finite physics-interpretable
+│   │                                  down-set-of-poset lattices (executed v1.1,
+│   │                                  all five candidates degenerate)
+│   └── four-position-physics-v2.wl  Route A computational checkpoint:
+│                                      Sub_cl(Sigma) enumeration on small finite
+│                                      context categories with non-trivial joins
+│                                      (Doering 2012 stagewise Heyting NOT)
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions
