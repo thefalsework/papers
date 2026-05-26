@@ -49,7 +49,8 @@ wolfram/
 ├── falsework-algebra.wl       type system, predicates, query implementations
 ├── kernels.wl                 Kernel and Comma definitions for the corpus
 ├── cores/
-│   ├── tymoczko.wl            Tymoczko, A Geometry of Music — KernelTheFifth
+│   ├── tymoczko.wl            Tymoczko, A Geometry of Music (2011) — KernelTheFifth
+│   ├── tymoczko-2026.wl       Tymoczko, The Concept of Musical Space (2026 JMT) — KernelTheFifth (groupoid/π₁ formalism)
 │   ├── cutting.wl             Cutting, F1 film primitives — KernelTheCut
 │   ├── nks.wl                 Wolfram, A New Kind of Science — KernelTheConditionalBranch
 │   └── methodology.wl         FalseWork methodology self-core — KernelOfMethodology

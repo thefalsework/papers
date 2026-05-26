@@ -465,6 +465,46 @@ The Coltrane classification of §6 remains deferred. With Layer L kernel-checked
 
 ---
 
+## 13. Independent formalism: Tymoczko (2026) and the topology-vs-Heyting correspondence
+
+Tymoczko's 2026 *Journal of Music Theory* paper, "The Concept of Musical Space," develops a groupoid-categorical reformulation of transformational music theory. It is a separate work from the 2011 *A Geometry of Music* (which is the corroborator cited elsewhere in the music-kernel cluster) and pushes the formalism in a direction structurally adjacent to the FalseWork machinery. This section records the parallels and where they stop being parallels.
+
+### 13.1 Two formalisms, one structural phenomenon
+
+Both frameworks identify the same load-bearing fact — *the iterated music kernel fails to close, and that failure has structural content* — but they formalise it in different mathematical categories.
+
+| | Tymoczko (2026) | FalseWork (this paper, Layer L) |
+|---|---|---|
+| Substrate | A music-theoretic groupoid (e.g. a Tonnetz) with arrows = transformations | The Heyting algebra `Sub(D Y)` of subobjects of `D Y` in an elementary topos |
+| Kernel image | A distinguished arrow / iterated generator (the perfect fifth, lifted to the groupoid) | `Im(η_Y) ∈ Sub(D Y)` |
+| Comma content | The vertex group at each point — the fundamental group of the underlying space — recording "which loops fail to be trivial" | The closure-residue `(Im(η_Y))ᶜᶜ ∖ Im(η_Y)` — strict in non-Boolean topoi at non-regular elements |
+| Characterisation theorem | Commas exist exactly when `π₁` is non-trivial, i.e. exactly when the arrow algebra is strictly richer than the point algebra (a homotopy-theoretic statement) | The Exploitation cell is inhabited exactly when the Heyting algebra is non-regular at the kernel image (`a ≠ aᶜᶜ`); for the music anchor this is `Div12.tritone_non_regular`, kernel-checked at the lattice level |
+| Canonical case | The Pythagorean comma as winding-number index of `C → F♯` via clockwise vs. counterclockwise iterated fifths | The Pythagorean comma as the canonical case the framework's name preserves; in the divisor-lattice instantiation, the tritone is the canonical non-regular witness |
+
+The structural identification is real; the formal identity is *not* claimed. Tymoczko's machinery is topology-of-arrows; ours is lattice-of-subobjects. A locale/topology bridge connects them in principle — for any topological space `X` and the topos `Sh(X)` of sheaves, `Sub_{Sh(X)}(1) ≅ Ω(X)` (the lattice of opens), and the fundamental group of `X` is recoverable from the étale homotopy of `Sh(X)`. Constructing this bridge for the music-anchor substrate is **deferred mathematical work**; this paper does not claim it.
+
+### 13.2 The four-Tonnetz / multiple-distinction-structure correspondence
+
+Tymoczko's §3 demonstrates that the same underlying graph supports four genuinely distinct groupoid spaces (harmonic, Cohnian, scalar, Weber) with four genuinely distinct vertex groups (trivial, `Z_3`, `Z_7`, `Z_{21}`). Theorists, he argues, systematically conflate them. The choice of which arrows count as equivalent is what fixes the space and therefore the comma structure.
+
+In FalseWork terms: this is the choice of distinction structure `(D, η, ι)` on a fixed underlying category `C`. Same `C`, four different `Δ`, four different `kernelImage Δ Y`, four different four-position partitions. The architecture predicts the position-dependence Tymoczko documents; his four-Tonnetz instance is, structurally, four worked Layer-D witnesses on the same substrate — though they are constructed in his topology-of-arrows formalism rather than ours.
+
+Concrete worked Lean instance of "same `C`, two distinct `Δ`, two distinct partitions on the same morphism set" remains absent from FalseWork as of this round. Tymoczko's four Tonnetzes are a candidate target if the framework moves to formalise position-dependence empirically rather than architecturally; flagged here, not committed.
+
+### 13.3 What Tymoczko has that FalseWork has not engaged with
+
+One observation in Tymoczko's §1 and §7 is *not* mirrored in FalseWork: the symmetry/interval duality. Symmetries act on elements; intervals act on attributes. Tymoczko explicitly notes the same duality recurs across domains: active/passive (physics), action by lifting / action by deck transformations (algebraic topology), left/right actions (group theory), perspectival/nonperspectival or de dicto/de se (philosophy of mind). He notes the parallel and declines to theorise it, writing that he knows of no prior description accessible to music theorists.
+
+This is a candidate cross-domain structural invariant that FalseWork is set up to host (the framework's appetite is precisely for things-that-show-up-across-domains-with-the-same-structure) but currently has *no slot for*. The four-position partition is about where a morphism's image lands relative to a kernel; the symmetry/interval duality is about how actions on elements relate to actions on attributes. The two are not the same shape. Recorded as an open research direction in `wolfram/cores/tymoczko-2026.wl` (the `CrossDomainDualitySignal` field); not committed framework content.
+
+### 13.4 Calibrating the triangulation
+
+The 2026 paper adds evidential weight to the music-kernel cluster at the *kernel-comma structural* level — a second independent formalism (groupoid topology) identifying the same comma the framework's Heyting formalism identifies. It does *not* add evidential weight to the *four-cell partition* test on specific works; that test (the Coltrane test of §6) remains deferred and is not what the 2026 paper does.
+
+The 2011 book remains the primary corroborator for the music-kernel cluster (via its three-way scale-space discrimination, which independently identifies the same major-third / diatonic / chromatic structure FalseWork derives from Coltrane). The 2026 paper supplements this with a structural-formalism corroboration at the kernel-comma level. Both are independent in the sense that Tymoczko's work is not informed by FalseWork.
+
+---
+
 ## References
 
 - Andreatta, M. (2018). From music to mathematics and backwards: introducing algebra, topology and category theory into computational musicology. In *Imagine Math 6: Mathematics and Culture*, Springer.
