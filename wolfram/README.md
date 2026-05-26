@@ -65,10 +65,18 @@ wolfram/
 │   ├── four-position-physics-v1.wl  Route B: finite physics-interpretable
 │   │                                  down-set-of-poset lattices (executed v1.1,
 │   │                                  all five candidates degenerate)
-│   └── four-position-physics-v2.wl  Route A computational checkpoint:
-│                                      Sub_cl(Sigma) enumeration on small finite
-│                                      context categories with non-trivial joins
-│                                      (Doering 2012 stagewise Heyting NOT)
+│   ├── four-position-physics-v2.wl  Route A computational checkpoint:
+│   │                                  Sub_cl(Sigma) enumeration on small finite
+│   │                                  context categories with non-trivial joins
+│   │                                  (Doering 2012 stagewise Heyting NOT).
+│   │                                  Candidates P1 (diamond) and P2 (V(C^3));
+│   │                                  both executed NON-VACUOUS 2026-05-26.
+│   └── four-position-physics-v2-p3.wl  Same machinery as v2, P3 (two-MASA;
+│                                      incompatible maximal contexts) split out
+│                                      with direct subobject construction and
+│                                      short-circuit witness search to fit the
+│                                      Wolfram Cloud cell budget. Executed
+│                                      NON-VACUOUS 2026-05-26.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions

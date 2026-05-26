@@ -1,8 +1,8 @@
 # Physics-Anchor Feasibility Memo
 
 **Author:** Chris Brink
-**Date:** May 2026 (initial scoping, Route B exploration + Route A architectural framing).
-**Status:** Route B exploration scripted (`wolfram/physics-anchor/four-position-physics-v1.wl`); Route A scoping recorded below. No physics Layer-L theorem kernel-checked in this round; no topos-level construction committed. Companion to the kernel-checked mathematical core (`preprints/four-position-partition/paper.md`) and to the music anchor (`preprints/four-position-partition/music-anchor/feasibility.md`), which together establish the framework's first formalised domain instance.
+**Date:** May 2026 (initial scoping, Route B exploration + Route A architectural framing + Route A computational checkpoint executed).
+**Status:** Route B exploration executed (`wolfram/physics-anchor/four-position-physics-v1.wl`, all five candidates DEGENERATE); Route A scoping recorded below; **Route A computational checkpoint executed** (`wolfram/physics-anchor/four-position-physics-v2.wl` for candidates P1 and P2, `wolfram/physics-anchor/four-position-physics-v2-p3.wl` for candidate P3, all three NON-VACUOUS). Structural finding (§4.5): non-vacuity in `Sub_cl(Σ)` is driven by context-category shape (presence of non-trivial joins or incompatible maximal contexts), not by quantum non-commutativity per se. No physics Layer-L theorem kernel-checked in this round; no topos-level construction committed. Companion to the kernel-checked mathematical core (`preprints/four-position-partition/paper.md`) and to the music anchor (`preprints/four-position-partition/music-anchor/feasibility.md`), which together establish the framework's first formalised domain instance.
 
 ---
 
@@ -14,8 +14,9 @@ The music anchor is the framework's first formalised domain instance. The cross-
 
 This memo does *not* commit to a physics Layer-L theorem. It records:
 
-- **Route B** (this round): a computational exploration of several small physics-interpretable lattices, asking whether any of them hosts a non-vacuous four-cell partition without further theoretical commitment.
-- **Route A** (architectural scoping): the most plausible physics-anchor target — topos quantum mechanics, in the Isham/Döring/Heunen/Landsman/Spitters lineage — with explicit identification of what would be required for a future Lean Layer-L theorem and what remains deferred.
+- **Route B** (this round): a computational exploration of several small physics-interpretable `O(P)`-style lattices, asking whether any of them hosts a non-vacuous four-cell partition without further theoretical commitment.
+- **Route A architectural scoping**: the most plausible physics-anchor target — topos quantum mechanics, in the Isham/Döring/Heunen/Landsman/Spitters lineage — with explicit identification of what would be required for a future Lean Layer-L theorem and what remains deferred.
+- **Route A computational checkpoint** (this round): a Wolfram-level enumeration of `Sub_{cl}(Σ)` over small finite context categories of the shape Bohrification produces (rather than the `O(P)`-style truncation Route B tested), with the stagewise Heyting structure of Døring 2012, asking whether the four-position partition is non-vacuous at the topos-quantum-mechanics level.
 
 The intended audience is mathematical physicists and quantum-foundations researchers; the test target is a Heunen/Landsman-style "Bohrification" construction or a comparable non-Boolean Heyting-algebra slice of a quantum-mechanical context category.
 
@@ -92,7 +93,7 @@ Combined with three established structural facts from the topos-quantum-mechanic
 
 — the open structural question for Route A reduces to: **for some small finite-dim `A`, does there exist a non-regular `S ∈ Sub_{cl}(Σ)` with `¬S ≠ ⊥`?** Døring 2012 does not state this as a theorem, but the formula-level structure (Prop. 2 above) suggests the answer is generically yes, and a small-`A` explicit computation can settle it directly.
 
-So the Route-B exhaustion narrows the search space rather than supplementing it: small finite truncations of the context category do not approximate the partition-relevant structure of the full topos. But the path through `Sub_{T(A)}(Σ)` for non-trivial finite-dim `A` remains tractable as a Wolfram-level computation — substantially more tractable than the prior round's "Route A is multi-month formalisation work" framing suggested. The next concrete step is §4.4 below.
+So the Route-B exhaustion narrows the search space rather than supplementing it: small finite truncations of the context category do not approximate the partition-relevant structure of the full topos. But the path through `Sub_{T(A)}(Σ)` for non-trivial finite-dim `A` remains tractable as a Wolfram-level computation — substantially more tractable than the prior round's "Route A is multi-month formalisation work" framing suggested. The next concrete step is the Route-A computational checkpoint in §4.4 below, which has now been executed; §4.5 records the structural finding it produced.
 
 ---
 
@@ -134,28 +135,60 @@ The structural correspondence is tight: both are presheaf topoi on small posets,
 
 **Achieved now (Route B artefact):** the finite-physics-lattice exploration described in §3, executed v1.1, all five candidates DEGENERATE, structural diagnosis recorded.
 
-**Deferred (Route A formal anchor) — now indicated rather than optional, and more tractable than previously framed:** a finite-dimensional Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)`. Provisionally targeted at `A = M_2(C) ⊕ C` (a minimal non-trivial non-commutative finite-dim C*-algebra) or `A = M_3(C)` (smallest dimension at which Kochen-Specker bites; richer `Sub_{cl}(Σ)` structure). See §4.4 for the explicit computational checkpoint.
+**Achieved now (Route A computational checkpoint):** the `Sub_{cl}(Σ)` enumeration described in §4.4, executed v2 + v2-p3, three of three tested context categories (P1, P2, P3) NON-VACUOUS, with the shape-driven structural finding in §4.5.
 
-### 4.4 Computational checkpoint for Route A
+**Deferred (Route A formal anchor):** a finite-dimensional Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)` *and* a kernel choice that witnesses quantum non-classicality specifically. Provisionally targeted at `A = M_2(C) ⊕ C` (a minimal non-trivial non-commutative finite-dim C*-algebra) or `A = M_3(C)` (smallest dimension at which Kochen-Specker bites; richer `Sub_{cl}(Σ)` structure). The §4.4 checkpoint established shape-driven non-vacuity; the deferred work is the kernel-choice question of §4.5.
 
-A focused Wolfram-level checkpoint is now scoped sharply. The question to settle is concrete:
+### 4.4 Computational checkpoint for Route A (executed)
 
-> **For some small finite-dim non-commutative C*-algebra `A`, does there exist `S ∈ Sub_{cl}(Σ_A)` such that `S` is non-regular (`¬¬S ≠ S`) and `¬S` is non-bottom (`¬S ≠ ⊥`)?**
+A focused Wolfram-level checkpoint was scoped, executed (2026-05-26), and committed: `wolfram/physics-anchor/four-position-physics-v2.wl` (candidates P1 and P2) and `wolfram/physics-anchor/four-position-physics-v2-p3.wl` (candidate P3, split out for tractability in the Wolfram Cloud environment). The question to settle was concrete:
 
-A positive answer establishes that the four-position partition has a non-vacuous instance at the topos-quantum-mechanics level and licenses a Wolfram-level Layer-L analog for physics, paralleling the music anchor's divisor-lattice slice. A negative answer (every non-regular `S` has `¬S = ⊥`) would be a strong structural finding, telling us that `Sub_{cl}(Σ)` has a global flatness that the framework does not currently anticipate.
+> **For some small finite-dim context category modelling a piece of `V(A)`, does there exist `S ∈ Sub_{cl}(Σ)` such that `S` is non-regular (`¬¬S ≠ S`) and `¬S` is non-bottom (`¬S ≠ ⊥`), and does some non-bottom kernel admit a non-vacuous four-cell partition?**
 
-Concrete computational plan:
+The script computes `Sub_{cl}(Σ)` exhaustively for each finite context category, applies Døring's Prop. 2 stagewise Heyting NOT pointwise, and tabulates the four cells at every non-bottom kernel.
 
-1. **Target algebras** (in order of increasing structural richness):
-   - `A_1 = M_2(C) ⊕ C` — minimal non-commutative finite-dim C*-algebra with non-trivial direct-sum structure. The context category `V(A_1)` has a finite discrete part (Boolean subalgebras of `C^3`) plus the `M_2(C)` part which carries the Bloch-sphere continuum of MASAs.
-   - `A_2 = M_2(C) ⊕ M_2(C)` — two-qubit-like; richer context structure.
-   - `A_3 = M_3(C)` — smallest matrix algebra at which Kochen-Specker theorem applies (`dim ≥ 3`). Context category is a continuum of MASAs over `C·1`; explicit computation requires discretising to a "stabilizer-type" sub-poset.
+**Candidate context categories tested.** Each is a finite poset of contexts with explicit Gelfand spectra and restriction maps; the underlying algebra is named for orientation but not used directly in the computation. The categories are chosen to exhibit increasingly rich structural features the Route-B candidates lacked:
 
-2. **Computational approach**: enumerate the discrete part of `V(A_i)`, build the presheaf `Σ` over this discrete context category, compute clopen subobjects pointwise, identify non-regular ones via Døring's Prop. 3 (`P_{S_V} = ⋀_{V' ∈ m_V} P_{S_{V'}}`), check Heyting complements via Døring's Prop. 2.
+| ID | Context category                            | Underlying algebra              | Structural feature                                                                                          |
+|----|---------------------------------------------|---------------------------------|-------------------------------------------------------------------------------------------------------------|
+| P1 | "Diamond" `V_0 < V_a, V_b < V_top`          | Abelian `C^4` (commutative)     | Smallest context category with `m_{V_top}` non-singleton (`{V_a, V_b}`). Smallest non-trivial join. |
+| P2 | "Triple-join" `V(C^3)` full sub-MASA poset  | Abelian `C^3` (commutative)     | `V_top` has three distinct minimal sub-contexts (`m_{V_top} = {V_1, V_2, V_3}`).                            |
+| P3 | "Two-MASA" `{V_0 < V_a, V_b < V_topAB}` and `{V_0 < V_c, V_d < V_topCD}` joined at `V_0`, with `V_topAB` and `V_topCD` incomparable | Models e.g. Z-MASA and X-MASA of `M_2(C)` viewed as abelian `C^2`'s with refinements | Smallest finite-dim context category encoding non-commutativity through INCOMPARABILITY of maximal contexts. |
 
-3. **Output**: either a small witness `(A_i, S)` exhibiting `S` non-regular with `¬S ≠ ⊥` (positive Route-A checkpoint; promotes physics anchor from "indicated" to "feasible"), or a structural finding that the discrete-context truncation of `Sub_{cl}(Σ)` inherits some not-yet-identified flatness (negative checkpoint; tells us either that the truncation is too coarse or that the framework needs modification at the topos level).
+**Results (executed v2 + v2-p3, 2026-05-26):**
 
-This is a Wolfram-level script comparable in scope to `four-position-physics-v1.wl` plus the new Heyting-stagewise machinery from Døring 2012. Estimate: a few days of focused work, not a multi-month formalisation. It is the natural successor to Route B and the right next step if physics is to be the second anchor. **Not committed in this round**, but scoped here so the prioritisation is concrete.
+| Candidate | `|Sub_cl(Σ)|` | non-reg | non-reg ∧ `¬s ≠ ⊥` | kernels with all 4 cells | verdict |
+|-----------|---------------|---------|--------------------|--------------------------|---------|
+| P1: diamond                                | 48   | 32   | 17   | 16 of 47    | **NON-VACUOUS** |
+| P2: triple-join (V(C³) sub-MASA poset)     | 96   | 32   | 25   | 24 of 95    | **NON-VACUOUS** |
+| P3: two-MASA (incompatible maximal contexts) | 2210 | 1954 | 1699 | ≥1 of 2209  | **NON-VACUOUS** |
+
+P3 used a short-circuit witness search (stops at first kernel with all four cells inhabited) rather than full kernel enumeration, so its count of all-4-cell kernels is reported as a lower bound. Sample witness kernels exhibit `(infrastructure, refusal, exploitation, distribution)` counts of `(4, 5, 1, 47)` for P1, `(8, 8, 1, 95)` for P2, and `(4, 235, 1, 2209)` for P3.
+
+The literal answer to the §4.4 question is therefore **positive on three of three tested candidates**. The four-position partition has non-vacuous instances at the topos-quantum-mechanics level, and a Wolfram-level Layer-L analog for physics is feasible at this register. The non-vacuity does not depend on any of the tested candidates' specific identifications with quantum algebras — it follows from the topos-internal structure of `Sub_{cl}(Σ)` for context categories of these shapes.
+
+### 4.5 Structural finding from §4.4: non-vacuity is shape-driven
+
+The numerical results sharpen the structural picture in a way worth recording explicitly before any narrative about "physics anchor established" gets attached to them.
+
+**The shape-driven finding.** Candidates P1 and P2 use *commutative* underlying algebras (`C^4` and `C^3`). Their non-vacuous verdicts therefore demonstrate that non-vacuity in `Sub_{cl}(Σ)` does *not* require the underlying C*-algebra `A` to be non-commutative. What it requires is the *context category* `V(A)` (or a finite truncation thereof) to have at least one context `V` with `m_V` non-singleton — i.e. with multiple distinct minimal sub-contexts. This is what the Route-B candidates uniformly lacked: A, B, C, E, F were all `O(P)`-style down-set lattices over posets with a single global minimum, where every non-bottom element down-closes onto the global minimum and the stagewise Heyting NOT degenerates pointwise to Boolean complementation.
+
+Candidate P3 adds the non-commutativity-flavoured feature of incomparable maximal contexts (the Z-MASA and X-MASA of `M_2(C)` have no common refinement). It is non-vacuous, but it is non-vacuous through the same mechanism: each maximal context `V_topAB`, `V_topCD` has `m_V` non-singleton. The witness kernel sits entirely on one MASA-half (the CD-side: `V_c = {0_c}, V_d = {0_d}`, all other components empty), with the AB-side and `V_top`-components empty on both sides — exactly the structure that would work on a single diamond. The CD-incomparability of `V_topAB` and `V_topCD` adds nothing to the witness; it just enlarges `|Sub_{cl}(Σ)|`.
+
+**What this means for the physics-anchor claim.** Non-vacuity of the four-position partition on `Sub_{cl}(Σ)` is therefore **necessary but not sufficient** for a claim that the framework witnesses quantum non-classicality. A claim of that strength would require additionally that the kernel `a`, or the distinction structure `D` generating it, is itself meaningfully physics-coupled — for example, that `a` is the daseinisation of a specific quantum projection corresponding to a Kochen-Specker-relevant proposition, and that `a`'s non-regularity comes out as a witness to a non-commutativity-driven feature rather than just to context-category shape.
+
+The Route-A computational checkpoint as scoped in the previous version of §4.4 did *not* commit to this stronger claim. It asked the necessary-condition question ("does any non-regular `S` with `¬S ≠ ⊥` exist?") and got a positive answer. The sufficient-condition question ("does the partition tell us something specifically quantum?") remains open and is the natural next step.
+
+**What this does and does not change in the architectural picture.**
+
+- It does *not* invalidate the layered L/T/D mapping in §4.2: `Sub_{cl}(Σ)` is genuinely the right Layer-L target, the four-position partition does apply non-vacuously, and the structural-correspondence story with the music anchor (presheaf topos on a small poset, non-Boolean subobject lattice, closure-operator distinction structures) holds.
+- It does *not* change the topos-quantum-mechanics literature's status as corroborator: HLS 2009 + Døring 2012 + the Bohrification programme remain the established machinery on which a physics Layer-L theorem would build.
+- It *does* mean that the next round of physics work has to confront the question of *which kernel* in `Sub_{cl}(Σ)` carries the physics, not merely *that some kernel* yields a non-vacuous partition. The four-position cells are well-defined regardless of kernel choice; the question is which kernel makes the cells *do something specifically quantum* rather than purely structural.
+- It *does* mean that the present round's positive verdict promotes the physics anchor from "indicated path with unsettled computational tractability" to "feasible at the shape-driven level, with the question of physics-specific kernel choice as the next gating step." The strength of the promotion is real but more measured than a naive reading of "three of three NON-VACUOUS" would suggest.
+
+The §6 status table below reflects this calibrated reading.
+
+**Open question for the next round.** What is the natural kernel `a ∈ Sub_{cl}(Σ_A)` for a non-commutative `A` such that `a`'s non-regularity comes out as a witness to non-commutativity, not to shape? Candidates worth investigating include (a) the daseinisation `δ(P)` of a projection `P ∈ A` that is itself non-classical (e.g. a Kochen-Specker projection in `M_3(C)` or larger), where Døring 2012 Prop. 5 says `δ(P)` is tight and therefore Heyting-regular but its complement structure may carry the relevant information; (b) the "outer presheaf" `O_P` complement-pair `(δ(P), δ(¬P))` whose joint behaviour in `Sub_{cl}(Σ)` Døring discusses; (c) a kernel determined by a distinction structure on `T(A)` rather than by a single Sub_cl element. This is research scope for a successor memo, not in scope here.
 
 ---
 
@@ -202,26 +235,27 @@ These are recorded as alternative anchor candidates, not committed targets. The 
 | Layer | Claim                                                          | Status                                                          |
 |-------|----------------------------------------------------------------|-----------------------------------------------------------------|
 | **Route B (this round)** | Finite physics-interpretable down-set-of-poset lattices either host or do not host a non-vacuous four-cell partition; structural fact one way or the other | **Executed v1.1 2026-05-25; all five tested candidates DEGENERATE.** Structural diagnosis in §3.2: the framework's machinery requires a non-regular element with non-bottom Heyting complement, which `O(P)`-style lattices over posets with a global minimum cannot supply. |
-| **Route A architectural scoping** | The Bohrification (Heunen-Landsman-Spitters / Döring-Isham) programme is the physics-side architectural target; the layered L/T/D framework maps onto it cleanly | **Recorded in this memo + structural core entry committed** (`wolfram/cores/heunen-landsman-spitters-2009.wl`). Route B finding upgrades this from "most plausible target" to "indicated path" (§3.3, §4.3). Importantly, `Sub_{cl}(Σ)` is not an `O(P)`-style construction and so does not inherit the Route-B obstacle. |
-| **Route A computational checkpoint (next step)** | For some small finite-dim `A`, does `Sub_{cl}(Σ)` contain a non-regular `S` with `¬S ≠ ⊥`? | **Scoped in §4.4, not committed in this round.** Concrete Wolfram-level script targeting `A = M_2(C) ⊕ C` or `M_3(C)`. Estimate: a few days. Positive answer promotes physics anchor from "indicated" to "feasible." |
-| **Physics Layer L (theorem)** | A finite-dim Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)` | **Deferred.** Provisionally targeted at `A = M_2(C) ⊕ C`, `M_2(C) ⊕ M_2(C)`, or `M_3(C)`; not in scope for this round. The §4.4 computational checkpoint is the gating prerequisite. |
+| **Route A architectural scoping** | The Bohrification (Heunen-Landsman-Spitters / Döring-Isham) programme is the physics-side architectural target; the layered L/T/D framework maps onto it cleanly | **Recorded in this memo + structural core entry committed** (`wolfram/cores/heunen-landsman-spitters-2009.wl`). Route B finding upgraded this from "most plausible target" to "indicated path" (§3.3, §4.3); Route A checkpoint result (next row) upgrades it further to "feasible at the shape-driven level". `Sub_{cl}(Σ)` is not an `O(P)`-style construction and does not inherit the Route-B obstacle. |
+| **Route A computational checkpoint (this round)** | For some small finite-dim context category, does `Sub_{cl}(Σ)` contain a non-regular `S` with `¬S ≠ ⊥`, and does some kernel admit a non-vacuous four-cell partition? | **Executed v2 + v2-p3 2026-05-26; all three tested candidates (P1 diamond, P2 V(C³), P3 two-MASA) NON-VACUOUS.** Numerical results recorded in §4.4. Structural finding (§4.5): non-vacuity is driven by context-category shape (non-trivial joins; incomparable maximal contexts), *not* by quantum non-commutativity of the underlying algebra — P1 and P2 use commutative `C^4` and `C^3`. Physics-anchor promotion is "feasible at shape-driven level"; the kernel-choice question (does some specific kernel witness quantum non-classicality rather than mere shape?) is the next gating step. |
+| **Physics Layer L (theorem)** | A finite-dim Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)` *and* a kernel choice that witnesses quantum non-classicality | **Deferred.** Provisionally targeted at `A = M_2(C) ⊕ C`, `M_2(C) ⊕ M_2(C)`, or `M_3(C)` with the kernel chosen as a daseinisation of a Kochen-Specker-relevant projection. The shape-driven non-vacuity is now established (§4.4); the gating step is now the kernel-choice question (§4.5 open question) rather than the existence question. |
 | **Physics Layer T (realisation)** | The Bohr topos `T(A)` realises the lattice slice as `Sub_{T(A)}(Σ)` | **Cited from Bohrification literature** (Heunen-Landsman-Spitters 2009; Döring-Isham 2007). |
-| **Physics Layer D (distinction)** | A distinction structure on `T(A)` lifting the lattice slice to a Theorem-5.1 instance | **Architectural template recorded** (§4.2); concrete construction deferred. |
+| **Physics Layer D (distinction)** | A distinction structure on `T(A)` lifting the lattice slice to a Theorem-5.1 instance | **Architectural template recorded** (§4.2); concrete construction deferred. The §4.5 open question (which kernel witnesses quantum non-classicality?) is the structural prerequisite for picking the right distinction structure. |
 
 ---
 
 ## 7. Scope honesty
 
-This memo is exploratory at the same register as the music anchor's pre-Path-B status. It records *that* a physics anchor is the framework's next-priority extension target, *that* the topos-quantum-mechanics lineage is the most plausible architectural locus, and *that* a small computational exploration has been scripted to test whether the apparatus transfers to small finite physics-interpretable lattices.
+This memo records: *that* a physics anchor is the framework's next-priority extension target; *that* the topos-quantum-mechanics lineage is the architectural locus; *that* small finite `O(P)`-style physics-interpretable lattices uniformly fail to host a non-vacuous partition (Route B); and *that* small finite context categories with non-trivial joins do host non-vacuous partitions in `Sub_{cl}(Σ)` (Route A checkpoint, §4.4), with the structural caveat that this non-vacuity is shape-driven rather than non-commutativity-driven (§4.5).
 
 It does *not* claim:
 
 - a physics Layer-L theorem (kernel-checked or otherwise);
 - that the Bohrification programme is itself novel or contributed by FalseWork (it is not; it is forty-plus years of joint work by the topos quantum mechanics community);
 - that the four-position-partition readings of cells in `Sub_{T(A)}(Σ)` have been validated against any physics-foundations literature (they have not);
-- that any specific physics test analogous to the music anchor's Coltrane test is currently feasible.
+- that any specific physics test analogous to the music anchor's Coltrane test is currently feasible;
+- that the §4.4 non-vacuity results constitute a witness to quantum non-classicality. They are a *necessary-condition* result for any future physics anchor; the *sufficient-condition* question — whether some kernel in `Sub_{cl}(Σ)` makes the partition track quantum non-classicality rather than mere context-category shape — is the §4.5 open question and is research scope for the next round.
 
-The single concrete commitment is the Wolfram exploration script and the structural core entry. The rest is scoping with explicit deferral.
+The concrete commitments this round are the Wolfram exploration scripts (`v1.wl`, `v2.wl`, `v2-p3.wl`), the structural core entry (`heunen-landsman-spitters-2009.wl`), and this memo's scoping. The rest is scoping with explicit deferral.
 
 ---
 
