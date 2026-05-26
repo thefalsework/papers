@@ -51,9 +51,17 @@ wolfram/
 ├── cores/
 │   ├── tymoczko.wl            Tymoczko, A Geometry of Music (2011) — KernelTheFifth
 │   ├── tymoczko-2026.wl       Tymoczko, The Concept of Musical Space (2026 JMT) — KernelTheFifth (groupoid/π₁ formalism)
+│   ├── heunen-landsman-spitters-2009.wl
+│   │                          Heunen-Landsman-Spitters, A Topos for Algebraic Quantum Theory (2009 CMP) —
+│   │                          KernelTheWaveFunction (Bohrification / topos quantum mechanics; physics-anchor
+│   │                          corroborator; KernelTheWaveFunction stubbed locally pending promotion to kernels.wl)
 │   ├── cutting.wl             Cutting, F1 film primitives — KernelTheCut
 │   ├── nks.wl                 Wolfram, A New Kind of Science — KernelTheConditionalBranch
 │   └── methodology.wl         FalseWork methodology self-core — KernelOfMethodology
+├── music-anchor/              divisor-lattice Layer-L/T/D computational companion to
+│                              preprints/four-position-partition/music-anchor/feasibility.md
+├── physics-anchor/            Route-B finite-physics-lattice exploration companion to
+│                              preprints/four-position-partition/physics-anchor/feasibility.md
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions

@@ -484,6 +484,20 @@ This music anchor uses elementary group-theoretic structure (subgroups of `Z/12`
 
 The Coltrane classification of §6 remains deferred. With Layer L kernel-checked, the work needed for the Coltrane test is: (i) a Layer-D witness, (ii) a defended pitch-class encoding of each work, (iii) classification under the resulting distinction structure. None of these are blocking; all are downstream of the work in this round.
 
+### 12.9 Deferred research directions (music side)
+
+With the music anchor in its current state — Layer L kernel-checked, Layer T2 computationally verified, Layer D candidate space finitely enumerated, two independent corroborators registered — the framework's attention is now shifting to the **physics anchor** (see `preprints/four-position-partition/physics-anchor/feasibility.md`). The marginal returns on further music work are lower than the returns on extending the framework to a second formalised domain, which is what the cross-domain thesis of Paper 1 §2.1 requires.
+
+The following music-side directions are flagged as **deferred research**, not currently in scope, but on record so the deferral is visible:
+
+- **Four-Tonnetz instance.** Tymoczko 2026 §3 identifies four genuinely distinct groupoid spaces (harmonic, Cohnian, scalar, Weber) on the same underlying graph, with four distinct vertex groups (trivial, `Z_3`, `Z_7`, `Z_{21}`). A computational instantiation of these four spaces, with their vertex groups verified and their partitions compared to the FalseWork four-cell partition at different kernels, would be the most direct empirical convergence test between Tymoczko's groupoid formalism and FalseWork's Heyting formalism. Deferred to a future round; would need either direct access to the 2026 paper text or careful reconstruction from secondary sources for the scalar and Weber Tonnetzes specifically.
+- **Coltrane test (§6).** The empirical three-field classification of *A Love Supreme*, *Giant Steps*, and *Interstellar Space* against the framework's four-position partition. Blocked on a Layer-D witness (a specific topos-level idempotent monad lifting one of the four enumerated tritone-closing Moore families); also requires defended pitch-class encodings of each work. Deferred.
+- **Locale bridge between Tymoczko's groupoid formalism and FalseWork's Heyting formalism.** §13.1 records that for `Sh(X)` on a topological space `X`, `Sub_{Sh(X)}(1) ≅ Ω(X)` and `π_1(X)` is recoverable from the étale homotopy of `Sh(X)`. Constructing this bridge explicitly for the music-anchor substrate would convert the §13 structural identification from "two formalisms converge on the same load-bearing phenomenon" to "two formalisms are functorially related." Open research direction; not in scope.
+- **Symmetry/interval duality (§13.3).** Tymoczko's §1 and §7 observation that symmetries act on elements while intervals act on attributes — a duality that recurs across domains. Recorded as an open candidate cross-domain invariant in `wolfram/cores/tymoczko-2026.wl` (`CrossDomainDualitySignal`); not currently engaged by the four-position-partition machinery. Open direction.
+- **Topos-level Layer-D witness on `Sh(L)` or `Set^{P^op}`.** The Lean-level lift constructor `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad` is in place; the four lattice-level slices are enumerated; what remains is to lift one of them (probably `{2, 12}`, the minimal tritone-closing Moore family) to a full topos-level idempotent monad and verify the lift. Routine but not done in this round.
+
+These five directions are listed here in roughly increasing order of effort. None is required for the framework's central claims; each would strengthen the music anchor specifically. The framework's path forward prioritises the physics anchor over any of them.
+
 ---
 
 ## 13. Independent formalism: Tymoczko (2026) and the topology-vs-Heyting correspondence
