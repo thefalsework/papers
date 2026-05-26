@@ -71,12 +71,23 @@ wolfram/
 │   │                                  (Doering 2012 stagewise Heyting NOT).
 │   │                                  Candidates P1 (diamond) and P2 (V(C^3));
 │   │                                  both executed NON-VACUOUS 2026-05-26.
-│   └── four-position-physics-v2-p3.wl  Same machinery as v2, P3 (two-MASA;
-│                                      incompatible maximal contexts) split out
-│                                      with direct subobject construction and
-│                                      short-circuit witness search to fit the
-│                                      Wolfram Cloud cell budget. Executed
-│                                      NON-VACUOUS 2026-05-26.
+│   ├── four-position-physics-v2-p3.wl  Same machinery as v2, P3 (two-MASA;
+│   │                                  incompatible maximal contexts) split out
+│   │                                  with direct subobject construction and
+│   │                                  short-circuit witness search to fit the
+│   │                                  Wolfram Cloud cell budget. Executed
+│   │                                  NON-VACUOUS 2026-05-26.
+│   └── four-position-physics-v3.wl  Route A v3 Bohrification-native kernel
+│                                      candidates: discretised V(M_2(C) (+) C)
+│                                      vs. poset-isomorphic V_d(C^7) classical
+│                                      control. Tests 7 kernel candidates
+│                                      (sec. 4.1-4.6, 4.8 of v3-scope.md) plus
+│                                      exhaustive non-regular sweep (sec. 4.7).
+│                                      Sanity-check + cell-cardinality-baseline
+│                                      run; dimensionality caveat (M_2(C) has
+│                                      dim < KS threshold) means negative or
+│                                      mixed result expected on cell-non-
+│                                      emptiness criterion. To be executed.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions

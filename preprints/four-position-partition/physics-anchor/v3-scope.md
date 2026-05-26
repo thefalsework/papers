@@ -84,6 +84,21 @@ The crucial difference: in `C^7`, the maximal contexts `V'_top_Z, V'_top_X, V'_t
 
 This is fine for the test. The goal is to compare `Sub_cl(Σ)` over two *poset-isomorphic* context categories where one carries non-commutativity in the underlying algebra and the other does not. Both `Sub_cl(Σ)` lattices will be of similar size; differences must come from how the spectra/restriction-maps interact with daseinisation-derived kernels, not from poset shape.
 
+### 3.4 Dimensionality caveat (read before running)
+
+`M_2(C)` has dimension 2, which is below the Kochen-Specker threshold (`dim ≥ 3`). The spectral presheaf `Σ_{M_2(C)}` has global sections; the KS obstruction does not bite for `M_2(C)` alone. Adding the `C` summand to give `M_2(C) ⊕ C` raises the total dimension to 5, but the *non-commutative part* remains `M_2(C)` and the KS-relevant obstruction does not appear in `V(M_2(C) ⊕ C)`.
+
+Practical implication: any v3 candidate whose intended signal is "the Kochen-Specker gap manifests as a non-tight subobject in `Sub_cl(Σ)`" is *structurally pre-disposed to a negative or mixed result* on the `M_2(C) ⊕ C` discretisation, because the gap that would carry the signal doesn't exist at this dimension.
+
+What this means for the v3 test:
+- A *negative result* on `M_2(C) ⊕ C` is the expected outcome for the cell-non-emptiness criterion, and would be informative about the dimensionality threshold rather than about the framework's machinery.
+- A *positive result* would be a surprise and would need careful diagnostic (is the signal coming from non-commutativity, from spectrum-size arithmetic at the off-direction contexts, or from a discretisation artefact?).
+- A *mixed result* (cell cardinalities differ but cell non-emptiness doesn't) is also expected; it tells us the framework's machinery is sensitive to algebra-structural divergences at the daseinisation-lift level even when the categorical structure of the partition is invariant.
+
+The right next move after a negative or mixed v3 result is to scale to `M_3(C)` (smallest matrix algebra carrying KS). The v3 script architecture (§6) is written to be parameterised over the algebra so the `M_3(C)` extension is a swap of the projection-arithmetic primitives plus a richer discretisation of `V(M_3(C))`, not a rewrite. v3 on `M_2(C) ⊕ C` is therefore best understood as a *sanity-check and instrumentation* run: it confirms the script architecture works end-to-end, establishes the cell-cardinality baseline, and produces a target for v4 (or v3.1) on `M_3(C)`.
+
+A pre-script hand calculation in the conversation that produced this scope walked through §4.1 through §4.6 on the 8-context discretisation and confirmed: §4.1 (`δ(P)`), §4.3 (`δ(P) ∧ δ(¬P)`), §4.4 (anti-daseinisation) are all tight and therefore Heyting-regular (Exploitation = ∅); §4.2 (`δ(P) ∨ δ(¬P)`) = ⊤ (trivial kernel); §4.5 (`δ(P) ∧ ¬δ(¬P)`) collapses to the same component pattern `{V_0, V_Z}` in both quantum and classical (no cell-non-emptiness divergence); §4.6 (`¬(δ(P) ∨ δ(¬P)) = ⊥`) is bottom and the partition is trivial. So the cell-non-emptiness criterion is *expected* to come back negative on candidates 4.1–4.6 in this discretisation, with cell cardinalities expected to differ between quantum and classical at §4.1 and §4.3. The §4.7 exhaustive sweep and the §4.8 Heyting-implication kernel are the candidates with unknown pre-script verdicts; the script's value is partly in running these and partly in confirming the predictions on §4.1–§4.6.
+
 ### 3.3 Quantum projection and its classical analogue
 
 In `M_2(C) ⊕ C`: take `P := (P_Z, 0)` as the "quantum" projection. `P` lives in `V_Z` and `V_top_Z`; it does *not* lie in any other context of the discretisation (because `P_Z` does not commute with `P_X` or `P_Y`).
@@ -152,6 +167,16 @@ As a backstop: enumerate *all* non-regular subobjects of `Sub_cl(Σ)` for both t
 
 This is what the script ends with if 4.1–4.6 are all inconclusive. It's an "exploratory data analysis" pass — if non-trivial differences exist, they'll show up in some kernel; what we learn is which kernels carry the differences, even if we can't name them in advance with a Bohrification recipe.
 
+### 4.8 Heyting implication kernel
+
+`a := δ(P) → δ(¬P)` (Heyting implication in `Sub_cl(Σ)`, computed stagewise via the standard formula `(s → t)_V = ⋂_{V' ≥ V} {λ ∈ Σ(V) : λ|_{V'} ∈ s_{V'} ⇒ λ|_{V'} ∈ t_{V'}}`, or equivalently as the largest `x` with `x ∧ δ(P) ≤ δ(¬P)`).
+
+The Heyting implication is less directly studied in topos QM than the daseinisation pair itself, but it's a natural construct because `δ(P) → δ(¬P)` reads as "if `P` is definite then `¬P` is definite" — which is *vacuously true* classically (a state in which `P = 1` is one in which `¬P = 0`, so `¬P` is also definite, namely with value 0) but carries the Kochen-Specker gap quantum-mechanically: the implication can fail at contexts where neither `P` nor `¬P` has a definite-projection value.
+
+Pre-script status: not hand-computed in the scoping conversation. The script computes it on both sides; the candidate is included precisely because its pre-script verdict is uncertain.
+
+This candidate is included on the user's explicit request after reviewing the §4.1–§4.7 hand-calculation outcomes.
+
 ---
 
 ## 5. Comparison criteria
@@ -188,7 +213,7 @@ A *third outcome* worth flagging: cell-cardinality differs systematically across
 
 6. **Subobject enumeration** for both sides via the v2-style approach (direct construction is feasible at 8 contexts).
 
-7. **Kernel candidate library**: §4.1–§4.6, computed for both sides.
+7. **Kernel candidate library**: §4.1–§4.6 and §4.8, computed for both sides.
 
 8. **Comparison tabulation**: side-by-side four-cell counts for each kernel candidate across the two sides.
 
@@ -229,12 +254,12 @@ Risks:
 
 ---
 
-## 9. Decision-gate before running v3
+## 9. Decision-gate before running v3 (confirmed)
 
-Before any code: confirm that:
-1. The 8-context discretisation §3.1 is the right one. Alternative: include more directions (4 or 5 stabilizer MASAs of `M_2(C)`, not just 3). Cost: enumeration grows; benefit: more chances for a signal to surface. Default in this memo is 3 directions for tractability.
-2. The classical control §3.2 is poset-isomorphic to §3.1. Verify Hasse equality explicitly before running the test, otherwise the comparison is corrupted.
-3. The §4 kernel candidates are exhaustive enough. Suggested addition for completeness: `δ(P) → δ(¬P)` (Heyting implication) as a kernel; this is a less-studied construct but might bring out non-commutativity in ways `δ(P) ∨ δ(¬P)` doesn't.
+User confirmation 2026-05-26:
+1. The 8-context discretisation §3.1 is approved (3 stabilizer directions). The dimensionality caveat (§3.4) means a negative or mixed result on cell-non-emptiness is expected; v3 is best understood as a sanity-check + cell-cardinality-baseline + instrumentation run, with v4 targeting `M_3(C)` to follow.
+2. The classical control §3.2 is poset-isomorphic to §3.1; the script checks Hasse equality explicitly before running the comparison.
+3. The §4 kernel candidates now include §4.8 (Heyting implication `δ(P) → δ(¬P)`) on user's explicit request. Final list: §4.1 (single daseinisation), §4.2 (join), §4.3 (meet), §4.4 (anti-daseinisation), §4.5 (`δ(P) ∧ ¬δ(¬P)`), §4.6 (KS gap), §4.7 (exhaustive sweep), §4.8 (Heyting implication).
 
 The v3 memo is at the same exploratory register as the pre-v1.wl Route B scoping was. The next concrete step after this decision-gate is to write the script in §6, run it, fold results into `physics-anchor/feasibility.md`.
 
