@@ -397,6 +397,8 @@ The four cells of Definition 4.1 of `paper.md`, lifted to the lattice level via 
 
 All four cells are inhabited. Excluding the bottom element, every non-bottom element of `L` lands in exactly one of the four cells. The partition is exhaustive and disjoint, as the lattice-level theorem `FalseWork.Lattice.lattice_four_position_partition` (the Heyting-algebra core of Theorem 5.1) requires.
 
+**Uniqueness (computational).** An exhaustive enumeration over the six possible kernel choices `a ∈ L` (run as §5 of `wolfram/music-anchor/layer-t-d-checks.wl`) confirms that the tritone is the *unique* kernel at which all four cells are non-vacuously inhabited. The other non-regular element — the whole-tone hexachord `<2>` — has `¬<2> = {0} = ⊥`, which collapses both Refusal and Distribution to the empty set, leaving only Infrastructure and Exploitation populated. The four regular elements (`{0}`, `<4>`, `<3>`, `Z/12`) each yield even more degenerate partitions (some give *only* Refusal, others *only* Infrastructure). So the lattice empirically singles out the tritone as the kernel choice that fully exercises the partition machinery. This is a structural fact about the divisor lattice of 12, not a stipulated feature of the anchor.
+
 ### 12.4 Why this is a non-vacuous music witness
 
 Each subgroup of `Z/12` is a transposition-symmetric pitch-class set with established musical significance:
@@ -432,30 +434,49 @@ The divisor lattice of 12 (= subgroup lattice of `Z/12`) **does not** arise as `
 
 — "the augmented triad is incomparable with the chain `tritone ⊂ diminished 7th`." Then `Set^{Pᵒᵖ}` is an elementary topos with `Sub_{Set^{Pᵒᵖ}}(1) ≅ L`. T2 has *some* music-theoretic readability: the underlying category is a 3-object poset of basic symmetric pitch-class types under inclusion.
 
-Both T1 and T2 are existence proofs by general topos theory. Neither is constructed in Lean in this round; they are cited as standard. The Layer-L theorem is what is kernel-checked.
+T1 and T2 are existence proofs by general topos theory. T1 is not constructed in this round (would require localic topos infrastructure). T2's Birkhoff isomorphism `O(P) ≅ L` is **computationally verified** in §2–§3 of `wolfram/music-anchor/layer-t-d-checks.wl`: the script builds `P = {2, 3, 4}` with `2 < 4`, enumerates its six down-closed subsets, and verifies bijection, meet (= intersection), join (= union), and Heyting NOT all match the divisor-lattice operations. The Layer-L theorem is what is kernel-checked in Lean; T2's lattice slice is what is empirically certified in Wolfram.
 
-### 12.6 Distinction structure (Layer D): construction template
+### 12.6 Distinction structure (Layer D): enumerated candidate slices
 
 To lift Layer L to a full Theorem-5.1 instance, we need a non-trivial distinction structure `(D, η, ι)` on the chosen `T` such that `Im(η_Y)` lands at a non-regular element of `L` (so Exploitation is non-empty).
 
 By Remark 5.5 of `paper.md` and the kernel-checked constructor `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad`, it suffices to exhibit any idempotent monad on `T` with the right kernel image.
 
-For `T = Sh(L)` or `T = Set^{Pᵒᵖ}`, idempotent monads correspond to closure operators on `L`. Closure operators on `L` are abundant; the relevant ones for our purposes are those whose value at the top is some specific non-regular element of `L`. Two natural candidates:
+For `T = Sh(L)` or `T = Set^{Pᵒᵖ}`, idempotent monads on `T` correspond to closure operators on `L`, which in turn correspond bijectively to *Moore families* on `L` (subsets `F ⊆ L` containing the top and closed under meet; the closure operator's fixed-point set is exactly `F`). For our 6-element `L`, this is small enough to enumerate by brute force.
 
-- **`c(d) = lcm(d, 2)`** (closure to a multiple of the tritone order). Closure of the top is 12 (so the kernel at the top is 12 = full chromatic). Not the witness we want.
-- **`c(d) = d ⊓ <a chosen filter element>`** — a localization to the filter above some element. Localization to the filter above `<6>` (the tritone) gives an idempotent comonad rather than monad in some conventions; the dual reflection onto the principal ideal below `<6>` gives the monad we want, with kernel image = `<6>` at the top.
+**Enumeration (§6 of `layer-t-d-checks.wl`).** The divisor lattice of 12 admits exactly **23 distinct closure operators**, distributed by the smallest non-trivial closed element ("closure of bottom") as follows:
 
-Concrete construction and verification is deferred. The point is that the construction template exists and is standardized, and the kernel-checked lift constructor is already in place.
+| min element | musical reading        | # of Moore families |
+|-------------|------------------------|---------------------|
+| 1           | trivial `{0}`          | 14                  |
+| 2           | tritone `<6>`          | **4**               |
+| 3           | augmented triad `<4>`  | 2                   |
+| 4           | diminished 7th `<3>`   | 1                   |
+| 6           | whole-tone hexachord `<2>` | **1**           |
+| 12          | full chromatic `Z/12`  | 1                   |
+
+The 14 with min = 1 are "degenerate" (they include the bottom in the closed set, so the closure operator does not restrict the lattice meaningfully at the bottom). The remaining 9 are the *substantive* Layer-D candidate space. Of these, the 5 with a *non-regular* closure-of-bottom (4 tritone-closing + 1 whole-tone-closing) are the candidates whose corresponding distinction structure would put the kernel image at a non-regular element, thereby supporting a non-empty Exploitation cell.
+
+**The four tritone-closing candidates** (Moore families with min element = 2):
+
+1. `{2, 12}` — minimal: the kernel image is the tritone, and the only other closed element is the top.
+2. `{2, 4, 12}` — the kernel image plus the closure-residue element (diminished 7th).
+3. `{2, 6, 12}` — the kernel image plus the whole-tone hexachord.
+4. `{2, 4, 6, 12}` — all four non-trivial elements above the tritone are closed.
+
+Each of these is the *lattice-level slice* of a candidate Layer-D witness. To upgrade a lattice-level slice to a full distinction structure on `T`, one needs to (i) choose `T` (either `Sh(L)` or `Set^{Pᵒᵖ}`), (ii) lift the closure operator to an idempotent monad on `T` (standard topos-theoretic construction), (iii) verify the lift via `DistinctionStructure.ofIdempotentMonad`. Steps (i)–(iii) are routine but not done in this round. The point is that the candidate space is **finite, enumerated, and small** — a concrete list of 5 lattice shapes, not an abstract template.
+
+The single whole-tone-closing candidate `{6, 12}` exists but is less informative as a witness: at kernel `<2>` (the whole-tone hexachord) the lattice-level partition is partially degenerate (Refusal and Distribution both collapse; see §12.3 uniqueness paragraph). The tritone-closing candidates are the ones to pursue.
 
 ### 12.7 Status summary
 
 | Layer | Claim                                              | Status                          |
 |-------|----------------------------------------------------|---------------------------------|
-| L     | Divisor lattice of 12 is non-Boolean Heyting; four-position partition non-vacuous at tritone kernel | **Kernel-checked in Lean.**  `FalseWork.Lattice.lattice_four_position_partition` (abstract) and `FalseWork.Lattice.Examples.Div12.music_anchor_witness` (concrete). Audit lines in `Examples/HeytingTypeInstance.lean`. |
-| T     | The lattice arises as `Sub_T(1)` for at least two elementary topoi (T1 = `Sh(L)`, T2 = `Set^{Pᵒᵖ}`) | **Cited from general topos theory.** Not constructed in Lean in this round; would require either localic topos infrastructure or finite-poset presheaf infrastructure. |
-| D     | A concrete distinction structure on T with the right kernel image lifts Layer L to Theorem 5.1 | **Construction template + kernel-checked lift constructor.** `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad` is in place; the specific idempotent-monad witness is deferred. |
+| L     | Divisor lattice of 12 is non-Boolean Heyting; four-position partition non-vacuous at tritone kernel; tritone is the *unique* fully non-vacuous kernel choice | **Kernel-checked in Lean** (`FalseWork.Lattice.lattice_four_position_partition` abstract, `FalseWork.Lattice.Examples.Div12.music_anchor_witness` concrete; audit lines in `Examples/HeytingTypeInstance.lean`). **Uniqueness verified computationally** in §5 of `wolfram/music-anchor/layer-t-d-checks.wl`. |
+| T     | The lattice arises as `Sub_T(1)` for at least two elementary topoi (T1 = `Sh(L)`, T2 = `Set^{Pᵒᵖ}`) | **T1 cited from general topos theory.** **T2's lattice slice computationally verified** in §2–§3 of `layer-t-d-checks.wl` (Birkhoff isomorphism: bijection, meet, join, Heyting NOT all match). Neither T1 nor T2 is constructed in Lean in this round. |
+| D     | A concrete distinction structure on T with the right kernel image lifts Layer L to Theorem 5.1 | **Candidate space enumerated, finite, small.** 23 closure operators total on `L`; 5 substantive ones (4 tritone-closing + 1 whole-tone-closing); kernel-checked lift constructor `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad` already in place. The topos-level lift of any of the 4 tritone-closing candidates to a full distinction structure is deferred. |
 
-This is the rigorous slot: Layer L kernel-checked, Layer T standard topos theory, Layer D template-with-deferred-witness. The Wolfram script `wolfram/music-anchor/four-position-music-v3-path-b.wl` is the computational companion to Layer L, verifying the same lattice facts that the Lean kernel-checks.
+This is the rigorous slot: Layer L kernel-checked, Layer T's lattice slice computationally verified for T2 and cited for T1, Layer D's candidate space finitely enumerated with the lift constructor pre-installed. The Wolfram scripts `four-position-music-v3-path-b.wl` (per-element comma table) and `layer-t-d-checks.wl` (Layer T Birkhoff verification, per-kernel exhaustive tabulation, Layer D Moore-family enumeration) together cover the computational companion story end-to-end.
 
 ### 12.8 Scope honesty
 
