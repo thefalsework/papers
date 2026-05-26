@@ -66,23 +66,33 @@ No surveyed small finite physics-interpretable down-set-of-poset lattice hosts a
 
 ### 3.2 Structural diagnosis
 
-The degeneracy across all five candidates reduces to a single structural fact: **none of the surveyed lattices has a non-regular element whose Heyting complement is itself non-regular**. The music divisor lattice does have this property at the tritone — `a = 2` is non-regular (`¬¬2 = 4 ≠ 2`), and `¬a = 3` is itself non-regular (`¬¬3 = 2 ≠ 3`) — and that paired non-regularity is what allows all four cells to be inhabited at the same kernel. The five physics candidates lack the paired property in two distinct modes:
+The degeneracy across all five candidates reduces to a single structural fact: **none of the surveyed lattices contains a non-regular element whose Heyting complement is non-bottom**. The music divisor lattice does have this property at the tritone — `a = 2` is non-regular (`¬¬2 = ¬3 = 4 ≠ 2`), and its Heyting complement `¬a = 3` is non-trivial (`3 ≠ 1 = ⊥`); the elements `6` and `12` straddle `a` and `¬a` non-trivially, so Distribution fills as well. The five physics candidates lack this property in two distinct modes:
 
-- **A, C, E: common-minimum obstacle.** When the underlying poset has a single global minimum, every non-empty down-set in `O(P)` contains that minimum, so every non-trivial element has `¬ = ⊥`. Refusal and Distribution collapse simultaneously at every kernel; max cells = 2. This is the same obstacle the music exploration met in v1 and v2 (diatonic-closure-over-`Z/12`) before pivoting to the divisor-lattice slice in v3-path-b: down-set-of-poset constructions with a global bottom are not the right form for the partition.
+- **A, C, E: common-minimum obstacle.** When the underlying poset has a single global minimum, every non-empty down-set in `O(P)` contains that minimum, so every non-trivial element has Heyting complement `⊥`. Refusal and Distribution collapse simultaneously at every kernel; max cells = 2. This is the same obstacle the music exploration met in v1 and v2 (diatonic-closure-over-`Z/12`) before pivoting to the divisor-lattice slice in v3-path-b: down-set-of-poset constructions with a global bottom are not the right form for the partition. The join-irreducible poset of the music divisor lattice (`P_jirr = {2, 3, 4}` with `2 < 4` and `3` incomparable to either) escapes this obstacle precisely because it has *no* global minimum — `2` and `3` are both minimal, incomparable to each other.
 
-- **B, F: "Boolean except at one node" obstacle.** The lattice has at least one non-regular element, but every non-regular element has its Heyting complement equal to `⊥`, while every element with a non-trivial Heyting complement is regular. This is structurally distinct from the common-minimum obstacle (the lattices A and C have many non-regular elements but trivial complements; B and F have one or two non-regular elements where the regularity is *isolated* to a degenerate corner of the lattice). Regular kernels populate Infrastructure + Refusal + Distribution (max 3 cells, Exploitation collapses because the kernel is regular); the single non-regular kernel populates Infrastructure + Exploitation only (Refusal + Distribution collapse). Refusal/Distribution and Exploitation are populated by *different* kernels but never the same one; max cells across any single kernel = 3.
+- **B, F: "Boolean except at one node" obstacle.** The lattice has at least one non-regular element, but every non-regular element has its Heyting complement equal to `⊥`, while every element with a non-trivial Heyting complement is regular (so `¬¬a = a` and the closure-residue is empty). Either way, the kernel cannot simultaneously satisfy "non-regular" *and* "has non-bottom Heyting complement"; the degeneracy is again forced, with max cells = 3 rather than 4 because at least one of {Exploitation, Refusal+Distribution} always collapses depending on whether the kernel is regular.
 
-Both modes fail the *same* underlying requirement: the paired non-regularity that the music divisor lattice has and these candidates do not. Growing A's three Pauli atoms into C's six (two MUB triples) just compounds the common-minimum obstacle. Going to D's full 2-qubit MUB context lattice (21 poset elements, 59,050 down-sets) would compound it further; this is why the explicit skip is correct rather than premature.
+Both modes fail the same underlying requirement: existence of a non-regular element whose Heyting complement is non-bottom. Growing A's three Pauli atoms into C's six (two MUB triples) just compounds the common-minimum obstacle. Going to D's full 2-qubit MUB context lattice (21 poset elements, 59,050 down-sets) would compound it further; this is why the explicit skip is correct rather than premature.
+
+**Correction to an earlier framing.** A working note in the immediately-prior round used the phrase "paired non-regularity" to describe this requirement (a non-regular element whose Heyting complement is itself non-regular). That phrasing was wrong, and the property it described is mathematically impossible in any Heyting algebra: the identity `¬¬¬x = ¬x` makes `¬x` always equal to `¬¬(¬x)`, so `¬x` is always regular regardless of whether `x` is. The correct diagnosis — and the one the partition theorem actually requires at the kernel — is the simpler condition above: existence of a non-regular element with non-bottom Heyting complement. Verification on the music divisor lattice: `¬2 = 3` (non-bottom; `3 ≠ 1`), and `¬¬3 = ¬4 = 3` so `3` is regular, as it must be.
 
 ### 3.3 What this tightens
 
 The Route-A scoping in §4 was originally framed as *"Bohrification is the most plausible target; small finite truncations might also work."* The Route-B finding upgrades this framing:
 
-**No small finite physics-interpretable down-set-of-poset lattice rescues the partition. The path through a full topos construction is no longer optional; it is the indicated path.**
+**No small finite `O(P)` down-set-of-poset-with-global-minimum lattice rescues the partition. But the full Bohrification construction `Sub_{T(A)}(Σ)` is *not* of this form, so the obstacle that defeats Route B does not transfer to Route A.**
 
-The framework's machinery requires structure (paired non-regularity) that the discrete sub-posets of physics context categories do not carry. Computing `Sub_{T(A)}(Σ)` at the full continuous-spectrum-of-MASAs level (Route A proper) is therefore not a "richer construction we might also try"; it is the construction the architecture actually requires. The Wolfram-level Route-B exhaustion narrows the search space rather than supplementing it.
+This is the crucial structural point. The Route-B candidates are all of the form `O(P)` for some poset `P` with a global minimum (the trivial subalgebra, the bottom causet event, etc.), and the Heyting structure on `O(P)` is given by "largest down-set disjoint from the input." In any such lattice, the global-minimum constraint forces `¬(non-empty) = ⊥`. The full Bohrification target `Sub_{T(A)}(Σ)` is not a down-set lattice of the context category; it is the lattice of (clopen) subobjects of the spectral presheaf, with a much richer Heyting structure given stagewise by `P_{(¬S)_V} = 1 - ⋁_{V' ∈ m_V} P_{S_{V'}}` (Döring 2012, Prop. 2). This formula does *not* inherit the global-minimum obstacle of the underlying context poset `V(A)`; the Heyting complement of a non-empty subobject can be (and generically is) far from `⊥`.
 
-This is a stronger finding than either a positive Route B result (which would have given a relabelled-music witness with shaky physics anchoring) or the §3.1 / §3.3 framings of the pre-run hand predictions (which kept Route A and Route B as parallel candidates).
+Combined with three established structural facts from the topos-quantum-mechanics literature:
+
+1. `Sub_{T(A)}(Σ)` is non-Boolean whenever `A` is non-commutative (HLS 2009).
+2. Tight clopen subobjects — including all daseinisations of quantum projections — are Heyting-regular (Døring 2012, Prop. 5 + Cor. 2). The non-tight clopen subobjects are where the non-regular elements live.
+3. Hence non-regular elements of `Sub_{cl}(Σ)` exist generically.
+
+— the open structural question for Route A reduces to: **for some small finite-dim `A`, does there exist a non-regular `S ∈ Sub_{cl}(Σ)` with `¬S ≠ ⊥`?** Døring 2012 does not state this as a theorem, but the formula-level structure (Prop. 2 above) suggests the answer is generically yes, and a small-`A` explicit computation can settle it directly.
+
+So the Route-B exhaustion narrows the search space rather than supplementing it: small finite truncations of the context category do not approximate the partition-relevant structure of the full topos. But the path through `Sub_{T(A)}(Σ)` for non-trivial finite-dim `A` remains tractable as a Wolfram-level computation — substantially more tractable than the prior round's "Route A is multi-month formalisation work" framing suggested. The next concrete step is §4.4 below.
 
 ---
 
@@ -124,7 +134,28 @@ The structural correspondence is tight: both are presheaf topoi on small posets,
 
 **Achieved now (Route B artefact):** the finite-physics-lattice exploration described in §3, executed v1.1, all five candidates DEGENERATE, structural diagnosis recorded.
 
-**Deferred (Route A formal anchor) — now indicated rather than optional:** a finite-dimensional Bohr-topos worked example with the four-position partition computed on `Sub_{T(A)}(Σ)`. Provisionally targeted at `A = M_2(C) ⊕ C` (a non-trivial non-commutative finite-dim C*-algebra) or `A = M_2(C) ⊕ M_2(C)` (two-qubit-like with explicit context structure). The Wolfram-level enumeration of `Sub_{T(A)}(Σ)` requires writing the spectral presheaf computation by hand, with the context category enriched by morphisms (not just the inclusion poset of discrete MASAs). Estimate: several days of focused Wolfram work. The Route-B finding shifts this from "if Route B yields a positive direction" (the pre-run framing) to "this is the construction the architecture requires" (the post-run framing); it remains not in scope for this round, but the prioritisation is now sharper.
+**Deferred (Route A formal anchor) — now indicated rather than optional, and more tractable than previously framed:** a finite-dimensional Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)`. Provisionally targeted at `A = M_2(C) ⊕ C` (a minimal non-trivial non-commutative finite-dim C*-algebra) or `A = M_3(C)` (smallest dimension at which Kochen-Specker bites; richer `Sub_{cl}(Σ)` structure). See §4.4 for the explicit computational checkpoint.
+
+### 4.4 Computational checkpoint for Route A
+
+A focused Wolfram-level checkpoint is now scoped sharply. The question to settle is concrete:
+
+> **For some small finite-dim non-commutative C*-algebra `A`, does there exist `S ∈ Sub_{cl}(Σ_A)` such that `S` is non-regular (`¬¬S ≠ S`) and `¬S` is non-bottom (`¬S ≠ ⊥`)?**
+
+A positive answer establishes that the four-position partition has a non-vacuous instance at the topos-quantum-mechanics level and licenses a Wolfram-level Layer-L analog for physics, paralleling the music anchor's divisor-lattice slice. A negative answer (every non-regular `S` has `¬S = ⊥`) would be a strong structural finding, telling us that `Sub_{cl}(Σ)` has a global flatness that the framework does not currently anticipate.
+
+Concrete computational plan:
+
+1. **Target algebras** (in order of increasing structural richness):
+   - `A_1 = M_2(C) ⊕ C` — minimal non-commutative finite-dim C*-algebra with non-trivial direct-sum structure. The context category `V(A_1)` has a finite discrete part (Boolean subalgebras of `C^3`) plus the `M_2(C)` part which carries the Bloch-sphere continuum of MASAs.
+   - `A_2 = M_2(C) ⊕ M_2(C)` — two-qubit-like; richer context structure.
+   - `A_3 = M_3(C)` — smallest matrix algebra at which Kochen-Specker theorem applies (`dim ≥ 3`). Context category is a continuum of MASAs over `C·1`; explicit computation requires discretising to a "stabilizer-type" sub-poset.
+
+2. **Computational approach**: enumerate the discrete part of `V(A_i)`, build the presheaf `Σ` over this discrete context category, compute clopen subobjects pointwise, identify non-regular ones via Døring's Prop. 3 (`P_{S_V} = ⋀_{V' ∈ m_V} P_{S_{V'}}`), check Heyting complements via Døring's Prop. 2.
+
+3. **Output**: either a small witness `(A_i, S)` exhibiting `S` non-regular with `¬S ≠ ⊥` (positive Route-A checkpoint; promotes physics anchor from "indicated" to "feasible"), or a structural finding that the discrete-context truncation of `Sub_{cl}(Σ)` inherits some not-yet-identified flatness (negative checkpoint; tells us either that the truncation is too coarse or that the framework needs modification at the topos level).
+
+This is a Wolfram-level script comparable in scope to `four-position-physics-v1.wl` plus the new Heyting-stagewise machinery from Døring 2012. Estimate: a few days of focused work, not a multi-month formalisation. It is the natural successor to Route B and the right next step if physics is to be the second anchor. **Not committed in this round**, but scoped here so the prioritisation is concrete.
 
 ---
 
@@ -170,9 +201,10 @@ These are recorded as alternative anchor candidates, not committed targets. The 
 
 | Layer | Claim                                                          | Status                                                          |
 |-------|----------------------------------------------------------------|-----------------------------------------------------------------|
-| **Route B (this round)** | Finite physics-interpretable down-set-of-poset lattices either host or do not host a non-vacuous four-cell partition; structural fact one way or the other | **Executed v1.1 2026-05-25; all five tested candidates DEGENERATE.** Structural diagnosis in §3.2: the framework's machinery requires paired non-regularity (a non-regular element whose Heyting complement is itself non-regular), which the surveyed lattices lack in two distinct modes (common-minimum obstacle; "Boolean-except-at-one-node" obstacle). |
-| **Route A architectural scoping** | The Bohrification (Heunen-Landsman-Spitters / Döring-Isham) programme is the physics-side architectural target; the layered L/T/D framework maps onto it cleanly | **Recorded in this memo + structural core entry committed** (`wolfram/cores/heunen-landsman-spitters-2009.wl`). Route B finding upgrades this from "most plausible target" to "indicated path" (§3.3, §4.3). |
-| **Physics Layer L (theorem)** | A finite-dim Bohr-topos worked example with the four-position partition computed on `Sub_{T(A)}(Σ)` | **Deferred.** Provisionally targeted at `A = M_2(C) ⊕ M_2(C)` or similar; not in scope for this round. Route-B exhaustion narrows the search space rather than supplementing it: small finite truncations of the context category will not produce the required partition structure. |
+| **Route B (this round)** | Finite physics-interpretable down-set-of-poset lattices either host or do not host a non-vacuous four-cell partition; structural fact one way or the other | **Executed v1.1 2026-05-25; all five tested candidates DEGENERATE.** Structural diagnosis in §3.2: the framework's machinery requires a non-regular element with non-bottom Heyting complement, which `O(P)`-style lattices over posets with a global minimum cannot supply. |
+| **Route A architectural scoping** | The Bohrification (Heunen-Landsman-Spitters / Döring-Isham) programme is the physics-side architectural target; the layered L/T/D framework maps onto it cleanly | **Recorded in this memo + structural core entry committed** (`wolfram/cores/heunen-landsman-spitters-2009.wl`). Route B finding upgrades this from "most plausible target" to "indicated path" (§3.3, §4.3). Importantly, `Sub_{cl}(Σ)` is not an `O(P)`-style construction and so does not inherit the Route-B obstacle. |
+| **Route A computational checkpoint (next step)** | For some small finite-dim `A`, does `Sub_{cl}(Σ)` contain a non-regular `S` with `¬S ≠ ⊥`? | **Scoped in §4.4, not committed in this round.** Concrete Wolfram-level script targeting `A = M_2(C) ⊕ C` or `M_3(C)`. Estimate: a few days. Positive answer promotes physics anchor from "indicated" to "feasible." |
+| **Physics Layer L (theorem)** | A finite-dim Bohr-topos worked example with the four-position partition computed on `Sub_{cl}(Σ)` | **Deferred.** Provisionally targeted at `A = M_2(C) ⊕ C`, `M_2(C) ⊕ M_2(C)`, or `M_3(C)`; not in scope for this round. The §4.4 computational checkpoint is the gating prerequisite. |
 | **Physics Layer T (realisation)** | The Bohr topos `T(A)` realises the lattice slice as `Sub_{T(A)}(Σ)` | **Cited from Bohrification literature** (Heunen-Landsman-Spitters 2009; Döring-Isham 2007). |
 | **Physics Layer D (distinction)** | A distinction structure on `T(A)` lifting the lattice slice to a Theorem-5.1 instance | **Architectural template recorded** (§4.2); concrete construction deferred. |
 
@@ -196,6 +228,7 @@ The single concrete commitment is the Wolfram exploration script and the structu
 ## References
 
 - Caspers, M., Heunen, C. (2009). Constructively complete finite-dimensional C*-algebras. (Used in the Bohrification programme.)
+- Döring, A. (2012). Topos-based logic for quantum systems and bi-Heyting algebras. *arXiv:1202.2750*. (Load-bearing reference for the Heyting and co-Heyting structure on `Sub_{cl}(Σ)`, the regularity characterisations cited in §3.2 and §3.3, and the stagewise complement formula `P_{(¬S)_V} = 1 - ⋁_{V' ∈ m_V} P_{S_{V'}}` referenced in §4.4.)
 - Döring, A., Isham, C. J. (2007). A topos foundation for theories of physics. I–IV. *Journal of Mathematical Physics* 49: 053515–053518.
 - Flori, C. (2013). *A First Course in Topos Quantum Theory*. Springer Lecture Notes in Physics 868.
 - Halvorson, H. (ed.) (2011). *Deep Beauty: Understanding the Quantum World through Mathematical Innovation*. Cambridge University Press. (Contains Heunen-Landsman-Spitters "Bohrification" chapter.)

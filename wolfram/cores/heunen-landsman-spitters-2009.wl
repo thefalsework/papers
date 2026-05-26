@@ -274,6 +274,118 @@ HeunenLandsmanSpitters2009Core = MakeCore[
           "topos_theoretic_witness; structurally_equivalent_to_" <>
           "the_Heyting_algebra_being_Boolean_at_the_kernel_image."
       ]
+    ],
+
+    "bi_heyting_structure_on_clopen_subobjects" -> MakeMechanism[
+      "Id"            -> "bi_heyting_structure_on_clopen_subobjects",
+      "Kernel"        -> KernelTheWaveFunction,
+      "Type"          -> "LatticeStructureFact",
+      "Domain"        -> "physics",
+      "Description"   ->
+        "Doering (2012, arXiv:1202.2750) establishes the " <>
+        "lattice-theoretic structure of Sub_{cl}(Sigma), the " <>
+        "complete bi-Heyting algebra of clopen subobjects of " <>
+        "the spectral presheaf, in three facts that bear " <>
+        "directly on the FalseWork four-position partition: " <>
+        "(i) The Heyting NOT has a stagewise formula: at each " <>
+        "context V, P_{(NOT S)_V} = 1 - JOIN_{V' minimal in V} " <>
+        "P_{S_{V'}} (Prop. 2). This formula is NOT the 'largest " <>
+        "down-set disjoint from S' Heyting operation that " <>
+        "obtains on O(P) for the context poset P = V(A) itself. " <>
+        "Sub_{cl}(Sigma) is not isomorphic to O(V(A)). " <>
+        "(ii) An element S is Heyting-regular (NOT NOT S = S) iff " <>
+        "for all contexts V, P_{S_V} = MEET_{V' minimal in V} " <>
+        "P_{S_{V'}} (Prop. 3). " <>
+        "(iii) Every 'tight' clopen subobject -- including " <>
+        "every outer-daseinisation delta^o(P-hat) of a quantum " <>
+        "projection P-hat in P(N) -- is Heyting-regular " <>
+        "(Prop. 5, Cor. 2). Tight subobjects are a strict " <>
+        "subset of regular subobjects (Doering remarks " <>
+        "explicitly that regular need not be tight). " <>
+        "Structural implication for FalseWork: the non-regular " <>
+        "elements of Sub_{cl}(Sigma), where the four-position " <>
+        "partition's Exploitation cell lives, are exactly the " <>
+        "non-tight clopen subobjects -- the ones NOT arising " <>
+        "from quantum projections via daseinisation. Their " <>
+        "physical interpretation is open; their existence is " <>
+        "guaranteed by non-commutativity of A.",
+      "Compatibility" -> {
+        "spectral_presheaf_as_phase_space",
+        "bohrification_topos_construction"
+      },
+      "CompositionRules" -> <|
+        "spectral_presheaf_as_phase_space" ->
+          "Sub_{cl}(Sigma) inherits its bi-Heyting structure from Sigma's role as phase space"
+      |>,
+      "RemovalSignature" ->
+        StandardRemovalSignature["bi_heyting_structure_on_clopen_subobjects"],
+      "TransferConditions" -> StandardTransferConditions[],
+      "FailureMode" -> MakeFailureMode[
+        "Id"          -> "boolean_collapse_at_commutative_algebra",
+        "TriggeredBy" -> {"abelianisation_of_A"},
+        "Signature"   ->
+          "for commutative A, every clopen subobject is tight, " <>
+          "hence Heyting-regular; Sub_{cl}(Sigma) becomes Boolean; " <>
+          "the four-position Exploitation cell becomes globally empty."
+      ]
+    ],
+
+    "non_regular_witness_with_non_bottom_complement" -> MakeMechanism[
+      "Id"            -> "non_regular_witness_with_non_bottom_complement",
+      "Kernel"        -> KernelTheWaveFunction,
+      "Type"          -> "OpenStructuralQuestion",
+      "Domain"        -> "physics",
+      "Description"   ->
+        "The structural prerequisite for a non-vacuous four-" <>
+        "position partition at a kernel a, in any Heyting " <>
+        "algebra H, is: a is non-regular (NOT NOT a > a strictly, " <>
+        "so the closure-residue is non-empty) AND NOT a is " <>
+        "non-bottom (so the Refusal cell can be populated). " <>
+        "Both conditions are required; absent either, the " <>
+        "partition collapses to <=3 cells. The music divisor " <>
+        "lattice has this at the tritone (a = 2, NOT a = 3, NOT " <>
+        "NOT a = 4); the five physics candidates in " <>
+        "wolfram/physics-anchor/four-position-physics-v1.wl " <>
+        "(v1.1) lack it generically because they are O(P) for " <>
+        "P with a global minimum (which forces NOT(non-empty) " <>
+        "= bottom). The same prerequisite for Sub_{cl}(Sigma) " <>
+        "is the open structural question for Route A: does " <>
+        "there exist a non-regular S in Sub_{cl}(Sigma) with " <>
+        "NOT S =/= bottom-subobject? The Doering 2012 stagewise " <>
+        "formula (Prop. 2 of the prior mechanism) does NOT " <>
+        "inherit the O(P) global-minimum obstacle; the question " <>
+        "is genuinely open at the lattice level and resolves " <>
+        "by explicit small-A computation. " <>
+        "(Note on impossibility: the question is sometimes " <>
+        "phrased as 'paired non-regularity' -- a non-regular S " <>
+        "whose Heyting complement is also non-regular. That " <>
+        "phrasing is mathematically impossible: in any Heyting " <>
+        "algebra NOT NOT NOT x = NOT x, so NOT x is always " <>
+        "regular. The correct phrasing is 'non-regular S with " <>
+        "non-bottom Heyting complement', and the music anchor " <>
+        "instantiates the correct phrasing, not the impossible " <>
+        "one.)",
+      "Compatibility" -> {
+        "bi_heyting_structure_on_clopen_subobjects",
+        "spectral_presheaf_as_phase_space"
+      },
+      "CompositionRules" -> <||>,
+      "RemovalSignature" ->
+        StandardRemovalSignature["non_regular_witness_with_non_bottom_complement"],
+      "TransferConditions" -> StandardTransferConditions[],
+      "FailureMode" -> MakeFailureMode[
+        "Id"          -> "global_complement_flatness_collapses_partition",
+        "TriggeredBy" -> {"every_non_regular_S_has_NOT_S_equal_bottom"},
+        "Signature"   ->
+          "if Sub_{cl}(Sigma) is structurally flat in the sense " <>
+          "that every non-regular S has NOT S = bottom, then no " <>
+          "kernel admits a non-vacuous partition and physics " <>
+          "anchoring requires either a different topos " <>
+          "construction or framework-level modifications. This " <>
+          "is the negative-checkpoint outcome the small-A " <>
+          "Wolfram computation (feasibility.md sec. 4.4) is " <>
+          "designed to detect."
+      ]
     ]
 
   |>,
@@ -365,6 +477,7 @@ HeunenLandsmanSpitters2009Core = MakeCore[
   "IndependentCorroboration" -> {
     "doering_isham_2007_topos_foundation_for_theories_of_physics_I_IV",
     "doering_2009_topos_perspective_on_quantum_logic",
+    "doering_2012_topos_based_logic_for_quantum_systems_and_bi_heyting_algebras",
     "caspers_heunen_2009_constructively_complete_finite_dim_cstar_algebras",
     "nuiten_2011_bohrification_of_local_nets_of_observables",
     "flori_2013_first_course_in_topos_quantum_theory",
@@ -406,27 +519,37 @@ HeunenLandsmanSpitters2009Core = MakeCore[
   |>,
 
   "Provenance" ->
-    "Core entry drafted following review of the topos quantum " <>
-    "mechanics literature (Doering-Isham 2007ff, Heunen- " <>
-    "Landsman-Spitters 2009, Caspers-Heunen 2009, Flori 2013, " <>
-    "Nuiten 2011) in May 2026, in the context of scoping a " <>
+    "Core entry drafted May 2026 following review of the topos " <>
+    "quantum mechanics literature (Doering-Isham 2007 I-IV, " <>
+    "Heunen-Landsman-Spitters 2009, Caspers-Heunen 2009, " <>
+    "Nuiten 2011, Flori 2013), in the context of scoping a " <>
     "physics anchor for the four-position partition framework. " <>
     "HLS 2009 is selected as the primary reference because it " <>
     "is the cleanest single-paper statement of the " <>
-    "Bohrification programme in its mature form. The Doering- " <>
+    "Bohrification programme in its mature form; the Doering- " <>
     "Isham 2007 four-paper series is the foundational " <>
-    "alternative; either would do as the structural " <>
-    "corroborator. This core's new evidential weight is at " <>
+    "alternative. Doering 2012 (arXiv:1202.2750) was read " <>
+    "after the initial draft to extract the bi-Heyting / " <>
+    "regularity structure of Sub_{cl}(Sigma), which is " <>
+    "captured in the mechanisms bi_heyting_structure_on_" <>
+    "clopen_subobjects and non_regular_witness_with_non_" <>
+    "bottom_complement above and which corrects a working " <>
+    "diagnosis from the immediately-prior physics feasibility " <>
+    "round (the 'paired non-regularity' phrasing, which is " <>
+    "Heyting-algebraically impossible; the correct phrasing " <>
+    "is 'non-regular element with non-bottom Heyting " <>
+    "complement', and the music anchor instantiates the " <>
+    "correct phrasing). This core's evidential weight is at " <>
     "the kernel-comma structural level via the topos- " <>
     "theoretic formalism of quantum logic, not at the " <>
     "Standard-Model-parameter level (the Higgs VEV " <>
-    "explanatory debt of Paper 4 sec. 6.3 remains " <>
-    "open). No FalseWork physics Layer-L theorem is kernel- " <>
-    "checked at the time of this entry; see " <>
-    "preprints/four-position-partition/physics-anchor/" <>
-    "feasibility.md for the scoping document and " <>
-    "wolfram/physics-anchor/four-position-physics-v1.wl " <>
-    "for the Route-B exploration."
+    "explanatory debt of Paper 4 sec. 6.3 remains open). No " <>
+    "FalseWork physics Layer-L theorem is kernel-checked at " <>
+    "the time of this entry; see preprints/four-position-" <>
+    "partition/physics-anchor/feasibility.md sec. 4.4 for the " <>
+    "next computational checkpoint and wolfram/physics-" <>
+    "anchor/four-position-physics-v1.wl for the completed " <>
+    "Route-B exploration."
 ];
 
 
