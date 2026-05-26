@@ -5,7 +5,9 @@ Authors: Chris Brink
 -/
 import FalseWorkPapers.Heyting.SubobjectInstance
 import FalseWorkPapers.Positions
+import FalseWorkPapers.Lattice.FourPositionLattice
 import FalseWorkPapers.Examples.CanonizationGeneratorInstance
+import FalseWorkPapers.Examples.DivisorLattice12
 
 /-!
 # Sanity-check examples for `FalseWork.Heyting.heytingAlgebra`
@@ -122,3 +124,16 @@ Commitment gate and the canonization closure-and-generator layer is
 now formally recorded at the type level. -/
 #print axioms FalseWork.Positions.CanonizationGenerator.ofCommitmentYes
 #print axioms FalseWork.Positions.commitment_yes_admits_canonization_generator
+
+/-! Layer-L lattice-level four-position partition (companion to
+`FalseWorkPapers.Lattice.FourPositionLattice` and
+`preprints/four-position-partition/music-anchor/feasibility.md` §12).
+The abstract Heyting-algebra theorem and the concrete divisor-lattice-
+of-12 music-anchor witness must report only the standard three axioms.
+These audit lines close the Layer-L item of the music anchor: the
+four-position partition is now kernel-checked at the lattice level
+on a Heyting algebra isomorphic to the subgroup lattice of `Z/12`. -/
+#print axioms FalseWork.Lattice.lattice_four_position_partition
+#print axioms FalseWork.Lattice.Examples.Div12.heytingAlgebra
+#print axioms FalseWork.Lattice.Examples.Div12.tritone_non_regular
+#print axioms FalseWork.Lattice.Examples.Div12.music_anchor_witness

@@ -1,4 +1,6 @@
 import FalseWorkPapers.Positions
 import FalseWorkPapers.Heyting.SubobjectInstance
+import FalseWorkPapers.Lattice.FourPositionLattice
 import FalseWorkPapers.Examples.HeytingTypeInstance
 import FalseWorkPapers.Examples.CanonizationGeneratorInstance
+import FalseWorkPapers.Examples.DivisorLattice12

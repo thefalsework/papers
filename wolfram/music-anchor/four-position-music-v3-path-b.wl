@@ -315,12 +315,20 @@ Print["  Kernels at which all 4 cells inhabited : ", fourCellKernels];
 Print["  No UNCLASSIFIED at any kernel   : ", allKernelsOK];
 Print[];
 Print["  Bottom line:"];
-Print["    The subobject lattice Sub_{Z/12-Sets}(Z/12) is a 6-element"];
-Print["    distributive non-Boolean Heyting algebra. Theorem 5.1 of"];
-Print["    paper.md applies cleanly. At kernel a = ", First[fourCellKernels],
+Print["    The divisor lattice of 12 (= subgroup lattice of Z/12 = lattice"];
+Print["    of transposition-symmetric pitch-class subsets) is a 6-element"];
+Print["    distributive non-Boolean Heyting algebra."];
+Print["    At kernel a = ", First[fourCellKernels],
        " (", MusicLabel[First[fourCellKernels]], "),"];
-Print["    all four cells are inhabited by sub-Z/12-sets with established"];
-Print["    musical significance."];
+Print["    the lattice-level partition is non-vacuous: all four cells"];
+Print["    inhabited by musically-meaningful subgroups (Section 5)."];
+Print[];
+Print["    Topos realization is deferred to the Lean side. Two clean"];
+Print["    elementary-topos realizations of this lattice exist:"];
+Print["      (T1) Sh(L) for L the lattice viewed as a finite frame."];
+Print["      (T2) Set^{P^op} for P the join-irreducible poset {2,3,4} with 2<4."];
+Print["    NB: the lattice does NOT arise as Sub_{Z/12-Sets}(Z/12); that"];
+Print["    topos is Boolean (every group-action topos is)."];
 Print[];
 
 Print["============================================================"];

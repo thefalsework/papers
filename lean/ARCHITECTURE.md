@@ -249,6 +249,19 @@ PROVEN / SUBMITTED / OPEN — snapshot 2026-05-20 (post-second-pass)
   │  ✓ FalseWork.Positions.commitment_yes_admits_                   │
   │      canonization_generator                 (kernel-checked)    │
   │                                                                 │
+  │  Layer L lattice-level partition (companion to §12 of           │
+  │  preprints/four-position-partition/music-anchor/feasibility.md):│
+  │  ✓ FalseWork.Lattice.lattice_four_position_partition            │
+  │      (abstract Heyting-algebra core of four_position_partition) │
+  │  ✓ FalseWork.Lattice.Examples.Div12.heytingAlgebra              │
+  │      (concrete 6-element non-Boolean Heyting algebra =          │
+  │       divisor lattice of 12 = subgroup lattice of Z/12)         │
+  │  ✓ FalseWork.Lattice.Examples.Div12.tritone_non_regular         │
+  │      (no axioms — pure `decide`)                                │
+  │  ✓ FalseWork.Lattice.Examples.Div12.music_anchor_witness        │
+  │      (all four cells inhabited at tritone kernel by music-      │
+  │       meaningful transposition-symmetric pitch-class subsets)   │
+  │                                                                 │
   │  Tree is sorry-free.  Audit at Examples/HeytingTypeInstance.lean│
   └─────────────────────────────────────────────────────────────────┘
 

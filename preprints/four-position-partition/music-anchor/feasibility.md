@@ -2,7 +2,7 @@
 
 **Author:** Chris Brink
 **Date:** May 2026 (initial scoping); updated May 2026 with Step B outcome and Path B redirection.
-**Status:** Step A (scoping) complete. Step B (initial Wolfram empirical test) complete with a documented negative result: the natural lattice-level construction on Z/12 is not Heyting (§11). Path B (subgroup-lattice route in Z/12-Sets) is the active forward direction (§12).
+**Status:** Step A (scoping) complete. Step B (initial Wolfram empirical test) complete with a documented negative result: the diatonic-closure Moore lattice on Z/12 is not Heyting (§11). Path B (subgroup / divisor lattice of 12, layered framing — Layer L kernel-checked, Layer T cited from topos theory, Layer D deferred) delivered (§12); see `lean/FalseWorkPapers/Lattice/FourPositionLattice.lean` for the abstract theorem and `lean/FalseWorkPapers/Examples/DivisorLattice12.lean` for the concrete music-anchor witness.
 
 ---
 
@@ -316,17 +316,35 @@ The framework's machinery is genuinely picky about what counts as a distinction 
 
 ---
 
-## 12. Path B: the subgroup-lattice route in `Z/12`-Sets
+## 12. Path B: the subgroup-lattice / divisor-lattice route (corrected and layered)
 
-The forward direction is to drop the lattice-level shortcut and instantiate the partition theorem on a music-derived elementary topos where `Sub(D(Y))` is Heyting *by construction*. The smallest such instance that retains musical content is:
+**Correction (May 2026).** An earlier draft of this section claimed
+that the divisor lattice of 12 arises as `Sub_{Z/12-Sets}(Z/12)` (the
+subobject lattice of the regular `Z/12`-set in the topos of
+`Z/12`-actions). This is false. The category `Z/12-Sets` is a
+**Boolean** topos (in fact every group-action topos is): its
+subobject classifier `Ω = sieves on the single object of B(Z/12) = {∅,
+Z/12}`, so `Sub(Y) = {⊥, Y}` for every transitive `Z/12`-set `Y`. The
+sub-`Z/12`-sets of `Z/12`-regular are not subgroups; they are subsets
+closed under the regular action, of which there are only two. The
+lattice of *subgroups* of `Z/12` is the subobject lattice of `Z/12`
+**in the category of groups**, which is not an elementary topos.
 
-### 12.1 The construction
+The corrected forward direction has two parts. **Layer L** (lattice
+level): the divisor lattice of 12 is a 6-element non-Boolean Heyting
+algebra; the four-position partition theorem applies to it at the
+tritone kernel non-vacuously. **Layer T** (topos realization): this
+lattice arises as `Sub_T(Y)` for at least two clean elementary topoi,
+both standard constructions. **Layer D** (distinction structure): a
+non-trivial `(D, η, ι)` with `Im(η_Y)` landing on a non-regular element
+of the lattice lifts the lattice-level witness to a full
+Theorem-5.1 instance.
 
-- **Topos.** `Z/12-Sets` = the category of (left) `Z/12`-actions on sets. This is the presheaf topos on the one-object groupoid `B(Z/12)` (a single object with automorphism group `Z/12`), equivalently the presheaf topos on the connected transposition-only groupoid of §3.1 (which is equivalent to `B(Z/12)`). The inversion and full dihedral structure of §3.1 is deferred to a richer follow-up topos.
+### 12.1 The lattice (Layer L)
 
-- **Object Y.** `Y := Z/12` with the regular `Z/12`-action (left multiplication by elements of `Z/12`).
-
-- **Subobject lattice `Sub(Y)`.** The sub-`Z/12`-sets of `Y` are exactly the subgroups of `Z/12` (by elementary group theory). The lattice of subgroups of `Z/12` is isomorphic to the divisor lattice of 12:
+The lattice of subgroups of `Z/12` is isomorphic to the divisor lattice
+of 12 (a standard group-theory fact: subgroups of a cyclic group of
+order `n` correspond bijectively to divisors of `n`):
 
   ```
                   Z/12  (order 12, = full chromatic)
@@ -347,7 +365,7 @@ The forward direction is to drop the lattice-level shortcut and instantiate the 
 
   Six elements, distributive (divisor lattices are always distributive), hence Heyting; non-Boolean (12 = 2²·3 is not squarefree, so the divisor lattice is not Boolean).
 
-### 12.2 Heyting structure on `Sub(Y)`
+### 12.2 Heyting structure on the lattice (Layer L)
 
 Computing in the divisor lattice (with subgroup-order labels): meet is gcd, join is lcm, `¬a = lcm{b : gcd(a,b) = 1}`.
 
@@ -370,14 +388,14 @@ With kernel `a = <6>` (subgroup of order 2, the tritone `{0, 6}`):
 - `¬¬a = <3>` (diminished 7th `{0, 3, 6, 9}`)
 - Closure residue `¬¬a ∖ a` is exactly the diminished 7th (which strictly contains the tritone)
 
-The four cells of Definition 4.1 of `paper.md`, applied to candidate subobjects `X ∈ Sub(Y) ∖ {⊥}`:
+The four cells of Definition 4.1 of `paper.md`, lifted to the lattice level via `FalseWork.Lattice.lattice_four_position_partition`, applied to candidate elements `X ∈ L ∖ {⊥}`:
 
 - **Infrastructure** (`X ≤ a = <6>`): `X ∈ {<6>}`, i.e., the **tritone** itself.
 - **Refusal** (`X ≤ ¬a = <4>`): `X ∈ {<4>}`, i.e., the **augmented triad**.
 - **Exploitation** (`X ≤ ¬¬a = <3>`, `X ⊄ <6>`): `X ∈ {<3>}`, i.e., the **diminished 7th**.
 - **Distribution** (`X ⊓ <6> ≠ ⊥` ∧ `X ⊓ <4> ≠ ⊥`): `X` must contain a multiple of 6 and a multiple of 4, so `X ⊇ <gcd(6,4)> = <2>`. Therefore `X ∈ {<2>, Z/12}`, i.e., the **whole-tone hexachord** and the **full chromatic**.
 
-All four cells are inhabited. Excluding the trivial subobject `{0} = ⊥`, every non-bottom element of `Sub(Y)` lands in exactly one of the four cells. The partition is exhaustive and disjoint, as Theorem 5.1 requires.
+All four cells are inhabited. Excluding the bottom element, every non-bottom element of `L` lands in exactly one of the four cells. The partition is exhaustive and disjoint, as the lattice-level theorem `FalseWork.Lattice.lattice_four_position_partition` (the Heyting-algebra core of Theorem 5.1) requires.
 
 ### 12.4 Why this is a non-vacuous music witness
 
@@ -389,7 +407,7 @@ Each subgroup of `Z/12` is a transposition-symmetric pitch-class set with establ
 - `<2>` whole-tone hexachord — symmetric by whole step
 - `Z/12` — full chromatic
 
-With the tritone chosen as kernel, the partition reads:
+These structures are not a contribution of any specific recent author. They underlie Messiaen's "modes of limited transposition" (1944) and the pitch-class set theory of Forte (1973), Rahn (1980), and others. They sit at the level of "elementary group theory of `Z/12`," not at the level of categorical music theory; using them does not depend on or instantiate Tymoczko, Mazzola, Lewin, or Andreatta's specific frameworks. With the tritone chosen as kernel, the partition reads:
 
 | Cell           | Subgroup           | Musical reading                              |
 |----------------|--------------------|----------------------------------------------|
@@ -398,27 +416,52 @@ With the tritone chosen as kernel, the partition reads:
 | Exploitation   | diminished 7th     | the closure-residue: contains the tritone, but is not the tritone, sitting in the double-negation closure |
 | Distribution   | whole-tone, Z/12   | straddling kernel and complement             |
 
-This is a *lattice-level* witness of the four-position partition on music-domain material. It establishes Theorem 5.1 is **non-vacuous in a music-derived elementary topos**, which is the structural claim §11 was unable to deliver.
+### 12.5 Topos realization (Layer T): existence
 
-### 12.5 What this witness does *not* establish
+The divisor lattice of 12 (= subgroup lattice of `Z/12`) **does not** arise as `Sub_{Z/12-Sets}(Y)` for any `Y` — see the correction at the top of §12. But it does arise as the subobject lattice of an elementary topos in at least two clean ways. Both are general topos theory (no novelty claim attaches to identifying them; the role here is "exhibit any topos realizing the lattice").
 
-Two important caveats:
+**Realization T1 (sheaves on the locale).** Any finite distributive lattice `L` is a frame, hence corresponds to a locale, and the topos `Sh(L)` of sheaves on that locale is an elementary (in fact Grothendieck) topos with `Sub_{Sh(L)}(1) ≅ L`. For our `L` = divisor lattice of 12, `Sh(L)` is a 6-element-subterminal elementary topos. (Mac Lane and Moerdijk 1992, Ch. II; Johnstone 2002a, C1.) The construction is uniform across `L`; the topos has no further music-theoretic content beyond what the lattice carries.
 
-1. **No distinction structure yet.** The kernel `a = <6>` was chosen on lattice criteria (smallest non-regular element), not derived as the image `Im(η_Y)` of a specific distinction-structure unit. To upgrade to a full Definition-3.1 instance, we need to exhibit a concrete idempotent monad on `Z/12-Sets` whose unit at `Y` has image exactly `<6>` (or another chosen non-regular element). Candidates worth checking:
-   - The reflection onto sub-`Z/12`-sets stabilized by a chosen subgroup.
-   - The double-negation sheafification (always gives an idempotent monad, but lands in the Boolean part and would collapse Exploitation).
-   - A bespoke reflective subcategory determined by the kernel choice.
-   This is the next concrete formalization task. By Remark 5.5 of `paper.md` and the kernel-checked `DistinctionStructure.ofIdempotentMonad` constructor, *any* idempotent monad on the topos producing the right kernel image will suffice.
+**Realization T2 (presheaves on the join-irreducible poset).** By Birkhoff's representation theorem for finite distributive lattices, `L ≅ O(P)` where `O(P)` is the lattice of down-closed subsets of the poset `P` of join-irreducible elements of `L` (excluding the bottom). For our `L`, the join-irreducibles excluding `1` are `{2, 3, 4}` with order: `2 < 4`, `3` incomparable. Read musically:
 
-2. **No Coltrane classification yet.** The §6 Coltrane test classifies specific works against the partition. With `Z/12-Sets` as the topos, each work would be encoded as a morphism `f: X → Y` for some sub-`Z/12`-set `X`, and classified by where `Im(D.map f) ∈ Sub(D(Y))` lands. This requires (i) the distinction structure of caveat 1 and (ii) a defended pitch-class encoding of each work as a `Z/12`-set. Both deferred.
+```
+       4 (diminished 7th  <3>)
+       |
+       2 (tritone <6>)        3 (augmented triad <4>)
+```
 
-### 12.6 Plan for v3
+— "the augmented triad is incomparable with the chain `tritone ⊂ diminished 7th`." Then `Set^{Pᵒᵖ}` is an elementary topos with `Sub_{Set^{Pᵒᵖ}}(1) ≅ L`. T2 has *some* music-theoretic readability: the underlying category is a 3-object poset of basic symmetric pitch-class types under inclusion.
 
-- **`wolfram/music-anchor/four-position-music-v3-path-b.wl`** (next): a self-contained kernel-checkable script that builds the divisor lattice of 12, certifies it is Heyting (via direct distributivity and idempotency checks), enumerates the cells at multiple kernel choices (including the tritone), and prints the partition with musical labels. This is the empirical companion to §12.3.
-- **Next Lean work** (deferred): identify a concrete idempotent monad on `Z/12-Sets` whose unit's image at `Y = Z/12` is the tritone subgroup. Use `DistinctionStructure.ofIdempotentMonad` to lift to a full distinction structure and re-run the partition theorem against it in Lean.
-- **Coltrane test** (deferred further): once the distinction structure is in place, encode the three reference works and classify. This is the §6 test, postponed until the topos-side structure is in hand.
+Both T1 and T2 are existence proofs by general topos theory. Neither is constructed in Lean in this round; they are cited as standard. The Layer-L theorem is what is kernel-checked.
 
-The lattice-level v3 deliverable certifies the non-vacuity claim of Theorem 5.1 on music-domain material. The Lean-side work upgrades that to a full distinction-structure witness. The Coltrane test is the third stage.
+### 12.6 Distinction structure (Layer D): construction template
+
+To lift Layer L to a full Theorem-5.1 instance, we need a non-trivial distinction structure `(D, η, ι)` on the chosen `T` such that `Im(η_Y)` lands at a non-regular element of `L` (so Exploitation is non-empty).
+
+By Remark 5.5 of `paper.md` and the kernel-checked constructor `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad`, it suffices to exhibit any idempotent monad on `T` with the right kernel image.
+
+For `T = Sh(L)` or `T = Set^{Pᵒᵖ}`, idempotent monads correspond to closure operators on `L`. Closure operators on `L` are abundant; the relevant ones for our purposes are those whose value at the top is some specific non-regular element of `L`. Two natural candidates:
+
+- **`c(d) = lcm(d, 2)`** (closure to a multiple of the tritone order). Closure of the top is 12 (so the kernel at the top is 12 = full chromatic). Not the witness we want.
+- **`c(d) = d ⊓ <a chosen filter element>`** — a localization to the filter above some element. Localization to the filter above `<6>` (the tritone) gives an idempotent comonad rather than monad in some conventions; the dual reflection onto the principal ideal below `<6>` gives the monad we want, with kernel image = `<6>` at the top.
+
+Concrete construction and verification is deferred. The point is that the construction template exists and is standardized, and the kernel-checked lift constructor is already in place.
+
+### 12.7 Status summary
+
+| Layer | Claim                                              | Status                          |
+|-------|----------------------------------------------------|---------------------------------|
+| L     | Divisor lattice of 12 is non-Boolean Heyting; four-position partition non-vacuous at tritone kernel | **Kernel-checked in Lean.**  `FalseWork.Lattice.lattice_four_position_partition` (abstract) and `FalseWork.Lattice.Examples.Div12.music_anchor_witness` (concrete). Audit lines in `Examples/HeytingTypeInstance.lean`. |
+| T     | The lattice arises as `Sub_T(1)` for at least two elementary topoi (T1 = `Sh(L)`, T2 = `Set^{Pᵒᵖ}`) | **Cited from general topos theory.** Not constructed in Lean in this round; would require either localic topos infrastructure or finite-poset presheaf infrastructure. |
+| D     | A concrete distinction structure on T with the right kernel image lifts Layer L to Theorem 5.1 | **Construction template + kernel-checked lift constructor.** `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad` is in place; the specific idempotent-monad witness is deferred. |
+
+This is the rigorous slot: Layer L kernel-checked, Layer T standard topos theory, Layer D template-with-deferred-witness. The Wolfram script `wolfram/music-anchor/four-position-music-v3-path-b.wl` is the computational companion to Layer L, verifying the same lattice facts that the Lean kernel-checks.
+
+### 12.8 Scope honesty
+
+This music anchor uses elementary group-theoretic structure (subgroups of `Z/12` = transposition-symmetric pitch-class subsets, due to Messiaen 1944 and pitch-class set theory; not to Tymoczko, Mazzola, Lewin, or Andreatta). The choice was made because it is **the smallest concrete music-meaningful Heyting lattice on which the four-position partition is non-vacuous**, not because it is the deepest music-theoretic instantiation possible. The categorical music apparatus (Tymoczko's groupoid voice-leading geometry, Mazzola's denotator framework, Lewin's transformational theory, Andreatta's SMIR program, etc.) remains available for richer follow-up instantiations; none of it is needed for the lattice-level witness here.
+
+The Coltrane classification of §6 remains deferred. With Layer L kernel-checked, the work needed for the Coltrane test is: (i) a Layer-D witness, (ii) a defended pitch-class encoding of each work, (iii) classification under the resulting distinction structure. None of these are blocking; all are downstream of the work in this round.
 
 ---
 
