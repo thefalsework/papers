@@ -77,22 +77,40 @@ wolfram/
 │   │                                  short-circuit witness search to fit the
 │   │                                  Wolfram Cloud cell budget. Executed
 │   │                                  NON-VACUOUS 2026-05-26.
-│   └── four-position-physics-v3.wl  Route A v3 Bohrification-native kernel
-│                                      candidates: discretised V(M_2(C) (+) C)
-│                                      vs. poset-isomorphic V_d(C^7) classical
-│                                      control. Tests 7 kernel candidates
-│                                      (sec. 4.1-4.6, 4.8 of v3-scope.md) plus
-│                                      exhaustive non-regular sweep (sec. 4.7).
-│                                      Executed 2026-05-26: cell-non-emptiness
-│                                      NEGATIVE across all seven candidates
-│                                      (matches dim < KS threshold prediction);
-│                                      cell-CARDINALITY POSITIVE on candidates
-│                                      4.1 and 4.3 with clean ratios ~2^3
-│                                      traceable to off-direction daseinisation
-│                                      lifts. Exhaustive sweep (sec. 4.7) cut
-│                                      off mid-run but is structurally null
-│                                      (lattice-iso pins both sides to match);
-│                                      see v3-scope.md sec. 10.4 for argument.
+│   ├── four-position-physics-v3.wl  Route A v3 Bohrification-native kernel
+│   │                                  candidates: discretised V(M_2(C) (+) C)
+│   │                                  vs. poset-isomorphic V_d(C^7) classical
+│   │                                  control. Tests 7 kernel candidates
+│   │                                  (sec. 4.1-4.6, 4.8 of v3-scope.md) plus
+│   │                                  exhaustive non-regular sweep (sec. 4.7).
+│   │                                  Executed 2026-05-26: cell-non-emptiness
+│   │                                  NEGATIVE across all seven candidates
+│   │                                  (matches dim < KS threshold prediction);
+│   │                                  cell-CARDINALITY POSITIVE on candidates
+│   │                                  4.1 and 4.3 with clean ratios ~2^3
+│   │                                  traceable to off-direction daseinisation
+│   │                                  lifts. Exhaustive sweep (sec. 4.7) cut
+│   │                                  off mid-run but is structurally null
+│   │                                  (lattice-iso pins both sides to match);
+│   │                                  see v3-scope.md sec. 10.4 for argument.
+│   └── four-position-physics-v4.wl  Route A v4 Bohrification on M_3(C):
+│                                      structural-break detection at dim >= 3.
+│                                      Configuration: 4 MASAs of M_3(C) (the
+│                                      cardinal triple + 3 Hadamard-pair MASAs
+│                                      each sharing one atom with cardinal),
+│                                      8 contexts total. Two classical
+│                                      comparators: minimal C^3 (cleanest
+│                                      contrast) and best-effort same-Hasse
+│                                      C^9 (v3-discipline check). Primary
+│                                      signal: |GlobalSections(Sigma)| (count
+│                                      of atomic-everywhere clopen subobjects).
+│                                      Secondary: v3-style cardinality kernels
+│                                      4.1' and 4.5' on this richer config.
+│                                      Not full KS-blocking (Penrose-40 /
+│                                      Peres-33 are research scope for v5);
+│                                      v4 here is the architectural extension
+│                                      to dim 3 with shared atoms. To be
+│                                      executed.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions
