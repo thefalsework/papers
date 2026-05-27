@@ -365,25 +365,33 @@ ccC = <|
 |>;
 
 (* C^9 representation (for classical daseinisation analogues).
-   Atoms p1..p9.  T1c atoms ~ {p1, p2, p3+...+p9} but actually we want
-   a 3-block partition.  Pick T1c = {p1+p2+p3, p4+p5+p6, p7+p8+p9}
-   (each atom of T1c is a rank-3 idempotent of C^9).
-   Sub-MASA atoms at "shared positions": V12c atom (= "P2 analogue") = 
-   p7+p8+p9 (the third T1c atom).
-   T2c needs different 2 atoms summing to 1 - (p7+p8+p9) = p1+...+p6.
-   Use T2c atoms = {p1+p4, p2+p3+p5+p6, p7+p8+p9}.
-   Similarly T3c = {p4+p5+p6, p1+p7, p2+p3+p8+p9}.
-   Etc. *)
+   T1c atoms (3-block partition of {1..9}):
+     qT1a = unit{1,2,3} (analogue of P0)
+     qT1b = unit{4,5,6} (analogue of P1)
+     qT1c = unit{7,8,9} (analogue of P2)
+   Each Tnc shares ONE atom with T1c (the analogue of the shared
+   quantum atom), and has 2 other atoms partitioning the complement.
+
+   T2c shares qT1c (analogue of |2><2|).  Other 2 atoms partition
+   complement = unit{1..6}.  Pick qT2a = unit{1,4}, qT2b = unit{2,3,5,6}.
+
+   T3c shares qT1b (analogue of |1><1|).  Other 2 atoms partition
+   complement = unit{1,2,3,7,8,9}.  Pick qT3a = unit{1,7},
+   qT3b = unit{2,3,8,9}.
+
+   T4c shares qT1a (analogue of |0><0|).  Other 2 atoms partition
+   complement = unit{4,5,6,7,8,9}.  Pick qT4a = unit{4,7},
+   qT4b = unit{5,6,8,9}. *)
 unitC9[i_] := ReplacePart[ConstantArray[0, 9], i -> 1];
 qT1a = Total[Map[unitC9, {1, 2, 3}]];
 qT1b = Total[Map[unitC9, {4, 5, 6}]];
 qT1c = Total[Map[unitC9, {7, 8, 9}]];
 qT2a = Total[Map[unitC9, {1, 4}]];
 qT2b = Total[Map[unitC9, {2, 3, 5, 6}]];
-qT3a = Total[Map[unitC9, {4, 5, 7}]];
-qT3b = Total[Map[unitC9, {1, 2, 8, 9}]];
-qT4a = Total[Map[unitC9, {1, 7}]];
-qT4b = Total[Map[unitC9, {2, 3, 8, 9}]];
+qT3a = Total[Map[unitC9, {1, 7}]];
+qT3b = Total[Map[unitC9, {2, 3, 8, 9}]];
+qT4a = Total[Map[unitC9, {4, 7}]];
+qT4b = Total[Map[unitC9, {5, 6, 8, 9}]];
 
 cZeroV = ConstantArray[0, 9];
 cOneV  = ConstantArray[1, 9];
@@ -437,21 +445,23 @@ daseinOC[v_, P_] := Module[{candidates},
 (* Characters of V at which the daseinisation projection d evaluates to 1.
    For atom-list (a1,...,ak), character i is "atom a_i -> 1, others -> 0".
    The character evaluates the larger projection d to 1 iff a_i lies
-   in the range of d, equivalently d.a_i = a_i. *)
-charactersWithValueQ[v_, d_] := Module[{atoms, spec, support},
+   in the range of d, equivalently d.a_i = a_i.
+   Implementation note: map atom-by-atom to a per-atom test value, then
+   find positions of "True"; this avoids Position iterating into the
+   tensor structure of the atom matrices. *)
+charactersWithValueQ[v_, d_] := Module[{atoms, spec, hits},
   atoms = qAtoms[v];
   spec = spectraQ[v];
-  support = Flatten[Position[atoms,
-    a_ /; Norm[d . a - a] < 10^-7]];
-  spec[[support]]
+  hits = Map[Function[a, Norm[d . a - a] < 10^-7], atoms];
+  spec[[Flatten[Position[hits, True]]]]
 ];
-charactersWithValueC[v_, d_] := Module[{atoms, spec, support},
+charactersWithValueC[v_, d_] := Module[{atoms, spec, hits},
   atoms = cAtoms[v];
   spec = spectraC[v];
-  support = Flatten[Position[atoms,
-    a_ /; AllTrue[Range[Length[a]],
-            (a[[#]] === 0) || (d[[#]] >= 1 - psdTol) &]]];
-  spec[[support]]
+  hits = Map[Function[a,
+    AllTrue[Range[Length[a]],
+      (a[[#]] === 0) || (d[[#]] >= 1 - psdTol) &]], atoms];
+  spec[[Flatten[Position[hits, True]]]]
 ];
 
 (* Daseinisation as a clopen subobject of Sigma *)
