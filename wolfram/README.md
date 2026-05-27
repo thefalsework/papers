@@ -93,7 +93,7 @@ wolfram/
 │   │                                  off mid-run but is structurally null
 │   │                                  (lattice-iso pins both sides to match);
 │   │                                  see v3-scope.md sec. 10.4 for argument.
-│   └── four-position-physics-v4.wl  Route A v4 Bohrification on M_3(C):
+│   ├── four-position-physics-v4.wl  Route A v4 Bohrification on M_3(C):
 │                                      structural-break detection at dim >= 3.
 │                                      Configuration: 4 MASAs of M_3(C) (the
 │                                      cardinal triple + 3 Hadamard-pair MASAs
@@ -124,6 +124,27 @@ wolfram/
 │                                      Penrose-40 / Peres-33 are research
 │                                      scope for v5 (KS-blocking required for
 │                                      the categorical structural break).
+│   └── four-position-physics-v5.wl  Route A v5 Peres-33 KS-blocking
+│                                      structural-break test. Configuration:
+│                                      the full Peres-33 set (33 explicit
+│                                      rays + 24 dyad-completion rays = 57
+│                                      rays; 16 explicit triads + 24 implicit
+│                                      triads = 40 triads), per Peres 1991
+│                                      and Aravind & Lee-Elkin 2007. Skips
+│                                      Sub_cl(Sigma) enumeration entirely;
+│                                      computes |GlobalSections(Sigma_Q)|
+│                                      directly via Mathematica's
+│                                      SatisfiabilityCount on 57 boolean
+│                                      variables with 40 "exactly-one-of-
+│                                      three" constraints. By the Kochen-
+│                                      Specker theorem, this count is 0;
+│                                      the script makes that computation
+│                                      explicit in the framework's machinery.
+│                                      Comparator: minimal C^3 with 3 global
+│                                      sections. Predicted result: 0 < 3
+│                                      (strict inequality = categorical
+│                                      structural break detected). To be
+│                                      executed.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions
