@@ -264,6 +264,89 @@ User instruction: "the richest choices but best choices" and "stop planning, do 
 
 This decision-gate produces the v4 script at `wolfram/physics-anchor/four-position-physics-v4.wl`. Run it; fold results into `physics-anchor/feasibility.md` §4.8 (next checkpoint).
 
+## 11. Results from the run (2026-05-26)
+
+The v4 script executed against Wolfram Cloud in two passes: a first pass produced clean Part 0-4 results but errored in Part 5 due to two bugs (a Position-level mistake in `charactersWithValueQ`/`charactersWithValueC`, and a wrong C^9 3-block partition for `T3c`/`T4c`). The bugs are fixed in commit `466bc13`; the second-pass output is clean.
+
+### 11.1 Setup and sanity (Parts 0-1)
+
+- Hasse cardinality match: `|leq_q| = |leq_c| = 13`. Spectrum sequence `{1, 2, 2, 2, 3, 3, 3, 3}` on both sides. **Poset-isomorphism confirmed.**
+- `|Sub_cl(Σ_Q)|` = `|Sub_cl(Σ_C-best-effort)|` = `137`. `|Sub_cl(Σ_C_min)|` = `9`. **Lattice-iso holds between quantum and best-effort same-Hasse comparator.**
+
+### 11.2 Global section counts (Part 2): NOT KS-blocking
+
+- `|GlobalSections(Σ_Q)|` = `12`.
+- `|GlobalSections(Σ_C-best-effort)|` = `12`.
+- `|GlobalSections(Σ_C_min)|` = `3`.
+
+The match between `Σ_Q` and `Σ_C-best-effort` confirms the 4-MASA shared-atom configuration is **not KS-blocking**. The structural break (`|GlobalSections(Σ_Q)| < |GlobalSections(Σ_C)|`) requires a richer MASA configuration (Penrose-40, Peres-33, or Conway-Kochen 31 vectors). This was the "expected if not KS-blocking" branch of the §10 decision-gate.
+
+### 11.3 Kernel `a*` (Part 3-4): trivial at non-KS-blocking
+
+`a*` = join of all atomic-everywhere clopen subobjects.
+
+- On quantum side: `a*_Q` = the top subobject `⊤` (full at every context). Same on classical side. The 12 global sections collectively cover every character at every context.
+- Partition at `a* = ⊤`: `(Infrastructure, Refusal, Exploitation, Distribution) = (136, 0, 0, 0)` on both sides. Trivial.
+
+This is the expected behaviour at non-KS-blocking: when `Σ_Q` has many global sections, their join is the top subobject, and no structural-break signal lives at this kernel.
+
+### 11.4 Secondary kernels (Part 5): a new structural finding
+
+The off-axis test projection is `P = rank-1 onto (|0⟩+|1⟩+|2⟩)/√3` (the symmetric diagonal direction, not aligned with any MASA). Its classical analogue is `P' = unit{1,4,7}` (one element from each `T_1c` block).
+
+Daseinisation component sizes (counts of characters in `δ(P)_V` per context `V`):
+
+- Quantum: `{V_0: 1, V_12: 2, V_13: 2, V_14: 2, T_1: 3, T_2: 2, T_3: 2, T_4: 2}`.
+- Classical: same pattern (modulo `c` suffix).
+
+The daseinisation is FULL at every sub-MASA (`V_12, V_13, V_14`) and FULL at the cardinal MASA (`T_1`), but missing one character at each Hadamard-pair MASA (`T_2, T_3, T_4`). This is structurally different from v3, where the daseinisation was FULL only at off-direction maximal contexts, not at sub-MASAs.
+
+#### Kernel 4.1' `δ(P)`
+
+| Side | Regular? | `(i, r, e, d)` |
+|------|----------|----------------|
+| Q | **False** | `(8, 0, 128, 0)` |
+| C | **False** | `(8, 0, 128, 0)` |
+
+**This is the v4 new finding.** Unlike v3 (where every daseinisation-derived kernel was Heyting-regular), at v4 the daseinisation of an off-axis projection is **non-regular** with **non-empty Exploitation** (`e = 128`).
+
+Mechanism: `δ(P)_V_12 = FULL` (size 2 out of 2), `δ(P)_V_13 = FULL`, `δ(P)_V_14 = FULL`. The Heyting NOT computes `¬δ(P)_T = spectrum(T) \ ⋃_{V ∈ m_T} lift(δ(P)_V)`. Since `δ(P)_V_12 = FULL`, the lift to any `T ⊇ V_12` is FULL, so `¬δ(P)_T = ∅` at every `T`. Hence `¬δ(P) = ⊥` (bottom), `¬¬δ(P) = ⊤` (top), but `δ(P) ≠ ⊤` (it's missing one character at each `T_2, T_3, T_4`). Therefore `δ(P) ≠ ¬¬δ(P)`, i.e., `δ(P)` is non-regular, with the "gap" `¬¬δ(P) \ δ(P)` populating Exploitation.
+
+**The framework's machinery detects this non-tightness as `Exploitation = 128`.** This is the first non-empty Exploitation cell from a daseinisation-derived kernel in any of v2/v3/v4. It's a real structural feature of dim-3 daseinisation, traceable to the round-up-to-identity at every off-direction sub-MASA.
+
+The quantum-vs-classical comparison still matches: both have `(8, 0, 128, 0)`. So the divergence-criterion of §5 (`v3-scope.md` and `v4-scope.md`) is still negative — but the *intrinsic* non-regularity of daseinisation is a v4-new finding worth recording.
+
+#### Kernel 4.5' `δ(P) ∧ ¬δ(¬P)`
+
+| Side | Regular? | `(i, r, e, d)` |
+|------|----------|----------------|
+| Q | True | `(0, 136, 0, 0)` |
+| C | True | `(0, 136, 0, 0)` |
+
+Back to regular, with trivial cells (`Infrastructure` and `Exploitation` empty; `Refusal = 136 = |Sub_cl| - 1`). The Heyting structure erases the non-regularity of `δ(P)` when wrapped in `∧ ¬δ(¬P)` — same "Heyting-erasure" pattern as v3.
+
+### 11.5 Verdict
+
+**Headline structural-break criterion (§4.1 of this memo): NEGATIVE.** `|GlobalSections(Σ_Q)| = |GlobalSections(Σ_C-best-effort)| = 12`. The 4-MASA shared-atom config is not KS-blocking; v5 with a Penrose-40 / Peres-33 / Conway-Kochen configuration is needed to push the quantum count toward zero.
+
+**Secondary cardinality criterion (§4.3): NEGATIVE.** Both kernels 4.1' and 4.5' give matching `(i, r, e, d)` between quantum and best-effort classical. The v3 cardinality signal does not re-appear here because the diagonal test projection `P = |+++⟩⟨+++|` is symmetric across the 3 cardinal axes; the classical comparator's daseinisation analogue mirrors this symmetry exactly.
+
+**New structural finding (not anticipated in §4 of this memo): `Exploitation > 0` at daseinisation-derived kernel.** At v4 the daseinisation of `P = |+++⟩⟨+++|` is non-regular with `e = 128`, the first such instance across v2, v3, v4. The mechanism is daseinisation round-up-to-identity at every off-direction sub-MASA (made possible by the dim-3 setup with 1-dim sub-MASAs of rank-1-projection type, which v3's dim-2 `V_C` couldn't accommodate). This is a quantitative sharpening of "the framework's machinery detects structural features of dim-3 topos-QM that don't exist at dim 2" — even without the categorical KS signal.
+
+### 11.6 What to do next (v5 design)
+
+The v4 result clarifies the v5 target precisely:
+
+1. **KS-blocking is required for the cell-non-emptiness signal.** v4 with 4 MASAs has 12 global sections; KS-blocking requires `|GlobalSections| = 0`. The shortest dim-3 KS proofs use 10-16 MASAs (Penrose dodecahedron at 10 MASAs / 40 vectors; Peres-33 at 16 MASAs / 33 vectors; Conway-Kochen at 31 vectors).
+
+2. **The exhaustive sweep over non-regular kernels (deferred from v3, structurally null there) is non-trivially populated at v4** — `δ(P)` is itself non-regular at `e = 128`. So v5 with a KS-blocking config should produce many non-regular daseinisation kernels, and the exhaustive sweep (if computationally tractable) becomes meaningful.
+
+3. **Computational tractability at KS-blocking is the design constraint.** Adding 6-12 more MASAs to v4 brings contexts to ~20-30 and `|Sub_cl|` to ~`10^6-10^9`. Direct enumeration via `buildSubobjects` would not scale. v5 needs either (a) a smarter subobject enumeration (e.g., enumeration restricted to "atoms-of-relevant-subs" rather than full power-set), (b) Approach 3 (skip `Sub_cl` enumeration entirely, compute only `|GlobalSections|` by direct character-tuple iteration), or (c) symbolic Heyting algebra reasoning (substantially harder, leaves Wolfram).
+
+4. **Choice of KS configuration**: Penrose dodecahedron (10 MASAs, 40 vectors with high symmetry) is the most tractable starting point; Peres-33 (16 MASAs, 33 vectors, slightly larger) is the cleanest reference. Conway-Kochen (31 vectors, undocumented MASA structure) is harder to set up.
+
+The v5 scope memo will pick one of these and design the corresponding script. Most likely Penrose dodecahedron + Approach 3 (skip `Sub_cl`, count `|GlobalSections|` only, which is `O(3^10) ≈ 60k` tuples — instantly tractable).
+
 ---
 
 ## References

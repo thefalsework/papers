@@ -106,11 +106,24 @@ wolfram/
 │                                      of atomic-everywhere clopen subobjects).
 │                                      Secondary: v3-style cardinality kernels
 │                                      4.1' and 4.5' on this richer config.
-│                                      Not full KS-blocking (Penrose-40 /
-│                                      Peres-33 are research scope for v5);
-│                                      v4 here is the architectural extension
-│                                      to dim 3 with shared atoms. To be
-│                                      executed.
+│                                      Executed 2026-05-26: primary structural-
+│                                      break signal NEGATIVE (|GlobalSections|
+│                                      = 12 on both Q and C-best-effort,
+│                                      confirming 4-MASA M_3(C) is not KS-
+│                                      blocking; |GlobalSections(C_min)| = 3
+│                                      shows the categorical-contrast baseline).
+│                                      Secondary cardinality kernels also
+│                                      match between Q and C-best-effort
+│                                      (lattice-iso pins counts). NEW
+│                                      structural finding: dasein(P) is
+│                                      Heyting-non-regular with Exploitation
+│                                      = 128 (first non-regular daseinisation
+│                                      across v2/v3/v4); mechanism is round-
+│                                      up-to-identity at every off-direction
+│                                      sub-MASA, a genuinely dim-3 phenomenon.
+│                                      Penrose-40 / Peres-33 are research
+│                                      scope for v5 (KS-blocking required for
+│                                      the categorical structural break).
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions
