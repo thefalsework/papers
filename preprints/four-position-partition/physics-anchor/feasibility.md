@@ -410,6 +410,109 @@ The concrete commitments this round are the Wolfram exploration scripts (`v1.wl`
 
 ---
 
+## 8. Framework-level theorem opportunity: structural characterisation of non-regularity in `Sub_{cl}(Σ)`
+
+The empirical findings across v1–v4 (`§3.2`, `§4.5`, `§4.7`, `§4.9`) converge on a candidate framework-level structural theorem worth recording explicitly. The candidate would, if fully proved, unify the non-regularity mechanisms observed across all four checkpoints into a single intrinsic-lattice characterisation. This section states the candidate, proves the sufficient-condition (forward) direction, identifies the open reverse direction, and flags a tension with the published topos-QM literature that the framework's reading of Døring 2012 needs to resolve.
+
+### 8.1 The candidate
+
+**Theorem candidate (sufficient-and-necessary form, full equivalence conjectured).** Let `A` be a unital C*-algebra with non-trivial context category `V(A)`, and let `Sub_{cl}(Σ_A)` be the lattice of clopen subobjects of the spectral presheaf equipped with the stagewise Heyting structure of Døring 2012 Prop. 2. For any `s ∈ Sub_{cl}(Σ_A)` with `s ≠ ⊥` and `s ≠ ⊤`:
+
+> `s` is Heyting-non-regular in `Sub_{cl}(Σ_A)` **if and only if** there exists a non-trivial sub-context `V' ∈ V(A)` such that `s_{V'} = Σ(V')` (i.e., `s` has a *full* component at `V'`).
+
+The "only if" direction is the open reverse direction (§8.4). The "if" direction is the sufficient-condition forward direction (§8.2), which we prove below.
+
+The intuition: in the stagewise Heyting NOT formula `(¬s)_V = Σ(V) \ ⋃_{V'' ∈ m_V} lift_{V'' → V}(s_{V''})`, a full component at any sub-context `V''` makes the lift `lift_{V'' → V}(s_{V''})` cover all of `Σ(V)`, forcing `(¬s)_V = ∅`. Once `¬s` is bottom (everywhere empty), `¬¬s` becomes top. If `s` is not itself top, this gives `s ≠ ¬¬s`, i.e., non-regularity. The reverse direction conjectures that this is *the only mechanism* by which non-regularity can arise in `Sub_{cl}(Σ)` — that every non-regular `s ≠ ⊥` must have a full component at some sub-context.
+
+### 8.2 Forward direction (proved)
+
+**Proposition (sufficient condition for non-regularity).** Let `A` be a unital C*-algebra and `s ∈ Sub_{cl}(Σ_A)` with `s ≠ ⊤`. If there exists a sub-context `V' ∈ V(A)` such that:
+- (i) `s_{V'} = Σ(V')` (full component at `V'`), AND
+- (ii) `V'` appears in `m_V` (the minimal sub-context set per Døring 2012 Prop. 2) for at least one context `V` such that the union `⋃_{V'' ∈ m_V} lift_{V'' → V}(s_{V''})` together with the restriction structure forces `(¬s)_V = ∅` propagating to `¬s = ⊥` everywhere,
+
+then `s` is Heyting-non-regular in `Sub_{cl}(Σ_A)`.
+
+**Proof.**
+1. By (ii) and the stagewise NOT formula (Døring 2012 Prop. 2), `(¬s)_V = ∅` at some context `V`. The "appears in m_V" assumption + (i) suffices because `lift_{V' → V}(s_{V'}) = lift_{V' → V}(Σ(V')) = `{characters of V whose restriction to V' lies in Σ(V')}` = Σ(V)` (every character restricts somewhere in Σ(V')).
+2. Propagating `∅` through the restriction structure of clopen subobjects (a clopen subobject's components must satisfy compatibility under restriction; if components are `∅` at sufficient contexts, the subobject is `⊥`), `¬s = ⊥`.
+3. Then `¬¬s = ¬⊥ = ⊤`.
+4. By hypothesis `s ≠ ⊤`, so `s ≠ ¬¬s`. Hence `s` is non-regular. ∎
+
+The proof's only convention-dependence is in step 2's "propagating `∅`" — the propagation works cleanly under Døring 2012's clopen-subobject restriction structure as used in `v3.wl`, `v4.wl`, `v5.wl`. The v4 numerical finding (`§4.9`, where `δ(P)` was full at `V_{12}, V_{13}, V_{14}` and `¬δ(P)` came out bottom) confirms the propagation step empirically in the convention the framework's scripts use.
+
+### 8.3 Daseinisation corollary (the v4 mechanism in general form)
+
+**Corollary.** For any projection `P ∈ A` with `P ≠ I` (so `δ(P) ≠ ⊤`), if there exists a sub-context `V' ∈ V(A)` such that no proper sub-MASA projection of `V'` dominates `P` in the projection ordering (equivalently, `δ^o_{V'}(P) = I_{V'}`), then `δ(P) ∈ Sub_{cl}(Σ_A)` is Heyting-non-regular.
+
+**Proof.** `δ^o_{V'}(P) = I_{V'}` ⟹ `δ(P)_{V'}` = {characters of `V'` evaluating `I_{V'}` to 1} = `Σ(V')` (every character evaluates the identity to 1). So `δ(P)` is full at `V'`. Apply §8.2's proposition. ∎
+
+This is the v4 mechanism (`§4.9`) lifted to a framework-level statement: *daseinisation of an off-axis projection becomes non-regular precisely at sub-contexts where no proper sub-MASA atom can serve as a refinement step*. The "round-up to identity at off-direction sub-MASAs" observation, in the corollary's clean form, is a structural prediction about which projections produce non-regular daseinisations, not a one-off numerical observation from v4.
+
+The corollary predicts:
+- In `M_2(C)` (`v3` substrate): every rank-1 projection lies in some MASA, and every sub-MASA (1-dim, `⟨Q, I-Q⟩`) either contains `P` as an atom or contains `I-P` as an atom. So either `Q ≥ P` or `Q ≥ I-P`. Either way, `δ^o_{V'}(P) ≠ I_{V'}`. Hence the corollary's hypothesis is *never satisfied* at dim 2, and daseinisations are always regular. This matches v3's empirical finding (`§4.6`, candidates 4.5 and 4.8 erase non-regularity).
+- In `M_3(C)` (`v4` substrate): for `P` off-axis relative to all 1-dim sub-MASAs, no rank-1 sub-MASA atom dominates `P`, so the corollary's hypothesis fires and `δ(P)` is non-regular. This matches v4's empirical finding (`§4.9`, Exploitation = 128 at kernel 4.1').
+- In `M_n(C)` for `n ≥ 3` with sufficiently rich sub-MASA structure: off-axis projections produce non-regular daseinisations at sub-MASAs they fail to align with.
+
+The corollary is therefore a structural prediction with *checkable* dimensional behaviour, consistent with the v2/v3/v4 empirical record across dim 2 and dim 3.
+
+### 8.4 Reverse direction (open)
+
+The open part of the candidate theorem is: **every non-regular `s ∈ Sub_{cl}(Σ_A)` with `s ≠ ⊥` has a full component at some sub-context.**
+
+Equivalent contrapositive: **if for every sub-context `V'`, `s_{V'} ≠ Σ(V')`, then `s` is Heyting-regular.**
+
+A proof would need to show that "no full sub-context component anywhere" propagates upward through the iterated NOT formula to give `¬¬s = s`. This is more delicate than the forward direction because the doubled NOT involves *two* applications of the stagewise formula and the second one operates on `¬s`, whose components are determined by the first.
+
+The reverse direction may require additional structural hypotheses:
+- Finite-dimensionality of `A` (or finiteness of `V(A)`)
+- Specific properties of the restriction maps (e.g., that they are surjective on spectra at each step)
+- The "tight subobject" property in a sense compatible with Døring 2012 Prop. 5
+
+It is also possible that the reverse direction is *false in full generality* — there may be non-regular `s ∈ Sub_{cl}(Σ_A)` whose non-regularity arises from a more delicate "partial fullness across multiple sub-contexts" mechanism, not from a single full sub-context component. If the reverse direction fails, the forward direction remains a useful *sufficient* condition without being a complete characterisation.
+
+The v1–v4 empirical record is *consistent* with the reverse direction holding (no observed non-regular subobject without a full sub-context component), but the sample is small and the candidate theorem is not falsified by the available data.
+
+### 8.5 Empirical corroboration across v1–v4
+
+The candidate theorem unifies the following empirical findings:
+
+| Checkpoint | Finding | Predicted by candidate theorem |
+|------------|---------|-------------------------------|
+| v1 Route B (§3.2) | `O(P)`-style lattices with global minimum have all non-empty elements double-negation-equal-to-top, so non-regular elements have `¬s = ⊥`; the partition degenerates | At V_0 the "full component" condition is trivial; the lattices uniformly satisfy the forward-direction hypothesis but lack the `s ≠ ⊤` complement needed for non-vacuity. Matches. |
+| v2 shape-driven (§4.5) | Context categories with non-trivial joins host non-vacuous partitions; commutative underlying algebra is sufficient | Non-trivial joins create sub-contexts where some `s_{V'} = Σ(V')` for specific `s`; the forward direction fires at such `s`. Matches. |
+| v3 cardinality at dim 2 (§4.7) | Daseinisations at `M_2(C) ⊕ C` are all Heyting-regular; cardinality divergence is at the lattice level, not the regularity level | Corollary's hypothesis (no proper sub-MASA atom dominates `P`) cannot fire at dim 2 because every 1-dim sub-MASA atom either dominates `P` or its complement. Hence no daseinisation-non-regularity at dim 2. Matches. |
+| v4 non-regular daseinisation at dim 3 (§4.9) | `δ(P)` for `P = |+++⟩⟨+++|` on `M_3(C)` is non-regular with `e = 128` | Corollary's hypothesis fires at sub-MASAs `V_{12}, V_{13}, V_{14}`: no rank-1 atom of these sub-MASAs dominates the off-axis `P`. Forward direction predicts non-regularity. Matches. |
+| v5 KS-blocking (§4.11) | `|GlobalSections(Σ_Q)| = 0` at full Peres-33 set | Orthogonal to the candidate theorem (which is about non-regularity, not global-section cardinality). Independent finding. |
+
+All four checkpoints are consistent with the candidate theorem. None falsifies it. The candidate would, if proved fully, give the framework a *Layer-L structural theorem* about `Sub_{cl}(Σ_A)` — a statement about the topos-internal logic that does not depend on a specific kernel choice or test projection.
+
+### 8.6 Tension with Døring 2012 Prop. 5 + Cor. 2 (flagged for reconciliation)
+
+The framework's §3.3 footnote cites Døring 2012, Prop. 5 + Cor. 2, as establishing that *tight clopen subobjects — including all daseinisations of quantum projections — are Heyting-regular*. The v4 finding (§4.9) and the §8.3 corollary above directly contradict the broadest reading of that claim: at `M_3(C)` with an off-axis test projection, `δ(P)` is *not* Heyting-regular in `Sub_{cl}(Σ_A)`, with `e = 128` quantitatively confirmed.
+
+There are three possible resolutions:
+
+**(a) Døring's regularity claim has narrower scope than the framework's footnote suggested.** Most plausibly, "tight subobject" in Døring 2012 Prop. 5 refers to a *fibre-wise* notion — daseinisations viewed as projections in `P(V)` at a fixed maximal MASA `V`, not as the full clopen subobject `δ(P) ∈ Sub_{cl}(Σ)` ranging over the whole context category. The fibre-wise tightness would be compatible with non-regularity of the global subobject.
+
+**(b) v4's implementation of daseinisation differs from Døring's.** The v4 script (`four-position-physics-v4.wl`) computes `δ^o_V(P)` as the smallest projection in `V` whose range contains range(`P`), then defines `δ(P)_V` as the characters of `V` evaluating `δ^o_V(P)` to 1. This is the standard "outer daseinisation as clopen subobject" construction. If Døring 2012 uses a different daseinisation (e.g., the "outer presheaf" `O^P` defined via Heyting implication, distinct from the daseinisation-as-subobject), then v4's `δ(P)` and Døring's `δ(P)` would be different objects, and regularity of one need not contradict non-regularity of the other.
+
+**(c) v4 has a subtle implementation bug.** The two bug fixes in commit `466bc13` corrected substantive errors; a third undetected error in the daseinisation computation is possible. The v4 components for `δ(P)` are `{V_0:1, V_{12}:2, V_{13}:2, V_{14}:2, T_1:3, T_2:2, T_3:2, T_4:2}` — these were hand-verified in §11 of `v4-scope.md` for the cardinal MASA `T_1` and the Hadamard-pair MASAs `T_2, T_3, T_4`. The sub-MASA values `V_{12}:2, V_{13}:2, V_{14}:2` are reached because the script applies daseinisation at the sub-MASA fibre (where `δ^o = I`), giving FULL = 2 characters. This is consistent with the v4 mechanism, but a careful re-check against Døring's definitions would be the rigorous response.
+
+**Recommended reconciliation:** read Døring 2012, *Topos-based logic for quantum systems and bi-Heyting algebras* (arXiv:1202.2750), §3 (the propositions on regularity) and §4 (daseinisation construction), with the explicit form `δ(P)_V := {χ ∈ Σ(V) : χ(δ^o_V(P)) = 1}` used in v4 in hand. Confirm whether Prop. 5's "tight subobjects are regular" applies to clopen subobjects of `Σ` viewed across the full context category, or only fibre-wise. Document the conclusion in this section. Until that reading is complete, the §3.3 footnote should be read as "Døring 2012 establishes some form of tightness-implies-regularity result whose exact scope the framework has not verified against the v4 empirics" rather than as a settled citation.
+
+### 8.7 What proving the full equivalence would yield
+
+If the reverse direction holds and the Døring tension resolves cleanly (resolution (a) most likely), the framework gains:
+
+- **A Layer-L structural theorem at the topos-QM level.** Currently, the four-position partition theorem (`paper.md` Theorem 5.1) is the framework's Layer-L kernel-checked content. §8 would add a *substrate-specific* Layer-L theorem about `Sub_{cl}(Σ_A)` non-regularity — checkable from the lattice's intrinsic structure, applicable to any C*-algebra `A` and its Bohr topos.
+- **Unification of v1–v4 mechanisms.** The Route-B obstruction, the v2 shape-driven cases, the v3 dim-2 regularity, the v4 dim-3 non-regularity, all become *instances* of one structural pattern rather than four separate empirical findings.
+- **A Lean target.** Once Bohrification is in Mathlib (multi-month scope, deferred), the candidate theorem becomes a kernel-checking target. The forward direction is mechanical and would Lean-check straightforwardly; the reverse direction would be harder but tractable.
+- **An interpretive lever for v6.** With a structural characterisation of non-regularity in hand, picking a non-trivial kernel for the v6 four-cell partition becomes principled: pick a daseinisation `δ(P)` where the corollary's hypothesis fires, and the Exploitation cell will be non-empty by construction.
+
+The candidate theorem is not gating for the v5 structural-feasibility milestone; that milestone is already secured by the categorical `|GlobalSections|` signal. But it is the natural next theorem-content for the physics anchor, and the round-by-round empirical work has done most of the structural reconnaissance for it. The proof effort, if undertaken, would benefit from the v4 empirical concreteness and the §8.6 reconciliation reading.
+
+---
+
 ## References
 
 - Caspers, M., Heunen, C. (2009). Constructively complete finite-dimensional C*-algebras. (Used in the Bohrification programme.)
