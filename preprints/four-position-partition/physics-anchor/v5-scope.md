@@ -146,3 +146,88 @@ Per the KS theorem, `|GlobalSections(Σ_Q)| = 0` is *theoretically guaranteed* f
 After v5 executes successfully, the physics anchor's `Status` line in `physics-anchor/feasibility.md` will be updated to record: **categorical structural-break signal established at dim 3 with Peres-33 (57-40) configuration; framework's machinery faithfully witnesses Kochen-Specker theorem as a finite-dimensional computation.**
 
 This is the milestone that v1, v2, v3, v4 were collectively scoping. v5 fires it.
+
+---
+
+## 11. Results from the run (2026-05-26)
+
+The v5 script executed against Wolfram Cloud on 2026-05-26. Every check passed; the structural-break signal fired as predicted.
+
+### 11.1 Pre-SAT verification (Parts 0–4)
+
+| Check | Result |
+|-------|--------|
+| Peres rays defined | 33 (expect 33) ✓ |
+| Explicit triads defined | 16 (expect 16) ✓ |
+| Dyads defined | 24 (expect 24) ✓ |
+| All 16 explicit triads mutually orthogonal? | True ✓ |
+| All 24 dyads orthogonal? | True ✓ |
+| Sample dyad-completion ray (`{10, 27} →`) | `(√2, 3, -1)` ✓ (matches independent hand calculation) |
+| All completion rays orthogonal to their dyad? | True ✓ |
+| Total rays | 57 (expect 57) ✓ |
+| Total triads | 40 (expect 40) ✓ |
+| All 40 triads mutually orthogonal? | True ✓ |
+| Ray-incidence histogram | `{1→24, 2→6, 3→24, 4→3}` (33 Peres rays appear 2–4 times each; 24 completion rays appear 1 time each, as predicted) |
+| Total contexts | 1 + 33 + 40 = 74 ✓ |
+
+The ray-incidence histogram is itself worth noting: among the 33 explicit Peres rays, 3 appear in 4 triads each (these are rays 1, 2, 3 — the three coordinate axes), 24 appear in 3 triads each (the "(2,1,1)-type" and "(√2,1,1)-type" rays), and 6 appear in 2 triads each (the "face-diagonal" rays 4–9). Sum: 3·4 + 24·3 + 6·2 = 12 + 72 + 12 = 96 = number of ray-slots in 32 triads (16 explicit + 16 dyad-converted-to-triad). Plus the 24 completion-ray-slots (one per implicit triad). Total ray-slots: 96 + 24 = 120 = 40 triads × 3 slots ✓.
+
+### 11.2 The SAT count (Part 5): **0**
+
+```
+|GlobalSections(Σ_Q on M_3(C))|  =  0
+elapsed:                              0.024 seconds
+```
+
+`SatisfiabilityCount` returned **0** with 57 boolean variables and 40 exactly-one-of-three constraints, in **24 milliseconds**. This is the Kochen-Specker theorem rendered as a finite computation in the framework's machinery.
+
+### 11.3 The classical comparator (Part 6)
+
+```
+|GlobalSections(Σ_C_min on C^3)|  =  3
+```
+
+The minimal commutative comparator `C^3` has exactly 3 atomic-everywhere clopen subobjects (one per atom of `C^3`), as predicted analytically.
+
+### 11.4 Verdict
+
+```
+Strict inequality |Sections(Q)| < |Sections(C)|?  True
+
+STRUCTURAL BREAK DETECTED.
+```
+
+`0 < 3` strictly. The categorical structural-break signal fires.
+
+### 11.5 What this establishes
+
+1. **The framework's machinery faithfully witnesses Kochen-Specker.** The Bohrification construction (Heunen-Landsman-Spitters 2009) + Døring's stagewise Heyting NOT (Døring 2012) produce a spectral presheaf `Σ_Q` whose global-section count equals exactly the number of consistent valuations of the Peres-33 configuration — and at the full 40-triad set, that number is zero by KS. v5 computes this in 24 ms.
+
+2. **The categorical signal is established at dim 3.** All previous checkpoints (v2 shape-driven non-vacuity, v3 cell-cardinality at dim 2, v4 non-regular daseinisation at sub-KS-blocking dim 3) were *quantitative* sensitivity findings. v5 is *categorical*: the quantum count is structurally distinct (= 0) from any commutative count (≥ 1). The strict inequality is the signature.
+
+3. **The physics anchor's structural-feasibility claim is now established.** This is the milestone analogous to the music anchor's tritone non-vacuous four-cell partition. The framework's apparatus extends to physics in the structurally-required sense: there exists a finite, computable witness in `Sub_{cl}(Σ)` for a published quantum-foundations theorem (KS), realised via the framework's own machinery.
+
+### 11.6 What this does not establish (preserved scope honesty)
+
+- **No Lean Layer-L theorem.** Bohrification is not in Mathlib; v5 is a Wolfram-level witness, not a kernel-checked proof. (The same gap exists for the music anchor's Layer-L beyond the divisor-lattice slice itself: the higher topos machinery is Wolfram-only there too.)
+- **No four-cell partition at `a*`.** With `|GlobalSections(Σ_Q)| = 0`, the "global-section subobject" `a* = ⋁ GlobalSections = ⊥`, and the four-cell partition at `⊥` is trivial (all of `Sub_cl \ {⊥}` falls in Distribution; the other three cells are empty or singleton). v5 reframes the signal as the cardinality invariant of `Σ`, not as cells of the four-position partition.
+- **The interpretive cell-by-cell physics reading is deferred to v6+.** A future v6 would attempt to define a non-trivial kernel — e.g., the daseinisation of one of the Peres-KS projections, or the "outer presheaf" complement-pair — and compute its four-cell partition for interpretive content.
+
+### 11.7 Where this leaves the physics anchor
+
+The physics anchor crosses the structural-feasibility threshold at the categorical level. Status (mirroring the music anchor's threshold-crossing at v3-path-b's non-vacuous tritone partition):
+
+| Anchor | Threshold-crossing artefact | Threshold-crossing finding |
+|--------|------------------------------|----------------------------|
+| Music  | `wolfram/music-anchor/four-position-music-v3-path-b.wl` | Divisor lattice of 12 non-vacuous at tritone kernel; partition matches Tymoczko's transformational structure |
+| Physics | `wolfram/physics-anchor/four-position-physics-v5.wl` | `Sub_{cl}(Σ_{M_3(C)})` with Peres-33 context category has `0` global sections; strictly less than minimal commutative comparator's 3 |
+
+The cross-domain commitment (Brink 2026a *Kernels and Commas* §2.1, requiring at least six kernels across distinct domains) now has its first *cross-anchor* corroboration: two domain instances, two structurally distinct mathematical substrates (number-theoretic divisor lattice + Lewinian transformational groupoid for music; C*-algebraic Bohr topos + Kochen-Specker no-coloring for physics), one underlying framework apparatus producing a finite, computable structural-typology witness in each.
+
+### 11.8 Open follow-ups (not gating)
+
+- **v5.1 (best-effort same-Hasse comparator)**: construct a commutative `C^N` with a poset-iso context category to the quantum side and verify that *its* global-section count is `≥ 1` (it must be, since every commutative algebra has characters). Documents the precise structural mechanism by which the KS theorem blocks the commutative replication.
+- **v6 (interpretive kernel)**: define a non-trivial kernel `a` from a physically motivated source (e.g., `δ(P)` for a Peres-KS projection `P`, or a Heyting-derived kernel that doesn't trivialise), compute the four-cell partition, attempt an interpretive cell-by-cell reading parallel to the music anchor's tritone-cell mapping.
+- **Lean formalisation**: long-term, a Bohrification typeclass in Mathlib (or a successor formalisation library) would lift the v5 witness from Wolfram computation to kernel-checked theorem. Multi-month scope as recorded in `feasibility.md` §4.3.
+
+None of these is gating for the physics-anchor structural-feasibility claim. v5 has fired that.
