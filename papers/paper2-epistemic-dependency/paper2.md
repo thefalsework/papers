@@ -4,7 +4,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 8.6 (May 2026). First public posting. A record of substantive pre-submission revisions is given in the appendix.*
+*Version 8.7 (May 2026). First public posting. A record of substantive pre-submission revisions is given in the appendix.*
 
 ## Abstract
 
@@ -122,7 +122,7 @@ This distinction matters for the epistemic dependency argument and strengthens i
 
 Three explanations for the convergence are possible and the paper cannot determine which is correct without the expert engagement Stage 4 documents as incomplete. First, the extractor may have absorbed Tymoczko and Newman's specific framing --- the training distribution contains their 2024 paper, and that paper may have shaped the problem setup directly. Second, and more likely given the breadth of the training distribution, the extractor may have absorbed the broader music theory tradition that both Tymoczko/Newman and the FalseWork extractor reflect --- two systems drinking from the same analytical well, converging because they share the same upstream source rather than because either absorbed the other specifically. Third, the convergence may be genuine independent derivation: Bach chorales are a canonical corpus, diatonic distance is a natural measure of harmonic complexity, and two competent analytical systems might arrive at the same analytical frame because the frame is simply correct for the domain.
 
-Given this indeterminacy, the paper adopts the most epistemologically conservative reading. **The paper's classification of Stage 3 as inherited validity is contingent on the Stage 4 correspondence producing readings one or two rather than reading three.** That choice --- Stage 3 as inherited validity rather than independent derivation --- is held provisionally. If the Stage 4 correspondence with Tymoczko produces reading three --- if Tymoczko evaluates the convergence and concludes that the analytical frame is simply correct for the domain rather than inherited --- then the case is reclassified as ordinary independent derivation, and Stage 3 ceases to function as an inherited validity example. That reclassification would remove the centerpiece example from the taxonomy but would not undermine the taxonomy itself. The inherited validity category would remain available for cases that do exhibit the pattern; Stage 3 would simply no longer be one of them.
+Given this indeterminacy, the paper adopts the most epistemologically conservative reading (conservative in the sense of preferring attribution over independent discovery --- the reading less likely to overclaim the framework's originality). **The paper's classification of Stage 3 as inherited validity is contingent on the Stage 4 correspondence producing readings one or two rather than reading three.** That choice --- Stage 3 as inherited validity rather than independent derivation --- is held provisionally. If the Stage 4 correspondence with Tymoczko produces reading three --- if Tymoczko evaluates the convergence and concludes that the analytical frame is simply correct for the domain rather than inherited --- then the case is reclassified as ordinary independent derivation, and Stage 3 ceases to function as an inherited validity example. That reclassification would remove the centerpiece example from the taxonomy but would not undermine the taxonomy itself. The inherited validity category would remain available for cases that do exhibit the pattern; Stage 3 would simply no longer be one of them.
 
 That is exactly what makes inherited validity the hardest case in the taxonomy: it looks like independent derivation from within the system, and distinguishing it from independent derivation requires the external engagement Stage 4 has not yet provided. Until Stage 4 closes, the Stage 3 classification is held provisionally, and readers should calibrate its force accordingly.
 
@@ -399,8 +399,6 @@ Døring, A. (2012). Topos-based logic for quantum systems and bi-Heyting algebra
 Foucault, M. (1969). *L'archéologie du savoir*. Gallimard. \[English translation: *The archaeology of knowledge*, Pantheon, 1972.\]
 
 Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, 38, 173--198.
-
-Hofstadter, D. R. (1979). *Gödel, Escher, Bach: An eternal golden braid*. Basic Books.
 
 Kuhn, T. S. (1962). *The structure of scientific revolutions*. University of Chicago Press.
 
