@@ -71,7 +71,7 @@
 \begin{document}
 \maketitle
 
-\emph{Version 8.5 (May 2026). First public posting. A record of
+\emph{Version 8.6 (May 2026). First public posting. A record of
 substantive pre-submission revisions is given in the appendix.}
 
 \subsection{Abstract}\label{abstract}
@@ -91,26 +91,26 @@ lacked --- a formal theoretical framework that predicts the dependency,
 a working instrument that produces it in real time, a correction
 mechanism that activates against it, and full documentation of the
 complete cycle from dependency generation through detection to
-correction. Six stages are characterized, documented where the record
-exists: two instances of dependency generation, two of
-correction-mechanism activation, and one of the mechanism existing but
-not yet deployed. The sixth is a formal-verification cycle in a public
-mathematical library, where the construction was machine-checked by the
-proof kernel and the contribution was then declined by the library's
-review process under its AI-use policy. The case study grounds a general
-argument: hallucination and genuine correction are distinguishable not
-by the process that produces them --- both are navigations of an
-inherited semantic manifold --- but by the external validation that
-determines which is which. The case study further introduces a third
-category --- inherited validity --- in which the dependency produces
-results that are correct but whose relationship to prior analytical
-framing is not transparent, and which requires the same external
-validation as hallucination to distinguish from independent derivation.
-The correction mechanism is not quality control applied after the fact.
-It is the epistemological architecture of the project. The paper's
-claims rest on the case study alone; its connections to a broader
-research programme are signposted as such and are not load-bearing for
-its conclusions.
+correction. The paper's claims rest on the case study alone; its
+connections to a broader research programme are signposted as such and
+are not load-bearing for its conclusions. Six stages are characterized,
+documented where the record exists: two instances of dependency
+generation, two of correction-mechanism activation, and one of the
+mechanism existing but not yet deployed. The sixth is a
+formal-verification cycle in a public mathematical library, where the
+construction was machine-checked by the proof kernel and the
+contribution was then declined by the library's review process under its
+AI-use policy. The case study grounds a general argument: hallucination
+and genuine correction are distinguishable not by the process that
+produces them --- both are navigations of an inherited semantic manifold
+--- but by the external validation that determines which is which. The
+case study further introduces a third category --- inherited validity
+--- in which the dependency produces results that are correct but whose
+relationship to prior analytical framing is not transparent, and which
+requires the same external validation as hallucination to distinguish
+from independent derivation. The correction mechanism is not quality
+control applied after the fact. It is the epistemological architecture
+of the project.
 
 \subsection{1. The Structural Condition}\label{the-structural-condition}
 
@@ -619,8 +619,8 @@ Newman use unsupervised coupled hidden Markov models operating on raw
 note sequences to infer chord and key structure; FalseWork's proxy
 extractor uses simpler feature extraction computing diatonic distance
 metrics directly from harmonic ratios. The convergence is structural ---
-in corpus choice (Bach chorales accessed through music21, which Tymoczko
-co-developed and which the T\&N paper explicitly uses for output), in
+in corpus choice (Bach chorales accessed through music21, the standard
+symbolic-music toolkit the T\&N paper explicitly uses for output), in
 analytical frame (diatonic distance as the primary measure of harmonic
 complexity, minor mode as the test case for boundary behavior), and in
 the specific finding that the major/minor distinction maps onto a
@@ -656,20 +656,20 @@ distance is a natural measure of harmonic complexity, and two competent
 analytical systems might arrive at the same analytical frame because the
 frame is simply correct for the domain.
 
-\textbf{The paper's classification of Stage 3 as inherited validity is
-contingent on the Stage 4 correspondence producing readings one or two
-rather than reading three.} The paper chooses the most epistemologically
-conservative interpretation --- Stage 3 as inherited validity rather
-than independent derivation --- but the classification is provisional.
-If the Stage 4 correspondence with Tymoczko produces reading three ---
-if Tymoczko evaluates the convergence and concludes that the analytical
-frame is simply correct for the domain rather than inherited --- then
-the case is reclassified as ordinary independent derivation, and Stage 3
-ceases to function as an inherited validity example. That
-reclassification would remove the centerpiece example from the taxonomy
-but would not undermine the taxonomy itself. The inherited validity
-category would remain available for cases that do exhibit the pattern;
-Stage 3 would simply no longer be one of them.
+Given this indeterminacy, the paper adopts the most epistemologically
+conservative reading. \textbf{The paper's classification of Stage 3 as
+inherited validity is contingent on the Stage 4 correspondence producing
+readings one or two rather than reading three.} That choice --- Stage 3
+as inherited validity rather than independent derivation --- is held
+provisionally. If the Stage 4 correspondence with Tymoczko produces
+reading three --- if Tymoczko evaluates the convergence and concludes
+that the analytical frame is simply correct for the domain rather than
+inherited --- then the case is reclassified as ordinary independent
+derivation, and Stage 3 ceases to function as an inherited validity
+example. That reclassification would remove the centerpiece example from
+the taxonomy but would not undermine the taxonomy itself. The inherited
+validity category would remain available for cases that do exhibit the
+pattern; Stage 3 would simply no longer be one of them.
 
 That is exactly what makes inherited validity the hardest case in the
 taxonomy: it looks like independent derivation from within the system,
@@ -922,7 +922,10 @@ existing \texttt{Subobject} order API. The maintainer noted that the
 mathematical idea is plausible and the file compiles, but that reaching
 Mathlib quality would require a substantial refactor by someone fluent
 in the \texttt{Subobject}/classifier API. The contribution was therefore
-declined, not deferred.
+declined, not deferred. Whether the code-quality concerns, stated
+separately, would independently have precluded acceptance is not
+determinable from the record; what the record establishes is that both
+grounds were applied.
 
 Three facts survive the decline and are externally verifiable. First,
 the Zulip-thread correction cycle happened: community feedback was
@@ -1224,7 +1227,12 @@ components except Hemingway, yet the classifier places him in hypotactic
 territory alongside Dickens, Melville, and Woolf. The gap locates
 exactly where syntactic and semantic complexity diverge: James's
 complexity is qualification, nested implication, and deferred reference
-operating above the level that dependency parsing can detect. The
+operating above the level that dependency parsing can detect. That is
+precisely why James, rather than Proust or Kafka, anchors the two-mode
+geometry --- his difficulty is neither elaboration nor disruption but
+qualification, which lives in semantic dependencies the syntactic axis
+is constitutionally unable to register, making that axis not merely an
+imprecise measure of his position but the wrong instrument for it. The
 proxy's failure to see what the classifier sees is itself structural
 information about where the comma operates.
 
@@ -1916,7 +1924,8 @@ condition Stage 4 describes. A subsequent version will update Section
 contemporaneous-documentation principle the case study has followed
 throughout.
 
-A third paper in preparation (Brink 2026c) develops the argument one
+Beyond this open cycle, the broader series develops the argument
+further. A third paper in preparation (Brink 2026c) develops it one
 level further: the distinction operation as generative floor beneath all
 six kernels, connecting Spencer-Brown, Wolfram, and Gödel, and extending
 the epistemic dependency argument to the structural level at which all
@@ -2087,6 +2096,14 @@ version history is maintained in the project repository.)
   \textbf{§ 7.4.} The illustrative incident was de-named, so that it no
   longer identifies a specific commercial product, for consistency with
   the paper's externally-verifiable-evidence standard.
+\item
+  \textbf{music21 attribution (§ 3.3).} An earlier draft described the
+  music21 toolkit as one ``which Tymoczko co-developed.'' music21 was
+  created by Michael Scott Asato Cuthbert at MIT (with Christopher Ariza
+  as lead programmer); Tymoczko is not a developer of it. The
+  misattribution was corrected to a neutral description of the shared
+  corpus tooling --- a fix the paper's own argument about inherited
+  framings makes it especially obligated to get right.
 \end{itemize}
 
 \end{document}
