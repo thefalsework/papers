@@ -71,7 +71,7 @@
 \begin{document}
 \maketitle
 
-\emph{Version 8.9 (May 2026). First public posting. A record of
+\emph{Version 8.10 (May 2026). First public posting. A record of
 substantive pre-submission revisions is given in the appendix.}
 
 \subsection{Abstract}\label{abstract}
@@ -85,12 +85,16 @@ epistemic dependency but the maturity of the correction mechanism
 available to detect and address it. This paper demonstrates this claim
 through a documented live case study: the development of FalseWork, a
 computational structural classification framework built using an AI
-system trained on the theoretical traditions it classifies within. The
-case study provides what prior work on AI epistemic dependency has
-lacked --- a formal theoretical framework that predicts the dependency,
-a working instrument that produces it in real time, a correction
-mechanism that activates against it, and full documentation of the
-complete cycle from dependency generation through detection to
+system trained on the theoretical traditions it classifies within. It is
+the methodology paper of a five-paper series (\emph{The FalseWork
+Papers}): where the other papers make first-order structural and formal
+claims through AI-assisted analysis, this paper specifies and documents
+the architecture by which those claims are checked, corrected, and
+recorded. The case study provides what prior work on AI epistemic
+dependency has lacked --- a formal theoretical framework that predicts
+the dependency, a working instrument that produces it in real time, a
+correction mechanism that activates against it, and full documentation
+of the complete cycle from dependency generation through detection to
 correction. The paper's claims rest on the case study alone; its
 connections to a broader research programme are signposted as such and
 are not load-bearing for its conclusions. Six stages are characterized,
@@ -184,12 +188,33 @@ need not be mature to be functional. A primitive correction mechanism is
 more developed than no mechanism at all.
 
 The correction architecture described here is the validation backbone of
-an ongoing research programme. The present paper is the explicit
-statement, within an open and persistently archived series (Brink 2026a,
-2026c, 2026d, 2026e), of how that programme's AI-assisted findings are
-checked, corrected, and recorded --- not a retrospective methods note
-but the programme's first public account of the validation structure
-under which its other claims are made.
+an ongoing research programme, \emph{The FalseWork Papers}, and this
+paper occupies a specific and indispensable place within it. The series
+comprises five papers: a foundational derivation of universal structural
+positions in domains with self-limiting generative operations (Brink
+2026a); the present paper; a derivation grounding all six domain kernels
+in a single distinction operation (Brink 2026c); a proposal that
+mathematics is the formal residue of that operation (Brink 2026d); and a
+focused study of the Pythagorean comma and the irrationality of √2
+(Brink 2026e). The other four make first-order claims --- structural
+classifications, derivations, formal conjectures --- generated through
+AI-assisted analysis. This paper specifies how those claims are checked,
+corrected, and recorded. It is therefore not an introduction to the
+series but its validation layer: the architecture under which every
+other paper's AI-assisted findings are audited. Without it, the series
+is a set of outputs; with it, the series is a set of outputs accompanied
+by the correction record that makes each one inspectable.
+
+That architecture is not only described here but operationalized in the
+open. The framework's code, its Lean formalization --- including the
+kernel-checked four-position partition theorem discussed in Section 3.6
+--- and the contemporaneous correction record are maintained in the
+project repository at \url{https://github.com/thefalsework/papers},
+alongside the persistently archived papers (Zenodo, Release 2026.04).
+The claims of this paper that invite verification --- that a
+construction type-checks, that a pull request was declined, that a
+correction was made on a specific date --- point to artefacts in that
+public record, not to assertions the reader is asked to take on trust.
 
 The argument is demonstrated through a live case study rather than
 asserted abstractly. The case study is the development of FalseWork
@@ -837,12 +862,13 @@ development required: a Heyting algebra instance on the lattice of
 subobjects of an arbitrary object in an elementary topos. This instance
 is the upstream dependency of the four-position partition theorem (Brink
 2026 preprint) --- the theorem itself is formalized inside the
-framework's own repository and was never submitted to Mathlib; what was
-submitted was the reusable instance the theorem relies on. Mathlib4 ---
-the standard mathematical library for Lean 4, developed by an
-international community of mathematicians and computer scientists ---
-exposes the lattice structure on \texttt{Subobject\ X} but did not, at
-the time of this work, provide the Heyting algebra structure that the
+framework's own repository (the \texttt{lean/} directory of
+\url{https://github.com/thefalsework/papers}) and was never submitted to
+Mathlib; what was submitted was the reusable instance the theorem relies
+on. Mathlib4 --- the standard mathematical library for Lean 4, developed
+by an international community of mathematicians and computer scientists
+--- exposes the lattice structure on \texttt{Subobject\ X} but did not,
+at the time of this work, provide the Heyting algebra structure that the
 partition theorem depends on. The standard construction is given in Mac
 Lane and Moerdijk (1992, IV.6 Proposition 2): implication is the
 equalizer-residual
@@ -2051,7 +2077,8 @@ This paper was developed across several private drafts before this first
 public posting. Consistent with the argument that the correction record
 is itself evidence, the substantive corrections made during that
 development are recorded here rather than narrated in the body. (Full
-version history is maintained in the project repository.)
+version history is maintained in the project repository at
+\url{https://github.com/thefalsework/papers}.)
 
 \begin{itemize}
 \tightlist
