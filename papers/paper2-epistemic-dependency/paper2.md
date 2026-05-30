@@ -4,7 +4,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 8.8 (May 2026). First public posting. A record of substantive pre-submission revisions is given in the appendix.*
+*Version 8.9 (May 2026). First public posting. A record of substantive pre-submission revisions is given in the appendix.*
 
 ## Abstract
 
@@ -127,8 +127,6 @@ Given this indeterminacy, the paper adopts the most epistemologically conservati
 That is exactly what makes inherited validity the hardest case in the taxonomy: it looks like independent derivation from within the system, and distinguishing it from independent derivation requires the external engagement Stage 4 has not yet provided. Until Stage 4 closes, the Stage 3 classification is held provisionally, and readers should calibrate its force accordingly.
 
 The proxy extractor's methodology does not cite Tymoczko and Newman 2024. Section 4.4 of the first paper describes the extractor and its results without acknowledging the prior work whose analytical frame the extractor converges with. This absence is the dependency signature: the training distribution shaped the problem setup invisibly, leaving no trace in the output that would flag the convergence as convergence rather than independent derivation. The classification is the inscription --- a stable, transportable result whose relationship to prior work has been erased from the record.
-
-The Santa Fe Institute connection is not incidental. Newman's home institution alongside Princeton sits at the intersection of complexity science, network theory, and computational approaches to emergent structure --- the same intellectual neighborhood as Wolfram's computational irreducibility and the distinction operation that the first paper's Incompleteness Condition connects to. The convergence between FalseWork's harmonic analysis and T&N's computational annotation is one instance of a broader pattern: independent analytical systems arriving at the same structural positions because they are all tracking real structure in the same domain. Whether that convergence reflects genuine independent derivation or shared inherited frame is precisely the question the correction mechanism must answer --- and the question Stage 4 has not yet closed.
 
 ### 3.4 Stage 4 --- Correction Mechanism Existing but Not Yet Deployed
 
