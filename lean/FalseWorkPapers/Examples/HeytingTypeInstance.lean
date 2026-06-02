@@ -8,6 +8,7 @@ import FalseWorkPapers.Positions
 import FalseWorkPapers.Lattice.FourPositionLattice
 import FalseWorkPapers.Examples.CanonizationGeneratorInstance
 import FalseWorkPapers.Examples.DivisorLattice12
+import FalseWorkPapers.Examples.DivisorLattice12Distinction
 
 /-!
 # Sanity-check examples for `FalseWork.Heyting.heytingAlgebra`
@@ -137,3 +138,18 @@ on a Heyting algebra isomorphic to the subgroup lattice of `Z/12`. -/
 #print axioms FalseWork.Lattice.Examples.Div12.heytingAlgebra
 #print axioms FalseWork.Lattice.Examples.Div12.tritone_non_regular
 #print axioms FalseWork.Lattice.Examples.Div12.music_anchor_witness
+
+/-! Layer-D distinction operator and the literal `Z/12` realization
+(companion to `Examples/DivisorLattice12Distinction.lean` and
+`preprints/four-position-partition/music-anchor/feasibility.md` §12.6).
+The closure-operator "distinction slice" — whose kernel image
+`tritoneClosure ⊥` is the tritone, de-arbitrarizing the kernel used by
+`music_anchor_witness` — and the kernel-checked correspondence between
+the six divisor-lattice elements and the six transposition-symmetric
+pitch-class subgroups of `Z/12` must report only the standard three
+axioms. -/
+#print axioms FalseWork.Lattice.Examples.Div12.tritoneClosure_is_distinction_slice
+#print axioms FalseWork.Lattice.Examples.Div12.tritoneClosure_bot
+#print axioms FalseWork.Lattice.Examples.Div12.tritoneClosure_bot_non_regular
+#print axioms FalseWork.Lattice.Examples.Div12.pcset_realizes_subgroup_lattice
+#print axioms FalseWork.Lattice.Examples.Div12.pcset_tritoneClosure_bot
