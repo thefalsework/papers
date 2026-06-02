@@ -13,7 +13,7 @@ There is a theorem — *the four-position partition* — that says: in any eleme
 
 Two features make this more than an illustration. First, the kernel is **not a free parameter**: the tritone `⟨6⟩` is not chosen and then shown to have four cells around it — it is the kernel image `Im(η)` of a concrete idempotent closure operator (`tritoneClosure`, §4), so the four-cell witness is a *consequence of the operator* rather than a construction built around a stipulated kernel. Second, the tritone is the **unique** kernel in this lattice at which all four cells are non-vacuous: an exhaustive check over all six possible kernels shows every other choice degenerates. So this is not "here is one instantiation" but "here is the only instantiation the lattice admits, and its kernel is forced by an operator." Everything is finite and machine-verified.
 
-The one thing that is **not** done — and the reason for writing to a specialist — is whether this finite instance is a *slice of a canonical music topos* (a denotator topos, a presheaf topos on a Tonnetz groupoid) rather than a bespoke construction. That is §5.
+The one thing that is **not** done — and the reason for writing to a specialist — is whether this finite instance is a *slice of a canonical music topos* (a denotator topos, a presheaf topos on a Tonnetz groupoid) rather than a bespoke construction. That is §5. If it is, the four-cell classification is a structural consequence of the music topos rather than a framework that happens to agree with it.
 
 ---
 
@@ -30,7 +30,7 @@ Let `T` be an elementary topos. A **distinction structure** on `T` is an endofun
 
 The Exploitation cell is empty exactly when `Sub(D Y)` is Boolean at `a` (`aᶜᶜ = a`); it is the cell that exists *only* because intuitionistic double negation can be strict.
 
-This is `FalseWork.Positions.four_position_partition`, kernel-checked in Lean (audit: depends only on `propext, Classical.choice, Quot.sound`; no `sorry`). The Heyting core is isolated as `FalseWork.Lattice.lattice_four_position_partition`: for any Heyting algebra `H`, any `a : H`, and any `x ≠ ⊥`, exactly one of the four conditions holds. The full statement and proof are in `preprints/four-position-partition/paper.md`.
+This is `four_position_partition`, kernel-checked in Lean (audit: depends only on `propext`, `Classical.choice`, `Quot.sound`; no `sorry`). The Heyting core is isolated as `lattice_four_position_partition`: for any Heyting algebra `H`, any `a : H`, and any `x ≠ ⊥`, exactly one of the four conditions holds. The full statement and proof are in the partition paper (`paper.md`).
 
 The bridge from "an idempotent operation" to "a distinction structure" is also kernel-checked: `DistinctionStructure.ofIdempotentMonad` (Remark 5.5 of the paper) turns any idempotent monad — equivalently any reflective subcategory, equivalently (at the subobject level) any closure operator on `Sub(D Y)` — into a distinction structure. This is the hinge the music instance hangs on.
 
@@ -121,22 +121,32 @@ If the answer to (1)+(2) is yes, then the four-cell classification is not an emp
 
 ## 7. Reproducing the kernel-checked claims
 
-All identifiers are in the public repository (`thefalsework/papers`, `lean/` directory), Lean `v4.30.0-rc2` against Mathlib4:
+All results live in the public repository (`thefalsework/papers`, `lean/` directory), Lean `v4.30.0-rc2` against Mathlib4, in namespaces `FalseWork.Positions` and `FalseWork.Lattice` (the witnesses in `FalseWork.Lattice.Examples.Div12`). By file:
 
-- `FalseWork.Positions.four_position_partition` — the topos-level theorem (`Positions/Partition.lean`).
-- `FalseWork.Positions.DistinctionStructure.ofIdempotentMonad` — Remark 5.5 bridge (`Positions/SpencerBrown.lean`).
-- `FalseWork.Lattice.lattice_four_position_partition` — the Heyting core (`Lattice/FourPositionLattice.lean`).
-- `FalseWork.Lattice.Examples.Div12.{tritone_non_regular, music_anchor_witness}` — Layer-L witness (`Examples/DivisorLattice12.lean`).
-- `FalseWork.Lattice.Examples.Div12.{tritoneClosure_is_distinction_slice, pcset_realizes_subgroup_lattice, pcset_tritoneClosure_bot}` — this note's new results (`Examples/DivisorLattice12Distinction.lean`).
+```
+Positions/Partition.lean
+    four_position_partition           (the topos-level theorem)
+Positions/SpencerBrown.lean
+    DistinctionStructure.ofIdempotentMonad   (Remark 5.5 bridge)
+Lattice/FourPositionLattice.lean
+    lattice_four_position_partition          (the Heyting core)
+Examples/DivisorLattice12.lean            (Layer-L witness)
+    tritone_non_regular
+    music_anchor_witness
+Examples/DivisorLattice12Distinction.lean (this note's results)
+    tritoneClosure_is_distinction_slice
+    pcset_realizes_subgroup_lattice
+    pcset_tritoneClosure_bot
+```
 
-Axiom audit (`Examples/HeytingTypeInstance.lean`, via `#print axioms`): every theorem above depends only on `propext, Classical.choice, Quot.sound` — several on strictly fewer — and none on `sorryAx`.
+Axiom audit (`Examples/HeytingTypeInstance.lean`, via `#print axioms`): every theorem above depends only on `propext`, `Classical.choice`, `Quot.sound` — several on strictly fewer — and none on `sorryAx`.
 
 ---
 
 ### References
 
-- Brink, C. (2026). *A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure.* Preprint, `preprints/four-position-partition/paper.md`.
+- Brink, C. (2026). *A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure.* Preprint, `paper.md` (this repo).
 - Mazzola, G. (2002). *The Topos of Music.* Birkhäuser.
 - Messiaen, O. (1944). *Technique de mon langage musical.*
 - Tymoczko, D. (2011). *A Geometry of Music.* OUP. — (2026). The concept of musical space. *Journal of Music Theory* 70(1).
-- Music-anchor feasibility memo: `preprints/four-position-partition/music-anchor/feasibility.md` (§11 diatonic-closure negative result; §12 subgroup route and layered status; §13 Tymoczko correspondence).
+- Music-anchor feasibility memo: `music-anchor/feasibility.md` (§11 diatonic-closure negative result; §12 subgroup route and layered status; §13 Tymoczko correspondence).
