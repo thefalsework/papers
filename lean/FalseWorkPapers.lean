@@ -8,6 +8,8 @@ import FalseWorkPapers.Examples.DivisorLattice12Distinction
 import FalseWorkPapers.Examples.DivisorLattice12Birkhoff
 import FalseWorkPapers.Examples.DivisorLattice12Nucleus
 import FalseWorkPapers.Examples.DiophantineFloor
+import FalseWorkPapers.Examples.MathFloorCantor
+import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub

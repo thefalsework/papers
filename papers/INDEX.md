@@ -132,6 +132,16 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Open items it carries.** Music-topos canonicity and a bespoke non-terminal-witness endofunctor ([`validation/claims/music-topos-t2-realization.md`](../validation/claims/music-topos-t2-realization.md)) — the topos-object plumbing was **closed 2026-06** (`Examples/MusicTopos.lean`: `Set^{Pᵒᵖ}` is a Lean elementary-topos object whose bundle resolves and against which `four_position_partition` fires, using the presheaf classifier added in Mathlib `v4.30`), the explicit `Subobject (⊤_ MusicTopos) ≅ Div12` iso is now **also kernel-checked** (`Examples/MusicToposSub.lean`), and the sheafification-endofunctor route is **resolved as a come-apart** (`Examples/MusicToposTrace.lean`: the tritone is not the `Im(η)` kernel of any sheafification, since the terminal is always a sheaf); the Lawvere unification ([`validation/claims/lawvere-unification-of-formal-groundings.md`](../validation/claims/lawvere-unification-of-formal-groundings.md)); the Baker quantitative floor ([`validation/claims/music-kernel-06-baker.md`](../validation/claims/music-kernel-06-baker.md)).
 
+### The Four-Position Exposition
+
+**Full title.** *The Four-Position Partition: A Complete Exposition.*
+
+**Register.** Expository synthesis. States the four-position partition theorem (topos level and Heyting core) and everything formally attached to it — the floors beneath it (Diophantine, Cantor/Lawvere), the anchors beside it (music, mathematics, Spencer-Brown, canonization; physics open), and the 2026-06 mathematics-anchor results: the Cantor/Lawvere floor (`Examples/MathFloorCantor.lean`, partly axiom-free), the pre-registered Rieger–Nishimura truncation experiment resolving to **outcome (A)** — unique truncation-stable kernel = the free generator (`Examples/NishimuraTruncations.lean`) — and the weld **`Div12 ≅ Z_6`**: the music lattice is the 6-element truncation of the free Heyting algebra on one generator, the tritone is the free generator, and the music witness cells coincide element-for-element with the Nishimura terms `p, ¬p, ¬¬p, p∨¬p`. Closes with a plain-language explanation (the fence-at-dusk analogy) and an explicit list of what is *not* claimed.
+
+**Source.** [`four-position-exposition.md`](four-position-exposition.md)
+
+**Lean artifacts.** `Examples/MathFloorCantor.lean`, `Examples/NishimuraTruncations.lean` — kernel-checked (`#print axioms` clean; `lawvere_fixedPoint` and `diagonal_escapes` axiom-free) in [`../lean/`](../lean/). Pre-registration and outcome at [`../validation/claims/math-anchor-cantor-floor.md`](../validation/claims/math-anchor-cantor-floor.md).
+
 ---
 
 ## Cross-reference graph
