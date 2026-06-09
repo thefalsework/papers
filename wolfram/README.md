@@ -114,17 +114,34 @@ wolfram/
 │                                      shows the categorical-contrast baseline).
 │                                      Secondary cardinality kernels also
 │                                      match between Q and C-best-effort
-│                                      (lattice-iso pins counts). NEW
-│                                      structural finding: dasein(P) is
-│                                      Heyting-non-regular with Exploitation
-│                                      = 128 (first non-regular daseinisation
-│                                      across v2/v3/v4); mechanism is round-
-│                                      up-to-identity at every off-direction
-│                                      sub-MASA, a genuinely dim-3 phenomenon.
+│                                      (lattice-iso pins counts). SUB-
+│                                      structural finding *in the framework's
+│                                      truncated context category* (per
+│                                      feasibility.md sec. 3.5): dasein(P)
+│                                      is Heyting-non-regular with
+│                                      Exploitation = 128 (first non-regular
+│                                      daseinisation across v2/v3/v4 in the
+│                                      truncation); mechanism is round-up-
+│                                      to-identity at every off-direction
+│                                      sub-MASA of the truncation. Calibrated
+│                                      reading (feasibility.md sec. 8.6,
+│                                      added after reconciliation with
+│                                      Doering 2012): the non-regularity is
+│                                      a property of the framework's
+│                                      truncated V(M_3(C)), NOT of
+│                                      M_3(C) Bohrification over the full
+│                                      V(M_3(C)) (where daseinisations are
+│                                      Heyting-regular by Doering 2012
+│                                      Prop. 5 + Cor. 2). The finding stands
+│                                      as a property of the truncated topos
+│                                      and is conditional on whether the
+│                                      truncation is regarded as principled.
 │                                      Penrose-40 / Peres-33 are research
 │                                      scope for v5 (KS-blocking required for
-│                                      the categorical structural break).
-│   └── four-position-physics-v5.wl  Route A v5 Peres-33 KS-blocking
+│                                      the categorical structural break,
+│                                      which is robust to the truncation
+│                                      question — see v5 below).
+│   ├── four-position-physics-v5.wl  Route A v5 Peres-33 KS-blocking
 │                                      structural-break test. Configuration:
 │                                      the full Peres-33 set (33 explicit
 │                                      rays + 24 dyad-completion rays = 57
@@ -150,11 +167,66 @@ wolfram/
 │                                      (Bohrification + Doering stagewise
 │                                      Heyting NOT) faithfully witnesses
 │                                      Kochen-Specker as a finite computation.
-│                                      Physics anchor crosses the structural-
+│                                      ROBUST TO TRUNCATION CHOICE: unlike
+│                                      v4's substructural finding (which is
+│                                      conditional on feasibility.md sec.
+│                                      3.5), v5's categorical signal holds
+│                                      in both the framework's truncated
+│                                      V(M_3(C)) and Doering's full V(M_3(C))
+│                                      (KS theorem applies to the maximal
+│                                      MASAs; unshared sub-MASAs add no
+│                                      global-section constraints). Physics
+│                                      anchor crosses the structural-
 │                                      feasibility threshold at the categorical
 │                                      level; v5 is the threshold-crossing
 │                                      artefact for the physics anchor,
 │                                      analogous to v3-path-b for music.
+│   ├── four-position-physics-v6a.wl Route A v6a Heyting-collapse verification
+│   │                                  (fast, no SAT). Computational verifier
+│   │                                  for the analytical pre-finding in
+│   │                                  v6-scope.md sec. 2: in the framework's
+│   │                                  truncated context category V'(M_3(C))
+│   │                                  on the Peres-33 substrate (74 contexts:
+│   │                                  V_0 + 33 V_k + 40 T_a, where m_{V_k}
+│   │                                  = {V_0} for every sub-MASA), every
+│   │                                  non-bottom S in Sub_cl(Sigma) satisfies
+│   │                                  NOT(S) = bottom. Stagewise Heyting NOT
+│   │                                  on delta(P_1) (P_1 = |0><0|) computed
+│   │                                  in 0.009 s on Wolfram Cloud. EXECUTED
+│   │                                  2026-05-27: NOT(delta(P_1)) = bottom
+│   │                                  componentwise (all 74 contexts empty);
+│   │                                  NOTNOT(delta(P_1)) = top; delta(P_1)
+│   │                                  Heyting-non-regular. Heyting-collapse
+│   │                                  theorem confirmed at Peres-33 scale.
+│   │                                  Cloud-friendly (no Package directive,
+│   │                                  no SAT step); intended as the headline
+│   │                                  v6 result when v6.wl's SAT step hits
+│   │                                  the Wolfram Cloud memory limit.
+│   └── four-position-physics-v6.wl  Route A v6 full Heyting-collapse +
+│                                      cardinality measurement. PARTS 0-5
+│                                      duplicate v6a (Heyting-collapse
+│                                      verification); PARTS 6-9 attempt to
+│                                      measure |Sub_cl(Sigma)| and
+│                                      |down delta(P_1)| via SatisfiabilityCount
+│                                      on 187 boolean variables and 354
+│                                      clopen-subobject implications across
+│                                      129 Hasse-cover edges. Two-cell
+│                                      partition sizes (|I|, 0, |E|, 0)
+│                                      derived from those counts under the
+│                                      Heyting-collapse. EXECUTED 2026-05-27
+│                                      on Wolfram Cloud: PARTS 0-5 match
+│                                      v6a (Heyting-collapse VERIFIED).
+│                                      PARTS 7-8 aborted by Cloud::memlimit
+│                                      at ~50 s; SAT counts unmeasured.
+│                                      Cardinality magnitudes |I| and |E|
+│                                      deferred to a non-cloud run (local
+│                                      Mathematica with more RAM, alternative
+│                                      SAT engine, or structural enumeration
+│                                      of the implication DAG). The
+│                                      Heyting-collapse theorem (the
+│                                      categorical signal) does not depend
+│                                      on these cardinalities and remains
+│                                      established.
 ├── notebook-script.wl         demo script: loads corpus, runs all four queries
 ├── paste-cells/               multi-cell version for Wolfram Cloud
 │   ├── README.md              workflow instructions

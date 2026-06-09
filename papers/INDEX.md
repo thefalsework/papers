@@ -30,12 +30,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
 
-**Current version.** v8.2
+**Current version.** v8.5
 
 **One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system (human or computational); what differs between systems is the maturity of the correction mechanism available to detect and address it.
 
 **Paper source.** [`paper2-epistemic-dependency/paper2.md`](paper2-epistemic-dependency/paper2.md)
-**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx)
+**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and § 4.5 literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3–v8.5 DOCX archives deferred until post-arXiv.)
 
 **Open validation items this paper carries.**
 - § 2.3 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
@@ -118,6 +118,22 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 ---
 
+## Synthesis notes
+
+### The Connected Spine
+
+**Full title.** *The Connected Spine: One Asymmetry in Three Registers, and a Kernel-Checked Music Topos.*
+
+**Register.** Synthesis note. Ties the formal results of Papers 1, 3, 4, 5 and the four-position-partition preprint into a single chain (distinction operation → asymmetry → kernel → four positions), and reports the 2026-06 kernel-checked results that connect the music anchor to the central theorem without external validation: the Birkhoff realization of the music lattice as the subobject lattice of a concrete presheaf topos `Set^{Pᵒᵖ}` (T2); a Lawvere–Tierney realization of the distinction operator with the tritone as non-regular kernel (and the correction that the minimal tritone-closing operator is not a nucleus); the kernel-checked shared Diophantine floor of Paper 5 (rank-1 `√2` and rank-2 `2`–`3` independence); and the music kernel "The Fifth" closing in the tempered quotient `ℤ/12`. Carries an explicit status ledger (kernel-checked / classical / structural-analogy / open) and states the vertical Lawvere unification as a precise conjecture rather than a result.
+
+**Source.** [`connecting-the-spine.md`](connecting-the-spine.md)
+
+**Lean artifacts.** `Examples/DivisorLattice12Birkhoff.lean`, `Examples/DivisorLattice12Nucleus.lean`, `Examples/DiophantineFloor.lean`, `Examples/MusicKernelZMod12.lean` — all kernel-checked (`#print axioms` clean) in [`../lean/`](../lean/).
+
+**Open items it carries.** Music-topos canonicity and a bespoke non-terminal-witness endofunctor ([`validation/claims/music-topos-t2-realization.md`](../validation/claims/music-topos-t2-realization.md)) — the topos-object plumbing was **closed 2026-06** (`Examples/MusicTopos.lean`: `Set^{Pᵒᵖ}` is a Lean elementary-topos object whose bundle resolves and against which `four_position_partition` fires, using the presheaf classifier added in Mathlib `v4.30`), the explicit `Subobject (⊤_ MusicTopos) ≅ Div12` iso is now **also kernel-checked** (`Examples/MusicToposSub.lean`), and the sheafification-endofunctor route is **resolved as a come-apart** (`Examples/MusicToposTrace.lean`: the tritone is not the `Im(η)` kernel of any sheafification, since the terminal is always a sheaf); the Lawvere unification ([`validation/claims/lawvere-unification-of-formal-groundings.md`](../validation/claims/lawvere-unification-of-formal-groundings.md)); the Baker quantitative floor ([`validation/claims/music-kernel-06-baker.md`](../validation/claims/music-kernel-06-baker.md)).
+
+---
+
 ## Cross-reference graph
 
 ```
@@ -129,10 +145,11 @@ Paper 1 (v11.8)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v11.8)
   └─ ground for Papers 2–5
 
-Paper 2 (v8.2)
+Paper 2 (v8.5)
   ├─ refs Paper 1 (kernel–comma framework)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
-  └─ refs Paper 5 (Pythagorean inherited-validity contrast)
+  ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
+  └─ refs partition preprint + Mathlib PR #39618 (Stage 6 formal-verification correction)
 
 Paper 3 (v9.4)
   ├─ refs Paper 1 (position framework)
@@ -174,7 +191,7 @@ Focused, peer-review-targeted mathematical papers extracted from the framework l
 
 **Current preprint.**
 
-- **[A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure](../preprints/four-position-partition/paper.md)** — *Chris Brink, May 2026, preprint not yet submitted.* Formalizes the framework's central structural claim (the four-position partition over morphisms with non-trivial D-image) as a self-contained theorem in elementary topoi with non-trivial distinction structure. Kernel-checked in Lean 4 against Mathlib4; supporting `HeytingAlgebra (Subobject _)` instance upstreamed as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618). Companion to [`comma-formal-structure-note.md`](comma-formal-structure-note.md) (which states the same theorem alongside three others in a framework-internal register) and to the Lean source at [`../lean/FalseWorkPapers/Positions/`](../lean/FalseWorkPapers/).
+- **[A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure](../preprints/four-position-partition/paper.md)** — *Chris Brink, May 2026, preprint not yet submitted.* Formalizes the framework's central structural claim (the four-position partition over morphisms with non-trivial D-image) as a self-contained theorem in elementary topoi with non-trivial distinction structure. Kernel-checked in Lean 4 against Mathlib4; supporting `HeytingAlgebra (Subobject _)` instance submitted as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618) (closed unmerged 2026-05-28 under Mathlib's new-contributor AI-use policy; the instance remains kernel-checked in the project's own Lean development). Companion to [`comma-formal-structure-note.md`](comma-formal-structure-note.md) (which states the same theorem alongside three others in a framework-internal register) and to the Lean source at [`../lean/FalseWorkPapers/Positions/`](../lean/FalseWorkPapers/).
 
 ---
 

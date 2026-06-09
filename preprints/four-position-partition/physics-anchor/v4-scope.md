@@ -3,9 +3,15 @@
 **Author:** Chris Brink
 **Date:** May 2026 (pre-script scoping for v4, written after the v3 results in `v3-scope.md` §10).
 **Status:** Scoping only; no script committed yet. Companion to:
-- `physics-anchor/feasibility.md` (records v1 Route-B, v2 Route-A checkpoint, v3 cardinality-positive result),
+- `physics-anchor/feasibility.md` §0 (level hierarchy: this memo is **quaternary-level / Layer-L** work), and §4.8–§4.9 (v4 results),
 - `physics-anchor/v3-scope.md` (pre-script design for v3; §10 records executed results and the structural-null finding for the exhaustive sweep),
 - `wolfram/cores/heunen-landsman-spitters-2009.wl` (Bohrification structural core entry).
+
+---
+
+## 0. Level positioning (added 2026-05-27)
+
+v4 is **quaternary-level (Layer-L)** work per `feasibility.md` §0. It tests whether the framework's apparatus on `Sub_{cl}(Σ)` produces a structural signal at the Kochen-Specker dimensionality threshold. It does **not** speak to the framework's primary classification claim — that physics-interpretation works map to the five positions. The v4 substructural finding (non-regular daseinisation in the truncated category) is a property of the §3.5 truncation, not of standard Bohrification (cf. §8.7 of `feasibility.md`); even within Layer-L it is a substrate-dependent observation, not a finding about how Copenhagen or Many-Worlds relate to the wave-function kernel. Those classifications stand at the classifier + corpus level and are independent of v4.
 
 ---
 
@@ -290,7 +296,9 @@ The match between `Σ_Q` and `Σ_C-best-effort` confirms the 4-MASA shared-atom 
 
 This is the expected behaviour at non-KS-blocking: when `Σ_Q` has many global sections, their join is the top subobject, and no structural-break signal lives at this kernel.
 
-### 11.4 Secondary kernels (Part 5): a new structural finding
+### 11.4 Secondary kernels (Part 5): a substructural finding *in the truncated context category* (conditional on `feasibility.md` §3.5)
+
+**Calibrated reading (added 2026-05-26 after re-reading Døring 2012; full reconciliation in `feasibility.md` §8.7).** The v4 non-regularity below is a property of the framework's truncated context category (4 MASAs of `M_3(C)`, sub-MASAs included only when shared between maximal MASAs — see `feasibility.md` §3.5), *not* a property of `M_3(C)` Bohrification over Døring's full `V(M_3(C))`. In Døring's full context category (which includes the self-generated minimal sub-MASA `V_Q = ⟨Q, I - Q⟩` for every rank-1 projection `Q`), the same `δ(P)` is Heyting-regular by Døring 2012 Prop. 5 + Cor. 2. The truncation omits these self-generated sub-MASAs, and the "round-up to identity at every off-direction sub-MASA" mechanism described below fires only because they are absent. Both calculations are mathematically correct in their respective frameworks; the substructural finding is conditional on the §3.5 truncation being regarded as principled, not merely computational.
 
 The off-axis test projection is `P = rank-1 onto (|0⟩+|1⟩+|2⟩)/√3` (the symmetric diagonal direction, not aligned with any MASA). Its classical analogue is `P' = unit{1,4,7}` (one element from each `T_1c` block).
 
@@ -331,7 +339,7 @@ Back to regular, with trivial cells (`Infrastructure` and `Exploitation` empty; 
 
 **Secondary cardinality criterion (§4.3): NEGATIVE.** Both kernels 4.1' and 4.5' give matching `(i, r, e, d)` between quantum and best-effort classical. The v3 cardinality signal does not re-appear here because the diagonal test projection `P = |+++⟩⟨+++|` is symmetric across the 3 cardinal axes; the classical comparator's daseinisation analogue mirrors this symmetry exactly.
 
-**New structural finding (not anticipated in §4 of this memo): `Exploitation > 0` at daseinisation-derived kernel.** At v4 the daseinisation of `P = |+++⟩⟨+++|` is non-regular with `e = 128`, the first such instance across v2, v3, v4. The mechanism is daseinisation round-up-to-identity at every off-direction sub-MASA (made possible by the dim-3 setup with 1-dim sub-MASAs of rank-1-projection type, which v3's dim-2 `V_C` couldn't accommodate). This is a quantitative sharpening of "the framework's machinery detects structural features of dim-3 topos-QM that don't exist at dim 2" — even without the categorical KS signal.
+**New substructural finding in the truncated category (not anticipated in §4 of this memo): `Exploitation > 0` at daseinisation-derived kernel.** At v4 the daseinisation of `P = |+++⟩⟨+++|` is non-regular *in the framework's truncated category* with `e = 128`, the first such instance across v2, v3, v4. The mechanism is daseinisation round-up-to-identity at every off-direction sub-MASA *of the truncation* (made possible by the dim-3 setup with 1-dim sub-MASAs of rank-1-projection type, and by the §3.5 truncation that omits the self-generated minimal sub-MASA `V_Q = ⟨Q, I - Q⟩`). This is a quantitative sharpening of "the framework's truncated apparatus detects structural features of dim-3 topos-QM that don't exist at dim 2 *in the analogous truncation*" — but it is *not* a property of standard `M_3(C)` Bohrification (where the analogous daseinisation is Heyting-regular by Døring 2012 Prop. 5 + Cor. 2). The categorical KS signal targeted by v5 is robust to this truncation question; the v4 substructural finding is conditional on it.
 
 ### 11.6 What to do next (v5 design)
 

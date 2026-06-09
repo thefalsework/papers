@@ -9,6 +9,13 @@ import FalseWorkPapers.Lattice.FourPositionLattice
 import FalseWorkPapers.Examples.CanonizationGeneratorInstance
 import FalseWorkPapers.Examples.DivisorLattice12
 import FalseWorkPapers.Examples.DivisorLattice12Distinction
+import FalseWorkPapers.Examples.DivisorLattice12Birkhoff
+import FalseWorkPapers.Examples.DivisorLattice12Nucleus
+import FalseWorkPapers.Examples.DiophantineFloor
+import FalseWorkPapers.Examples.MusicKernelZMod12
+import FalseWorkPapers.Examples.MusicTopos
+import FalseWorkPapers.Examples.MusicToposSub
+import FalseWorkPapers.Examples.MusicToposTrace
 
 /-!
 # Sanity-check examples for `FalseWork.Heyting.heytingAlgebra`
@@ -153,3 +160,65 @@ axioms. -/
 #print axioms FalseWork.Lattice.Examples.Div12.tritoneClosure_bot_non_regular
 #print axioms FalseWork.Lattice.Examples.Div12.pcset_realizes_subgroup_lattice
 #print axioms FalseWork.Lattice.Examples.Div12.pcset_tritoneClosure_bot
+
+/-! Birkhoff representation of the music lattice (companion to
+`Examples/DivisorLattice12Birkhoff.lean` and the T2 construction of
+`music-anchor/mazzola-bridge-note.md` §5).  The divisor lattice of 12 is
+realized as the lattice of down-sets of its poset of join-irreducibles,
+i.e. `Sub_{Set^{Pᵒᵖ}}(1)` of a concrete presheaf topos built from the
+symmetric pitch-class generators of `Z/12`. -/
+#print axioms FalseWork.Lattice.Examples.Div12.birkhoff_representation
+#print axioms FalseWork.Lattice.Examples.Div12.birkhoff_tritoneKernel
+
+/-! The tritone kernel as a Lawvere–Tierney topology (companion to
+`Examples/DivisorLattice12Nucleus.lean`).  A nucleus on the T2 topos with
+the tritone as its non-regular kernel exists; the minimal tritone-closing
+closure operator is *not* a nucleus — the reflective vs. geometric lifts
+of the same kernel. -/
+#print axioms FalseWork.Lattice.Examples.Div12.tritone_kernel_has_lawvere_tierney_realization
+#print axioms FalseWork.Lattice.Examples.Div12.tritoneClosure_not_nucleus
+
+/-! The shared Diophantine floor (companion to `Examples/DiophantineFloor.lean`
+and Paper 5).  Rank-1 (`√2` irrational) and rank-2 (`2`–`3` multiplicative
+independence / the Pythagorean comma) as the two faces of unique
+factorization. -/
+#print axioms FalseWork.Diophantine.shared_diophantine_floor
+
+/-! The music kernel "The Fifth" on `ℤ/12` (companion to
+`Examples/MusicKernelZMod12.lean` and `music-kernel-05-z12z-cycle.md`).
+The circle of fifths closes in the tempered quotient — the complement of
+the rank-2 Diophantine non-closure. -/
+#print axioms FalseWork.MusicKernel.fifth_closes_in_quotient
+
+/-! The music presheaf topos `Set^{Pᵒᵖ}` as a concrete Lean elementary-topos
+object (companion to `Examples/MusicTopos.lean` and the T2 construction of
+`music-anchor/mazzola-bridge-note.md` §5 / `connecting-the-spine.md` §5.1).
+The previously-deferred "topos-object plumbing": the full elementary-topos
+hypothesis bundle resolves for the concrete music-derived presheaf topos, so
+`Sub_{Set^{Pᵒᵖ}}(1)` is a Heyting algebra and the central theorem
+`four_position_partition` fires against the concrete topos object (over the
+trivial distinction — the non-degenerate musical partition is the
+lattice-level theorem). -/
+#print axioms FalseWork.Lattice.Examples.Div12.musicTopos_isElementaryTopos
+#print axioms FalseWork.Lattice.Examples.Div12.subTerminalHeytingAlgebra
+#print axioms FalseWork.Lattice.Examples.Div12.four_position_partition_musicTopos
+
+/-! `Sub_{Set^{Pᵒᵖ}}(1) ≅ Div12` as a Mathlib-level order isomorphism
+(companion to `Examples/MusicToposSub.lean`).  This upgrades
+`birkhoff_representation` from the down-set level `O(P)` to an isomorphism of
+the actual `Subobject` lattice of the terminal object of the concrete music
+topos, mapping the subobject lattice cells onto the named pitch-class objects of
+`Div12`.  Item (i) of `connecting-the-spine.md` §5.1a. -/
+#print axioms FalseWork.Lattice.Examples.Div12.subobjectTerminalEquivDiv12
+#print axioms FalseWork.Lattice.Examples.Div12.fromDownset_birkhoff
+
+/-! The topos-level **trace-collapse** result (companion to
+`Examples/MusicToposTrace.lean`).  The four-position kernel `kernelImage Δ Y` is
+`Im(η.app Y)`; an iso unit forces it to `⊤`.  Since the terminal presheaf is a
+sheaf for every topology, every sheafification monad has iso unit at `1`, so the
+tritone nucleus (`⟨6⟩ ≠ ⊤`) does *not* lift to `kernelImage Δ 1` — the
+lattice-level nucleus and the topos-level `Im(η)` kernel come apart at `1`.
+Item (ii) of `connecting-the-spine.md` §5.1a, resolved as a category error in
+the naïve form (the non-degenerate tritone partition stays lattice-level). -/
+#print axioms FalseWork.Positions.kernelImage_eq_top_of_isIso_unit
+#print axioms FalseWork.Positions.isInfrastructure_of_isIso_unit

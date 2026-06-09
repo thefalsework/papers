@@ -1,6 +1,6 @@
 # `music-kernel-05-z12z-cycle` — `ℤ / 12ℤ` quotient: structure and a suspected error
 
-**Status:** OPEN
+**Status:** OPEN (translation/closure half now **kernel-checked in-repo**; see Changelog 2026-06-08)
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
 **Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1); targeted for v10.0 revision
 **Domain:** Category theory, finite group theory (elementary)
@@ -53,5 +53,16 @@ Inside `ℤ / 12ℤ`, the subgroup `H = ⟨4⟩ = {0, 4, 8}` is cyclic of order 
 
 The v10.0 revision will adopt the split: `D_{12}` for the endofunctor analogue (which saturates), `T_{12}` for the 12-step closure (which genuinely returns to identity). The Giant-Steps paragraph can stand as a clean formal statement.
 
+## Kernel-checked progress (2026-06-08)
+
+The translation/closure half of the corrected split — operation `(B)`, the part the external reviewer conflated — is now **kernel-checked in Lean** (`FalseWork.MusicKernel.fifth_closes_in_quotient`, `Examples/MusicKernelZMod12.lean`), with the fifth realized as `+7` on `ZMod 12`:
+
+- `fifth_returns`: `(+7)^[12] = id` — the circle of fifths returns after twelve steps (operation `(B)`, `T₁₂¹² = id`).
+- `fifth_order_twelve`: no nonzero iterate before the twelfth returns `0` to `0` — the cycle is a *single* 12-cycle, not shorter.
+- `fifth_orbit_covers`: every pitch class is reached — `⟨7⟩ = ℤ/12`, confirming the accumulation `(A)` saturates to the whole group.
+
+This formalizes the corrected `(B)` claim and the `⟨7⟩ = ℤ/12` fact underlying `(A)`'s saturation, kernel-checked (axiom audit clean). It is the *quotient-side closure* whose frequency-domain complement (the rank-2 non-closure `3^a ≠ 2^b`) is kernel-checked at `FalseWork.Diophantine.rank_two_floor` (`Examples/DiophantineFloor.lean`) — together the two faces of the Pythagorean comma, per `papers/connecting-the-spine.md` §2. The cardinality argument `Fix(D₁₂) = {∅, ℤ/12}` for the accumulation operator `(A)` (operation-`(A)` half) remains documentation rather than a Lean theorem; the external-reviewer error verdict still benefits from independent human confirmation.
+
 ## Changelog
 - 2026-04-20: Claim created with flagged correction to external reviewer's draft.
+- 2026-06-08: Translation/closure half of the corrected split kernel-checked (`fifth_closes_in_quotient`); cross-linked to the Diophantine floor and the synthesis note.

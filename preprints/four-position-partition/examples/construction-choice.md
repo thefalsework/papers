@@ -202,6 +202,20 @@ Fact 5 is the natural Phase 1.2 question. A constructive answer (find such a C) 
 
 Originally estimated at 2-3 weeks. After Phase 1.1's LT-topology classification ruling out Sierpinski: **4-8 weeks**. The escalation to a richer base topos introduces both more mathematical work (analyzing reflective subcategories of the chosen base) and more Lean mechanization work (the richer topos requires more setup in Mathlib). The minimum-size question (Fact 5) could in principle take longer if pursued as a research question rather than as a "find any example" task.
 
+## Phase 1.2 update (2026-06): the music topos realizes the escalation, and a general necessary condition on Y
+
+Two developments from the music-anchor line bear directly on this investigation.
+
+**The recommended escalation is realized, kernel-checked.** Candidate 1 above (presheaves on a small poset) is now instantiated in Lean as `Set^{Pᵒᵖ}` for `P` the three join-irreducibles of the subgroup lattice of `ℤ/12` (`lean/FalseWorkPapers/Examples/MusicTopos.lean`). Its full elementary-topos bundle resolves (Mathlib `v4.30`'s presheaf subobject classifier), and — the point relevant here — its **terminal subobject lattice `Sub(1)` is the six-element non-Boolean Heyting algebra `Div12`**, with an explicit kernel-checked order iso `Subobject (⊤_ MusicTopos) ≅ Div12` (`subobjectTerminalEquivDiv12`). This `Sub(1)` is *structurally the same six-element lattice* `∅, {a}, {c}, {a,c}, {a,b}, {a,b,c}` identified in Candidate D (M-Set): a non-regular middle element (`⟨6⟩`, the tritone, analog of `{a}`) with non-trivial complement and non-trivial closure. So the "richer base topos with a non-Boolean subobject lattice carrying a non-regular middle element" the Phase-1.1 analysis called for now exists as a concrete Lean object.
+
+**A general necessary condition on the witness Y — kernel-checked.** The reason Candidate E (sheafification on Set^→) failed has a topos-independent form. The kernel image is `a_Y = Im(η_Y)`, and `Im(η_Y) = ⊤` whenever `η_Y` is an isomorphism (`kernelImage_eq_top_of_isIso_unit`, `lean/FalseWorkPapers/Examples/MusicToposTrace.lean`). At every **j-sheaf** the reflection unit is invertible; in particular the **terminal object is a sheaf for every topology**, so `a_⊤ = ⊤` and Refusal is empty there. Hence:
+
+> **Necessary condition (kernel-checked).** A four-cell witness `(D, η, ι, Y)` with `D` a sheafification requires `Y` to be a *non-sheaf* object — in particular `Y ≠ ⊤`. The reflection must actually move `Y`.
+
+This sharpens Phase-1.1 Fact 4: it is not only that Sierpinski is too small, but that *for any topos* the natural "read the cells off `Sub(1)`" route is structurally barred — `Sub(1)` is exactly where every reflector's unit is invertible. Applied to the music topos: the tritone nucleus is a genuine closure operator on `Sub(1) = Div12` (kernel-checked at the lattice level, `music_anchor_witness`), but it is **not** realized as `Im(η)` of any sheafification monad on `Set^{Pᵒᵖ}`, because that kernel collapses to `⊤` at the terminal. The non-degenerate four-cell instance therefore stands at the lattice level (now identified with the topos's `Sub(1)` by the iso above); whether a sheafification on the music topos inhabits all four cells at a *non-terminal, non-sheaf* `Y` is the refined, still-open Phase-1.2 question for this base.
+
+**Revised reading of Fact 5.** The minimum-size question stands, with one structural constraint added: the witness object is never a subterminal/sheaf. Search the non-sheaf part of the chosen base topos.
+
 ## Provenance
 
 Phase 1.1 conducted on 2026-05-24 in conversation with Anthropic Claude (Cursor IDE), per the project's documented validation architecture. The candidate-survey and LT-topology classification are exploratory mathematical work; verification of all claims will be done mechanically in Phase 1.2. Specific hand computations made in Phase 1.1 and to be checked when Phase 1.2 begins:

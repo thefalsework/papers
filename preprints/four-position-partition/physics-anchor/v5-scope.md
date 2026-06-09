@@ -2,7 +2,13 @@
 
 **Author:** Chris Brink
 **Date:** May 2026
-**Status:** Pre-script design memo. Companion to `physics-anchor/feasibility.md` §4.8-§4.9 (v4 results) and `v4-scope.md` §11.6 (v5 target identified).
+**Status:** Pre-script design memo. Companion to `physics-anchor/feasibility.md` §0 (level hierarchy: this memo is **quaternary-level / Layer-L** work), §4.8-§4.9 (v4 results), and `v4-scope.md` §11.6 (v5 target identified).
+
+---
+
+## 0. Level positioning (added 2026-05-27)
+
+v5 is **quaternary-level (Layer-L)** work per `feasibility.md` §0. It tests whether the framework's mathematical apparatus instantiated on the Bohrification substrate can faithfully witness the Kochen-Specker theorem as a finite computation. It does **not** speak to the framework's primary classification claim — that physics-interpretation works (Copenhagen, Decoherence, Quantum computing, Pilot wave, Many-Worlds, …) map to the five positions. That primary claim sits at the classifier + corpus level and stands independently of whether v5 succeeds, fails, or is never run. v5's result — `|GlobalSections(Σ_Q)| = 0 < 3` — is a clean Layer-L finding about the formal substrate, useful as rigor infrastructure under the partition theorem, and useful as a categorical contrast between quantum and commutative substrates at the Layer-L level. It is not the framework's primary evidence for the cross-domain claim.
 
 ---
 
@@ -203,9 +209,11 @@ STRUCTURAL BREAK DETECTED.
 
 1. **The framework's machinery faithfully witnesses Kochen-Specker.** The Bohrification construction (Heunen-Landsman-Spitters 2009) + Døring's stagewise Heyting NOT (Døring 2012) produce a spectral presheaf `Σ_Q` whose global-section count equals exactly the number of consistent valuations of the Peres-33 configuration — and at the full 40-triad set, that number is zero by KS. v5 computes this in 24 ms.
 
-2. **The categorical signal is established at dim 3.** All previous checkpoints (v2 shape-driven non-vacuity, v3 cell-cardinality at dim 2, v4 non-regular daseinisation at sub-KS-blocking dim 3) were *quantitative* sensitivity findings. v5 is *categorical*: the quantum count is structurally distinct (= 0) from any commutative count (≥ 1). The strict inequality is the signature.
+2. **The categorical signal is established at dim 3.** All previous checkpoints (v2 shape-driven non-vacuity, v3 cell-cardinality at dim 2, v4 non-regular daseinisation at sub-KS-blocking dim 3 *in the framework's truncated context category*) were *quantitative* sensitivity findings. v5 is *categorical*: the quantum count is structurally distinct (= 0) from any commutative count (≥ 1). The strict inequality is the signature.
 
 3. **The physics anchor's structural-feasibility claim is now established.** This is the milestone analogous to the music anchor's tritone non-vacuous four-cell partition. The framework's apparatus extends to physics in the structurally-required sense: there exists a finite, computable witness in `Sub_{cl}(Σ)` for a published quantum-foundations theorem (KS), realised via the framework's own machinery.
+
+4. **The categorical signal is robust to the §3.5 truncation choice.** Unlike v4's substructural non-regular daseinisation finding (which is conditional on the framework's truncation of `V(M_3(C))` and disappears in Døring's full `V(M_3(C))` — see `feasibility.md` §3.5 and §8.7), the v5 categorical signal holds in *both* the framework's truncated context category and Døring's full `V(M_3(C))`. The Kochen-Specker no-coloring statement applies to the 16 maximal MASAs alone; unshared sub-MASAs (whether truncated away or included as in Døring's full `V(N)`) add no global-section constraints, since the consistency requirement at a sub-MASA below a single maximal MASA is automatic. This robustness is what makes v5's headline distinct in status from v4's substructural finding.
 
 ### 11.6 What this does not establish (preserved scope honesty)
 

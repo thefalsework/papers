@@ -5,3 +5,10 @@ import FalseWorkPapers.Examples.HeytingTypeInstance
 import FalseWorkPapers.Examples.CanonizationGeneratorInstance
 import FalseWorkPapers.Examples.DivisorLattice12
 import FalseWorkPapers.Examples.DivisorLattice12Distinction
+import FalseWorkPapers.Examples.DivisorLattice12Birkhoff
+import FalseWorkPapers.Examples.DivisorLattice12Nucleus
+import FalseWorkPapers.Examples.DiophantineFloor
+import FalseWorkPapers.Examples.MusicKernelZMod12
+import FalseWorkPapers.Examples.MusicTopos
+import FalseWorkPapers.Examples.MusicToposSub
+import FalseWorkPapers.Examples.MusicToposTrace

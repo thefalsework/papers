@@ -2,7 +2,7 @@
 
 **Author:** Chris Brink (FalseWork)
 **Date:** June 2026
-**Status:** Self-contained technical note. The Lean results below are kernel-checked against Mathlib4 (Lean `v4.30.0-rc2`); the single open item (§5) is the intended object of specialist correspondence.
+**Status:** Self-contained technical note. The Lean results below are kernel-checked against Mathlib4 (Lean `v4.30.0-rc2`). The bridge is realized: the music lattice is the subobject lattice of a concrete presheaf topos (§5, Birkhoff, kernel-checked) and the distinction operator has a Lawvere–Tierney realization on it. The remaining open item (§5) is one of *canonicity*, not existence — the intended object of specialist correspondence.
 **Audience:** A categorical music theorist (Mazzola's denotator/topos framework; Tymoczko's groupoid framework). It assumes elementary topos theory and pitch-class set theory but nothing about the surrounding FalseWork program.
 
 ---
@@ -13,7 +13,7 @@ There is a theorem — *the four-position partition* — that says: in any eleme
 
 Two features make this more than an illustration. First, the kernel is **not a free parameter**: the tritone `⟨6⟩` is not chosen and then shown to have four cells around it — it is the kernel image `Im(η)` of a concrete idempotent closure operator (`tritoneClosure`, §4), so the four-cell witness is a *consequence of the operator* rather than a construction built around a stipulated kernel. Second, the tritone is the **unique** kernel in this lattice at which all four cells are non-vacuous: an exhaustive check over all six possible kernels shows every other choice degenerates. So this is not "here is one instantiation" but "here is the only instantiation the lattice admits, and its kernel is forced by an operator." Everything is finite and machine-verified.
 
-The one thing that is **not** done — and the reason for writing to a specialist — is whether this finite instance is a *slice of a canonical music topos* (a denotator topos, a presheaf topos on a Tonnetz groupoid) rather than a bespoke construction. That is §5. If it is, the four-cell classification is a structural consequence of the music topos rather than a framework that happens to agree with it.
+The lattice instance is **realized as the subobject lattice of a concrete presheaf topos** — `Set^{Pᵒᵖ}` for `P` the poset of the three symmetric pitch-class generators (Birkhoff's theorem, §5, kernel-checked) — and the distinction operator has a genuine Lawvere–Tierney (sheaf-theoretic) realization on that topos. So the bridge does not depend on outside validation: the partition instantiates on a music-derived topos built directly from `ℤ/12`. The one remaining question (§5) is **canonicity** — whether this topos is *the* music topos, or embeds as a natural slice of a richer one (a denotator topos, a Tonnetz-groupoid presheaf topos). That is a question about which construction is canonical, not whether the bridge exists. If it embeds canonically, the four-cell classification is a structural consequence of the music topos rather than a framework that happens to agree with it.
 
 ---
 
@@ -96,25 +96,47 @@ In the topos shadow this is the picture: a closure operator on `Sub(T)(1)` is wh
 
 This closes the lattice-level (Layer-L + Layer-D-slice) story end to end: a non-Boolean music-derived Heyting algebra, a concrete idempotent distinction operator on it whose kernel image is non-regular, and the four cells inhabited at that kernel image — all kernel-checked.
 
-## 5. The one open question (where a specialist is needed)
+`tritoneClosure` is the *reflective* realization of the kernel (its topos lift is a general idempotent monad). It is **not** the *geometric* (sheaf-theoretic) realization — that is a different, maximal operator `tritoneNucleus`, introduced in §5, which is a genuine Lawvere–Tierney topology with the same tritone kernel. The two share the kernel `tritoneClosure ⊥ = tritoneNucleus ⊥ = ⟨6⟩` but differ in kind; see the correction record in §5.
 
-What is **not** done is the topos-level lift, and it is the only thing standing between this and a complete `four_position_partition` instance on a *music topos*:
+## 5. The topos realization (now kernel-checked), and the one remaining question (canonicity)
 
-> Is there a canonical elementary topos `T` from categorical music theory — a denotator topos in your framework, or a presheaf topos on a Tonnetz/pitch-class groupoid — such that `Sub_T(1)` (or `Sub_T(Y)` for a natural `Y`) is the subgroup lattice of `ℤ/12`, and such that `tritoneClosure` is the subobject-level trace of an idempotent monad on `T` (a sheafification, a reflection onto a sub-topos, a symmetrization)?
+The lattice instance of §3–§4 lifts to a concrete presheaf topos, with the lattice content kernel-checked and no appeal to any specific music-theoretic framework.
 
-Two existence answers are already in hand from general topos theory, but both are *generic*, with no music content beyond what the lattice carries: (T1) `Sh(L)` for the lattice `L` as a locale; (T2) `Set^{Pᵒᵖ}` for `P` the 3-element poset of join-irreducibles `{⟨6⟩ < ⟨3⟩, ⟨4⟩}` (Birkhoff), whose lattice slice is computationally verified. Neither tells us whether the *music* topos you would actually build realizes this lattice and this closure operator.
+**The substrate is the subobject lattice of a natural presheaf topos.** By Birkhoff's representation theorem, every finite distributive lattice is the lattice of down-sets of its poset of join-irreducibles. For the divisor lattice of `ℤ/12` the join-irreducibles are exactly the three fundamental symmetric pitch-class generators — the tritone `⟨6⟩`, the diminished seventh `⟨3⟩`, the augmented triad `⟨4⟩` — with the inclusion order `⟨6⟩ < ⟨3⟩` and `⟨4⟩` incomparable. (This poset `P` is not chosen for convenience: it is the natural generating structure of the symmetric sets, the generators of Messiaen's modes of limited transposition.) Kernel-checked as `Div12.birkhoff_representation`: the map `a ↦ {join-irreducibles ≤ a}` is an injective, bounded, meet- and join-preserving order embedding of `Div12` *onto* the down-sets of `P`. Since the down-sets of `P` are exactly `Sub_{Set^{Pᵒᵖ}}(1)` (general topos theory), this says:
 
-That is the specialist question. Three concrete sub-questions:
+> The divisor lattice of `ℤ/12` **is** the subobject lattice of the terminal object of the presheaf topos `Set^{Pᵒᵖ}` — the **T2 construction** — a topos built directly from the symmetric pitch-class generators of `ℤ/12`, not bespoke for this purpose.
 
-1. **Realization.** Does the denotator/local-composition topos (or a presheaf topos on the dihedral pitch-class groupoid `D₁₂`) contain an object `Y` with `Sub_T(Y) ≅` the subgroup lattice of `ℤ/12`? The subobject lattice of a representable presheaf on a groupoid is the lattice of sub-`Aut`-sets; for `ℤ/12` acting on itself this is close, but the precise object needs your eye.
-2. **The operator.** Is `tritoneClosure` the subobject-level trace of a natural idempotent monad on `T` — e.g. a symmetrization (orbit under a chosen symmetry subgroup), or a sheafification for a Lawvere–Tierney topology corresponding to "tritone coverage"? Idempotency you can read off; whether it is the *intended* distinction operation is a question about your framework's semantics, not just its mathematics.
-3. **Better `D`.** If `tritoneClosure` is the wrong operator, is there a better one — your global-composition / denotator-limit construction, say — whose kernel image still lands non-regular, giving a non-empty Exploitation cell with a different (perhaps richer) musical reading?
+So a complete `four_position_partition` instance lives on a music-derived topos: the tritone is the forced (unique) non-regular kernel and all four cells are inhabited, on a substrate that is Birkhoff's canonical presheaf realization of `ℤ/12`'s symmetric lattice.
 
-If the answer to (1)+(2) is yes, then the four-cell classification is not an empirical framework that *agrees* with the categorical apparatus — it is a structural consequence of it, obtained through the partition theorem. If (2) needs (3), that is itself informative about which distinction operation is canonical for music.
+**The distinction operator has a Lawvere–Tierney (sheaf-theoretic) realization.** A nucleus — an inflationary, idempotent, *meet-preserving* operator — is the subobject-level trace of a Lawvere–Tierney topology, i.e. of a sheafification. Kernel-checked (`Div12.tritone_kernel_has_lawvere_tierney_realization`): the maximal tritone-closing closure operator `tritoneNucleus` (Moore family `{⟨6⟩, ⟨3⟩, ⟨2⟩, ℤ/12}`) **is** a nucleus, and its kernel image is still the tritone, still non-regular. So there is a Lawvere–Tierney topology on `Set^{Pᵒᵖ}` whose induced distinction structure has the tritone as its non-regular kernel — the music kernel has a genuine *geometric* realization, a sheaf subtopos, not merely a reflective one.
+
+**Correction record (vs. the previously circulated draft).** This matters enough to state in the open rather than swap silently, since an earlier version of this note has circulated.
+
+- **What the earlier draft said.** §5 listed, as open specialist sub-question (2), whether the operator of §4 — `tritoneClosure`, the *minimal* tritone-closing operator — is "the subobject-level trace of an idempotent monad … a sheafification for a Lawvere–Tierney topology." The implicit expectation was that `tritoneClosure` itself would be that sheafification.
+- **What is now proven.** That expectation is **wrong, kernel-checked.** `tritoneClosure` is *not* a nucleus: it fails meet-preservation, with explicit witness `j(⟨4⟩ ⊓ ⟨3⟩) = ⟨6⟩ ≠ ℤ/12 = j⟨4⟩ ⊓ j⟨3⟩` (`Div12.tritoneClosure_not_nucleus`). So `tritoneClosure`'s topos lift is a general (non-left-exact) idempotent monad via `DistinctionStructure.ofIdempotentMonad`, **not** a Lawvere–Tierney topology / sheafification.
+- **The corrected operator.** The sheafification reading is salvaged by a *different* operator: the **maximal** tritone-closing operator `tritoneNucleus` (Moore family `{⟨6⟩, ⟨3⟩, ⟨2⟩, ℤ/12}`) **is** a nucleus (`Div12.tritone_kernel_has_lawvere_tierney_realization`), with the *same* tritone kernel, still non-regular. So the geometric realization exists — just not via the operator originally proposed for it.
+
+Net: the *reflective* realization of the tritone kernel is `tritoneClosure` (§4, unchanged); the *geometric* (sheaf-theoretic) realization is `tritoneNucleus` (new). Both are kernel-checked; only the latter is a sheafification. If you are checking against the earlier draft, this is the one identification that changed.
+
+**What remains.** Essentially one specialist question. The Lean topos-object plumbing and the explicit `Subobject`-API iso are now closed and kernel-checked, and the one route that does *not* lift (the kernel as a topos endofunctor's unit-image) is now a precise kernel-checked obstruction (item 1). None of this is the existence of the bridge:
+
+1. **Lean plumbing — closed (2026-06).** `Set^{Pᵒᵖ}` *is* now instantiated as an actual `CategoryTheory` object in Lean — `MusicTopos := Pᵒᵖ ⥤ Type` for `P` the join-irreducible poset (`Examples/MusicTopos.lean`) — and the full elementary-topos hypothesis bundle resolves for it (`musicTopos_isElementaryTopos`). Consequently `Sub_{Set^{Pᵒᵖ}}(1)` is a Heyting algebra on the concrete topos, and the abstract `four_position_partition` typechecks against it (`four_position_partition_musicTopos`). The earlier blocker was the absence of a presheaf subobject classifier in Mathlib; that was supplied in Mathlib `v4.30` (`CategoryTheory.Presheaf.classifier`), and the gap closed at once. The two finer-grained items flagged here are now both resolved:
+
+   - **(i) Explicit `Subobject (⊤_ MusicTopos) ≅ Div12` — closed, kernel-checked** (`Examples/MusicToposSub.lean`, `subobjectTerminalEquivDiv12`). Birkhoff is upgraded from the down-set level (`Div12 ≅ O(P)`) to an order iso of Mathlib's actual `Subobject` type of the terminal presheaf, via `Subfunctor.orderIsoSubobject` (Mathlib `v4.30`) and the hand-built down-set correspondence. The topos's own `Sub(1)` cells now map onto the named pitch-class objects of `Div12`.
+   - **(ii) Non-trivial *topos* endofunctor — comes apart from the tritone at `1`** (`Examples/MusicToposTrace.lean`). The four-position kernel is `kernelImage Δ Y = Im(η_Y)` (image of the marking unit), and any iso unit forces it to `⊤` (`kernelImage_eq_top_of_isIso_unit`). The terminal presheaf is a sheaf for *every* topology, so every sheafification monad has iso unit at `1`, giving `kernelImage Δ 1 = ⊤` while the tritone value is `⟨6⟩ ≠ ⊤`. So the sheafification-at-`1` route degenerates exactly like the trivial distinction; **the lattice nucleus (a closure operator on `Sub(1)`) is not the `Im(η)` kernel of any reflector at `1`.** The non-degenerate, musically-loaded partition therefore stays the *lattice-level* theorem (`lattice_four_position_partition`, `music_anchor_witness`) — now bridged to the topos by (i), since that lattice *is* `Sub(1)`. Realizing the tritone as `kernelImage Δ Y` for a *non-terminal* witness via a bespoke (non-sheafification) endofunctor remains genuinely open.
+
+   So the topos-object bridge is welded for the lattice and the operator; the only thing that does *not* lift is the encoding of the kernel as a topos endofunctor's unit-image, and that is now a precise, kernel-checked obstruction rather than an open mechanization.
+
+2. **Canonicity (the specialist question).** Is `Set^{Pᵒᵖ}` *the* music topos, or does it embed as a natural slice of a richer one? Concretely:
+
+   - **Embedding.** Does the denotator / local-composition topos, or a presheaf topos on the dihedral pitch-class groupoid `D₁₂`, contain `Set^{Pᵒᵖ}` (equivalently, an object `Y` with `Sub_T(Y) ≅` the subgroup lattice of `ℤ/12`) as a natural subtopos or slice? The subobject lattice of a representable presheaf on a groupoid is the lattice of sub-`Aut`-sets; for `ℤ/12` acting on itself this is close, but the precise comparison needs your framework's eye.
+   - **The operator's status.** Is `tritoneNucleus`'s Lawvere–Tierney topology one your framework already names — a symmetrization, a "tritone-coverage" Grothendieck topology — or does your canonical distinction operation differ, and if so does *its* kernel image still land non-regular (a different, perhaps richer, Exploitation reading)?
+
+   The bridge does not depend on the answer. The question is whether the road we built is *the* road to this place or *a* road — whether the music topos with the deepest foundations realizes this same lattice, this same kernel, and this same sheaf-theoretic distinction operation. If it does, the four-cell classification is not an empirical framework that *agrees* with the categorical apparatus; it is a structural consequence of the music topos itself.
 
 ## 6. Scope honesty (what this note does not claim)
 
-- It does **not** claim a topos-level instance. §3–§4 are lattice-level (Layer L and the Layer-D *slice*); the topos lift of §5 is open.
+- It claims a topos-level instance **at the level of the subobject lattice and the distinction operator** (§5): the music lattice is kernel-checked to be `Sub_{Set^{Pᵒᵖ}}(1)` for a concrete presheaf topos — now including an explicit `Subobject (⊤_ MusicTopos) ≅ Div12` in Mathlib's `Subobject` API (`subobjectTerminalEquivDiv12`) — and a Lawvere–Tierney topology on that topos has the tritone as its non-regular kernel. As of 2026-06 `Set^{Pᵒᵖ}` **is** also instantiated as an elementary-topos object in Lean (§5.1, `musicTopos_isElementaryTopos`; the earlier Mathlib presheaf-instance gap closed in `v4.30`). What it does **not** claim is a *non-degenerate* partition at the **topos-object** level: the kernel `kernelImage Δ Y = Im(η_Y)` collapses to `⊤` at the terminal for every reflector (the terminal is a sheaf), so the tritone is not realized as the marking-image of a sheafification monad (§5.1 item (ii), `kernelImage_eq_top_of_isIso_unit`); the non-degenerate four-cell instance is the *lattice-level* `music_anchor_witness`, identified with the topos's `Sub(1)` by the iso above. And it does **not** claim this topos is canonical for music (§5.2, the open question).
 - It does **not** claim the diatonic/symmetric/chromatic tripartition maps onto the cells. The naive (diatonic-closure) form of that map fails at the Heyting-distributivity step (§3, memo §11); any correct version must be reconstructed on the subgroup substrate and is not established here.
 - It does **not** claim a formal identity between the tritone's Heyting non-regularity and the Pythagorean comma's irrationality `(3/2)^p ≠ 2^q`. The two are recorded as a **structural identification** (memo §13.1) — same load-bearing role, "comma as the obstruction to closure" — not a constructed isomorphism. A locale/`π₁` bridge connecting the lattice-of-subobjects picture to a topology-of-arrows picture is plausible but unbuilt.
 - The pitch-class objects used are elementary group theory of `ℤ/12` (Messiaen, Forte, Rahn), not a contribution of any recent categorical author. The instrument is borrowed; only the partition reading of its cells is the framework's.
@@ -133,10 +155,16 @@ Lattice/FourPositionLattice.lean
 Examples/DivisorLattice12.lean            (Layer-L witness)
     tritone_non_regular
     music_anchor_witness
-Examples/DivisorLattice12Distinction.lean (this note's results)
+Examples/DivisorLattice12Distinction.lean (the distinction operator)
     tritoneClosure_is_distinction_slice
     pcset_realizes_subgroup_lattice
     pcset_tritoneClosure_bot
+Examples/DivisorLattice12Birkhoff.lean      (§5: the T2 realization)
+    birkhoff_representation        (Div12 ≅ Sub_{Set^{Pᵒᵖ}}(1))
+    birkhoff_tritoneKernel         (kernel = principal down-set of the tritone)
+Examples/DivisorLattice12Nucleus.lean       (§5: the LT-topology)
+    tritone_kernel_has_lawvere_tierney_realization
+    tritoneClosure_not_nucleus     (the reflective-vs-geometric correction)
 ```
 
 Axiom audit (`Examples/HeytingTypeInstance.lean`, via `#print axioms`): every theorem above depends only on `propext`, `Classical.choice`, `Quot.sound` — several on strictly fewer — and none on `sorryAx`.

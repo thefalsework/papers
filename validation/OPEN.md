@@ -35,6 +35,15 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 - **Status:** awaiting topos theorist or category theorist. The `refusal_residue` theorem stands either way (it is closed under the `HasIrregularKernel` hypothesis); the bridge controls how broadly the asymptotic-residue phenomenology applies, not whether the theorem is correct.
 - **Related:** [`five-position-derivation-formalization`](claims/five-position-derivation-formalization.md) (the umbrella formalization claim this conjecture sits under)
 
+### `music-topos-t2-realization` — the music substrate is a concrete presheaf topos (T2), with a Lawvere–Tierney realization of the distinction operator
+- **Authoritative statement:** [`claims/music-topos-t2-realization.md`](claims/music-topos-t2-realization.md)
+- **GitHub issue:** (pending)
+- **Paper / note:** four-position-partition preprint `music-anchor/mazzola-bridge-note.md` §5; synthesis note [`../papers/connecting-the-spine.md`](../papers/connecting-the-spine.md) §3; Lean at [`../lean/FalseWorkPapers/Examples/DivisorLattice12Birkhoff.lean`](../lean/FalseWorkPapers/Examples/DivisorLattice12Birkhoff.lean) and [`DivisorLattice12Nucleus.lean`](../lean/FalseWorkPapers/Examples/DivisorLattice12Nucleus.lean)
+- **What's kernel-checked (in-repo):** `Div12 ≅ Sub_{Set^{Pᵒᵖ}}(1)` (Birkhoff, `birkhoff_representation`); a Lawvere–Tierney topology on `Set^{Pᵒᵖ}` with the tritone as non-regular kernel (`tritone_kernel_has_lawvere_tierney_realization`); and the negative correction that the minimal tritone-closing operator is not a nucleus (`tritoneClosure_not_nucleus`).
+- **What's asked / open:** (i) topos-object plumbing — instantiate `Set^{Pᵒᵖ}` as a Lean elementary topos so the abstract `four_position_partition` typechecks against it directly (blocked by a Mathlib presheaf universe / `InitialMonoClass` gap; mechanical, not mathematical); (ii) **canonicity** — is `Set^{Pᵒᵖ}` *the* music topos, or a natural slice of a richer one (Mazzola's denotator topos; a `D₁₂`-groupoid presheaf topos)? A question of canonicity, not existence.
+- **Time estimate for validator:** ~1–2 hours for (i) sanity check; (ii) is an open specialist question.
+- **Status:** lattice-and-operator level kernel-checked in-repo; awaiting categorical music theorist on canonicity. Drops the Mazzola dependency for the *existence* of the bridge.
+
 ### `lawvere-unification-of-formal-groundings` — Cantor and Gödel as Lawvere instances; G ∧ R ∧ C as domain-facing analog of Lawvere's hypothesis
 - **Authoritative statement:** [`claims/lawvere-unification-of-formal-groundings.md`](claims/lawvere-unification-of-formal-groundings.md)
 - **GitHub issue:** (pending)

@@ -23,6 +23,9 @@ lean/.lake/
 lean/build/
 lean/lake-packages/
 
+# Local toolchain binaries (tectonic, etc.)
+.tools/
+
 # Temporary files
 _*.txt
 _p*.txt
