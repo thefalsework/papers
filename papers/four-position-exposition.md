@@ -114,6 +114,20 @@ Consequences, stated with their honest weights:
 - **Partial canonicity for the music lattice.** Pure logic, with no musical input, forces this exact 6-element structure as the smallest stage of the free Heyting algebra where the partition can be non-degenerate (`Z5.no_kernel`). What remains contingent is why music lands there (12-tone temperament); what is no longer contingent is the lattice itself. The topos-canonicity question (ledger 12) remains [O].
 - **What this does not say:** nothing about other domains (cinema, physics); nothing Gödel-flavored (this is propositional logic in one variable); the `Z_6` *name* rides on Citkin [C] — the generation facts and uniqueness are [K].
 
+### 2.3a Why the weld matters (the significance, stated plainly)
+
+Four readings of §2.3, in decreasing order of certainty, none hedged:
+
+1. **It retires the "you chose the kernel" objection for music.** The framework's most exposed point was always that the kernel might be selected to make the story work. `Div12.kernel_unique` (and its `Z_7`, `Z_8` counterparts) answers it: there is exactly one element at which the partition is non-degenerate, it is the same element at every checked truncation, and it is the free generator. There was never a choice to make. [K]
+
+2. **The four-position structure has a minimum complexity cost, and it is a law.** `Z5.no_kernel` is exhaustive: below six elements the four positions cannot all be occupied, at six they can, uniquely. The partition is not an imposed taxonomy — it switches on at a precise, computable size, with the character of a threshold. The smallest structure that pays the cost is exactly the one Western tonality uses. [K]
+
+3. **For the music–mathematics pair, the program's central claim stops being a thesis.** "Domains share structure because they share an underlying logic" is, for this pair, no longer an analogy with a proposed mechanism — the substrates are the same six-element algebra, the kernels are the same element, the witnesses are the same four terms. The claim has been produced rather than argued. [K]
+
+4. **As standalone mathematics**: "the four-cell Heyting partition is non-degenerate on the one-generated algebras `Z_n` exactly when `n ≥ 6` (checked at `n ≤ 8`), with unique kernel the free generator; and `Z_6` is the subgroup lattice of `ℤ/12`" is a small, clean, apparently unnoticed result connecting the Rieger–Nishimura ladder to music theory — note-sized, finite-computation-proved, publishable on its own terms. Not deep; new.
+
+And the flip side, equally unhedged: **the weld raises the bar for every other domain.** "Shared structure" now has a demonstrated literal meaning — same algebra, same kernel, same witnesses. The cinema, architecture, and physics claims will be measured against that standard, and they currently do not meet it; they remain analogies (§2.4). The result strengthens the music–logic spine and *sharpens*, rather than supports, the burden on the rest.
+
 ### 2.4 The other anchors and attachments
 
 - **Spencer-Brown** ([K]): in Boolean logic the partition has exactly three cells (`boolean_partition_three_cells`) — the calculus of indications lives in the collapsed world; the fourth cell is what intuitionistic logic adds.
@@ -180,6 +194,8 @@ Then we asked: what does the four-position theorem look like on *logic's own ter
 And the surprise: **the six-element truncation is, element for element, the music lattice.** The tritone *is* the free proposition `p`. The augmented triad *is* `¬p`. The diminished seventh — the Exploitation position, the shadow-dweller — *is* `¬¬p`, the double negation that famously fails to collapse in intuitionistic logic. The whole-tone scale *is* `p ∨ ¬p`, the excluded middle that fails to be a tautology at dusk.
 
 So the analogy between "music's irresolvable residue" and "logic's irresolvable residue" turned out not to be an analogy. At the smallest scale where the four-position structure can exist at all, music and logic are running on **the same six-element machine**, with the same unique kernel and the same four occupants. Music found by ear, centuries ago, the minimal algebra of a proposition that doesn't quite close over its own negation.
+
+In one sentence: the program claimed art and logic run on the same machinery; for music, that machinery has now been produced — it has six parts, it is unique, and the tritone is its generator.
 
 ### 3.4 What is *not* claimed, plainly
 
