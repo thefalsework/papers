@@ -15,6 +15,7 @@ import FalseWorkPapers.Examples.DiophantineFloor
 import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
+import FalseWorkPapers.Examples.WhyTwelve
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub
@@ -229,6 +230,25 @@ Lean) — the consistency weld with the exhaustive `decide` proof. -/
 #print axioms FalseWork.Lattice.nishimura_kernel_unique
 #print axioms FalseWork.Lattice.Examples.Div12.nishimura_generated
 #print axioms FalseWork.Lattice.Examples.Div12.kernel_unique_via_law
+
+/-! Why 12 (companion to `Examples/WhyTwelve.lean`).  The arithmetic side
+of the music–logic weld: on the divisor lattices of the equal temperaments
+`ℤ/n` (products of chains, one per prime), chains never carry a four-cell
+kernel (all prime powers, abstract); squarefree `pq` never does; a kernel
+exists iff some exponent is ≥ 2 and is unique iff `n = p²q` — least
+instance 12 — where, under the explicit Heyting iso `Div12 ≃o C₃ × C₂`,
+the unique kernel is the tritone.  Boundary failures kernel-checked at
+24, 36, 60.  All lines must report only the standard axioms. -/
+#print axioms FalseWork.Lattice.total_no_kernel
+#print axioms FalseWork.Lattice.prod_kernel_iff
+#print axioms FalseWork.Lattice.Examples.chainProd_kernel_exists_iff
+#print axioms FalseWork.Lattice.Examples.chainProd_kernel_unique_iff
+#print axioms FalseWork.Lattice.Examples.twelve_kernel_unique
+#print axioms FalseWork.Lattice.Examples.twentyfour_kernel_two
+#print axioms FalseWork.Lattice.Examples.sixty_kernel_three
+#print axioms FalseWork.Lattice.Examples.Div12.toChains_himp
+#print axioms FalseWork.Lattice.Examples.Div12.div12OrderIsoChains
+#print axioms FalseWork.Lattice.Examples.why_twelve
 
 /-! The music kernel "The Fifth" on `ℤ/12` (companion to
 `Examples/MusicKernelZMod12.lean` and `music-kernel-05-z12z-cycle.md`).

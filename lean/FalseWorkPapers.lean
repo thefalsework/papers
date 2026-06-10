@@ -11,6 +11,7 @@ import FalseWorkPapers.Examples.DiophantineFloor
 import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
+import FalseWorkPapers.Examples.WhyTwelve
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub

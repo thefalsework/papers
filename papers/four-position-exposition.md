@@ -132,6 +132,8 @@ Four readings of §2.3, in decreasing order of certainty, none hedged:
 
 4. **As standalone mathematics**: "in any Heyting algebra the four-cell partition is non-degenerate at `a` iff `a` is non-zero, non-polar, non-regular; consequently every one-generated Heyting algebra with ordinary generator — every `Z_n` with `n ≥ 6`, and the free Heyting algebra on one generator itself — has the free generator as its unique non-degenerate kernel; and `Z_6` is the subgroup lattice of `ℤ/12`" is a small, clean, apparently unnoticed result connecting the Rieger–Nishimura ladder to music theory — note-sized, abstractly proved (the enumeration input is classical [C]), publishable on its own terms. Not deep; new.
 
+5. **The arithmetic side: why 12** (`WhyTwelve.lean`). The weld says where music landed; the trichotomy run over *all* equal temperaments says why 12 is the system that lands there. The subgroup lattice of `ℤ/n` is a product of chains (one per prime, length = exponent + 1; standard [C], kernel-anchored at 12). Kernel-checked: chains — **all** prime powers `p^k` — never carry a kernel (abstract, no enumeration); squarefree `pq` never does; a kernel exists iff some exponent is ≥ 2, and is **unique iff `n = p²q`** (abstract, all exponents), whose least instance is **12** — where the explicit Heyting iso `Div12 ≃o C₃ × C₂` carries the tritone to the unique kernel. Boundary failures checked: 24 and 36 have two kernels, 60 has three. So the forcing is two-sided: logic's first non-degenerate one-generated algebra (`Z_6`, all-n law) and arithmetic's first non-degenerate temperament (12) are the same six-element object with the same unique kernel. Honesty: 18 and 20 are also `p²q` — same lattice, unique kernels too; 12 is the *least*, not the only; and "every `n < 12` is `1`, `p^k`, or `pq`" is elementary prose arithmetic, not formalized. [K] with seams in `validation/claims/why-twelve-tet.md`.
+
 And the flip side, equally unhedged: **the weld raises the bar for every other domain.** "Shared structure" now has a demonstrated literal meaning — same algebra, same kernel, same witnesses. The cinema, architecture, and physics claims will be measured against that standard, and they currently do not meet it; they remain analogies (§2.4). The result strengthens the music–logic spine and *sharpens*, rather than supports, the burden on the rest.
 
 ### 2.4 The other anchors and attachments
@@ -159,6 +161,7 @@ And the flip side, equally unhedged: **the weld raises the bar for every other d
 | RN truncations: outcome (A) | [K] | `rn_truncation_outcome_A` |
 | Kernel trichotomy (any Heyting algebra) | [K] | `allFourCellsInhabited_iff` |
 | All-n kernel law (every `Z_n`, full RN lattice) | [K]+[C] | `nishimura_kernel_unique`, `Div12.kernel_unique_via_law` |
+| Why 12: kernel unique iff `n = p²q`, least = 12; tritone = the kernel | [K]+[C] | `chainProd_kernel_unique_iff`, `why_twelve`, `div12OrderIsoChains` |
 | `Div12 ≅ Z_6`, tritone = free generator | [K]+[C] | `Div12.one_generated_by_tritone`, `Div12.rn_terms` |
 | Bespoke topos endofunctor; canonicity; Baker; Lawvere unification; cross-domain mechanism; Commitment content | [O] | — |
 | Practice-domain classifications | [A] | — |
@@ -203,7 +206,9 @@ And the surprise: **the six-element truncation is, element for element, the musi
 
 So the analogy between "music's irresolvable residue" and "logic's irresolvable residue" turned out not to be an analogy. At the smallest scale where the four-position structure can exist at all, music and logic are running on **the same six-element machine**, with the same unique kernel and the same four occupants. Music found by ear, centuries ago, the minimal algebra of a proposition that doesn't quite close over its own negation.
 
-In one sentence: the program claimed art and logic run on the same machinery; for music, that machinery has now been produced — it has six parts, it is unique, and the tritone is its generator.
+And the question that answer raises — *why twelve notes?* — turned out to have an arithmetic answer of the same shape. Run the four-position test over every possible equal temperament: prime-power systems (4, 8, 9, 16 notes…) can never occupy all four positions; squarefree systems (6, 10, 15…) can't either; the structure switches on only when the note count has a squared prime *and* a second prime — and is occupied in exactly one place only when the count is `p²q`. The smallest number of that form is twelve. So logic's smallest viable algebra and arithmetic's smallest viable temperament are the same six-element machine, selected from two independent directions. (Eighteen and twenty would work too — twelve is the *first*, not the only.)
+
+In one sentence: the program claimed art and logic run on the same machinery; for music, that machinery has now been produced — it has six parts, it is unique, the tritone is its generator, and both logic and arithmetic select it first.
 
 ### 3.4 What is *not* claimed, plainly
 
