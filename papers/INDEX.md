@@ -30,12 +30,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
 
-**Current version.** v8.5
+**Current version.** v8.11
 
-**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system (human or computational); what differs between systems is the maturity of the correction mechanism available to detect and address it.
+**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system (human or computational); what differs between systems is the maturity of the correction mechanism available to detect and address it. v8.11 adds a second documented literature-engagement instance to § 4.5: the false-novelty polarity — during prior-art preparation (2026-06-10), close reading of Citkin 2024 revealed half of a threshold result carried as apparently new was already a published observation; the repository was corrected the same day, before any external contact. § 4.5 now documents the mode in both polarities (false conflict, Døring; false novelty, Citkin) across two domains.
 
 **Paper source.** [`paper2-epistemic-dependency/paper2.md`](paper2-epistemic-dependency/paper2.md)
-**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and § 4.5 literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3–v8.5 DOCX archives deferred until post-arXiv.)
+**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and § 4.5 literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3 onward DOCX archives deferred until post-arXiv.)
 
 **Open validation items this paper carries.**
 - § 2.3 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
@@ -155,7 +155,7 @@ Paper 1 (v11.8)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v11.8)
   └─ ground for Papers 2–5
 
-Paper 2 (v8.5)
+Paper 2 (v8.11)
   ├─ refs Paper 1 (kernel–comma framework)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
