@@ -14,6 +14,7 @@ import FalseWorkPapers.Examples.DivisorLattice12Nucleus
 import FalseWorkPapers.Examples.DiophantineFloor
 import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
+import FalseWorkPapers.Examples.NishimuraKernelLaw
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub
@@ -212,6 +213,22 @@ the tritone).  All lines must report only the standard axioms. -/
 #print axioms FalseWork.Lattice.Examples.Z8.kernel_unique
 #print axioms FalseWork.Lattice.Examples.Z8.witness
 #print axioms FalseWork.Lattice.Examples.Z5.no_kernel
+
+/-! The all-n kernel law (companion to `Examples/NishimuraKernelLaw.lean`).
+The abstract upgrade of outcome (A): in any Heyting algebra all four cells
+are inhabited at `a` iff `a` is non-zero, non-polar, non-regular
+(`allFourCellsInhabited_iff`); and in any Heyting algebra whose elements
+are Nishimura term values in an ordinary generator `g`, the unique
+four-cell kernel is `g` (`nishimura_kernel_unique`).  Conditional only on
+the classical Nishimura enumeration [C], this covers every truncation
+`Z_n` and the full Rieger–Nishimura lattice.  `Div12.kernel_unique_via_law`
+re-derives the tritone result from the law (hypothesis discharged inside
+Lean) — the consistency weld with the exhaustive `decide` proof. -/
+#print axioms FalseWork.Lattice.allFourCellsInhabited_iff
+#print axioms FalseWork.Lattice.four_le_nishimuraTerm
+#print axioms FalseWork.Lattice.nishimura_kernel_unique
+#print axioms FalseWork.Lattice.Examples.Div12.nishimura_generated
+#print axioms FalseWork.Lattice.Examples.Div12.kernel_unique_via_law
 
 /-! The music kernel "The Fifth" on `ℤ/12` (companion to
 `Examples/MusicKernelZMod12.lean` and `music-kernel-05-z12z-cycle.md`).

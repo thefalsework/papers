@@ -91,7 +91,13 @@ On the divisor lattice of 12 (`Div12` ≅ subgroup lattice of `ℤ/12` ≅ trans
 
 - The free Heyting algebra on one generator is the Rieger–Nishimura lattice — infinite, so the experiment runs on its canonical finite truncations: by Citkin (2024) **[C]**, for each `n > 1` there is *exactly one* one-generated Heyting algebra `Z_n` of cardinality `n`. The truncation parameter is a single integer — the pre-registered failure mode (D) was dissolved by the literature before the first `decide`.
 - Each Lean algebra is certified as `Z_n` by a kernel-checked one-generation theorem (every element an explicit Heyting term in `g`).
-- **Result — outcome (A)** (`rn_truncation_outcome_A`, [K], axioms `propext, Quot.sound`): at `n = 6, 7, 8` the unique kernel making all four cells inhabited is the **free generator** `g`; at `n = 5` (and below) **no** kernel works. The witnesses are the same four terms at every level: Infrastructure `g`, Refusal `¬g`, Exploitation `¬¬g`, Distribution `g ⊔ ¬g`. The all-`n` claim is [O].
+- **Result — outcome (A)** (`rn_truncation_outcome_A`, [K], axioms `propext, Quot.sound`): at `n = 6, 7, 8` the unique kernel making all four cells inhabited is the **free generator** `g`; at `n = 5` (and below) **no** kernel works. The witnesses are the same four terms at every level: Infrastructure `g`, Refusal `¬g`, Exploitation `¬¬g`, Distribution `g ⊔ ¬g`.
+
+**The all-n kernel law** (`NishimuraKernelLaw.lean`) upgrades the sample to a law, with no further finite algebras built:
+
+- **Kernel trichotomy** (`allFourCellsInhabited_iff`, [K] unconditional, axioms `propext` only): in *any* Heyting algebra, all four cells are inhabited at `a` iff `a ≠ ⊥ ∧ ¬a ≠ ⊥ ∧ ¬¬a ≠ a` — non-zero, non-polar, non-regular. This is the abstract reason Boolean algebras never have a non-degenerate kernel (everything is regular) and `Z_5` doesn't either (each element fails one condition).
+- **The law** (`nishimura_kernel_unique`, [K] with the hypothesis explicit): any Heyting algebra whose elements are Nishimura term values in an ordinary generator `g` has `g` as its **unique** four-cell kernel. By the Nishimura enumeration [C] the hypothesis holds for every one-generated Heyting algebra — so the law covers **every `Z_n` (`n ≥ 6`) and the full infinite Rieger–Nishimura lattice `F(1)` itself**: the free Heyting algebra on one generator has the free generator as its forced kernel. The `n = 6, 7, 8` checks are now samples of a theorem, not the theorem.
+- **Consistency weld**: for `Div12 = Z_6` the hypothesis is discharged inside Lean by `decide` (no [C] needed at cardinality 6), and `Div12.kernel_unique_via_law` re-derives tritone uniqueness from the abstract law — agreeing with the independent exhaustive proof.
 
 ### 2.3 The weld: `Div12 ≅ Z_6` — music and mathematics share a substrate
 
@@ -110,7 +116,7 @@ The bonus result of the truncation run, and the most consequential single fact i
 
 Consequences, stated with their honest weights:
 
-- **The music–mathematics cross-domain claim is no longer an analogy.** For this pair of domains the substrates *coincide*: same algebra, same unique kernel, same four witnesses. The Exploitation cell — the framework's comma — is literally `¬¬p ≠ p`, the double-negation non-collapse that defines intuitionistic logic. [K]
+- **The music–mathematics cross-domain claim is no longer an analogy — at the level of the objects.** For this pair of domains the substrates *coincide*: same algebra, same unique kernel, same four witnesses. The Exploitation cell — the framework's comma — is literally `¬¬p ≠ p`, the double-negation non-collapse that defines intuitionistic logic. [K] (The further *reading* — that the coincidence reveals music to be intrinsically one-generated intuitionistic logic rather than two specific six-element objects coinciding — is a structural identification [A]; see §2.3a item 3.)
 - **Partial canonicity for the music lattice.** Pure logic, with no musical input, forces this exact 6-element structure as the smallest stage of the free Heyting algebra where the partition can be non-degenerate (`Z5.no_kernel`). What remains contingent is why music lands there (12-tone temperament); what is no longer contingent is the lattice itself. The topos-canonicity question (ledger 12) remains [O].
 - **What this does not say:** nothing about other domains (cinema, physics); nothing Gödel-flavored (this is propositional logic in one variable); the `Z_6` *name* rides on Citkin [C] — the generation facts and uniqueness are [K].
 
@@ -122,9 +128,9 @@ Four readings of §2.3, in decreasing order of certainty, none hedged:
 
 2. **The four-position structure has a minimum complexity cost, and it is a law.** `Z5.no_kernel` is exhaustive: below six elements the four positions cannot all be occupied, at six they can, uniquely. The partition is not an imposed taxonomy — it switches on at a precise, computable size, with the character of a threshold. The smallest structure that pays the cost is exactly the one Western tonality uses. [K]
 
-3. **For the music–mathematics pair, the program's central claim stops being a thesis.** "Domains share structure because they share an underlying logic" is, for this pair, no longer an analogy with a proposed mechanism — the substrates are the same six-element algebra, the kernels are the same element, the witnesses are the same four terms. The claim has been produced rather than argued. [K]
+3. **For the music–mathematics pair, the program's central claim stops being a thesis — with one tag split.** The substrates are the same six-element algebra, the kernels are the same element, the witnesses are the same four terms: that coincidence is produced, not argued. [K] But "produced" covers exactly the isomorphism of two specific lattices. The *interpretation* — that the isomorphism means music and logic share an underlying logic, that music is at root the minimal one-generated intuitionistic algebra rather than a domain that happens to land on an isomorphic object — is a structural identification [A], the same genus as "diagonal = comma" and "Pythagorean near-miss = comma." The isomorphism does not adjudicate between "shared underlying logic" and "two objects coincide"; that question is open, and the [A] reading must not wear the [K]'s coat.
 
-4. **As standalone mathematics**: "the four-cell Heyting partition is non-degenerate on the one-generated algebras `Z_n` exactly when `n ≥ 6` (checked at `n ≤ 8`), with unique kernel the free generator; and `Z_6` is the subgroup lattice of `ℤ/12`" is a small, clean, apparently unnoticed result connecting the Rieger–Nishimura ladder to music theory — note-sized, finite-computation-proved, publishable on its own terms. Not deep; new.
+4. **As standalone mathematics**: "in any Heyting algebra the four-cell partition is non-degenerate at `a` iff `a` is non-zero, non-polar, non-regular; consequently every one-generated Heyting algebra with ordinary generator — every `Z_n` with `n ≥ 6`, and the free Heyting algebra on one generator itself — has the free generator as its unique non-degenerate kernel; and `Z_6` is the subgroup lattice of `ℤ/12`" is a small, clean, apparently unnoticed result connecting the Rieger–Nishimura ladder to music theory — note-sized, abstractly proved (the enumeration input is classical [C]), publishable on its own terms. Not deep; new.
 
 And the flip side, equally unhedged: **the weld raises the bar for every other domain.** "Shared structure" now has a demonstrated literal meaning — same algebra, same kernel, same witnesses. The cinema, architecture, and physics claims will be measured against that standard, and they currently do not meet it; they remain analogies (§2.4). The result strengthens the music–logic spine and *sharpens*, rather than supports, the burden on the rest.
 
@@ -151,6 +157,8 @@ And the flip side, equally unhedged: **the weld raises the bar for every other d
 | Diophantine floor (qualitative) | [K] | `shared_diophantine_floor`, `fifth_closes_in_quotient` |
 | Mathematics floor (diagonal/Lawvere) | [K] | `mathematics_floor`, `lawvere_fixedPoint` (axiom-free) |
 | RN truncations: outcome (A) | [K] | `rn_truncation_outcome_A` |
+| Kernel trichotomy (any Heyting algebra) | [K] | `allFourCellsInhabited_iff` |
+| All-n kernel law (every `Z_n`, full RN lattice) | [K]+[C] | `nishimura_kernel_unique`, `Div12.kernel_unique_via_law` |
 | `Div12 ≅ Z_6`, tritone = free generator | [K]+[C] | `Div12.one_generated_by_tritone`, `Div12.rn_terms` |
 | Bespoke topos endofunctor; canonicity; Baker; Lawvere unification; cross-domain mechanism; Commitment content | [O] | — |
 | Practice-domain classifications | [A] | — |
@@ -189,7 +197,7 @@ Mathematics has its own founding fence: the diagonal. Make any list of sets and 
 Then we asked: what does the four-position theorem look like on *logic's own territory* — the algebra freely generated by a single proposition `p` under intuitionistic rules? Truncate that infinite algebra at each finite size (the truncations are canonical — there is exactly one at each size) and run the experiment, with the acceptable outcomes written down before pressing the button. The result:
 
 - Below six elements: the four positions cannot all be occupied. The structure literally does not fit.
-- At six elements and above (checked through eight): there is **exactly one** place to draw the fence so that all four positions are occupied — at `p` itself, the free generator. And the four occupants are always the same four formulas: `p`, `¬p`, `¬¬p`, `p ∨ ¬p`.
+- At six elements and above — every finite truncation, and the infinite algebra itself (a law, proved abstractly; the one classical input is the Nishimura enumeration [C]): there is **exactly one** place to draw the fence so that all four positions are occupied — at `p` itself, the free generator. And the four occupants are always the same four formulas: `p`, `¬p`, `¬¬p`, `p ∨ ¬p`.
 
 And the surprise: **the six-element truncation is, element for element, the music lattice.** The tritone *is* the free proposition `p`. The augmented triad *is* `¬p`. The diminished seventh — the Exploitation position, the shadow-dweller — *is* `¬¬p`, the double negation that famously fails to collapse in intuitionistic logic. The whole-tone scale *is* `p ∨ ¬p`, the excluded middle that fails to be a tautology at dusk.
 
@@ -200,8 +208,9 @@ In one sentence: the program claimed art and logic run on the same machinery; fo
 ### 3.4 What is *not* claimed, plainly
 
 - Not that this six-element coincidence extends to cinema, physics, or any other domain — those remain analogies awaiting a mechanism, and are tagged as such.
+- Not that the coincidence proves music *is* logic in disguise. The kernel-checked fact is that two specific six-element structures are the same structure; the reading that this reveals a shared underlying logic — rather than two objects coinciding — is a structural identification, tagged [A] like the comma identifications.
 - Not that Gödel's theorem is "in" the music lattice — the Gödel-flavored material lives in the diagonal floor, is propositional-free, and the bridge from it to the lattice is open.
-- Not that the music topos is *the* canonical music topos, that the partition's stability holds at every truncation size beyond eight, or that the Commitment gate has content yet — all open, all listed.
+- Not that the music topos is *the* canonical music topos, or that the Commitment gate has content yet — open, listed. (The stability of the kernel at every truncation size, previously open, is now the all-n law — conditional only on the classical Nishimura enumeration [C].)
 - Not that any of this proves the framework's practice-level claims about how artists and builders actually behave. The theorem is about structure; the practice claims are classifications, tagged [A], living in Papers 1–3 with their own validation discipline.
 
 The discipline of the whole program is the tag system: what the kernel has checked is marked [K] and reproducible from the repo (`lean/`, axiom audits in `Examples/HeytingTypeInstance.lean`); what is borrowed is marked [C]; what is analogy is marked [A] and stays analogy until a theorem promotes it; what is open is named precisely enough that failing to close it would itself be a result.

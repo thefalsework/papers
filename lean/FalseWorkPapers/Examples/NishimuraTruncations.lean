@@ -67,11 +67,12 @@ that pins it as *the* `Z_n`.  Then the forced-kernel experiment runs:
 Outcomes pre-registered: (A) unique stable kernel; (B) multiple kernels;
 (C) no kernel anywhere; (D) truncation-dependent kernel.  **Result: (A)** on
 the checked range `n ∈ {5,6,7,8}` (with the sharpening that `n = 5` is
-degenerate — below cardinality 6 there is no kernel at all).  The claim for
-*all* `n` is **not** kernel-checked and remains open; Citkin's expansion
-construction (each `Z_{n+2}` adds a new bottom and a new generator below
-`Z_n`) makes stability the expected answer, but that is an expectation, not
-a proof.
+degenerate — below cardinality 6 there is no kernel at all).  The extension
+to *all* `n` is proved abstractly in `NishimuraKernelLaw.lean`
+(`nishimura_kernel_unique`): conditional only on the classical Nishimura
+enumeration **[C]**, the unique four-cell kernel of *every* one-generated
+Heyting algebra with ordinary generator — every `Z_n` with `n ≥ 6`, and the
+full Rieger–Nishimura lattice itself — is the free generator.
 
 ## Interpretation honesty
 
@@ -850,8 +851,9 @@ end Div12
 
 The forced kernel is **unique and truncation-stable**: it is the free
 generator at every checked truncation, with the four cells inhabited by the
-same Nishimura terms `g, ¬g, ¬¬g, g ⊔ ¬g`.  The extension to all `n ≥ 6` is
-not kernel-checked and remains open. -/
+same Nishimura terms `g, ¬g, ¬¬g, g ⊔ ¬g`.  The extension to all `n ≥ 6`
+(and to the infinite Rieger–Nishimura lattice) is the all-n kernel law,
+`nishimura_kernel_unique` in `NishimuraKernelLaw.lean`. -/
 theorem rn_truncation_outcome_A :
     (∀ a : Z5, ¬ AllFourCellsInhabited a) ∧
     (∀ a : Div12, AllFourCellsInhabited a ↔ a = Div12.two) ∧

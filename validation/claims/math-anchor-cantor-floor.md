@@ -1,6 +1,6 @@
 # Claim: the mathematics anchor's floor is the diagonal (Cantor/Lawvere) as Level-0 comma
 
-**Status:** Floor (Phase 1) **kernel-checked in-repo** (Lean 4 / Mathlib4 `v4.30.0-rc2`; axiom audit `propext` only, with `lawvere_fixedPoint` and `diagonal_escapes` axiom-free; no `sorry`). Phases 2–4 (substrate, forced-kernel, witness) **run and kernel-checked 2026-06-09** (`Examples/NishimuraTruncations.lean`; axiom audit `propext, Quot.sound` only): pre-registered **outcome (A)** — unique truncation-stable kernel = the free generator — with the bonus identification **`Div12 ≅ Z_6`** (the music lattice *is* the 6-element truncation; the tritone *is* the free generator). See "Phase 2–4 results" below. Not externally validated.
+**Status:** Floor (Phase 1) **kernel-checked in-repo** (Lean 4 / Mathlib4 `v4.30.0-rc2`; axiom audit `propext` only, with `lawvere_fixedPoint` and `diagonal_escapes` axiom-free; no `sorry`). Phases 2–4 (substrate, forced-kernel, witness) **run and kernel-checked 2026-06-09** (`Examples/NishimuraTruncations.lean`; axiom audit `propext, Quot.sound` only): pre-registered **outcome (A)** — unique truncation-stable kernel = the free generator — with the bonus identification **`Div12 ≅ Z_6`** (the music lattice *is* the 6-element truncation; the tritone *is* the free generator). **Upgraded 2026-06-09 to the all-n kernel law** (`Examples/NishimuraKernelLaw.lean`): the sample at `n = 6, 7, 8` is now an abstract theorem covering every truncation `Z_n` and the infinite Rieger–Nishimura lattice itself, conditional only on the classical Nishimura enumeration [C]. See "The all-n kernel law" below. Not externally validated.
 
 **Papers / notes:** Paper 4 (`papers/paper4-mathematics-as-comma/paper4.md`) §10 cross-domain claim; companion to the music floor `validation/claims/music-kernel-*` and `Examples/DiophantineFloor.lean`.
 
@@ -39,7 +39,19 @@ The pre-registration below was written before any enumeration ran; the experimen
 
 4. **Bonus: `Div12 ≅ Z_6` — the music lattice is the 6-element truncation.** `Div12.one_generated_by_tritone` **[K]**: every element of the music lattice is a Heyting term in the tritone (`¬two = three`, `¬¬two = four`, `two ⊔ ¬two = six`, `x₆ = twelve`). With `|Div12| = 6` and Citkin's uniqueness **[C]**, the music substrate *is* `Z_6` and the tritone *is* the free generator. The music witness cells (tritone, augmented triad, diminished seventh, whole-tone) coincide element-for-element with the logical terms (`p, ¬p, ¬¬p, p∨¬p`). Also upgraded: tritone kernel uniqueness in `Div12`, previously Wolfram-verified **[C]**, is now **[K]** (`Div12.kernel_unique`).
 
-**Limits of the result:** the extension to *all* `n ≥ 6` is not kernel-checked (open; Citkin's expansion construction makes stability the expected answer, but that is an expectation). The scope caveats below stand unchanged — this is intuitionistic propositional logic on one generator, not "mathematics"; the Gödel resonance stays in the Phase-1 floor.
+**Limits of the result:** ~~the extension to *all* `n ≥ 6` is not kernel-checked (open)~~ — closed by the all-n kernel law below. The scope caveats stand unchanged — this is intuitionistic propositional logic on one generator, not "mathematics"; the Gödel resonance stays in the Phase-1 floor.
+
+### The all-n kernel law (run 2026-06-09, kernel-checked) — strength [K] conditional on [C]
+
+`Examples/NishimuraKernelLaw.lean` upgrades outcome (A) from three checked sizes to a law for the whole one-generated family, **without building any further finite algebras**. Two theorems:
+
+1. **Kernel trichotomy (general, unconditional [K]).** `allFourCellsInhabited_iff`: in *any* Heyting algebra, all four cells are inhabited at `a` iff `a ≠ ⊥ ∧ ¬a ≠ ⊥ ∧ ¬¬a ≠ a` — the kernel must be non-zero, non-polar, and non-regular. Axiom audit: `propext` only. This retroactively explains every earlier instance: Boolean algebras have no non-degenerate kernel because every element is regular; `Z_5` has none because each of its five elements fails one of the three conditions.
+
+2. **The law (conditional [K]).** `nishimura_kernel_unique`: if every element of `H` is a Nishimura term value in `g` (hypothesis `hgen`, stated explicitly) and `g` is ordinary (`¬g ≠ ⊥`, `¬¬g ≠ g`), then the **unique** four-cell kernel of `H` is `g`. Proof: `x₀ = ⊥` fails non-zeroness; `x₁ = ¬g` and `x₃ = ¬¬g` are regular by the triple-negation law; every `xₙ` with `n ≥ 4` lies above `x₄ = ¬g ⊔ g` (`four_le_nishimuraTerm`, strong induction on the term recursion), hence has `⊥` complement; only `x₂ = g` survives. Axiom audit: `propext, Quot.sound`.
+
+**Where [C] enters, exactly:** the conditional theorem is kernel-checked with `hgen` explicit, so nothing is borrowed. By Nishimura's theorem (Nishimura 1960; Citkin 2024) **[C]**, `hgen` holds for *every* one-generated Heyting algebra — so the law covers every `Z_n` (`n ≥ 6`) **and the full infinite Rieger–Nishimura lattice `F(1)`**: the free Heyting algebra on one generator has the free generator as its unique four-cell kernel. The [C] citation enters only when discharging `hgen` for a particular algebra; the Nishimura enumeration itself is not formalized.
+
+**Consistency weld:** for `Div12 = Z_6` the hypothesis is discharged *inside Lean* (`Div12.nishimura_generated`, by `decide` — no [C] needed at cardinality 6), and `Div12.kernel_unique_via_law` re-derives the tritone-uniqueness result from the abstract law. Two independent proofs of the same statement — one exhaustive, one structural — agree.
 
 ### Pre-registration (written before the run; retained verbatim for the record)
 
