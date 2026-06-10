@@ -41,7 +41,16 @@ The converse conjecture was **refuted during the abstract proof attempt**, befor
 * **The instructive pair at cardinality 8**: `Z_8` (one-generated, unique ordinary element) and `H8` (not one-generated, unique ordinary element) — uniqueness of the kernel cannot distinguish them.
 * **Salvage lemma [K], general** (`unique_ordinary_dense_iff`, any Heyting algebra): if `a` is the unique ordinary element, then `x` is dense iff `a ⊔ ¬a ≤ x` — the dense part is the principal filter over the generator's excluded middle. Checked concretely on `H8` (`H8.dense_filter`).
 * **Glivenko collapse [K]** (`Examples/GlivenkoCollapse.lean`): `boolean_no_ordinary` / `boolean_no_kernel` (no Boolean algebra carries an ordinary element or a non-degenerate kernel); `not_isOrdinary_compl_compl` (in any Heyting algebra, `¬¬a` is never ordinary — the reflection annihilates ordinariness pointwise; axioms: `propext` only); `glivenko_no_kernel` / `glivenko_collapse` (the Boolean algebra `Heyting.Regular H` of any Heyting algebra carries no four-cell kernel). The four positions do not survive passage to the classical shadow.
-* **Minimality is [C]**, resting on the enumeration script, not on Lean. The counterexample itself is [K].
+* **Minimality is [C]**, resting on the enumeration script, not on Lean. The counterexample itself is [K]. (The Lean proofs use plain `decide` throughout — no `native_decide` anywhere in the project; a `native_decide` would surface as `Lean.ofReduceBool` in the axiom audit, and the audit reports `propext, Quot.sound` only.)
+
+## 4a. Completeness cross-check of the enumeration (2026-06-10, post-publication verification)
+
+The minimality claim's trust chain was audited against the one place it could silently break: *did the enumeration really range over all finite Heyting algebras of cardinality ≤ 12, or a narrower class?* Two answers, one mathematical and one empirical:
+
+* **Mathematical**: finite Heyting algebras = finite distributive lattices [C, standard]; by Birkhoff duality these are in bijection (up to iso) with finite posets; the script generates every poset along its linear extensions and prunes only on the monotone invariant `|D(P)|`. Complete by construction — *if the code is right*.
+* **Empirical** (`scripts/verify-enumeration-oeis.py`): an independent re-run that canonicalizes each generated poset up to isomorphism and counts distinct distributive lattices per cardinality. Result: **exact agreement with OEIS A006982** (Erné–Heitzig–Reinhold 2002, *On the Number of Distributive Lattices*) at every size — `1, 1, 1, 2, 3, 5, 8, 15, 26, 47, 82, 151` for `n = 1..12`, 342 lattices total, no gaps, no surplus. The enumeration provably visited every finite Heyting algebra in scope at least once.
+* **Sharpening from the iso-class census**: `H8` is the **unique** counterexample at cardinality 8 up to isomorphism (the landscape: 1 class at size 8, 2 at 9, 6 at 10, 9 at 11, 19 at 12 — counterexamples proliferate above the threshold, exactly as kernels did above `p²q` in the why-12 sweep).
+* The cross-check is still [C] (Python against a published census, not Lean); what it upgrades is the *confidence* in the [C], not its tag. Minimality stays [C] and must not circulate as [K].
 
 ## 5. What the refutation means (interpretation, [A]-level, written at pre-registration)
 
