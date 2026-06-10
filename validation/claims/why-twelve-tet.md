@@ -10,7 +10,7 @@
 
 ## What is being claimed (and at what strength)
 
-The weld (`Div12 ≅ Z_6`) says *where* music landed: on the 6-element truncation of the free Heyting algebra on one generator. This claim answers the complementary question — *why 12-tone equal temperament is the system that lands there* — by running the kernel trichotomy (`allFourCellsInhabited_iff`) on the subgroup lattices of all cyclic groups `ℤ/n`, modelled as their divisor lattices (products of chains, one chain per prime, length = exponent + 1).
+The weld (`Div12 ≅ Z_6`) says *where* music landed: on the 6-element truncation of the free Heyting algebra on one generator. This claim answers the complementary question — *why 12-tone equal temperament is the system that lands there* — by running the kernel trichotomy (`allFourCellsInhabited_iff` — equivalently: by locating the **ordinary** elements, in Citkin 2024 §2.1's standard sense of neither regular nor dense) on the subgroup lattices of all cyclic groups `ℤ/n`, modelled as their divisor lattices (products of chains, one chain per prime, length = exponent + 1).
 
 ### Kernel-checked — strength [K]
 

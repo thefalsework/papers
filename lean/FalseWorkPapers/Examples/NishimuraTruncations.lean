@@ -296,7 +296,13 @@ theorem one_generated :
 
 /-- **Negative result (kernel-checked).**  No element of `Z_5` makes all four
 cells of the four-position partition simultaneously inhabited.  Below
-cardinality 6 the partition is always degenerate. -/
+cardinality 6 the partition is always degenerate.
+
+Prior-art note: since the four-cell condition is equivalent to being an
+*ordinary* element (`allFourCellsInhabited_iff`, `NishimuraKernelLaw.lean`),
+this is a kernel-checked re-derivation of an observation already in
+Citkin 2024 §2.1 ("the algebras `Z_i`, `i ∈ [2,5]`, do not contain any
+ordinary elements") — known, not new. -/
 theorem no_kernel : ∀ a : Z5, ¬ AllFourCellsInhabited a := by decide
 
 end Z5

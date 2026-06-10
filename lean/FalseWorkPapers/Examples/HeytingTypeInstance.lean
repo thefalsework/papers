@@ -231,6 +231,18 @@ Lean) — the consistency weld with the exhaustive `decide` proof. -/
 #print axioms FalseWork.Lattice.Examples.Div12.nishimura_generated
 #print axioms FalseWork.Lattice.Examples.Div12.kernel_unique_via_law
 
+/-! Ordinary-element form (the algebraic statement, as posed for prior-art
+adjudication): ordinary ⟺ non-degenerate kernel
+(`isOrdinary_iff_allFourCells`); a Nishimura-generated algebra with
+ordinary generator has that generator as its **unique ordinary element**
+(`nishimura_ordinary_unique`); unconditional exhaustive checks at
+`n = 6, 7, 8`. -/
+#print axioms FalseWork.Lattice.isOrdinary_iff_allFourCells
+#print axioms FalseWork.Lattice.nishimura_ordinary_unique
+#print axioms FalseWork.Lattice.Examples.Div12.ordinary_unique
+#print axioms FalseWork.Lattice.Examples.Z7.ordinary_unique
+#print axioms FalseWork.Lattice.Examples.Z8.ordinary_unique
+
 /-! Why 12 (companion to `Examples/WhyTwelve.lean`).  The arithmetic side
 of the music–logic weld: on the divisor lattices of the equal temperaments
 `ℤ/n` (products of chains, one per prime), chains never carry a four-cell

@@ -92,7 +92,18 @@ kernel `a` iff `a` is non-zero, non-polar, and non-regular:
 The witnesses in the constructive direction are `a` (Infrastructure),
 `⊤` (Distribution), `aᶜᶜ` (Exploitation), `aᶜ` (Refusal).  In a Boolean
 algebra `aᶜᶜ = a` always, so no kernel is ever non-degenerate — the
-partition's fourth cell is an intuitionistic phenomenon. -/
+partition's fourth cell is an intuitionistic phenomenon.
+
+**Standard terminology**: the right-hand side says exactly that `a` is
+*ordinary* in the standard sense (neither regular `¬¬a = a` nor dense
+`¬a = ⊥`; the `a ≠ ⊥` conjunct is implied, `⊥` being regular) — the
+terminology of Citkin 2024 §2.1.  So: *the four-position partition is
+non-degenerate precisely at the ordinary elements.*  Citkin's paper
+already observes that `Z_2`–`Z_5` contain no ordinary elements and that
+an ordinary generator forces `|A| > 5` (Prop. 4(c)); the `Z5.no_kernel`
+check is therefore a kernel-checked re-derivation of a known
+observation, while the *uniqueness* of the ordinary element
+(`nishimura_kernel_unique` below) is not stated in that paper. -/
 theorem allFourCellsInhabited_iff (a : H) :
     AllFourCellsInhabited a ↔ a ≠ ⊥ ∧ aᶜ ≠ ⊥ ∧ aᶜᶜ ≠ a := by
   unfold AllFourCellsInhabited IsLatticeInfrastructure IsLatticeDistribution
@@ -249,6 +260,52 @@ theorem nishimura_kernel_unique (g : H) (h1 : gᶜ ≠ ⊥) (h2 : gᶜᶜ ≠ g)
 
 end KernelLaw
 
+/-! ## 3a. The ordinary-element form: the law as pure algebra
+
+The partition-flavored statement above is, by the trichotomy, exactly a
+statement about *ordinary* elements in the standard sense.  This section
+states that form directly, so the algebraic claim ("the ordinary element
+of a one-generated Heyting algebra is unique") is itself the checked
+theorem rather than an inference left to the reader. -/
+
+section OrdinaryForm
+
+variable {H : Type*} [HeytingAlgebra H]
+
+/-- An element of a Heyting algebra is **ordinary** (standard terminology;
+Citkin 2024 §2.1) if it is neither regular (`¬¬a = a`) nor dense
+(`¬a = ⊥`). -/
+def IsOrdinary (a : H) : Prop := aᶜᶜ ≠ a ∧ aᶜ ≠ ⊥
+
+/-- The ordinary elements are exactly the non-degenerate four-cell
+kernels — the purely algebraic face of `allFourCellsInhabited_iff`.  The
+`a ≠ ⊥` conjunct of the trichotomy is absorbed: `⊥` is regular. -/
+theorem isOrdinary_iff_allFourCells (a : H) :
+    IsOrdinary a ↔ AllFourCellsInhabited a := by
+  rw [allFourCellsInhabited_iff]
+  unfold IsOrdinary
+  constructor
+  · rintro ⟨hr, hc⟩
+    refine ⟨?_, hc, hr⟩
+    rintro rfl
+    exact hr (by rw [compl_bot, compl_top])
+  · rintro ⟨-, hc, hr⟩
+    exact ⟨hr, hc⟩
+
+/-- **Uniqueness of the ordinary element (algebraic form of the all-n
+law).**  If `g` is ordinary and every element of `H` is a Nishimura term
+value in `g` — by Nishimura's theorem [C], every one-generated Heyting
+algebra with generator `g` qualifies — then `g` is the **unique** ordinary
+element of `H`.  This is the exact statement posed for prior-art
+adjudication in `docs/outreach/citkin-email.md`, checked directly. -/
+theorem nishimura_ordinary_unique (g : H) (hg : IsOrdinary g)
+    (hgen : ∀ y : H, y = ⊤ ∨ ∃ n : ℕ, y = nishimuraTerm g n) (a : H) :
+    IsOrdinary a ↔ a = g := by
+  rw [isOrdinary_iff_allFourCells]
+  exact nishimura_kernel_unique g hg.2 hg.1 hgen a
+
+end OrdinaryForm
+
 /-! ## 4. The consistency weld: re-deriving `Div12.kernel_unique` -/
 
 namespace Examples
@@ -289,7 +346,22 @@ theorem kernel_unique_via_law :
   nishimura_kernel_unique Div12.two (by decide) (by decide)
     nishimura_generated a
 
+/-- **Ordinary-element uniqueness at `n = 6`, unconditional.**  Exhaustive:
+the tritone is the unique ordinary element of `Div12 = Z_6`. -/
+theorem ordinary_unique : ∀ a : Div12, IsOrdinary a ↔ a = Div12.two := by
+  unfold IsOrdinary; decide
+
 end Div12
+
+/-- **Ordinary-element uniqueness at `n = 7`, unconditional.**  Exhaustive:
+the generator is the unique ordinary element of `Z_7`. -/
+theorem Z7.ordinary_unique : ∀ a : Z7, IsOrdinary a ↔ a = Z7.g := by
+  unfold IsOrdinary; decide
+
+/-- **Ordinary-element uniqueness at `n = 8`, unconditional.**  Exhaustive:
+the generator is the unique ordinary element of `Z_8`. -/
+theorem Z8.ordinary_unique : ∀ a : Z8, IsOrdinary a ↔ a = Z8.g := by
+  unfold IsOrdinary; decide
 
 end Examples
 
