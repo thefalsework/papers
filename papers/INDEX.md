@@ -142,6 +142,14 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Lean artifacts.** `Examples/MathFloorCantor.lean`, `Examples/NishimuraTruncations.lean` — kernel-checked (`#print axioms` clean; `lawvere_fixedPoint` and `diagonal_escapes` axiom-free) in [`../lean/`](../lean/). Pre-registration and outcome at [`../validation/claims/math-anchor-cantor-floor.md`](../validation/claims/math-anchor-cantor-floor.md).
 
+### Bach at the Kernel (speculative companion)
+
+**Full title.** *Bach at the Kernel: A Speculative Full-Stack Reading.* (v0.1, June 2026)
+
+**Register.** Speculative — **[A] throughout**, declared in the version note. An expert-voice placement of Bach in the four-position territory (chorales → Infrastructure; WTC → Distribution; diminished-seventh modulation practice → Exploitation; the Refusal cell historically empty until the whole-tone tradition), followed by a single specimen — the *Es ist genug* chorale (BWV 60), whose incipit outlines the tritone — traced up every level of the stack, with the [K]/[A] line marked at each step. Explicitly resolution-hedged via Paper 2's own 21%-alignment finding on the Bach chorale corpus. Adds nothing to the formal record; depends on it only by citation.
+
+**Source.** [`bach-at-the-kernel.md`](bach-at-the-kernel.md)
+
 ---
 
 ## Cross-reference graph
