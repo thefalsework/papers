@@ -2,7 +2,7 @@
 
 **Status:** **Kernel-checked in-repo 2026-06-09** (Lean 4 / Mathlib4 `v4.30.0-rc2`; `Examples/WhyTwelve.lean`; axiom audit standard axioms only, no `sorry`). Not externally validated.
 
-**Papers / notes:** companion to the weld (`validation/claims/math-anchor-cantor-floor.md`, Phase 2–4 results and the all-n kernel law) and to `papers/connecting-the-spine.md` §3.4 / ledger row 21.
+**Papers / notes:** companion to the weld (`validation/claims/math-anchor-cantor-floor.md`, Phase 2–4 results and the all-n kernel law) and to `papers/connecting-the-spine.md` §3.4 / ledger row 21. Reported in the Pythagorean paper as the second, independent forcing of twelve (`papers/pythagorean-shared-floor/pythagorean.md` §7.6, v1.4) — note the scope riders there (≤ 2 prime divisors; least, not only; lattice structure, not acoustics).
 
 **Date opened:** 2026-06-09.
 

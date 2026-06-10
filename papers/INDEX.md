@@ -47,12 +47,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *The Distinction Operation and the Generative Floor: Spencer-Brown, Cantor, and the Categorical Form of Incompleteness.*
 
-**Current version.** v9.4
+**Current version.** v9.5
 
-**One-line gloss.** A seven-level hierarchy of instantiations of the distinction operation (set-theoretic, formal-logical, physical, computational, Gödelian, domain-kernel, epistemic). The categorical formalization in § 4 proposes D1–D4 conditions; § 5 develops the set-theoretic root and the arithmetical ladder ℕ → ℤ → ℚ → ℝ → ℂ → ℍ → 𝕆 via Cantor, Cayley–Dickson, Hurwitz, Frobenius, Baker, and Hankel. v9.4 adds an architectural-status note for § 4: through 2026-05 formalization work, the categorical object § 4 has been pointing at — the position dictionary that emerges from a non-trivial distinction structure — has been refined to a four-position partition plus a Commitment gate (closure-residue commitment for Exploitation on 2026-05-09; Commitment-as-gate reframe and two-parameter unification closure on 2026-05-10). D1–D4 unaffected; the categorical object D1–D4 produces is refined. Full revised apparatus at [`comma-formal-structure-note.md`](comma-formal-structure-note.md); Lean at [`../lean/FalseWorkPapers/Positions/`](../lean/FalseWorkPapers/); validation status at [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) v0.4. § 4 section-level rewriting deferred to v10.0 (already the planned engagement point for the categorical formalization). v9.3 adds a scope note to § 2 distinguishing formal-asymmetry (the distinction operation's output at Level 1+, propagated through subsequent levels) from Level 0 process-asymmetry (Brink 2026d), and connects forward to Paper 1 v11.7's level-of-practice statement of this dynamic. v9.2 appends a concluding paragraph to § 7.3 naming Ellis (2016) and Cartwright (1999) as scholarly precedent for the adopted analogy-not-identity register, hedged and tracked as an open validation claim.
+**One-line gloss.** A seven-level hierarchy of instantiations of the distinction operation (set-theoretic, formal-logical, physical, computational, Gödelian, domain-kernel, epistemic). v9.5 adds a formalization-status paragraph to § 5.1: the Level-1 root is now kernel-checked (`diagonal_escapes` axiom-free, `cantor_no_surjection`, `lawvere_fixedPoint` as the diagonal-lineage unifier — Cantor instance checked, Tarski/Gödel open; theorems [K], the diagonal-escape-as-comma reading stays a structural identification), and registers the 2026-06 lattice results (kernel trichotomy: non-degenerate iff ordinary element, forcing ≥ 6 elements; all-n kernel law) for engagement at the v10.0 § 4 rewrite. The categorical formalization in § 4 proposes D1–D4 conditions; § 5 develops the set-theoretic root and the arithmetical ladder ℕ → ℤ → ℚ → ℝ → ℂ → ℍ → 𝕆 via Cantor, Cayley–Dickson, Hurwitz, Frobenius, Baker, and Hankel. v9.4 adds an architectural-status note for § 4: through 2026-05 formalization work, the categorical object § 4 has been pointing at — the position dictionary that emerges from a non-trivial distinction structure — has been refined to a four-position partition plus a Commitment gate (closure-residue commitment for Exploitation on 2026-05-09; Commitment-as-gate reframe and two-parameter unification closure on 2026-05-10). D1–D4 unaffected; the categorical object D1–D4 produces is refined. Full revised apparatus at [`comma-formal-structure-note.md`](comma-formal-structure-note.md); Lean at [`../lean/FalseWorkPapers/Positions/`](../lean/FalseWorkPapers/); validation status at [`../validation/claims/five-position-derivation-formalization.md`](../validation/claims/five-position-derivation-formalization.md) v0.4. § 4 section-level rewriting deferred to v10.0 (already the planned engagement point for the categorical formalization). v9.3 adds a scope note to § 2 distinguishing formal-asymmetry (the distinction operation's output at Level 1+, propagated through subsequent levels) from Level 0 process-asymmetry (Brink 2026d), and connects forward to Paper 1 v11.7's level-of-practice statement of this dynamic. v9.2 appends a concluding paragraph to § 7.3 naming Ellis (2016) and Cartwright (1999) as scholarly precedent for the adopted analogy-not-identity register, hedged and tracked as an open validation claim.
 
 **Paper source.** [`paper3-distinction-operation/paper3.md`](paper3-distinction-operation/paper3.md)
-**Archive.** [`paper3-distinction-operation/archive/v9.3.docx`](paper3-distinction-operation/archive/v9.3.docx) (note: v9.4 is a top-matter revision-note bump only; v9.4 DOCX archive deferred to v10.0 when § 4 is rewritten)
+**Archive.** [`paper3-distinction-operation/archive/v9.3.docx`](paper3-distinction-operation/archive/v9.3.docx) (note: v9.4 is a top-matter revision-note bump and v9.5 a single § 5.1 status paragraph; DOCX archive deferred to v10.0 when § 4 is rewritten)
 
 **Open validation items this paper carries.**
 - § 4 — D1–D4 categorical formalization. A rigorous external formalization (Lambek, Weyl, ℤ/12ℤ) of the music-kernel case has been proposed and is tracked as the six-point music-kernel check at [`validation/claims/music-kernel-umbrella.md`](../validation/claims/music-kernel-umbrella.md). A v10.0 pass to § 4 depends on human verification of this formalization.
@@ -67,12 +67,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Mathematics as Comma: The Distinction Operation and the Unreasonable Effectiveness of Formal Systems.*
 
-**Current version.** v5.3
+**Current version.** v5.4
 
-**One-line gloss.** Proposes Level 0 — the universe as unmarked state prior to any distinction — and reframes physical symmetry breaking as decoherence-scale description of asymmetric process. Extends the framework to engage Wigner's unreasonable-effectiveness question with Feynman's forced-invention bridge. § 6.3 names Smolin, Carroll, Verlinde, and Penrose as scholarly company for the asymmetric-process framing within contemporary theoretical physics. § 7 positions the hypothesis against Wolfram's 2026 ruliad programme, naming three substantive convergences and three specific divergences.
+**One-line gloss.** Proposes Level 0 — the universe as unmarked state prior to any distinction — and reframes physical symmetry breaking as decoherence-scale description of asymmetric process. Extends the framework to engage Wigner's unreasonable-effectiveness question with Feynman's forced-invention bridge. § 6.3 names Smolin, Carroll, Verlinde, and Penrose as scholarly company for the asymmetric-process framing within contemporary theoretical physics. § 7 positions the hypothesis against Wolfram's 2026 ruliad programme, naming three substantive convergences and three specific divergences. v5.4 adds three formalization-status passages (2026-06 Lean results): § 3.1 — the partition is non-degenerate iff the kernel is an ordinary Heyting element, so the fourth position exists only in non-Boolean algebras (a datum for, not an answer to, § 3.1's open classical-logic question); § 3.3 — Cantor floor kernel-checked; § 3.5 — the one-mark iteration's formal closure (free Heyting algebra on one generator) first supports all four positions at six elements, isomorphic to Div12 ([K] for the facts, [A] for the readings).
 
 **Paper source.** [`paper4-mathematics-as-comma/paper4.md`](paper4-mathematics-as-comma/paper4.md)
-**Archive.** [`paper4-mathematics-as-comma/archive/v5.3.docx`](paper4-mathematics-as-comma/archive/v5.3.docx)
+**Archive.** [`paper4-mathematics-as-comma/archive/v5.3.docx`](paper4-mathematics-as-comma/archive/v5.3.docx) (v5.4 DOCX archive pending)
 
 **Open validation items this paper carries.**
 - § 2.5 — Cantor cumulative caveat (canonical statement for the whole series). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
@@ -85,12 +85,12 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *The Pythagorean Comma, the Irrationality of √2, and a Shared Diophantine Floor.*
 
-**Current version.** v1.3
+**Current version.** v1.4
 
-**One-line gloss.** Unifies the Pythagorean comma (rank-2 Diophantine obstruction) and the irrationality of √2 (rank-1) under the fundamental theorem of arithmetic as shared qualitative floor, with Baker's 1966 theorem supplying the effective quantitative floor for rank ≥ 2. Bridges the number-theoretic observation to the five-position typology of the main series. v1.3 appends a *Further reading — community resources* subsection to the References, naming the Xenharmonic Wiki as a community reference for microtonal practice covering the 31-, 41-, and 53-TET systems discussed in §§ 2.2, 4.2, and 7.1 (pointer contributed by **suhr** via Lean Zulip, 2026-04-19, same thread as the v1.2 corrections). v1.2 corrects the convergent-sequence narration at § 2.2 (restoring 24/41 between 7/12 and 31/53) and re-scopes three "practically usable temperaments" claims to the Pythagorean-comma optimization specifically, acknowledging that 31-TET, 41-TET, and 53-TET answer different harmonic optimizations over extended prime bases.
+**One-line gloss.** Unifies the Pythagorean comma (rank-2 Diophantine obstruction) and the irrationality of √2 (rank-1) under the fundamental theorem of arithmetic as shared qualitative floor, with Baker's 1966 theorem supplying the effective quantitative floor for rank ≥ 2. Bridges the number-theoretic observation to the five-position typology of the main series. v1.4 adds § 7.6, the second, independent forcing of twelve: kernel-checked, among subgroup lattices of ℤ/n the four-position kernel exists iff some exponent ≥ 2 with a second prime present, is unique iff n = p²q, least instance 12 with the tritone as the unique kernel — convergent with the continued-fraction forcing but on disjoint machinery, reported as an observation with explicit scope riders (≤ 2 prime divisors; least, not only; lattice structure, not acoustics). v1.3 appends a *Further reading — community resources* subsection to the References, naming the Xenharmonic Wiki as a community reference for microtonal practice covering the 31-, 41-, and 53-TET systems discussed in §§ 2.2, 4.2, and 7.1 (pointer contributed by **suhr** via Lean Zulip, 2026-04-19, same thread as the v1.2 corrections). v1.2 corrects the convergent-sequence narration at § 2.2 (restoring 24/41 between 7/12 and 31/53) and re-scopes three "practically usable temperaments" claims to the Pythagorean-comma optimization specifically, acknowledging that 31-TET, 41-TET, and 53-TET answer different harmonic optimizations over extended prime bases.
 
 **Paper source.** [`pythagorean-shared-floor/pythagorean.md`](pythagorean-shared-floor/pythagorean.md)
-**Archive.** [`pythagorean-shared-floor/archive/v1.3.docx`](pythagorean-shared-floor/archive/v1.3.docx)
+**Archive.** [`pythagorean-shared-floor/archive/v1.3.docx`](pythagorean-shared-floor/archive/v1.3.docx) (v1.4 DOCX archive pending)
 
 **Open validation items this paper carries.**
 - § 4 — Baker's 1966 theorem application to the rank-2 case. Tracked at [`validation/claims/music-kernel-06-baker.md`](../validation/claims/music-kernel-06-baker.md).
@@ -161,7 +161,7 @@ Paper 2 (v8.5)
   ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
   └─ refs partition preprint + Mathlib PR #39618 (Stage 6 formal-verification correction)
 
-Paper 3 (v9.4)
+Paper 3 (v9.5)
   ├─ refs Paper 1 (position framework)
   ├─ refs Paper 1 v11.7 § 1 (level-of-practice statement of asymmetry-distinction dynamic)
   ├─ refs Paper 4 (Level-0 / process primacy)
@@ -169,14 +169,15 @@ Paper 3 (v9.4)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v9.4)
   └─ ground for categorical and arithmetical-ladder claims
 
-Paper 4 (v5.3)
+Paper 4 (v5.4)
   ├─ refs Paper 3 v9.2 (all levels; arithmetical ladder)
   ├─ refs Paper 1, 2 for inherited caveats
   └─ forward-refs Paper 5 (Pythagorean Wigner bridge)
 
-Paper 5 (v1.3)
+Paper 5 (v1.4)
   ├─ refs Paper 1 v11.4 (Lakatos framing, Commitment hedge)
   ├─ refs Paper 3 v9.2 (Russell/Gödel distinction, ladder)
+  ├─ § 7.6 refs lean WhyTwelve.lean + why-twelve-tet.md (second forcing of 12)
   └─ stands alone as number-theoretic technical paper
 
 Paper 6 (v2.1, exploratory companion)
