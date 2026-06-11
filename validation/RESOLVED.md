@@ -33,7 +33,17 @@ Each entry names the contributor's scope carefully, to avoid overstating what th
 
 ## Validations
 
-*None yet.* The first active validation engagement is expected on one of the open items in [`OPEN.md`](OPEN.md). The outreach drafts in [`docs/outreach/`](../docs/outreach/) document the engagement paths opened for each specialist domain.
+### 2026-06-11 — Alex Citkin: prior-art adjudication of the ordinary-element uniqueness (first validation engagement)
+
+- **Contributor:** Alex Citkin, author of "An Algebraic Proof of the Nishimura Theorem" (*Logics* 2(4), 2024) — the load-bearing [C] citation for the math anchor's `Z_n` truncations.
+- **Venue:** email reply (2026-06-11) to the prior-art inquiry drafted in [`docs/outreach/citkin-email.md`](../docs/outreach/citkin-email.md) (sent 2026-06-10; full outcome recorded there).
+- **Scope:** adjudication of *novelty standing*, not of proof correctness (the proofs are machine-checked; he was not asked to review Lean).
+  1. **Question (a) — uniqueness of the ordinary element in one-generated Heyting algebras** (`nishimura_ordinary_unique`): adjudicated **folklore**. He is "not aware of any known proofs," and supplied the reason it is specialist-obvious: the Rieger–Nishimura ladder has a single ordinary element, the finite one-generated algebras are its quotients, and regularity/density are preserved under quotients. Standing after adjudication: **unwritten folklore; the repository's machine-checked proof is apparently its first explicit written form.** Not a new theorem; not previously published.
+  2. **Question (b) — `Div12 ≅ Z_6` and the `n = p²q` characterization**: not adjudicated — the question was read as the one-generated-group analogy and answered as such. No prior art surfaced; remains open pending one clarifying reply.
+  3. **Incidental fact supplied** ([C], pers. comm.): a one-generated Heyting algebra of cardinality > 5 always has a unique generator (unlike one-generated groups).
+- **Resolution:** novelty standing of the uniqueness claim downgraded from "apparently new, pending adjudication" to "specialist folklore, first explicit machine-checked proof" across `validation/claims/math-anchor-cantor-floor.md`, `papers/connecting-the-spine.md` (§3.4, ledger), and `papers/four-position-exposition.md` (§2.3a). The machine-checked status [K] of the theorem itself is unaffected — only its novelty standing changed. Question (b) unchanged (unadjudicated, no prior art surfaced).
+- **Scope limits:** an email adjudication of two specific questions, not a review of the framework, the partition theorem, or any [A]-level interpretation. His quotient-route proof sketch presupposes the single-ordinary-element property of the ladder itself (which the formalized term-ladder argument proves); the two routes are consistent.
+- **Crediting:** permission to credit by name requested in the follow-up reply; pending. Cited meanwhile as personal communication.
 
 ---
 

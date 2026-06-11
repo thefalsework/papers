@@ -40,3 +40,28 @@ Chris Brink
 Independent researcher
 `chris@falsework.dev`
 [falsework.dev](https://falsework.dev) · [github.com/thefalsework](https://github.com/thefalsework)
+
+---
+
+## Outcome (sent 2026-06-10; reply received 2026-06-11)
+
+Citkin replied within a day. The adjudication, exactly:
+
+* **Question (a) — uniqueness: folklore, not literature.** His words: "I am not aware of any known proofs that a one-generated algebra contains at most one element that is neither regular nor dense" — and the reason: specialists start from the free one-generated algebra (the Rieger–Nishimura ladder), which "contains a single ordinary element," obtain the finite one-generated algebras as its quotients, and regularity and density are preserved under quotients, so "the conclusion seems to be obvious. Therefore, the answer to (a) is yes."
+  **Standing of `nishimura_ordinary_unique` after adjudication:** the *mathematics* is specialist folklore — known in principle, never written down so far as the person best placed to know is aware; the *explicit, machine-checked proof* is apparently the first written one. Neither "new theorem" nor "already published": unwritten folklore, now written. His quotient argument is an independent proof route — note it *presupposes* the single-ordinary-element property of the ladder itself, which is exactly what the term-ladder proof (`four_le_nishimuraTerm` + regularity of `x₁, x₃`) establishes rigorously; the two arguments are consistent, and his is consistent with the `H8` counterexample (it lives strictly inside one-generated algebras, where `H8` does not).
+* **Question (b) — `Div12 ≅ Z_6` / `p²q`: not adjudicated.** He read (b) as the one-generated-Heyting-algebra/one-generated-group analogy and answered that question instead. He did not say the divisor-lattice identification or the `p²q` characterization is known. Standing: **unadjudicated; no prior art surfaced**; one short clarification is warranted (draft below), after which it either resolves or stays honestly open.
+* **Bonus fact from the reply** (recorded as [C], pers. comm.): a one-generated Heyting algebra of cardinality > 5 always has a **unique generator** — unlike one-generated groups, where generators multiply. Convergent with our results: generators are ordinary (his Prop. 4(c)) and the ordinary element is unique, hence the generator is.
+* **Crediting:** permission to credit by name was offered in the original email but not addressed in the reply; the reply draft asks explicitly. Until granted, repo records cite "A. Citkin, personal communication, 2026-06-11."
+
+## Reply draft (one clarification + permission; nothing else)
+
+> Dear Dr. Citkin,
+>
+> Thank you — that settles (a) exactly, and I will record it that way: folklore via the quotient route, with no written proof known. Your quotient argument is also cleaner than my term-ladder proof; I may formalize it as a second route.
+>
+> One sentence on (2), which I posed badly — it was not about the group analogy. The observation is that the subgroup lattice of ℤ/12ℤ is one-generated *as a Heyting algebra* (by the divisor 2, i.e. the index-2 subgroup), so by your Theorem 6 it **is** Z_6; and n = p²q characterizes the n for which the subgroup lattice of ℤ/nℤ has a unique ordinary element (proved for n with at most two prime divisors, instance-checked beyond). If that identification is not something you have seen noted, that itself answers the question — no need to search on my account.
+>
+> May I credit your reply by name in the repository's validation records?
+>
+> With thanks,
+> Chris Brink
