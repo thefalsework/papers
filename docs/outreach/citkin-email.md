@@ -64,6 +64,8 @@ Reading Citkin's current arXiv paper (**arXiv:2512.05633**, 5 Dec 2025, "Heredit
 
 Propagated to: `validation/RESOLVED.md`, `validation/claims/math-anchor-cantor-floor.md`, `papers/connecting-the-spine.md`, `papers/four-position-exposition.md`, Paper 2 §4.5/appendix.
 
+*Follow-through (2026-06-11, same day): the kernel-checkable fragment of items 2 and 4 was pre-registered and landed as `lean/FalseWorkPapers/Examples/LadderCore.lean` (claim file `validation/claims/ladder-core-threshold.md`): universal ≥6 threshold for any Heyting algebra with an ordinary element (generalizing his Prop. 4(c)); `Div12 = Z_6` order-embeds into every such algebra; `H8`'s ladder core is exactly `Z_7` (Prop. 3.1 instantiated at the counterexample); the tritone is the unique generator of `Div12` (instance of his unique-generator remark); and the dense-bottom lemma settles part of the C₁–C₅ homework — `P2 ≅ 2 + Z_7` has no ordinary elements, so prohibitedness and kernel-bearing do not align. The full Prop. 3.1 (subalgebra, not order-embedding) and V(Z₆) primitiveness remain [O].*
+
 ## Reply draft (one clarification + one new question + permission; nothing else)
 
 *Link check (2026-06-11): repo confirmed public; directory URL, blob URL, and raw URL for the named files all return 200 with full content from outside. The original email gave one directory link with file names as plain text — failure mode is non-clickable names or client line-wrapping of the long URL, so the reply carries one complete direct per-file URL instead.*

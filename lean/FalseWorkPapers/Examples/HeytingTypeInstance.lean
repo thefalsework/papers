@@ -17,6 +17,7 @@ import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
 import FalseWorkPapers.Examples.UniqueOrdinaryConverse
 import FalseWorkPapers.Examples.GlivenkoCollapse
+import FalseWorkPapers.Examples.LadderCore
 import FalseWorkPapers.Examples.WhyTwelve
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
@@ -261,6 +262,26 @@ elements to the filter `↑(a ⊔ ¬a)`, in any Heyting algebra. -/
 #print axioms FalseWork.Lattice.Examples.H8.dense_filter
 #print axioms FalseWork.Lattice.Examples.H8.not_nishimura_generated
 #print axioms FalseWork.Lattice.Examples.unique_ordinary_converse_false
+
+/-! The ladder core (companion to `Examples/LadderCore.lean`; pre-registered
+in `validation/claims/ladder-core-threshold.md`).  The kernel-checkable
+fragment of Citkin's Prop. 3.1 weld: the universal six-element threshold
+(any Heyting algebra with an ordinary element / non-degenerate kernel has
+≥ 6 elements — abstract, no enumeration, generalizing Citkin 2024
+Prop. 4(c)); the music lattice `Div12 = Z_6` order-embeds into every
+non-degenerate instance; `H8`'s ladder core is `Z_7` (Heyting embedding
+with range exactly `≠ d`); the tritone is the unique generator of the
+music lattice; and the dense-bottom lemma (least nonzero element ⟹ no
+ordinary elements; `P2 ≅ 2 + Z_7` carries no kernel). -/
+#print axioms FalseWork.Lattice.ladderEmbed_le_iff
+#print axioms FalseWork.Lattice.div12OrderEmbedding
+#print axioms FalseWork.Lattice.ordinary_card_ge_six
+#print axioms FalseWork.Lattice.allFourCells_card_ge_six
+#print axioms FalseWork.Lattice.Z5.no_kernel_via_threshold
+#print axioms FalseWork.Lattice.no_ordinary_of_least_nonzero
+#print axioms FalseWork.Lattice.Examples.h8_ladder_core
+#print axioms FalseWork.Lattice.Examples.nishimuraTerm_a_mem_core
+#print axioms FalseWork.Lattice.Examples.Div12.generator_unique
 
 /-! The Glivenko collapse (companion to `Examples/GlivenkoCollapse.lean`).
 No Boolean algebra has an ordinary element or a non-degenerate kernel;

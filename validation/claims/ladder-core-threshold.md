@@ -30,6 +30,16 @@
 
 ---
 
-## Results (to be filled after the run)
+## Results (2026-06-11, same day; build green, `lake build` full project)
 
-*Pending.*
+All five pre-registered [K] targets landed as stated, none weakened. File: `lean/FalseWorkPapers/Examples/LadderCore.lean`; audit lines in `HeytingTypeInstance.lean`.
+
+1. **Universal threshold: [K], landed.** `ordinary_card_ge_six`, `allFourCells_card_ge_six`. Proof as predicted (the load-bearing distinctness `g ⊔ ¬g ≠ ⊤` via distributivity forcing `¬¬g = g`). `Z5.no_kernel_via_threshold` re-derives the `Z_5` negative from the law — two independent proofs (exhaustive / structural) agree, same weld pattern as `kernel_unique_via_law`.
+2. **Order-embedding: [K], landed.** `div12OrderEmbedding : IsOrdinary g → Div12 ↪o H`, via `ladderEmbed_le_iff` (36 cases; 18 non-relations each forced by ordinariness). Axiom profile of the embedding: **`propext` only**. Scope guard held: order-embedding claimed, subalgebra not.
+3. **H8 core ≅ Z_7: [K], landed.** `h8_ladder_core`: `z7ToH8` injective, preserves `⊓ ⊔ ⇨ ᶜ ⊥ ⊤`, generator ↦ `a`, range exactly `≠ d`. Plus `nishimuraTerm_a_mem_core`: the term ladder in `a` never leaves the core. `H8 = Z_7 + one dense element`, as predicted.
+4. **Unique generator of `Div12`: [K], landed.** `Div12.generator_unique` — each of the five non-tritone elements trapped by an explicit proper closed predicate (`{⊥,⊤}` for `⊥`/`⊤`; `{⊥, ¬g, ¬¬g, ⊤}`-type for the regular pair; `{⊥, six, ⊤}` for the dense element).
+5. **Dense-bottom lemma: [K], landed.** `no_ordinary_of_least_nonzero`. Consequence stands as registered: `P2 ≅ 2 + Z_7` carries no kernel; `P1 ≅ Z_7` carries exactly one; prohibitedness ⊥̸ kernel-bearing.
+
+**Axiom audit** (2026-06-11): `ladderEmbed_le_iff`, `div12OrderEmbedding` — `[propext]`. `h8_ladder_core`, `nishimuraTerm_a_mem_core`, `Div12.generator_unique` — `[propext, Quot.sound]`. `ordinary_card_ge_six`, `allFourCells_card_ge_six`, `Z5.no_kernel_via_threshold`, `no_ordinary_of_least_nonzero` — `[propext, Classical.choice, Quot.sound]`. No `sorry`, no `native_decide`.
+
+**Standing of the [O] items: unchanged.** Normal form remains the registered next target. V(Z_6) primitiveness remains blocked on the P3–P5 Hasse diagrams (figures, not text); the Jónsson + cardinality route is written above and is a finite check once the diagrams are read.
