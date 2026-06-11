@@ -53,13 +53,17 @@ Citkin replied within a day. The adjudication, exactly:
 * **Bonus fact from the reply** (recorded as [C], pers. comm.): a one-generated Heyting algebra of cardinality > 5 always has a **unique generator** — unlike one-generated groups, where generators multiply. Convergent with our results: generators are ordinary (his Prop. 4(c)) and the ordinary element is unique, hence the generator is.
 * **Crediting:** permission to credit by name was offered in the original email but not addressed in the reply; the reply draft asks explicitly. Until granted, repo records cite "A. Citkin, personal communication, 2026-06-11."
 
-## Reply draft (one clarification + permission; nothing else)
+## Reply draft (one clarification + one new question + permission; nothing else)
+
+*Scoping note (2026-06-11): his specialties were surveyed before adding anything — hereditary structural completeness (his 1978 theorem: primitive varieties omit five finite algebras C₁–C₅; new algebraic proof posted by him Dec 2025, so actively current), admissible rules of IPC, and the Lindenbaum–Tarski method (2022 Oxford book with Muravitsky, whose worked centerpiece is the one-variable LT algebra of IPC = the Rieger–Nishimura algebra). The H8 converse question is the one addition the exchange bears: it is the converse of exactly what he adjudicated, new since the original email, and machine-checked. Held in reserve, pending our own homework first: whether C₁–C₅ contain ordinary elements / whether V(Z₆) is primitive (finite computations we run ourselves before spending his attention), and anything Magari/provability-shaped (parked [O]).*
 
 > Dear Dr. Citkin,
 >
 > Thank you — that settles (a) exactly, and I will record it that way: folklore via the quotient route, with no written proof known. Your quotient argument is also cleaner than my term-ladder proof; I may formalize it as a second route.
 >
 > One sentence on (2), which I posed badly — it was not about the group analogy. The observation is that the subgroup lattice of ℤ/12ℤ is one-generated *as a Heyting algebra* (by the divisor 2, i.e. the index-2 subgroup), so by your Theorem 6 it **is** Z_6; and n = p²q characterizes the n for which the subgroup lattice of ℤ/nℤ has a unique ordinary element (proved for n with at most two prime divisors, instance-checked beyond). If that identification is not something you have seen noted, that itself answers the question — no need to search on my account.
+>
+> Since writing, I checked the converse of (1), and it fails: a unique ordinary element does not imply one-generated. The minimal counterexample has 8 elements — unique at that cardinality up to isomorphism, by exhaustive enumeration of all finite Heyting algebras of size ≤ 12 as downset lattices (counts cross-checked against OEIS A006982) — with the non-generation machine-checked (the term values of the ordinary element stay inside a proper subalgebra). So your quotient argument explains uniqueness exactly on the one-generated family, while the property itself extends beyond it. Last question, and then I will leave you in peace: is the failure of this converse — or the class of Heyting algebras with a unique ordinary element — known or studied? (File: `UniqueOrdinaryConverse.lean`, theorem `unique_ordinary_converse_false`, same repository.)
 >
 > May I credit your reply by name in the repository's validation records?
 >
