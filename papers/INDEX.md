@@ -163,7 +163,7 @@ Paper 1 (v11.8)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v11.8)
   └─ ground for Papers 2–5
 
-Paper 2 (v8.12)
+Paper 2 (v8.13)
   ├─ refs Paper 1 (kernel–comma framework)
   ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
