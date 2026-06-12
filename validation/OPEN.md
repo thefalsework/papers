@@ -103,6 +103,13 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 - **What's asked:** does the D4 subcategory-vs-full-Lawvere-comma question admit a clean categorical answer for each rung `ℕ → ℤ, ℤ → ℚ, ℚ → ℝ, ℝ → ℂ, ℂ → ℍ, ℍ → 𝕆`?
 - **Status:** open research direction; no time estimate; contributions via any of validation, correction, PR, or discussion welcome.
 
+### `methodology-scaffolding-ablation` — Does the epistemic scaffolding carry the discipline? (pre-registered ablation)
+- **Authoritative statement:** [`claims/methodology-scaffolding-ablation.md`](claims/methodology-scaffolding-ablation.md)
+- **GitHub issue:** (pending)
+- **Paper:** Paper 2 § 7.3 (v8.14) — the methodology stated as methodology: the [K]/[C]/[A]/[O] status-tag ladder and supporting practices as the designed implementation of the paper's correction architecture
+- **What's asked / open:** two separated claims. (1) *Pre-registered ablation:* run matched AI instances on real repository tasks against the scaffolded corpus vs. a scaffolding-stripped copy; measure the rate of unlicensed promotion ([A]/[O] asserted as [K], dropped hedges, fabricated specifics, inherited-record errors). All three outcomes pre-registered as acceptable — scaffolding carries rigor / scaffolding is operator ergonomics / scaffolding masks error behind fluent register. (2) *Generalization:* whether the method survives an operator other than its designer — testable only by external replication. First logged observation (2026-06-12, the "§ 6.4" instance): a stale index entry was inherited verbatim by an AI instance, initially misdiagnosed as confabulation, then traced to the record itself — evidence that the record is part of the dependency structure it documents.
+- **Status:** (1) pre-registered, not yet run; (2) awaiting any external operator adopting the practice. Until then the methodology's standing is: demonstrated once, in one project, by the operator who designed it — [A]/[O], not a paradigm.
+
 ### `g-r-c-practice-domains` — Extension of G∧R∧C beyond formal systems
 - **Authoritative statement:** [`claims/g-r-c-practice-domains.md`](claims/g-r-c-practice-domains.md)
 - **GitHub issue:** [#7](https://github.com/thefalsework/papers/issues/7)
