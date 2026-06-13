@@ -62,6 +62,10 @@ Alex Citkin (author of the load-bearing `Z_n` citation) independently confirmed,
 
 Permission to cite granted. Does not upgrade minimality from [C] to [K] (still rests on enumeration); adds independent specialist confirmation and a named construction class.
 
+## 4c. Lean target: `H8 ≅ Z_6 + Z_3` (pre-registered 2026-06-13)
+
+Citkin (pers. comm., 2026-06-11) identified the repo's enumeration witness `H8` with the eight-element algebra **`Z_6 + Z_3`**: the top element of the 6-element one-generated Heyting algebra `Z_6` (= `Div12` [K+C]) glued to the bottom of a 3-element chain Heyting algebra. **Target:** formalize the gluing construction in Lean and prove `HeytingAlgebraEquiv H8 Z6PlusChain3`. Until landed, cite the identification as [C] (pers. comm.) alongside the [K] counterexample theorems. Paper 2 §4.6 records the expert confirmation at v8.18.
+
 ## 5. What the refutation means (interpretation, [A]-level, written at pre-registration)
 
 If outcome (a) holds for check 1, then **a forced kernel does not imply one-generation**: "unique ordinary element" and "one-generated" are genuinely independent facts, and the weld needs both. Music's lattice satisfying *both* is more information than either alone — but conversely, no future retelling may compress "unique kernel" into "is a `Z_n`". The refutation also guards the program against its own pattern-hunger: the partition can be uniquely forced on algebras that are *not* logic's canonical objects.

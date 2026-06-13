@@ -1,4 +1,4 @@
-# arXiv submission metadata — Paper 2 (v8.17 / arXiv v1)
+# arXiv submission metadata — Paper 2 (v8.18 / arXiv v2 prep)
 
 This file holds the metadata for the arXiv submission of `paper2.md`. It is not
 part of the paper. The trimmed abstract below is sized for arXiv's abstract
@@ -48,7 +48,7 @@ closes, with changelog in appendix.
 | Version | When | What changes |
 |---------|------|--------------|
 | **arXiv v1** | Initial post (June 2026) | Repo v8.17. Stage 4 open; Tymoczko contact not yet initiated. |
-| **arXiv v2** | After Stage 4 closes | Update §3.4 from Tymoczko response; reclassify Stage 3 if warranted; record change in appendix revision log. |
+| **arXiv v2** | After Stage 4 closes + Citkin closure (v8.18) | Update §3.4 from Tymoczko response; §4.6 Citkin second reply; reclassify Stage 3 if warranted; record change in appendix revision log. |
 
 Upload v1 now. Do not hold for Stage 4 — the open cycle is itself the
 documented condition. Replace with v2 (new arXiv version, not silent overwrite)

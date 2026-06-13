@@ -21,6 +21,13 @@ objects, strengthening the weld.
   distributive lattices of cardinality ≤ 12, `scripts/unique-ordinary-search.py`;
   the *minimality* of 8 rests on that enumeration — tag [C]; the
   counterexample itself is [K] below).
+* **Citkin's construction (pers. comm., 2026-06-11):** the same algebra arises
+  as **`Z_6 + Z_3`** — glue a 3-element chain Heyting algebra atop the
+  6-element one-generated algebra `Z_6` (= `Div12` by Theorem 6 [C]). Citkin
+  confirmed the 8-element minimality of the converse failure and verified the
+  smallest-dense-element lemma (`a ⊔ ¬a` is least dense when `a` is the unique
+  ordinary element). Lean isomorphism `H8 ≅ Z_6 + Z_3` pre-registered [O] in
+  `validation/claims/unique-ordinary-structure.md` §4c.
 * `H8.ordinary_unique` [K]: `a` is the unique ordinary element of `H8`
   (so `a` is also the unique non-degenerate four-cell kernel,
   `H8.kernel_unique`).

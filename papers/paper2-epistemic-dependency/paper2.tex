@@ -88,7 +88,7 @@ Mechanisms}
 \maketitle
 
 
-\emph{Version 8.17 (June 2026). arXiv v1. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR \#39618). Methodology at a glance: Section 1.1. Prior revision record in appendix.}
+\emph{Version 8.18 (June 2026). arXiv v2 prep. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR \#39618). v8.18 records Citkin correspondence closure (Section 4.6). Methodology at a glance: Section 1.1. Prior revision record in appendix.}
 
 \begin{abstract}
 
@@ -1285,17 +1285,38 @@ machine-checked status were unaffected; only the novelty standing of one
 half-claim changed).
 
 The instance closed the following day --- and then corrected its own
-closure within hours. The cited author replied to the inquiry
-(2026-06-11), confirming the post-correction calibration; reading the
-author's current preprint the same day revealed the statement itself
-appears there, asserted without proof. The recorded standing was
-corrected within hours: \emph{statement published by the author as an
-unproved observation, with the framework's machine-checked proof
-apparently the first written proof}. The episode's three-step refinement
+closure twice within hours. The cited author (Citkin) replied to the
+prior-art inquiry on 2026-06-11, confirming the post-correction
+calibration on the uniqueness question: the statement is
+specialist-obvious via the quotient route from the Rieger--Nishimura
+ladder, though he was not aware of any written proof. Reading the
+author's current preprint the same day (arXiv:2512.05633) revealed the
+statement itself appears there, asserted without proof --- so the
+standing became \emph{statement published by the author as an unproved
+observation, with the framework's machine-checked proof apparently the
+first written proof}. A clarifying follow-up the same day asked about
+the converse failure the framework had since kernel-checked
+(\texttt{unique\_ordinary\_converse\_false}: a unique ordinary element
+does not imply one-generated; minimal witness at cardinality eight).
+Citkin's second reply confirmed that observation and supplied the named
+construction behind it: the minimal counterexample is the eight-element
+algebra obtained by gluing a three-element chain Heyting algebra atop a
+six-element one-generated algebra (\texttt{Z\_6\ +\ Z\_3}, in his
+notation); at cardinality seven the only algebra with a unique ordinary
+element is \texttt{Z\_7}, which is one-generated. He also verified, with
+proof, that if \emph{a} is the unique ordinary element then \emph{a} and
+its negation lie below every dense element, so their join is the
+smallest dense element --- independently confirming the salvage lemma
+the repository had already kernel-checked. Permission to cite by name
+was granted. The subgroup-lattice / Div12 = Z\_6 question from the
+original inquiry did not resolve in correspondence (terminology did not
+land); it remains honestly open, resting on the machine-checked
+identification and Theorem 6 \statustag{C}. The episode's four-step refinement
 --- ``apparently new'' to ``half known, half open'' to ``statement
-published, proof apparently first'' --- is the strongest evidence in
-this paper that literature-engagement correction does discrimination
-work no amount of internal verification could do.
+published, proof apparently first'' to ``converse counterexample named
+and expert-confirmed'' --- is the strongest evidence in this paper that
+literature-engagement correction does discrimination work no amount of
+internal verification could do.
 
 A third instance exhibited the same mechanism with the project's own
 repository as the published source (2026-06-12): an AI instance cited a
@@ -1594,7 +1615,7 @@ cannot be quietly reframed as the prediction. Negative results are kept:
 a refuted converse is retained as a theorem about the refutation, and a
 refuted hand-conjecture stays in the claim file that registered it. The
 open and resolved ledgers carry every active flag and every closure,
-including the three-step refinement of Section 4.6 in which the closure
+including the four-step refinement of Section 4.6 in which the closure
 itself required correction. And the public commit history timestamps all
 of it, which makes the discipline auditable rather than asserted: an
 outside reader can check the resolved ledger against published sources,
@@ -1863,7 +1884,8 @@ introduction is not a failure of the architecture but an instance of it
 functioning as intended. The present paper was written before that cycle
 closed, which means it documents, in real time, a correction mechanism
 existing but not yet deployed --- the condition Stage 4 describes.
-\textbf{arXiv v2} is planned after Stage 4 closes, with Section 3.4
+\textbf{arXiv v2} is planned after Stage 4 closes (and incorporates the
+Citkin correspondence closure recorded at v8.18), with Section 3.4
 updated from the Tymoczko response and the change recorded in the
 appendix revision log --- consistent with the
 contemporaneous-documentation principle the case study has followed
@@ -1890,6 +1912,8 @@ AI-use policy.
 Citkin, A. (2024). An algebraic proof of the Nishimura theorem.
 \emph{Logics}, 2(4), 148--157.
 \url{https://doi.org/10.3390/logics2040007}.
+
+Citkin, A. (Personal correspondence, June 10--11, 2026).
 
 Cutting, J. E. (forthcoming). \emph{Four cinematic forms and their
 psychological bases}. University of Texas Press.
@@ -1950,6 +1974,19 @@ version history is maintained in the project repository at
 
 \begin{itemize}
 \tightlist
+\item
+  \textbf{Citkin correspondence closure (§ 4.6, added at v8.18).} Alex
+  Citkin replied on 2026-06-11 (second reply, to a clarifying
+  follow-up), confirming the eight-element minimal counterexample to the
+  converse of ordinary-element uniqueness via the gluing construction
+  \texttt{Z\_6\ +\ Z\_3}; verifying that at cardinality seven the only
+  algebra with a unique ordinary element is \texttt{Z\_7}
+  (one-generated); and supplying proofs that the unique ordinary element
+  and its negation lie below every dense element, so their join is the
+  smallest dense element. Permission to cite by name granted. The
+  subgroup-lattice / Div12 = Z\_6 question from the original inquiry did
+  not resolve in correspondence. §4.6, repository validation records,
+  and Lean file comments updated accordingly.
 \item
   \textbf{Mathlib PR outcome (§ 3.6).} An earlier draft described the
   formal-verification contribution as ``awaiting review'' and, in one
@@ -2052,6 +2089,11 @@ version history is maintained in the project repository at
   added to arXiv and DOI references (Tymoczko/Newman 2024, Døring 2012,
   Tymoczko 2006, Weatherby 2022). arXiv submission metadata updated
   (comments field, versioning plan, citation audit).
+\item
+  \textbf{Citkin correspondence closure (v8.18).} §4.6 extended with
+  second-reply adjudication (converse counterexample,
+  \texttt{Z\_6\ +\ Z\_3} construction, dense-element lemma, cite
+  permission). References and appendix updated. arXiv v2 prep.
 \end{itemize}
 
 \end{document}

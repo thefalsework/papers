@@ -30,9 +30,9 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
 
-**Current version.** v8.17 (arXiv v1, June 2026)
+**Current version.** v8.18 (arXiv v2 prep, June 2026)
 
-**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system; what differs is the maturity of the correction mechanism. v8.17 adds AI disclosure, §1.1 method-at-a-glance, resolvable citation URLs, and arXiv v2 plan after Stage 4 (Tymoczko correspondence). v8.16 foregrounded the [K]/[C]/[A]/[O] tag ladder in §6.3 with a worked mixed-tag example. v8.15 arXiv scope cut: Levin §6 removed, §2 compressed, series prospectus trimmed. Literature-engagement correction (Døring, Citkin) documented in §4.6; methodology in §6.3; four correction modes in §4.4–4.6.
+**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system; what differs is the maturity of the correction mechanism. v8.18 closes the Citkin literature-engagement cycle in §4.6 (converse counterexample, `Z_6 + Z_3` construction, dense-element lemma, cite permission). v8.17 adds AI disclosure, §1.1 method-at-a-glance, resolvable citation URLs, and arXiv v2 plan after Stage 4 (Tymoczko correspondence). v8.16 foregrounded the [K]/[C]/[A]/[O] tag ladder in §6.3 with a worked mixed-tag example. v8.15 arXiv scope cut: Levin §6 removed, §2 compressed, series prospectus trimmed. Literature-engagement correction (Døring, Citkin) documented in §4.6; methodology in §6.3; four correction modes in §4.4–4.6.
 
 **Paper source.** [`paper2-epistemic-dependency/paper2.md`](paper2-epistemic-dependency/paper2.md)
 **Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3 onward DOCX archives deferred until post-arXiv.)
@@ -163,7 +163,7 @@ Paper 1 (v11.8)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v11.8)
   └─ ground for Papers 2–5
 
-Paper 2 (v8.17 / arXiv v1)
+Paper 2 (v8.18 / arXiv v2 prep)
   ├─ refs Paper 1 (kernel–comma framework)
   ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
   └─ refs partition preprint + Mathlib PR #39618 (Stage 6 formal-verification correction)
