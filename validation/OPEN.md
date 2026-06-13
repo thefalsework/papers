@@ -59,7 +59,7 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 ### `cantor-cumulative-caveat` — Cantor application across four papers
 - **Authoritative statement:** [`claims/cantor-cumulative-caveat.md`](claims/cantor-cumulative-caveat.md)
 - **GitHub issue:** [#3](https://github.com/thefalsework/papers/issues/3)
-- **Paper:** canonical at Paper 4 § 2.5 (v5.3); invoked at Paper 1 § 2, Paper 2 § 2.3, Paper 3 § 9
+- **Paper:** canonical at Paper 4 § 2.5 (v5.3); invoked at Paper 1 § 2, Paper 3 § 9. *(Removed from Paper 2 at v8.15 arXiv scope cut; historical v8.2 § 2.3 only.)*
 - **What's asked:** advise whether each of four applications of Cantor's power-set theorem is direct, formalizable under additional structure, an analogy, or a category error.
 - **Time estimate for validator:** ~3–5 hours
 - **Status:** awaiting set theorist or formal logician
@@ -106,7 +106,7 @@ When a claim is validated, corrected, or disputed, its entry moves to [`RESOLVED
 ### `methodology-scaffolding-ablation` — Does the epistemic scaffolding carry the discipline? (pre-registered ablation)
 - **Authoritative statement:** [`claims/methodology-scaffolding-ablation.md`](claims/methodology-scaffolding-ablation.md)
 - **GitHub issue:** (pending)
-- **Paper:** Paper 2 § 7.3 (v8.14) — the methodology stated as methodology: the [K]/[C]/[A]/[O] status-tag ladder and supporting practices as the designed implementation of the paper's correction architecture
+- **Paper:** Paper 2 § 6.3 (v8.17 / arXiv v1) — the methodology stated as methodology: the [K]/[C]/[A]/[O] status-tag ladder and supporting practices as the designed implementation of the paper's correction architecture
 - **What's asked / open:** two separated claims. (1) *Pre-registered ablation:* run matched AI instances on real repository tasks against the scaffolded corpus vs. a scaffolding-stripped copy; measure the rate of unlicensed promotion ([A]/[O] asserted as [K], dropped hedges, fabricated specifics, inherited-record errors). All three outcomes pre-registered as acceptable — scaffolding carries rigor / scaffolding is operator ergonomics / scaffolding masks error behind fluent register. (2) *Generalization:* whether the method survives an operator other than its designer — testable only by external replication. First logged observation (2026-06-12, the "§ 6.4" instance): a stale index entry was inherited verbatim by an AI instance, initially misdiagnosed as confabulation, then traced to the record itself — evidence that the record is part of the dependency structure it documents.
 - **Status:** (1) pre-registered, not yet run; (2) awaiting any external operator adopting the practice. Until then the methodology's standing is: demonstrated once, in one project, by the operator who designed it — [A]/[O], not a paradigm.
 

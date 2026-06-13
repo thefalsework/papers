@@ -329,7 +329,7 @@ framework documented in the FalseWork papers
 - **Paper 1 v11.6** — *Kernels and Commas* — defines the kernel framework,
   the four-criteria audit, and the six established kernels plus two
   candidates (The Mark, The Threshold).
-- **Paper 2 v8.2** — *The Distinction Operation and Inherited Validity*
+- **Paper 2 v8.17 (arXiv v1)** — *Epistemic Dependency as Structural Condition*
   — defines the distinction operation that the algebra's removal tests
   empirically instantiate.
 - **Validation record** — `validation/OPEN.md` in the papers repository

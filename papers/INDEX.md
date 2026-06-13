@@ -30,17 +30,16 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
 
-**Current version.** v8.14
+**Current version.** v8.17 (arXiv v1, June 2026)
 
-**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system (human or computational); what differs between systems is the maturity of the correction mechanism available to detect and address it. v8.11 adds a second documented literature-engagement instance to § 4.5: the false-novelty polarity — during prior-art preparation (2026-06-10), close reading of Citkin 2024 revealed half of a threshold result carried as apparently new was already a published observation; the repository was corrected the same day, before any external contact. § 4.5 now documents the mode in both polarities (false conflict, Døring; false novelty, Citkin) across two domains. v8.12 recorded the Citkin instance's closure via the author's reply (2026-06-11); v8.13, same day, corrected the closure itself — the author's current preprint (arXiv:2512.05633) states the claim without proof, so the final standing is "statement published, proof apparently first," a three-step refinement documented in § 4.5. v8.14 states the methodology as methodology: a new § 7.3 documents the [K]/[C]/[A]/[O] status-tag ladder, the promotion/demotion rules, and the supporting practices (pre-registration, kept negatives, ledgers, commit history) as the designed implementation of § 7.2's correction architecture — separating the demonstrated claim (records as auditable evidence of past enforcement) from the untested one (the artifact induces discipline in a new operator), the latter pre-registered as a falsifiable ablation. A § 4.5 coda records a third correction instance with the repository itself as the source: an AI instance cited a nonexistent "§ 6.4" of the paper, was diagnosed as confabulating, and was then found to have faithfully inherited a stale entry from this index file — the correction landing on the record and the diagnosis, not the instance. Former §§ 7.3–7.5 renumbered 7.4–7.6.
+**One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system; what differs is the maturity of the correction mechanism. v8.17 adds AI disclosure, §1.1 method-at-a-glance, resolvable citation URLs, and arXiv v2 plan after Stage 4 (Tymoczko correspondence). v8.16 foregrounded the [K]/[C]/[A]/[O] tag ladder in §6.3 with a worked mixed-tag example. v8.15 arXiv scope cut: Levin §6 removed, §2 compressed, series prospectus trimmed. Literature-engagement correction (Døring, Citkin) documented in §4.6; methodology in §6.3; four correction modes in §4.4–4.6.
 
 **Paper source.** [`paper2-epistemic-dependency/paper2.md`](paper2-epistemic-dependency/paper2.md)
-**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and § 4.5 literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3 onward DOCX archives deferred until post-arXiv.)
+**Archive.** [`paper2-epistemic-dependency/archive/v8.2.docx`](paper2-epistemic-dependency/archive/v8.2.docx) (note: v8.3 added Stage 6 (Mathlib PR #39618 cycle) and literature-engagement correction; v8.4 is an arXiv-finalization pass — corrected four false "posted to OSF" references (no OSF posting occurred), made the six-stage counting consistent, and added the title line; v8.5 records that Mathlib PR #39618 was closed unmerged on 2026-05-28 under the AI-use policy and reframes § 3.6 around the decline as the mature institutional mechanism setting a boundary. v8.3 onward DOCX archives deferred until post-arXiv.)
 
 **Open validation items this paper carries.**
-- § 2.3 — Cantor cumulative caveat (canonical statement in Paper 4 § 2.5). Tracked at [`validation/claims/cantor-cumulative-caveat.md`](../validation/claims/cantor-cumulative-caveat.md).
-- § 6.2 — Inherited-validity detection framework for AI-assisted scholarship; methodological, not formal. *(This entry previously read "§ 6.4," a section reference stale since the initial DOCX migration — the paper has no § 6.4. The stale entry was inherited verbatim by an AI instance on 2026-06-12 and the mismatch caught against the paper file; the incident is documented in Paper 2 § 4.5 coda and logged at [`validation/claims/methodology-scaffolding-ablation.md`](../validation/claims/methodology-scaffolding-ablation.md).)*
-- § 7.3 — Methodology-scaffolding generalization (does the tag ladder carry the discipline to new operators?); ablation pre-registered. Tracked at [`validation/claims/methodology-scaffolding-ablation.md`](../validation/claims/methodology-scaffolding-ablation.md).
+- § 4.4 — Inherited-validity category for AI-assisted scholarship (domain classifications corrected via expert correspondence, recorded in correction ledgers). Stage 3 classification provisional pending Stage 4 (§3.4).
+- § 6.3 — Methodology-scaffolding generalization (does the tag ladder carry the discipline to new operators?); ablation pre-registered. Tracked at [`validation/claims/methodology-scaffolding-ablation.md`](../validation/claims/methodology-scaffolding-ablation.md). *(The 2026-06-12 stale-INDEX incident — an AI instance inherited a wrong section reference from this file's former "§ 6.4" entry — is documented in Paper 2 § 4.6 coda and logged in the same claim file.)*
 
 ---
 
@@ -164,9 +163,8 @@ Paper 1 (v11.8)
   ├─ refers to comma-formal-structure-note.md for refined dictionary (v11.8)
   └─ ground for Papers 2–5
 
-Paper 2 (v8.14)
+Paper 2 (v8.17 / arXiv v1)
   ├─ refs Paper 1 (kernel–comma framework)
-  ├─ defers to Paper 4 § 2.5 (Cantor canonical statement)
   ├─ refs Paper 5 (Pythagorean inherited-validity contrast)
   └─ refs partition preprint + Mathlib PR #39618 (Stage 6 formal-verification correction)
 

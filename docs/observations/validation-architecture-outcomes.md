@@ -221,7 +221,7 @@ The hypothesis was deliberately *named after its structural content* — the ker
 **Primary sources and repo artefacts.**
 
 - Prior entry: 2026-04-18 to 2026-04-19 Lean Zulip thread (below) and the April venue-norm observation.
-- Paper 2's correction architecture: `papers/paper2-correction-architecture/paper2.md`.
+- Paper 2's correction architecture: `papers/paper2-epistemic-dependency/paper2.md`.
 - Downstream update: `lean/HEYTING-GAP.md` (engagement-record line updated to match).
 - Current Zulip thread: link in `lean/HEYTING-GAP.md` once the reply is posted.
 

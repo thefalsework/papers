@@ -4,7 +4,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 8.16 (June 2026). Methodology foregrounded: §1.1 method-at-a-glance; [K]/[C]/[A]/[O] ladder named in abstract; worked mixed-tag example in §6.3. Prior revision record in appendix.*
+*Version 8.17 (June 2026). arXiv v1. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, [K]/[C]/[A]/[O] status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR #39618). Methodology at a glance: Section 1.1. Prior revision record in appendix.*
 
 ## Abstract
 
@@ -356,7 +356,7 @@ Sixth, the human parallel is not consolation. It is structural diagnosis. Human 
 
 Seventh, the correction architecture is multi-modal even at the primitive stage. Expert correspondence (Sections 3.2 and 3.5) corrects specific classifications. Instrument-initiated divergence (Section 4.5) corrects theoretical underspecification. Formal-verification cycles in a public mathematical library (Section 3.6) submit contribution form to community review and machine-check the construction --- and, in the documented instance, the review process declined the AI-assisted contribution under the venue's AI-use policy, the venue setting a boundary through its policy and review process rather than absorbing the contribution. Literature-engagement correction (Section 4.6) corrects absorbed methodological assumptions visible only through discrepancy with published results. Each mode addresses a class of error the others cannot reach. A correction architecture restricted to any one mode would leave the others unaddressed --- the Mathlib cycle cannot validate music-theoretic classifications, the Tymoczko cycle cannot kernel-check formalizations, and neither can detect a truncation assumption the pipeline absorbed without flagging. The architecture's primitive-stage adequacy depends on the modes operating together, not on any one of them being sufficient.
 
-What comes next. The proxy extractor convergence with Tymoczko/Newman 2024 remains the open correction cycle. The contact moment is the arXiv posting itself. When the paper posts, the convergence will be surfaced directly to Tymoczko by sending him the arXiv link: the proxy extractor's analytical frame converges with his 2024 computational annotation work in ways that were not visible during development and were not cited in the version of the first paper shared with him on March 24, 2026. That communication will close Stage 4 --- either confirming Stage 3 as inherited validity (readings one or two) or reclassifying it as ordinary independent derivation (reading three). A correction cycle that reclassifies the very instance that motivated its introduction is not a failure of the architecture but an instance of it functioning as intended. The present paper was written before that cycle closed, which means it documents, in real time, a correction mechanism existing but not yet deployed --- the condition Stage 4 describes. A subsequent version will update Section 3.4 with the Tymoczko response when it is in hand, consistent with the contemporaneous-documentation principle the case study has followed throughout.
+What comes next. The proxy extractor convergence with Tymoczko/Newman 2024 remains the open correction cycle. The contact moment is the arXiv posting itself. When the paper posts, the convergence will be surfaced directly to Tymoczko by sending him the arXiv link: the proxy extractor's analytical frame converges with his 2024 computational annotation work in ways that were not visible during development and were not cited in the version of the first paper shared with him on March 24, 2026. That communication will close Stage 4 --- either confirming Stage 3 as inherited validity (readings one or two) or reclassifying it as ordinary independent derivation (reading three). A correction cycle that reclassifies the very instance that motivated its introduction is not a failure of the architecture but an instance of it functioning as intended. The present paper was written before that cycle closed, which means it documents, in real time, a correction mechanism existing but not yet deployed --- the condition Stage 4 describes. **arXiv v2** is planned after Stage 4 closes, with Section 3.4 updated from the Tymoczko response and the change recorded in the appendix revision log --- consistent with the contemporaneous-documentation principle the case study has followed throughout.
 
 ## References
 
@@ -372,7 +372,7 @@ Cutting, J. E. (forthcoming). *Four cinematic forms and their psychological base
 
 Cutting, J. E. (Personal correspondence, March 4--25, 2026).
 
-Døring, A. (2012). Topos-based logic for quantum systems and bi-Heyting algebras. *arXiv preprint* arXiv:1202.2750.
+Døring, A. (2012). Topos-based logic for quantum systems and bi-Heyting algebras. *arXiv preprint* arXiv:1202.2750. <https://arxiv.org/abs/1202.2750>.
 
 Kuhn, T. S. (1962). *The structure of scientific revolutions*. University of Chicago Press.
 
@@ -384,7 +384,7 @@ Polanyi, M. (1958). *Personal knowledge: Towards a post-critical philosophy*. Un
 
 Polanyi, M. (1966). *The tacit dimension*. Doubleday.
 
-Tymoczko, D. (2006). The geometry of musical chords. *Science*, 313(5783), 72--74.
+Tymoczko, D. (2006). The geometry of musical chords. *Science*, 313(5783), 72--74. <https://doi.org/10.1126/science.1126287>.
 
 Tymoczko, D. (2011). *A geometry of music: Harmony and counterpoint in the extended common practice*. Oxford University Press.
 
@@ -392,11 +392,11 @@ Tymoczko, D. (forthcoming). The concept of musical space. *Journal of Music Theo
 
 Tymoczko, D. (Personal correspondence, March 2--25, 2026).
 
-Tymoczko, D., & Newman, M. (2024). Computational music analysis from first principles. arXiv:2407.21130.
+Tymoczko, D., & Newman, M. (2024). Computational music analysis from first principles. *arXiv preprint* arXiv:2407.21130. <https://arxiv.org/abs/2407.21130>.
 
-van de Meent, E., & Chu, F. (Lean Zulip correspondence, May 2026). Heyting algebra on subobjects in an elementary topos. Lean Zulip thread, leanprover.zulipchat.com, 2026-05-17 onward; referenced in the Acknowledgments of Mathlib Pull Request #39618.
+van de Meent, E., & Chu, F. (Lean Zulip correspondence, May 2026). Heyting algebra on subobjects in an elementary topos. Lean Zulip thread, 2026-05-17 onward; referenced in the Acknowledgments of Mathlib Pull Request #39618. <https://github.com/leanprover-community/mathlib4/pull/39618>.
 
-Weatherby, L., & Justie, B. (2022). Indexical AI. *Critical Inquiry*, 48(2), 381--415.
+Weatherby, L., & Justie, B. (2022). Indexical AI. *Critical Inquiry*, 48(2), 381--415. <https://doi.org/10.1086/717312>.
 
 ## Appendix: Pre-submission revision record
 
@@ -413,3 +413,4 @@ This paper was developed across several private drafts before this first public 
 - **Methodology stated as methodology (§ 6.3, § 4.6 coda, added at v8.14).** The project had used its claim discipline — the [K]/[C]/[A]/[O] status-tag ladder, pre-registration, kept negatives, correction ledgers — throughout without documenting it as method. § 6.3 documents it as the designed implementation of § 6.2's correction architecture, separates the demonstrated claim (the records are auditable evidence of past enforcement) from the untested one (the artifact induces discipline in a new operator), and pre-registers a falsifiable ablation for the latter (`validation/claims/methodology-scaffolding-ablation.md`). A § 4.6 coda records a third correction instance with the repository itself as the source read against an output: an AI instance cited a nonexistent section of this paper (2026-06-12); a second instance caught the mismatch against the file and diagnosed confabulation; the diagnosis was then itself corrected the same day when the quoted phrase was found verbatim in the repository's index file, stale since the initial document migration (2026-04-20) — inherited record, not invention. The stale index entry was corrected in the same revision.
 - **arXiv scope cut (v8.15).** §2 compressed to Kuhn, Polanyi, and Latour inscription only. Inherited-validity and hallucination distinction consolidated in §4.4. Entire §6 (Levin geometric reframing and correspondence) removed. §5.1 Suhr Zulip digression removed; §5.2 endorsement detail trimmed. §§7–8 renumbered to §§6–7; series prospectus (papers 3–4) removed from conclusion. Cross-references and bibliography aligned to the lean structure; [K]/[C]/[A]/[O] status-tag ladder retained in §6.3.
 - **Methodology foregrounded (v8.16).** §1.1 added (method at a glance: correction architecture + epistemic record, and how they connect). Abstract names [K]/[C]/[A]/[O] explicitly. §6.3 gains worked mixed-tag example bridging domain correspondence and formal tags. §6.4 maps validated/dependent claims to ledger + tag ladder.
+- **arXiv v1 prep (v8.17).** AI disclosure added to version block. arXiv v2 planned after Stage 4 closure (Section 7). Resolvable URLs added to arXiv and DOI references (Tymoczko/Newman 2024, Døring 2012, Tymoczko 2006, Weatherby 2022). arXiv submission metadata updated (comments field, versioning plan, citation audit).

@@ -234,7 +234,7 @@ required to demonstrate the four queries Ellynne specified.
 
 ### Connection to Paper 2
 
-Paper 2 (the Distinction Operation and Inherited Validity)
+Paper 2 (*Epistemic Dependency as Structural Condition*, v8.17 / arXiv v1)
 formalises the rewrite calculus that the algebra's removal tests
 empirically instantiate. The full link between the algebra and
 Paper 2's formalism is V2 work. The prototype operates at the

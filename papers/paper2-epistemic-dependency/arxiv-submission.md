@@ -1,4 +1,4 @@
-# arXiv submission metadata — Paper 2 (v8.16)
+# arXiv submission metadata — Paper 2 (v8.17 / arXiv v1)
 
 This file holds the metadata for the arXiv submission of `paper2.md`. It is not
 part of the paper. The trimmed abstract below is sized for arXiv's abstract
@@ -33,9 +33,49 @@ contribution in its own right.
 
 CC BY 4.0 (matches the repository `LICENSE`).
 
-## Comments field
+## Comments field (paste into arXiv)
 
-~24 pages, no figures.
+24 pages, no figures. arXiv v1 (June 2026). AI disclosure: this paper and the
+FalseWork development it documents were produced with AI assistance (Anthropic
+Claude), under the documented correction architecture the paper specifies —
+expert correspondence, [K]/[C]/[A]/[O] status tags, pre-registration, and
+contemporaneous ledgers; formal contributions disclosed AI use per venue policy
+(Mathlib PR #39618). arXiv v2 planned after Stage 4 (Tymoczko correspondence)
+closes, with changelog in appendix.
+
+## Versioning plan
+
+| Version | When | What changes |
+|---------|------|--------------|
+| **arXiv v1** | Initial post (June 2026) | Repo v8.17. Stage 4 open; Tymoczko contact not yet initiated. |
+| **arXiv v2** | After Stage 4 closes | Update §3.4 from Tymoczko response; reclassify Stage 3 if warranted; record change in appendix revision log. |
+
+Upload v1 now. Do not hold for Stage 4 — the open cycle is itself the
+documented condition. Replace with v2 (new arXiv version, not silent overwrite)
+when the correspondence lands.
+
+## Citation audit (verified 2026-06-13)
+
+All resolvable external references checked. arXiv and DOI links included in
+`paper2.md` References section.
+
+| Reference | Resolver | Status |
+|-----------|----------|--------|
+| Tymoczko & Newman (2024) arXiv:2407.21130 | https://arxiv.org/abs/2407.21130 | OK (200) |
+| Døring (2012) arXiv:1202.2750 | https://arxiv.org/abs/1202.2750 | OK (200) |
+| Citkin (2024) DOI 10.3390/logics2040007 | https://doi.org/10.3390/logics2040007 | DOI resolves (MDPI) |
+| Citkin preprint (closure) arXiv:2512.05633 | https://arxiv.org/abs/2512.05633 | OK (200) |
+| Tymoczko (2006) Science | https://doi.org/10.1126/science.1126287 | Standard DOI |
+| Weatherby & Justie (2022) | https://doi.org/10.1086/717312 | Standard DOI |
+| Brink (2026a) Zenodo | https://doi.org/10.5281/zenodo.19673673 | OK (200) |
+| Brink preprint concept DOI | https://doi.org/10.5281/zenodo.19673672 | OK |
+| Mathlib PR #39618 | https://github.com/leanprover-community/mathlib4/pull/39618 | OK (opened 2026-05-20, closed 2026-05-28) |
+| FalseWork repo | https://github.com/thefalsework/papers | OK |
+
+**No URL required (standard book/journal/correspondence):** Kuhn (1962), Polanyi
+(1958, 1966), Latour & Woolgar (1979), Mac Lane & Moerdijk (1992), Tymoczko
+(2011), Cutting (forthcoming), personal correspondence entries (Tymoczko,
+Cutting).
 
 ## Submission format decision
 
@@ -51,24 +91,11 @@ Output is `paper2.tex` (title block hand-edited into `\title`/`\maketitle`).
 
 ## Compilation notes
 
-- **Status: regenerate from `paper2.md` after v8.15 scope cut, then recompile.**
-  Prior build (v8.5): 30 pages with tectonic 0.16.9. v8.15 removes ~6 pages
-  (Levin §6, compressed §2, trimmed digressions); expect ~24 pages.
-- **Engine: XeLaTeX or LuaLaTeX (not pdfLaTeX).** The paper contains Unicode
-  categorical glyphs (Σ, δ, ι, χ, ⇒, ⊓, ≤, ↔), the music flat ♭ (the "A♭"
-  in § 3.1), and the Danish ø in "Døring". The pandoc preamble loads
-  `unicode-math` under xetex/luatex; pdfLaTeX would fail on these. On arXiv,
-  select the XeLaTeX toolchain for this submission.
-- **Manual post-pandoc fix applied to `paper2.tex`:** a `newunicodechar`
-  preamble block maps the Unicode operators (♭ ⇒ ⊓ ⊔ ≤ ≥ ↔ δ ι χ Σ Δ) to
-  their math symbols so they render under XeLaTeX. Latin Modern Roman/Mono
-  lack these glyphs; without the block they are silently dropped. **If
-  `paper2.tex` is regenerated from `paper2.md` via pandoc, re-add this block.**
-- **References** are inline plain-text paragraphs under `\section{References}`;
-  no `.bib` is required.
-- **Recompile command** (tectonic binary lives at repo `.tools\tectonic.exe`,
-  not committed):
-  `.tools\tectonic.exe --outdir papers\paper2-epistemic-dependency papers\paper2-epistemic-dependency\paper2.tex`
+- **Engine: XeLaTeX or LuaLaTeX (not pdfLaTeX).** Unicode glyphs (♭, ⇒, ⊓, ø
+  in Døring, etc.). Select XeLaTeX toolchain on arXiv.
+- **Manual post-pandoc fix:** re-add `newunicodechar` preamble block after
+  regenerating `paper2.tex` from `paper2.md`.
+- **Recompile:** `.tools\tectonic.exe --outdir papers\paper2-epistemic-dependency papers\paper2-epistemic-dependency\paper2.tex`
 
 ## Trimmed abstract (for the arXiv abstract field)
 

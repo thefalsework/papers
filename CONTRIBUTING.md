@@ -94,7 +94,7 @@ Anything that doesn't fit above — bibliographic corrections, new precedent sug
 2. **Branch** from `main` with a descriptive name: `validation/music-kernel-point-3-lambek`, `correction/paper2-section-6-2-typo`, `formalization/music-kernel-points-1-5`.
 3. **Commit** using [Conventional Commit](https://www.conventionalcommits.org/) style where possible:
    - `validation: confirm music-kernel point 3 (Lambek application)`
-   - `correction(paper2): fix typo in § 6.2 Gemini incident`
+   - `correction(paper2): fix typo in § 6.5 Gemini incident`
    - `formalization(lean): add Fix(D) = {∅} proof via cardinality argument`
    - `docs: add n-Category Café announcement draft`
 4. **Push** your branch and open a PR against `main`.

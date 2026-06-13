@@ -62,7 +62,7 @@ Reading Citkin's current arXiv paper (**arXiv:2512.05633**, 5 Dec 2025, "Heredit
 3. **Corollary 3.9:** a finitely generated nodeless Heyting algebra is Boolean iff it contains no ordinary elements — overlaps the Glivenko-collapse facts (`boolean_no_ordinary` is the easy direction, in more generality); citable.
 4. **`P1 ≅ Z7` and `P2 ≅ 2 + Z7`:** two of the five prohibited algebras of his hereditary-structural-completeness criterion are built from `Z7`, which we have formalized — the reserved C₁–C₅ homework is partially answered by the paper itself: the prohibited algebras are `Z_n`-flavored.
 
-Propagated to: `validation/RESOLVED.md`, `validation/claims/math-anchor-cantor-floor.md`, `papers/connecting-the-spine.md`, `papers/four-position-exposition.md`, Paper 2 §4.5/appendix.
+Propagated to: `validation/RESOLVED.md`, `validation/claims/math-anchor-cantor-floor.md`, `papers/connecting-the-spine.md`, `papers/four-position-exposition.md`, Paper 2 §4.6/appendix.
 
 *Follow-through (2026-06-11, same day): the kernel-checkable fragment of items 2 and 4 was pre-registered and landed as `lean/FalseWorkPapers/Examples/LadderCore.lean` (claim file `validation/claims/ladder-core-threshold.md`): universal ≥6 threshold for any Heyting algebra with an ordinary element (generalizing his Prop. 4(c)); `Div12 = Z_6` order-embeds into every such algebra; `H8`'s ladder core is exactly `Z_7` (Prop. 3.1 instantiated at the counterexample); the tritone is the unique generator of `Div12` (instance of his unique-generator remark); and the dense-bottom lemma settles part of the C₁–C₅ homework — `P2 ≅ 2 + Z_7` has no ordinary elements, so prohibitedness and kernel-bearing do not align. The full Prop. 3.1 (subalgebra, not order-embedding) and V(Z₆) primitiveness remain [O].*
 
