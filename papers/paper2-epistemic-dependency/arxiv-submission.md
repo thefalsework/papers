@@ -1,4 +1,4 @@
-# arXiv submission metadata — Paper 2 (v8.5)
+# arXiv submission metadata — Paper 2 (v8.16)
 
 This file holds the metadata for the arXiv submission of `paper2.md`. It is not
 part of the paper. The trimmed abstract below is sized for arXiv's abstract
@@ -23,11 +23,11 @@ cs.AI
 
 cs.CY (Computers and Society)
 
-Rationale: the paper's central contribution is methodological/sociological — a
-correction-architecture account of AI-assisted scholarship — which sits most
-naturally in Computers and Society. cs.LO was considered and rejected as
-understating the AI-epistemology framing; the Lean/Mathlib material (§ 3.6) is
-evidence for a correction mode, not a logic contribution in its own right.
+Rationale: the paper's central contribution is methodological — a
+correction-architecture account of AI-assisted scholarship with a documented
+case study — which sits most naturally in cs.AI with cs.CY as secondary. The
+Lean/Mathlib material (§ 3.6) is evidence for a correction mode, not a logic
+contribution in its own right.
 
 ## License
 
@@ -35,7 +35,7 @@ CC BY 4.0 (matches the repository `LICENSE`).
 
 ## Comments field
 
-30 pages, no figures.
+~24 pages, no figures.
 
 ## Submission format decision
 
@@ -51,8 +51,9 @@ Output is `paper2.tex` (title block hand-edited into `\title`/`\maketitle`).
 
 ## Compilation notes
 
-- **Status: compiles cleanly to 30 pages, no figures, zero missing-glyph
-  warnings.** Verified locally with `tectonic 0.16.9` (XeTeX engine).
+- **Status: regenerate from `paper2.md` after v8.15 scope cut, then recompile.**
+  Prior build (v8.5): 30 pages with tectonic 0.16.9. v8.15 removes ~6 pages
+  (Levin §6, compressed §2, trimmed digressions); expect ~24 pages.
 - **Engine: XeLaTeX or LuaLaTeX (not pdfLaTeX).** The paper contains Unicode
   categorical glyphs (Σ, δ, ι, χ, ⇒, ⊓, ≤, ↔), the music flat ♭ (the "A♭"
   in § 3.1), and the Danish ø in "Døring". The pandoc preamble loads
@@ -71,4 +72,4 @@ Output is `paper2.tex` (title block hand-edited into `\title`/`\maketitle`).
 
 ## Trimmed abstract (for the arXiv abstract field)
 
-Epistemic dependency — the condition in which a knowledge-producing system's outputs reflect the theoretical commitments embedded in its formation — is not unique to AI systems. It is a structural condition shared by all knowledge-producing systems, human and computational. What differs is not the presence of the dependency but the maturity of the correction mechanism available to address it. This paper demonstrates the claim through a documented live case study: the development of FalseWork, a computational structural classification framework built using an AI system trained on the theoretical traditions it classifies within. The case study provides what prior work on AI epistemic dependency has lacked — a formal framework that predicts the dependency, a working instrument that produces it in real time, a correction mechanism that activates against it, and full documentation of the complete cycle from generation to correction. Six stages are documented: two of dependency generation, two of correction-mechanism activation, one of the mechanism existing but not yet deployed, and one of formal-verification correction in a public mathematical library, kernel-verified but declined under the library's AI-use policy. The case grounds a general claim: hallucination and genuine correction are distinguished not by the process that produces them — both are navigations of an inherited semantic manifold — but by the external validation that determines which is which. The study further introduces a third category, inherited validity, in which the dependency produces results that are correct but whose relationship to prior analytical framing is not transparent, requiring the same external validation as hallucination to distinguish from independent derivation. The correction mechanism is not quality control applied after the fact; it is the epistemological architecture of the project.
+Epistemic dependency — the condition in which a knowledge-producing system's outputs reflect the theoretical commitments embedded in its formation — is not unique to AI systems. It is a structural condition shared by all knowledge-producing systems, human and computational. What differs is not the presence of the dependency but the maturity of the correction mechanism available to address it. This paper demonstrates the claim through a documented live case study: the development of FalseWork, a computational classification framework built using an AI system trained on the theoretical traditions it classifies within. The paper specifies the correction architecture and its operational implementation: every substantive claim carries an explicit epistemic-status tag ([K] kernel-checked, [C] classical, [A] analogy, [O] open), with pre-registration, demotion-by-artifact, and contemporaneous correction ledgers. Six stages are documented: two of dependency generation, two of correction-mechanism activation, one of the mechanism existing but not yet deployed, and one formal-verification cycle in a public mathematical library whose contribution was machine-checked and then declined under the library's AI-use policy. The case grounds two methodological claims: hallucination and genuine correction are distinguishable not by the process that produces them but by external validation; and inherited validity — correct results produced through an unacknowledged absorbed analytical frame — is a third category requiring the same external validation as hallucination to distinguish from independent derivation. Correction architecture is not quality control applied after the fact; it is the epistemological design of AI-assisted scholarship.
