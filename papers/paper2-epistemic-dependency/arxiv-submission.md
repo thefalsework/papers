@@ -35,7 +35,7 @@ CC BY 4.0 (matches the repository `LICENSE`).
 
 ## Comments field (paste into arXiv)
 
-24 pages, no figures. arXiv v1 (June 2026). AI disclosure: this paper and the
+30 pages, no figures. arXiv v1 (June 2026). AI disclosure: this paper and the
 FalseWork development it documents were produced with AI assistance (Anthropic
 Claude), under the documented correction architecture the paper specifies —
 expert correspondence, [K]/[C]/[A]/[O] status tags, pre-registration, and
@@ -79,23 +79,27 @@ Cutting).
 
 ## Submission format decision
 
-LaTeX source (cs.AI convention). Scaffold generated with `pandoc 3.9` from
-`paper2.md`:
+LaTeX source (cs.AI convention). **Regenerate from `paper2.md` with the build script** — do not hand-edit `paper2.tex`:
 
-```
-pandoc paper2.md --standalone --from markdown --to latex \
-  -V documentclass=article -V geometry:margin=1in -V fontsize=11pt -o paper2.tex
+```powershell
+cd papers\paper2-epistemic-dependency
+.\build-paper2-arxiv.ps1          # writes paper2.tex
+.\build-paper2-arxiv.ps1 -Compile # also runs tectonic -> paper2.pdf
 ```
 
-Output is `paper2.tex` (title block hand-edited into `\title`/`\maketitle`).
+The script:
+
+- Skips the markdown title block (lines 1–7); re-injects the version/AI-disclosure note after `\maketitle`.
+- Runs `pandoc` with `arxiv-metadata.yaml` and `arxiv-preamble.tex` (`\statustag`, Unicode glyphs, `hyperref`).
+- Post-processes: `{[}K{]}` → `\statustag{K}`, `\begin{abstract}`, `\appendix`, escapes `#` in PR references.
+
+**arXiv upload:** submit `paper2.tex` only (preamble is inlined). Optional local check: `paper2.pdf`.
 
 ## Compilation notes
 
-- **Engine: XeLaTeX or LuaLaTeX (not pdfLaTeX).** Unicode glyphs (♭, ⇒, ⊓, ø
-  in Døring, etc.). Select XeLaTeX toolchain on arXiv.
-- **Manual post-pandoc fix:** re-add `newunicodechar` preamble block after
-  regenerating `paper2.tex` from `paper2.md`.
-- **Recompile:** `.tools\tectonic.exe --outdir papers\paper2-epistemic-dependency papers\paper2-epistemic-dependency\paper2.tex`
+- **Engine: XeLaTeX or LuaLaTeX (not pdfLaTeX).** Unicode glyphs (♭, ⇒, ⊓, ø in Døring, etc.). Select **XeLaTeX** on arXiv.
+- **Status tags:** `[K]` / `[C]` / `[A]` / `[O]` render as `\statustag{…}` → `\texttt{[K]}` throughout.
+- **Local recompile:** `.tools\tectonic.exe --outdir papers\paper2-epistemic-dependency papers\paper2-epistemic-dependency\paper2.tex`
 
 ## Trimmed abstract (for the arXiv abstract field)
 

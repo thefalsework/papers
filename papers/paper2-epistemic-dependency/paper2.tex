@@ -1,4 +1,4 @@
-% Options for packages loaded elsewhere
+﻿% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \documentclass[
@@ -41,15 +41,14 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-\hypersetup{
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+% arXiv preamble for paper2.tex — include via pandoc -H or merge after generation.
+% Regenerate with build-paper2-arxiv.ps1; do not edit paper2.tex by hand.
 
-% Map Unicode glyphs that the text fonts lack to math symbols (XeLaTeX/LuaLaTeX).
-% If this file is regenerated from paper2.md via pandoc, re-add this block.
+% Epistemic status tags ([K], [C], [A], [O]) — consistent monospace rendering.
+\newcommand{\statustag}[1]{\texttt{[#1]}}
+\newcommand{\statustagpair}[2]{\texttt{[#1+#2]}}
+
+% Map Unicode glyphs missing from Latin Modern (XeLaTeX/LuaLaTeX on arXiv).
 \usepackage{newunicodechar}
 \newunicodechar{♭}{\ensuremath{\flat}}
 \newunicodechar{⇒}{\ensuremath{\Rightarrow}}
@@ -64,23 +63,34 @@
 \newunicodechar{Σ}{\ensuremath{\Sigma}}
 \newunicodechar{Δ}{\ensuremath{\Delta}}
 
-\title{Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms}
-\author{Chris Brink\\FalseWork (falsework.dev)}
+% Hyperref (pandoc 3.9 standalone template omits \usepackage{hyperref}).
+\usepackage[unicode]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  hidelinks,
+  pdfauthor={Chris Brink (FalseWork)},
+  pdftitle={Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms},
+  pdfcreator={LaTeX via pandoc}
+}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\title{Epistemic Dependency as Structural Condition: A Documented Case
+Study of AI-Assisted Scholarship and the Maturity of Correction
+Mechanisms}
+\author{Chris Brink (FalseWork; falsework.dev)}
 \date{}
 
 \begin{document}
 \maketitle
 
-\emph{Version 8.17 (June 2026). arXiv v1. AI disclosure: this paper and
-the FalseWork development it documents were produced with AI assistance
-(Anthropic Claude), under the correction architecture the paper
-specifies --- expert correspondence, {[}K{]}/{[}C{]}/{[}A{]}/{[}O{]}
-status tags, pre-registration, and contemporaneous ledgers (Section
-6.3); formal contributions disclosed AI use per venue policy (Mathlib PR
-\#39618). Methodology at a glance: Section 1.1. Prior revision record in
-appendix.}
 
-\subsection{Abstract}\label{abstract}
+\emph{Version 8.17 (June 2026). arXiv v1. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR \#39618). Methodology at a glance: Section 1.1. Prior revision record in appendix.}
+
+\begin{abstract}
 
 Epistemic dependency --- the condition in which a knowledge-producing
 system's outputs reflect the theoretical commitments embedded in its
@@ -95,8 +105,8 @@ on the theoretical traditions it classifies within. The paper specifies
 and documents the correction architecture by which AI-assisted claims
 are checked, corrected, and recorded --- including the operational
 implementation in which every substantive claim carries an explicit
-epistemic-status tag ({[}K{]} kernel-checked, {[}C{]} classical, {[}A{]}
-analogy, {[}O{]} open), with pre-registration, demotion-by-artifact, and
+epistemic-status tag (\statustag{K} kernel-checked, \statustag{C} classical, \statustag{A}
+analogy, \statustag{O} open), with pre-registration, demotion-by-artifact, and
 contemporaneous correction ledgers (Section 6.3). The case study
 provides what prior work on AI epistemic dependency has lacked --- a
 working instrument that produces dependency in real time, correction
@@ -116,7 +126,8 @@ validation as hallucination to distinguish from independent derivation.
 Correction architecture is not quality control applied after the fact.
 It is the epistemological design of AI-assisted scholarship.
 
-\subsection{1. The Structural Condition}\label{the-structural-condition}
+\end{abstract}
+\section{1. The Structural Condition}\label{the-structural-condition}
 
 Every knowledge-producing system inherits the theoretical commitments of
 its formation. A physicist trained within the Copenhagen interpretation
@@ -187,7 +198,7 @@ and four correction modes. Section 5 develops the maturity gradient.
 Section 6 draws implications for AI-assisted scholarship, including the
 status-tag implementation (Section 6.3). Section 7 concludes.
 
-\subsubsection{1.1 The FalseWork correction method (at a
+\subsection{1.1 The FalseWork correction method (at a
 glance)}\label{the-falsework-correction-method-at-a-glance}
 
 The methodology has two integrated layers, both documented in the public
@@ -209,10 +220,10 @@ specificity, independence, falsifiability, narrowness (Section 4.1) ---
 demonstrated in the Tymoczko and Cutting threads (Sections 3.2 and 3.5).
 
 \textbf{Epistemic record} (Section 6.3). Every substantive claim in the
-repository carries an explicit status tag: \textbf{{[}K{]}}
-kernel-checked (Lean 4, axiom-audited), \textbf{{[}C{]}} classical
-(warrant inherited from cited literature), \textbf{{[}A{]}} analogy
-(structural reading, not a theorem), \textbf{{[}O{]}} open (named
+repository carries an explicit status tag: \textbf{\statustag{K}}
+kernel-checked (Lean 4, axiom-audited), \textbf{\statustag{C}} classical
+(warrant inherited from cited literature), \textbf{\statustag{A}} analogy
+(structural reading, not a theorem), \textbf{\statustag{O}} open (named
 question, often pre-registered). Promotion is by artifact only; demotion
 is dated and propagated across all documents carrying the claim.
 Pre-registrations, kept negatives, and open/resolved correction ledgers
@@ -221,15 +232,15 @@ are first-class artifacts alongside the claims they govern.
 The two layers connect as follows. Domain classifications ---
 music-theoretic, cinematic, interpretive --- are corrected through
 expert correspondence and recorded in correction ledgers as validated,
-corrected, or pending; they do not receive {[}K{]} tags because their
+corrected, or pending; they do not receive \statustag{K} tags because their
 warrant is expert engagement, not machine proof. Formal and mathematical
-claims receive {[}K{]}/{[}C{]}/{[}A{]}/{[}O{]} tags according to where
+claims receive \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} tags according to where
 their warrant actually lives. A mixed page may carry all four; the
 reader is never asked to assign a single confidence level to the whole
 document. Section 3 demonstrates the architecture in operation; Section
 6.3 specifies the record discipline in full.
 
-\subsection{2. The Human Parallel}\label{the-human-parallel}
+\section{2. The Human Parallel}\label{the-human-parallel}
 
 Epistemic dependency in human knowledge production is well documented.
 Kuhn (1962) showed that normal science proceeds within paradigms whose
@@ -258,7 +269,7 @@ system's inherited commitments --- experts formed in analytical
 traditions the training distribution may not dominate. Section 4
 characterizes what that looks like in practice.
 
-\subsection{3. The Live Case Study}\label{the-live-case-study}
+\section{3. The Live Case Study}\label{the-live-case-study}
 
 The case study presented in this section documents six stages in the
 development of FalseWork, a computational structural classification
@@ -280,7 +291,7 @@ as a single case study because they share a common structure: epistemic
 dependency produced by training, detected through expert engagement, and
 addressed (or not yet addressed) through the correction mechanism.
 
-\subsubsection{3.1 Stage 1 --- Dependency Generation (Invisible): Giant
+\subsection{3.1 Stage 1 --- Dependency Generation (Invisible): Giant
 Steps and the Circle of
 Fifths}\label{stage-1-dependency-generation-invisible-giant-steps-and-the-circle-of-fifths}
 
@@ -327,7 +338,7 @@ transportable representation that has erased the marks of its own
 production. The classification appeared as a property of the work. It
 was, in part, a property of the training data.
 
-\subsubsection{3.2 Stage 2 --- Correction Mechanism Activation: The
+\subsection{3.2 Stage 2 --- Correction Mechanism Activation: The
 Tymoczko
 Correspondence}\label{stage-2-correction-mechanism-activation-the-tymoczko-correspondence}
 
@@ -418,7 +429,7 @@ work. The convergence between his finding and the corrected
 classification is evidence that the correction is tracking real
 structure, not merely substituting one absorbed framing for another.
 
-\subsubsection{3.3 Stage 3 --- Dependency Generation (Second Instance,
+\subsection{3.3 Stage 3 --- Dependency Generation (Second Instance,
 Partially Invisible): The Proxy Extractor and Tymoczko/Newman
 2024}\label{stage-3-dependency-generation-second-instance-partially-invisible-the-proxy-extractor-and-tymoczkonewman-2024}
 
@@ -529,7 +540,7 @@ rather than independent derivation. The classification is the
 inscription --- a stable, transportable result whose relationship to
 prior work has been erased from the record.
 
-\subsubsection{3.4 Stage 4 --- Correction Mechanism Existing but Not Yet
+\subsection{3.4 Stage 4 --- Correction Mechanism Existing but Not Yet
 Deployed}\label{stage-4-correction-mechanism-existing-but-not-yet-deployed}
 
 The second dependency instance was identified after the first paper was
@@ -592,7 +603,7 @@ update this section once the Tymoczko response is in hand, consistent
 with the contemporaneous-documentation principle the case study has
 followed throughout.
 
-\subsubsection{3.5 Stage 5 --- Boundary-Setting Correction: The Cutting
+\subsection{3.5 Stage 5 --- Boundary-Setting Correction: The Cutting
 Correspondence}\label{stage-5-boundary-setting-correction-the-cutting-correspondence}
 
 The Cutting correspondence provides a third documented instance of the
@@ -680,8 +691,8 @@ correction mechanism's limitations include the constraint that
 correction is only as good as the correcting expert's ability to engage
 with the specific claims being evaluated.
 
-\subsubsection{3.6 Stage 6 --- Formal-Verification Correction: The
-Mathlib PR
+\subsection{3.6 Stage 6 --- Formal-Verification Correction: The Mathlib
+PR
 Cycle}\label{stage-6-formal-verification-correction-the-mathlib-pr-cycle}
 
 The five stages documented above all involve correction mechanisms that
@@ -846,7 +857,7 @@ through institutional infrastructure --- a defined review process, a
 permanent record, mechanical kernel checking, and a stated AI-use policy
 --- rather than through personal correspondence.
 
-\subsubsection{3.7 What the Six Stages
+\subsection{3.7 What the Six Stages
 Establish}\label{what-the-six-stages-establish}
 
 Five things follow from the documented case study that could not be
@@ -935,7 +946,7 @@ how the dependency operates: inherited interpretive positions set the
 resolution at which a classifier trained on human analysis reads a
 corpus.
 
-\subsection{4. What Genuine Correction Looks
+\section{4. What Genuine Correction Looks
 Like}\label{what-genuine-correction-looks-like}
 
 The case study in Section 3 provides the empirical ground for a more
@@ -951,7 +962,7 @@ derived from the case study, then distinguishes it from circular
 confirmation, and finally addresses the question of what the correction
 mechanism cannot do.
 
-\subsubsection{4.1 Four Criteria for Genuine
+\subsection{4.1 Four Criteria for Genuine
 Correction}\label{four-criteria-for-genuine-correction}
 
 \textbf{Specificity.} Genuine correction identifies a specific claim
@@ -997,7 +1008,7 @@ correction was surgical: it identified the precise point where the
 inherited framing diverged from the structural reality, replaced that
 framing, and left everything else standing.
 
-\subsubsection{4.2 Circular Confirmation}\label{circular-confirmation}
+\subsection{4.2 Circular Confirmation}\label{circular-confirmation}
 
 Circular confirmation is the failure mode that genuine correction must
 be distinguished from. It occurs when expert engagement produces
@@ -1024,7 +1035,7 @@ here. It confirms that the framework's output is plausible to someone
 with domain expertise. It does not identify where the framework is wrong
 or what the correct claim is.
 
-\subsubsection{4.3 What the Correction Mechanism Cannot
+\subsection{4.3 What the Correction Mechanism Cannot
 Do}\label{what-the-correction-mechanism-cannot-do}
 
 Genuine correction establishes what specific claims are wrong and what
@@ -1047,7 +1058,7 @@ experts with independent analytical traditions is a more reliable
 instrument than one whose claims have not been subjected to that
 engagement.
 
-\subsubsection{4.4 Inherited Validity and the Three-Category
+\subsection{4.4 Inherited Validity and the Three-Category
 Distinction}\label{inherited-validity-and-the-three-category-distinction}
 
 Hallucination and genuine correction are often treated as opposites. The
@@ -1086,7 +1097,7 @@ internal tests (formal proof, score against primary sources), the range
 requiring external expert engagement narrows; where classifications rest
 on interpretive consensus, it widens.
 
-\subsubsection{4.5 Instrument-Initiated
+\subsection{4.5 Instrument-Initiated
 Correction}\label{instrument-initiated-correction}
 
 The correction mechanism in the first five documented stages runs
@@ -1152,7 +1163,7 @@ correction mechanism --- it cannot self-validate. But it is the form
 most likely to scale, because the proxy program can run against any
 corpus without requiring individual expert availability.
 
-\subsubsection{4.6 Literature-Engagement
+\subsection{4.6 Literature-Engagement
 Correction}\label{literature-engagement-correction}
 
 The expert-correspondence and formal-verification cycles of Section 3
@@ -1295,7 +1306,7 @@ instance --- a compressed replay of inherited validity. The stale index
 entry was corrected in the same revision; the ablation pre-registration
 is cited in § 6.3.
 
-\subsection{5. The Maturity Gradient}\label{the-maturity-gradient}
+\section{5. The Maturity Gradient}\label{the-maturity-gradient}
 
 The correction mechanisms available to knowledge-producing systems exist
 along a gradient from primitive to mature. The gradient is not a
@@ -1306,7 +1317,7 @@ the gradient is not the nature of the correction but its speed,
 distribution, institutionalization, and independence from individual
 judgment.
 
-\subsubsection{5.1 Primitive Correction: Domain Expert
+\subsection{5.1 Primitive Correction: Domain Expert
 Correspondence}\label{primitive-correction-domain-expert-correspondence}
 
 The most primitive form of correction is direct correspondence with
@@ -1370,8 +1381,7 @@ process, and produces at least some of the specific, independent,
 falsifiable, narrow corrections that distinguish genuine correction from
 circular confirmation.
 
-\subsubsection{5.2 Intermediate Correction: Preprint Review and
-Community
+\subsection{5.2 Intermediate Correction: Preprint Review and Community
 Response}\label{intermediate-correction-preprint-review-and-community-response}
 
 The intermediate stage of correction begins when a framework reaches a
@@ -1391,7 +1401,7 @@ its first public appearance. Until the paper reaches the communities
 within which Tymoczko's and Cutting's work circulates, the correction
 mechanism remains primarily primitive.
 
-\subsubsection{5.3 Mature Correction: Peer Review, Replication, and
+\subsection{5.3 Mature Correction: Peer Review, Replication, and
 Citation
 Networks}\label{mature-correction-peer-review-replication-and-citation-networks}
 
@@ -1412,7 +1422,7 @@ frameworks. There is no replication culture for AI-generated structural
 profiles. There are no citation networks that track the standing of
 specific AI classifications over time.
 
-\subsubsection{5.4 What the Gradient
+\subsection{5.4 What the Gradient
 Implies}\label{what-the-gradient-implies}
 
 Two implications follow from the maturity gradient. First, the
@@ -1432,7 +1442,7 @@ explicitly --- to build correction architecture into the epistemological
 design of AI-assisted scholarship from the beginning rather than
 treating it as external quality control applied after the fact.
 
-\subsection{6. Implications for AI-Assisted
+\section{6. Implications for AI-Assisted
 Scholarship}\label{implications-for-ai-assisted-scholarship}
 
 The argument developed in this paper has a specific scope: it concerns
@@ -1445,7 +1455,7 @@ or evaluate objects within a domain with a prior theoretical tradition
 clinical presentations --- is operating within the scope of the present
 argument.
 
-\subsubsection{6.1 The Reframing}\label{the-reframing}
+\subsection{6.1 The Reframing}\label{the-reframing}
 
 The standard framing of AI's epistemological limitations in scholarship
 focuses on hallucination: the production of outputs that are internally
@@ -1472,7 +1482,7 @@ architecture --- explicit mechanisms for subjecting AI-generated
 knowledge claims to independent expert engagement that can identify
 where the system's manifold position diverges from structural reality.
 
-\subsubsection{6.2 What Correction Architecture
+\subsection{6.2 What Correction Architecture
 Requires}\label{what-correction-architecture-requires}
 
 Correction architecture for AI-assisted scholarship has three
@@ -1510,7 +1520,7 @@ expert engagement, the correction --- and the dependency instance it
 addresses --- should be part of the public record. Not as a confession
 of error but as evidence that the correction mechanism is functioning.
 
-\subsubsection{6.3 The Methodology as Designed Artifact: The Status-Tag
+\subsection{6.3 The Methodology as Designed Artifact: The Status-Tag
 Ladder}\label{the-methodology-as-designed-artifact-the-status-tag-ladder}
 
 The three components of Section 6.2 are stated abstractly. This section
@@ -1523,57 +1533,57 @@ supporting practices --- pre-registration, kept negatives, correction
 ledgers --- are maintained as first-class artifacts alongside the claims
 they govern.
 
-The tag ladder has four rungs. \textbf{{[}K{]}} (kernel-checked): the
+The tag ladder has four rungs. \textbf{\statustag{K}} (kernel-checked): the
 claim is machine-verified in Lean 4 against the Mathlib library, with a
 per-theorem axiom audit recorded in the repository (at most the three
 standard axioms \texttt{propext}, \texttt{Classical.choice},
 \texttt{Quot.sound}; no \texttt{sorry} placeholders), so that the
 warrant is the proof kernel, not any instance's assertion.
-\textbf{{[}C{]}} (classical): established mathematics cited rather than
+\textbf{\statustag{C}} (classical): established mathematics cited rather than
 re-proved --- the tag marks exactly where the project's warrant is
 inherited from the literature, which is the dependency this paper is
 about, made visible at the level of the individual claim.
-\textbf{{[}A{]}} (analogy): a structural identification or framework
-reading that is not a theorem and does not inherit the {[}K{]} of the
-theorems it connects. \textbf{{[}O{]}} (open): a named unresolved
+\textbf{\statustag{A}} (analogy): a structural identification or framework
+reading that is not a theorem and does not inherit the \statustag{K} of the
+theorems it connects. \textbf{\statustag{O}} (open): a named unresolved
 question, often pre-registered with falsifiers before any attempt on it.
 Compound tags mark seams rather than hiding them: a theorem proved in
 Lean whose hypothesis is discharged by a cited classical result is
-tagged {[}K{]}+{[}C{]}, with the inherited input explicit in the
+tagged \statustagpair{K}{C}, with the inherited input explicit in the
 hypothesis rather than absorbed into the claim.
 
 \textbf{Worked example.} A single repository artifact may carry all four
-tags at once. The four-position partition theorem is \textbf{{[}K{]}}:
+tags at once. The four-position partition theorem is \textbf{\statustag{K}}:
 machine-checked in Lean with only \texttt{propext},
 \texttt{Classical.choice}, and \texttt{Quot.sound}. Its reliance on Mac
-Lane and Moerdijk's residual construction is \textbf{{[}C{]}}, cited in
+Lane and Moerdijk's residual construction is \textbf{\statustag{C}}, cited in
 the hypothesis rather than re-proved. A framework reading that maps
 partition cells to practitioner stances in a given domain is
-\textbf{{[}A{]}} --- a structural identification, not a proved
+\textbf{\statustag{A}} --- a structural identification, not a proved
 correspondence. Whether the repository scaffold induces tag discipline
-in a new AI operator is \textbf{{[}O{]}}, pre-registered for ablation
+in a new AI operator is \textbf{\statustag{O}}, pre-registered for ablation
 (\texttt{validation/claims/methodology-scaffolding-ablation.md}). By
 contrast, the \emph{Giant Steps} exploitation target corrected through
-Tymoczko correspondence (Section 3.2) does not carry a {[}K{]} tag: its
+Tymoczko correspondence (Section 3.2) does not carry a \statustag{K} tag: its
 warrant is expert engagement, recorded in the correction ledger with
 dated exchange and permission --- domain claims travel through
 correspondence and documentation; formal claims travel through the tag
 ladder. The Citkin threshold demotion (Section 4.6) shows both layers
-operating together: a {[}K{]} result was demoted to {[}K{]}+{[}C{]} when
+operating together: a \statustag{K} result was demoted to \statustagpair{K}{C} when
 prior-art reading showed half the threshold was already a published
 observation, with the downgrade propagated the same day across every
 document carrying the claim.
 
 Two rules govern movement on the ladder. Promotion is only by artifact:
-an {[}A{]} or {[}O{]} claim becomes {[}K{]} when, and only when, the
+an \statustag{A} or \statustag{O} claim becomes \statustag{K} when, and only when, the
 machine-checked proof exists --- the repository's stated discipline is
-that {[}A{]} and {[}O{]} are \emph{never silently promoted}. Demotion is
+that \statustag{A} and \statustag{O} are \emph{never silently promoted}. Demotion is
 documented in place, with dates: when the prior-art reading of Section
 4.6 showed half of a threshold result to be a published observation, the
 claim was downgraded the same day in every document that carried it, and
 the downgrade itself is part of the record. The tag belongs to the
-claim, not to the document --- a single page may carry {[}K{]}, {[}C{]},
-{[}A{]}, and {[}O{]} material, and the reader is never asked to assign a
+claim, not to the document --- a single page may carry \statustag{K}, \statustag{C},
+\statustag{A}, and \statustag{O} material, and the reader is never asked to assign a
 single confidence level to a mixed text.
 
 The supporting practices implement the third component of Section 6.2
@@ -1604,8 +1614,8 @@ artifacts are public and checkable. The second is that the artifact
 carries the rigor and not merely the content. That claim is currently
 supported by one project, one operating human, and introspection across
 AI instances whose operator and artifact are confounded. It is tagged
-accordingly: a methodological hypothesis, {[}A{]} in its framing and
-{[}O{]} in its generalization, not a demonstrated property of the
+accordingly: a methodological hypothesis, \statustag{A} in its framing and
+\statustag{O} in its generalization, not a demonstrated property of the
 method.
 
 The limits are part of the documentation, and one of them is documented
@@ -1636,7 +1646,7 @@ operator outside the project reproduces the practice, the honest
 standing of the methodology is the one its own ladder assigns it:
 demonstrated once, in one project, by the operator who designed it.
 
-\subsubsection{6.4 The Division of Labor}\label{the-division-of-labor}
+\subsection{6.4 The Division of Labor}\label{the-division-of-labor}
 
 The argument developed here is sometimes read as a skeptical argument:
 if AI systems are epistemically dependent on their training data, their
@@ -1661,14 +1671,14 @@ correction ledger as validated, with the exchange dated and linked.
 Claims not yet subjected to that engagement are recorded as dependent
 --- plausible given the training distribution, not yet confirmed against
 structural reality. Formal claims additionally carry
-{[}K{]}/{[}C{]}/{[}A{]}/{[}O{]} tags according to where their warrant
+\statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} tags according to where their warrant
 lives (Section 6.3). Operationally, a dependent domain claim should be
 read as a structural hypothesis whose training-distribution provenance
 has not been independently checked: usable as a starting point for
 analysis, but not citable as an established finding until the correction
 mechanism has been applied to it.
 
-\subsubsection{6.5 An Inscription-Without-Record
+\subsection{6.5 An Inscription-Without-Record
 Incident}\label{an-inscription-without-record-incident}
 
 During a demonstration of FalseWork's structural analysis methodology, a
@@ -1684,8 +1694,7 @@ The difference from Stage 3 is architecture, not capability ---
 sophisticated inscription versus analysis accompanied by a correction
 record.
 
-\subsubsection{6.6 The Broader
-Implication}\label{the-broader-implication}
+\subsection{6.6 The Broader Implication}\label{the-broader-implication}
 
 Weatherby and Justie (2022) offer a semiotic diagnosis --- AI systems
 operate indexically, pointing toward positions in a trained semantic
@@ -1713,7 +1722,7 @@ has always been: a system that recirculates its inherited theoretical
 commitments with increasing sophistication and decreasing awareness of
 their source.
 
-\subsection{7. Conclusion}\label{conclusion}
+\section{7. Conclusion}\label{conclusion}
 
 This paper has argued that epistemic dependency is a structural
 condition of all knowledge-producing systems, and that the appropriate
@@ -1860,7 +1869,7 @@ appendix revision log --- consistent with the
 contemporaneous-documentation principle the case study has followed
 throughout.
 
-\subsection{References}\label{references}
+\section{References}\label{references}
 
 Brink, C. (2026a). Kernels and commas: A structural derivation of
 universal positions in domains with self-limiting generative operations
@@ -1930,8 +1939,7 @@ Request \#39618.
 Weatherby, L., \& Justie, B. (2022). Indexical AI. \emph{Critical
 Inquiry}, 48(2), 381--415. \url{https://doi.org/10.1086/717312}.
 
-\subsection{Appendix: Pre-submission revision
-record}\label{appendix-pre-submission-revision-record}
+\appendix\section{Pre-submission revision record}\label{appendix-pre-submission-revision-record}
 
 This paper was developed across several private drafts before this first
 public posting. Consistent with the argument that the correction record
@@ -2006,7 +2014,7 @@ version history is maintained in the project repository at
 \item
   \textbf{Methodology stated as methodology (§ 6.3, § 4.6 coda, added at
   v8.14).} The project had used its claim discipline --- the
-  {[}K{]}/{[}C{]}/{[}A{]}/{[}O{]} status-tag ladder, pre-registration,
+  \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status-tag ladder, pre-registration,
   kept negatives, correction ledgers --- throughout without documenting
   it as method. § 6.3 documents it as the designed implementation of §
   6.2's correction architecture, separates the demonstrated claim (the
@@ -2030,11 +2038,11 @@ version history is maintained in the project repository at
   endorsement detail trimmed. §§7--8 renumbered to §§6--7; series
   prospectus (papers 3--4) removed from conclusion. Cross-references and
   bibliography aligned to the lean structure;
-  {[}K{]}/{[}C{]}/{[}A{]}/{[}O{]} status-tag ladder retained in §6.3.
+  \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status-tag ladder retained in §6.3.
 \item
   \textbf{Methodology foregrounded (v8.16).} §1.1 added (method at a
   glance: correction architecture + epistemic record, and how they
-  connect). Abstract names {[}K{]}/{[}C{]}/{[}A{]}/{[}O{]} explicitly.
+  connect). Abstract names \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} explicitly.
   §6.3 gains worked mixed-tag example bridging domain correspondence and
   formal tags. §6.4 maps validated/dependent claims to ledger + tag
   ladder.

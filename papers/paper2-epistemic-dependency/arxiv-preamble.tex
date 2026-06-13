@@ -1,0 +1,34 @@
+% arXiv preamble for paper2.tex — include via pandoc -H or merge after generation.
+% Regenerate with build-paper2-arxiv.ps1; do not edit paper2.tex by hand.
+
+% Epistemic status tags ([K], [C], [A], [O]) — consistent monospace rendering.
+\newcommand{\statustag}[1]{\texttt{[#1]}}
+\newcommand{\statustagpair}[2]{\texttt{[#1+#2]}}
+
+% Map Unicode glyphs missing from Latin Modern (XeLaTeX/LuaLaTeX on arXiv).
+\usepackage{newunicodechar}
+\newunicodechar{♭}{\ensuremath{\flat}}
+\newunicodechar{⇒}{\ensuremath{\Rightarrow}}
+\newunicodechar{⊓}{\ensuremath{\sqcap}}
+\newunicodechar{⊔}{\ensuremath{\sqcup}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{ι}{\ensuremath{\iota}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+
+% Hyperref (pandoc 3.9 standalone template omits \usepackage{hyperref}).
+\usepackage[unicode]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  hidelinks,
+  pdfauthor={Chris Brink (FalseWork)},
+  pdftitle={Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms},
+  pdfcreator={LaTeX via pandoc}
+}
