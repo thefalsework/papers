@@ -7,6 +7,12 @@ param(
     [switch]$Compile
 )
 
+function Write-Utf8NoBom {
+    param([string]$Path, [string]$Content)
+    $utf8 = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($Path, $Content, $utf8)
+}
+
 $ErrorActionPreference = "Stop"
 $Dir = $PSScriptRoot
 $Md = Join-Path $Dir "paper2.md"
@@ -71,7 +77,7 @@ $tex = $tex -replace '(?ms)\\hypersetup\{\s*pdftitle=\{[^}]+\},\s*pdfauthor=\{[^
 # Appendix heading (pandoc may line-break long titles)
 $tex = $tex -replace '\\section\{Appendix: Pre-submission revision\r?\nrecord\}', '\appendix\section{Pre-submission revision record}'
 
-Set-Content -Path $Out -Value $tex -Encoding UTF8 -NoNewline
+Write-Utf8NoBom -Path $Out -Content $tex
 Remove-Item $Raw -Force
 
 Write-Host "Wrote $Out"

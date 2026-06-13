@@ -93,7 +93,7 @@ The script:
 - Runs `pandoc` with `arxiv-metadata.yaml` and `arxiv-preamble.tex` (`\statustag`, Unicode glyphs, `hyperref`).
 - Post-processes: `{[}K{]}` → `\statustag{K}`, `\begin{abstract}`, `\appendix`, escapes `#` in PR references.
 
-**arXiv upload:** submit `paper2.tex` only (preamble is inlined). Optional local check: `paper2.pdf`.
+**arXiv upload:** submit `paper2.tex` only (preamble is inlined). Optional local check: `paper2.pdf`. Regenerate with `build-paper2-arxiv.ps1` (writes UTF-8 **without BOM** — required for arXiv).
 
 ## Compilation notes
 
