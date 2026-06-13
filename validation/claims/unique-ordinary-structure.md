@@ -56,11 +56,9 @@ The minimality claim's trust chain was audited against the one place it could si
 
 Alex Citkin (author of the load-bearing `Z_n` citation) independently confirmed, in reply to the clarification email ([`docs/outreach/citkin-email.md`](../../docs/outreach/citkin-email.md)):
 
-* **8-element minimality:** "your observation is correct" — any ordinary element generates a six-element subalgebra in a fixed order; the only 7-element algebra with that partial order is `Z_7`, which is one-generated; hence cardinality 8 is minimal for the converse failure.
-* **Construction family:** glue a 6-element one-generated Heyting algebra to a chain Heyting algebra of cardinality ≥ 3; unique ordinary element persists (new chain elements dense); algebra not one-generated. Smallest: **`Z_6 + Z_3`** (8 elements) — [O] whether repo witness `H8` is isomorphic.
-* **Smallest dense element:** if `a` is the unique ordinary element, then `a ∨ ¬a` is the least dense element (proof via incomparability: `a` incomparable with dense `b` would force ordinary `a ∨ b`).
-
-Permission to cite granted. Does not upgrade minimality from [C] to [K] (still rests on enumeration); adds independent specialist confirmation and a named construction class.
+* **8-element minimality + `Z_6 + Z_3`:** "your observation is correct" — independent reconstruction of the same counterexample class the repo found by enumeration (`H8`). **Standing: [K] + independently confirmed [C]; novelty low** (specialist-readily reconstructed; same shape as uniqueness result (a)).
+* **Smallest dense element:** `unique_ordinary_dense_iff` confirmed with direct proof (incomparability → second ordinary). **Standing: [K] + independently confirmed [C].**
+* **Question (b) (`Div12 = Z_6`, `p²q`):** closed **unassessable through correspondence** — frame gap on "divisor lattice of 12"; do not pursue with Citkin.
 
 ## 4c. Lean target: `H8 ≅ Z_6 + Z_3` (pre-registered 2026-06-13)
 

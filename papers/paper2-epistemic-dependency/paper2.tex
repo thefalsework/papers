@@ -88,7 +88,7 @@ Mechanisms}
 \maketitle
 
 
-\emph{Version 8.18 (June 2026). arXiv v2 prep. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR \#39618). v8.18 records Citkin correspondence closure (Section 4.6). Methodology at a glance: Section 1.1. Prior revision record in appendix.}
+\emph{Version 8.19 (June 2026). arXiv v2 prep. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, \statustag{K}/\statustag{C}/\statustag{A}/\statustag{O} status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR \#39618). v8.18–8.19: Citkin correspondence closure (Section 4.6). Methodology at a glance: Section 1.1. Prior revision record in appendix.}
 
 \begin{abstract}
 
@@ -1302,21 +1302,28 @@ Citkin's second reply confirmed that observation and supplied the named
 construction behind it: the minimal counterexample is the eight-element
 algebra obtained by gluing a three-element chain Heyting algebra atop a
 six-element one-generated algebra (\texttt{Z\_6\ +\ Z\_3}, in his
-notation); at cardinality seven the only algebra with a unique ordinary
+notation) --- the same class the repository had found by exhaustive
+enumeration (\texttt{H8}), arrived at by construction rather than
+search. At cardinality seven the only algebra with a unique ordinary
 element is \texttt{Z\_7}, which is one-generated. He also verified, with
 proof, that if \emph{a} is the unique ordinary element then \emph{a} and
 its negation lie below every dense element, so their join is the
 smallest dense element --- independently confirming the salvage lemma
 the repository had already kernel-checked. Permission to cite by name
-was granted. The subgroup-lattice / Div12 = Z\_6 question from the
-original inquiry did not resolve in correspondence (terminology did not
-land); it remains honestly open, resting on the machine-checked
-identification and Theorem 6 \statustag{C}. The episode's four-step refinement
---- ``apparently new'' to ``half known, half open'' to ``statement
-published, proof apparently first'' to ``converse counterexample named
-and expert-confirmed'' --- is the strongest evidence in this paper that
-literature-engagement correction does discrimination work no amount of
-internal verification could do.
+was granted. The original question about divisor lattices of cyclic
+groups did not resolve in correspondence: the phrasing (``divisor
+lattice of 12'') was ambiguous --- the lattice has six elements, not
+twelve --- and was not legible to him; that aside is closed as
+unassessable through this thread, while the kernel-checked
+identification Div12 = Z\_6 stands on Theorem 6 \statustag{C}. The engagement
+confirmed three pure lattice facts underlying the mathematics anchor; it
+did not adjudicate any framework-level claim (partition, music weld, or
+correction architecture beyond this documented instance). The episode's
+four-step refinement --- ``apparently new'' to ``half known, half open''
+to ``statement published, proof apparently first'' to ``converse
+counterexample independently confirmed by construction'' --- is the
+strongest evidence in this paper that literature-engagement correction
+does discrimination work no amount of internal verification could do.
 
 A third instance exhibited the same mechanism with the project's own
 repository as the published source (2026-06-12): an AI instance cited a
@@ -1975,18 +1982,18 @@ version history is maintained in the project repository at
 \begin{itemize}
 \tightlist
 \item
+  \textbf{Citkin standing precision (v8.19).} §4.6 refined: question (b)
+  closed unassessable (frame gap on ``divisor lattice of 12'');
+  enumeration vs construction route for
+  \texttt{H8}/\texttt{Z\_6\ +\ Z\_3}; scope limit (substrate only, not
+  framework).
+\item
   \textbf{Citkin correspondence closure (§ 4.6, added at v8.18).} Alex
-  Citkin replied on 2026-06-11 (second reply, to a clarifying
-  follow-up), confirming the eight-element minimal counterexample to the
-  converse of ordinary-element uniqueness via the gluing construction
-  \texttt{Z\_6\ +\ Z\_3}; verifying that at cardinality seven the only
-  algebra with a unique ordinary element is \texttt{Z\_7}
-  (one-generated); and supplying proofs that the unique ordinary element
-  and its negation lie below every dense element, so their join is the
-  smallest dense element. Permission to cite by name granted. The
-  subgroup-lattice / Div12 = Z\_6 question from the original inquiry did
-  not resolve in correspondence. §4.6, repository validation records,
-  and Lean file comments updated accordingly.
+  Citkin replied on 2026-06-11 (second reply), confirming the
+  eight-element minimal counterexample via \texttt{Z\_6\ +\ Z\_3};
+  cardinality-seven uniqueness of \texttt{Z\_7}; dense-element join
+  lemma with proof. Permission to cite granted. §4.6 and validation
+  records updated.
 \item
   \textbf{Mathlib PR outcome (§ 3.6).} An earlier draft described the
   formal-verification contribution as ``awaiting review'' and, in one
@@ -2094,6 +2101,10 @@ version history is maintained in the project repository at
   second-reply adjudication (converse counterexample,
   \texttt{Z\_6\ +\ Z\_3} construction, dense-element lemma, cite
   permission). References and appendix updated. arXiv v2 prep.
+\item
+  \textbf{Citkin standing precision (v8.19).} §4.6: question (b) closed
+  unassessable (frame gap); converse/dense-filter tagged
+  \statustag{K}+confirmed, novelty low; substrate-only scope limit.
 \end{itemize}
 
 \end{document}

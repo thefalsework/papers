@@ -30,7 +30,7 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Full title.** *Epistemic Dependency as Structural Condition: A Documented Case Study of AI-Assisted Scholarship and the Maturity of Correction Mechanisms.*
 
-**Current version.** v8.18 (arXiv v2 prep, June 2026)
+**Current version.** v8.19 (arXiv v2 prep, June 2026)
 
 **One-line gloss.** Epistemic dependency is a structural condition of every knowledge-producing system; what differs is the maturity of the correction mechanism. v8.18 closes the Citkin literature-engagement cycle in §4.6 (converse counterexample, `Z_6 + Z_3` construction, dense-element lemma, cite permission). v8.17 adds AI disclosure, §1.1 method-at-a-glance, resolvable citation URLs, and arXiv v2 plan after Stage 4 (Tymoczko correspondence). v8.16 foregrounded the [K]/[C]/[A]/[O] tag ladder in §6.3 with a worked mixed-tag example. v8.15 arXiv scope cut: Levin §6 removed, §2 compressed, series prospectus trimmed. Literature-engagement correction (Døring, Citkin) documented in §4.6; methodology in §6.3; four correction modes in §4.4–4.6.
 
