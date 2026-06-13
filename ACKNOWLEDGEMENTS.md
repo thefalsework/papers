@@ -58,7 +58,15 @@ Entries in this section record independent scholarly work that converges on a Fa
 
 ## Validations
 
-*No validations merged yet.*
+### Alex Citkin — prior-art adjudication of ordinary-element uniqueness and converse structure (math anchor, 2026-06-11)
+
+**Contributor.** Alex Citkin, author of "An Algebraic Proof of the Nishimura Theorem" (*Logics* 2(4), 2024). Contact: personal email correspondence, 2026-06-10 through 2026-06-11. Permission to cite granted in second reply.
+
+**Scope.** Prior-art adjudication (not proof review) of machine-checked results in the mathematics anchor: (1) uniqueness of the ordinary element in one-generated Heyting algebras — statement published as unproved observation in Citkin arXiv:2512.05633; repo proof apparently first written proof; (2) `Div12 ≅ Z_6` / `p²q` characterization — **unadjudicated** after two replies; (3) converse failure (unique ordinary ⟹ one-generated is false) — 8-element minimality confirmed; `Z_6 + Z_3` construction family supplied; smallest-dense-element lemma confirmed.
+
+**Scope limits.** Email adjudication of specific algebraic questions only. Not a review of the FalseWork framework, partition theorem, or [A]-level interpretations. Question (b) terminology did not resolve in correspondence; novelty standing of divisor-lattice identification remains open.
+
+**Tracked in.** [`validation/RESOLVED.md`](validation/RESOLVED.md) under Validations; full thread at [`docs/outreach/citkin-email.md`](docs/outreach/citkin-email.md).
 
 ---
 

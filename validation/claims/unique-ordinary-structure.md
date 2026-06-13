@@ -52,6 +52,16 @@ The minimality claim's trust chain was audited against the one place it could si
 * **Sharpening from the iso-class census**: `H8` is the **unique** counterexample at cardinality 8 up to isomorphism (the landscape: 1 class at size 8, 2 at 9, 6 at 10, 9 at 11, 19 at 12 — counterexamples proliferate above the threshold, exactly as kernels did above `p²q` in the why-12 sweep).
 * The cross-check is still [C] (Python against a published census, not Lean); what it upgrades is the *confidence* in the [C], not its tag. Minimality stays [C] and must not circulate as [K].
 
+## 4b. Citkin confirmation (2026-06-11, second reply, pers. comm. [C])
+
+Alex Citkin (author of the load-bearing `Z_n` citation) independently confirmed, in reply to the clarification email ([`docs/outreach/citkin-email.md`](../../docs/outreach/citkin-email.md)):
+
+* **8-element minimality:** "your observation is correct" — any ordinary element generates a six-element subalgebra in a fixed order; the only 7-element algebra with that partial order is `Z_7`, which is one-generated; hence cardinality 8 is minimal for the converse failure.
+* **Construction family:** glue a 6-element one-generated Heyting algebra to a chain Heyting algebra of cardinality ≥ 3; unique ordinary element persists (new chain elements dense); algebra not one-generated. Smallest: **`Z_6 + Z_3`** (8 elements) — [O] whether repo witness `H8` is isomorphic.
+* **Smallest dense element:** if `a` is the unique ordinary element, then `a ∨ ¬a` is the least dense element (proof via incomparability: `a` incomparable with dense `b` would force ordinary `a ∨ b`).
+
+Permission to cite granted. Does not upgrade minimality from [C] to [K] (still rests on enumeration); adds independent specialist confirmation and a named construction class.
+
 ## 5. What the refutation means (interpretation, [A]-level, written at pre-registration)
 
 If outcome (a) holds for check 1, then **a forced kernel does not imply one-generation**: "unique ordinary element" and "one-generated" are genuinely independent facts, and the weld needs both. Music's lattice satisfying *both* is more information than either alone — but conversely, no future retelling may compress "unique kernel" into "is a `Z_n`". The refutation also guards the program against its own pattern-hunger: the partition can be uniquely forced on algebras that are *not* logic's canonical objects.
