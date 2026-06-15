@@ -16,6 +16,7 @@ import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
 import FalseWorkPapers.Examples.UniqueOrdinaryConverse
+import FalseWorkPapers.Examples.Z6PlusChain3
 import FalseWorkPapers.Examples.GlivenkoCollapse
 import FalseWorkPapers.Examples.LadderCore
 import FalseWorkPapers.Examples.WhyTwelve
@@ -262,6 +263,13 @@ elements to the filter `↑(a ⊔ ¬a)`, in any Heyting algebra. -/
 #print axioms FalseWork.Lattice.Examples.H8.dense_filter
 #print axioms FalseWork.Lattice.Examples.H8.not_nishimura_generated
 #print axioms FalseWork.Lattice.Examples.unique_ordinary_converse_false
+
+/-! Citkin gluing `Z_6 + Z_3 ≅ H8` (companion to `Examples/Z6PlusChain3.lean`;
+registered in `validation/claims/unique-ordinary-structure.md` §4c).  Names
+the expert construction; upgrades identification from [C] to [K]. -/
+#print axioms FalseWork.Lattice.Examples.Z6PlusChain3.isoH8
+#print axioms FalseWork.Lattice.Examples.Z6PlusChain3.z6_plus_chain3_eq_h8
+#print axioms FalseWork.Lattice.Examples.Z6PlusChain3.fromDiv12_map_le
 
 /-! The ladder core (companion to `Examples/LadderCore.lean`; pre-registered
 in `validation/claims/ladder-core-threshold.md`).  The kernel-checkable

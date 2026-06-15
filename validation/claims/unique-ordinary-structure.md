@@ -60,9 +60,9 @@ Alex Citkin (author of the load-bearing `Z_n` citation) independently confirmed,
 * **Smallest dense element:** `unique_ordinary_dense_iff` confirmed with direct proof (incomparability → second ordinary). **Standing: [K] + independently confirmed [C].**
 * **Question (b) (`Div12 = Z_6`, `p²q`):** closed **unassessable through correspondence** — frame gap on "divisor lattice of 12"; do not pursue with Citkin.
 
-## 4c. Lean target: `H8 ≅ Z_6 + Z_3` (pre-registered 2026-06-13)
+## 4c. Lean target: `H8 ≅ Z_6 + Z_3` (landed 2026-06-13)
 
-Citkin (pers. comm., 2026-06-11) identified the repo's enumeration witness `H8` with the eight-element algebra **`Z_6 + Z_3`**: the top element of the 6-element one-generated Heyting algebra `Z_6` (= `Div12` [K+C]) glued to the bottom of a 3-element chain Heyting algebra. **Target:** formalize the gluing construction in Lean and prove `HeytingAlgebraEquiv H8 Z6PlusChain3`. Until landed, cite the identification as [C] (pers. comm.) alongside the [K] counterexample theorems. Paper 2 §4.6 records the expert confirmation at v8.18.
+Citkin (pers. comm., 2026-06-11) identified the repo's enumeration witness `H8` with the eight-element algebra **`Z_6 + Z_3`**: the top element of the 6-element one-generated Heyting algebra `Z_6` (= `Div12` [K+C]) glued to the bottom of a 3-element chain Heyting algebra. **Landed [K]:** `Examples/Z6PlusChain3.lean` — `Z6PlusChain3.isoH8`, operation maps (`map_inf`, `map_sup`, `map_himp`, `map_compl`), order embedding `fromDiv12` ( `twelve ↦ z_glue` ). Standing: **[K]** (was [O]).
 
 ## 5. What the refutation means (interpretation, [A]-level, written at pre-registration)
 

@@ -26,8 +26,8 @@ objects, strengthening the weld.
   6-element one-generated algebra `Z_6` (= `Div12` by Theorem 6 [C]). Citkin
   confirmed the 8-element minimality of the converse failure and verified the
   smallest-dense-element lemma (`a ⊔ ¬a` is least dense when `a` is the unique
-  ordinary element). Lean isomorphism `H8 ≅ Z_6 + Z_3` pre-registered [O] in
-  `validation/claims/unique-ordinary-structure.md` §4c.
+  ordinary element). Lean isomorphism `H8 ≅ Z_6 + Z_3` landed [K] in
+  `Examples/Z6PlusChain3.lean` (see §4c of the validation claim).
 * `H8.ordinary_unique` [K]: `a` is the unique ordinary element of `H8`
   (so `a` is also the unique non-degenerate four-cell kernel,
   `H8.kernel_unique`).

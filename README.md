@@ -8,6 +8,18 @@ This repository holds the papers themselves, the open validation items they cont
 
 > **Project status.** Working drafts. Arguments marked `[REQUIRES FORMAL VALIDATION]` need external expert engagement before the claims can be advanced as settled. Nothing in this repository is peer-reviewed in the traditional sense; validation happens here, in the open.
 
+### Spine (June 2026)
+
+| Layer | Status | Where |
+|-------|--------|--------|
+| **Four-cell partition** | **[K]** kernel-checked (Lean) | [`lean/FalseWorkPapers/Positions/Partition.lean`](lean/FalseWorkPapers/Positions/Partition.lean), [`preprints/four-position-partition/paper.md`](preprints/four-position-partition/paper.md) |
+| **Music anchor** (`Div12`, tritone kernel) | **[K]** witness | [`lean/FalseWorkPapers/Examples/DivisorLattice12.lean`](lean/FalseWorkPapers/Examples/DivisorLattice12.lean), Wolfram [`wolfram/music-anchor/`](wolfram/music-anchor/) |
+| **Epistemic dependency / correction architecture** | Paper 2 → arXiv v1 (June 2026); Stage 4 (T&N convergence) open | [`papers/paper2-epistemic-dependency/`](papers/paper2-epistemic-dependency/) |
+| **Practice domains (cinema, literature, …)** | **[A]** classifier + expert correspondence | [falsework.dev/kernels](https://falsework.dev/kernels) |
+| **Cross-domain derivation theorem** | **[O]** schema + open validation | [`validation/claims/five-position-derivation-formalization.md`](validation/claims/five-position-derivation-formalization.md) |
+
+The critical path: close **music + Paper 2** before expanding domain or metaphysics claims.
+
 ---
 
 ## The papers
