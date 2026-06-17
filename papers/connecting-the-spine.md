@@ -207,7 +207,13 @@ Examples/MusicKernelIrrationality.lean    music_kernel_irrationality (log_two_th
 Examples/MusicKernelLogBounds.lean        certified log/α interval bounds (Paper 5 §2.2)
 Examples/MusicKernelCfFloors.lean         CF floor lemmas for α (depth six)
 Examples/PythagoreanCommaConvergents.lean qConv_two … qConv_six (convergent denominators)
-Examples/PythagoreanComma.lean            α aligned with MusicKernel; qConv_first_six
+Examples/PythagoreanComma.lean            α aligned with MusicKernel; qConv_first_six;
+                                          convergent_best_approx_second_kind (C1, Khinchin),
+                                          best_tet_iff_record_convergent_denominator (C2)
+NumberTheory/ContinuedFractionBestApprox.lean
+                                          C1/C2 for general irrational ξ
+                                          (convergent_best_approx_second_kind,
+                                          best_approx_iff_convergent_den)
 Examples/MusicKernelEndofunctor.lean      Fix(D) = {∅}; no largest finite subset (Points 2–3)
 Examples/MusicKernelZMod12.lean           fifth_closes_in_quotient (fifth_returns,
                                           fifth_order_twelve, fifth_orbit_covers)
