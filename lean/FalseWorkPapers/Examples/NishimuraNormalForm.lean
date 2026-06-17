@@ -475,6 +475,71 @@ theorem nishimuraTerm_himp_one (g : H) {m : ℕ} (hm : 2 ≤ m) :
     rwa [himp_bot] at h
   · exact le_himp
 
+/-! #### Recursion rewrites for the implication induction
+
+Two kernel-checked identities that turn an implication into a strictly simpler
+one.  A wrong relation here cannot typecheck, so these are safe foundations for
+the closure: the odd rung is itself an implication (curry the target down), and
+the even rung is a meet of the two rungs above it (split the target). -/
+
+/-- **Odd rung as an implication** (recursion): `x_{2k+3} = x_{2k+1} ⇨ x_{2k}`. -/
+theorem nishimuraTerm_odd_eq_himp (g : H) (k : ℕ) :
+    nishimuraTerm g (2 * k + 3) = nishimuraTerm g (2 * k + 1) ⇨ nishimuraTerm g (2 * k) := by
+  match k with
+  | 0 => exact nishimuraTerm_three_eq g
+  | (j + 1) =>
+      show nishimuraTerm g (2 * j + 5)
+          = nishimuraTerm g (2 * j + 3) ⇨ nishimuraTerm g (2 * j + 2)
+      exact (nishimuraTerm_himp_diagonal g (n := 2 * j) (by omega)).symm
+
+/-- **Even rung as a meet** (the adjacent-meet diagonal, reversed):
+`x_{2k} = x_{2k+1} ⊓ x_{2k+2}`. -/
+theorem nishimuraTerm_even_eq_meet (g : H) (k : ℕ) :
+    nishimuraTerm g (2 * k) = nishimuraTerm g (2 * k + 1) ⊓ nishimuraTerm g (2 * k + 2) :=
+  (nishimuraTerm_meet_adjacent g k).symm
+
+/-- **Odd-target reduction.**  `xₘ ⇨ x_{2k+3}` curries to `(xₘ ⊓ x_{2k+1}) ⇨ x_{2k}`;
+since `xₘ ⊓ x_{2k+1}` is a ladder value, the result is a ladder value provided
+implication into the strictly lower target `x_{2k}` already is. -/
+theorem isLadderValue_himp_odd (g : H) (k m : ℕ)
+    (ih : ∀ j, IsLadderValue g (nishimuraTerm g j ⇨ nishimuraTerm g (2 * k))) :
+    IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g (2 * k + 3)) := by
+  rw [nishimuraTerm_odd_eq_himp, himp_himp]
+  rcases isLadderValue_meet g m (2 * k + 1) with h | ⟨j, hj⟩
+  · rw [h, top_himp]; exact isLadderValue_term g (2 * k)
+  · rw [hj]; exact ih j
+
+/-- **Even-target reduction.**  `xₘ ⇨ x_{2k}` distributes over the meet
+`x_{2k} = x_{2k+1} ⊓ x_{2k+2}`, so it is a ladder value once implication into
+the two rungs above it is. -/
+theorem isLadderValue_himp_even (g : H) (k m : ℕ)
+    (ihodd : IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g (2 * k + 1)))
+    (iheven : IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g (2 * k + 2))) :
+    IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g (2 * k)) := by
+  rw [nishimuraTerm_even_eq_meet, himp_inf_distrib]
+  exact isLadderValue_inf g ihodd iheven
+
+/-- **The `n = m+1` diagonal of the `m`-odd / `n`-even region.**  For `m` odd,
+`xₘ ⇨ xₘ₊₁ = xₘ₊₂`.  Both halves use modus ponens: `≤` rewrites
+`xₘ₊₂ = xₘ ⇨ xₘ₋₁` (odd recursion) and reduces to
+`(xₘ ⇨ xₘ₊₁) ⊓ xₘ = xₘ ⊓ xₘ₊₁ = xₘ₋₁` (adjacent meet); `≥` reduces to
+`xₘ₋₁ ≤ xₘ₊₁` (`even ≤ +2`). -/
+theorem nishimuraTerm_himp_succ_odd (g : H) {m : ℕ} (hm : m % 2 = 1) :
+    nishimuraTerm g m ⇨ nishimuraTerm g (m + 1) = nishimuraTerm g (m + 2) := by
+  obtain ⟨i, rfl⟩ : ∃ i, m = 2 * i + 1 := ⟨m / 2, by omega⟩
+  show nishimuraTerm g (2 * i + 1) ⇨ nishimuraTerm g (2 * i + 2)
+      = nishimuraTerm g (2 * i + 3)
+  rw [nishimuraTerm_odd_eq_himp]
+  apply le_antisymm
+  · rw [le_himp_iff]
+    calc (nishimuraTerm g (2 * i + 1) ⇨ nishimuraTerm g (2 * i + 2))
+            ⊓ nishimuraTerm g (2 * i + 1)
+        ≤ nishimuraTerm g (2 * i + 1) ⊓ nishimuraTerm g (2 * i + 2) :=
+          le_inf inf_le_right himp_inf_le
+      _ = nishimuraTerm g (2 * i) := nishimuraTerm_meet_adjacent g i
+  · rw [le_himp_iff]
+    exact le_trans himp_inf_le (nishimuraTerm_even_le_add_two g (by omega))
+
 end NormalForm
 
 end FalseWork.Lattice
