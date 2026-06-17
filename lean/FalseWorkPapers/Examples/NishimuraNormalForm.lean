@@ -214,6 +214,66 @@ theorem nishimuraTerm_even_le_succ (g : H) {n : ℕ} (hn : n % 2 = 0) :
       refine le_trans ?_ hev
       rw [inf_comm]; exact himp_inf_le
 
+/-- **`odd ≤ +3`**: for odd `n`, `xₙ ≤ xₙ₊₃` (the odd rung re-enters the order
+three steps up).  `x₁ ≤ x₄` is `¬g ≤ ¬g ⊔ g`; the rest is the join diagonal. -/
+theorem nishimuraTerm_odd_le_add_three (g : H) {n : ℕ} (hn : n % 2 = 1) :
+    nishimuraTerm g n ≤ nishimuraTerm g (n + 3) := by
+  obtain ⟨k, rfl⟩ : ∃ k, n = 2 * k + 1 := ⟨n / 2, by omega⟩
+  match k with
+  | 0 =>
+      show nishimuraTerm g 1 ≤ nishimuraTerm g 4
+      simp only [nishimuraTerm]; exact le_sup_left
+  | (j + 1) =>
+      show nishimuraTerm g (2 * j + 3) ≤ nishimuraTerm g (2 * j + 6)
+      have h6 : nishimuraTerm g (2 * j + 3) ⊔ nishimuraTerm g (2 * j + 4)
+          = nishimuraTerm g (2 * j + 6) :=
+        nishimuraTerm_join_diagonal g (n := 2 * j + 1) (by omega)
+      rw [← h6]; exact le_sup_left
+
+/-- The even monotonicity, assembled: for even `a`, `xₐ ≤ x_{a+d}` for every
+`d`.  Strong induction stepping by two (`even ≤ +2`) with the keystone `+1`
+generator covering the odd offset; no incomparability is used. -/
+theorem nishimuraTerm_even_le_add (g : H) :
+    ∀ d a, a % 2 = 0 → nishimuraTerm g a ≤ nishimuraTerm g (a + d) := by
+  intro d
+  induction d using Nat.strong_induction_on with
+  | _ d ih =>
+    intro a ha
+    match d with
+    | 0 => simp
+    | 1 => exact nishimuraTerm_even_le_succ g ha
+    | (e + 2) =>
+        have h2 : nishimuraTerm g a ≤ nishimuraTerm g (a + 2) :=
+          nishimuraTerm_even_le_add_two g ha
+        have hrec : nishimuraTerm g (a + 2) ≤ nishimuraTerm g (a + 2 + e) :=
+          ih e (by omega) (a + 2) (by omega)
+        have he : a + 2 + e = a + (e + 2) := by omega
+        rw [he] at hrec
+        exact le_trans h2 hrec
+
+/-- The odd monotonicity, assembled: for odd `a` and `a + 3 ≤ b`, `xₐ ≤ x_b`
+(via `odd ≤ +3` into the even chain). -/
+theorem nishimuraTerm_odd_le (g : H) {a : ℕ} (ha : a % 2 = 1) {b : ℕ}
+    (hb : a + 3 ≤ b) : nishimuraTerm g a ≤ nishimuraTerm g b := by
+  obtain ⟨d, rfl⟩ : ∃ d, b = (a + 3) + d := ⟨b - (a + 3), by omega⟩
+  exact le_trans (nishimuraTerm_odd_le_add_three g ha)
+    (nishimuraTerm_even_le_add g d (a + 3) (by omega))
+
+/-- **The positive Rieger–Nishimura order characterisation.**  Whenever the
+parity/offset condition `(a even ∧ a ≤ b) ∨ (a odd ∧ (b = a ∨ a + 3 ≤ b))`
+holds, `xₐ ≤ x_b`.  This is exactly the comparabilities the meet/join tables
+need — and, by the dependency-graph exercise, all they need (the converse
+incomparabilities never enter closure). -/
+theorem nishimuraTerm_le_of (g : H) {a b : ℕ}
+    (h : (a % 2 = 0 ∧ a ≤ b) ∨ (a % 2 = 1 ∧ (b = a ∨ a + 3 ≤ b))) :
+    nishimuraTerm g a ≤ nishimuraTerm g b := by
+  rcases h with ⟨ha, hab⟩ | ⟨ha, hb⟩
+  · obtain ⟨d, rfl⟩ : ∃ d, b = a + d := ⟨b - a, by omega⟩
+    exact nishimuraTerm_even_le_add g d a ha
+  · rcases hb with rfl | hb
+    · exact le_refl _
+    · exact nishimuraTerm_odd_le g ha hb
+
 end NormalForm
 
 end FalseWork.Lattice
