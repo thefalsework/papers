@@ -348,6 +348,100 @@ theorem isLadderValue_sup (g : H) {x y : H} (hx : IsLadderValue g x)
     · rw [sup_top_eq]; exact isLadderValue_top g
     · exact isLadderValue_join g m n
 
+/-! ### The meet table and closure under `⊓`
+
+Dual to join: `xₘ ⊓ xₙ` is `glb`, so `x_{min}` when comparable, else `x_{m-1}`
+on the two incomparable diagonals.  The `≥` half of each diagonal is `le_inf`
+of positive order facts; the `≤` half unfolds the recursion and uses the
+modus-ponens `(a ⇨ b) ⊓ a ≤ b`. -/
+
+/-- **Adjacent meet** (`m = 2k+1`): `x_{2k+1} ⊓ x_{2k+2} = x_{2k}`. -/
+theorem nishimuraTerm_meet_adjacent (g : H) (k : ℕ) :
+    nishimuraTerm g (2 * k + 1) ⊓ nishimuraTerm g (2 * k + 2)
+      = nishimuraTerm g (2 * k) := by
+  apply le_antisymm
+  · match k with
+    | 0 =>
+        show nishimuraTerm g 1 ⊓ nishimuraTerm g 2 ≤ nishimuraTerm g 0
+        simp only [nishimuraTerm]; exact le_of_eq (compl_inf_self g)
+    | 1 =>
+        show nishimuraTerm g 3 ⊓ nishimuraTerm g 4 ≤ nishimuraTerm g 2
+        simp only [nishimuraTerm]
+        rw [inf_sup_left]
+        refine sup_le ?_ inf_le_right
+        rw [inf_comm, inf_compl_self]; exact bot_le
+    | (i + 2) =>
+        show nishimuraTerm g (2 * i + 5) ⊓ nishimuraTerm g (2 * i + 6)
+            ≤ nishimuraTerm g (2 * i + 4)
+        have hu1 : nishimuraTerm g (2 * i + 3) ⇨ nishimuraTerm g (2 * i + 2)
+            = nishimuraTerm g (2 * i + 5) :=
+          nishimuraTerm_himp_diagonal g (n := 2 * i) (by omega)
+        have hu2 : nishimuraTerm g (2 * i + 3) ⊔ nishimuraTerm g (2 * i + 4)
+            = nishimuraTerm g (2 * i + 6) :=
+          nishimuraTerm_join_diagonal g (n := 2 * i + 1) (by omega)
+        rw [← hu1, ← hu2, inf_sup_left]
+        refine sup_le ?_ inf_le_right
+        exact le_trans himp_inf_le (nishimuraTerm_even_le_add_two g (by omega))
+  · exact le_inf (nishimuraTerm_even_le_succ g (by omega))
+      (nishimuraTerm_even_le_add_two g (by omega))
+
+/-- **Skip meet** (`m = 2k+1`): `x_{2k+1} ⊓ x_{2k+3} = x_{2k}`. -/
+theorem nishimuraTerm_meet_skip (g : H) (k : ℕ) :
+    nishimuraTerm g (2 * k + 1) ⊓ nishimuraTerm g (2 * k + 3)
+      = nishimuraTerm g (2 * k) := by
+  apply le_antisymm
+  · match k with
+    | 0 =>
+        show nishimuraTerm g 1 ⊓ nishimuraTerm g 3 ≤ nishimuraTerm g 0
+        simp only [nishimuraTerm]; exact le_of_eq (inf_compl_self _)
+    | (i + 1) =>
+        show nishimuraTerm g (2 * i + 3) ⊓ nishimuraTerm g (2 * i + 5)
+            ≤ nishimuraTerm g (2 * i + 2)
+        have hu : nishimuraTerm g (2 * i + 3) ⇨ nishimuraTerm g (2 * i + 2)
+            = nishimuraTerm g (2 * i + 5) :=
+          nishimuraTerm_himp_diagonal g (n := 2 * i) (by omega)
+        rw [← hu, inf_comm]; exact himp_inf_le
+  · exact le_inf (nishimuraTerm_even_le_succ g (by omega))
+      (nishimuraTerm_le_of g (Or.inl ⟨by omega, by omega⟩))
+
+/-- The meet of two ladder terms with `m ≤ n` is a ladder value: `x_m` when
+comparable, else the adjacent or skip meet diagonal `x_{m-1}`. -/
+theorem isLadderValue_meet_le (g : H) {m n : ℕ} (hmn : m ≤ n) :
+    IsLadderValue g (nishimuraTerm g m ⊓ nishimuraTerm g n) := by
+  by_cases hcomp : (m % 2 = 0) ∨ (m = n) ∨ (m + 3 ≤ n)
+  · have hle : nishimuraTerm g m ≤ nishimuraTerm g n := by
+      rcases hcomp with he | rfl | h3
+      · exact nishimuraTerm_le_of g (Or.inl ⟨he, hmn⟩)
+      · exact le_refl _
+      · rcases Nat.mod_two_eq_zero_or_one m with he | ho
+        · exact nishimuraTerm_le_of g (Or.inl ⟨he, hmn⟩)
+        · exact nishimuraTerm_le_of g (Or.inr ⟨ho, Or.inr h3⟩)
+    rw [inf_eq_left.mpr hle]
+    exact isLadderValue_term g m
+  · have hmodd : m % 2 = 1 := by omega
+    obtain ⟨k, rfl⟩ : ∃ k, m = 2 * k + 1 := ⟨m / 2, by omega⟩
+    have hcase : n = 2 * k + 2 ∨ n = 2 * k + 3 := by omega
+    rcases hcase with rfl | rfl
+    · rw [nishimuraTerm_meet_adjacent g k]; exact isLadderValue_term g (2 * k)
+    · rw [nishimuraTerm_meet_skip g k]; exact isLadderValue_term g (2 * k)
+
+/-- **Meet closure (the RN meet table).**  The meet of two ladder terms is a
+ladder value. -/
+theorem isLadderValue_meet (g : H) (m n : ℕ) :
+    IsLadderValue g (nishimuraTerm g m ⊓ nishimuraTerm g n) := by
+  rcases le_total m n with hmn | hmn
+  · exact isLadderValue_meet_le g hmn
+  · rw [inf_comm]; exact isLadderValue_meet_le g hmn
+
+/-- **Meet closure for the whole ladder set**, `⊤` included. -/
+theorem isLadderValue_inf (g : H) {x y : H} (hx : IsLadderValue g x)
+    (hy : IsLadderValue g y) : IsLadderValue g (x ⊓ y) := by
+  rcases hx with rfl | ⟨m, rfl⟩
+  · rw [top_inf_eq]; exact hy
+  · rcases hy with rfl | ⟨n, rfl⟩
+    · rw [inf_top_eq]; exact isLadderValue_term g m
+    · exact isLadderValue_meet g m n
+
 end NormalForm
 
 end FalseWork.Lattice
