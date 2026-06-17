@@ -42,7 +42,11 @@ normal form fails and Prop 3.1 [C] stays the citation.
 - **Phase 1 started (2026-06-17), `Examples/NishimuraNormalForm.lean`** — all `sorry`-free:
   - `IsLadderValue g x := x = ⊤ ∨ ∃ n, x = nishimuraTerm g n`, with `⊤`, `⊥`, generator memberships.
   - **Complement table** `isLadderValue_compl` / `isLadderValue_compl_of`: `xₙᶜ` is again a ladder value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0,1,2,3,≥4`), via `compl_nishimuraTerm_ge_four` (every term from index 4 up lies over `x₄ = ¬g ⊔ g`, complement `⊥`).
-- Remaining Phase 1: the **meet, join, and implication tables** (RN identities by strong induction on the term recursion) — the genuine multi-week core. See the verified literature reference below before writing any of them.
+- **Phase 2 landed (2026-06-17), `Examples/NishimuraNormalForm.lean`** — all `sorry`-free, audited `[propext, Quot.sound]` (no `Classical.choice`, no `native_decide`):
+  - **Positive order characterization** `nishimuraTerm_le_of`: `xₐ ≤ x_b ⟸ (a even ∧ a ≤ b) ∨ (a odd ∧ (b = a ∨ a + 3 ≤ b))`, assembled from the keystone generators `even ≤ +2` (`nishimuraTerm_even_le_add_two`), `even ≤ +1` (`nishimuraTerm_even_le_succ`), and `odd ≤ +3` (`nishimuraTerm_odd_le_add_three`) by a strong induction stepping by two. As the dependency-graph exercise predicted, **only positive `≤` facts are used** — no incomparability.
+  - **Join table** `isLadderValue_sup`: the ladder set (with `⊤`) is closed under `⊔`. Comparable pairs give `x_max`; the two incomparable diagonals are `nishimuraTerm_join_adjacent` (`xₘ ⊔ xₘ₊₁ = xₘ₊₃`, `m` odd) and `nishimuraTerm_join_skip` (`xₘ ⊔ xₘ₊₂ = xₘ₊₅`, `m` odd).
+  - **Meet table** `isLadderValue_inf`: the ladder set is closed under `⊓`. Comparable pairs give `x_min`; the incomparable diagonals are `nishimuraTerm_meet_adjacent` (`x_{2k+1} ⊓ x_{2k+2} = x_{2k}`) and `nishimuraTerm_meet_skip` (`x_{2k+1} ⊓ x_{2k+3} = x_{2k}`), each `≥` by `le_inf` of positive facts and `≤` by the recursion unfold plus modus-ponens `(a ⇨ b) ⊓ a ≤ b`.
+- Remaining Phase 1: the **implication table** — the genuinely intricate operation. See the in-window-verified table below.
 - Phases 2–4: finite-truncation normal form; abstract normal form discharging `hgen`; `Div12` subalgebra upgrade.
 
 ---
@@ -264,3 +268,55 @@ coverings); join and meet are then `lub`/`glb` corollaries with a strictly
 index-decreasing, forward-edge-free dependency graph; implication sits on top of join.
 The multi-week estimate stands, weighted toward implication, but the termination
 question is settled: **it closes.**
+
+---
+
+## The implication table — in-window material (read from `Z₈`, 2026-06-17)
+
+Order char + join + meet are **done and audited**. The remaining operation is
+`xₘ ⇨ xₙ`. As the user flagged, this is where the real difficulty lives, so the
+table below is **transcribed from `Z₈.himpFun`, not from memory**, and trusted
+only on the faithful window (result rung `r ≤ 6`). `⊤` entries are always
+genuine (`xₘ ⇨ xₙ = ⊤ ⟺ xₘ ≤ xₙ`, and the order is faithful on `x₀ … x₆`).
+
+The `Z₈` element ↔ index map: `bot = x₀`, `ng = x₁`, `g = x₂`, `nng = x₃`,
+`gng = x₄`, `x5 = x₅`, `x6 = x₆`, `top = ⊤`.
+
+Non-`⊤` entries (`xₘ ⇨ xₙ` for `xₘ ⊄ xₙ`), result index `r`:
+
+| `m \ n` | 0 | 1 | 2 | 3 | 4 |
+|---------|---|---|---|---|---|
+| `x₁`    | 3 | — | 3 | 3 | (⊤) |
+| `x₂`    | 1 | 1 | — | (⊤) | (⊤) |
+| `x₃`    | 1 | 1 | 5 | — | 5 |
+| `x₄`    | 0 | 1 | 3 | 3 | — |
+| `x₅`    | 0 | 1 | 3 | 3 | **7 (collapse!)** |
+| `x₆`    | 0 | 1 | 2 | 3 | 5 |
+
+**The collapse boundary.** `x₅ ⇨ x₄` is the modus-tollens-shaped himp diagonal
+`x_{n+3} ⇨ x_{n+2} = x_{n+5}` at `n = 2`, i.e. `= x₇` in `F(1)` — but `Z₈`
+collapses `x₇` and reports `x₆`. **Do not trust that cell from the model.** It
+is, however, already covered by the *proven* `nishimuraTerm_himp_diagonal`
+(model-free), so the table's hard cell is the one place where the abstract
+diagonal must be the source of truth, exactly as the protocol demands.
+
+**Reading the table — the apparent shape (to be confirmed abstractly, cell by
+cell, never encoded from this grid alone):**
+
+- **`xₘ ⇨ xₙ = ⊤`** whenever `xₘ ≤ xₙ` (the comparable cells; `nishimuraTerm_le_of`).
+- **`xₘ ⇨ x₀` (pseudocomplement `xₘᶜ`)** is already the complement table:
+  `x₁ᶜ = x₃`, `x₂ᶜ = x₁`, `x₃ᶜ = x₁`, and `xₘᶜ = x₀` for `m ≥ 4` (`compl_nishimuraTerm_ge_four`).
+- **`xₘ ⇨ xₙ` for `n ≥ 1`, `xₘ ⊄ xₙ`** appears to land on a *small* rung
+  (≤ around `n + 2`), the relative pseudocomplement — this is the part that
+  reduces to join/meet via the residuation `a ⇨ b = ⨆{c | c ⊓ a ≤ b}` and the
+  already-proven `himp` diagonal. The two genuinely diagonal families are
+  `nishimuraTerm_himp_diagonal` (`x_{n+3} ⇨ x_{n+2} = x_{n+5}`, `n` even) and its
+  partners; everything else collapses onto comparable/complement cases.
+
+**Next step (next push):** prove implication closure `isLadderValue_himp`
+`(IsLadderValue g x → IsLadderValue g y → IsLadderValue g (x ⇨ y))`, handling
+`⊤` (`⊤ ⇨ y = y`, `x ⇨ ⊤ = ⊤`) and `⊥ = x₀` first, then the comparable `= ⊤`
+cells, then the pseudocomplement column via the complement table, then the
+remaining off-diagonal cells via `himp` diagonals + residuation against the
+finished join/meet tables. Build each cell against the *proven* diagonal, not
+the `Z₈` grid, wherever `r ≥ 7`.
