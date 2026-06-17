@@ -425,3 +425,16 @@ load-bearing for the implication table, so gate-check them clean here. -/
 #print axioms FalseWork.Lattice.nishimuraTerm_meet_adjacent
 #print axioms FalseWork.Lattice.nishimuraTerm_meet_skip
 #print axioms FalseWork.Lattice.isLadderValue_inf
+
+/-! Nishimura normal form — Phase 3 (in progress): the implication table.  All
+relations are proved (kernel-checked); the terminal cell families and the two
+structural reductions are below.  A wrong implication relation cannot typecheck,
+so these gate-check the table's correctness ahead of the final well-founded
+assembly. -/
+#print axioms FalseWork.Lattice.nishimuraTerm_himp_eq_top_of_le
+#print axioms FalseWork.Lattice.nishimuraTerm_himp_one
+#print axioms FalseWork.Lattice.nishimuraTerm_odd_eq_himp
+#print axioms FalseWork.Lattice.nishimuraTerm_even_eq_meet
+#print axioms FalseWork.Lattice.isLadderValue_himp_odd
+#print axioms FalseWork.Lattice.isLadderValue_himp_even
+#print axioms FalseWork.Lattice.nishimuraTerm_himp_succ_odd

@@ -313,10 +313,51 @@ cell, never encoded from this grid alone):**
   `nishimuraTerm_himp_diagonal` (`x_{n+3} ⇨ x_{n+2} = x_{n+5}`, `n` even) and its
   partners; everything else collapses onto comparable/complement cases.
 
-**Next step (next push):** prove implication closure `isLadderValue_himp`
-`(IsLadderValue g x → IsLadderValue g y → IsLadderValue g (x ⇨ y))`, handling
-`⊤` (`⊤ ⇨ y = y`, `x ⇨ ⊤ = ⊤`) and `⊥ = x₀` first, then the comparable `= ⊤`
-cells, then the pseudocomplement column via the complement table, then the
-remaining off-diagonal cells via `himp` diagonals + residuation against the
-finished join/meet tables. Build each cell against the *proven* diagonal, not
-the `Z₈` grid, wherever `r ≥ 7`.
+### Implication — machinery landed (2026-06-17), all `sorry`-free, kernel-checked
+
+Every relation below is a *proved* Lean lemma, so a wrong relation cannot
+typecheck — the only residual risk is the well-foundedness of the final
+assembly, not correctness of any cell.
+
+**Terminal cell families (no recursion):**
+
+- **Comparable** `nishimuraTerm_himp_eq_top_of_le`: `xₘ ⇨ xₙ = ⊤` when `xₘ ≤ xₙ`.
+- **`n = 0`** (pseudocomplement column): `xₘ ⇨ x₀ = xₘᶜ`, a ladder value by the
+  already-proven complement closure `isLadderValue_compl_of`.
+- **`n = 1` column** `nishimuraTerm_himp_one`: `xₘ ⇨ x₁ = x₁` for `m ≥ 2`.
+- **`n = m+1`, `m` odd** `nishimuraTerm_himp_succ_odd`: `xₘ ⇨ xₘ₊₁ = xₘ₊₂`.
+- **`n = m-1`, `m` odd**: `x_{2i+1} ⇨ x_{2i} = x_{2i+3}` is exactly the odd
+  recursion `nishimuraTerm_odd_eq_himp`.
+
+**The two structural reductions:**
+
+- **Odd target** `isLadderValue_himp_odd`: `xₘ ⇨ x_{2k+3}` curries to
+  `(xₘ ⊓ x_{2k+1}) ⇨ x_{2k}` (`himp_himp` + `nishimuraTerm_odd_eq_himp`); since
+  `xₘ ⊓ x_{2k+1}` is a ladder value (meet closure), it reduces to implication
+  into the strictly lower target `x_{2k}`.
+- **Even target** `isLadderValue_himp_even`: `xₘ ⇨ x_{2k}` distributes over
+  `x_{2k} = x_{2k+1} ⊓ x_{2k+2}` (`nishimuraTerm_even_eq_meet` = adjacent meet
+  reversed, + `himp_inf_distrib`), reducing to the two rungs above.
+
+### Termination map for the final assembly (the lone remaining step)
+
+Split the closure `∀ m n, IsLadderValue g (xₘ ⇨ xₙ)` by target/antecedent parity:
+
+- **n odd ≥ 3**: odd-target reduction → `(j, n-3)` with `x_j = xₘ ⊓ x_{n-2}`.
+- **n even, m even, incomparable** (`m > n`): antecedent join split
+  `xₘ = x_{m-3} ⊔ x_{m-2}` (`sup_himp_distrib`) → `(m-3, n)`, `(m-2, n)` — lower `m`.
+- **n even, m odd**: incomparable forces `n ≤ m+1`.
+  - `n = m+1` and `n = m-1`: terminal (above).
+  - `n ≤ m-3`: even-target reduction → odd call `(m, n+1)` and even call `(m, n+2)`;
+    the even target climbs by 2 but is **bounded above by `m-1`** (terminal) and by
+    comparability at `n ≥ m+3`, so the climb halts.
+
+**Key well-foundedness fact (worked out, to be formalised):** the only call that
+does not lower the antecedent index `m` is the odd-target curry when `j = m`,
+which happens iff `xₘ ≤ x_{n-2}`. In *every* such case the curried target `x_{n-3}`
+is already comparable to (or the `n=m-1` terminal of) `xₘ`, so that call is
+terminal — never a genuine recursion. Hence a lexicographic measure
+`(m, (m+1) ∸ n)` decreases on every genuinely-recursive call. The remaining work
+is purely the Lean plumbing of this measure (and a meet-closure variant that
+exposes the index `j` so the `j = m ⟹ terminal` branch can be discharged); the
+mathematics is all proved.
