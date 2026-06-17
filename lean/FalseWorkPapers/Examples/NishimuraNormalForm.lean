@@ -274,6 +274,80 @@ theorem nishimuraTerm_le_of (g : H) {a b : ℕ}
     · exact le_refl _
     · exact nishimuraTerm_odd_le g ha hb
 
+/-! ### The join table and closure under `⊔`
+
+By the dependency-graph exercise, `xₘ ⊔ xₙ` is `lub`, so it is `x_{max}` whenever
+the two are comparable, and otherwise one of two incomparable diagonals — and the
+incomparable pairs `m < n` are exactly `m` odd with `n ∈ {m+1, m+2}`. -/
+
+/-- **Adjacent join** (`m` odd): `xₘ ⊔ xₘ₊₁ = xₘ₊₃`. -/
+theorem nishimuraTerm_join_adjacent (g : H) {m : ℕ} (hm : m % 2 = 1) :
+    nishimuraTerm g m ⊔ nishimuraTerm g (m + 1) = nishimuraTerm g (m + 3) := by
+  obtain ⟨k, rfl⟩ : ∃ k, m = 2 * k + 1 := ⟨m / 2, by omega⟩
+  match k with
+  | 0 =>
+      show nishimuraTerm g 1 ⊔ nishimuraTerm g 2 = nishimuraTerm g 4
+      simp only [nishimuraTerm]
+  | (j + 1) =>
+      show nishimuraTerm g (2 * j + 3) ⊔ nishimuraTerm g (2 * j + 4)
+          = nishimuraTerm g (2 * j + 6)
+      exact nishimuraTerm_join_diagonal g (n := 2 * j + 1) (by omega)
+
+/-- **Skip join** (`m` odd): `xₘ ⊔ xₘ₊₂ = xₘ₊₅`.  The `≥` half rewrites
+`xₘ₊₅ = xₘ₊₂ ⊔ xₘ₊₃` (join diagonal) and `xₘ₊₃ = xₘ ⊔ xₘ₊₁` (adjacent join),
+then reduces `xₘ₊₁ ≤ xₘ ⊔ xₘ₊₂` to `xₘ₊₁ ≤ xₘ₊₂` (`even ≤ +1`). -/
+theorem nishimuraTerm_join_skip (g : H) {m : ℕ} (hm : m % 2 = 1) :
+    nishimuraTerm g m ⊔ nishimuraTerm g (m + 2) = nishimuraTerm g (m + 5) := by
+  have hd : nishimuraTerm g (m + 2) ⊔ nishimuraTerm g (m + 3)
+      = nishimuraTerm g (m + 5) := nishimuraTerm_join_diagonal g (n := m) hm
+  apply le_antisymm
+  · apply sup_le
+    · exact nishimuraTerm_le_of g (Or.inr ⟨hm, Or.inr (by omega)⟩)
+    · exact nishimuraTerm_le_of g (Or.inr ⟨by omega, Or.inr (by omega)⟩)
+  · rw [← hd]
+    apply sup_le
+    · exact le_sup_right
+    · rw [← nishimuraTerm_join_adjacent g hm]
+      exact sup_le le_sup_left
+        (le_trans (nishimuraTerm_even_le_succ g (by omega)) le_sup_right)
+
+/-- The join of two ladder terms with `m ≤ n` is a ladder value: `x_n` when
+comparable, else the adjacent or skip diagonal. -/
+theorem isLadderValue_join_le (g : H) {m n : ℕ} (hmn : m ≤ n) :
+    IsLadderValue g (nishimuraTerm g m ⊔ nishimuraTerm g n) := by
+  by_cases hcomp : (m % 2 = 0) ∨ (m = n) ∨ (m + 3 ≤ n)
+  · have hle : nishimuraTerm g m ≤ nishimuraTerm g n := by
+      rcases hcomp with he | rfl | h3
+      · exact nishimuraTerm_le_of g (Or.inl ⟨he, hmn⟩)
+      · exact le_refl _
+      · rcases Nat.mod_two_eq_zero_or_one m with he | ho
+        · exact nishimuraTerm_le_of g (Or.inl ⟨he, hmn⟩)
+        · exact nishimuraTerm_le_of g (Or.inr ⟨ho, Or.inr h3⟩)
+    rw [sup_eq_right.mpr hle]
+    exact isLadderValue_term g n
+  · have hmodd : m % 2 = 1 := by omega
+    have hcase : n = m + 1 ∨ n = m + 2 := by omega
+    rcases hcase with rfl | rfl
+    · rw [nishimuraTerm_join_adjacent g hmodd]; exact isLadderValue_term g (m + 3)
+    · rw [nishimuraTerm_join_skip g hmodd]; exact isLadderValue_term g (m + 5)
+
+/-- **Join closure (the RN join table).**  The join of two ladder terms is a
+ladder value. -/
+theorem isLadderValue_join (g : H) (m n : ℕ) :
+    IsLadderValue g (nishimuraTerm g m ⊔ nishimuraTerm g n) := by
+  rcases le_total m n with hmn | hmn
+  · exact isLadderValue_join_le g hmn
+  · rw [sup_comm]; exact isLadderValue_join_le g hmn
+
+/-- **Join closure for the whole ladder set**, `⊤` included. -/
+theorem isLadderValue_sup (g : H) {x y : H} (hx : IsLadderValue g x)
+    (hy : IsLadderValue g y) : IsLadderValue g (x ⊔ y) := by
+  rcases hx with rfl | ⟨m, rfl⟩
+  · rw [top_sup_eq]; exact isLadderValue_top g
+  · rcases hy with rfl | ⟨n, rfl⟩
+    · rw [sup_top_eq]; exact isLadderValue_top g
+    · exact isLadderValue_join g m n
+
 end NormalForm
 
 end FalseWork.Lattice
