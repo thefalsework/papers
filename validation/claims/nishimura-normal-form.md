@@ -42,5 +42,100 @@ normal form fails and Prop 3.1 [C] stays the citation.
 - **Phase 1 started (2026-06-17), `Examples/NishimuraNormalForm.lean`** — all `sorry`-free:
   - `IsLadderValue g x := x = ⊤ ∨ ∃ n, x = nishimuraTerm g n`, with `⊤`, `⊥`, generator memberships.
   - **Complement table** `isLadderValue_compl` / `isLadderValue_compl_of`: `xₙᶜ` is again a ladder value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0,1,2,3,≥4`), via `compl_nishimuraTerm_ge_four` (every term from index 4 up lies over `x₄ = ¬g ⊔ g`, complement `⊥`).
-- Remaining Phase 1: the **meet, join, and implication tables** (RN identities by strong induction on the term recursion) — the genuine multi-week core.
+- Remaining Phase 1: the **meet, join, and implication tables** (RN identities by strong induction on the term recursion) — the genuine multi-week core. See the verified literature reference below before writing any of them.
 - Phases 2–4: finite-truncation normal form; abstract normal form discharging `hgen`; `Div12` subalgebra upgrade.
+
+---
+
+## Rieger–Nishimura structure — literature reference (pulled 2026-06-17)
+
+Recorded *before* writing the meet/join/implication tables, per the discipline
+that those tables must be built against the published Hasse structure, not from
+memory: a subtly-wrong RN relation does **not** fail loudly — it yields a table
+that *builds*, and then a normal-form theorem proven against the wrong structure,
+i.e. a false [K] on the load-bearing weld. Pull first; build against it; and
+machine-check every entry (see the protocol below).
+
+### The recursion (confirmed across three independent sources)
+
+The **Nishimura polynomials** (de Jongh–Chagrova ILLC notes PP-2006-25, Def. 37;
+Bezhanishvili–Bezhanishvili–de Jongh, Def. 2.8; the *Lattices of intermediate and
+cylindric modal logics* thesis, Def. 4.1.2):
+
+```
+g₀ = p,   g₁ = ¬p,   f₁ = p ∨ ¬p,   g₂ = ¬¬p,   g₃ = ¬¬p → p,
+g_{n+4} = g_{n+3} → (gₙ ∨ g_{n+1}),   f_{n+2} = g_{n+2} ∨ g_{n+1}.
+```
+
+This matches the repo's `nishimuraTerm` (in `NishimuraKernelLaw.lean`) exactly,
+under the interleaving derived and verified below.
+
+### Repo index ↔ polynomial correspondence (derived and computation-verified)
+
+The repo's `xₙ := nishimuraTerm g n` interleaves the `g`-spine and `f`-joins:
+
+| repo `xₙ` | polynomial | formula |
+|-----------|-----------|---------|
+| `x₀` | — | `⊥` |
+| `x₂` | `g₀` | `p` (the generator) |
+| `x_{2k+1}` (`k ≥ 0`) | `g_{k+1}` | `x₁=¬p=g₁`, `x₃=¬¬p=g₂`, `x₅=¬¬p→p=g₃`, `x₇=g₄`, … (the spine) |
+| `x_{2k}` (`k ≥ 2`) | `f_{k-1}` | `x₄=f₁=p∨¬p`, `x₆=f₂`, `x₈=f₃`, … (the joins) |
+| `⊤` | — | top (not a `g`/`f`) |
+
+Verified by direct reduction of the repo recursion `x_{n+5} = (n even) x_{n+3} ⇨ x_{n+2}, (n odd) x_{n+2} ⊔ x_{n+3}`:
+`x₅=g₂⇨g₀=g₃`, `x₆=g₂∨f₁=f₂` (using `g₀ ≤ g₂`), `x₇=g₃⇨f₁=g₄`, `x₈=g₃∨f₂=f₃` (using `g₁ ≤ g₃`), `x₉=g₄⇨f₂=g₅`, `x₁₀=g₄∨f₃=f₄`.
+
+### Order backbone (the ascending ladder)
+
+`a ≤ b` iff `a → b = ⊤` iff (Hasse) `b` is reachable from `a` by a downward line
+(ILLC notes, after Thm. 38). Safe relations, in polynomial terms:
+
+- `gₙ ≤ fₙ` and `g_{n+1} ≤ fₙ` (since `fₙ = gₙ ∨ g_{n+1}`);
+- `fₙ ≤ g_{n+2}` and `g_{n+2} ≤ f_{n+1}`, hence the spine **ascends by two**: `gₙ ≤ g_{n+2}`, and the joins ascend: `fₙ ≤ f_{n+1}`;
+- consecutive spine elements `gₙ`, `g_{n+1}` are **incomparable** (e.g. `p`, `¬p`; `¬p`, `¬¬p`) — this is the "zigzag" that defeats naive intuition;
+- Esakia: the upper frame `L₀` is `(ω, ≼)` with `n ≼ m ⇔ n − m ≥ 2`.
+
+(`x₄ ≤ x₅` — i.e. `f₁ ≤ g₃` — is the one nontrivial ascent already used in
+`compl_nishimuraTerm_ge_four`/`four_le_nishimuraTerm`.)
+
+### Operation tables — RAW literature material, NOT yet mapped (do not encode until decide-checked)
+
+A worked source for the full tables is the math.stackexchange answer
+[Q4842983](https://math.stackexchange.com/questions/4842983/), which states meet,
+join and implication in a `dₙ/iₘ` notation — a **third** convention distinct from
+both `gₙ/fₙ` indexings above (ILLC uses `f₀=g₀`, Bezhanishvili uses `f₁=p∨¬p`;
+these disagree, which is exactly the kind of off-by-one trap to avoid). Its
+implication table (where `¬x = x → d₀`, `d₀ = ⊥`):
+
+```
+⊤ → x = x;   x → ⊤ = ⊤
+dₙ → dₘ = ⊤ (n ≤ m);  i_{m+1} (n = m+1);  dₘ (n > m+1)
+dₙ → iₘ = ⊤ (n < m);  iₘ (n ≥ m, m > 0)
+iₙ → dₘ = ⊤ (n ≤ m);  i_{n+1} (n = m or n = m+1);  i_{m+1} (n = m+2);  dₘ (n > m+2)
+iₙ → iₘ = ⊤ (n ≤ m or n+1 < m);  iₘ (n+1 = m or n > m)
+```
+
+**Status of this block: UNVERIFIED for our purposes.** Task 1 of the next push is
+to pin the `dₙ/iₘ → {gₖ, fₖ} → repo xₙ` correspondence and re-derive each entry in
+the repo indexing — *not* to transcribe these into Lean.
+
+### Verification protocol (the safeguard that makes a wrong table impossible)
+
+The repo already carries `Z₆`, `Z₇`, `Z₈` as concrete **decidable** Heyting
+algebras (`NishimuraTruncations.lean`), with the generator's term values known. So
+every proposed identity `xₘ ∘ xₙ = x_r` must be **`decide`-checked at small
+indices in `Z₈`** before (and alongside) the abstract proof. This converts "trust
+the literature mapping" into "machine-checked at finite instances," and catches a
+wrong relation immediately — the safeguard against a green-but-wrong table.
+
+### Induction-skeleton notes (before coding the binary tables)
+
+- **Weight the estimate toward implication.** Meet and join are order-theoretic and
+  read off the (correct) Hasse diagram; the relative pseudocomplement `xₘ ⇒ xₙ` is
+  where RN's structure is genuinely intricate and where errors hide. An easy week on
+  meet/join must not create false confidence about the implication timeline.
+- **The induction is on a pair `(m, n)`.** Unlike the complement table (single index,
+  with the merciful "everything from index 4 up has complement `⊥`" collapse), the
+  binary tables range over two indices. Confirm on paper that the base cases and any
+  "collapse above `k`" behavior actually close for the two-index version before
+  committing to a skeleton — the unary collapse does not automatically transfer.
