@@ -11,6 +11,7 @@ import FalseWorkPapers.Examples.DiophantineFloor
 import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
+import FalseWorkPapers.Examples.NishimuraNormalForm
 import FalseWorkPapers.Examples.UniqueOrdinaryConverse
 import FalseWorkPapers.Examples.GlivenkoCollapse
 import FalseWorkPapers.Examples.LadderCore

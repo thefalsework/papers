@@ -1,6 +1,6 @@
 # Nishimura normal form — phased Lean target
 
-**Status:** OPEN (registered 2026-06-13 as Tier 2 spine work)
+**Status:** OPEN — **ACTIVE (2026-06-17):** both preconditions cleared (H8/Z6+Z3 gluing landed; Paper 5 convergent scaffold closed — (C1)/(C2) kernel-checked), so this is now the active highest-leverage open item in the corpus.
 **Unlocks:** Citkin Prop. 3.1 subalgebra embedding; drop [C] from `nishimura_kernel_unique`; upgrade `div12OrderEmbedding` to subalgebra
 **Related:** [`ladder-core-threshold.md`](ladder-core-threshold.md), [`math-anchor-cantor-floor.md`](math-anchor-cantor-floor.md)
 
@@ -24,7 +24,11 @@ one-variable term algebra reduces to the Rieger–Nishimura ladder.
 ## Cost estimate
 
 Weeks — meet/join/implication identities on the RN ladder by strong induction.
-Do **not** start until H8 gluing and Paper 5 convergent scaffold are landed.
+~~Do **not** start until H8 gluing and Paper 5 convergent scaffold are landed.~~
+**Preconditions cleared 2026-06-17** (H8/Z6+Z3 gluing landed; Paper 5 (C1)/(C2)
+convergent work kernel-checked), so the gate is open and the work is started —
+see *Current state*. The discipline holds that nothing enters the built tree
+with a `sorry`; Phase-1 lemmas are committed only as they close.
 
 ## Falsifier
 
@@ -35,4 +39,8 @@ normal form fails and Prop 3.1 [C] stays the citation.
 
 - Order-embedding `div12OrderEmbedding` [K] (`LadderCore.lean`)
 - `h8_ladder_core` [K] — instance at the converse witness
-- Normal form itself: **not started**
+- **Phase 1 started (2026-06-17), `Examples/NishimuraNormalForm.lean`** — all `sorry`-free:
+  - `IsLadderValue g x := x = ⊤ ∨ ∃ n, x = nishimuraTerm g n`, with `⊤`, `⊥`, generator memberships.
+  - **Complement table** `isLadderValue_compl` / `isLadderValue_compl_of`: `xₙᶜ` is again a ladder value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0,1,2,3,≥4`), via `compl_nishimuraTerm_ge_four` (every term from index 4 up lies over `x₄ = ¬g ⊔ g`, complement `⊥`).
+- Remaining Phase 1: the **meet, join, and implication tables** (RN identities by strong induction on the term recursion) — the genuine multi-week core.
+- Phases 2–4: finite-truncation normal form; abstract normal form discharging `hgen`; `Div12` subalgebra upgrade.
