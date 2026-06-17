@@ -23,12 +23,20 @@ form.  Landed so far, all `sorry`-free:
 
 * `IsLadderValue` and the basic memberships (`⊤`, `⊥`, the generator);
 * the **complement table** `isLadderValue_compl`: `xₙᶜ` is again a ladder
-  value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0, 1, 2, 3, ≥ 4`).
+  value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0, 1, 2, 3, ≥ 4`);
+* the **definitional diagonals** `nishimuraTerm_join_diagonal` /
+  `nishimuraTerm_himp_diagonal`: the main diagonals of the join and
+  implication tables, read straight off the term recursion (`xₙ₊₂ ⊔ xₙ₊₃ =
+  xₙ₊₅` for `n` odd; `xₙ₊₃ ⇨ xₙ₊₂ = xₙ₊₅` for `n` even), with their closure
+  corollaries.
 
-Still open in Phase 1: the meet, join, and implication tables (the genuine
-weeks-long core, by strong induction on the term recursion), then Phases
-2–4 (finite-truncation normal form, the abstract normal form discharging
-`hgen`, and the `Div12` subalgebra upgrade).
+Still open in Phase 1: the **off-diagonal** meet, join, and implication
+entries (the genuine weeks-long core, by strong induction on the term
+recursion). The certified-safe meet table on `x₀…x₆`, the literature Hasse
+structure, and the collapse-artifact protocol are recorded in
+`validation/claims/nishimura-normal-form.md`. Then Phases 2–4
+(finite-truncation normal form, the abstract normal form discharging `hgen`,
+and the `Div12` subalgebra upgrade).
 -/
 import Mathlib.Order.Heyting.Basic
 import FalseWorkPapers.Examples.NishimuraKernelLaw
@@ -95,6 +103,45 @@ theorem isLadderValue_compl_of (g : H) {x : H} (hx : IsLadderValue g x) :
   rcases hx with rfl | ⟨n, rfl⟩
   · exact Or.inr ⟨0, by simp [nishimuraTerm]⟩
   · exact isLadderValue_compl g n
+
+/-! ### The definitional diagonals
+
+The term recursion itself supplies the *main diagonals* of the join and
+implication tables, with no order reasoning: for `n` odd the join of two
+consecutive terms is the next term, and for `n` even the implication of two
+consecutive terms is the next term.  These anchor the induction for the full
+binary tables (the off-diagonal entries are the genuine work); see the
+literature reference in `validation/claims/nishimura-normal-form.md`.
+
+A caution recorded there: the finite truncations `Zₙ` collapse higher rungs, so
+e.g. `Z₈` evaluates `x₅ ⊔ x₆` to `⊤` whereas the join diagonal below gives the
+*correct* free value `x₅ ⊔ x₆ = x₈`.  These identities are proved from the
+recursion, not read off a finite model. -/
+
+/-- **Join diagonal.**  For `n` odd, `xₙ₊₂ ⊔ xₙ₊₃ = xₙ₊₅` — e.g.
+`x₃ ⊔ x₄ = x₆`, `x₅ ⊔ x₆ = x₈`, `x₇ ⊔ x₈ = x₁₀`, … (the `fₖ` joins). -/
+theorem nishimuraTerm_join_diagonal (g : H) {n : ℕ} (hn : n % 2 = 1) :
+    nishimuraTerm g (n + 2) ⊔ nishimuraTerm g (n + 3) = nishimuraTerm g (n + 5) :=
+  (by simp [nishimuraTerm, hn] : nishimuraTerm g (n + 5)
+        = nishimuraTerm g (n + 2) ⊔ nishimuraTerm g (n + 3)).symm
+
+/-- **Implication diagonal.**  For `n` even, `xₙ₊₃ ⇨ xₙ₊₂ = xₙ₊₅` — e.g.
+`x₃ ⇨ x₂ = x₅`, `x₅ ⇨ x₄ = x₇`, `x₇ ⇨ x₆ = x₉`, … (the `gₖ` spine). -/
+theorem nishimuraTerm_himp_diagonal (g : H) {n : ℕ} (hn : n % 2 = 0) :
+    nishimuraTerm g (n + 3) ⇨ nishimuraTerm g (n + 2) = nishimuraTerm g (n + 5) :=
+  (by simp [nishimuraTerm, hn] : nishimuraTerm g (n + 5)
+        = nishimuraTerm g (n + 3) ⇨ nishimuraTerm g (n + 2)).symm
+
+/-- The join diagonal lands inside the ladder (a first closure increment). -/
+theorem isLadderValue_join_diagonal (g : H) {n : ℕ} (hn : n % 2 = 1) :
+    IsLadderValue g (nishimuraTerm g (n + 2) ⊔ nishimuraTerm g (n + 3)) :=
+  Or.inr ⟨n + 5, nishimuraTerm_join_diagonal g hn⟩
+
+/-- The implication diagonal lands inside the ladder (a first closure
+increment). -/
+theorem isLadderValue_himp_diagonal (g : H) {n : ℕ} (hn : n % 2 = 0) :
+    IsLadderValue g (nishimuraTerm g (n + 3) ⇨ nishimuraTerm g (n + 2)) :=
+  Or.inr ⟨n + 5, nishimuraTerm_himp_diagonal g hn⟩
 
 end NormalForm
 
