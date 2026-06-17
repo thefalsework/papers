@@ -143,6 +143,77 @@ theorem isLadderValue_himp_diagonal (g : H) {n : ℕ} (hn : n % 2 = 0) :
     IsLadderValue g (nishimuraTerm g (n + 3) ⇨ nishimuraTerm g (n + 2)) :=
   Or.inr ⟨n + 5, nishimuraTerm_himp_diagonal g hn⟩
 
+/-! ### The positive order generators
+
+The Rieger–Nishimura order is characterised (see
+`validation/claims/nishimura-normal-form.md`) by
+`xₐ ≤ x_b ⟺ (a even ∧ b ≥ a) ∨ (a odd ∧ (b = a ∨ b ≥ a+3))`.  The full table
+needs only the **positive** direction of this relation (the genuine
+incomparabilities are never required for closure), and the positive direction
+rests on two even-index generators proved here:
+
+* `nishimuraTerm_even_le_add_two` — the `f`-chain ascends: `x_{2k} ≤ x_{2k+2}`;
+* `nishimuraTerm_even_le_succ` — the keystone `x_{2k} ≤ x_{2k+1}`, which reduces
+  via the recursion unfolds to the previous generator plus the Heyting
+  modus-ponens `(a ⇨ b) ⊓ a ≤ b`, all at strictly lower index (no forward
+  reference; the dependency graph is well-founded).
+-/
+
+/-- **`even ≤ +2`** (`f`-chain monotone): for even `n`, `xₙ ≤ xₙ₊₂`. -/
+theorem nishimuraTerm_even_le_add_two (g : H) {n : ℕ} (hn : n % 2 = 0) :
+    nishimuraTerm g n ≤ nishimuraTerm g (n + 2) := by
+  obtain ⟨k, rfl⟩ : ∃ k, n = 2 * k := ⟨n / 2, by omega⟩
+  match k with
+  | 0 => simp only [nishimuraTerm]; exact bot_le
+  | 1 =>
+      show nishimuraTerm g 2 ≤ nishimuraTerm g 4
+      simp only [nishimuraTerm]; exact le_sup_right
+  | (j + 2) =>
+      show nishimuraTerm g (2 * j + 4) ≤ nishimuraTerm g (2 * j + 6)
+      have h6 : nishimuraTerm g (2 * j + 3) ⊔ nishimuraTerm g (2 * j + 4)
+          = nishimuraTerm g (2 * j + 6) :=
+        nishimuraTerm_join_diagonal g (n := 2 * j + 1) (by omega)
+      rw [← h6]; exact le_sup_right
+
+/-- **`even ≤ +1`** (the keystone generator): for even `n`, `xₙ ≤ xₙ₊₁`.  The
+case `n ≥ 6` unfolds `xₙ₊₁ = xₙ₋₁ ⇨ xₙ₋₂` and `xₙ = xₙ₋₃ ⊔ xₙ₋₂` by the
+recursion, reduces by `le_himp_iff` and distributivity to the modus-ponens
+`xₙ₋₃ ⊓ (xₙ₋₃ ⇨ xₙ₋₄) ≤ xₙ₋₄`, and closes with `even ≤ +2` at a strictly
+lower index. -/
+theorem nishimuraTerm_even_le_succ (g : H) {n : ℕ} (hn : n % 2 = 0) :
+    nishimuraTerm g n ≤ nishimuraTerm g (n + 1) := by
+  obtain ⟨k, rfl⟩ : ∃ k, n = 2 * k := ⟨n / 2, by omega⟩
+  match k with
+  | 0 => simp only [nishimuraTerm]; exact bot_le
+  | 1 => simp only [nishimuraTerm]; exact le_compl_compl
+  | 2 =>
+      show nishimuraTerm g 4 ≤ nishimuraTerm g 5
+      have h5 : nishimuraTerm g 3 ⇨ nishimuraTerm g 2 = nishimuraTerm g 5 :=
+        nishimuraTerm_himp_diagonal g (n := 0) (by omega)
+      rw [← h5, le_himp_iff]
+      simp only [nishimuraTerm]
+      rw [inf_sup_right]
+      refine sup_le ?_ inf_le_left
+      rw [inf_compl_self]; exact bot_le
+  | (j + 3) =>
+      show nishimuraTerm g (2 * j + 6) ≤ nishimuraTerm g (2 * j + 7)
+      have h7 : nishimuraTerm g (2 * j + 5) ⇨ nishimuraTerm g (2 * j + 4)
+          = nishimuraTerm g (2 * j + 7) :=
+        nishimuraTerm_himp_diagonal g (n := 2 * j + 2) (by omega)
+      have h6 : nishimuraTerm g (2 * j + 3) ⊔ nishimuraTerm g (2 * j + 4)
+          = nishimuraTerm g (2 * j + 6) :=
+        nishimuraTerm_join_diagonal g (n := 2 * j + 1) (by omega)
+      have h5 : nishimuraTerm g (2 * j + 3) ⇨ nishimuraTerm g (2 * j + 2)
+          = nishimuraTerm g (2 * j + 5) :=
+        nishimuraTerm_himp_diagonal g (n := 2 * j) (by omega)
+      have hev : nishimuraTerm g (2 * j + 2) ≤ nishimuraTerm g (2 * j + 4) :=
+        nishimuraTerm_even_le_add_two g (n := 2 * j + 2) (by omega)
+      rw [← h7, le_himp_iff, ← h6, inf_sup_right]
+      refine sup_le ?_ inf_le_left
+      rw [← h5]
+      refine le_trans ?_ hev
+      rw [inf_comm]; exact himp_inf_le
+
 end NormalForm
 
 end FalseWork.Lattice
