@@ -407,3 +407,21 @@ report only the standard axioms. -/
 #print axioms FalseWork.Lattice.nishimuraTerm_himp_diagonal
 #print axioms FalseWork.Lattice.isLadderValue_join_diagonal
 #print axioms FalseWork.Lattice.isLadderValue_himp_diagonal
+
+/-! Nishimura normal form — Phase 2: the positive order characterisation and
+the join/meet tables.  `nishimuraTerm_le_of` is the positive Rieger–Nishimura
+order (`xₐ ≤ x_b` for the parity/offset comparabilities); `isLadderValue_sup`
+and `isLadderValue_inf` close the ladder set under `⊔` and `⊓` — the join and
+meet tables, end to end, with the incomparable diagonals proved from the
+recursion (no `decide`, hence no collapse-artifact exposure).  These become
+load-bearing for the implication table, so gate-check them clean here. -/
+#print axioms FalseWork.Lattice.nishimuraTerm_even_le_add_two
+#print axioms FalseWork.Lattice.nishimuraTerm_even_le_succ
+#print axioms FalseWork.Lattice.nishimuraTerm_odd_le_add_three
+#print axioms FalseWork.Lattice.nishimuraTerm_le_of
+#print axioms FalseWork.Lattice.nishimuraTerm_join_adjacent
+#print axioms FalseWork.Lattice.nishimuraTerm_join_skip
+#print axioms FalseWork.Lattice.isLadderValue_sup
+#print axioms FalseWork.Lattice.nishimuraTerm_meet_adjacent
+#print axioms FalseWork.Lattice.nishimuraTerm_meet_skip
+#print axioms FalseWork.Lattice.isLadderValue_inf
