@@ -3,7 +3,7 @@ Copyright (c) 2026 Chris Brink. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Chris Brink
 
-# The Nishimura normal form — Phase 1 (term closure)
+# The Nishimura normal form — term closure (COMPLETE)
 
 This file is the active spine target registered at
 `validation/claims/nishimura-normal-form.md`.  The goal of the full
@@ -16,27 +16,30 @@ all-`n` kernel law (`nishimura_kernel_unique`): the Nishimura enumeration
 lattice's order-embedding (`div12OrderEmbedding`) upgrades to a *subalgebra*
 embedding (Citkin's Prop. 3.1 in full).
 
-**Phase 1 (this file, in progress).**  Closure of the ladder set under the
-Heyting operations — the Rieger–Nishimura "tables" as derived identities.
-This is the foundation for the structural induction that gives the normal
-form.  Landed so far, all `sorry`-free:
+**Closure of the ladder set under the Heyting operations is now complete**,
+all `sorry`-free and audited `[propext, Quot.sound]` (no `Classical.choice`).
+The Rieger–Nishimura "tables" are derived identities, and the four closure
+theorems together show the ladder values form a Heyting subalgebra:
 
 * `IsLadderValue` and the basic memberships (`⊤`, `⊥`, the generator);
-* the **complement table** `isLadderValue_compl`: `xₙᶜ` is again a ladder
-  value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0, 1, 2, 3, ≥ 4`);
-* the **definitional diagonals** `nishimuraTerm_join_diagonal` /
-  `nishimuraTerm_himp_diagonal`: the main diagonals of the join and
-  implication tables, read straight off the term recursion (`xₙ₊₂ ⊔ xₙ₊₃ =
-  xₙ₊₅` for `n` odd; `xₙ₊₃ ⇨ xₙ₊₂ = xₙ₊₅` for `n` even), with their closure
-  corollaries.
+* the **complement table** `isLadderValue_compl` / `isLadderValue_compl_of`:
+  `xₙᶜ` is again a ladder value (`⊤, x₃, x₁, x₁, ⊥` for `n = 0, 1, 2, 3, ≥ 4`);
+* the **positive order characterization** `nishimuraTerm_le_of` (`xₐ ≤ x_b`
+  for the parity/offset comparabilities) — the inductive backbone;
+* the **join closure** `isLadderValue_sup` and **meet closure**
+  `isLadderValue_inf`: comparable pairs give `x_max` / `x_min`, the
+  incomparable diagonals read off the recursion;
+* the **implication closure** `isLadderValue_himp_terms` / `isLadderValue_himp`:
+  the genuinely intricate operation.  The decisive fact is that **odd targets
+  are terminal** (`nishimuraTerm_himp_eq_self_odd`: `xₘ ⇨ x_{2i+3} = x_{2i+3}`
+  for every incomparable antecedent), so the only recursion is on even targets,
+  governed by the measure `μ(m,n) = 4·m − n` — even/even antecedents split as a
+  join (μ down), even/odd antecedents climb the target `2k ↦ 2k+2` to a
+  comparability ceiling (μ down).
 
-Still open in Phase 1: the **off-diagonal** meet, join, and implication
-entries (the genuine weeks-long core, by strong induction on the term
-recursion). The certified-safe meet table on `x₀…x₆`, the literature Hasse
-structure, and the collapse-artifact protocol are recorded in
-`validation/claims/nishimura-normal-form.md`. Then Phases 2–4
-(finite-truncation normal form, the abstract normal form discharging `hgen`,
-and the `Div12` subalgebra upgrade).
+Remaining (downstream plumbing, not closure): feed these four theorems into
+`nishimura_kernel_unique` to discharge **[C]**, and upgrade
+`div12OrderEmbedding` to a subalgebra embedding.
 -/
 import Mathlib.Order.Heyting.Basic
 import FalseWorkPapers.Examples.NishimuraKernelLaw
@@ -539,6 +542,151 @@ theorem nishimuraTerm_himp_succ_odd (g : H) {m : ℕ} (hm : m % 2 = 1) :
       _ = nishimuraTerm g (2 * i) := nishimuraTerm_meet_adjacent g i
   · rw [le_himp_iff]
     exact le_trans himp_inf_le (nishimuraTerm_even_le_add_two g (by omega))
+
+/-- **Odd target is terminal.**  If `x_{2i+1} ≤ xₘ` then `xₘ ⇨ x_{2i+3} = x_{2i+3}`.
+The currying collapses the antecedent meet `xₘ ⊓ x_{2i+1} = x_{2i+1}`, leaving the
+odd recursion `x_{2i+1} ⇨ x_{2i} = x_{2i+3}`.  Since *every* incomparable
+antecedent of an odd target satisfies `x_{2i+1} ≤ xₘ` (it is `2i+1`, or `≥ 2i+4`),
+odd targets need no recursion. -/
+theorem nishimuraTerm_himp_eq_self_odd (g : H) (i m : ℕ)
+    (h : nishimuraTerm g (2 * i + 1) ≤ nishimuraTerm g m) :
+    nishimuraTerm g m ⇨ nishimuraTerm g (2 * i + 3) = nishimuraTerm g (2 * i + 3) := by
+  rw [nishimuraTerm_odd_eq_himp, himp_himp, inf_eq_right.mpr h]
+
+/-- **Even rung as a join** (the adjacent join, reversed):
+`x_{2i+4} = x_{2i+1} ⊔ x_{2i+2}`.  Used to split an even antecedent. -/
+theorem nishimuraTerm_even_eq_join (g : H) (i : ℕ) :
+    nishimuraTerm g (2 * i + 4) = nishimuraTerm g (2 * i + 1) ⊔ nishimuraTerm g (2 * i + 2) := by
+  match i with
+  | 0 =>
+      show nishimuraTerm g 4 = nishimuraTerm g 1 ⊔ nishimuraTerm g 2
+      simp only [nishimuraTerm]
+  | (j + 1) =>
+      show nishimuraTerm g (2 * j + 6)
+          = nishimuraTerm g (2 * j + 3) ⊔ nishimuraTerm g (2 * j + 4)
+      exact (nishimuraTerm_join_diagonal g (n := 2 * j + 1) (by omega)).symm
+
+/-! ### Closure under implication
+
+This is the final operation.  Closure is proved by strong induction along the
+measure `μ(m, n) = 4·m - n` (encoded as a fuel parameter `N` bounding `4·m - n`):
+
+* **odd targets are terminal.**  By `nishimuraTerm_himp_eq_self_odd`, every
+  incomparable antecedent `m` of an odd target `x_{2i+3}` has `x_{2i+1} ≤ xₘ`, so
+  the cell equals `x_{2i+3}`.  No recursion.
+* **even target `x_{2k}`, even antecedent `m > 2k`.**  The antecedent splits as a
+  join `xₘ = x_{m-3} ⊔ x_{m-2}` (`nishimuraTerm_even_eq_join`), and
+  `(a ⊔ b) ⇨ c = (a ⇨ c) ⊓ (b ⇨ c)`, reducing to two strictly smaller antecedents.
+* **even target `x_{2k}`, odd antecedent `m ≥ 2k+3`.**  The target climbs
+  `2k ↦ 2k+2` via `isLadderValue_himp_even`; the odd half `xₘ ⇨ x_{2k+1}` is a
+  terminal cell and the even half drops `μ` by 2.
+* the remaining cells are terminal: `n = 0` (complement), `n = 1`
+  (`nishimuraTerm_himp_one`), `n = m+1` (`nishimuraTerm_himp_succ_odd`), `n = m-1`
+  (`nishimuraTerm_odd_eq_himp`), and all comparable cells (`⊤`).
+-/
+
+private theorem isLadderValue_himp_aux (g : H) :
+    ∀ N m n, 4 * m ≤ N + n →
+      IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g n) := by
+  intro N
+  induction N with
+  | zero =>
+      intro m n h
+      refine Or.inl (nishimuraTerm_himp_eq_top_of_le g ?_)
+      rcases Nat.mod_two_eq_zero_or_one m with hm | hm
+      · exact nishimuraTerm_le_of g (Or.inl ⟨hm, by omega⟩)
+      · exact nishimuraTerm_le_of g (Or.inr ⟨hm, Or.inr (by omega)⟩)
+  | succ N ihN =>
+      intro m n h
+      rcases Nat.mod_two_eq_zero_or_one n with hn | hn
+      · -- even target
+        obtain ⟨k, rfl⟩ : ∃ k, n = 2 * k := ⟨n / 2, by omega⟩
+        rcases Nat.eq_zero_or_pos k with rfl | hk
+        · -- n = 0 : complement
+          show IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g 0)
+          rw [show nishimuraTerm g 0 = (⊥ : H) from rfl, himp_bot]
+          exact isLadderValue_compl g m
+        · -- n = 2k, k ≥ 1
+          rcases Nat.mod_two_eq_zero_or_one m with hm | hm
+          · -- even antecedent
+            rcases Nat.lt_or_ge (2 * k) m with hmk | hmk
+            · -- m > 2k : antecedent join split
+              obtain ⟨i, rfl⟩ : ∃ i, m = 2 * i + 4 := ⟨(m - 4) / 2, by omega⟩
+              rw [nishimuraTerm_even_eq_join, sup_himp_distrib]
+              exact isLadderValue_inf g
+                (ihN (2 * i + 1) (2 * k) (by omega))
+                (ihN (2 * i + 2) (2 * k) (by omega))
+            · -- m ≤ 2k : comparable
+              exact Or.inl (nishimuraTerm_himp_eq_top_of_le g
+                (nishimuraTerm_le_of g (Or.inl ⟨hm, hmk⟩)))
+          · -- odd antecedent m = 2i+1
+            obtain ⟨i, rfl⟩ : ∃ i, m = 2 * i + 1 := ⟨m / 2, by omega⟩
+            rcases Nat.lt_trichotomy k i with hki | rfl | hki
+            · -- k < i : climb
+              obtain ⟨j, rfl⟩ : ∃ j, k = j + 1 := ⟨k - 1, by omega⟩
+              apply isLadderValue_himp_even g (j + 1) (2 * i + 1)
+              · have hle : nishimuraTerm g (2 * j + 1) ≤ nishimuraTerm g (2 * i + 1) :=
+                  nishimuraTerm_le_of g (Or.inr ⟨by omega, Or.inr (by omega)⟩)
+                exact Or.inr ⟨2 * j + 3,
+                  by show nishimuraTerm g (2 * i + 1) ⇨ nishimuraTerm g (2 * j + 3)
+                       = nishimuraTerm g (2 * j + 3)
+                     exact nishimuraTerm_himp_eq_self_odd g j (2 * i + 1) hle⟩
+              · exact ihN (2 * i + 1) (2 * (j + 1) + 2) (by omega)
+            · -- k = i : n = m - 1, the odd diagonal
+              exact Or.inr ⟨2 * k + 3, (nishimuraTerm_odd_eq_himp g k).symm⟩
+            · -- k > i
+              rcases Nat.lt_or_ge k (i + 2) with hk1 | hk2
+              · -- k = i + 1 : n = m + 1
+                obtain rfl : k = i + 1 := by omega
+                exact Or.inr ⟨2 * i + 3,
+                  by show nishimuraTerm g (2 * i + 1) ⇨ nishimuraTerm g (2 * i + 2)
+                       = nishimuraTerm g (2 * i + 3)
+                     exact nishimuraTerm_himp_succ_odd g (by omega)⟩
+              · -- k ≥ i + 2 : comparable
+                exact Or.inl (nishimuraTerm_himp_eq_top_of_le g
+                  (nishimuraTerm_le_of g (Or.inr ⟨by omega, Or.inr (by omega)⟩)))
+      · -- odd target
+        rcases Nat.lt_or_ge n 3 with hn3 | hn3
+        · -- n = 1
+          obtain rfl : n = 1 := by omega
+          rcases Nat.lt_or_ge m 2 with hm2 | hm2
+          · -- m ≤ 1 : comparable
+            refine Or.inl (nishimuraTerm_himp_eq_top_of_le g ?_)
+            rcases Nat.mod_two_eq_zero_or_one m with hm | hm
+            · exact nishimuraTerm_le_of g (Or.inl ⟨hm, by omega⟩)
+            · exact nishimuraTerm_le_of g (Or.inr ⟨hm, Or.inl (by omega)⟩)
+          · -- m ≥ 2
+            rw [nishimuraTerm_himp_one g hm2]
+            exact isLadderValue_term g 1
+        · -- n = 2i+3
+          obtain ⟨i, rfl⟩ : ∃ i, n = 2 * i + 3 := ⟨(n - 3) / 2, by omega⟩
+          by_cases hself : m = 2 * i + 1 ∨ 2 * i + 4 ≤ m
+          · -- incomparable : self-implication terminal
+            have hle : nishimuraTerm g (2 * i + 1) ≤ nishimuraTerm g m :=
+              nishimuraTerm_le_of g (Or.inr ⟨by omega, by omega⟩)
+            exact Or.inr ⟨2 * i + 3, nishimuraTerm_himp_eq_self_odd g i m hle⟩
+          · -- comparable
+            refine Or.inl (nishimuraTerm_himp_eq_top_of_le g ?_)
+            rcases Nat.mod_two_eq_zero_or_one m with hm | hm
+            · exact nishimuraTerm_le_of g (Or.inl ⟨hm, by omega⟩)
+            · exact nishimuraTerm_le_of g (Or.inr ⟨hm, by omega⟩)
+
+/-- **Implication closure for ladder terms.**  `xₘ ⇨ xₙ` is always a ladder value. -/
+theorem isLadderValue_himp_terms (g : H) (m n : ℕ) :
+    IsLadderValue g (nishimuraTerm g m ⇨ nishimuraTerm g n) :=
+  isLadderValue_himp_aux g (4 * m) m n (by omega)
+
+/-- **Implication closure for the whole ladder set**, `⊤` included.  Together with
+`isLadderValue_sup` and `isLadderValue_inf` this shows the ladder values form a
+Heyting subalgebra: the subalgebra generated by `g` is exactly the
+Rieger–Nishimura ladder. -/
+theorem isLadderValue_himp (g : H) {x y : H} (hx : IsLadderValue g x)
+    (hy : IsLadderValue g y) : IsLadderValue g (x ⇨ y) := by
+  rcases hy with rfl | ⟨n, rfl⟩
+  · rw [himp_top]; exact isLadderValue_top g
+  · rcases hx with rfl | ⟨m, rfl⟩
+    · rw [top_himp]; exact isLadderValue_term g n
+    · exact isLadderValue_himp_terms g m n
 
 end NormalForm
 
