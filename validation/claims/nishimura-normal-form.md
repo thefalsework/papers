@@ -119,23 +119,79 @@ iₙ → iₘ = ⊤ (n ≤ m or n+1 < m);  iₘ (n+1 = m or n > m)
 to pin the `dₙ/iₘ → {gₖ, fₖ} → repo xₙ` correspondence and re-derive each entry in
 the repo indexing — *not* to transcribe these into Lean.
 
-### Verification protocol (the safeguard that makes a wrong table impossible)
+### Verification protocol — and the collapse-artifact trap (sharpened 2026-06-17)
 
-The repo already carries `Z₆`, `Z₇`, `Z₈` as concrete **decidable** Heyting
-algebras (`NishimuraTruncations.lean`), with the generator's term values known. So
-every proposed identity `xₘ ∘ xₙ = x_r` must be **`decide`-checked at small
-indices in `Z₈`** before (and alongside) the abstract proof. This converts "trust
-the literature mapping" into "machine-checked at finite instances," and catches a
-wrong relation immediately — the safeguard against a green-but-wrong table.
+The repo carries `Z₅, Z₆ (=Div12), Z₇, Z₈` as concrete **decidable** Heyting
+algebras (`NishimuraTruncations.lean`). They are tempting as an oracle — but
+`decide`-in-`Zₙ` is **not** a sound confirmer, only a **sound refuter, and only for
+in-window results.** The reason is the trap the literature warns about, now made
+concrete:
+
+> Each finite `Zₙ` is the *quotient* `F(1) ↠ Zₙ` that collapses every ladder rung
+> above the truncation. The quotient is a Heyting homomorphism, so it **preserves
+> meet/join/implication** — which means a *free* identity `xₘ ∘ xₙ = x_r` is
+> necessarily preserved (a `decide`-failure in `Zₙ` therefore **refutes** the
+> identity). But the converse fails: collapsed rungs make `Zₙ` satisfy extra
+> identities that are **false in `F(1)`**.
+
+**Concrete instance (decide-confirmed, and the exact shape of a false [K]):** in `Z₈`
+the function `join` gives `x₅ ⊔ x₆ = ⊤`. But the term recursion gives, for `n` odd,
+`x_{n+5} = x_{n+2} ⊔ x_{n+3}`; at `n = 3` that is `x₅ ⊔ x₆ = x₈ = f₃` in `F(1)`. `Z₈`
+collapses `x₇, x₈ ↦ ⊤`, so "read off `Z₈`" would inscribe `x₅ ⊔ x₆ = ⊤` — green,
+compiling, and **wrong**. Likewise `x₃ ⊔ x₅`: `Z₈` says `⊤`, free says `f₃ = x₈`; and
+`x₅ ⇨ x₄`: `Z₈` says `x₆`, free says `x₇` (`= x_{n+5}` at `n = 2`).
+
+**Rule.** A `decide`-in-`Zₙ` check validates `xₘ ∘ xₙ = x_r` **only when `r ≤ n − 2`**
+(the free result lies in the faithful window `x₀ … x_{n-2}`); above that the model is
+collapse-suspect. Use a truncation tall enough that `x_r` is in-window, or prove the
+entry abstractly. Cross-checking two truncations (`Z₇` vs `Z₈`) that share a window
+is the cheap consistency test.
+
+### Certified-safe MEET table on the faithful window `x₀ … x₆` (read from `Z₈`)
+
+Meet always descends (`xₘ ⊓ xₙ ≤` both `≤ x₆`), so its result never leaves the
+window: the meet table **is** trustworthy off `Z₈` (`decide`-certified). With
+`bot=x₀, ng=x₁, g=x₂, nng=x₃, gng=x₄, x5=x₅, x6=x₆`:
+
+| `⊓` | x₀ | x₁ | x₂ | x₃ | x₄ | x₅ | x₆ |
+|----|----|----|----|----|----|----|----|
+| **x₀** | x₀ | x₀ | x₀ | x₀ | x₀ | x₀ | x₀ |
+| **x₁** |    | x₁ | x₀ | x₀ | x₁ | x₁ | x₁ |
+| **x₂** |    |    | x₂ | x₂ | x₂ | x₂ | x₂ |
+| **x₃** |    |    |    | x₃ | x₂ | x₂ | x₃ |
+| **x₄** |    |    |    |    | x₄ | x₄ | x₄ |
+| **x₅** |    |    |    |    |    | x₅ | x₄ |
+| **x₆** |    |    |    |    |    |    | x₆ |
+
+(Spot-checked algebraically: `x₃ ⊓ x₄ = ¬¬g ⊓ (g ⊔ ¬g) = g = x₂`; `x₃ ⊓ x₅ =
+¬¬g ⊓ (¬¬g ⇨ g) = ¬¬g ⊓ g = x₂`.) Join and implication tables are **not** recorded
+here, because their results leave the window and `Z₈` would give artifacts — they
+must be derived abstractly (next).
+
+### Definitional diagonals (true in `F(1)`, no model needed)
+
+The recursion supplies two infinite families of entries directly, with no order
+reasoning at all:
+
+- **Join diagonal:** for `n` odd, `x_{n+2} ⊔ x_{n+3} = x_{n+5}` — i.e. `x₃ ⊔ x₄ = x₆`,
+  `x₅ ⊔ x₆ = x₈`, `x₇ ⊔ x₈ = x₁₀`, … (the `fₖ` joins).
+- **Implication diagonal:** for `n` even, `x_{n+3} ⇨ x_{n+2} = x_{n+5}` — i.e.
+  `x₃ ⇨ x₂ = x₅`, `x₅ ⇨ x₄ = x₇`, `x₇ ⇨ x₆ = x₉`, … (the `gₖ` spine).
+
+These are the *main diagonals* of the join/implication tables. The genuine work is
+the **off-diagonal** entries; the diagonals are free and should anchor the induction.
 
 ### Induction-skeleton notes (before coding the binary tables)
 
-- **Weight the estimate toward implication.** Meet and join are order-theoretic and
-  read off the (correct) Hasse diagram; the relative pseudocomplement `xₘ ⇒ xₙ` is
-  where RN's structure is genuinely intricate and where errors hide. An easy week on
-  meet/join must not create false confidence about the implication timeline.
-- **The induction is on a pair `(m, n)`.** Unlike the complement table (single index,
-  with the merciful "everything from index 4 up has complement `⊥`" collapse), the
-  binary tables range over two indices. Confirm on paper that the base cases and any
-  "collapse above `k`" behavior actually close for the two-index version before
-  committing to a skeleton — the unary collapse does not automatically transfer.
+- **Weight the estimate toward implication.** Meet is done (table above). Join has the
+  free diagonal plus order-theoretic off-diagonals. The relative pseudocomplement
+  `xₘ ⇒ xₙ` is where RN's structure is genuinely intricate and where errors hide — and
+  where the collapse trap bit hardest (`x₅ ⇨ x₄`). An easy week on meet/join must not
+  create false confidence about the implication timeline.
+- **The induction is on a pair `(m, n)`, and the window grows with the rung.** Unlike
+  the complement table (single index, with the merciful "index ≥ 4 ⇒ complement `⊥`"
+  collapse), the binary tables range over two indices and the *result* can be a higher
+  rung than either input (the join/implication diagonals climb). So there is **no**
+  "everything above `k` collapses" simplification for join/implication — confirm on
+  paper that the base cases and the climbing-diagonal recursion close before committing
+  to a skeleton. The unary collapse does **not** transfer.
