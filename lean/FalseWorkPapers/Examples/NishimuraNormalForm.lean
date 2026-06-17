@@ -442,6 +442,39 @@ theorem isLadderValue_inf (g : H) {x y : H} (hx : IsLadderValue g x)
     · rw [inf_top_eq]; exact isLadderValue_term g m
     · exact isLadderValue_meet g m n
 
+/-! ### The implication table
+
+The hardest operation.  Every cell is proved against the term recursion or the
+already-closed join/meet tables — never against the `Z₈` grid, whose rungs from
+`x₇` up collapse.  The two scaffolding facts that need no table are the
+comparable cells (`xₘ ⇨ xₙ = ⊤` when `xₘ ≤ xₙ`) and the `n = 1` column. -/
+
+/-- **Comparable implication is `⊤`.** -/
+theorem nishimuraTerm_himp_eq_top_of_le (g : H) {m n : ℕ}
+    (h : nishimuraTerm g m ≤ nishimuraTerm g n) :
+    nishimuraTerm g m ⇨ nishimuraTerm g n = ⊤ :=
+  himp_eq_top_iff.mpr h
+
+/-- **The `n = 1` column.**  For `m ≥ 2` (where `g ≤ xₘ`), `xₘ ⇨ x₁ = x₁`.
+Both `xₘ` and the target `x₁ = ¬g` sit so that the relative pseudocomplement
+collapses back onto `¬g`: `≥` is `le_himp`, and `≤` follows because
+`(xₘ ⇨ ¬g) ⊓ g ≤ ¬g ⊓ g = ⊥` (using `g ≤ xₘ` and modus ponens). -/
+theorem nishimuraTerm_himp_one (g : H) {m : ℕ} (hm : 2 ≤ m) :
+    nishimuraTerm g m ⇨ nishimuraTerm g 1 = nishimuraTerm g 1 := by
+  have hg : g ≤ nishimuraTerm g m :=
+    nishimuraTerm_le_of g (a := 2) (b := m) (Or.inl ⟨by decide, hm⟩)
+  show nishimuraTerm g m ⇨ gᶜ = gᶜ
+  have key : (nishimuraTerm g m ⇨ gᶜ) ⊓ g = ⊥ := by
+    apply le_antisymm _ bot_le
+    have hge : (nishimuraTerm g m ⇨ gᶜ) ⊓ g ≤ gᶜ :=
+      le_trans (inf_le_inf_left _ hg) himp_inf_le
+    calc (nishimuraTerm g m ⇨ gᶜ) ⊓ g ≤ g ⊓ gᶜ := le_inf inf_le_right hge
+      _ = ⊥ := inf_compl_self g
+  apply le_antisymm
+  · have h := le_himp_iff.mpr (le_of_eq key)
+    rwa [himp_bot] at h
+  · exact le_himp
+
 end NormalForm
 
 end FalseWork.Lattice
