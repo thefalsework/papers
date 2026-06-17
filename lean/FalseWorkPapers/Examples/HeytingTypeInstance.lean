@@ -21,6 +21,9 @@ import FalseWorkPapers.Examples.GlivenkoCollapse
 import FalseWorkPapers.Examples.LadderCore
 import FalseWorkPapers.Examples.WhyTwelve
 import FalseWorkPapers.Examples.MusicKernelZMod12
+import FalseWorkPapers.Examples.MusicKernelIrrationality
+import FalseWorkPapers.Examples.MusicKernelEndofunctor
+import FalseWorkPapers.Examples.PythagoreanComma
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub
 import FalseWorkPapers.Examples.MusicToposTrace
@@ -328,6 +331,30 @@ the unique kernel is the tritone.  Boundary failures kernel-checked at
 The circle of fifths closes in the tempered quotient — the complement of
 the rank-2 Diophantine non-closure. -/
 #print axioms FalseWork.MusicKernel.fifth_closes_in_quotient
+
+/-! Music-kernel Point 1: irrationality of `log₂(3/2)` (companion to
+`Examples/MusicKernelIrrationality.lean` and
+`validation/claims/music-kernel-01-irrationality.md`).  FTA-elementary;
+closes via `DiophantineFloor.rank_two_floor`. -/
+#print axioms FalseWork.MusicKernel.log_two_three_irrational
+#print axioms FalseWork.MusicKernel.log_three_halves_irrational
+#print axioms FalseWork.MusicKernel.pythagorean_comma_log_nonzero
+#print axioms FalseWork.MusicKernel.music_kernel_irrationality
+
+/-! Pythagorean-comma convergent scaffold (companion to
+`Examples/PythagoreanComma.lean`, `Examples/MusicKernelLogBounds.lean`,
+`Examples/MusicKernelCfFloors.lean`, and
+`validation/claims/optimal-ntet-continued-fraction.md`).  Phase 1 denominators
+through `qConv_first_six` are kernel-checked from certified log bounds. -/
+#print axioms FalseWork.Pythagorean.α_eq_musicKernel
+#print axioms FalseWork.Pythagorean.α_lt_one
+#print axioms FalseWork.Pythagorean.α_irrational
+#print axioms FalseWork.Pythagorean.qConv_zero
+#print axioms FalseWork.Pythagorean.qConv_first_six
+
+/-! Music-kernel endofunctor Points 2–3 (companion to
+`Examples/MusicKernelEndofunctor.lean`). -/
+#print axioms FalseWork.MusicKernel.music_kernel_endofunctor_points_two_three
 
 /-! The music presheaf topos `Set^{Pᵒᵖ}` as a concrete Lean elementary-topos
 object (companion to `Examples/MusicTopos.lean` and the T2 construction of

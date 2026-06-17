@@ -1,6 +1,6 @@
 # `music-kernel-02-fixed-points` — `Fix(D) = {∅}` by cardinality
 
-**Status:** OPEN
+**Status:** OPEN (Points 2–3 **kernel-checked** in `Examples/MusicKernelEndofunctor.lean`; see Changelog)
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
 **Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1 — the v9.4 architectural-status note refines the categorical object D1–D4 produces but not § 4 itself); targeted for v10.0 revision
 **Domain:** Category theory (elementary)
@@ -44,4 +44,5 @@ Paper 3 § 4 (current v9.4; § 4 substantively unchanged since v9.1) carries lan
 3. The proposed reframing ("`Fix(D)` triviality is the generativity signal, not an identification of the kernel") is sound. If a better categorical vocabulary exists — e.g., "terminal coalgebra is also trivial," "initial algebra is `∅`," "the functor is continuous but has no non-trivial invariant subobject" — please propose it.
 
 ## Changelog
+- 2026-06-13: Points 2–3 kernel-checked in `Examples/MusicKernelEndofunctor.lean` (`D_fix_eq_empty`, `no_largest_finite_subset`, bundled as `music_kernel_endofunctor_points_two_three`); axiom audit in `HeytingTypeInstance.lean`.
 - 2026-04-20: Claim created.

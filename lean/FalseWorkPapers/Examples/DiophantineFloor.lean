@@ -61,6 +61,35 @@ theorem rank_two_floor (a b : ℕ) (h : 3 ^ a = 2 ^ b) : a = 0 ∧ b = 0 := by
     have : (3 : ℕ) ∣ 2 := Nat.prime_three.dvd_of_dvd_pow h3
     norm_num at this
 
+/-- `10 ^ p = 2 ^ p * 5 ^ p` as natural numbers. -/
+theorem nat_pow_ten (p : ℕ) : (10 : ℕ) ^ p = 2 ^ p * 5 ^ p := by
+  rw [show (10 : ℕ) = 2 * 5 by norm_num, mul_pow]
+
+/-- **Rank-2 floor (2 vs 5).**  `2 ^ b = 10 ^ p` with `p > 0` is impossible. -/
+theorem rank_two_five_floor (b p : ℕ) (hp : 0 < p) (h : 2 ^ b = 10 ^ p) : False := by
+  rw [nat_pow_ten p] at h
+  have h5 : (5 : ℕ) ∣ 2 ^ b := by
+    rw [h, mul_comm]
+    exact Dvd.dvd.mul_right (dvd_pow_self 5 hp.ne') (2 ^ p)
+  have : (5 : ℕ) ∣ 2 := Nat.prime_five.dvd_of_dvd_pow h5
+  norm_num at this
+
+/-- **Rank-2 floor (3 vs 2·5).**  `3 ^ b = 10 ^ p` with `p > 0` is impossible. -/
+theorem rank_two_ten_three_floor (b p : ℕ) (hp : 0 < p) (h : 3 ^ b = 10 ^ p) : False := by
+  rw [nat_pow_ten p] at h
+  have h2 : (2 : ℕ) ∣ 3 ^ b := by
+    rw [h]
+    exact Dvd.dvd.mul_right (dvd_pow_self 2 hp.ne') (5 ^ p)
+  have : (2 : ℕ) ∣ 3 := Nat.prime_two.dvd_of_dvd_pow h2
+  norm_num at this
+
+/-- If `1 < m` and `m ^ b = 1`, then `b = 0`. -/
+theorem nat_pow_eq_one_of_one_lt (m b : ℕ) (hm : 1 < m) (h : m ^ b = 1) : b = 0 := by
+  rcases Nat.pow_eq_one.mp h with h1 | hb0
+  · subst h1
+    norm_num at hm
+  · exact hb0
+
 /-- The Pythagorean comma is a genuine near-miss, not a closure:
 `3^12 ≠ 2^19` (twelve fifths overshoot seven octaves by the comma
 `531441 / 524288 ≈ 23.46` cents). -/

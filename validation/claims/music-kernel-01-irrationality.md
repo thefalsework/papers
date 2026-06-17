@@ -1,7 +1,7 @@
 # `music-kernel-01-irrationality` — Irrationality of log₂(3/2)
 
 **Status:** BACKGROUND FACT (FTA-elementary; standard textbook result)
-**Lean formalization status:** CONFIRMED IDIOMATIC via Lean Zulip 2026-04-26 (Kevin Buzzard, "looks idiomatic" + two `loogle` searches confirming absence from current mathlib)
+**Lean formalization status:** **[K] KERNEL-CHECKED IN-REPO** (`Examples/MusicKernelIrrationality.lean`; axiom audit clean in `HeytingTypeInstance.lean`). Statement form confirmed idiomatic via Lean Zulip 2026-04-26 (Kevin Buzzard).
 **Part of:** [`music-kernel-umbrella`](music-kernel-umbrella.md)
 **Paper:** Paper 3 § 4 (v9.4; § 4 substantively unchanged since v9.1); Paper 5 § 4 (v1.3; § 4 substantively unchanged since v1.1)
 **Domain:** Number theory (elementary)
@@ -89,6 +89,19 @@ theorem pythagorean_comma_nonzero :
 
 See [`lean/README.md`](../../lean/README.md) for the broader Tier-1 formalization context.
 
+## Kernel-checked progress (2026-06-13)
+
+The music-kernel Point 1 irrationality chain is **kernel-checked in Lean** (`FalseWork.MusicKernel`, `Examples/MusicKernelIrrationality.lean`), reusing `FalseWork.Diophantine.rank_two_floor` for the FTA closing contradiction:
+
+- `log_two_three_irrational` — `log 3 / log 2` (i.e. `log₂ 3`) is irrational.
+- `log_three_halves_irrational` — `α = log₂(3/2) = log₂ 3 − 1` is irrational (`Irrational.sub_natCast`).
+- `pythagorean_comma_log_nonzero` — Form C: `(12 : ℝ) * log 3 - 19 * log 2 ≠ 0`.
+- `music_kernel_irrationality` — bundled Point 1.
+
+Proof route: from rational `q = p/b`, derive `b * log 3 = p * log 2`, then `3^b = 2^p` via log injectivity on positives; case-split on sign of `p`; positive case invokes `rank_two_floor`. Axiom audit: `propext`, `Classical.choice`, `Quot.sound` only (no `sorryAx`).
+
+The proposed signature block below (2026-04-19) used `Real.logb` and `sorry`; the landed implementation uses the log-ratio form `log 3 / log 2`, which Buzzard's Zulip response treated as equivalent to Form A.
+
 ## Validation record
 
 - **2026-04-26** — Posted to Lean Zulip, stream `#Is there code for X?`, topic `Irrational (Real.logb 2 (3/2))`: <https://leanprover.zulipchat.com/#narrow/channel/217875-Is-there-code-for-X.3F/topic/Irrational.20.28Real.2Elogb.202.20.283.2F2.29.29/with/591010576>. Asked (1) whether mathlib has an existing `Irrational.logb` / `Nat.log_irrational` lemma covering this case, and (2) which of Form A / log-ratio form / rank-2 linear-form-in-logs form is the idiomatic statement.
@@ -113,6 +126,7 @@ This is the foundational datum. If `α` were rational, every downstream claim (F
 - [`optimal-ntet-continued-fraction`](optimal-ntet-continued-fraction.md) — the Diophantine-approximation structure of `α` that picks out Pythagorean-comma-optimal temperaments; depends on the irrationality stated here.
 
 ## Changelog
+- 2026-06-13: **Kernel-checked in-repo.** `MusicKernelIrrationality.lean` wired into the axiom audit; Point 1 theorems listed above. Full `lake build` green (2411 jobs).
 - 2026-04-26: **Calibration pass.** Status reframed from "CONFIRMED AS STATED via Lean Zulip" to two-axis "BACKGROUND FACT (textbook)" + "Lean formalization status: CONFIRMED IDIOMATIC via Zulip." The earlier framing implicitly suggested the mathematical fact required external validation, which was over-cautious — the irrationality of `log₂(3/2)` is a standard FTA-elementary textbook result (Niven; Hardy & Wright). What the Zulip exchange validated was the *Lean formulation*, not the underlying mathematics. New "Status note (calibration)" section makes this distinction explicit. "What a validator should confirm" section updated to describe only the formalization-level questions, since the mathematical question is not open.
 - 2026-04-26: Added explicit "Anticipated upgrade path" note to the Validation record describing what changes if Snir's scaffold merges into mathlib (status terminology tightens, paper footnotes cite the merged lemma directly) versus what stays the same if it does not (Confirmed-as-stated determination is intact on Buzzard's response alone). Makes the dependency structure between this record and any future merge explicit.
 - 2026-04-26: Snir Broshi's WIP iff scaffold and three `Decidable` instances added to the validation record. Confirmed-as-stated determination unchanged (it rests on Buzzard's response, not on Snir's scaffold compiling).

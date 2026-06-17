@@ -63,7 +63,7 @@ The cleanest expression of "one fact, two faces" is the fifth itself (`MusicKern
 - In the **frequency-ratio domain** the fifth `3/2` never closes: `3^a ≠ 2^b` nontrivially (`rank_two_floor`). **[K]**
 - In the **tempered quotient** `ℤ/12` the fifth closes: `(+7)` is a single 12-cycle, returning after twelve steps and not before, visiting every pitch class (`fifth_closes_in_quotient`). **[K]**
 
-The Pythagorean comma is precisely the gap between these two: equal temperament *forces* the closure that arithmetic *forbids*, and the comma (≈23.46 cents) is the residue of that forcing. The irrationality (Paper 5 / kernel-01) is the escape; the 12-cycle (kernel-05) is the closure; the comma is their difference.
+The Pythagorean comma is precisely the gap between these two: equal temperament *forces* the closure that arithmetic *forbids*, and the comma (≈23.46 cents) is the residue of that forcing. The irrationality (Paper 5 / kernel-01) is the escape **[K]** (`music_kernel_irrationality`); the 12-cycle (kernel-05) is the closure; the comma is their difference.
 
 **A register boundary, stated explicitly.** What is **[K]** here is the *qualitative* floor: unique factorization gives both non-closures (rank-1 `√2` and rank-2 `2`–`3` independence). What is **not [K]** is the *unification* claim of Paper 5 — that rank-1 and rank-2 are "the same phenomenon" subsumed by one master Diophantine theorem (the natural home being the Schmidt subspace theorem / effective Baker bounds). That unification, and the effective quantitative bound on `|12 log 3 − 19 log 2|`, are rank-≥2 Baker territory and are **[O]** (§5.3). The kernel-checked qualitative floor must not be read as a kernel-checked unification: the two qualitative non-closures are proved; their identification as one theorem is open.
 
@@ -201,6 +201,14 @@ Examples/DivisorLattice12Nucleus.lean     tritone_kernel_has_lawvere_tierney_rea
                                           tritoneClosure_not_nucleus
 Examples/DiophantineFloor.lean            shared_diophantine_floor (rank_one_floor,
                                           rank_two_floor, pythagorean_comma_nontrivial)
+Examples/MusicKernelIrrationality.lean    music_kernel_irrationality (log_two_three_irrational,
+                                          log_three_halves_irrational,
+                                          pythagorean_comma_log_nonzero)
+Examples/MusicKernelLogBounds.lean        certified log/α interval bounds (Paper 5 §2.2)
+Examples/MusicKernelCfFloors.lean         CF floor lemmas for α (depth six)
+Examples/PythagoreanCommaConvergents.lean qConv_two … qConv_six (convergent denominators)
+Examples/PythagoreanComma.lean            α aligned with MusicKernel; qConv_first_six
+Examples/MusicKernelEndofunctor.lean      Fix(D) = {∅}; no largest finite subset (Points 2–3)
 Examples/MusicKernelZMod12.lean           fifth_closes_in_quotient (fifth_returns,
                                           fifth_order_twelve, fifth_orbit_covers)
 Examples/MusicTopos.lean                  musicTopos_isElementaryTopos,

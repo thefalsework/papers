@@ -1,6 +1,6 @@
 # `optimal-ntet-continued-fraction` — Optimal N-TET ↔ continued-fraction convergents of log₂(3/2)
 
-**Status:** OPEN
+**Status:** OPEN for (C1) and (C2); **Phase 1 kernel-checked in-repo** (`qConv_first_six`; see Changelog 2026-06-13)
 **Paper:** Paper 5 (Pythagorean) § 2.2, § 4.2, § 7.1 (v1.3; cited sections substantively unchanged since v1.2)
 **Related claims:** [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md), [`music-kernel-06-baker`](music-kernel-06-baker.md)
 **Domain:** Number theory (elementary; Diophantine approximation)
@@ -183,7 +183,34 @@ This is also the first concrete place where Paper 5 § 2.2's informal content ca
 
 Origin: Chris Henson, Lean Zulip thread "Music-kernel + Pythagorean comma formalization target," 2026-04-19. Henson observed that the continued-fraction / optimal N-TET relationship is a natural place to focus on setting up the exact statement of what one would want to verify, before attempting a proof. This file is the first-pass answer.
 
+## Kernel-checked progress (2026-06-13)
+
+Phase 1 scaffold is **fully kernel-checked** in the Lean tree:
+
+| File | Content |
+|------|---------|
+| `Examples/PythagoreanComma.lean` | `α` aligned with `MusicKernel.α`; `qConv_first_six` |
+| `Examples/PythagoreanCommaConvergents.lean` | `qConv_two` … `qConv_six` via `Real.convergent` |
+| `Examples/MusicKernelLogBounds.lean` | Certified power-series bounds on `log 2`, `log 3`, `α` |
+| `Examples/MusicKernelCfFloors.lean` | CF floor lemmas through depth six (`floor_cfI2` … `floor_cfI6`) |
+| `Examples/MusicKernelIrrationality.lean` | `α_irrational`, shared Diophantine floor |
+
+Proved Phase 1 lemmas include:
+
+- `α_eq_musicKernel`, `α_eq_log_ratio` — single definition of `log₂(3/2)`.
+- `α_lt_one`, `α_irrational` — Paper 5's `(0, 1)` hypothesis and irrationality.
+- `qConv_zero` — zeroth convergent denominator is `1` (`0/1`).
+- **`qConv_first_six`** — denominators `1, 2, 5, 12, 41, 53` at indices `0, 2, 3, 4, 5, 6`, evaluated from certified log bounds and CF floor lemmas (no `sorry`).
+
+Phases 2–3 (`convergent_best_approx_second_kind`, `best_tet_iff_record_convergent_denominator`) remain open.
+
+Axiom audit (`Examples/HeytingTypeInstance.lean`, `#print axioms`): `propext`, `Classical.choice`, `Quot.sound`; no `sorryAx`.
+
 ## Changelog
+- 2026-06-13: Phase 1 closed — `qConv_first_six` kernel-checked via `MusicKernelLogBounds` + `MusicKernelCfFloors` + `PythagoreanCommaConvergents`; `lake build` green; audit wired in `HeytingTypeInstance.lean`.
+- 2026-06-13: Scaffold partially kernel-checked (`PythagoreanComma.lean`); `α`
+  aligned with `MusicKernel.α`; `qConv_zero` proved; interval-arithmetic layer for
+  deeper convergent evaluation started.
 - 2026-04-20: Claim created in response to Chris Henson's Lean Zulip suggestion; tentative Lean signature included as starting point for validator feedback on formulation.
 - 2026-04-19: Added *Broader theoretical context* subsection (MOS scales / Stern-Brocot tree) in response to follow-on pointer from suhr (Lean Zulip, same thread as the Paper 5 v1.2 corrections). Not a modification of (C1), (C2), or (C3); a refinement of framing for formalization targeting.
 - 2026-04-19: Extended *Broader theoretical context* with the Riemann zeta function generalization (all-harmonics optimization), completing the three-framework trajectory (continued fractions → MOS / scale tree → Riemann zeta). Outside Paper 5's current scope; noted for theoretical completeness. Pointer from suhr (Lean Zulip, same thread).
