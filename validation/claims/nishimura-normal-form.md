@@ -195,3 +195,72 @@ the **off-diagonal** entries; the diagonals are free and should anchor the induc
   "everything above `k` collapses" simplification for join/implication — confirm on
   paper that the base cases and the climbing-diagonal recursion close before committing
   to a skeleton. The unary collapse does **not** transfer.
+
+---
+
+## The join/meet dependency-graph exercise (done 2026-06-17 — the induction terminates)
+
+The afternoon paper exercise: before committing the multi-week grind, write the
+recursion's actual induction structure and confirm it is well-founded (every entry
+reduces to strictly-earlier ones, no forward edge, no cycle). **Result: it closes,
+and more cleanly than feared — there is no climbing two-index join recursion at all.**
+
+### The order characterization (the real inductive object)
+
+From the RN covering relations — `x_{2k+1} ⋗ x_{2k}` and `x_{2k+2} ⋗ x_{2k-1}, x_{2k}`
+(`k ≥ 1`); `x₁, x₂ ⋗ x₀` — the up-sets collapse to a closed form, **verified exhaustively
+against the faithful `Z₈` window `x₀…x₆`** (all 7×7 entries match):
+
+> **`xₐ ≤ x_b ⟺ (a even ∧ b ≥ a) ∨ (a odd ∧ (b = a ∨ b ≥ a + 3)).`**
+
+(Even rungs are "transparent" — above everything from `a` up; odd rungs skip a gap of
+two before re-entering the order at `a+3`. This *is* the zigzag, in one line.) The
+incomparable pairs `(m < n)` are therefore **exactly** `m` odd with `n ∈ {m+1, m+2}` —
+a finite shape, not a growing family.
+
+### Join is `lub`, so the table has three regimes (no self-recursion)
+
+In `F(1)` the join of two ladder elements never reaches `⊤` (the ladder ascends
+infinitely; `⊤` is a separate limit), so `xₘ ⊔ xₙ` is always some `x_r`, with
+`r = min(UP(m) ∩ UP(n))`. Reading that off the order formula (`m ≤ n` WLOG):
+
+| regime | condition | `xₘ ⊔ xₙ` |
+|--------|-----------|-----------|
+| comparable | `xₘ ≤ xₙ` | `xₙ` |
+| join diagonal | `m` odd, `n = m+1` | `x_{m+3}` — **proven** (`nishimuraTerm_join_diagonal`) |
+| skip-join | `m` odd, `n = m+2` | `x_{m+5}` |
+
+Dually, **meet is `glb`**: comparable `→ xₘ`; else (`m` odd, `n ∈ {m+1, m+2}`)
+`→ x_{m-1}`. This reproduces the certified-safe meet table exactly
+(`x₁⊓x₂=x₀`, `x₃⊓x₄=x₂`, `x₅⊓x₆=x₄`, `x₃⊓x₅=x₂`, `x₁⊓x₃=x₀`).
+
+Cross-check of the join formula against `Z₈`: in-window entries agree
+(`x₁⊔x₂=x₄`, `x₁⊔x₃=x₆`, `x₃⊔x₄=x₆`, `x₂⊔x₃=x₃`, `x₄⊔x₅=x₅`); the out-of-window ones
+hit exactly the free diagonal values `Z₈` collapses (`x₅⊔x₆=x₈`, `x₃⊔x₅=x₈`).
+
+### Why the induction is well-founded (the four findings that de-risk the grind)
+
+1. **Join is not a climbing self-referential two-index induction.** It is `lub` of the
+   single `≤` relation. The danger of "the step needs a join you haven't proven yet"
+   does not arise, because the step never recurses into another join.
+2. **Closure needs only the *positive* `≤` direction.** To prove `xₘ ⊔ xₙ = x_r` is to
+   show `xₘ, xₙ ≤ x_r` (positive) and `x_r ≤ xₘ ⊔ xₙ` (positive). The hard
+   incomparability direction (`xₐ ⊄ x_b` for generic ordinary `g`, which would need a
+   separating model) is **never required for closure.** This removes the scariest
+   obligation from the critical path.
+3. **The dependency graph points strictly downward in index.** The only reduction is
+   the recursion `x_{k+5} = op(x_{k+3}, x_{k+2})` (or `op(x_{k+2}, x_{k+3})`) into
+   *lower* indices. E.g. skip-join `xₘ ⊔ x_{m+2} = x_{m+5}` (`m` odd): the `≥` half
+   uses `x_{m+5} = x_{m+2} ⊔ x_{m+3}` (recursion) and reduces to `x_{m+3} ≤ xₘ ⊔ x_{m+2}`
+   — index `m+3 < m+5`, and at the base it is the Heyting fact `g ≤ ¬¬g` (checked at
+   `m=1`: `x₄ = g ⊔ ¬g ≤ ¬g ⊔ ¬¬g = x₁ ⊔ x₃`). **No forward edge, no cycle.**
+4. **Implication will reuse join/meet.** Relative pseudocomplement on the ladder
+   reduces to the join/meet structure, so a complete join table is a sub-ingredient of
+   implication — finish join first, then build implication on it; do not interleave.
+
+**Verdict: commit the grind.** The order characterization is the one genuine
+induction (a `four_le`-style strong induction whose positive direction closes via the
+coverings); join and meet are then `lub`/`glb` corollaries with a strictly
+index-decreasing, forward-edge-free dependency graph; implication sits on top of join.
+The multi-week estimate stands, weighted toward implication, but the termination
+question is settled: **it closes.**
