@@ -22,6 +22,7 @@ Pythagorean-comma temperaments are the convergent denominators of
 import Mathlib.NumberTheory.DiophantineApproximation.Basic
 import FalseWorkPapers.Examples.MusicKernelIrrationality
 import FalseWorkPapers.Examples.PythagoreanCommaConvergents
+import FalseWorkPapers.NumberTheory.ContinuedFractionBestApprox
 
 namespace FalseWork.Pythagorean
 
@@ -93,5 +94,31 @@ theorem qConv_first_six :
         · constructor
           · dsimp [qConv]; exact qConv_five
           · dsimp [qConv]; exact qConv_six
+
+/-! ## Phase 2–3: `(C1)` and `(C2)` for `α = log₂(3/2)`
+
+These specialize the general continued-fraction results in
+`FalseWorkPapers.NumberTheory.ContinuedFractionBestApprox` to the irrational `α`. -/
+
+/-- `(C1)` Best-approximation of the second kind for the convergents of `α`:
+the convergent `(pConv n, qConv n)` strictly beats every other integer pair
+`(a, b)` with `0 < b < qConv (n+1)` on the quantity `|b·α − a|`. -/
+theorem convergent_best_approx_second_kind
+    (n : ℕ) (a b : ℤ) (hb_pos : 0 < b) (hb_lt : b < (qConv (n + 1) : ℤ))
+    (hne : (a, b) ≠ (pConv n, (qConv n : ℤ))) :
+    |((qConv n : ℤ) : ℝ) * α - (pConv n : ℝ)| < |(b : ℝ) * α - (a : ℝ)| := by
+  have hb_ltR : (b : ℝ) < ((α.convergent (n + 1)).den : ℝ) := by
+    have hbq : (b : ℝ) < ((qConv (n + 1) : ℤ) : ℝ) := by exact_mod_cast hb_lt
+    simpa [qConv] using hbq
+  have h := Real.convergent_best_approx_second_kind' α_irrational hb_pos hb_ltR hne
+  simpa only [qConv, pConv, Int.cast_natCast] using h
+
+/-- `(C2)` The Pythagorean-comma-optimal temperaments are exactly the strict
+record-holders in the convergent-denominator sequence of `α`: `N ≥ 1` strictly
+improves on every smaller `M` iff `N` is a convergent denominator of `α`. -/
+theorem best_tet_iff_record_convergent_denominator (N : ℕ) (hN : 1 ≤ N) :
+    (∀ M : ℕ, 1 ≤ M → M < N → pythagoreanCommaError N < pythagoreanCommaError M)
+      ↔ (∃ n : ℕ, N = qConv n ∧ ∀ m : ℕ, m < n → qConv m < N) :=
+  Real.best_approx_iff_convergent_den α_irrational N hN
 
 end FalseWork.Pythagorean

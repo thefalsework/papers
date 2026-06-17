@@ -1,6 +1,6 @@
 # `optimal-ntet-continued-fraction` — Optimal N-TET ↔ continued-fraction convergents of log₂(3/2)
 
-**Status:** OPEN for (C1) and (C2); **Phase 1 kernel-checked in-repo** (`qConv_first_six`; see Changelog 2026-06-13)
+**Status:** (C1) and (C2) **kernel-checked in-repo** for general irrational `ξ` and specialized to `α`; Phase 1 sanity checks (`qConv_first_six`) also kernel-checked (see Changelog 2026-06-17)
 **Paper:** Paper 5 (Pythagorean) § 2.2, § 4.2, § 7.1 (v1.3; cited sections substantively unchanged since v1.2)
 **Related claims:** [`music-kernel-01-irrationality`](music-kernel-01-irrationality.md), [`music-kernel-06-baker`](music-kernel-06-baker.md)
 **Domain:** Number theory (elementary; Diophantine approximation)
@@ -202,11 +202,21 @@ Proved Phase 1 lemmas include:
 - `qConv_zero` — zeroth convergent denominator is `1` (`0/1`).
 - **`qConv_first_six`** — denominators `1, 2, 5, 12, 41, 53` at indices `0, 2, 3, 4, 5, 6`, evaluated from certified log bounds and CF floor lemmas (no `sorry`).
 
-Phases 2–3 (`convergent_best_approx_second_kind`, `best_tet_iff_record_convergent_denominator`) remain open.
+Phases 2–3 are now **closed** (2026-06-17):
 
-Axiom audit (`Examples/HeytingTypeInstance.lean`, `#print axioms`): `propext`, `Classical.choice`, `Quot.sound`; no `sorryAx`.
+| File | Content |
+|------|---------|
+| `NumberTheory/ContinuedFractionBestApprox.lean` | General irrational `ξ`: `convergent_best_approx_second_kind` (C1), `best_approx_iff_convergent_den` (C2), plus the `Real.convergent ↔ GenContFract.of` bridge, integer/coprime continuants, error-sign alternation, and the Fibonacci unboundedness of denominators |
+| `Examples/PythagoreanComma.lean` | Specializations to `α`: `convergent_best_approx_second_kind` (C1) and `best_tet_iff_record_convergent_denominator` (C2) |
+
+Nature of the result. The mathematical content is **classical**, not new. (C1) is Khinchin's best-approximation-of-the-second-kind theorem (Khinchin, *Continued Fractions*, Thm. 16; Hardy & Wright §10.15); (C2) — that the best-approximation denominators are exactly the convergent denominators — is the same classical fact, here specialized to `α = log₂(3/2)`. The **contributions** are (i) the Lean formalization (C1 appears to be absent from Mathlib, which carries only Legendre's converse `Real.exists_rat_eq_convergent`, so this is a genuine infrastructure addition), and (ii) the application — specializing to `α` to obtain the optimal-N-TET / Pythagorean-comma statement the paper needs.
+
+Proof outline: (C1) is proved via the determinant identity for continuants and a linear-algebra (Cramer's rule) argument over the continuant basis — the standard argument. (C2) follows from (C1) in both directions — the only extra ingredients are that the nearest integer minimizes `|N·ξ − k|`, that convergent denominators are non-decreasing, and that they are unbounded (a Fibonacci lower bound) — so the "strict best-so-far" temperaments coincide exactly with the convergent denominators. The `∀ m < n, qConv m < N` clause is automatically satisfiable by taking the least index, so the right-hand side is equivalent to "`N` is a convergent denominator."
+
+Axiom audit (`Examples/HeytingTypeInstance.lean`, `#print axioms`): every result, including both (C1) and (C2) specializations, depends only on `propext`, `Classical.choice`, `Quot.sound`; no `sorryAx`.
 
 ## Changelog
+- 2026-06-17: Phases 2–3 closed — **formally verified** (C1) best-approximation of the second kind (classical — Khinchin) and (C2) its specialization to `α = log₂(3/2)`. The mathematical content is classical; the contributions are the Lean formalization (C1 appears absent from Mathlib) and the application to the Pythagorean comma. Kernel-checked for general irrational `ξ` as `convergent_best_approx_second_kind` / `best_approx_iff_convergent_den` in `NumberTheory/ContinuedFractionBestApprox.lean` and specialized to `α` in `Examples/PythagoreanComma.lean`; `lake build` green; both specializations added to the `#print axioms` audit (no `sorryAx`).
 - 2026-06-13: Phase 1 closed — `qConv_first_six` kernel-checked via `MusicKernelLogBounds` + `MusicKernelCfFloors` + `PythagoreanCommaConvergents`; `lake build` green; audit wired in `HeytingTypeInstance.lean`.
 - 2026-06-13: Scaffold partially kernel-checked (`PythagoreanComma.lean`); `α`
   aligned with `MusicKernel.α`; `qConv_zero` proved; interval-arithmetic layer for

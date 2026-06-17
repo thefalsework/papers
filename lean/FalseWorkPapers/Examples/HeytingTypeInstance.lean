@@ -351,6 +351,8 @@ through `qConv_first_six` are kernel-checked from certified log bounds. -/
 #print axioms FalseWork.Pythagorean.α_irrational
 #print axioms FalseWork.Pythagorean.qConv_zero
 #print axioms FalseWork.Pythagorean.qConv_first_six
+#print axioms FalseWork.Pythagorean.convergent_best_approx_second_kind
+#print axioms FalseWork.Pythagorean.best_tet_iff_record_convergent_denominator
 
 /-! Music-kernel endofunctor Points 2–3 (companion to
 `Examples/MusicKernelEndofunctor.lean`). -/

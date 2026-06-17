@@ -419,6 +419,138 @@ theorem convergent_best_approx_second_kind (hξ : Irrational ξ) {n : ℕ}
     have e2 : |δ₁| ≤ |(y : ℝ)| * |δ₁| := le_mul_of_one_le_left (abs_nonneg δ₁) hy1
     linarith [e1, e2, habs1pos]
 
+/-- (C1) restated purely in terms of `Real.convergent`'s numerator and denominator, with no
+reference to the private continuant aliases — convenient for downstream specializations. -/
+theorem convergent_best_approx_second_kind' (hξ : Irrational ξ) {n : ℕ} {a b : ℤ}
+    (hb_pos : 0 < b) (hb_lt : (b : ℝ) < ((ξ.convergent (n + 1)).den : ℝ))
+    (hne : (a, b) ≠ ((ξ.convergent n).num, (Nat.cast (ξ.convergent n).den : ℤ))) :
+    |((ξ.convergent n).den : ℝ) * ξ - ((ξ.convergent n).num : ℝ)|
+      < |(b : ℝ) * ξ - (a : ℝ)| := by
+  have hb_lt' : (b : ℝ) < cfDen ξ (n + 1) := by
+    rw [convergent_den_cast hξ (n + 1)] at hb_lt; exact hb_lt
+  have h := convergent_best_approx_second_kind hξ hb_pos hb_lt' hne
+  rwa [convergent_den_cast hξ n, convergent_num_cast hξ n]
+
+/-! ## (C2) Optimal denominators are exactly the convergent denominators
+
+For irrational `ξ`, `N ≥ 1` is a *strict best-so-far approximation denominator* (its distance
+`‖N·ξ‖` to the integers beats every smaller `M`) if and only if `N` is a convergent denominator
+of `ξ`. Both directions are immediate consequences of (C1). -/
+
+/-- Distance from `N · ξ` to the nearest integer. -/
+noncomputable def nearestError (ξ : ℝ) (N : ℕ) : ℝ :=
+  |(N : ℝ) * ξ - (round ((N : ℝ) * ξ) : ℝ)|
+
+private theorem succ_le_fib_add_two : ∀ n : ℕ, n + 1 ≤ Nat.fib (n + 2)
+  | 0 => le_refl 1
+  | (n + 1) => by
+    have ih : n + 1 ≤ Nat.fib (n + 1 + 1) := succ_le_fib_add_two n
+    have hpos : 1 ≤ Nat.fib (n + 1) := Nat.fib_pos.2 n.succ_pos
+    rw [Nat.fib_add_two]
+    omega
+
+private theorem fib_le_convergent_den (hξ : Irrational ξ) (n : ℕ) :
+    Nat.fib (n + 1) ≤ (ξ.convergent n).den := by
+  have h : (Nat.fib (n + 1) : ℝ) ≤ (GenContFract.of ξ).dens n :=
+    succ_nth_fib_le_of_nth_den (K := ℝ) (v := ξ)
+      (Or.inr (not_terminatedAt_of_irrational hξ (n - 1)))
+  rw [← convergent_den_cast hξ n] at h
+  exact_mod_cast h
+
+private theorem convergent_den_mono (hξ : Irrational ξ) :
+    Monotone (fun n => (ξ.convergent n).den) :=
+  monotone_nat_of_le_succ (fun n => convergent_den_le_succ hξ n)
+
+theorem best_approx_iff_convergent_den (hξ : Irrational ξ) (N : ℕ) (hN : 1 ≤ N) :
+    (∀ M : ℕ, 1 ≤ M → M < N → nearestError ξ N < nearestError ξ M)
+      ↔ (∃ n : ℕ, N = (ξ.convergent n).den ∧ ∀ m : ℕ, m < n → (ξ.convergent m).den < N) := by
+  classical
+  have hmono := convergent_den_mono hξ
+  -- `‖q_n·ξ‖ ≤ |q_n·ξ − p_n|`: the nearest-integer distance is at most the convergent error.
+  have hErrLe : ∀ n : ℕ,
+      nearestError ξ ((ξ.convergent n).den) ≤ |cfDen ξ n * ξ - cfNum ξ n| := by
+    intro n
+    have h := round_le (((ξ.convergent n).den : ℝ) * ξ) ((ξ.convergent n).num)
+    rw [convergent_den_cast hξ n, convergent_num_cast hξ n] at h
+    rw [nearestError, convergent_den_cast hξ n]
+    exact h
+  -- `(C1)` repackaged: any `M` with `0 < M < q_{n+1}`, `M ≠ q_n` is strictly beaten.
+  have hC1lt : ∀ (n M : ℕ), 1 ≤ M → ((M : ℤ) : ℝ) < cfDen ξ (n + 1) →
+      M ≠ (ξ.convergent n).den → |cfDen ξ n * ξ - cfNum ξ n| < nearestError ξ M := by
+    intro n M hM hMlt hMne
+    have hne_pair : (round ((M : ℝ) * ξ), (M : ℤ))
+        ≠ ((ξ.convergent n).num, (Nat.cast (ξ.convergent n).den : ℤ)) := by
+      intro hpair
+      apply hMne
+      have hsnd : (M : ℤ) = (Nat.cast (ξ.convergent n).den : ℤ) := congrArg Prod.snd hpair
+      exact_mod_cast hsnd
+    have hMpos : (0 : ℤ) < (M : ℤ) := by exact_mod_cast hM
+    have hC1 := convergent_best_approx_second_kind hξ hMpos hMlt hne_pair
+    have hcast : ((M : ℤ) : ℝ) = (M : ℝ) := by push_cast; ring
+    rw [hcast] at hC1
+    rw [nearestError]; exact hC1
+  -- `q_0 = 1`, used to locate the first index whose denominator exceeds `N`.
+  have hq0 : (ξ.convergent 0).den = 1 := by rw [convergent_zero]; simp
+  constructor
+  · -- `LHS → RHS`: if `N` were not a convergent denominator, `(C1)` exhibits a smaller, better `M`.
+    intro hbest
+    have key_notDen : (¬ ∃ n, N = (ξ.convergent n).den) →
+        ∃ M, 1 ≤ M ∧ M < N ∧ nearestError ξ M ≤ nearestError ξ N := by
+      intro hND
+      have hexists : ∃ n, N < (ξ.convergent n).den :=
+        ⟨N + 1, by
+          have h1 : N + 1 ≤ Nat.fib (N + 2) := succ_le_fib_add_two N
+          have h2 : Nat.fib (N + 2) ≤ (ξ.convergent (N + 1)).den := fib_le_convergent_den hξ (N + 1)
+          omega⟩
+      set k := Nat.find hexists with hk
+      have hkspec : N < (ξ.convergent k).den := Nat.find_spec hexists
+      have hkpos : 1 ≤ k := by
+        rcases Nat.eq_zero_or_pos k with h0 | h
+        · exfalso; rw [h0, hq0] at hkspec; omega
+        · exact h
+      have hk1 : ¬ N < (ξ.convergent (k - 1)).den := Nat.find_min hexists (by omega)
+      have hqn_le : (ξ.convergent (k - 1)).den ≤ N := not_lt.mp hk1
+      have hk_eq : k = (k - 1) + 1 := by omega
+      have hkspec' : N < (ξ.convergent ((k - 1) + 1)).den := by rw [← hk_eq]; exact hkspec
+      have hNeqn : N ≠ (ξ.convergent (k - 1)).den := fun h => hND ⟨k - 1, h⟩
+      have hqn_lt : (ξ.convergent (k - 1)).den < N := lt_of_le_of_ne hqn_le (Ne.symm hNeqn)
+      refine ⟨(ξ.convergent (k - 1)).den, convergent_den_pos hξ (k - 1), hqn_lt, ?_⟩
+      have hNlt : ((N : ℤ) : ℝ) < cfDen ξ ((k - 1) + 1) := by
+        show ((N : ℤ) : ℝ) < (GenContFract.of ξ).dens ((k - 1) + 1)
+        rw [← convergent_den_cast hξ ((k - 1) + 1)]; exact_mod_cast hkspec'
+      have hC1 := hC1lt (k - 1) N hN hNlt hNeqn
+      exact le_trans (hErrLe (k - 1)) (le_of_lt hC1)
+    by_contra hRHS
+    have hND : ¬ ∃ n, N = (ξ.convergent n).den := by
+      rintro ⟨n, hn⟩
+      apply hRHS
+      have hex : ∃ k, (ξ.convergent k).den = N := ⟨n, hn.symm⟩
+      refine ⟨Nat.find hex, (Nat.find_spec hex).symm, ?_⟩
+      intro m hm
+      have hmne : (ξ.convergent m).den ≠ N := Nat.find_min hex hm
+      have hmle : (ξ.convergent m).den ≤ N := by
+        have hle : (ξ.convergent m).den ≤ (ξ.convergent (Nat.find hex)).den :=
+          hmono (le_of_lt hm)
+        rw [Nat.find_spec hex] at hle
+        exact hle
+      exact lt_of_le_of_ne hmle hmne
+    obtain ⟨M, hM1, hMN, hMle⟩ := key_notDen hND
+    exact absurd (hbest M hM1 hMN) (not_lt.mpr hMle)
+  · -- `RHS → LHS`: `q_n` already beats every smaller `M` by `(C1)`, and `‖N·ξ‖ ≤ |q_n·ξ − p_n|`.
+    rintro ⟨n, hNeq, hrec⟩ M hM1 hMN
+    have hMne : M ≠ (ξ.convergent n).den := by rw [← hNeq]; exact ne_of_lt hMN
+    have h1 : (ξ.convergent n).den ≤ (ξ.convergent (n + 1)).den := convergent_den_le_succ hξ n
+    have hMqn : M < (ξ.convergent n).den := hNeq ▸ hMN
+    have hMlt : ((M : ℤ) : ℝ) < cfDen ξ (n + 1) := by
+      have hMq1 : M < (ξ.convergent (n + 1)).den := by omega
+      show ((M : ℤ) : ℝ) < (GenContFract.of ξ).dens (n + 1)
+      rw [← convergent_den_cast hξ (n + 1)]
+      have hcast : ((M : ℤ) : ℝ) = (M : ℝ) := by push_cast; ring
+      rw [hcast]; exact_mod_cast hMq1
+    have hC1 := hC1lt n M hM1 hMlt hMne
+    have hEN : nearestError ξ N ≤ |cfDen ξ n * ξ - cfNum ξ n| := by rw [hNeq]; exact hErrLe n
+    exact lt_of_le_of_lt hEN hC1
+
 end
 
 end Real
