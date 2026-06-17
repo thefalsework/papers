@@ -15,6 +15,7 @@ import FalseWorkPapers.Examples.DiophantineFloor
 import FalseWorkPapers.Examples.MathFloorCantor
 import FalseWorkPapers.Examples.NishimuraTruncations
 import FalseWorkPapers.Examples.NishimuraKernelLaw
+import FalseWorkPapers.Examples.NishimuraNormalForm
 import FalseWorkPapers.Examples.UniqueOrdinaryConverse
 import FalseWorkPapers.Examples.Z6PlusChain3
 import FalseWorkPapers.Examples.GlivenkoCollapse
@@ -390,3 +391,19 @@ Item (ii) of `connecting-the-spine.md` §5.1a, resolved as a category error in
 the naïve form (the non-degenerate tritone partition stays lattice-level). -/
 #print axioms FalseWork.Positions.kernelImage_eq_top_of_isIso_unit
 #print axioms FalseWork.Positions.isInfrastructure_of_isIso_unit
+
+/-! Nishimura normal form — Phase 1 (companion to
+`Examples/NishimuraNormalForm.lean`; active spine target in
+`validation/claims/nishimura-normal-form.md`).  Ladder-set closure lemmas:
+the complement table, and the two **definitional diagonals** read off the
+term recursion (`xₙ₊₂ ⊔ xₙ₊₃ = xₙ₊₅` for `n` odd; `xₙ₊₃ ⇨ xₙ₊₂ = xₙ₊₅` for
+`n` even) that anchor the forthcoming off-diagonal induction.  Gate-checked
+clean **before** any multi-week induction is built on top of them — they must
+report only the standard axioms. -/
+#print axioms FalseWork.Lattice.compl_nishimuraTerm_ge_four
+#print axioms FalseWork.Lattice.isLadderValue_compl
+#print axioms FalseWork.Lattice.isLadderValue_compl_of
+#print axioms FalseWork.Lattice.nishimuraTerm_join_diagonal
+#print axioms FalseWork.Lattice.nishimuraTerm_himp_diagonal
+#print axioms FalseWork.Lattice.isLadderValue_join_diagonal
+#print axioms FalseWork.Lattice.isLadderValue_himp_diagonal
