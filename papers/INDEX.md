@@ -41,6 +41,8 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 - § 4.4 — Inherited-validity category for AI-assisted scholarship (domain classifications corrected via expert correspondence, recorded in correction ledgers). Stage 3 classification provisional pending Stage 4 (§3.4).
 - § 6.3 — Methodology-scaffolding generalization (does the tag ladder carry the discipline to new operators?); ablation pre-registered. Tracked at [`validation/claims/methodology-scaffolding-ablation.md`](../validation/claims/methodology-scaffolding-ablation.md). *(The 2026-06-12 stale-INDEX incident — an AI instance inherited a wrong section reference from this file's former "§ 6.4" entry — is documented in Paper 2 § 4.6 coda and logged in the same claim file.)*
 
+**Companion / addendum (draft seed).** [`paper2-epistemic-dependency/memory-is-not-a-source.md`](paper2-epistemic-dependency/memory-is-not-a-source.md) — *Memory Is Not a Source: Recall-Avoidance, External Anchoring, and Self-Constraint as Load-Bearing Method in AI-Assisted Formal Work.* Isolates the most frequently load-bearing correction mechanism the parent paper treats only implicitly — the moment-to-moment refusal to let model recall stand as warrant — and generalizes a two-trap near-miss from the Rieger–Nishimura formalization (conflicting indexing conventions, then a finite-quotient that manufactures false identities) into nine transferable rules. Sharpest rule: a finite oracle is a sound *refuter* but an unsound *confirmer*; a quotient's manufactured identities compile green. Provenance (§3) points at `Examples/NishimuraNormalForm.lean` and the normal-form ledgers.
+
 ---
 
 ## Paper 3 — The Distinction Operation
