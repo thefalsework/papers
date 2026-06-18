@@ -456,3 +456,12 @@ property, so the central weld no longer depends on [C].  Both must report only t
 standard axioms. -/
 #print axioms FalseWork.Lattice.generatedBy_isLadderValue
 #print axioms FalseWork.Lattice.nishimura_kernel_unique_of_generated
+
+/-! Phase 4 concrete witness: the music lattice as a one-generated Heyting
+algebra.  `tritone_generates` shows the tritone generates all of `Div12` under
+the Heyting operations (Citkin Prop. 3.1 for the music object, no hidden closure
+hypothesis since the ladder has collapsed at cardinality 6);
+`kernel_unique_via_subalgebra` is the third, [C]-free derivation of the unique
+kernel via `nishimura_kernel_unique_of_generated`.  Standard axioms only. -/
+#print axioms FalseWork.Lattice.Examples.Div12.tritone_generates
+#print axioms FalseWork.Lattice.Examples.Div12.kernel_unique_via_subalgebra
