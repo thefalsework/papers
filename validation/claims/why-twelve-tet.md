@@ -23,7 +23,7 @@ The weld (`Div12 ≅ Z_6`) says *where* music landed: on the 6-element truncatio
 
 ### The two-sided forcing this completes
 
-* **Logic side** (all-n kernel law): `Z_6` is the *first* one-generated Heyting algebra where the partition is non-degenerate; unique kernel = the free generator. [K], with the Nishimura enumeration [C].
+* **Logic side** (all-n kernel law): `Z_6` is the *first* one-generated Heyting algebra where the partition is non-degenerate; unique kernel = the free generator. [K] — fully unconditional since 2026-06-17, the Nishimura enumeration now kernel-checked (`generatedBy_isLadderValue`), no longer [C].
 * **Arithmetic side** (this claim): `12` is the *first* equal temperament whose subgroup lattice carries a kernel, and — `12 = 2²·3` being the uniqueness shape `p²q` — that kernel is unique. [K], with the seams below.
 * The two firsts are the **same six-element algebra with the same kernel** (`Z_6 ≅ Div12 ≅ C₃ × C₂`; free generator = tritone = `(1,0)`). Neither selection was available to choose: logic forces the algebra, arithmetic forces the temperament, and they agree.
 
