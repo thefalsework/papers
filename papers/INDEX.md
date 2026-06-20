@@ -152,6 +152,14 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Source.** [`bach-at-the-kernel.md`](bach-at-the-kernel.md)
 
+### Position-Taking from the Kernel Up (bedrock-to-interpretation map)
+
+**Full title.** *Position-Taking from the Kernel Up: The Four-Cell Partition from Heyting Bedrock to Bach, Schoenberg, and Beckett.* (v0.1, June 2026)
+
+**Register.** Expository synthesis with an explicit **[K]/[A] seam**. Runs the four-position structure end to end: the kernel-checked partition theorem and its floor (§§2–3, [K], cited) → the kernel as the classifier's *entry condition* (no kernel ⇒ does not enter) → the four cells as Heyting predicates with interpretive glosses → the placement of works (**[A]** throughout): Bach = Infrastructure (states the kernel inside the ground), Berg = Exploitation (kernel worked as residue), Schoenberg = Refusal (`kᶜ`; negation is kernel-bound), Beckett = Refusal at its limit (the literary case, *no formal object underneath*), CA/process music = the exit (pre-kernel, the only falsifiable contact point, tested in `scripts/`). Carries the non-obvious law that one exits the domain by *indifference, not intensity* (why modernism could never fully exit), and an honest §7 on the elasticity risk and convergence with Adorno/Bloom.
+
+**Source.** [`position-taking-from-the-kernel-up.md`](position-taking-from-the-kernel-up.md)
+
 ---
 
 ## Cross-reference graph
