@@ -25,7 +25,7 @@ This is the math-anchor analogue of the music anchor's Diophantine floor. It rec
 
 ### Structural identification — strength [A] (prose, not theorem)
 
-The reading "diagonal escape = FalseWork comma" is a structural identification, exactly as "Pythagorean near-miss = comma" was in the music floor. The theorems are `[K]`; the interpretation is `[A]`-adjacent and lives in prose. Lawvere makes the *unification* of Paper 4 §10 rigorous-adjacent — the common core is genuinely one lemma — but **Tarski (truth) and Gödel (provability) proper require a formalized truth/provability predicate** (the external `FormalizedFormalLogic` Foundation project) and are **`[O]`, named but not imported**.
+The reading "diagonal escape = FalseWork comma" is a structural identification, exactly as "Pythagorean near-miss = comma" was in the music floor. The theorems are `[K]`; the interpretation is `[A]`-adjacent and lives in prose. (The same-vs-opposite reading of the Pythagorean near-miss is itself contested prior art: Kurenniemi 2004 reads `2¹⁹ ≈ 3¹²` as a number-theoretic *coincidence*, where the framework reads it as a *structural obstruction* — same arithmetic, opposite ontology; see `validation/claims/why-twelve-tet.md` § "Prior art".) Lawvere makes the *unification* of Paper 4 §10 rigorous-adjacent — the common core is genuinely one lemma — but **Tarski (truth) and Gödel (provability) proper require a formalized truth/provability predicate** (the external `FormalizedFormalLogic` Foundation project) and are **`[O]`, named but not imported**.
 
 ### Phase 2–4 results (run 2026-06-09, kernel-checked) — strength [K]
 

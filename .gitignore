@@ -36,3 +36,7 @@ _p*.txt
 # Node / JS (in case any tooling lands here)
 node_modules/
 package-lock.json
+
+# Python build artifacts
+__pycache__/
+*.pyc
