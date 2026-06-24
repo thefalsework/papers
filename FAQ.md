@@ -56,6 +56,6 @@ If you can produce any of these, you've done the project a service. That's how i
 
 ### I'm not a mathematician. How do I push back or contribute?
 
-- Open a [Discussion](https://github.com/thefalsework/papers/discussions) — plain questions and disagreement welcome, no formality.
+- Open a [Discussion](https://github.com/thefalsework/papers/discussions) — plain questions and disagreement welcome, no formality. A good place to start: [**"Where does this lens fail in your field?"**](https://github.com/thefalsework/papers/discussions/12).
 - Or email `chris@falsework.dev`.
 - Tell us where the lens rings true or false in whatever you know best. That's the most valuable thing a non-specialist can offer, and there isn't enough of it.

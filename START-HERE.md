@@ -52,7 +52,7 @@ If you remember one thing: the *music spine* is hard and checkable; the *cross-e
 
 Most of this repo is built for mathematicians and logicians. You are not obligated to read any of it. If something here made you think — agreed, disagreed, "this is obviously true in *my* field," or "this is obviously false in *my* field" — that reaction is genuinely useful, and you can share it without any technical machinery:
 
-- **Just want to talk about it?** Open a [Discussion](https://github.com/thefalsework/papers/discussions) (no code, no formal claim required — plain questions and pushback welcome).
+- **Just want to talk about it?** Jump straight into [**"Where does this lens fail in your field?"**](https://github.com/thefalsework/papers/discussions/12) — the most direct way in — or browse [all Discussions](https://github.com/thefalsework/papers/discussions) (no code, no formal claim required — plain questions and pushback welcome).
 - **Prefer email?** `chris@falsework.dev`. Say where the lens rings true or false in whatever you know best.
 - **Want the narrative version?** [falsework.dev/thesis](https://falsework.dev/thesis) tells the story end to end, no math.
 
