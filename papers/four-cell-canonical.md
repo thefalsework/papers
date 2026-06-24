@@ -29,19 +29,21 @@ See `position-taking-from-the-kernel-up.md` §2 for the kernel-checked statement
 
 ## 3. What Commitment becomes
 
-Commitment is recast as a **depth/fidelity modifier**: "Commitment-grade" occupancy of one of the four cells — a work that extends its cell's logic to the limit with total fidelity.
+Commitment is recast as a binary **fidelity gate** (`commitment_yes`) that applies *within* a cell — TRUE when a work pursues its cell's logic to that cell's structural limit (the boundary approached without further iteration producing new content). It is cell-independent in principle.
 
-The canonical examples relocate, and the relocation matches the framework's own best close readings:
+The works previously called "Commitment" do **not** relocate to Infrastructure. They were characterized by the framework's own term `outside_coherence` — "kernel logic extended to its asymptotic limit, boundary approached without being crossed" — which is *literally* the closure-residue predicate `x ≤ kᶜᶜ ∧ x ⊄ k`, i.e. **Exploitation**. So the systematic, structurally-derivable mapping is **(Exploitation, `commitment_yes` = true)**, with some genuinely-refusing works instead **(Refusal, `commitment_yes` = true)**:
 
-- **Bach, *Art of Fugue*** — formerly "Commitment." Already read in the Bach curriculum as *"Infrastructure at its absolute boundary."* → **Commitment-grade Infrastructure.**
-- **Sokurov, *Russian Ark*** — formerly "Commitment," peer of Empire's Refusal. Continuity extended to its limit (one unbroken take). → **Commitment-grade Infrastructure**, *not* a peer of Refusal.
-- **Maillart's bridges, Béla Tarr** — likewise Commitment-grade Infrastructure.
+- **Sokurov, *Russian Ark*** — formerly "Commitment," peer of Empire's Refusal → **(Exploitation, commitment-yes)**: the cut's continuity-management closure exploited past the standard stopping point.
+- **Maillart's bridges, Béla Tarr, Rothko (image-pole), Partch** — likewise **(Exploitation, commitment-yes)** (per `comma-formal-structure-note.md` §5.5).
+- **Bach, *Art of Fugue*** — *not* in the systematic commitment list. The Bach trajectory's pedagogical framing ("Infrastructure at its absolute boundary") is an allowed per-work divergence (migration 0171: such reads live in trajectory framing, not the DB cell).
 
-The load-bearing pedagogical contrast survives, sharpened. Russian Ark and Empire still share a surface (no conventional cuts) and oppose structurally — but the opposition is no longer "two outside territories, opposite vectors." It is: **Refusal is a genuine cell (`x ≤ kᶜ`); Commitment is maximal-fidelity occupancy of Infrastructure.** They meet *at the boundary from opposite sides* — extension to the limit vs. inversion — which is what the framework already said about Art of Fugue and Interstellar Space.
+**This mapping was already decided and implemented** — it is the May-2026 architecture in `comma-formal-structure-note.md` (revised 2026-05-10) and live migrations `0170–0173` (which add `commitment_yes`/`commitment_yes_reasoning`, remap `commitment → exploitation`, and drop the `commitment` response type). This note records and propagates that decision; it does not originate it.
+
+The load-bearing pedagogical contrast survives, sharpened. Russian Ark and Empire share a surface (no conventional cuts) and oppose structurally, but as **disjoint Heyting regions**: Russian Ark works the closure-residue to its limit (Exploitation, `x ≤ kᶜᶜ ∧ x ⊄ k`); Empire refuses the kernel (Refusal, `x ≤ kᶜ`). Both are *outside the kernel's interior* — `kᶜᶜ ⊓ kᶜ = ⊥` makes them disjoint — which is why one is not the other.
 
 ## 4. Substantive consequence (not just a relabel)
 
-The one place the two models genuinely disagree about a classification is **Russian Ark**: Commitment-peer-of-Refusal (old) vs. Commitment-grade-Infrastructure (canonical). Adopting four cells changes its cell label. This is recorded, not concealed; it is the framework's correction architecture operating on its own taxonomy.
+The one place the two models genuinely disagree about a classification is **Russian Ark**: Commitment-peer-of-Refusal (old five-cell) vs. **(Exploitation, commitment-yes)** (canonical four-cell). Adopting four cells changes its cell label to Exploitation with the gate set. This is recorded, not concealed; it is the framework's correction architecture operating on its own taxonomy — and it is already the state of the database.
 
 ## 5. Propagation checklist
 
@@ -49,7 +51,8 @@ Surfaces still carrying the five-peer framing, to be brought into line:
 
 - [ ] **Assistant system prompt** (`node0000/app/api/assistant/route.ts`) — "THE FIVE UNIVERSAL RESPONSES" → four positions + fidelity gate. *(in progress with this decision)*
 - [ ] **`introduction` curriculum** intro section "The Five Universal Positions" (`node0000/db/0166`) — rewrite to four + gate. (Self-contained: the intro has no Commitment-classified item.)
-- [ ] **Cinema curriculum** Russian Ark item + `profile_kernel_engagements` (`node0000/db/0129…`) — reclassify to Commitment-grade Infrastructure; reframe the Russian Ark ↔ Empire contrast. *(Cascades through the curriculum's central distinction; executed as the first step of the `/guides` four-cell build.)*
+- [x] **DB taxonomy + engagements** — done in migrations `0170–0173`: `commitment_yes` gate added, `commitment → exploitation` remapped, `commitment` response type dropped. Russian Ark is **(Exploitation, commitment-yes)** in the DB.
+- [ ] **Cinema curriculum** Russian Ark item framing prose (`node0000/db/0129…`) — reframe the Russian Ark ↔ Empire contrast to Exploitation-at-limit vs. Refusal (the engagement cell is already correct via 0171; only the framing text still reads "Commitment"). *(Executed in the `/guides` four-cell build.)*
 - [ ] **Renderer** (`node0000/app/guides/[slug]/page.tsx`) — display "Commitment" as a modifier, not a peer response, once the data is reclassified.
 - [ ] **Paper 1** — replace the five-from-a-decision-tree derivation with the four-cell partition + Commitment-as-gate. (Separate prose task; largest single item.)
 - [ ] **`/guides` position-trajectory layer** — build **four** position-rows (Infrastructure, Distribution, Exploitation, Refusal); teach Commitment as a depth modifier *inside* them, never as a fifth row.
