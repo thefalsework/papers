@@ -2,6 +2,8 @@
 
 If you've landed in this repository and the front page reads like a wall of jargon, this page is for you. No background needed. About a five-minute read.
 
+> **Prefer a designed, narrative read over a code repository?** The same ideas, told as a story with no math, live at **[falsework.dev/thesis](https://falsework.dev/thesis)** — that's the friendliest way in. This page is the quick version for people who arrived here on GitHub.
+
 ---
 
 ## The one idea
