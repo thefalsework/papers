@@ -102,11 +102,19 @@ three-element chain stacked above it. The construction class was independently
 identified by Citkin. (5)~\emph{Arithmetic instance:} the subgroup lattice of
 $\ZZ/12\ZZ$ (equivalently the divisor lattice of $12$) is one-generated as a
 Heyting algebra --- by the two-element subgroup $\{0, 6\}$ --- and is
-therefore isomorphic to $\Znn{6}$. Among all cyclic groups $\ZZ/n\ZZ$ with $n$
-having at most two prime divisors, the subgroup lattice contains an ordinary
-element iff $n$ is divisible by the square of a prime with a second prime
-present, and contains a \emph{unique} ordinary element iff $n = p^2 q$; the
-least such $n$ is $12$. In the pitch-class reading of $\ZZ/12\ZZ$, the unique
+therefore isomorphic to $\Znn{6}$. For every
+$n = p_1^{a_1} \cdots p_k^{a_k}$, the number of ordinary elements of the
+subgroup lattice of $\ZZ/n\ZZ$ is exactly
+$\prod (a_i + 1) - \prod a_i - 2^k + 1$; consequently an ordinary element
+exists iff $n$ has at least two prime divisors and is not squarefree, and is
+\emph{unique} iff $n = p^2 q$ --- with no restriction on the number of prime
+factors. The least such $n$ is $12$. (6)~\emph{Substitution monoid:}
+endomorphisms of a one-generated Heyting algebra are determined by their value
+at the generator, and the identity of the endomorphism monoid is the unique
+endomorphism fixing the unique ordinary element;
+$\mathrm{End}(\Znn{6}) \cong \Znn{6}$ with exactly six endomorphisms, each
+satisfying $f^3 = f$ (a machine-checked instance of Ruitenburg's
+periodicity). In the pitch-class reading of $\ZZ/12\ZZ$, the unique
 ordinary element is the tritone, and the four regions of (1) are inhabited by
 the tritone, the augmented triad, the diminished seventh chord, and the
 whole-tone scale. All principal results are kernel-checked in Lean~4 against
@@ -166,6 +174,13 @@ Citkin has confirmed (personal communication, 2026) that he knows of no
 written proof. The machine-checked proof given here proceeds through a
 machine-checked proof of Nishimura's one-variable normal-form theorem
 (Theorem~5.1), which may be of independent interest as a formalization.
+\item \textbf{Remark 5.5 (the substitution monoid).} Endomorphisms of a
+one-generated Heyting algebra are determined by their value at the generator,
+and --- when the generator is ordinary --- the identity of the endomorphism
+monoid is the unique endomorphism fixing the unique ordinary element. At
+$\Znn{6}$ the correspondence is onto:
+$\mathrm{End}(\Znn{6}) \cong \Znn{6}$, six endomorphisms, composition $=$
+substitution, every $f$ satisfying $f^3 = f$.
 \item \textbf{Theorem 6.1 (converse failure).} Unique-ordinary does not imply
 one-generated: there is an eight-element Heyting algebra $H_8$ with a unique
 ordinary element that is not one-generated, and eight is the minimal such
@@ -186,6 +201,13 @@ contains a unique ordinary element iff $n = p^2 q$ ($p$, $q$ distinct
 primes). The least $n$ of this form is $12$. Prime-power and squarefree
 lattices never contain ordinary elements --- the former abstractly for all
 chains, covering all $p^k$ at once.
+\item \textbf{Theorem 8.2 (the general $k$-prime law and the count formula).}
+For arbitrary $n = p_1^{a_1} \cdots p_k^{a_k}$, the number of ordinary
+elements of the divisor lattice is exactly
+$\prod (a_i + 1) - \prod a_i - 2^k + 1$, and uniqueness forces $n = p^2 q$
+outright: three or more prime factors always produce at least two ordinary
+elements. The restriction to two primes in Theorem~8.1 is thus removed
+abstractly, not by extension of instances.
 \end{itemize}
 
 The results are individually modest; their interest is in the convergence.
@@ -521,6 +543,33 @@ a kernel-checked counterexample, recorded to prevent the natural overreading
 of Theorem~4.2.
 \end{remm}
 
+\begin{remm}[the substitution monoid]{5.5}
+The Heyting endomorphisms of $H$ form a monoid $\mathrm{End}(H)$ under
+composition, and the normal-form machinery of Theorem~5.1 controls it. Homs
+commute with the term ladder --- $f(x_n(g)) = x_n(f g)$, index by index ---
+so two homs out of a one-generated algebra that agree on the generator agree
+everywhere: evaluation at $g$ embeds $\mathrm{End}(H)$ into $H$. If moreover
+$g$ is ordinary, the monoid identity acquires an order-theoretic
+characterization: \emph{an endomorphism is the identity iff it fixes the
+unique ordinary element} (by Theorem~5.2 there is exactly one). At $\Znn{6}$
+the evaluation embedding is onto: every endomorphism is the substitution
+$g \mapsto b$ for a unique $b$, so
+$\mathbf{\mathrm{End}(\Znn{6}) \cong \Znn{6}}$ --- exactly six
+endomorphisms, with composition transported to the substitution product
+$(b, c) \mapsto c[g := b]$. Three further facts are kernel-checked there: no
+non-identity endomorphism preserves ordinariness (every proper substitution
+lands the generator in a degenerate region); every endomorphism satisfies
+$\mathbf{f^3 = f}$ --- a machine-checked one-variable instance of
+Ruitenburg's periodicity theorem (Ruitenburg 1984), with the substitution at
+$\neg g$ the unique element of period exactly two (it swaps with the one at
+$\neg\neg g$); and the group of units is trivial.
+\textup{(Lean: \lean{heytingHom_map_nishimuraTerm},
+\lean{heytingHom_ext_of_generated}, \lean{endo_eq_id_iff_fixes_kernel},
+\lean{Div12.endo_bijection}, \lean{Div12.subst_cube}; all in the file
+\lean{SubstitutionMonoid.lean}, axioms \lean{propext},
+\lean{Quot.sound}.)}
+\end{remm}
+
 \section{The converse fails: $H_8$}
 
 Theorem~5.2 says one-generated (with ordinary generator) $\Rightarrow$ unique
@@ -672,36 +721,61 @@ Under the explicit isomorphism $\mathrm{Div}12 \cong C_3 \times C_2$, the
 unique ordinary element of the $n = 12$ lattice is carried to $(1, 0)$ --- and
 back in $\mathrm{Div}12$ it is the divisor $2$, the generator of Theorem~7.1.
 
-\begin{remm}[the count formula, two primes only]{8.2}
-Statement~(2) yields an exact count: the divisor lattice of $n = p^a q^b$ has
-precisely $(a - 1) + (b - 1)$ ordinary elements --- the strictly internal
-elements of one chain paired with $\bot$ of the other. This gives (3)--(5) at
-once for two primes: existence iff the count is positive iff
+\begin{thmm}[the general $k$-prime law and the count formula]{8.2}
+Let $n = p_1^{a_1} \cdots p_k^{a_k}$ ($k \ge 1$, all $a_i \ge 1$, $p_i$
+distinct primes), with divisor lattice the product of chains
+$C_{a_1+1} \times \cdots \times C_{a_k+1}$ under the pointwise Heyting
+structure. Then, abstractly in $k$ and the exponent vector:
+\begin{enumerate}
+\item The ordinary elements are exactly the points with some coordinate
+$\bot$ and some coordinate strictly internal to its chain (generalizing
+Theorem~8.1(2)).
+\item An ordinary element exists iff $k \ge 2$ and some $a_i \ge 2$.
+\item The number of ordinary elements is exactly
+$\prod_i (a_i + 1) - \prod_i a_i - 2^k + 1$
+(inclusion--exclusion on the complement of~(1): the points with no $\bot$
+coordinate, $\prod_i a_i$ of them, and the points with every coordinate in
+$\{\bot, \top\}$, $2^k$ of them, overlap exactly at $\top$).
+\item The ordinary element is \emph{unique} iff $k = 2$ and
+$\{a_1, a_2\} = \{2, 1\}$ --- iff $n = p^2 q$ --- now with no restriction on
+the number of prime factors: with $k \ge 3$, an internal value at one
+coordinate can pair with $\bot$ placed at either of two other coordinates
+(with or without a $\top$ elsewhere), so a kernel is never alone.
+\end{enumerate}
+\textup{(Lean: \lean{piChain_kernel_iff}, \lean{piChain_kernel_exists_iff},
+\lean{piChain_kernel_unique_iff}, \lean{piChain_kernel_card}, in the file
+\lean{WhyTwelveGeneral.lean}.)}
+\end{thmm}
+
+Two-prime instance of~(3):
+$(a+1)(b+1) - ab - 4 + 1 = (a - 1) + (b - 1)$, recovering
+Theorem~8.1(3)--(5): existence iff the count is positive iff
 $\max(a, b) \ge 2$; uniqueness iff the count is $1$ iff
-$\{a, b\} = \{2, 1\}$; and $24 = 2^3 \cdot 3 \to 2$,
-$36 = 2^2 \cdot 3^2 \to 2$. The formula does \emph{not} extend coordinatewise
-to three or more primes: for $60 = 2^2 \cdot 3 \cdot 5$ the naive sum
-$\sum_i (a_i - 1)$ gives $1$, while the kernel-checked count is $3$
-(\lean{sixty_kernel_three}) --- in a product of three chains an ordinary
+$\{a, b\} = \{2, 1\}$; $24 = 2^3 \cdot 3 \to 2$ and
+$36 = 2^2 \cdot 3^2 \to 2$. At $60 = 2^2 \cdot 3 \cdot 5$ the formula gives
+$3 \cdot 2 \cdot 2 - 2 - 8 + 1 = 3$, matching the exhaustive check
+(\lean{sixty_kernel_three}); squarefree $n$ with any number of primes gives
+$2^k - 1 - 2^k + 1 = 0$. Note the naive coordinatewise sum
+$\sum_i (a_i - 1)$ fails for $k \ge 3$ (it gives $1$ at $60$): an ordinary
 element needs only \emph{some} coordinate at $\bot$ alongside a strictly
-internal one, not all remaining coordinates at $\bot$, so $(m, 0, 0)$,
-$(m, 1, 0)$, $(m, 0, 1)$ all qualify. This is why the $\ge 3$-prime case is
-left open below rather than claimed by extension.
-\end{remm}
+internal one, not all remaining coordinates at $\bot$. The count instances
+at $12$, $24$, $36$, $60$, and $210 = 2 \cdot 3 \cdot 5 \cdot 7$ are
+additionally verified by exhaustive computation.
 
 \subsection*{Scope statements, fixed precisely}
-(i)~The characterization in (3)--(4) is proved abstractly for all exponents
-but only for $n$ with \textbf{at most two prime divisors}; for three or more
-primes we have instance checks only ($n = 60$), and the general $k$-prime
-statement is left open (the coordinatewise computation appears routine but is
-not formalized). (ii)~$18 = 2 \cdot 3^2$ and $20 = 2^2 \cdot 5$ are also of
-the form $p^2 q$ and also carry unique ordinary elements --- necessarily the
-\emph{same} six-element lattice. Twelve is the \textbf{least} $n$ of the form,
-not the only one. (iii)~The identification of $n$-tone equal temperament with
-$\ZZ/n\ZZ$ (next section) is a modeling convention, not mathematics.
+(i)~Theorem~8.2 is proved abstractly for all $k$ and all exponent vectors;
+what remains cited rather than proved is the classical structure theorem
+``the divisor lattice of $n$ is the product of one chain per prime'' for
+general $n$ (the instance at $n = 12$ is kernel-checked,
+\lean{div12OrderIsoChains}). (ii)~$18 = 2 \cdot 3^2$ and $20 = 2^2 \cdot 5$
+are also of the form $p^2 q$ and also carry unique ordinary elements ---
+necessarily the \emph{same} six-element lattice. Twelve is the
+\textbf{least} $n$ of the form, not the only one. (iii)~The identification
+of $n$-tone equal temperament with $\ZZ/n\ZZ$ (next section) is a modeling
+convention, not mathematics.
 
 \subsection*{The two-sided forcing}
-Theorems~5.2 and~8.1 select the same object from independent directions. On
+Theorems~5.2 and~8.1--8.2 select the same object from independent directions. On
 the logic side, $\Znn{6}$ is the \emph{first} one-generated Heyting algebra
 whose four-region decomposition is non-degenerate (Theorem~4.1: nothing below
 six elements qualifies), with the free generator as the forced distinguished
@@ -821,6 +895,16 @@ $p^2 q$ law (Thm~8.1) & \lean{total_no_kernel},
   \lean{chainProd_kernel_unique_iff}, \lean{why_twelve},
   \lean{div12OrderIsoChains} &
   \lean{WhyTwelve.lean} & all three \\
+$k$-prime law + count (Thm~8.2) & \lean{piChain_kernel_iff},
+  \lean{piChain_kernel_exists_iff},
+  \lean{piChain_kernel_unique_iff}, \lean{piChain_kernel_card} &
+  \lean{WhyTwelveGeneral.lean} & all three \\
+Substitution monoid (Rem.~5.5) & \lean{heytingHom_map_nishimuraTerm},
+  \lean{heytingHom_ext_of_generated},
+  \lean{endo_eq_id_iff_fixes_kernel}, \lean{Div12.endo_bijection},
+  \lean{Div12.substHom_comp}, \lean{Div12.subst_cube} &
+  \lean{SubstitutionMonoid.lean} &
+  \lean{propext}, \lean{Quot.sound} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -831,9 +915,9 @@ under \lean{lean/FalseWorkPapers/Lattice/}, not \lean{Examples/}.
 
 Truncation computations at $\Znn{5}$--$\Znn{8}$ are exhaustive \lean{decide}
 checks over concrete decidable instances certified one-generated by exhibiting
-every element as a term value. Two items rest partly outside the kernel and
-are flagged where stated: the minimality of $H_8$ (script-level enumeration,
-Section~6) and the $\ge 3$-prime case of Theorem~8.1 (instances only). The
+every element as a term value. One item rests partly outside the kernel and
+is flagged where stated: the minimality of $H_8$ (script-level enumeration,
+Section~6). The
 general ``divisor lattice = product of chains'' structure theorem and Citkin's
 Theorem~6 (uniqueness of $\Znn{n}$) are cited classical inputs.
 
@@ -955,6 +1039,12 @@ A006982: Number of unlabeled distributive lattices with $n$ elements.
 Rieger, L. (1957).
 A remark on the so-called free closure algebras.
 \emph{Czechoslovak Mathematical Journal}, 7.
+
+\bibitem{Ruitenburg1984}
+Ruitenburg, W. (1984).
+On the period of sequences $(A^n(p))$ in intuitionistic propositional
+calculus.
+\emph{The Journal of Symbolic Logic}, 49(3), 892--899.
 
 \end{thebibliography}
 

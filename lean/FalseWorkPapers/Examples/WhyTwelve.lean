@@ -61,11 +61,11 @@ Neither selection was available to choose.
 
 ## Scope honesty
 
-* The two-prime laws are abstract **[K]** for all exponents; the
-  `≥ 3`-prime statement ("kernels multiply with each extra prime") is
-  kernel-checked only at the sample `p²qr` (`sixty_kernel_three`); the
-  general `k`-prime version follows by the same coordinate argument but
-  is not formalized.
+* The two-prime laws are abstract **[K]** for all exponents; the general
+  `k`-prime laws (characterization, existence, uniqueness, and the exact
+  count `∏(eᵢ+1) − ∏eᵢ − 2^k + 1`) are now also abstract **[K]** in
+  `WhyTwelveGeneral.lean` — the sample `p²qr` (`sixty_kernel_three`)
+  remains as an instance check of the general law.
 * "The divisor lattice models `n`-TET" inherits the framework's standing
   identification of `n`-tone temperament with `ℤ/n` (forced for 12 by the
   music anchor; conventional for other `n`).
