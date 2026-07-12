@@ -2,11 +2,12 @@
 
 This directory exists from day one of the repository to signal that a Lean 4 formalization of the paper series' mathematical claims is a first-class target of the project, and to give any Lean contributor a single, well-defined place to propose work.
 
-At this moment the directory contains:
-- This README describing the formalization target.
-- A skeletal `lakefile.lean` and `lean-toolchain` so a contributor can clone, `lake update`, and begin work without friction.
-- A first sketch of the **four-position partition + Commitment gate** formalization under [`FalseWorkPapers/Positions/`](FalseWorkPapers/) — see *Sketch in flight* below.
-- No completed proofs yet.
+The directory contains:
+- This README describing the formalization targets.
+- A `lakefile.lean` and pinned `lean-toolchain` so a contributor can clone and build without friction (see *Running locally* below).
+- The **four-position partition + Commitment gate** formalization under [`FalseWorkPapers/Positions/`](FalseWorkPapers/) — kernel-checked, zero `sorry`s; see *Status* below.
+- The **one-generated Heyting algebra / ordinary elements** corpus under [`FalseWorkPapers/Examples/`](FalseWorkPapers/Examples/) — the Lean side of the preprint [`../preprints/ordinary-elements-z6/`](../preprints/ordinary-elements-z6/): Nishimura's one-variable normal form (`NishimuraNormalForm.lean`), the non-degeneracy and uniqueness theorems (`NishimuraKernelLaw.lean`, `LadderCore.lean`), the `H₈` converse counterexample (`UniqueOrdinaryConverse.lean`), the p²q and general k-prime laws with the exact count formula (`WhyTwelve.lean`, `WhyTwelveGeneral.lean`), and the substitution monoid `End(Z₆) ≅ Z₆` (`SubstitutionMonoid.lean`). Axiom audit lines are collected in `Examples/HeytingTypeInstance.lean`; the theorem-by-Lean-name correspondence is §10 of the preprint.
+- Music-kernel formalizations (Tier 1 targets below) under `FalseWorkPapers/Examples/` and `FalseWorkPapers/NumberTheory/`.
 
 This README serves as the authoritative specification of what a Lean formalization of this project would cover. Contributions — partial or complete, bounded or ambitious — are warmly welcomed.
 
@@ -107,11 +108,11 @@ A Tier 2 or Tier 3 contribution, or a contribution that bundles multiple tiers, 
 
 ```
 cd lean/
-lake update
+lake exe cache get   # download prebuilt Mathlib oleans (do NOT run `lake update`)
 lake build
 ```
 
-The `lakefile.lean` declares a dependency on `mathlib4`. The `lean-toolchain` file pins a specific Lean version (see that file for the current pin). Contributors are welcome to update the pin if newer Lean / mathlib4 versions have better support for the specific formalizations being attempted.
+The `lakefile.lean` declares a dependency on `mathlib4`, pinned via `lake-manifest.json`; the `lean-toolchain` file pins the Lean version. Build against the committed pins — running `lake update` re-resolves Mathlib to latest and may break the tree. Proposals to move the pin are welcome as PRs.
 
 ---
 
