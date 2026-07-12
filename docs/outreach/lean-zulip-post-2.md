@@ -11,7 +11,7 @@
 
 | Date | Channel / topic | Permalink | Notes |
 |---|---|---|---|
-| 2026-07-12 | `#AI authored projects` > *Nishimura normal form + unique ordinary elements* | *(to be added)* | Announcement of the Examples corpus at repo state `6322519`. Fresh-clone build verified same day (clone → `lake exe cache get` → `lake build`, 2641 jobs, success). |
+| 2026-07-12 | `#AI authored projects` > *Nishimura normal form + unique ordinary elements* | [link](https://leanprover.zulipchat.com/#narrow/channel/583339-AI-authored-projects/topic/Nishimura.20normal.20form.20.2B.20unique.20ordinary.20elements/with/609720622) | Announcement of the Examples corpus at repo state `6322519`. Fresh-clone build verified same day (clone → `lake exe cache get` → `lake build`, 2641 jobs, success). Body revised same day to state the post's own AI-drafted provenance inline (see Provenance note below). |
 
 ## Post body as posted (2026-07-12)
 
@@ -39,7 +39,15 @@ The predecessor record ([`lean-zulip-post.md`](lean-zulip-post.md), *Responses r
 1. The post was made in `#AI authored projects`, a channel created after April 2026 specifically for AI-authored Lean work — a venue whose purpose is engagement with AI-produced artifacts under disclosure, which did not exist when the commitment was made.
 2. The post's first sentence discloses AI authorship of the Lean; the tension concerns the *prose of the post itself*, which the first-posted version did not separately disclose.
 
-Resolution: the author was advised (same day, before any thread responses) to add an explicit in-thread statement of the post's own AI-drafted provenance, superseding the April commitment openly in the one channel where that is coherent, rather than silently. The in-thread outcome should be logged in the *Responses / outcomes* section below when it exists. Future posts in any **other** Zulip channel remain under the April commitment: human-written prose, standard repo-side AI-disclosure discipline.
+Resolution: same day, before any thread responses, the post body was revised to state its own AI-drafted provenance in the opening paragraph — including an explicit reference to the April commitment and an invitation for moderators to object — superseding that commitment openly in the one channel where AI-drafted-and-disclosed is coherent with the venue's purpose, rather than silently. Future posts in any **other** Zulip channel remain under the April commitment: human-written prose, standard repo-side AI-disclosure discipline.
+
+## Post body revision (posted 2026-07-12, replacing the opening paragraph above)
+
+> I'm an independent researcher. Full provenance up front: both the Lean in this project *and this post itself* were AI-drafted (Claude, working in Cursor) under my direction and review — which is why I'm posting in this channel. I committed in an earlier thread (April, #new members) to human-written posts after moderators flagged AI-drafted prose; I'm treating this channel as the one place where AI-drafted-and-disclosed is coherent with the venue's purpose rather than against it. If the moderators see that differently, tell me and I'll adjust.
+>
+> On the mathematics: every principal claim is kernel-checked — no `sorry`, no `native_decide`, and per-theorem `#print axioms` audits reporting at most `propext`, `Classical.choice`, `Quot.sound`.
+
+*(Remainder of the body unchanged from the version quoted above.)*
 
 ## Responses / outcomes
 
