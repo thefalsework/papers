@@ -23,4 +23,10 @@ require mathlib from git
 
 @[default_target]
 lean_lib «FalseWorkPapers» where
-  -- No Lean files yet.
+  -- Additional library configuration goes here.
+
+/-- Mathlib-only statements of the ordinary-elements preprint's principal
+theorems, for verification with `leanprover/comparator` (see `config.json`
+and the "Verifying with comparator" section of `README.md`). -/
+lean_lib «Challenge» where
+  -- Single root module `Challenge.lean`.

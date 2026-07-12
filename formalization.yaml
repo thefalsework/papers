@@ -1,0 +1,146 @@
+# Machine-readable summary of the AI-authored formalization backing the
+# preprint "The Unique Ordinary Element of a One-Generated Heyting Algebra,
+# the Subgroup Lattice of Z/12Z, and a Characterization of n = p^2 q"
+# (preprints/ordinary-elements-z6/). Follows the comparator +
+# formalization.yaml convention emerging in Lean Zulip's #AI-authored-projects.
+
+project:
+  name: falsework-papers-ordinary-elements
+  title: "Ordinary elements of one-generated Heyting algebras (Lean 4)"
+  short_description: >
+    Kernel-checked structure theory of one-generated Heyting algebras:
+    Nishimura's one-variable normal form, the four-region non-degeneracy
+    criterion, the uniqueness of the ordinary element (statement Citkin,
+    arXiv:2512.05633, previously unproved), the six-element threshold and
+    Z6 order-embedding, the H8 converse counterexample, the divisor lattice
+    of 12 as Z6, the general k-prime existence/uniqueness/count laws, and
+    the substitution monoid End(Z6) = Z6.
+  repository: "https://github.com/thefalsework/papers"
+  paper: "preprints/ordinary-elements-z6/paper.md"
+  license: CC-BY-4.0
+
+authorship:
+  human: "Chris Brink (independent; chris@falsework.dev) — direction, review, prior-art adjudication"
+  ai: "Claude (Anthropic), working in Cursor — Lean proofs and prose drafting"
+  disclosure: >
+    All Lean in scope was AI-authored under human direction and review.
+    Prior-art standing adjudicated by correspondence with Alex Citkin
+    (June 2026, cited with permission); record at docs/outreach/citkin-email.md.
+
+toolchain:
+  lean: "leanprover/lean4:v4.30.0-rc2"
+  mathlib: "pinned via lean/lake-manifest.json"
+
+verification:
+  challenge_file: lean/Challenge.lean
+  solution_module: FalseWorkPapers
+  bridge_file: lean/FalseWorkPapers/Examples/ChallengeBridge.lean
+  comparator_config: lean/config.json
+  ci_workflow: .github/workflows/comparator.yml
+  permitted_axioms: [propext, Classical.choice, Quot.sound]
+  sorry_count_in_scope: 0        # the six sorries in Challenge.lean are the challenge statements themselves
+  native_decide_in_scope: false
+  audit_lines: lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean  # per-theorem `#print axioms`
+
+# Scope note: the claims above cover the ten files cited by the paper's
+# section-10 audit table (listed below). Two files elsewhere in
+# lean/FalseWorkPapers/Examples/ (MusicKernelZMod12Accum.lean,
+# PythagoreanCommaConvergents.lean) belong to a different paper's track and
+# use native_decide; they are outside this paper's claims and outside the
+# comparator scope.
+scope_files:
+  - lean/FalseWorkPapers/Examples/GlivenkoCollapse.lean
+  - lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean
+  - lean/FalseWorkPapers/Examples/LadderCore.lean
+  - lean/FalseWorkPapers/Examples/NishimuraKernelLaw.lean
+  - lean/FalseWorkPapers/Examples/NishimuraNormalForm.lean
+  - lean/FalseWorkPapers/Examples/NishimuraTruncations.lean
+  - lean/FalseWorkPapers/Examples/SubstitutionMonoid.lean
+  - lean/FalseWorkPapers/Examples/UniqueOrdinaryConverse.lean
+  - lean/FalseWorkPapers/Examples/WhyTwelve.lean
+  - lean/FalseWorkPapers/Examples/WhyTwelveGeneral.lean
+  - lean/FalseWorkPapers/Lattice/FourPositionLattice.lean
+
+# Theorem-by-theorem correspondence, mirroring the paper's section-10 audit
+# table. "all three" = propext, Classical.choice, Quot.sound.
+theorems:
+  - informal: "Four-region partition (Prop. 3.1)"
+    lean: FalseWork.Lattice.lattice_four_position_partition
+    file: lean/FalseWorkPapers/Lattice/FourPositionLattice.lean
+    axioms: all three
+  - informal: "Non-degeneracy criterion (Thm 3.2)"
+    lean: FalseWork.Lattice.allFourCellsInhabited_iff
+    file: lean/FalseWorkPapers/Examples/NishimuraKernelLaw.lean
+    axioms: propext
+    challenge_name: four_regions_iff_ordinary
+  - informal: "Boolean / Glivenko collapse (Cor. 3.3)"
+    lean: FalseWork.Lattice.boolean_no_kernel, FalseWork.Lattice.glivenko_collapse
+    file: lean/FalseWorkPapers/Examples/GlivenkoCollapse.lean
+    axioms: propext
+  - informal: "Dense-bottom (Cor. 3.4)"
+    lean: FalseWork.Lattice.no_ordinary_of_least_nonzero
+    file: lean/FalseWorkPapers/Examples/LadderCore.lean
+    axioms: all three
+  - informal: "Six-element threshold (Thm 4.1)"
+    lean: FalseWork.Lattice.ordinary_card_ge_six, FalseWork.Lattice.allFourCells_card_ge_six
+    file: lean/FalseWorkPapers/Examples/LadderCore.lean
+    axioms: all three
+    challenge_name: ordinary_forces_card_ge_six
+  - informal: "Z6 order-embedding (Thm 4.2)"
+    lean: FalseWork.Lattice.div12OrderEmbedding
+    file: lean/FalseWorkPapers/Examples/LadderCore.lean
+    axioms: propext
+    challenge_name: ordinary_gives_z6_embedding
+  - informal: "Nishimura normal form (Thm 5.1)"
+    lean: FalseWork.Lattice.generatedBy_isLadderValue
+    file: lean/FalseWorkPapers/Examples/NishimuraNormalForm.lean
+    axioms: propext, Quot.sound
+    challenge_name: nishimura_normal_form
+  - informal: "Uniqueness of the ordinary element (Thm 5.2)"
+    lean: FalseWork.Lattice.nishimura_ordinary_unique, FalseWork.Lattice.nishimura_kernel_unique_of_generated
+    file: lean/FalseWorkPapers/Examples/NishimuraKernelLaw.lean
+    axioms: propext, Quot.sound
+    challenge_name: unique_ordinary_element
+  - informal: "Unique generator at Z6 (Cor. 5.3)"
+    lean: FalseWork.Lattice.Examples.Div12.generator_unique
+    file: lean/FalseWorkPapers/Examples/LadderCore.lean
+    axioms: propext, Quot.sound
+  - informal: "Subalgebra-upgrade failure (Rem. 5.4)"
+    lean: FalseWork.Lattice.Examples.nishimuraTerm_himp_diagonal
+    file: lean/FalseWorkPapers/Examples/NishimuraNormalForm.lean
+    axioms: propext, Quot.sound
+  - informal: "Substitution monoid End(Z6) = Z6 (Rem. 5.5)"
+    lean: FalseWork.Lattice.heytingHom_map_nishimuraTerm, FalseWork.Lattice.heytingHom_ext_of_generated, FalseWork.Lattice.endo_eq_id_iff_fixes_kernel, FalseWork.Lattice.Examples.Div12.endo_bijection, FalseWork.Lattice.Examples.Div12.substHom_comp, FalseWork.Lattice.Examples.Div12.subst_cube
+    file: lean/FalseWorkPapers/Examples/SubstitutionMonoid.lean
+    axioms: propext, Quot.sound
+  - informal: "H8 converse counterexample (Thm 6.1)"
+    lean: FalseWork.Lattice.Examples.unique_ordinary_converse_false, FalseWork.Lattice.Examples.h8_ladder_core
+    file: lean/FalseWorkPapers/Examples/UniqueOrdinaryConverse.lean
+    axioms: propext, Quot.sound
+  - informal: "Dense-filter characterization (Prop. 6.2)"
+    lean: FalseWork.Lattice.Examples.unique_ordinary_dense_iff
+    file: lean/FalseWorkPapers/Examples/UniqueOrdinaryConverse.lean
+    axioms: propext, Quot.sound
+  - informal: "Div12 = Z6, tritone generates (Thm 7.1)"
+    lean: FalseWork.Lattice.Examples.Div12.one_generated_by_tritone, FalseWork.Lattice.Examples.Div12.tritone_generates, FalseWork.Lattice.Examples.Div12.kernel_unique
+    file: lean/FalseWorkPapers/Examples/NishimuraTruncations.lean
+    axioms: propext, Quot.sound
+  - informal: "p^2 q law, two primes (Thm 8.1); unique kernel of C3 x C2 at (1,0)"
+    lean: FalseWork.Lattice.total_no_kernel, FalseWork.Lattice.Examples.chainProd_kernel_exists_iff, FalseWork.Lattice.Examples.chainProd_kernel_unique_iff, FalseWork.Lattice.Examples.why_twelve, FalseWork.Lattice.Examples.twelve_kernel_unique
+    file: lean/FalseWorkPapers/Examples/WhyTwelve.lean
+    axioms: all three
+    challenge_name: twelve_unique_kernel
+  - informal: "General k-prime law and count formula (Thm 8.2)"
+    lean: FalseWork.Lattice.Examples.piChain_kernel_iff, FalseWork.Lattice.Examples.piChain_kernel_exists_iff, FalseWork.Lattice.Examples.piChain_kernel_unique_iff, FalseWork.Lattice.Examples.piChain_kernel_card
+    file: lean/FalseWorkPapers/Examples/WhyTwelveGeneral.lean
+    axioms: all three
+
+known_gaps:
+  - >
+    Minimality of the H8 counterexample (eight is the least cardinality) is
+    established by script-level enumeration, not in Lean; flagged in the
+    paper (section 6).
+  - >
+    The classical structure theorem "divisor lattice of n = product of one
+    chain per prime" is cited, not formalized, for general n; the n = 12
+    instance is kernel-checked (div12OrderIsoChains).

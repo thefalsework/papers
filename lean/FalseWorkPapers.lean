@@ -18,6 +18,7 @@ import FalseWorkPapers.Examples.LadderCore
 import FalseWorkPapers.Examples.WhyTwelve
 import FalseWorkPapers.Examples.WhyTwelveGeneral
 import FalseWorkPapers.Examples.SubstitutionMonoid
+import FalseWorkPapers.Examples.ChallengeBridge
 import FalseWorkPapers.Examples.MusicKernelZMod12
 import FalseWorkPapers.Examples.MusicTopos
 import FalseWorkPapers.Examples.MusicToposSub

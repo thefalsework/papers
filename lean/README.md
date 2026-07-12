@@ -112,6 +112,40 @@ lake exe cache get   # download prebuilt Mathlib oleans (do NOT run `lake update
 lake build
 ```
 
+## Verifying the ordinary-elements results with comparator
+
+The principal theorems of the [ordinary-elements preprint](../preprints/ordinary-elements-z6/paper.md) can be verified against [`Challenge.lean`](Challenge.lean) — a Mathlib-only statement file — using [comparator](https://github.com/leanprover/comparator), so a reviewer needs to trust nothing in this repository:
+
+1. **Read [`Challenge.lean`](Challenge.lean)** and check the six theorem statements capture the claims (definitions are inlined in plain Mathlib vocabulary; the file is ~120 lines).
+2. **Run comparator** to mechanically confirm that the `FalseWorkPapers` library proves those exact statements with only `propext` / `Classical.choice` / `Quot.sound`, kernel-accepted, in a `landrun` sandbox.
+
+Setup (Linux — landrun requires Landlock; on other platforms use the [CI run](../.github/workflows/comparator.yml) as the canonical check):
+
+```bash
+# Build landrun (requires Go)
+git clone https://github.com/Zouuup/landrun.git
+cd landrun && go build -o landrun cmd/landrun/main.go && cd ..
+
+# Build lean4export at the nearest tag, against this project's toolchain
+git clone https://github.com/leanprover/lean4export.git
+cd lean4export && git checkout v4.30.0 && cp ../lean-toolchain lean-toolchain && lake build && cd ..
+
+# Build comparator at the tag matching lean-toolchain (v4.30.0-rc2)
+git clone https://github.com/leanprover/comparator.git
+cd comparator && git checkout v4.30.0-rc2 && lake build && cd ..
+
+export PATH="$PATH:$(pwd)/landrun:$(pwd)/lean4export/.lake/build/bin:$(pwd)/comparator/.lake/build/bin"
+
+# From this directory (lean/)
+lake exe cache get
+lake build && lake build Challenge
+lake env comparator config.json
+```
+
+The comparator configuration is [`config.json`](config.json); the bridge from the Mathlib-vocabulary challenge statements to the project's internal theorem names is [`FalseWorkPapers/Examples/ChallengeBridge.lean`](FalseWorkPapers/Examples/ChallengeBridge.lean) (the challenge's inlined definitions are duplicated there character-for-character, as comparator requires the two environments to share statement-level declarations). Machine-readable metadata: [`../formalization.yaml`](../formalization.yaml).
+
+**Scope note.** The preprint's no-`sorry` / no-`native_decide` audit covers the files cited in its §10 table (see `formalization.yaml` `scope_files`). `Examples/MusicKernelZMod12Accum.lean` and `Examples/PythagoreanCommaConvergents.lean` belong to the music-kernel track (a different paper) and use `native_decide`; they are outside the preprint's claims and outside comparator scope.
+
 The `lakefile.lean` declares a dependency on `mathlib4`, pinned via `lake-manifest.json`; the `lean-toolchain` file pins the Lean version. Build against the committed pins — running `lake update` re-resolves Mathlib to latest and may break the tree. Proposals to move the pin are welcome as PRs.
 
 ---

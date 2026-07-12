@@ -1,0 +1,14 @@
+{
+    "challenge_module": "Challenge",
+    "solution_module": "FalseWorkPapers",
+    "theorem_names": [
+        "four_regions_iff_ordinary",
+        "nishimura_normal_form",
+        "unique_ordinary_element",
+        "ordinary_forces_card_ge_six",
+        "ordinary_gives_z6_embedding",
+        "twelve_unique_kernel"
+    ],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": false
+}

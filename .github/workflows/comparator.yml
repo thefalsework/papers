@@ -1,0 +1,104 @@
+# Verify the ordinary-elements-z6 preprint's Lean formalization with
+# leanprover/comparator: the FalseWorkPapers library must prove the exact
+# statements in lean/Challenge.lean using only propext / Classical.choice /
+# Quot.sound, kernel-accepted, inside a landrun sandbox.
+#
+# Comparator requires Linux (landrun uses Landlock), so CI is the canonical
+# run; local runs on Windows/macOS are not supported by the sandbox.
+name: comparator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'lean/**'
+      - '.github/workflows/comparator.yml'
+  pull_request:
+    paths:
+      - 'lean/**'
+      - '.github/workflows/comparator.yml'
+  workflow_dispatch:
+
+env:
+  # lean4export publishes no v4.30.0-rc2 tag; v4.30.0 (same release, stable)
+  # is the nearest compatible export version for our pinned toolchain.
+  LEAN4EXPORT_TAG: v4.30.0
+
+jobs:
+  comparator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read pinned toolchain
+        id: toolchain
+        run: echo "version=$(cat lean/lean-toolchain | sed 's/.*://')" >> "$GITHUB_OUTPUT"
+
+      - name: Install elan
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Set up Go (for landrun)
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Cache tools (landrun, lean4export, comparator)
+        id: cache-tools
+        uses: actions/cache@v4
+        with:
+          path: tools
+          key: comparator-tools-${{ steps.toolchain.outputs.version }}-v1
+
+      - name: Build landrun
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p tools
+          git clone --depth 1 https://github.com/Zouuup/landrun.git tools/landrun-src
+          cd tools/landrun-src && go build -o ../landrun-bin/landrun cmd/landrun/main.go
+
+      - name: Build lean4export (nearest tag, pinned project toolchain)
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: |
+          git clone https://github.com/leanprover/lean4export.git tools/lean4export
+          cd tools/lean4export
+          git checkout "$LEAN4EXPORT_TAG"
+          # Build against the project's exact toolchain so olean formats match.
+          cp "$GITHUB_WORKSPACE/lean/lean-toolchain" lean-toolchain
+          lake build
+
+      - name: Build comparator (matching toolchain)
+        if: steps.cache-tools.outputs.cache-hit != 'true'
+        run: |
+          git clone https://github.com/leanprover/comparator.git tools/comparator
+          cd tools/comparator
+          git checkout ${{ steps.toolchain.outputs.version }}
+          lake build
+
+      - name: Cache Lean project build
+        uses: actions/cache@v4
+        with:
+          path: |
+            lean/.lake
+            ~/.cache/mathlib
+          key: lake-${{ steps.toolchain.outputs.version }}-${{ hashFiles('lean/lake-manifest.json') }}-${{ github.sha }}
+          restore-keys: |
+            lake-${{ steps.toolchain.outputs.version }}-${{ hashFiles('lean/lake-manifest.json') }}-
+
+      - name: Get Mathlib cache
+        working-directory: lean
+        run: lake exe cache get
+
+      - name: Build solution and challenge
+        working-directory: lean
+        run: |
+          lake build
+          lake build Challenge
+
+      - name: Run comparator
+        working-directory: lean
+        run: |
+          export PATH="$PATH:$GITHUB_WORKSPACE/tools/landrun-bin:$GITHUB_WORKSPACE/tools/lean4export/.lake/build/bin:$GITHUB_WORKSPACE/tools/comparator/.lake/build/bin"
+          lake env comparator config.json
