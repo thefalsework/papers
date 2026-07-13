@@ -1,3 +1,9 @@
+-- `import Mathlib` FIRST and in full: comparator requires the challenge and
+-- solution statements to elaborate to identical terms, so this file must see
+-- exactly the instance set `Challenge.lean` sees (a selective import changes
+-- which `OfNat (Fin _)` instance elaborates the literal `(1, 0)` in
+-- `twelve_unique_kernel`, and comparator then rejects the statement match).
+import Mathlib
 import FalseWorkPapers.Examples.NishimuraNormalForm
 import FalseWorkPapers.Examples.LadderCore
 import FalseWorkPapers.Examples.WhyTwelve
