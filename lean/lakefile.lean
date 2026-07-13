@@ -30,3 +30,9 @@ theorems, for verification with `leanprover/comparator` (see `config.json`
 and the "Verifying with comparator" section of `README.md`). -/
 lean_lib «Challenge» where
   -- Single root module `Challenge.lean`.
+
+/-- The solution side of the comparator pair: imports the project code
+(via `FalseWorkPapers/Examples/ChallengeBridge.lean`) that proves the
+exact statements of `Challenge.lean`. -/
+lean_lib «Solution» where
+  -- Single root module `Solution.lean`.

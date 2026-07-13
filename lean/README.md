@@ -114,10 +114,10 @@ lake build
 
 ## Verifying the ordinary-elements results with comparator
 
-The principal theorems of the [ordinary-elements preprint](../preprints/ordinary-elements-z6/paper.md) can be verified against [`Challenge.lean`](Challenge.lean) — a Mathlib-only statement file — using [comparator](https://github.com/leanprover/comparator), so a reviewer needs to trust nothing in this repository:
+The principal theorems of the [ordinary-elements preprint](../preprints/ordinary-elements-z6/paper.md) can be verified against [`Challenge.lean`](Challenge.lean) — a Mathlib-only statement file — using [comparator](https://github.com/leanprover/comparator), so a reviewer needs to trust nothing in this repository. The comparator pair is `Challenge.lean` (imports Mathlib only, states the theorems with `sorry`) and [`Solution.lean`](Solution.lean) (imports the project code that proves them):
 
 1. **Read [`Challenge.lean`](Challenge.lean)** and check the six theorem statements capture the claims (definitions are inlined in plain Mathlib vocabulary; the file is ~120 lines).
-2. **Run comparator** to mechanically confirm that the `FalseWorkPapers` library proves those exact statements with only `propext` / `Classical.choice` / `Quot.sound`, kernel-accepted, in a `landrun` sandbox.
+2. **Run comparator** to mechanically confirm that `Solution` proves those exact statements with only `propext` / `Classical.choice` / `Quot.sound`, kernel-accepted, in a `landrun` sandbox.
 
 Setup (Linux — landrun requires Landlock; on other platforms use the [CI run](../.github/workflows/comparator.yml) as the canonical check):
 
@@ -138,7 +138,7 @@ export PATH="$PATH:$(pwd)/landrun:$(pwd)/lean4export/.lake/build/bin:$(pwd)/comp
 
 # From this directory (lean/)
 lake exe cache get
-lake build && lake build Challenge
+lake build && lake build Challenge Solution
 lake env comparator config.json
 ```
 

@@ -33,7 +33,8 @@ toolchain:
 
 verification:
   challenge_file: lean/Challenge.lean
-  solution_module: FalseWorkPapers
+  solution_file: lean/Solution.lean
+  solution_module: Solution
   bridge_file: lean/FalseWorkPapers/Examples/ChallengeBridge.lean
   comparator_config: lean/config.json
   ci_workflow: .github/workflows/comparator.yml

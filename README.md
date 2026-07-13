@@ -123,17 +123,17 @@ The site is a separate codebase (proprietary). The papers in this repository are
 
 The principal theorems of the [ordinary-elements preprint](preprints/ordinary-elements-z6/paper.md) can be verified without trusting any code in this repository, using [comparator](https://github.com/leanprover/comparator):
 
-1. **Read [`lean/Challenge.lean`](lean/Challenge.lean)** — a short, self-contained file that states the claimed theorems in Mathlib vocabulary only (with `sorry`). Check that the statements say what you think the paper claims.
+1. **Read [`lean/Challenge.lean`](lean/Challenge.lean)** — a short, self-contained file that imports Mathlib only and states the claimed theorems (with `sorry`). Check that the statements say what you think the paper claims. Its counterpart [`lean/Solution.lean`](lean/Solution.lean) imports the project code that proves them.
 2. **Run comparator** (Linux; from `lean/`, with `landrun`, `lean4export`, and `comparator` built at the pinned toolchain on your `PATH`):
 
 ```bash
 cd lean/
 lake exe cache get
-lake build && lake build Challenge
+lake build && lake build Challenge Solution
 lake env comparator config.json
 ```
 
-On success, comparator guarantees the `FalseWorkPapers` library proves the *exact* statements in `Challenge.lean`, uses only `propext` / `Classical.choice` / `Quot.sound`, and is accepted by the Lean kernel — all inside a `landrun` sandbox, so you never execute untrusted project code. CI runs this on every push touching `lean/` ([workflow](.github/workflows/comparator.yml)). Machine-readable project metadata is in [`formalization.yaml`](formalization.yaml). Full setup instructions are in [`lean/README.md`](lean/README.md).
+On success, comparator guarantees `Solution` proves the *exact* statements in `Challenge.lean`, uses only `propext` / `Classical.choice` / `Quot.sound`, and is accepted by the Lean kernel — all inside a `landrun` sandbox, so you never execute untrusted project code. CI runs this on every push touching `lean/` ([workflow](.github/workflows/comparator.yml)). Machine-readable project metadata is in [`formalization.yaml`](formalization.yaml). Full setup instructions are in [`lean/README.md`](lean/README.md).
 
 **Scope note.** The no-`sorry` / no-`native_decide` claims attach to the files cited by the preprint's §10 audit table (listed in `formalization.yaml`). Two files elsewhere in `lean/FalseWorkPapers/Examples/` — `MusicKernelZMod12Accum.lean` and `PythagoreanCommaConvergents.lean`, which belong to the music-kernel track of a different paper — do use `native_decide` and are outside the preprint's claims and the comparator scope.
 

@@ -1,7 +1,8 @@
 # Verify the ordinary-elements-z6 preprint's Lean formalization with
-# leanprover/comparator: the FalseWorkPapers library must prove the exact
-# statements in lean/Challenge.lean using only propext / Classical.choice /
-# Quot.sound, kernel-accepted, inside a landrun sandbox.
+# leanprover/comparator: lean/Solution.lean (importing the project code) must
+# prove the exact statements in lean/Challenge.lean (importing Mathlib only)
+# using only propext / Classical.choice / Quot.sound, kernel-accepted, inside
+# a landrun sandbox.
 #
 # Comparator requires Linux (landrun uses Landlock), so CI is the canonical
 # run; local runs on Windows/macOS are not supported by the sandbox.
@@ -96,6 +97,7 @@ jobs:
         run: |
           lake build
           lake build Challenge
+          lake build Solution
 
       - name: Run comparator
         working-directory: lean

@@ -1,6 +1,6 @@
 {
     "challenge_module": "Challenge",
-    "solution_module": "FalseWorkPapers",
+    "solution_module": "Solution",
     "theorem_names": [
         "four_regions_iff_ordinary",
         "nishimura_normal_form",

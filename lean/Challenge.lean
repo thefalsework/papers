@@ -9,10 +9,10 @@ This file states, **using only Mathlib vocabulary**, the principal theorems of
 > Subgroup Lattice of ℤ/12ℤ, and a Characterization of n = p²q*
 > (`preprints/ordinary-elements-z6/` in this repository).
 
-Every theorem below is stated with `sorry`. The proofs live in the
-`FalseWorkPapers` library (bridged in `FalseWorkPapers/Examples/ChallengeBridge.lean`),
+Every theorem below is stated with `sorry`. The proofs are imported by the
+companion `Solution.lean` (via `FalseWorkPapers/Examples/ChallengeBridge.lean`),
 and [comparator](https://github.com/leanprover/comparator) mechanically checks
-that the library proves **these exact statements** using only the axioms
+that the solution proves **these exact statements** using only the axioms
 `propext`, `Classical.choice`, `Quot.sound`.
 
 A reviewer only needs to read this file to know what is claimed. Notation:
