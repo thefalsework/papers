@@ -1,6 +1,6 @@
 # The FalseWork Papers
 
-[![DOI](https://zenodo.org/badge/1216426192.svg)](https://zenodo.org/badge/latestdoi/1216426192) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/1216426192.svg)](https://zenodo.org/badge/latestdoi/1216426192) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![comparator](https://github.com/thefalsework/papers/actions/workflows/comparator.yml/badge.svg)](https://github.com/thefalsework/papers/actions/workflows/comparator.yml)
 
 An open-source research programme on structural incompleteness in domains organized around a minimal generative operation, and on the shared mathematical and epistemological floor underneath.
 
