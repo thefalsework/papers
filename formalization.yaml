@@ -51,7 +51,15 @@ verification:
   # ordinary_gives_z6_embedding asserts existence rather than exhibiting the
   # paper's explicit map; twelve_unique_kernel is stated on Fin 3 x Fin 2
   # rather than the literal divisor lattice.
-  statement_match_review: open — external review requested (Lean Zulip, 2026-07)
+  # Cross-model review (independent AI, 2026-07-12): confirmed OrdinaryElement
+  # matches Citkin's definition character-for-character; confirmed the compl
+  # constructor only weakens the generation hypothesis; confirmed the non-bot
+  # guards in FourRegionsInhabited are forced (without them the iff is false);
+  # spot-checked rnLadder rungs 5-6 against the classical lattice. Remaining
+  # open item: rung-by-rung correspondence of rnLadder's indexing with the
+  # literature's conventions (docstring softened accordingly). Human/expert
+  # review still requested.
+  statement_match_review: open — external review requested (Lean Zulip, 2026-07); cross-model pre-audit 2026-07-12
 
 # Scope note: the claims above cover the ten files cited by the paper's
 # section-10 audit table (listed below). Two files elsewhere in

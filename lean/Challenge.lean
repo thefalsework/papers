@@ -41,9 +41,11 @@ inductive HeytingGeneratedBy (g : H) : H → Prop
   | himp {x y} : HeytingGeneratedBy g x → HeytingGeneratedBy g y → HeytingGeneratedBy g (x ⇨ y)
   | compl {x} : HeytingGeneratedBy g x → HeytingGeneratedBy g xᶜ
 
-/-- The **Rieger–Nishimura ladder** over `g`: the standard enumeration of the
-one-variable Heyting terms. Rungs `0`–`4` are `⊥`, `gᶜ`, `g`, `gᶜᶜ`,
-`gᶜ ⊔ g`; above that the ladder alternates implication rungs and join rungs. -/
+/-- The **Rieger–Nishimura ladder** over `g`: an enumeration of the
+one-variable Heyting terms (recursion as in §2.2 of the paper; indexing
+conventions vary across the literature). Rungs `0`–`4` are `⊥`, `gᶜ`, `g`,
+`gᶜᶜ`, `gᶜ ⊔ g`; above that the ladder alternates implication rungs and
+join rungs. -/
 def rnLadder (g : H) : ℕ → H
   | 0 => ⊥
   | 1 => gᶜ
