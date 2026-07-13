@@ -41,6 +41,17 @@ verification:
   sorry_count_in_scope: 0        # the six sorries in Challenge.lean are the challenge statements themselves
   native_decide_in_scope: false
   audit_lines: lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean  # per-theorem `#print axioms`
+  # Comparator certifies proof-matches-statement. The remaining link —
+  # Challenge.lean statements faithfully capture the paper's claims — cannot
+  # be closed by the author alone (the Lean is AI-authored and the author is
+  # not a Lean reader); it is open for external review and was explicitly
+  # requested in the Lean Zulip #AI-authored-projects thread. Known
+  # deliberate deviations from the paper's prose: ordinary_forces_card_ge_six
+  # adds [Fintype H] (the infinite case is carried by the embedding theorem);
+  # ordinary_gives_z6_embedding asserts existence rather than exhibiting the
+  # paper's explicit map; twelve_unique_kernel is stated on Fin 3 x Fin 2
+  # rather than the literal divisor lattice.
+  statement_match_review: open — external review requested (Lean Zulip, 2026-07)
 
 # Scope note: the claims above cover the ten files cited by the paper's
 # section-10 audit table (listed below). Two files elsewhere in
