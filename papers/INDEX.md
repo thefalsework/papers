@@ -126,6 +126,14 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 ## Synthesis notes
 
+### Field Guide (start here for the totality)
+
+**Full title.** *The Distinction That Does Not Cancel: A Field Guide to FalseWork.* (v0.1, July 2026)
+
+**Register.** Speculative companion / field guide — **[A] by default**, with [K]/[C]/[O] marked in place. One approachable walk through the *programme as a whole* (not a file-by-file digest): ontology sentence → claim → distinction floor → four-fold + opened square → why-twelve music instance → graded domains → history as nesting → Paper 2 method → open items → corpus map. Does not replace Papers 1–6, the opposition-figure spine, or `bach-at-the-kernel.md`; those remain argument, theorem chain, and deep music specimen. This is the front door to the totality.
+
+**Source.** [`field-guide.md`](field-guide.md)
+
 ### The Connected Spine
 
 **Full title.** *The Connected Spine: One Asymmetry in Three Registers, and a Kernel-Checked Music Topos.*

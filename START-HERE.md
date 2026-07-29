@@ -62,4 +62,4 @@ The whole project runs on the bet that an honest framework should be *legible to
 
 ---
 
-*Next step up in detail: [`papers/INDEX.md`](papers/INDEX.md) (a guided tour of all the papers) or the [main README](README.md) (the full, technical front page).*
+*Next step up in detail: [`papers/field-guide.md`](papers/field-guide.md) (one approachable walk through the whole programme) → [`papers/bach-at-the-kernel.md`](papers/bach-at-the-kernel.md) (the deep music specimen) → [`papers/INDEX.md`](papers/INDEX.md) (guided tour of every paper) or the [main README](README.md) (technical front page).*
