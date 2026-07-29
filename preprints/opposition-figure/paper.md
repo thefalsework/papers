@@ -106,6 +106,17 @@ Now the historical layer becomes a theorem. The six landmarks of §1, indexed by
 
 Historically, then: Aristotle's square is the classical special case (figure crushed by the collapse laws); Spencer-Brown's calculus is the modern face of the same closure assumption (crossing = excluded middle at the kernel); and the four-position partition is the opened form of both — what the square becomes when the ambient logic stops being classical, with Z₆ as its shape.
 
+### 5.1 The relation profile
+
+The square-of-opposition tradition describes a figure not by its order structure but by its **opposition relations**: contradictories (exclusive and exhaustive), contraries (exclusive, not exhaustive), subcontraries (exhaustive, not exclusive), subalternation (one-way entailment) — plus, in Demey–Smessaert logical geometry, *unconnectedness* (none of the above). `Examples/OppositionRelations.lean` computes the full profile of the opened square's four middle landmarks `A := a`, `E := ¬a`, `I := ¬¬a`, `U := a ∨ ¬a` at an ordinary `a`:
+
+- **A–E: contraries, never contradictories.** `a ∧ ¬a = ⊥` always, but `a ∨ ¬a ≠ ⊤` at every ordinary element. The negation pair — classically the paradigm contradiction — weakens to contrariety exactly where the figure opens. This is the element-local algebraic form of Béziau's observation (2003) that intuitionistic negation is a paracomplete, contrariety-forming negation. **[K]** `IsOrdinary.contraries_compl`, `IsOrdinary.not_contradictories_compl`; classical contrast `boolean_contradictories_compl`.
+- **Three strict subalternations:** `A < I`, `A < U`, `E < U`. **[K]** `IsOrdinary.lt_compl_compl`, `IsOrdinary.lt_sup_compl`, `IsOrdinary.compl_lt_sup_compl`.
+- **The two remaining pairs are not settled by ordinariness.** They split on the *Stone identity at `a`* (`¬a ∨ ¬¬a = ⊤`, weak excluded middle): if it holds, E–I are contradictories and I–U subcontraries; if it fails, E–I weaken to contraries and I–U become **unconnected** — a pair of distinct contingent vertices standing in no Aristotelian relation at all, which is impossible in the classical square. **[K]** `stoneAt_contradictories_compl`, `not_stoneAt_contraries_compl`, `IsOrdinary.subcontraries_of_stoneAt`, `IsOrdinary.unconnected_of_not_stoneAt`. (Both cases are realized: Z₆ at the tritone satisfies the identity; the regular-open figure `(0,1) ∪ (1,2)` in the opens of ℝ fails it.)
+- **The profile theorem.** At an ordinary `a` with the Stone identity, the four middle landmarks realize exactly one contrariety, one contradiction, one subcontrariety, and three subalternations — the classical square's full relation inventory, redistributed over different pairs. On Z₆ at the tritone the whole profile holds computably. **[K]** `oppositionRelationProfile`, `div12_tritone_profile`; the I–U meet is the A corner (`complCompl_inf_sup_compl` — the Exploitation and Distribution landmarks intersect in Infrastructure).
+
+The profile is what makes the figure legible to the logical-geometry tradition on its own terms: not "here is a lattice" but "here is which pairs are contraries, which contradictories, which unconnected — as a function of one algebraic condition."
+
 ---
 
 ## 6. Why twelve: the two-sided forcing
@@ -133,6 +144,7 @@ This document explains the partition; it does not force it. The forcing argument
 
 ## 9. Prior art and claim discipline
 
+- **Béziau (2003)** observed that intuitionistic negation is a paracomplete, *contrariety-forming* negation — the global, logic-level form of the A–E entry of the relation profile (§5.1). The profile's element-local statements, the Stone-identity dichotomy, and the appearance of unconnectedness inside the opened square are, as far as we know, first written down (and first kernel-checked) here.
 - **The intuitionistic square of opposition** is studied informally, and always at the proof-theoretic or sentence level rather than the algebra-element level. The two closest chapters — reviewed 2026-07-29 via abstracts, the authors' own congress summaries, and citing literature (full texts paywalled) — are: Mélès, "No Group of Opposition for Constructive Logics: The Intuitionistic and Linear Cases" (in Béziau–Jacquette, *Around and Beyond the Square of Opposition*, Birkhäuser 2012, pp. 201–217), a group-theoretic impossibility result (no Klein-style group of opposition, because subcontrariety fails intuitionistically); and Vidal-Rosset, "The Exact Intuitionistic Meaning of the Square of Opposition" (in Béziau–Basti, *The Square of Opposition: A Cornerstone of Thought*, Birkhäuser 2017, pp. 291–303), a prover-driven answer (IMOGEN, ileanCoP) showing contra Mélès that the square survives *as a square* with some classically-derivable relations amputated — the closest informal precedent to this document's "the square opens rather than dies," but at the level of derivable sentences, not lattice elements. (An earlier version of this note misplaced the Vidal-Rosset chapter in the 2012 volume.) Neither chapter — nor anything found in targeted searches for square-of-opposition + Rieger–Nishimura or square + regular/dense elements — states the algebraic law T1 (non-degeneracy = Citkin ordinariness), the Z₆ identification, or the partition-skeleton equivalence. Claim wording throughout: **first kernel-checked**, never "first" — the informal literature is the precedent.
 - **Laws of Form extensions** (Spencer-Brown's imaginary values; Varela's extended calculus; Kauffman's waveform and four-valued algebras; boundary mathematics) add truth values or temporal structure. Weakening negation to the Heyting case and reading the calculus in the subobject lattices of a topos does not appear in that literature; the categorification is interpretive and is labeled as such (§2). One targeted check (Bricken's boundary logics; Kauffman's topological readings) remains open before publication.
 - **Blanché (1966)** is prior art *for the hexagon*; T2 is not a criticism of it but a machine-checked non-identification: the hexagon and the opened square are different six-element completions.
@@ -164,6 +176,10 @@ Every arrow of the chain, by Lean name. "all three" = `propext, Classical.choice
 | U strictly below ⊤ at ordinary | `IsOrdinary.sup_compl_ne_top` | `Examples/OppositionFigure.lean` | propext |
 | Tritone figure = identity | `oppositionFigure_tritone_eq_id` | `Examples/OppositionFigure.lean` | propext, Quot.sound |
 | **T2**: Blanché refutation | `BlancheHexagon.not_orderIso_div12` | `Examples/OppositionFigure.lean` | propext, Quot.sound |
+| A–E contrariety at ordinary | `IsOrdinary.contraries_compl`, `IsOrdinary.not_contradictories_compl` | `Examples/OppositionRelations.lean` | propext |
+| Three strict subalternations | `IsOrdinary.lt_compl_compl`, `IsOrdinary.lt_sup_compl`, `IsOrdinary.compl_lt_sup_compl` | `Examples/OppositionRelations.lean` | propext |
+| Stone dichotomy (E–I, I–U) | `stoneAt_contradictories_compl`, `not_stoneAt_contraries_compl`, `IsOrdinary.subcontraries_of_stoneAt`, `IsOrdinary.unconnected_of_not_stoneAt` | `Examples/OppositionRelations.lean` | propext (or none) |
+| Relation profile; tritone instance | `oppositionRelationProfile`, `div12_tritone_profile` | `Examples/OppositionRelations.lean` | propext |
 | Non-degeneracy criterion (lattice) | `allFourCellsInhabited_iff`, `isOrdinary_iff_allFourCells` | `Examples/NishimuraKernelLaw.lean` | propext |
 | Z₆ order-embedding | `div12OrderEmbedding` | `Examples/LadderCore.lean` | propext |
 | Unique ordinary element | `nishimura_ordinary_unique` | `Examples/NishimuraKernelLaw.lean` | propext, Quot.sound |
@@ -178,7 +194,7 @@ lake exe cache get
 lake build
 ```
 
-The two new files are `lean/FalseWorkPapers/Positions/OrdinaryKernel.lean` and `lean/FalseWorkPapers/Examples/OppositionFigure.lean`; both are imported by the library root. Axiom audits: import either file in a scratch and run the `#print axioms` lines listed in each file's footer. The comparator setup (`lean/Challenge.lean`, `lean/Solution.lean`, `lean/config.json`) covers the ordinary-elements preprint's six principal theorems and is unchanged by this document.
+The new files are `lean/FalseWorkPapers/Positions/OrdinaryKernel.lean`, `lean/FalseWorkPapers/Examples/OppositionFigure.lean`, and `lean/FalseWorkPapers/Examples/OppositionRelations.lean` (the §5.1 relation profile); all are imported by the library root. Axiom audits: import either file in a scratch and run the `#print axioms` lines listed in each file's footer. The comparator setup (`lean/Challenge.lean`, `lean/Solution.lean`, `lean/config.json`) covers the ordinary-elements preprint's six principal theorems and is unchanged by this document.
 
 ### References
 
@@ -188,6 +204,8 @@ The two new files are `lean/FalseWorkPapers/Positions/OrdinaryKernel.lean` and `
 - J.-Y. Béziau & D. Jacquette (eds.), *Around and Beyond the Square of Opposition*, Birkhäuser, 2012 — incl. B. Mélès, "No Group of Opposition for Constructive Logics: The Intuitionistic and Linear Cases," pp. 201–217.
 - J.-Y. Béziau & G. Basti (eds.), *The Square of Opposition: A Cornerstone of Thought*, Birkhäuser, 2017 — incl. J. Vidal-Rosset, "The Exact Intuitionistic Meaning of the Square of Opposition," pp. 291–303.
 - J.-Y. Béziau, "The metalogical hexagon of opposition," *Argumentos* 5(10), 2013 (secondary source for the hexagon's structure as reviewed; cites Blanché 1966 directly).
+- J.-Y. Béziau, "New light on the nameless corner of the square of oppositions" (2003) — intuitionistic negation as contrariety-forming; the informal precedent for §5.1's A–E entry.
+- H. Smessaert & L. Demey, "Logical Geometries and Information in the Square of Oppositions," *JoLLI* 23 (2014) — source of the relation definitions transcribed in `OppositionRelations.lean`, including unconnectedness.
 - A. Citkin, on ordinary elements and one-generated Heyting algebras, arXiv:2512.05633; correspondence June 2026, cited with permission (`docs/outreach/citkin-email.md`).
 - I. Nishimura, "On formulas of one variable in intuitionistic propositional calculus," *JSL* 25 (1960).
 - FalseWork: `preprints/ordinary-elements-z6/paper.md`; `preprints/four-position-partition/` (incl. `spencer-brown-anchor.md`); `papers/connecting-the-spine.md`; Papers 1 and 3.

@@ -4,12 +4,18 @@
 - **Status:** unification spine, July 2026. Not an arXiv target in its current
   form — it is the front door that strings the program's formal results into
   one chain; a LaTeX version follows only if a submission venue materializes.
-- **Lean formalization:** the two new files are
+- **Lean formalization:** the three files are
   [`../../lean/FalseWorkPapers/Positions/OrdinaryKernel.lean`](../../lean/FalseWorkPapers/Positions/OrdinaryKernel.lean)
-  (the bridge theorem: partition non-degeneracy = ordinary kernel) and
+  (the bridge theorem: partition non-degeneracy = ordinary kernel),
   [`../../lean/FalseWorkPapers/Examples/OppositionFigure.lean`](../../lean/FalseWorkPapers/Examples/OppositionFigure.lean)
   (the figure law T1, the collapse laws, the skeleton theorem, the Blanché
-  refutation T2). Theorem-by-theorem audit table in §10 of the paper.
+  refutation T2), and
+  [`../../lean/FalseWorkPapers/Examples/OppositionRelations.lean`](../../lean/FalseWorkPapers/Examples/OppositionRelations.lean)
+  (the Aristotelian relation profile of the opened square, §5.1 of the
+  paper: A–E contrariety at ordinary elements, three strict
+  subalternations, the Stone-identity dichotomy for the E–I and I–U pairs
+  including intuitionistic unconnectedness, and the full profile on Z₆ at
+  the tritone). Theorem-by-theorem audit table in §10 of the paper.
 
 ## What it claims
 

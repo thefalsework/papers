@@ -186,10 +186,18 @@ additional_tracks:
       collapse laws; the skeleton theorem (each middle landmark inhabits its
       partition cell); on Div12 at the tritone the figure is the identity;
       Blanche's 1966 hexagon is not order-isomorphic to Z6 (T2)
-      (OppositionFigure.lean).
+      (OppositionFigure.lean). The Aristotelian relation profile of the
+      opened square (OppositionRelations.lean): at an ordinary a the
+      negation pair a, not-a is contrary and never contradictory (the
+      element-local form of Beziau 2003); three strict subalternations;
+      the E-I and I-U pairs split on the Stone identity at a (weak excluded
+      middle) — contradictory + subcontrary if it holds (as on Z6 at the
+      tritone, proved computably), contrary + unconnected (Demey-Smessaert's
+      fourth relation) if it fails.
     files:
       - lean/FalseWorkPapers/Positions/OrdinaryKernel.lean
       - lean/FalseWorkPapers/Examples/OppositionFigure.lean
+      - lean/FalseWorkPapers/Examples/OppositionRelations.lean
     sorry_count: 0
     native_decide: false
     axioms: at most propext, Classical.choice, Quot.sound (per-theorem audit table in the paper, section 10)
