@@ -1,8 +1,8 @@
 # The Four-Position Partition: A Complete Exposition
 
 **Author:** Chris Brink (FalseWork)
-**Date:** June 2026
-**Register:** Expository synthesis. One document stating the four-position partition theorem and everything formally attached to it — the stack above it, the floors beneath it, the anchors beside it — followed by a plain-language explanation. Companion to `connecting-the-spine.md` (the technical synthesis) and `papers/INDEX.md`.
+**Date:** June 2026; pointer patch July 2026
+**Register:** Expository synthesis. One document stating the four-position partition theorem and everything formally attached to it — the stack above it, the floors beneath it, the anchors beside it — followed by a plain-language explanation. Companion to `connecting-the-spine.md` (the technical music/Diophantine weld) and `papers/INDEX.md`. **July 2026:** the opened-square / bridge weld is summarized in §1.3; full chain in [`../preprints/opposition-figure/`](../preprints/opposition-figure/); humanities front door [`field-guide.md`](field-guide.md).
 **Status discipline:** Every claim is tagged. **[K]** kernel-checked in Lean 4 / Mathlib4 (`v4.30.0-rc2`; axiom audits report at most `propext, Classical.choice, Quot.sound`; several results need only `propext` or no axioms at all; no `sorry` anywhere). **[C]** classical mathematics, cited not re-proved. **[A]** structural analogy / framework claim, not a theorem. **[O]** open. **[A]** and **[O]** are never silently promoted.
 
 ---
@@ -40,6 +40,19 @@ The framework reads a fifth position, **Commitment**, as a binary gate prior to 
 The topos theorem is this lattice fact applied to `H = Sub(D Y)`, `a = kernelImage`. Everything load-bearing about the partition is Heyting algebra; the topos provides the two participating subobjects.
 
 **Attached general results, all [K]:** the Boolean collapse (`boolean_partition_three_cells`: three cells in a Boolean algebra — Spencer-Brown anchor); the refusal residue (`refusal_residue`, under `HasIrregularKernel`); `DistinctionStructure.ofIdempotentMonad` (any idempotent monad yields a distinction structure); the recursive partition and canonization separation theorems (`recursive_partition`, `canonization_separation`, with a concrete witness instance); the trace-collapse lemma (`kernelImage_eq_top_of_isIso_unit`: wherever the unit is an iso, the partition degenerates to Infrastructure-only).
+
+### 1.3 The same theorem, as the opened square (July 2026) — [K]
+
+The four cells have a second face: Aristotle's square of opposition, read at the kernel under Heyting negation. At an element `a` the square generates six landmarks — `⊥`, `¬a`, `a`, `¬¬a`, `a ∨ ¬a`, `⊤`. Classically two collapse (`¬¬a = a`, `a ∨ ¬a = ⊤`). Intuitionistically they are pairwise distinct **iff** `a` is ordinary — exactly the trichotomy of Part II — and the four middle landmarks inhabit the four cells one-for-one:
+
+| Landmark | Value | Cell |
+|---|---|---|
+| A | `a` | Infrastructure |
+| E | `¬a` | Refusal |
+| I | `¬¬a` | Exploitation |
+| U | `a ∨ ¬a` | Distribution |
+
+That is the **skeleton theorem** (`oppositionFigure_skeleton`). The figure law (`oppositionFigure_injective_iff`) and the **bridge** (`partition_nondegenerate_iff_kernel_ordinary`) make partition non-degeneracy, ordinariness, and figure non-degeneracy one condition in three vocabularies. At the tritone on `Div12` the figure is the identity. Full narrative and relation profile: [`../preprints/opposition-figure/`](../preprints/opposition-figure/). This exposition does not re-prove those results; it records that the music dictionary of Part II *is* the opened square instantiated at the unique ordinary element.
 
 ---
 
@@ -171,6 +184,9 @@ And the flip side, equally unhedged: **the weld raises the bar for every other d
 | `H8`'s ladder core ≅ `Z_7` (Prop. 3.1 instance) | [K] (+[C] Prop. 3.1) | `h8_ladder_core`, `nishimuraTerm_a_mem_core` |
 | Tritone = unique generator of `Div12`; dense-bottom lemma (`P2` has no kernel) | [K] | `Div12.generator_unique`, `no_ordinary_of_least_nonzero` |
 | Glivenko collapse: no kernel in any Boolean algebra / classical shadow | [K] | `glivenko_collapse`, `boolean_no_kernel` |
+| Bridge: partition non-deg. ↔ ordinary kernel (2026-07) | [K] | `partition_nondegenerate_iff_kernel_ordinary` |
+| Opened square: T1, skeleton, tritone id, Blanché ≇ Z₆ | [K] | `oppositionFigure_injective_iff`, `oppositionFigure_skeleton`, `BlancheHexagon.not_orderIso_div12` |
+| Relation profile at ordinary / tritone | [K] | `oppositionRelationProfile`, `div12_tritone_profile` |
 | Bespoke topos endofunctor; canonicity; Baker; Lawvere unification; cross-domain mechanism; Commitment content | [O] | — |
 | Practice-domain classifications | [A] | — |
 
@@ -219,6 +235,8 @@ And the question that answer raises — *why twelve notes?* — turned out to ha
 Two follow-up questions were settled on 2026-06-10, one against us and one for us, both kernel-checked. *Does having exactly one fence position certify that a structure is logic's machine?* No: there is an eight-part structure (`H8`) with exactly one viable fence position that is provably *not* generated by a single proposition — found by exhaustively checking every structure with up to twelve parts. So the unique kernel and the one-proposition pedigree are independent facts; music's lattice has both, but neither implies the other, and no retelling may compress "unique kernel" into "is logic's object." *And what happens at noon?* In classical logic — where dusk's half-light is rounded to day or night, `¬¬p = p` — the fence has no viable position at all, in any Boolean algebra, ever; and the standard map from intuitionistic to classical logic (double negation, Glivenko) provably lands every element in that barren territory. The four positions are dusk-only structure: classical light does not dim them, it deletes them.
 
 In one sentence: the program claimed art and logic run on the same machinery; for music, that machinery has now been produced — it has six parts, it is unique, the tritone is its generator, and both logic and arithmetic select it first.
+
+And (July 2026) those same four occupants are the middle landmarks of Aristotle's square once the ambient logic stops being classical — the fence-at-dusk figure is also the opened square (§1.3). Classical noon deletes them; dusk is when the square shows six positions.
 
 ### 3.4 What is *not* claimed, plainly
 
