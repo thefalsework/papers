@@ -67,7 +67,9 @@ verification:
 # lean/FalseWorkPapers/Examples/ (MusicKernelZMod12Accum.lean,
 # PythagoreanCommaConvergents.lean) belong to a different paper's track and
 # use native_decide; they are outside this paper's claims and outside the
-# comparator scope.
+# comparator scope. The opposition-figure/bridge track (see
+# additional_tracks below) is likewise outside this paper's claims and
+# outside the comparator scope.
 scope_files:
   - lean/FalseWorkPapers/Examples/GlivenkoCollapse.lean
   - lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean
@@ -164,3 +166,39 @@ known_gaps:
     The classical structure theorem "divisor lattice of n = product of one
     chain per prime" is cited, not formalized, for general n; the n = 12
     instance is kernel-checked (div12OrderIsoChains).
+
+# ---------------------------------------------------------------------------
+# Additional tracks. NOT part of the ordinary-elements paper's claim scope
+# and NOT covered by the comparator setup above; each has its own paper,
+# audit table, and review flags.
+# ---------------------------------------------------------------------------
+additional_tracks:
+  - name: opposition-figure-and-bridge
+    title: "The opened square: bridge theorem + opposition figure (Lean 4)"
+    paper: preprints/opposition-figure/paper.md
+    short_description: >
+      Welds the topos stack (four-position partition) to the lattice stack
+      (ordinary elements): the partition at Y is non-degenerate iff the
+      kernel image is ordinary in Sub(D Y), and ordinary kernels force the
+      Z6 order-embedding (OrdinaryKernel.lean). Formalizes the opposition
+      figure: the six landmarks bot, not-a, a, not-not-a, a-or-not-a, top
+      are pairwise distinct iff a is ordinary (T1); classical/regular/dense
+      collapse laws; the skeleton theorem (each middle landmark inhabits its
+      partition cell); on Div12 at the tritone the figure is the identity;
+      Blanche's 1966 hexagon is not order-isomorphic to Z6 (T2)
+      (OppositionFigure.lean).
+    files:
+      - lean/FalseWorkPapers/Positions/OrdinaryKernel.lean
+      - lean/FalseWorkPapers/Examples/OppositionFigure.lean
+    sorry_count: 0
+    native_decide: false
+    axioms: at most propext, Classical.choice, Quot.sound (per-theorem audit table in the paper, section 10)
+    human_review_open:
+      - >
+        BlancheHexagon cover table vs. Blanche, Structures intellectuelles
+        (1966) — statement-matches-source review (flagged in the Lean
+        docstring).
+      - >
+        The two 2012 Birkhauser chapters on the intuitionistic square of
+        opposition: confirm neither states the ordinariness equivalence
+        informally, before novelty-leaning outreach.

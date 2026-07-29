@@ -206,6 +206,7 @@ import FalseWorkPapers.Positions.CommitmentGate
 import FalseWorkPapers.Positions.Partition
 import FalseWorkPapers.Positions.SpencerBrown
 import FalseWorkPapers.Positions.CanonizationClosure
+import FalseWorkPapers.Positions.OrdinaryKernel
 
 -- The universal `HeytingAlgebra (Subobject Y)` instance is brought in by
 -- `Setup.lean`, which every cell file imports.  That single import point

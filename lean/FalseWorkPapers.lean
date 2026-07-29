@@ -1,4 +1,5 @@
 import FalseWorkPapers.Positions
+import FalseWorkPapers.Examples.OppositionFigure
 import FalseWorkPapers.Heyting.SubobjectInstance
 import FalseWorkPapers.Lattice.FourPositionLattice
 import FalseWorkPapers.Examples.HeytingTypeInstance
