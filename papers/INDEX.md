@@ -150,9 +150,9 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 ### Bach at the Kernel (speculative companion)
 
-**Full title.** *Bach at the Kernel: A Speculative Full-Stack Reading.* (v0.1, June 2026)
+**Full title.** *Bach at the Kernel: A Speculative Full-Stack Reading.* (v0.2, July 2026)
 
-**Register.** Speculative — **[A] throughout**, declared in the version note. An expert-voice placement of Bach in the four-position territory (chorales → Infrastructure; WTC → Distribution; diminished-seventh modulation practice → Exploitation; the Refusal cell historically empty until the whole-tone tradition), followed by a single specimen — the *Es ist genug* chorale (BWV 60), whose incipit outlines the tritone — traced up every level of the stack, with the [K]/[A] line marked at each step. Explicitly resolution-hedged via Paper 2's own 21%-alignment finding on the Bach chorale corpus. Adds nothing to the formal record; depends on it only by citation.
+**Register.** Speculative — **[A] throughout**, declared in the version note. The programme's humanities-facing full-stack walk: opens with the ontological gloss (domain = distinction that fails to cancel; practice = four-fold of relations to that failure; history = nesting), reads the Div12 dictionary as the opened square's skeleton (Aristotle under Heyting negation), places Bach per-cell with landmark names (chorales → Infrastructure/A; WTC → Distribution/U; dim7 practice → Exploitation/I; Refusal/E historically empty), and traces *Es ist genug* up the stack with Bach→Berg as nesting. Explicitly resolution-hedged via Paper 2's 21%-alignment finding. Does not replace the unification spine (`preprints/opposition-figure/`); that document is the theorem chain, this one is the worked example. Adds nothing to the formal record; depends on it only by citation.
 
 **Source.** [`bach-at-the-kernel.md`](bach-at-the-kernel.md)
 
