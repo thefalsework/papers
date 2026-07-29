@@ -62,12 +62,12 @@ needs.
   square are different figures: the hexagon has three minimal elements
   and no bottom; `Z₆` is a bounded lattice.
 
-## The Blanché encoding (cover table for human review)
+## The Blanché encoding (cover table, reviewed)
 
 `BlancheHexagon` encodes the hexagon of Blanché, *Structures
-intellectuelles* (1966): the square's corners `A`, `E`, `I`, `O`
-plus `U := A ∨ E` and `Y := I ∧ O`, ordered by entailment
-(`x ≤ y` iff `x` entails `y`).  Cover relations:
+intellectuelles* (1966; independently Sesmat, 1951): the square's
+corners `A`, `E`, `I`, `O` plus `U := A ∨ E` and `Y := I ∧ O`, ordered
+by entailment (`x ≤ y` iff `x` entails `y`).  Cover relations:
 
 | edge    | reading                          |
 |---------|----------------------------------|
@@ -80,21 +80,45 @@ plus `U := A ∨ E` and `Y := I ∧ O`, ordered by entailment
 
 `A`, `E`, `Y` are pairwise incomparable (contraries), as are
 `I`, `O`, `U` (subcontraries); `U` and `Y` are contradictories and in
-particular incomparable.  **Statement-matches-source review of this
-table against Blanché (1966) is a human task**, same discipline as
-`Challenge.lean`.
+particular incomparable.
+
+**Review record (2026-07-29, AI web-research under direction).**  The
+table was checked against three independent specialist descriptions of
+Blanché's hexagon: Béziau, "The metalogical hexagon of opposition"
+(2013 — hexagon = contrariety triangle `A,E,Y` + subcontrariety
+triangle `I,O,U` "in which we find back the square"); Dubois–Prade
+(and Dubois–Prade–Rico, *AMAI* 2015): "`Y` entails both `I` and `O`,
+while `A`, as well as `E`, entails `U`", with `U`/`Y` contradictory;
+and the standard reference descriptions.  All six edges, the two
+incomparability triangles, and the three contradictory pairs match.
+Residual: the 1966 French primary text itself was not consulted (no
+accessible copy); the verification rests on concordant secondary
+literature, including Béziau's, which cites the 1966 source directly.
 
 ## Prior art and claim discipline
 
-The intuitionistic square of opposition is studied informally
-(Béziau's negation-corner analyses; the 2012 Birkhäuser volume *Around
-and Beyond the Square of Opposition*; Demey–Smessaert logical
-geometry).  What is claimed here is not the square's intuitionistic
-reading but, as far as we know, the first **kernel-checked** statements
-of (i) the exact algebraic law for when the degraded square is
-non-degenerate (= Citkin ordinariness), (ii) its identification with
-`Z₆` and the partition skeleton, and (iii) the non-identification with
-Blanché's hexagon.  Wording: "first kernel-checked", never "first".
+The intuitionistic square of opposition is studied informally, always
+at the proof-theoretic or sentence level: Mélès, "No Group of
+Opposition for Constructive Logics" (in Béziau–Jacquette, *Around and
+Beyond the Square of Opposition*, Birkhäuser 2012, pp. 201–217) argues
+group-theoretically that intuitionistic logic admits no Klein-style
+group of opposition because subcontrariety fails; Vidal-Rosset, "The
+Exact Intuitionistic Meaning of the Square of Opposition" (in
+Béziau–Basti, *The Square of Opposition: A Cornerstone of Thought*,
+Birkhäuser 2017, pp. 291–303) answers with automated provers (IMOGEN,
+ileanCoP) that the square survives *as a square* with some classical
+relations amputated; the Demey–Smessaert logical-geometry school maps
+opposition figures across logics.  Reviewed 2026-07-29 (abstracts, the
+authors' own congress summaries, and citing literature; full chapter
+texts are paywalled): neither chapter — nor anything found in targeted
+searches for square-of-opposition + Rieger–Nishimura or square +
+regular/dense elements — works at the algebra-element level or states
+the ordinariness equivalence.  What is claimed here is, as far as we
+know, the first **kernel-checked** statement of (i) the exact
+algebraic law for when the degraded square is non-degenerate
+(= Citkin ordinariness), (ii) its identification with `Z₆` and the
+partition skeleton, and (iii) the non-identification with Blanché's
+hexagon.  Wording: "first kernel-checked", never "first".
 -/
 import FalseWorkPapers.Examples.LadderCore
 

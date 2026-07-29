@@ -21,17 +21,31 @@ That the chain
 is kernel-checked end to end, and that the interpretive glosses riding on it
 are explicitly graded (**[A]**), never silently promoted. Claim discipline for
 the historical layer: **first kernel-checked**, never "first" — the informal
-intuitionistic-square literature (Béziau; the 2012 Birkhäuser volume;
+intuitionistic-square literature (Béziau; Mélès 2012; Vidal-Rosset 2017;
 Demey–Smessaert logical geometry) is the acknowledged precedent.
 
-## Human-review items (open)
+## Review record (2026-07-29, AI web-research under direction)
 
-- The `BlancheHexagon` cover table against Blanché (1966) — same
-  statement-matches-source discipline as `Challenge.lean` (flagged in the Lean
-  docstring).
-- The two 2012 Birkhäuser chapters on the intuitionistic square, to confirm
-  neither states the ordinariness equivalence informally (gates any outreach
-  that leans on novelty).
+Both formerly-open review items were closed as far as accessible sources
+allow; details in §9 of the paper and the Lean docstring.
+
+- **`BlancheHexagon` cover table:** matches three independent specialist
+  descriptions of Blanché's hexagon (Béziau, "The metalogical hexagon of
+  opposition," *Argumentos* 2013, citing Blanché 1966 directly;
+  Dubois–Prade–Rico 2015; standard references) — all six entailment edges,
+  both incomparability triangles, all three contradictory pairs. *Residual:*
+  the 1966 French primary text was not consulted (no accessible copy).
+- **The intuitionistic-square chapters:** a records correction first — only
+  one such chapter is in the 2012 volume (Mélès, "No Group of Opposition for
+  Constructive Logics," pp. 201–217, group-theoretic); the other is in the
+  2017 volume *The Square of Opposition: A Cornerstone of Thought*
+  (Vidal-Rosset, "The Exact Intuitionistic Meaning of the Square of
+  Opposition," pp. 291–303, prover-driven). Neither works at the
+  algebra-element level or states the ordinariness equivalence; targeted
+  searches for square + Rieger–Nishimura and square + regular/dense elements
+  also came back empty. *Residual:* full chapter texts are paywalled; the
+  review rests on abstracts, the authors' own congress summaries, and citing
+  literature, all concordant.
 
 ## Provenance
 

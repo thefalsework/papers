@@ -193,12 +193,26 @@ additional_tracks:
     sorry_count: 0
     native_decide: false
     axioms: at most propext, Classical.choice, Quot.sound (per-theorem audit table in the paper, section 10)
-    human_review_open:
+    review_record:
       - >
-        BlancheHexagon cover table vs. Blanche, Structures intellectuelles
-        (1966) — statement-matches-source review (flagged in the Lean
-        docstring).
+        BlancheHexagon cover table vs. Blanche (1966): reviewed 2026-07-29
+        (AI web-research under direction) against three independent
+        specialist descriptions (Beziau, "The metalogical hexagon of
+        opposition," Argumentos 2013, citing Blanche 1966 directly;
+        Dubois-Prade-Rico, AMAI 2015; standard references). All six
+        entailment edges, both incomparability triangles, and the three
+        contradictory pairs match. Residual: the 1966 French primary text
+        was not consulted (no accessible copy).
       - >
-        The two 2012 Birkhauser chapters on the intuitionistic square of
-        opposition: confirm neither states the ordinariness equivalence
-        informally, before novelty-leaning outreach.
+        Intuitionistic-square chapters: reviewed 2026-07-29. Records
+        correction — only one such chapter is in the 2012 volume (Meles,
+        "No Group of Opposition for Constructive Logics," pp. 201-217,
+        group-theoretic); the other is Vidal-Rosset, "The Exact
+        Intuitionistic Meaning of the Square of Opposition," in the 2017
+        volume The Square of Opposition: A Cornerstone of Thought
+        (pp. 291-303, prover-driven). Neither works at the algebra-element
+        level or states the ordinariness equivalence; targeted searches for
+        square + Rieger-Nishimura and square + regular/dense elements came
+        back empty. Residual: full chapter texts paywalled; review rests on
+        abstracts, the authors' own congress summaries, and citing
+        literature, all concordant.
