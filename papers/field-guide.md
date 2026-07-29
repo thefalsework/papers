@@ -194,6 +194,7 @@ A reader who rejects every [A] gloss keeps every [K] theorem. That is the point 
 | Lean library | [`../lean/README.md`](../lean/README.md) |
 | Classified works on the web | [falsework.dev/works](https://falsework.dev/works) |
 | Learning trajectories | [falsework.dev/guides](https://falsework.dev/guides) |
+| Printable humanities bundle (PDF) | [`printables/humanities-bundle/`](printables/humanities-bundle/) — Start Here, this guide, Bach, Position-Taking |
 | Master index | [`INDEX.md`](INDEX.md) |
 
 ---

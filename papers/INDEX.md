@@ -134,6 +134,8 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Source.** [`field-guide.md`](field-guide.md)
 
+**Printable PDF.** With the other three humanities-bundle documents: [`printables/humanities-bundle/`](printables/humanities-bundle/).
+
 ### The Connected Spine
 
 **Full title.** *The Connected Spine: One Asymmetry in Three Registers, and a Kernel-Checked Music Topos.*
