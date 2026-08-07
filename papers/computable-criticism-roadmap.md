@@ -4,7 +4,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 0.2 (August 2026; v0.2 adds §5.0, correcting v0.1's implication that the computational layer is greenfield — two prototypes already exist). Register note: this is a programme document — part argument, part engineering specification. Everything argumentative is **[A]**; everything speculative is marked **[O]**; the engineering sections are a spec, graded by acceptance criteria rather than epistemic tags. Nothing here is kernel-checked. This document is written to be handed to a collaborator or engineer who has not read the surrounding corpus: §1–§3 say why, §4 says what changes in the theory, §5–§7 say what to build (§5.0 says what already exists), §8 says in what order, §9 says what is not being claimed.*
+*Version 0.3 (August 2026; v0.2 added §5.0 — the computational layer is not greenfield, two prototypes exist; v0.3 adds §7.1 on where the layers merge, disambiguates Core v2 from the algebra's deferred V2, and promotes two findings from the algebra review into spec requirements). Register note: this is a programme document — part argument, part engineering specification. Everything argumentative is **[A]**; everything speculative is marked **[O]**; the engineering sections are a spec, graded by acceptance criteria rather than epistemic tags. Nothing here is kernel-checked. This document is written to be handed to a collaborator or engineer who has not read the surrounding corpus: §1–§3 say why, §4 says what changes in the theory, §5–§7 say what to build (§5.0 says what already exists), §8 says in what order, §9 says what is not being claimed.*
 
 ---
 
@@ -161,7 +161,7 @@ The **audit** is the point: for each node, compare the computed cascade against 
 
 The existing "Test this claim" UI buttons stop displaying the model's answer and start running the test.
 
-Neither piece starts from zero: the executor's semantics are already implemented in the Wolfram algebra's `RemoveAndProject` (§5.0) and port directly; the audit's architecture — two independent detection paths, disagreements flagged rather than auto-resolved — is already running in the Lab's `detection-conflicts.ts` and generalizes from pattern detections to removal tests.
+Neither piece starts from zero, but neither is a straight port. The executor starts from the Wolfram algebra's `RemoveAndProject` semantics (§5.0) with one **mandatory upgrade**: `RemoveAndProject` propagates one step only (direct dependents marked degraded, no further consequences); the executor must cascade to fixpoint, so that a degraded or deleted node's own dependents are re-evaluated until nothing changes. The audit's architecture — two independent detection paths, disagreements flagged rather than auto-resolved — is already running in the Lab's `detection-conflicts.ts` and generalizes from pattern detections to removal tests.
 
 **Acceptance criteria:** executor is deterministic and pure; audit runs on every new profile; the Jung incidental/thematic seam (known specimen) is detected as `prose_overclaim` when reproduced.
 
@@ -187,7 +187,12 @@ Comparing two works becomes searching for a **maximal partial homomorphism** bet
 
 This is the Structure-Mapping Engine lineage (Falkenhainer–Forbus–Gentner) with the missing front end supplied: representations of real artworks, produced by a repeatable procedure.
 
-**Acceptance criteria:** homomorphism search implemented (exact for graphs ≤ ~40 nodes; greedy + repair above); Red Books rerun computes ≥ 4 of the 6 published correspondences and locates the authorship obstruction.
+Two requirements inherited from the algebra review (§5.0):
+
+- **No bare numeric confidence.** The algebra's hand-set rubric (0.92, 0.81, …) does not survive into production. Mapping strength is reported as structured evidence — which nodes matched, which edge kinds were respected, which predicates fired — the algebra's own deferred `TransferEvidence` form, adopted here as a requirement rather than a wishlist item.
+- **The mapping and the license must be auditable against each other.** The algebra's transfer query (comma-shape match between hosting kernels) and this homomorphism search are the same operation at two granularities: the practice layer supplies the coarse *license* for a cross-work mapping, the instance layer computes the fine *content*. Prediction, checkable once both run over the same corpus: homomorphism-found correspondences should concentrate on pairs whose kernels comma-shape match. Disagreement between the two granularities is an audit event, not an embarrassment — the same seam discipline as §5.2, one altitude up (see §7.1).
+
+**Acceptance criteria:** homomorphism search implemented (exact for graphs ≤ ~40 nodes; greedy + repair above); Red Books rerun computes ≥ 4 of the 6 published correspondences and locates the authorship obstruction; mapping output carries structured evidence, no bare scores.
 
 ### 5.5 Enumeration and computed positions
 
@@ -224,13 +229,41 @@ Lean (verification)                 — universal claims about the machinery its
 
 The seam between **computed** and **asserted** is the platform's version of the corpus's seam between **[K]** and **[A]**: never silently promoted, always displayed. The audit (§5.2) is the mechanism that keeps it honest.
 
+### 7.1 Where the layers merge
+
+The middle box above is not one thing. The computational layer has three altitudes, already prototyped separately (§5.0), and they stack rather than compete:
+
+```
+practice layer   — WL algebra:   kernels, commas, cross-domain transfer LICENSE
+       ▲  anchors (kernel reference)          ▼ derives comma shapes
+instance layer   — Core v2:      one work's dependency structure (this spec's center)
+       ▲  aggregates                          ▼ projects
+corpus layer     — Lab vectors:  fingerprints, base rates, neighbors, /map
+```
+
+The merge point is the **kernel anchor** — the algebra's own load-bearing design commitment (every `Mechanism` carries a `Kernel` reference; a schema without one is malformed) meeting Core v2's `work.practice` and `principle` fields (the work-level kernel of §4). Three consequences:
+
+- **Instance → practice.** A transduction from pipeline-emitted `CoreV2` objects into the algebra's `Core[...]` heads turns the algebra's five hand-authored cores into a machine-fed corpus. This repairs the algebra's main epistemic weakness: comma-shape match currently reduces to hand-authored label equality (`IrreducibilityKind` strings — the Tymoczko ↔ Cutting match was planted in the data before the code found it). With instance graphs underneath, a claimed comma shape becomes *checkable against structure* rather than asserted; the algebra's headline capability changes grade from articulation to measurement.
+- **Practice → instance.** The algebra supplies what instance graphs alone lack: the semantics of cross-work comparison. A homomorphism between two Core v2 graphs (§5.4) is just a subgraph alignment until the practice layer says *why* it should exist — shared kernel shape against a shared comma. The two granularities audit each other (§5.4).
+- **Instance → corpus.** The Lab's 25-feature vector becomes, feature by feature, a computed *projection* of the instance graph (several features are already graph statistics in disguise: self-reference depth, constraint exposure, element density). This is the Lab's own planned `feature_source` migration, given its target representation.
+
+**Naming discipline: "Core v2" ≠ the algebra's "V2."** The algebra's design notes defer a V2 wishlist; every item on it lands in an existing section of this spec. No part of the Wolfram direction diverges from this document — the layers were always aimed at the same architecture from different altitudes:
+
+| Algebra V2 item (design-notes.md) | Where it lands here |
+|---|---|
+| `TransferEvidence` (structured basis, no bare scores) | §5.4 requirement — adopted, mandatory |
+| `FourCriteriaAudit` (Paper 1 §3 audit as a function) | §5.5 computed kernel positions |
+| `KernelTopologyProjection` (project a core onto the four-fold) | §5.5 computed kernel positions |
+| Schema mutation under recursion (new types from self-analysis) | §5.3 novel-mechanism promotion: a subgraph satisfying no library signature is a *candidate* new pattern type, human-gated before it enters the library |
+| Paper 2 linkage (encode the distinction operation itself) | Lean layer — a universal claim about the machinery, verified there or not at all |
+
 ## 8. Roadmap
 
 **Phase 1 — the merge** (node0000; smallest useful increment)
 This is integration, not greenfield (§5.0). Core v2 schema + transduction stage — graph-shaped like the Wolfram algebra, pipeline-fed like the Lab's vectors; removal-test executor ported from `RemoveAndProject` semantics; Core audit generalized from `detection-conflicts.ts` and wired into every new profile; "Test this claim" buttons execute. The Lab's 25-feature vector is not discarded — it remains the coarse fingerprint (neighbors, corpus statistics) alongside the graph, and its `feature_source` migration to computed proxies proceeds independently. *Exit test: the known Jung seam is machine-caught.*
 
 **Phase 2 — signatures and mapping**
-Pattern signatures for the most-used library entries; corpus base rates; homomorphism-based synthesis behind a flag, compared against the LLM synthesis on ~10 known pairs. *Exit test: Red Books correspondences and the authorship obstruction reproduced computationally.*
+Pattern signatures for the most-used library entries; corpus base rates; homomorphism-based synthesis behind a flag, compared against the LLM synthesis on ~10 known pairs. Plus the merge transduction (§7.1): `CoreV2 → Core[...]`, so the WL algebra runs over the machine-fed corpus and the practice-vs-instance consistency audit (comma-shape license vs computed homomorphism) becomes runnable. *Exit test: Red Books correspondences and the authorship obstruction reproduced computationally.*
 
 **Phase 3 — reliability studies 1–2**
 Test–retest and the model-change study, run against the existing database plus scheduled reruns. Publishable regardless of outcome. *Exit test: a stability number per pipeline stage, with confidence intervals.*
