@@ -4,7 +4,7 @@
 
 FalseWork (falsework.dev)
 
-*Version 0.1 (August 2026). Register note: this is a programme document — part argument, part engineering specification. Everything argumentative is **[A]**; everything speculative is marked **[O]**; the engineering sections are a spec, graded by acceptance criteria rather than epistemic tags. Nothing here is kernel-checked. This document is written to be handed to a collaborator or engineer who has not read the surrounding corpus: §1–§3 say why, §4 says what changes in the theory, §5–§7 say what to build, §8 says in what order, §9 says what is not being claimed.*
+*Version 0.2 (August 2026; v0.2 adds §5.0, correcting v0.1's implication that the computational layer is greenfield — two prototypes already exist). Register note: this is a programme document — part argument, part engineering specification. Everything argumentative is **[A]**; everything speculative is marked **[O]**; the engineering sections are a spec, graded by acceptance criteria rather than epistemic tags. Nothing here is kernel-checked. This document is written to be handed to a collaborator or engineer who has not read the surrounding corpus: §1–§3 say why, §4 says what changes in the theory, §5–§7 say what to build (§5.0 says what already exists), §8 says in what order, §9 says what is not being claimed.*
 
 ---
 
@@ -45,7 +45,7 @@ The present programme supplies all three, in a division of labor:
 | Layer | Role | Analogue in the corpus |
 |---|---|---|
 | LLM pipelines | **Perception**: read works into representations | proposes, never confirms (Paper 2: a model is a sound refuter, unsound confirmer) |
-| Computational layer (this spec) | **Consequence**: derive what follows from a representation | new — the subject of this document |
+| Computational layer (this spec) | **Consequence**: derive what follows from a representation | prototyped twice, disconnectedly (§5.0); unified by this document |
 | Lean | **Verification**: check universal claims about the machinery | [K] floor |
 
 Historical placement, for orientation: structuralism 1.0 had theory without instruments; distant reading had instruments without depth; structure-mapping theory (Gentner, SME, 1980s) had the comparison algorithm but no way to produce representations of real artworks. LLMs are the missing perception layer. The tag ladder is the missing epistemics. **[A]**
@@ -74,6 +74,26 @@ The guardrail against vacuity is already a theorem: the four-fold opens **iff th
 Revision cost: Paper 1's domain table is reframed — "Music: the Fifth" becomes "the 12-TET practice within music"; the physics row points at practices. The music-instance [K] results are untouched; the lattice never cared what the unit around it was called.
 
 ## 5. Specification: the computational layer
+
+### 5.0 Prior art: two existing prototypes
+
+The layer specified below is not greenfield. Two prototypes already implement complementary halves of it, with **opposite representation choices and no connection to each other**:
+
+**The Wolfram Language algebra** (`wolfram/` in the papers repository; May 2026, built to a specification from the Wolfram Institute's Computational Metaphysics group). A typed symbolic algebra — six heads: `Kernel`, `Comma`, `Mechanism`, `Constraint`, `FailureMode`, `Core` — over a five-work hand-authored corpus. It already has: a working **removal-test executor** (`RemoveAndProject`: a rewrite that drops the mechanism, drops orphaned constraints, marks dependents degraded, surfaces the declared failure mode); **predicate-based cross-work transfer** (`TransferCandidates`, five predicates including comma-shape match between hosting kernels — the Tymoczko ↔ Cutting result, and the only pair where comma-shape match fires); and **recursive self-application** (`RecursiveAnalysis` computationally re-derives the methodology's own latent failure modes, originally found interpretively). The physics-anchor scripts alongside it are executed computational results, not sketches — v5 witnesses Kochen–Specker as a finite computation; v6a verifies the Heyting-collapse at Peres-33 scale. Limits: the corpus is hand-authored, the schema is frozen against Paper 1 v11.6, and nothing feeds it from the production pipelines.
+
+**The Lab** (falsework.dev/lab; `lib/lab/` in node0000). The production-side counterpart: a **25-feature typed vector** extracted per profile by LLM (`feature-schema.ts` v3 — integers 1–5, booleans, small enums, deliberately no floats), with a `feature_source` column already anticipating the migration from LLM extraction to computed proxies. Over the vectors: a **predicate engine** ("the computational core — predicates parse and evaluate, no LLM required") linked to canonical patterns; **detection-conflict resolution** (`detection-conflicts.ts`) that compares LLM pattern detection against predicate detection and flags `llm_only` / `predicate_only` / `agreement` — the computed-vs-asserted seam of §5.2, already running, applied to pattern detection; **cross-validation rules** within a vector; **feature-distance structural neighbors** (structure similarity no text embedding can find); and an **edge materializer** that turns shared predicate matches into the corpus graph rendered at `/map/patterns`. Limit: a flat vector cannot represent which element depends on which, so removal cascades are impossible over it.
+
+The complementarity is exact, and so is the gap:
+
+| Spec item | Wolfram algebra | Lab | Missing |
+|---|---|---|---|
+| §5.1 typed schema | graph-shaped, hand-authored, 5 works | flat vector, pipeline-fed, whole corpus | a dependency graph emitted by the pipeline |
+| §5.2 executor + audit | executor ✓, audit ✗ | audit pattern ✓ (for detections), executor ✗ | the two halves joined on one representation |
+| §5.3 signatures | transfer predicates | full predicate engine + conflict flags | signatures over graphs rather than vectors |
+| §5.4 structure mapping | predicate-based transfer | feature-distance neighbors | actual subgraph homomorphism |
+| §5.5 enumeration | lattice enumeration in the physics anchors (different target) | — | mechanism-graph enumeration |
+
+The Wolfram prototype has an executor but no audit because its cores are hand-authored (there is no independent assertion to audit against); the Lab has an audit but no executor because its vectors cannot cascade. **Core v2 (§5.1) is the merge**: graph-shaped like the algebra, pipeline-fed and audited like the Lab. Phase 1 of the roadmap is therefore an integration job, not a build-from-scratch.
 
 ### 5.1 Core v2 — the typed dependency graph
 
@@ -141,6 +161,8 @@ The **audit** is the point: for each node, compare the computed cascade against 
 
 The existing "Test this claim" UI buttons stop displaying the model's answer and start running the test.
 
+Neither piece starts from zero: the executor's semantics are already implemented in the Wolfram algebra's `RemoveAndProject` (§5.0) and port directly; the audit's architecture — two independent detection paths, disagreements flagged rather than auto-resolved — is already running in the Lab's `detection-conflicts.ts` and generalizes from pattern detections to removal tests.
+
 **Acceptance criteria:** executor is deterministic and pure; audit runs on every new profile; the Jung incidental/thematic seam (known specimen) is detected as `prose_overclaim` when reproduced.
 
 ### 5.3 Pattern signatures as graph predicates
@@ -174,7 +196,7 @@ Two [O]-grade directions once §5.1–§5.4 are stable — the most Wolfram-flav
 - **Enumerate the small space.** With mechanisms as typed combinators and constraints as consistency rules, enumerate small consistent mechanism-graphs. Locate the corpus in that space. Unoccupied-but-consistent cells are **predictions** — structurally viable works no one has made. Criticism has never produced a falsifiable prediction of this kind; `why_twelve` (enumerate the temperaments, find the forced instance) is the in-house precedent for the move.
 - **Compute kernel positions.** Where a practice has a declared kernel object, derive the work's four-fold position from its graph's relation to it, instead of asking a classifier. The LLM classification remains as a cross-check — two independent instruments again.
 
-Substrate note: a TypeScript executor inside node0000 covers §5.1–§5.4 with no new infrastructure. Wolfram Language is the natural richer substrate for §5.5 (symbolic expressions, graph isomorphism machinery, cheap enumeration) and for **computational essays** as a publication format — a *Two Red Books* notebook in which the reader executes the subtraction tests themselves. The architecture is vendor-indifferent; the seam discipline is not.
+Substrate note: a TypeScript executor inside node0000 covers §5.1–§5.4 with no new infrastructure. Wolfram Language is the natural richer substrate for §5.5 (symbolic expressions, graph isomorphism machinery, cheap enumeration) and for **computational essays** as a publication format — a *Two Red Books* notebook in which the reader executes the subtraction tests themselves. The existing algebra (§5.0) is the starting point on that side: pointing it at pipeline-emitted Core v2 objects instead of hand-authored cores turns the demonstration artifact into an instrument, and its deferred V2 questions (schema mutation under recursion, `FourCriteriaAudit`, `KernelTopologyProjection`) become live once the corpus is machine-fed. The architecture is vendor-indifferent; the seam discipline is not.
 
 ## 6. The reliability programme
 
@@ -204,8 +226,8 @@ The seam between **computed** and **asserted** is the platform's version of the 
 
 ## 8. Roadmap
 
-**Phase 1 — the graph and the executor** (node0000; smallest useful increment)
-Core v2 schema + transduction stage; removal-test executor; Core audit wired into every new profile; "Test this claim" buttons execute. *Exit test: the known Jung seam is machine-caught.*
+**Phase 1 — the merge** (node0000; smallest useful increment)
+This is integration, not greenfield (§5.0). Core v2 schema + transduction stage — graph-shaped like the Wolfram algebra, pipeline-fed like the Lab's vectors; removal-test executor ported from `RemoveAndProject` semantics; Core audit generalized from `detection-conflicts.ts` and wired into every new profile; "Test this claim" buttons execute. The Lab's 25-feature vector is not discarded — it remains the coarse fingerprint (neighbors, corpus statistics) alongside the graph, and its `feature_source` migration to computed proxies proceeds independently. *Exit test: the known Jung seam is machine-caught.*
 
 **Phase 2 — signatures and mapping**
 Pattern signatures for the most-used library entries; corpus base rates; homomorphism-based synthesis behind a flag, compared against the LLM synthesis on ~10 known pairs. *Exit test: Red Books correspondences and the authorship obstruction reproduced computationally.*
@@ -229,4 +251,4 @@ Phases 1–2 are engineering inside the existing platform. Phase 3 is mostly que
 
 ---
 
-*Companion documents: `two-red-books.md` (specimen), `field-guide.md` (programme overview), Paper 1 (kernels and commas), Paper 2 (epistemic dependency and correction). Platform: node0000 (falsework.dev), pipelines currently Claude Fable 5 with Sonnet 4.5 fallback.*
+*Companion documents: `two-red-books.md` (specimen), `field-guide.md` (programme overview), Paper 1 (kernels and commas), Paper 2 (epistemic dependency and correction), `wolfram/README.md` and `wolfram/design-notes.md` (the existing WL algebra, §5.0). Platform: node0000 (falsework.dev) — pipelines currently Claude Fable 5 with Sonnet 4.5 fallback; the Lab at `/lab` (feature vectors, predicate engine, detection conflicts); the pattern map at `/map/patterns`.*
