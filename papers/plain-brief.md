@@ -1,0 +1,63 @@
+# The Wrinkle in the Rug
+
+**A plain-language brief on FalseWork: what it is, what it does, and who has checked which parts**
+
+*August 2026. This document uses no specialist vocabulary and makes no claim it doesn't flag. For the technical version of everything here, see the papers and the code; this is the front door.*
+
+---
+
+## Start with a piano
+
+Here is a strange fact known to every piano tuner since antiquity. If you tune a piano by perfect steps — each note tuned purely against the last, the way the physics of vibrating strings wants — you will go around the whole keyboard and arrive back where you started *slightly wrong*. The circle doesn't close. The error is small, unavoidable, and provable: it falls out of arithmetic itself, because powers of 2 and powers of 3 never meet.
+
+Musicians didn't fix this — it can't be fixed. Instead, they *chose where to hide it*. One tradition shoved all the error into one unusable interval (the "wolf," because it howled). Another spread it evenly across every key, so that everything is very slightly out of tune and nothing howls — that's the piano you know. These choices have names (temperaments), and whole eras of music sound the way they sound because of which choice their instruments made. Bach wrote a famous book of pieces partly to show off what one such choice made possible.
+
+Now the idea at the center of this project:
+
+**Every field has a wrinkle like this — a mismatch that cannot be flattened, only moved.** Like a wrinkle in a rug that's slightly too big for the room: push it down here, it pops up there. The wrinkle isn't a failure of the rug. It's a consequence of the rug and the room. And here is the productive part: *the ways people choose to manage the wrinkle become the schools, styles, and traditions of the field.* Physics has a wrinkle where its two great theories refuse to combine; string theory and its rivals are, in this picture, different temperaments — different places to push the same wrinkle. The project calls the wrinkle a **comma** (the tuners' own word for it) and the managing move a **kernel**.
+
+## The four chairs
+
+Once a field has committed to a way of managing its wrinkle, the project claims something stronger: everything anyone does in that field lands in exactly one of **four positions** relative to that commitment. Roughly: you can work *inside* it, *spread* it into new territory, *mine the leftover* it can't digest, or *refuse* it outright. Four chairs, and every act sits in one.
+
+"Exactly one of four" is the kind of claim that's usually hand-waving — most such schemes in the humanities are more like horoscopes, flexible enough to fit anything. So this one was done differently: the four-position claim is written in a computer proof assistant called Lean — think of it as a spell-checker for logical arguments, except it cannot be sweet-talked, flattered, or worn down. Either every step of the proof checks, or the light stays red. The light is green: within the mathematical model, the four positions are exhaustive (no fifth chair) and exclusive (no sitting in two at once). And there's a bonus theorem with real bite: the four chairs only all appear under specific conditions — the commitment has to be a genuine middle-ground act, neither trivial nor totalizing. In other words, the framework comes with a built-in test for when it *doesn't apply*. Frameworks that can be applied to anything can never be wrong about anything; this one carries its own "not valid here" detector, as a theorem.
+
+To be clear about what the green light means: the *mathematics* is machine-checked. Whether the mathematics correctly describes music, or physics, or novels — that's a separate question, checked slowly and partially, by humans, as described below.
+
+## The machine that reads
+
+The project also built an instrument: a website (falsework.dev) where an AI reads a cultural work — a novel, an album, a film — and produces something unusual. Not a review, not a summary, but a *structure diagram*: here are the load-bearing parts, here is what depends on what, and — the signature move — here is what would collapse if you removed each piece. Like analyzing a Jenga tower: which blocks are decorative, and which bring everything down?
+
+One rule governs the whole machine, and it's the project's most important sentence: **the AI proposes; it never confirms.** Treat the AI like a metal detector. It's genuinely good at beeping over buried structure — and completely untrustworthy about *what's* buried. You still have to dig. Every claim it produces is labeled by how it could be checked, and the labels are never quietly upgraded.
+
+The system has already caught itself once, which is the best evidence it's built honestly. Analyzing a famous unfinished book (Jung's *Red Book*), one part of the machine classified the unfinishedness as incidental — while another part built a grand thematic argument on top of it. Contradiction. The project's response was not to hide the seam but to build machinery so that such seams get caught *automatically* next time. An instrument that can catch itself lying is a different kind of thing from an oracle.
+
+## The inspectors: who has checked which tile
+
+Nobody has endorsed this project whole, and the project is fastidious — almost fussy — about saying so. What has happened instead is more like a building inspection: different experts have certified different tiles, each strictly within their trade. The project mails them *specimens of their own subject* — an analysis of their life's work or field — which turns out to be the one kind of unsolicited mail experts actually read.
+
+- **Stephen Wolfram** (the computation-is-everything scientist) received a cold-email structural analysis of his own thousand-page book. He replied personally with three sharp questions — can this become symbolic? do patterns transfer between works? what happens if you feed the method to itself? — and forwarded the thread to his Institute's philosophy team, whose metaphysics group sent back a formal specification. A working prototype in his own language (Wolfram Language) answered it, and the collaboration is live. The deeper connection: Wolfram's picture is computation all the way down, and his open problem is the bridge from that abstraction to human meaning. This project is building from the meaning side toward the same bridge.
+- **Dmitri Tymoczko** (Princeton music theorist) — his geometry of music, developed entirely independently, sorts John Coltrane's output into the same three structural bins the project's framework found. Two unrelated instruments agreeing on the same reading is the strongest evidence the music work has. He also *pushed back* — he doubts the tuning wrinkle still actively matters to musicians working on modern fixed-tuning instruments — and that skepticism is recorded in the papers as an open question, not smoothed over.
+- **James Cutting** (Cornell psychologist of film) — his decades of empirical film research ground most of the project's film claims; he explicitly did *not* confirm the wrinkle part, and the papers say so in as many words.
+- **Alex Citkin** (logician) — checked several of the underlying lattice-mathematics facts. One of the project's machine-checked proofs turns out to be, as far as either party knows, the first written proof of a statement his own paper had noted without proof.
+- **Ilia Levin** (Holon Institute of Technology) — a correspondence about complementary approaches that ended with him endorsing the project's first paper onto arXiv, the physics-and-computer-science preprint server — the project's first step from private repository to public scientific record.
+- **Becca Tarnas** (scholar of Jung and Tolkien) — the next intended inspector: the machine's analysis of the two *Red Books* — her exact specialty — awaits her expert disagreement, which would be as valuable as her agreement.
+
+Notice the pattern: each expert checked their tile. None certified the building. The project treats that distinction as sacred — its papers record who confirmed what, who doubted what, and what remains open, with the diligence of a ship's log.
+
+## Where it's headed
+
+The next chapter is making the analysis *executable*. Today the AI asserts "remove this element and that collapses"; the goal is a button that actually runs the removal on the structure diagram and shows you the cascade — the difference between a critic saying "this scene is essential" and a system where you can *delete the scene and watch*. Further out: treating structures the way chemists treat the periodic table — mapping which structural designs are possible, and noticing the gaps. Mendeleev's table had holes where undiscovered elements had to be; a complete map of viable structures would have holes too — *works that could exist but don't, yet*. Criticism has never made a falsifiable prediction. That would be one.
+
+## What is not being claimed
+
+- Not that culture is being computed. The machine analyzes *diagrams of* works — maps, not territories. A dependency graph has no entry for how gold leaf glows under lamplight, and the project says so in print.
+- Not that beauty, worth, or meaning have been formalized. The instrument is silent on all three, on purpose.
+- Not that the AI's readings are stable. Whether it produces the same diagram twice for the same book is an open experiment, honestly scheduled and not yet run — and the whole enterprise hangs on results like it.
+- Not that any expert above endorsed the framework. Tiles, not building.
+
+## The name
+
+Falsework is the builders' word for the temporary wooden scaffold that holds a stone arch while it's being assembled. The scaffold carries everything — until the keystone goes in. Then you take the wood away, and the arch either stands on its own or it never was an arch.
+
+Everything above is scaffolding around one question: *can the study of meaning be given load-bearing structure — checkable, removable, honest about what it can't hold?* The wood is up. The stones are being set. The whole point of building this way is that, someday, you get to find out.
