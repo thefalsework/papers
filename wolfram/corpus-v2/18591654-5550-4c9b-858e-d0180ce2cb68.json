@@ -1,0 +1,388 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Seven Samurai",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Structural debt accumulates through durational asymmetry where extended preparation creates obligation that compressed planning denies, forcing execution to liquidate debt through real-time expenditure rather than montage efficiency.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Tripartite durational asymmetry",
+      "description": "The 207-minute runtime divides into three measurably imbalanced acts: roughly 90 minutes of recruitment, 45 minutes of preparation, 72 minutes of combat. The extended recruitment phase creates structural debt that the compressed preparation phase cannot resolve, forcing resolution into durational expenditure in combat.",
+      "confidence": "high",
+      "evidence": [
+        "Explicit runtime measurements: approximately 90, 45, and 72 minutes per act within a 207-minute total.",
+        "Montage compression ratios shift across acts: 3-second average shot length in preparation versus 18-second in recruitment.",
+        "Stage 4 rates this mechanism HIGH confidence with dense evidentiary support from durational measurement."
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Serial recruitment vignettes",
+      "description": "Seven samurai enter through discrete self-contained sequences with minimal cross-contamination: Kambei via hostage rescue, Katsushiro via subordination, Gorobei via wood-splitting test, Heihachi via comedy, Shichiroji via chance encounter, Kyuzo via duel, Kikuchiyo via persistent rejection. Each vignette is a closed structural unit establishing individuated investment.",
+      "confidence": "high",
+      "evidence": [
+        "Seven discrete sequences with measurable self-containment, each producing complete character establishment.",
+        "Seriality is decorative at the unit level but load-bearing at the pattern level: removing one samurai deletes a vignette but the recruitment logic persists.",
+        "Recruitment scenes average 18-second shot lengths, resisting the compression applied to preparation."
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Real-time combat versus montage preparation",
+      "description": "Act III uses 2-8 second real-time sword engagements with zero temporal ellipsis, holding the full arc of each strike from draw through follow-through. This contrasts with Act II montage compression at a 3-second average shot length, refusing the efficiency grammar that preparation established.",
+      "confidence": "medium",
+      "evidence": [
+        "Shot length measurements: 3-second average in preparation montage versus 2-8 second uninterrupted real-time engagements in combat.",
+        "No combat sequence uses montage to compress a single engagement.",
+        "Stage 4 rates this MEDIUM: measurements are solid but the removal test requires inference about experiential impact."
+      ],
+      "rules": [
+        "Combat is shown in real time with zero temporal ellipsis and full observational access"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Three-plane depth staging",
+      "description": "Single shots consistently populate three depth planes: foreground 0-10 feet, middle ground 10-30 feet, background 30-plus feet, with independent blocking in each. Example: static Kambei in foreground, laterally moving farmers in middle ground, bandits as a horizontal ridge line in background.",
+      "confidence": "high",
+      "evidence": [
+        "Documented simultaneous action across three planes with independent blocking within single shots.",
+        "Stage 4 classifies it as a HIGH-confidence supporting mechanism enabling geometric crowd composition and spatial legibility.",
+        "Stage 2 states geometric patterns collapse into flat arrangements without simultaneous plane population."
+      ],
+      "rules": [
+        "Three depth planes remain simultaneously legible"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Weather as phase-change marker",
+      "description": "Rain appears exclusively in Act III, coinciding with the first bandit death and persisting through resolution; Acts I and II have zero precipitation. The dry-to-wet shift provides an absolute boundary between preparation and execution and transforms the ground from stable to unstable, forcing choreography into slipping and mud-grappling.",
+      "confidence": "medium",
+      "evidence": [
+        "Rain is confined entirely to Act III with zero precipitation earlier, creating an absolute phase boundary.",
+        "Rain transforms ground surface, forcing combat choreography to incorporate slipping, mud-grappling, and traction loss.",
+        "Stage 4 rates it MEDIUM: it reinforces the Act III boundary but the tripartite structure would survive without it."
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "Wipe transitions as structural punctuation",
+      "description": "Approximately 42 wipe transitions occur exclusively at structural boundaries: between recruitment vignettes, between preparation montage segments, between discrete combat engagements. Zero wipes occur mid-scene, making the wipe a visible chapter marker whose presence signals closure and absence signals continuity.",
+      "confidence": "medium",
+      "evidence": [
+        "Approximate count of 42 wipes with systematic positional logic and zero mid-scene occurrences.",
+        "Replacing wipes with cuts would render the chapter structure ambiguous.",
+        "Stage 4 rates it MEDIUM: wipes make chapter structure explicit but do not generate it; vignettes remain discrete without them."
+      ],
+      "rules": [
+        "Wipes occur only at structural boundaries, never mid-scene"
+      ]
+    },
+    {
+      "id": "E_geometric_crowd_composition",
+      "kind": "element",
+      "label": "Geometric crowd composition",
+      "description": "Human figures are arranged in triangular, diagonal, and radial formations legible across depth planes and shot scales: villagers in tight triangular masses, samurai along diagonal lines in tactical discussions, bandits as horizontal ridge lines.",
+      "confidence": "high",
+      "evidence": [
+        "Triangle patterns recur across extreme long shots at the village gate and medium interior council shots.",
+        "Stage 1 marks the geometry as load-bearing for spatial legibility across frequent reframings."
+      ]
+    },
+    {
+      "id": "E_telephoto_compression",
+      "kind": "element",
+      "label": "Telephoto compression in combat",
+      "description": "Battle scenes use estimated 200-400mm telephoto lenses that compress depth and flatten spatial relationships, making seven samurai and roughly thirty bandits appear as larger forces through spatial flattening.",
+      "confidence": "high",
+      "evidence": [
+        "Estimated 200-400mm lenses compress depth so fighters appear closer together than blocking suggests.",
+        "Stage 3 documents that the density mechanism generates spatial illegibility at the most critical moments of the final battle."
+      ]
+    },
+    {
+      "id": "E_circular_village_geography",
+      "kind": "element",
+      "label": "Circular village geography",
+      "description": "The village operates as a bounded circle with north and south gates and a central plaza; all navigation follows radial or circumferential paths with zero diagonal shortcuts, letting viewers track bandit approach vectors and defensive positions through simple geometric relationships.",
+      "confidence": "high",
+      "evidence": [
+        "Two gates, central plaza, and exclusively radial or circumferential movement with no diagonal shortcuts.",
+        "The final battle crosscuts four spatial zones while maintaining continuity through consistent screen direction and geometric orientation."
+      ],
+      "rules": [
+        "Camera sightlines preserve consistent circular geometry"
+      ]
+    },
+    {
+      "id": "E_offscreen_threat_origin",
+      "kind": "element",
+      "label": "Off-screen space as threat reservoir",
+      "description": "Bandits enter from off-screen space in 90 percent of their entrances while samurai enter from on-screen space in 90 percent of theirs, establishing bandits as external threat and samurai as internal defense through spatial origin alone.",
+      "confidence": "high",
+      "evidence": [
+        "Quantified 90 percent asymmetry in entrance origins between bandits and samurai.",
+        "Stage 2 states this correspondence enables the circular geography to function as tactical diagram because threat always originates externally."
+      ],
+      "rules": [
+        "Bandits enter from off-screen space; samurai enter from on-screen space"
+      ]
+    },
+    {
+      "id": "E_costume_taxonomy",
+      "kind": "element",
+      "label": "Costume as class taxonomy",
+      "description": "Four distinct fabric and armor categories with zero cross-contamination: samurai in layered kimono without armor, farmers in rough-weave hemp earth tones, bandits in stolen mismatched armor over textile, enabling instant class identification across chaotic crowd scenes.",
+      "confidence": "high",
+      "evidence": [
+        "Four categories with zero cross-contamination documented in Stage 1.",
+        "Stage 2 states geometric crowd compositions remain legible only because costume provides an immediate sorting mechanism."
+      ],
+      "rules": [
+        "Four costume categories maintain zero cross-contamination"
+      ]
+    },
+    {
+      "id": "E_kikuchiyo_hybrid",
+      "kind": "element",
+      "label": "Kikuchiyo as taxonomy violation",
+      "description": "Kikuchiyo wears a hybrid costume with samurai silhouette over farmer-grade fabric and enters from off-screen space using bandit approach vectors before being revealed as ally, systematically violating both the costume taxonomy and the spatial origin taxonomy.",
+      "confidence": "high",
+      "evidence": [
+        "Hybrid costume combines samurai silhouette with farmer fabric, breaking the four-category system.",
+        "His off-screen entrance inverts the threat-prediction mechanism for 20 minutes until his allegiance clarifies; the system never regains initial reliability."
+      ],
+      "rule_violations": [
+        "Four costume categories maintain zero cross-contamination",
+        "Bandits enter from off-screen space; samurai enter from on-screen space"
+      ]
+    },
+    {
+      "id": "E_nondiegetic_score_reduction",
+      "kind": "element",
+      "label": "Progressive nondiegetic score reduction",
+      "description": "Nondiegetic score presence drops from roughly 70 percent in Act I to 40 percent in Act II to 15 percent in Act III, with long stretches of pure diegetic sound in the final battle, stripping the interpretive layer as temporal compression gives way to real-time treatment.",
+      "confidence": "high",
+      "evidence": [
+        "Measured presence percentages of 70, 40, and 15 across the three acts.",
+        "Stage 2 correlates the score reduction with decreasing shot length and increasing real-time treatment."
+      ]
+    },
+    {
+      "id": "E_rain_soundscape",
+      "kind": "element",
+      "label": "Rain sound density in final battle",
+      "description": "The final battle rain provides constant acoustic texture at an estimated 60-70 dB, masking dialogue and forcing characters to shout; tactical communication is pushed into gesture and position while the acoustic channel is degraded for roughly 25 minutes.",
+      "confidence": "medium",
+      "evidence": [
+        "Estimated 60-70 dB rain texture masks dialogue and forces shouting.",
+        "Stage 3 notes acoustic degradation compounds visual degradation with no compensating mechanism during the final 25 minutes."
+      ],
+      "rule_violations": [
+        "Acoustic channel carries stable tactical information"
+      ]
+    },
+    {
+      "id": "E_dust_mud_trace",
+      "kind": "element",
+      "label": "Dust and mud as movement trace",
+      "description": "Ground-level dust clouds mark every rapid exterior movement, providing kinetic feedback when the movement source is off-frame or obscured; in the final battle mud splash patterns provide identical feedback.",
+      "confidence": "medium",
+      "evidence": [
+        "Dust marks running feet, falling bodies, and hooves; mud replaces dust in the wet final battle.",
+        "Stage 1 marks particulate matter as load-bearing for movement legibility in telephoto-compressed crowd shots, but Stage 4 classifies it as incidental and replaceable."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Serial vignette logic resists temporal compression; each character introduction requires discrete durational allocation that montage cannot reduce without losing individuation. The extended 90-minute recruitment phase that creates the asymmetry is produced by these incompressible vignettes."
+    },
+    {
+      "from": "M1",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Extended recruitment duration requires equivalent combat duration to honor structural debt; compression in one phase demands expansion in another. Without real-time expenditure as payment mechanism, the debt architecture has no liquidation path and becomes episodic."
+    },
+    {
+      "from": "M5",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Real-time combat treatment requires stable ground surface legibility; the weather transformation to rain forces choreography to incorporate slipping and traction loss that montage would obscure, locking resolution into real-time treatment. M3 would survive without rain."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "The dry-to-wet shift provides an absolute boundary between preparation and execution phases, reinforcing tripartite segmentation, but Stage 4 states the tripartite structure would survive without it."
+    },
+    {
+      "from": "E_telephoto_compression",
+      "to": "M4",
+      "kind": "contradicts",
+      "rationale": "Telephoto compression creates visual density but degrades spatial legibility; the mechanism that makes limited forces appear larger simultaneously flattens the three depth planes and undermines the tactical diagram, failing precisely when flattening is most aggressive."
+    },
+    {
+      "from": "E_telephoto_compression",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Spatial flattening makes seven samurai and roughly thirty bandits appear as larger forces, giving real-time combat the visual density its sustained engagements trade on; real-time treatment would survive without it."
+    },
+    {
+      "from": "E_geometric_crowd_composition",
+      "to": "M4",
+      "kind": "requires",
+      "rationale": "Three-plane depth staging enables geometric crowd composition; without simultaneous foreground, middle ground, and background population, geometric patterns collapse into flat arrangements."
+    },
+    {
+      "from": "E_geometric_crowd_composition",
+      "to": "E_costume_taxonomy",
+      "kind": "requires",
+      "rationale": "Triangular farmer masses versus diagonal samurai distributions remain legible only because costume provides an immediate class-sorting mechanism across chaotic crowd scenes."
+    },
+    {
+      "from": "E_nondiegetic_score_reduction",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Nondiegetic score reduction tracks temporal compression change; as shot length shifts and real-time treatment increases, musical scaffolding drops from 70 to 15 percent presence, and stripping the interpretive layer parallels stripping temporal ellipsis."
+    },
+    {
+      "from": "M6",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Wipe transitions mark structural boundaries exclusively; their presence signals chapter closure while absence signals continuity. Wipes make the vignette chapter structure explicit, but Stage 4 states the vignettes would remain discrete without them."
+    },
+    {
+      "from": "E_circular_village_geography",
+      "to": "M3",
+      "kind": "contradicts",
+      "rationale": "Circular village geography requires consistent sightlines for tactical legibility; maintaining geometric spatial relationships prevents camera positions that would capture certain moments, so Kyuzo dies off-screen despite the real-time observational contract."
+    },
+    {
+      "from": "E_offscreen_threat_origin",
+      "to": "E_circular_village_geography",
+      "kind": "certifies",
+      "rationale": "Spatial origin predicts threat status with 90 percent consistency, which is what allows the circular geography to function as a tactical diagram: viewers track approach vectors because threat always originates externally."
+    },
+    {
+      "from": "E_kikuchiyo_hybrid",
+      "to": "E_costume_taxonomy",
+      "kind": "contradicts",
+      "rationale": "Kikuchiyo combines samurai silhouette with farmer-grade fabric, systematically violating the zero-cross-contamination taxonomy; the visual friction is required by his narrative function as class mediator."
+    },
+    {
+      "from": "E_kikuchiyo_hybrid",
+      "to": "E_offscreen_threat_origin",
+      "kind": "contradicts",
+      "rationale": "Kikuchiyo enters from off-screen space using bandit approach vectors yet is revealed as ally, inverting the spatial origin taxonomy and destabilizing the threat-prediction mechanism for 20 minutes."
+    },
+    {
+      "from": "E_dust_mud_trace",
+      "to": "E_telephoto_compression",
+      "kind": "amplifies",
+      "rationale": "Particulate matter provides kinetic feedback that maintains movement legibility when telephoto compression obscures spatial relationships between bodies; Stage 4 deems it replaceable, so telephoto shots survive its removal."
+    },
+    {
+      "from": "E_rain_soundscape",
+      "to": "M5",
+      "kind": "requires",
+      "rationale": "The 60-70 dB rain acoustic texture exists only because the weather system confines rain to Act III; without the phase-change marker there is no rain soundscape to degrade the acoustic channel."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Three depth planes remain simultaneously legible"
+        ]
+      },
+      "consequence": "Telephoto compression in the final battle collapses depth planes and produces spatial illegibility precisely when tactical clarity is most critical, undermining the geometric diagram system that enabled earlier orientation. The work exploits this failure as farmer-samurai confusion, but the tactical diagram logic does not recover.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Combat is shown in real time with zero temporal ellipsis and full observational access"
+        ]
+      },
+      "consequence": "The real-time observational contract breaks during Kyuzo's off-screen death; maintaining circular geography requires sightlines that structurally exclude the moment of maximum narrative consequence. The work chooses geometric consistency over temporal completeness.",
+      "collapses_to": [
+        "E_circular_village_geography",
+        "M1"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Three depth planes remain simultaneously legible",
+          "Acoustic channel carries stable tactical information"
+        ]
+      },
+      "consequence": "Rain acoustic degradation compounds visual system failures: rain masks dialogue exactly when telephoto flattening and mud obscuration make the visual register least reliable. Neither sonic nor visual registers provide stable information during the final 25 minutes, and the work offers no compensating mechanism.",
+      "collapses_to": [
+        "M3",
+        "E_dust_mud_trace"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "violated": [
+          "Bandits enter from off-screen space; samurai enter from on-screen space"
+        ]
+      },
+      "consequence": "Kikuchiyo's off-screen spatial origin inverts the bandit-threat taxonomy for 20 minutes, destabilizing the prediction mechanism that enables tactical legibility. The system recovers but never regains its initial reliability.",
+      "collapses_to": [
+        "E_circular_village_geography",
+        "M4"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "violated": [
+          "Wipes occur only at structural boundaries, never mid-scene"
+        ]
+      },
+      "consequence": "The mid-battle wipe during Heihachi's death violates the boundary-only punctuation rule at the work's structural center, transforming a neutral segmentation device into a death marker. The wipe system continues afterward but carries new semantic weight, destabilizing the chapter structure system.",
+      "collapses_to": [
+        "M2",
+        "M1"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work becomes conventionally paced drama without debt-resolution architecture; the experiential weight of combat collapses into generic action sequences.",
+    "M2": "If removed, seven samurai become undifferentiated ensemble; the work loses its identity as character construction through serialized episodes and the debt-tracking mechanism has no granular units to",
+    "M3": "If removed and combat uses montage compression, the debt liquidation mechanism vanishes; durational investment from recruitment has no equivalent payment form and structural promise remains",
+    "M4": "If removed, geometric crowd compositions collapse into flat arrangements; spatial legibility could be rebuilt with alternative spatial systems without changing the work's identity.",
+    "M5": "If removed, Act III loses its absolute dry-to-wet boundary and combat choreography loses slipping and traction loss, but the tripartite structure survives.",
+    "M6": "If removed and replaced with cuts, the chapter structure becomes ambiguous, but the serial vignettes remain discrete because wipes make the structure explicit rather than generating it."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-11T23:11:20.894Z",
+    "source_profile_id": "18591654-5550-4c9b-858e-d0180ce2cb68"
+  }
+}

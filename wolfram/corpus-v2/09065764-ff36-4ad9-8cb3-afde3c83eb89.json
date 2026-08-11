@@ -1,0 +1,306 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "The Calling of Saint Matthew",
+    "creator": "Caravaggio",
+    "domain": "painting"
+  },
+  "principle": "Bifurcated illumination systems create structural interruption by applying incompatible selection criteria to a unified spatial field, forcing simultaneous perception of contradictory organizational logics.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Chiaroscuro as selecting mechanism",
+      "description": "Hard-edged light beam isolates specific anatomical elements (faces, hands) while submerging others (torsos, legs) into shadow, operating as structural hierarchy rather than atmospheric effect. Light strikes surfaces with surgical precision to extract gesture field and recognition zones from undifferentiated body.",
+      "confidence": "high",
+      "evidence": [
+        "Illuminated zones catalogued precisely: Christ face and gesture arm, Peter profile, Matthew face and pointing hand, youth face, coin-examiner hands; all background wall, lower body masses, and ceiling in shadow.",
+        "Stage 4 classifies as central mechanism with HIGH confidence; extensively documented across all three source documents.",
+        "Described as surgical extraction, not atmospheric diffusion; the beam functions as a selector, not a mood device."
+      ],
+      "rule_violations": [
+        "Illumination culminates at the narrative focal point",
+        "Light distribution reinforces the spatial bifurcation"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Compositional bifurcation",
+      "description": "Canvas divides into two spatial systems along diagonal axis: right zone with vertical compression (Christ and Peter), left zone with horizontal dispersion (five figures). Division operates through light distribution rather than architectural barrier, creating incompatible organizational logics of spatial proximity versus symbolic significance.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 2 identifies bifurcation as master constraint generating systematic correspondences across temporal state, architectural definition, frame relationship, and figural organization.",
+        "No architectural element marks the boundary, yet the two zones function as separate compositional systems.",
+        "Stage 4 classifies as central with HIGH confidence: removal collapses spatial, temporal, and architectural correspondences into arbitrary variation."
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Table as horizontal datum",
+      "description": "Continuous horizontal plane anchoring all left-zone figures to shared surface, dividing composition into above-table (heads, gestures, recognition) and below-table (legs, shadow, support) registers. Prevents the bifurcated light systems from separating into distinct spatial zones, forcing simultaneous perception of contradictory hierarchies.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 5: the table anchors both light logics to the same horizontal plane, making their incompatibility structurally visible rather than sequentially experienced.",
+        "Stage 2: without the table, figures frozen at different speeds would appear to occupy different temporal moments; the table makes temporal desynchronization read as coexistence.",
+        "Stage 6: competent viewers experience the table as load-bearing constraint, not decorative furniture."
+      ],
+      "rules": [
+        "Anchors both light logics to the same horizontal plane"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Directional vector cascade",
+      "description": "Primary gesture (Christ's arm) generates secondary vectors at decreasing magnitude and different scales: Peter's echoing gesture, Matthew's self-indication, the youth's gaze, the standing figure's lean. Fractal organization keeps the gesture field legible at any viewing distance without parallel repetition.",
+      "confidence": "medium",
+      "evidence": [
+        "Stage 2 documents self-similar gesture propagation at macro, mid, and micro scales.",
+        "Stage 4 rates MEDIUM: the contradiction analysis reveals an uncertain origin point, suggesting less structural necessity than initially appears.",
+        "Stage 3: remove Christ's gesture and the cascade survives through Matthew's response; the foundation is less load-bearing than its derivatives."
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Texture density as hierarchy marker",
+      "description": "Surface detail varies systematically: contemporary costume (Matthew's slashed sleeve, feathered hat) receives maximum articulation while timeless drapery (Christ's robe) receives minimum, establishing visual hierarchy through material treatment as a redundant channel alongside light.",
+      "confidence": "medium",
+      "evidence": [
+        "Stage 1: Christ's robe rendered in broad simplified planes; Matthew's slashed sleeve in high-detail fold geometry; feathered hat with individual plume definition.",
+        "Stage 4 classifies as supporting mechanism: strengthens but does not create the hierarchy; light alone would suffice."
+      ]
+    },
+    {
+      "id": "E_light_beam",
+      "kind": "element",
+      "label": "Discrete light beam entering from upper right",
+      "description": "Hard-edged beam of light entering from upper right, striking faces and hands while leaving background wall, lower bodies, and ceiling in undifferentiated darkness. The physical carrier of the chiaroscuro selection system.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: light enters from upper right as a discrete beam, striking surfaces with hard-edged precision.",
+        "Stage 1: the compositional division operates through light distribution rather than physical barrier."
+      ]
+    },
+    {
+      "id": "E_christ_gesture",
+      "kind": "element",
+      "label": "Christ's extended arm gesture",
+      "description": "Christ's arm extending toward Matthew, establishing the primary directional vector of the composition, yet partially obscured by shadow and Peter's body, with ambiguous hand position lacking the emphatic clarity of the secondary gestures it generates.",
+      "confidence": "medium",
+      "evidence": [
+        "Stage 1: Christ's arm extends toward Matthew, establishing the primary vector that generates all secondary vectors.",
+        "Stage 3: Christ's gesture remains the least legible gesture in the composition; the cascade begins with an uncertain origin."
+      ]
+    },
+    {
+      "id": "E_matthew_self_indication",
+      "kind": "element",
+      "label": "Matthew's self-pointing hand",
+      "description": "Matthew's hand pointing to himself, frozen mid-gesture in rapid self-indication. Structurally clearer than the divine gesture it answers; the cascade survives through this response even if the origin gesture is removed.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: Matthew's hand points to himself as a secondary vector at finger-point scale.",
+        "Stage 3: Matthew's self-indication is structurally clearer than the divine gesture it answers."
+      ]
+    },
+    {
+      "id": "E_edge_truncation",
+      "kind": "element",
+      "label": "Frame truncation of Christ and Peter",
+      "description": "Christ and Peter cropped by the right frame edge; Christ's halo intersects the frame and Peter's body extends beyond visible space, while all left-zone figures exist in complete containment. The frame is hard boundary for some elements, permeable threshold for others.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: left figures exist in complete spatial containment while right figures imply continuation beyond the picture plane.",
+        "Stage 2: the truncation IS the interruption at formal level; the compositional structure itself performs the content of external force penetrating a closed world."
+      ]
+    },
+    {
+      "id": "E_left_figure_cluster",
+      "kind": "element",
+      "label": "Five-figure cluster at the table",
+      "description": "Five left-zone figures forming a single mass subdivided into three operational units: two coin-examiners in a closed loop, Matthew and youth connected by gesture exchange, and an isolated standing figure. Clustering without fusion, all anchored to the table.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: figural clustering with internal subdivision; proximity maintained, merger refused.",
+        "Stage 1: the table anchors all five figures to a shared surface by contact, proximity, or independence."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_light_beam",
+      "kind": "requires",
+      "rationale": "The chiaroscuro selection system is physically instantiated by the discrete hard-edged beam entering from upper right; without the beam there is no selector, only uniform illumination."
+    },
+    {
+      "from": "M2",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "The bifurcation is marked by no architectural element; the division into two spatial systems operates entirely through light distribution, so without the chiaroscuro selection the diagonal division has no carrier."
+    },
+    {
+      "from": "M2",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Table anchors figures to shared spatial plane, which enables temporal desynchronization to register as coexistence rather than progression; the table prevents the two incompatible systems from separating into distinct compositions."
+    },
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Two incompatible light systems, naturalistic decay versus symbolic priority, cannot be reconciled but must occupy the same horizontal plane to force irresolvable dual hierarchy; maximum illumination falls on left-zone occupation rather than right-zone interruption."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Chiaroscuro and texture density must synchronize to create redundant hierarchy, ensuring gesture field and recognition zones dominate regardless of viewing conditions; texture strengthens the selection but light alone would suffice."
+    },
+    {
+      "from": "M4",
+      "to": "E_christ_gesture",
+      "kind": "requires",
+      "rationale": "Directional vector cascade requires hierarchical propagation at multiple scales: the primary gesture generates secondary vectors at decreasing magnitude to maintain legibility at any viewing distance."
+    },
+    {
+      "from": "E_matthew_self_indication",
+      "to": "M4",
+      "kind": "amplifies",
+      "rationale": "Matthew's self-indication is structurally clearer than the divine gesture it answers; if the origin gesture is removed the cascade survives through this response, so it strengthens rather than founds the system."
+    },
+    {
+      "from": "E_edge_truncation",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Edge truncation asymmetry must violate frame boundary for right-zone figures while maintaining complete containment for left-zone figures to perform interruption at formal level, aligning frame relationship with the bifurcation."
+    },
+    {
+      "from": "E_edge_truncation",
+      "to": "M2",
+      "kind": "certifies",
+      "rationale": "The truncation is the interruption at formal level: it supplies the warrant that the bifurcation performs external penetration of a closed world, operating identically whether or not the religious narrative is recognized."
+    },
+    {
+      "from": "E_left_figure_cluster",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "All five left-zone figures are anchored to the table's continuous horizontal plane by contact, proximity, or measured independence; the cluster's coherence as simultaneous occupation depends on the shared datum."
+    },
+    {
+      "from": "E_left_figure_cluster",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Spatial bifurcation propagates through every compositional register: figural organization aligns with the division, left zone clustered and subdivided versus right zone minimal and paired."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Illumination culminates at the narrative focal point"
+        ]
+      },
+      "consequence": "Light withholds maximum illumination from Matthew, the narrative focal point, while dispersing to peripheral figures; the viewer must work against the compositional guidance system to locate the titular subject. Per the analysis this is deliberate structural refusal, not a defect.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "removed": [
+          "E_christ_gesture"
+        ]
+      },
+      "consequence": "The cascade loses its nominal origin, but survives through Matthew's self-indication; the supposed structural foundation is revealed as less load-bearing than its derivatives, leaving the hierarchical propagation system with an uncertain foundation.",
+      "collapses_to": [
+        "M4",
+        "E_matthew_self_indication",
+        "M1",
+        "M2",
+        "M3",
+        "M5"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Light distribution reinforces the spatial bifurcation"
+        ]
+      },
+      "consequence": "Illumination concentrates maximum light in left-zone occupation rather than right-zone interruption, contradicting the spatial bifurcation and creating competing hierarchies that cannot be reconciled; per the generative logic this irresolvable tension is the work's core operation."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M3"
+        ]
+      },
+      "consequence": "Without the table anchoring both light logics to one horizontal plane, the two systems separate into distinct spatial zones; interruption becomes sequence, the viewer resolves the dual hierarchy into a single organizational logic, and structural interruption collapses into sequential reading or false synthesis.",
+      "collapses_to": [
+        "M1",
+        "M4",
+        "M5",
+        "E_light_beam",
+        "E_christ_gesture",
+        "E_matthew_self_indication",
+        "E_edge_truncation"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "The composition has no hierarchy; all elements compete equally for attention, the gesture field and recognition zones lose structural dominance over background and bodies, and the bifurcation loses its carrier since the division operates through light distribution.",
+      "collapses_to": [
+        "M3",
+        "M4",
+        "M5",
+        "E_left_figure_cluster",
+        "E_edge_truncation"
+      ]
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "The work becomes a single-system composition; the formal structure no longer performs the interruption narrative, and the systematic correspondences across temporal state, architectural definition, frame relationship, and figural organization collapse into arbitrary variation.",
+      "collapses_to": [
+        "M1",
+        "M3",
+        "M4",
+        "M5"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the composition loses all hierarchy; all elements compete equally for attention, and the gesture field loses structural dominance over background and bodies.",
+    "M2": "If removed, the work becomes a single-system composition; the formal structure no longer performs the interruption narrative, and spatial, temporal, architectural, and frame-relationship",
+    "M3": "If removed, the two light systems separate into distinct spatial zones, temporal multiplicity becomes sequential rather than simultaneous, and interruption becomes sequence rather than structural",
+    "M4": "If removed, the composition becomes a static tableau rather than dynamic event; figures relate through proximity rather than causal gesture-chain, but the spatial organization survives.",
+    "M5": "If removed, the hierarchy survives through chiaroscuro alone; texture density reinforces the selection through a redundant channel but does not create it."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-11T23:15:10.601Z",
+    "source_profile_id": "09065764-ff36-4ad9-8cb3-afde3c83eb89"
+  }
+}

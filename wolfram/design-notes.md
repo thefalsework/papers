@@ -282,6 +282,59 @@ means cross-corpus queries (`Tymoczko vs Methodology`,
 methodology's structural shape compares to the works it analyses.
 This second point is where V2 could go interesting places.
 
+## V2 addendum (August 2026): the machine-fed corpus loader
+
+`corev2-loader.wl` is the first piece of the deferred V2 to land. It
+does not yet do schema mutation under recursion; it removes the
+precondition V1 named for even attempting it — the hand-authored
+corpus. Four design decisions, each traceable to the same discipline
+as the five V1 constraints:
+
+1. **No fabricated comma** (kernel-anchored, honestly). Machine
+   work-kernels pass `KernelQ` (Slug, Domain, Operation) but carry
+   `CommaStatus -> "underived"` and no `Comma` field. Fabricating an
+   `IrreducibilityKind` to make `CommaShapeMatchQ` fire would be
+   exactly the hand-planting V1's README owns up to. The measured
+   silence of the comma channel on the machine corpus is the baseline
+   the comma-shape graduation has to beat.
+2. **Derived structural types** (composable, honestly). Mechanism
+   `Type` is computed from the dependency graph
+   (`Sig[out:...|in:...]` — the sorted sets of edge kinds the node
+   participates in, each direction). Two nodes share a type iff they
+   occupy the same dependency-role profile. This is deliberately the
+   opposite failure mode from V1's curated vocabulary: crude and
+   uninformed rather than informed and planted.
+3. **Fixpoint executor** (the roadmap §5.2 mandatory upgrade).
+   Removal cascades `requires`-dependencies to fixpoint with per-node
+   cause recording; `amplifies`/`certifies`/`contradicts` mark
+   survivors (`Degraded` with explicit bases) rather than removing
+   them; declared failure conditions are evaluated against the
+   computed closure with a three-way honesty split (`Triggered`,
+   `PartiallySatisfied`, `NotEvaluableUnderRemoval`) because rule
+   violation is a different operation from removal and the executor
+   does not pretend otherwise. Attached per-mechanism as
+   `RemovalSignature`, so V1's `RemoveAndProject` dispatches to it
+   without modification — the V1 algebra file is untouched.
+4. **Audit split** (measurement before adjudication). `collapses_to`
+   claims are machine-checked set operations; prose removal
+   assertions are surfaced for human reading, never string-matched.
+   The corpus-wide claim audit (paste cell 5) is the first end-to-end
+   instance of the Core-audit architecture from the roadmap: the
+   transduction's own structured claims checked against the
+   transduction's own graph, with contradictions reported instead of
+   smoothed.
+
+One V1 mechanism is deliberately neutralised on machine cores:
+`Compatibility` entries are namespaced with the core slug so that
+predicate 2 of `TransferBasis` (compatibility-set intersection) can
+never fire across works that happen to share local node ids like
+`M1`. Within a core (self-transfer under Q4) shared dependencies
+still intersect meaningfully. Consequence: on machine cores, V1's
+single-step removal reduces to bare `KeyDrop` — which is fine,
+because the fixpoint executor supersedes it, and the Q3 paste cell
+prints both side by side so the difference is visible rather than
+implied.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a

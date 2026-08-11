@@ -1,0 +1,420 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "The School of Athens",
+    "creator": "Raphael",
+    "domain": "painting"
+  },
+  "principle": "Perspectival amplification through serial architectural framing multiplies depth perception by nesting concentric aperture reductions that function as optical levers, magnifying spatial recession beyond what single-point perspective mathematics alone would produce.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Single-point linear perspective with elevated vanishing point",
+      "description": "All orthogonals converge at a point positioned at Plato's hand, creating unified spatial recession that organizes architectural and figural elements across the entire composition. It is the primary organizational spine of the work.",
+      "confidence": "high",
+      "evidence": [
+        "Vanishing point positioned at Plato's hand, approximately 60 percent up the vertical axis, dead center horizontally.",
+        "Floor tiles, coffered barrel vault ribs, and architectural recessions all converge at the same point.",
+        "Compression ratio increases exponentially with distance from picture plane: foreground occupies 40 percent of plane for 15 meters of depth; background 10 percent for 30 meters.",
+        "Stage 4 classifies this as central with high confidence: removal collapses spatial coherence entirely."
+      ],
+      "rules": [
+        "All orthogonals converge to a single vanishing point",
+        "Focal convergence establishes the attention hierarchy"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Nested architectural frames as perspectival amplifier",
+      "description": "Three receding arches reduce sequentially in size (100/80/65 percent width), mechanically multiplying depth cues beyond what floor recession alone produces. Each frame acts as a perspectival echo chamber, so the viewer perceives three synchronized recessions confirming each other.",
+      "confidence": "high",
+      "evidence": [
+        "Quantified serial reduction: first arch spans full width, second about 80 percent, third about 65 percent of the second.",
+        "Stage 2 identifies the frames as mechanical multipliers of the base spatial gradient established by floor recession.",
+        "Stage 5 describes a ratchet effect where each threshold crossed commits the eye further into depth."
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Drapery as distributed tonal system",
+      "description": "Each figure's fabric folds contain the full value range, making every figure a self-sufficient tonal unit that maintains local tonal completeness independent of surrounding figures. This modularity lets figures be subtracted without collapsing global tonal integrity.",
+      "confidence": "medium",
+      "evidence": [
+        "Each figure's drapery contains the full value range from highlight to shadow, creating local tonal completeness.",
+        "Stage 2: modularity enables the asymmetric distribution (23 left, 29 right) to function without destabilizing the work.",
+        "Stage 4 notes the removal test requires inference about alternative tonal infrastructure, hence medium confidence."
+      ],
+      "rules": [
+        "Each figure contains the full value range as a self-sufficient tonal unit"
+      ],
+      "rule_violations": [
+        "Compositional necessity: figure count and placement should be structurally inevitable"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Tiered depth planes with discrete scalar bands",
+      "description": "Three horizontal registers with stepped figure scales (200cm, 160cm, 80cm) rather than gradual diminution. The exaggerated scale jumps amplify depth cues beyond optical accuracy and prevent viewers from calibrating against a smooth recession.",
+      "confidence": "high",
+      "evidence": [
+        "Three discrete size bands, each corresponding to a depth plane: foreground about 200cm, middle 160cm, background 80cm.",
+        "Stage 1 states the exaggeration of scale difference is load-bearing, amplifying depth cues beyond optical accuracy.",
+        "Stage 4 classifies this as supporting: it amplifies rather than generates spatial structure and could be replaced by gradual diminution."
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Void corridors as sightline infrastructure",
+      "description": "Negative space channels between the seven figure clusters preserve unobstructed sightlines to the vanishing point, preventing the figural mass from occluding the perspectival system. Stage 2 calls them verification infrastructure for a self-checking system.",
+      "confidence": "medium",
+      "evidence": [
+        "Largest void: central corridor about 2.5 meters wide in depicted space, running unobstructed from foreground steps to background sky.",
+        "Figure density increases toward the periphery and decreases toward the center; figures orbit the perspectival center without occupying it.",
+        "Stage 4: system would function less clearly without them; verification rather than generation."
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "Atmospheric perspective through pigment layering economy",
+      "description": "Background figures executed with 1-2 pigment layers versus 3-4 in the foreground, letting intonaco white optically mix with pigment and reducing background tonal range from roughly 80 to 40 percent while each figure retains internal tonal completeness.",
+      "confidence": "medium",
+      "evidence": [
+        "Foreground figures use 3-4 pigment layers over underdrawing; background figures 1-2 layers.",
+        "Contrast reduction of about 40 percent produced through material economy rather than color mixing alone.",
+        "Stage 4: reinforces spatial recession but is redundant with perspectival and scalar mechanisms."
+      ]
+    },
+    {
+      "id": "E_vanishing_point",
+      "kind": "element",
+      "label": "Vanishing point at Plato's hand",
+      "description": "The single convergence point of all orthogonals, located dead center horizontally and about 60 percent up the vertical axis, positioned between Plato and Aristotle.",
+      "confidence": "high",
+      "evidence": [
+        "Explicitly located in the structural inventory as the convergence target of floor tiles, vault ribs, and architectural recessions."
+      ]
+    },
+    {
+      "id": "E_floor_orthogonals",
+      "kind": "element",
+      "label": "Floor tile orthogonal recession",
+      "description": "The receding floor tile grid that establishes the base spatial gradient of the perspectival system.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 2: floor tile recession creates the base spatial gradient that the nested frames then multiply."
+      ]
+    },
+    {
+      "id": "E_nested_arches",
+      "kind": "element",
+      "label": "Three receding arches at 100/80/65 percent width",
+      "description": "The concrete architectural apertures whose serial size reduction constitutes the perspectival amplifier.",
+      "confidence": "high",
+      "evidence": [
+        "First arch spans full fresco width, second about 80 percent of the first, third about 65 percent of the second."
+      ]
+    },
+    {
+      "id": "E_drapery_folds",
+      "kind": "element",
+      "label": "Fabric folds carrying full value range per figure",
+      "description": "The painted drapery on each figure whose folds span highlight to shadow, forming the physical substrate of the distributed tonal system.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: fabric folds carry the composition's tonal structure; decorative appearance, load-bearing function."
+      ]
+    },
+    {
+      "id": "E_foreground_platform",
+      "kind": "element",
+      "label": "Foreground steps parallel to picture plane",
+      "description": "Three steps at the composition's base, parallel to the picture plane with no perspectival recession, establishing a threshold between viewer space and depicted space.",
+      "confidence": "high",
+      "evidence": [
+        "Steps are parallel to the picture plane, establishing a boundary condition prior to the perspectival system.",
+        "Stage 2: remove the threshold and the perspectival system extends to the picture plane edge, collapsing the spatial hierarchy."
+      ],
+      "rule_violations": [
+        "The critical spatial threshold should host the transition between viewer and depicted space"
+      ]
+    },
+    {
+      "id": "E_asymmetric_distribution",
+      "kind": "element",
+      "label": "Asymmetric figure distribution: 23 left, 29 right",
+      "description": "Systematic violation of the architectural bilateral symmetry by unequal figure counts, preventing static heraldic balance.",
+      "confidence": "high",
+      "evidence": [
+        "Left side 23 figures, right side 29 figures; the imbalance is load-bearing, preventing collapse into static heraldry.",
+        "Stage 4 classifies the specific ratio as incidental: any asymmetric distribution would prevent stasis."
+      ]
+    },
+    {
+      "id": "E_giornata_seams",
+      "kind": "element",
+      "label": "Giornata seams terminating at figure contours",
+      "description": "Daily plaster section boundaries of the fresco buono technique, planned so that no seam bisects a face or limb.",
+      "confidence": "high",
+      "evidence": [
+        "Seams visible under raking light at figure boundaries, indicating each section was planned to terminate at contour edges."
+      ],
+      "rules": [
+        "Giornata seams must terminate at figure contour boundaries"
+      ]
+    },
+    {
+      "id": "E_focal_gestures",
+      "kind": "element",
+      "label": "Plato's vertical and Aristotle's horizontal gestures",
+      "description": "The gestures of the two focal figures at the vanishing point: Plato points upward toward the vault, Aristotle gestures laterally across the middle ground, redirecting attention away from the convergence the perspective establishes.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: the mechanism that concentrates focus is immediately undermined by the figures it elevates.",
+        "Plato's vertical gesture sends the eye upward outside the perspectival system; Aristotle's horizontal gesture disperses attention laterally."
+      ],
+      "rule_violations": [
+        "Focal convergence establishes the attention hierarchy"
+      ]
+    },
+    {
+      "id": "E_intonaco_flatness",
+      "kind": "element",
+      "label": "Smoothed intonaco surface with no impasto",
+      "description": "The near-uniform plaster surface with no tactile relief, so all spatial recession is produced through tonal gradation and linear perspective rather than actual surface depth.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1: material flatness is load-bearing because it prevents competition between actual surface relief and depicted spatial depth."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_vanishing_point",
+      "kind": "requires",
+      "rationale": "The perspectival system is defined by convergence of all orthogonals at the single point at Plato's hand; without the convergence point there is no unified recession."
+    },
+    {
+      "from": "M1",
+      "to": "E_floor_orthogonals",
+      "kind": "requires",
+      "rationale": "Floor tile recession creates the base spatial gradient on which the whole perspectival system operates."
+    },
+    {
+      "from": "M2",
+      "to": "E_nested_arches",
+      "kind": "requires",
+      "rationale": "Perspectival amplification requires serial architectural reduction to multiply depth perception beyond baseline geometric recession; the 100/80/65 percent arches are that serial reduction."
+    },
+    {
+      "from": "M2",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Nested frames mechanically multiply the depth cue established by the perspectival baseline; remove the frames and perspective survives but depth becomes weak and ambiguous."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Discrete scalar bands exaggerate the perspectival depth gradient beyond optical accuracy; Stage 4 says this amplifies rather than generates spatial structure."
+    },
+    {
+      "from": "M4",
+      "to": "M2",
+      "kind": "certifies",
+      "rationale": "Discrete scalar bands (200cm/160cm/80cm) prevent the gradual diminution that would expose the exaggeration of spatial compression produced by the serial frames."
+    },
+    {
+      "from": "M4",
+      "to": "E_foreground_platform",
+      "kind": "requires",
+      "rationale": "Foreground platform parallel to picture plane establishes the spatial threshold that all subsequent depth planes must negotiate; the threshold defines the entry condition, the tiers organize the interior."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "certifies",
+      "rationale": "Void corridors preserve unobstructed sightlines to the vanishing point, letting the viewer continuously verify that all orthogonals remain synchronized; they maintain perspectival legibility."
+    },
+    {
+      "from": "M5",
+      "to": "E_vanishing_point",
+      "kind": "requires",
+      "rationale": "The corridors function as sightline infrastructure only relative to the convergence point they keep visible; the central corridor runs unobstructed from foreground steps toward it."
+    },
+    {
+      "from": "M3",
+      "to": "E_drapery_folds",
+      "kind": "requires",
+      "rationale": "The distributed tonal system is physically carried by fabric folds containing the full value range within each figure."
+    },
+    {
+      "from": "E_asymmetric_distribution",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Asymmetric figure distribution (23 left, 29 right) requires modular tonal autonomy to prevent compositional destabilization; each figure carries its own tonal system, so adding or removing figures affects density not balance."
+    },
+    {
+      "from": "M6",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Pigment layering economy reduces background tonal range to about 40 percent, reinforcing the spatial recession the perspective establishes; Stage 4 calls it redundant reinforcement, not structural necessity."
+    },
+    {
+      "from": "M6",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Atmospheric reduction must maintain internal tonal completeness in background figures; that completeness is supplied by the per-figure drapery tonal system operating within global recession."
+    },
+    {
+      "from": "E_giornata_seams",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Giornata seams terminate at figure contour boundaries so no seam bisects a form, materially reinforcing the treatment of each figure as a discrete self-sufficient unit."
+    },
+    {
+      "from": "E_intonaco_flatness",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "The smoothed, relief-free surface ensures all depth is produced by tone and line, preventing actual surface relief from competing with depicted perspectival depth."
+    },
+    {
+      "from": "E_focal_gestures",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "The perspective directs all attention to the vanishing point between Plato and Aristotle, but their gestures immediately redirect attention upward and laterally, refusing the focal hierarchy the perspective establishes."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Focal convergence establishes the attention hierarchy"
+        ]
+      },
+      "consequence": "The perspectival system concentrates attention at the vanishing point between Plato and Aristotle, but their vertical and horizontal gestures immediately redirect attention away, undermining the focal convergence the infrastructure works perfectly to establish.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Compositional necessity: figure count and placement should be structurally inevitable"
+        ]
+      },
+      "consequence": "Because each figure is a self-sufficient tonal unit, no figure is structurally indispensable; the 52-figure arrangement becomes arbitrary rather than inevitable, and the system that prevents collapse also prevents compositional necessity."
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "The critical spatial threshold should host the transition between viewer and depicted space"
+        ]
+      },
+      "consequence": "The foreground platform organizes all subsequent spatial relationships yet remains functionally uninhabited; the step figures have already crossed into perspectival space, leaving a void where the most critical spatial transition should occur."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M4"
+        ]
+      },
+      "consequence": "Without discrete scalar bands, gradual diminution replaces stepped scale jumps and exposes the exaggeration of spatial compression; the serial frames produce depth disproportionate to the actual perspectival angle, and viewers calibrating against smooth recession detect the perceptual excess.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M5",
+        "M6"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "Spatial coherence collapses entirely; the work becomes a collection of figures without unified spatial logic. The amplifiers (M2, M4) and verifiers (M5) have nothing to multiply or certify.",
+      "collapses_to": [
+        "M3",
+        "E_drapery_folds",
+        "E_giornata_seams"
+      ]
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "Perspectival depth becomes weak and ambiguous; floor recession alone is insufficient to organize 52 figures across 40-plus meters of depicted space. Baseline geometry survives but the multiplicative depth illusion is lost.",
+      "collapses_to": [
+        "M1",
+        "M3",
+        "M4",
+        "M5",
+        "M6"
+      ]
+    },
+    {
+      "id": "F7",
+      "condition": {
+        "removed": [
+          "M3"
+        ]
+      },
+      "consequence": "Compositional modularity fails; the asymmetric distribution of 23 versus 29 figures destabilizes without local tonal autonomy, and atmospheric reduction can no longer maintain internal tonal completeness in background figures.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F8",
+      "condition": {
+        "removed": [
+          "E_foreground_platform"
+        ]
+      },
+      "consequence": "The perspectival system extends to the picture plane edge, collapsing the spatial hierarchy into continuous recession; the threshold that defines the entry condition for the tiered depth planes disappears.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M5",
+        "M6"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, spatial coherence collapses entirely and the work becomes a collection of figures without unified spatial logic.",
+    "M2": "If removed, perspectival depth becomes weak and ambiguous, with floor recession alone insufficient to organize 52 figures across depicted 40+ meters.",
+    "M3": "If removed, compositional modularity fails and asymmetric distribution (23 vs 29 figures) destabilizes without local tonal autonomy.",
+    "M4": "If removed, gradual diminution replaces the stepped scale hierarchy; depth cues weaken and the exaggeration of spatial compression risks exposure.",
+    "M5": "If removed, the perspectival system still functions but less clearly; figural mass risks occluding the sightlines that keep the convergence legible.",
+    "M6": "If removed, background recession loses material reinforcement, but the effect is redundant with the perspectival and scalar mechanisms, so recession survives."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-11T23:17:07.265Z",
+    "source_profile_id": "93651b65-eb32-4e6c-9477-9d6a4223cdf0"
+  }
+}

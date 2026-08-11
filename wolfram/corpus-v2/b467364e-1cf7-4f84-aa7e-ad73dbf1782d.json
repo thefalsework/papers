@@ -1,0 +1,373 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Stray Dog",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Investigation operates as systematic spatial descent through economic strata where detective method and moral architecture use identical mechanism of exhaustive traversal of possibility space until structural convergence.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Bifurcated narrative architecture",
+      "description": "Hard structural pivot at the 52-minute mark shifting organizational logic from episodic spatial accumulation (discrete location encounters without plot advancement) to linear causal investigation (detective partnership with progressive case resolution). The transition occurs at the police station meeting and is reinforced by a sonic treatment shift.",
+      "confidence": "high",
+      "evidence": [
+        "First 52 minutes organized as episodic encounters (bus, market, hotel, baseball game, dance hall) with minimal plot advancement; remaining 70 minutes structured as linear partnership investigation.",
+        "Transition occurs at a precise temporal marker: the police station meeting between Murakami and Sato.",
+        "Diegetic sound ratio drops from roughly 85 percent to roughly 40 percent across the pivot, making the structural break audible."
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Serial economic framing",
+      "description": "Systematic presentation of Tokyo class strata through a non-repeating location sequence in descending economic order: street market, flophouse, middle-class hotel, baseball stadium, cabaret, suburban homes, slum district. Each site is a discrete economic layer presented without transitional establishing shots, creating spatial inventory rather than plot mechanism.",
+      "confidence": "high",
+      "evidence": [
+        "No location repeats until the final chase, which retraverses the slum terrain as structural return.",
+        "Locations are presented without transitional establishing shots, forcing recognition of each as a discrete position in a vertical system.",
+        "Acoustic-economic correspondence holds across the descent: dense ambience in public lower-market spaces, sparse room tone in private spaces."
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Parallel biography without flashback",
+      "description": "Murakami and Yusa share identical backstory elements presented exclusively through verbal exposition: both demobilized soldiers, both had possessions stolen postwar, both from rural backgrounds. The film withholds visual flashback for either character, creating structural equivalence through spoken data only, reinforced by costume stasis.",
+      "confidence": "medium",
+      "evidence": [
+        "Shared history exists only as spoken data; no visual flashback is granted to either character.",
+        "Identical starting conditions produce divergent outcomes based purely on behavioral choice, mirroring the two-phase narrative structure at character scale.",
+        "Stage 4 flags reliance on absence (no flashbacks) as evidence, grounding the medium confidence rating."
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Depth staging in dialogue",
+      "description": "Two-person dialogue and observation scenes consistently place characters at different depth planes with 8-10 feet separation rather than side-by-side framing, requiring deep focus composition that keeps observer in foreground and observed in background.",
+      "confidence": "high",
+      "evidence": [
+        "Murakami and Sato conversations position one character in foreground and one in background with 8-10 feet separation.",
+        "The baseball observation places Murakami in sharp foreground while the suspect occupies background, making the watching itself visible.",
+        "Stage 3 identifies a paradox: the suspect remains soft background blur, so the technique enforces selective rather than dual attention."
+      ],
+      "rules": [
+        "depth staging keeps observer and observed simultaneously legible in sharp focus"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Montage compression with real-time brackets",
+      "description": "Three extended montage sequences (8, 4, and 3 minutes covering roughly 40, 15, and several locations) compress investigative duration while surrounding scenes operate at uncompressed 1:1 duration, producing alternating temporal texture.",
+      "confidence": "high",
+      "evidence": [
+        "The 8-minute opening montage contains approximately 40 discrete locations with no dialogue.",
+        "Surrounding scenes such as the 6-minute baseball observation and 8-minute chase resist compression, operating at 1:1 time ratio.",
+        "Seven days of story time compress into 122 minutes at a near-constant ratio of roughly 17 minutes per story day."
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "Delayed exposition structure",
+      "description": "Critical plot information and character identification arrive late in runtime: gun theft shown at 7 minutes, Murakami named at 18, Sato named at 52, Yusa named at 78 and shown at 95. This inverts conventional front-loaded exposition, building the investigative apparatus before identifying what is investigated.",
+      "confidence": "medium",
+      "evidence": [
+        "Yusa is not named until 78 minutes and not shown until 95 minutes of a 122-minute film.",
+        "Stage 4 classifies this as a pacing choice reinforcing accumulation logic rather than a structural necessity."
+      ],
+      "rule_violations": [
+        "conventional exposition front-loads plot information and character identification"
+      ]
+    },
+    {
+      "id": "E_sonic_pivot",
+      "kind": "element",
+      "label": "Nondiegetic scoring shift at 52-minute mark",
+      "description": "The police station meeting introduces the first sustained nondiegetic music cue (3-minute orchestral theme); the diegetic sound ratio drops from about 85 percent to about 40 percent, binding previously discrete locations into continuous temporal flow.",
+      "confidence": "high",
+      "evidence": [
+        "First 52 minutes contain approximately 85 percent diegetic sound; remaining 70 minutes contain approximately 40 percent.",
+        "Before the pivot, location-specific source music (cabaret jazz, dance hall swing, baseball organ) acoustically seals each space as a self-contained unit."
+      ]
+    },
+    {
+      "id": "E_location_sequence",
+      "kind": "element",
+      "label": "Non-repeating descending location sequence",
+      "description": "Concrete ordered chain of investigation sites: street market, flophouse, middle-class hotel, baseball stadium, cabaret, suburban homes, slum district, with no repeats until the final chase retraverses the slum.",
+      "confidence": "high",
+      "evidence": [
+        "Each investigation site represents a discrete economic layer presented without transitional establishing shots.",
+        "The final chase retraverses the slum terrain, the only spatial return in the film."
+      ]
+    },
+    {
+      "id": "E_costume_stasis",
+      "kind": "element",
+      "label": "Unchanging costumes across week-long span",
+      "description": "Murakami wears the same sweat-stained light suit throughout, Sato identical dark suit and hat, Yusa the same striped shirt, Harumi the same floral dress. No character changes clothes, creating static visual identity markers.",
+      "confidence": "high",
+      "evidence": [
+        "Murakami wears the same light suit throughout, visibly sweat-stained in heat sequences.",
+        "Yusa wears the same striped shirt in both of his appearances; Harumi wears the same floral dress in all three scenes."
+      ],
+      "rule_violations": [
+        "visual appearance tracks elapsed story time"
+      ]
+    },
+    {
+      "id": "E_verbal_exposition",
+      "kind": "element",
+      "label": "Spoken backstory data for Murakami and Yusa",
+      "description": "The shared biography of detective and criminal (demobilized soldiers, stolen possessions, rural origins) exists exclusively as dialogue; the film supplies no visual flashback confirmation for either character.",
+      "confidence": "high",
+      "evidence": [
+        "Both characters shared history is presented only in verbal exposition.",
+        "Visual flashback is withheld for both characters throughout the film."
+      ]
+    },
+    {
+      "id": "E_ambient_density_gradient",
+      "kind": "element",
+      "label": "Acoustic-economic density gradient",
+      "description": "Ambient sound density maps onto economic strata: street market carries vendor calls, crowd noise, and traffic; the hotel room reduces to footsteps and fabric rustle; the slum district in the final chase operates in near-silence under rain.",
+      "confidence": "high",
+      "evidence": [
+        "Outdoor lower-strata scenes carry dense ambient layers of traffic, crowd noise, construction, and vendor calls.",
+        "The hotel room has only footsteps and fabric rustle; the slum in the final chase operates in near-silence."
+      ],
+      "rules": [
+        "wealth correlates with sonic density and poverty with acoustic silence"
+      ]
+    },
+    {
+      "id": "E_week_timeline",
+      "kind": "element",
+      "label": "Verbal seven-day duration markers",
+      "description": "Dialogue establishes the timeline: three days of solo searching plus four days of partnership investigation, bracketed by a heat wave that breaks into rain during the final chase.",
+      "confidence": "high",
+      "evidence": [
+        "Verbal references establish three days of solo searching and four days of partnership investigation.",
+        "Roughly 15 discrete heat reaction shots mark duration before the weather breaks in the final sequence."
+      ]
+    },
+    {
+      "id": "E_real_time_sequences",
+      "kind": "element",
+      "label": "Extended real-time observation sequences",
+      "description": "Multiple scenes unfold at uncompressed 1:1 duration: the 6-minute baseball observation, the 4-minute cabaret performance, and the 8-minute final chase through the muddy field.",
+      "confidence": "high",
+      "evidence": [
+        "The baseball game observation runs 6 minutes of continuous watching without plot advancement.",
+        "The final chase runs 8 minutes of continuous physical action resisting montage compression."
+      ]
+    },
+    {
+      "id": "E_tempo_arc",
+      "kind": "element",
+      "label": "Three-phase nondiegetic tempo arc",
+      "description": "Scoring moves from moderate tempo (100-120 BPM) in middle investigation sequences to accelerated tempo (140-160 BPM) in the chase, returning to slow tempo (60-80 BPM) in the hospital scene.",
+      "confidence": "medium",
+      "evidence": [
+        "Tempo arc runs moderate to fast to slow across the second phase of the film.",
+        "Peak tempo coincides exactly with the chase sequence; the hospital scene returns to 60-80 BPM."
+      ]
+    },
+    {
+      "id": "E_camera_height",
+      "kind": "element",
+      "label": "Consistent 5-foot camera height with climactic violations",
+      "description": "The camera maintains approximately 5-foot seated eye-level across 90 percent of shots; the overhead shot of the muddy chase field and the low angle on Yusa during capture break the norm at the climax.",
+      "confidence": "medium",
+      "evidence": [
+        "High angles appear only twice and low angles three times in the entire film.",
+        "The overhead chase-field shot and low angle on Yusa occur during peak scoring tempo."
+      ],
+      "rules": [
+        "camera maintains approximately 5-foot seated eye-level position"
+      ]
+    },
+    {
+      "id": "E_cabaret_sequence",
+      "kind": "element",
+      "label": "Cabaret sequence with maximum acoustic density",
+      "description": "A middle-class stratum location carrying the densest soundscape in the film: live band, crowd noise, glass percussion, layered conversation. It functions as investigative theater where Murakami watches through sound as much as sight.",
+      "confidence": "high",
+      "evidence": [
+        "The cabaret features 4 minutes of continuous live jazz performance plus layered crowd and glass sounds.",
+        "Stage 3 identifies this as the catastrophic break in the acoustic-economic mapping: middle stratum carries maximum density while the lower slum is near-silent."
+      ],
+      "rule_violations": [
+        "wealth correlates with sonic density and poverty with acoustic silence"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_sonic_pivot",
+      "kind": "requires",
+      "rationale": "Bifurcated architecture requires the sonic treatment shift to function as hard pivot rather than gradual transition; sustained nondiegetic scoring at the 52-minute mark produces the break by binding discrete locations into continuous temporal flow."
+    },
+    {
+      "from": "M1",
+      "to": "E_location_sequence",
+      "kind": "requires",
+      "rationale": "The first phase of the bifurcated structure is organized as episodic accumulation across the discrete location chain; without the non-repeating sequence there is no spatial inventory phase to pivot away from."
+    },
+    {
+      "from": "E_real_time_sequences",
+      "to": "M4",
+      "kind": "requires",
+      "rationale": "Extended real-time sequences require depth staging to carry investigative load; uncompressed observation demands simultaneous focus on observer and observed, otherwise the scenes collapse into shot-reverse-shot fragmenting continuous watching into discrete glances."
+    },
+    {
+      "from": "M2",
+      "to": "E_location_sequence",
+      "kind": "requires",
+      "rationale": "Serial economic framing is constituted by the non-repeating descending location chain; each site represents a discrete economic layer, and the survey logic depends on visiting each stratum exactly once."
+    },
+    {
+      "from": "M2",
+      "to": "E_ambient_density_gradient",
+      "kind": "amplifies",
+      "rationale": "Serial economic framing produces a systematic acoustic shift from dense to sparse ambient layers; each descending class stratum reduces ambient complexity, creating an acoustic mapping of economic structure."
+    },
+    {
+      "from": "M3",
+      "to": "E_verbal_exposition",
+      "kind": "requires",
+      "rationale": "The parallel biography exists only as spoken data; with no flashback for either character, verbal exposition is the sole carrier of the shared backstory that makes Murakami and Yusa structurally equivalent."
+    },
+    {
+      "from": "M3",
+      "to": "E_costume_stasis",
+      "kind": "requires",
+      "rationale": "Parallel biography requires costume stasis to maintain visual equivalence; unchanging clothing creates static identity markers that keep the two men visibly of the same postwar cohort, emphasizing behavioral divergence over circumstantial difference."
+    },
+    {
+      "from": "E_costume_stasis",
+      "to": "E_week_timeline",
+      "kind": "contradicts",
+      "rationale": "The week-long temporal duration contradicts unchanging appearance; the sweat-stained suit of Day 1 cannot plausibly persist through Day 7, so the film asserts both duration and stasis without reconciliation."
+    },
+    {
+      "from": "E_tempo_arc",
+      "to": "E_camera_height",
+      "kind": "certifies",
+      "rationale": "Tempo acceleration to 140-160 BPM predicts vertical camera position violations with complete accuracy; the fast scoring makes the overhead and low-angle breaks legible as climactic intensification rather than arbitrary variation."
+    },
+    {
+      "from": "M6",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Delayed exposition inverts conventional front-loading; late arrival of plot information and character identification builds the investigative apparatus before identifying its target, reinforcing the accumulation-before-revelation logic of the bifurcated structure."
+    },
+    {
+      "from": "M6",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Withholding Yusa until 95 minutes replicates at macro scale the withholding of visual flashback at character scale; delayed exposition mirrors and strengthens the verbal-data-before-visual-confirmation pattern of the parallel biography."
+    },
+    {
+      "from": "E_cabaret_sequence",
+      "to": "E_ambient_density_gradient",
+      "kind": "contradicts",
+      "rationale": "Acoustic-economic correspondence inverts in the cabaret: a middle-class location carries maximum acoustic density while the lower-stratum slum operates in near-silence, violating the rule exactly where investigative watching needs it most."
+    },
+    {
+      "from": "M4",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Depth staging amplifies the investigative watching that serial framing establishes, making observation visible within the strata survey; the analysis states it could be replaced by other compositional strategies, so serial framing survives its removal."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Montage compression enables the temporal operations of the bifurcated structure, fitting seven story days into 122 minutes at consistent ratio, but serves the architecture rather than defining it."
+    },
+    {
+      "from": "M5",
+      "to": "E_real_time_sequences",
+      "kind": "requires",
+      "rationale": "Montage compression is defined against its real-time brackets; the accelerated sequences read as compression only because surrounding scenes operate at uncompressed 1:1 duration."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "depth staging keeps observer and observed simultaneously legible in sharp focus"
+        ]
+      },
+      "consequence": "Depth staging paradox: the technique promises simultaneous legibility of observer and observed, but the suspect remains soft background blur and optical physics prevents dual attention. The 6-minute baseball duration amplifies the gap between apparent comprehensive observation and delivered fragmented perception; M4 undermines its own structural function.",
+      "collapses_to": [
+        "M2",
+        "E_real_time_sequences"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "wealth correlates with sonic density and poverty with acoustic silence"
+        ]
+      },
+      "consequence": "Acoustic-economic mapping breaks in the cabaret sequence, where the middle-class stratum carries maximum density while poverty operates in silence. The correspondence inverts exactly where investigative watching depends on sound, so the acoustic certification of the economic descent loses its absoluteness while the cabaret still functions as investigative theater.",
+      "collapses_to": [
+        "M2",
+        "E_location_sequence"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "E_week_timeline"
+        ],
+        "violated": [
+          "visual appearance tracks elapsed story time"
+        ]
+      },
+      "consequence": "Costume stasis denies temporal plausibility: the unchanging sweat-stained suit across a week-long investigation asserts both duration and stasis without reconciliation. The parallel biography needs stasis while investigative accumulation needs duration; the film refuses to address the mechanical incompatibility, leaving M3 warranted only by an unresolved contradiction.",
+      "collapses_to": [
+        "M3",
+        "E_costume_stasis"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M5"
+        ]
+      },
+      "consequence": "Without montage compression, seven story days cannot fit the 122-minute runtime and the consistent ratio of roughly 17 minutes per story day disappears. The uneven distribution (three days in 52 minutes, four days in 70 minutes) is no longer masked, exposing the bifurcation as an unbuffered temporal discontinuity and stripping the real-time sequences of their contrastive brackets.",
+      "collapses_to": [
+        "M1",
+        "E_real_time_sequences"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the film becomes either pure procedural or pure detective partnership; the structural tension between episodic accumulation and linear causality collapses entirely, eliminating the dual",
+    "M2": "If removed, the film loses its primary investigative logic of spatial survey as detection method and becomes conventional plot-driven mystery where locations serve narrative convenience rather than",
+    "M3": "If removed, Murakami-Yusa opposition becomes circumstantial rather than moral; the central ethical mechanism of identical conditions producing divergent choices through behavior alone disappears",
+    "M4": "If removed, extended observation sequences collapse into shot-reverse-shot alternation, fragmenting continuous watching into discrete glances; the investigative watching survives but loses visibility since other compositional strategies could substitute.",
+    "M5": "If removed, the temporal operations of the bifurcated structure fail: seven story days cannot compress into the runtime and the consistent compression ratio masking the structural shift disappears.",
+    "M6": "If removed, exposition front-loads conventionally; the accumulation-before-revelation pacing weakens but the underlying architecture survives, since the analysis treats this as pacing choice rather than structural necessity."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-11T23:02:15.571Z",
+    "source_profile_id": "b467364e-1cf7-4f84-aa7e-ad73dbf1782d"
+  }
+}

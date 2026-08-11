@@ -1,0 +1,368 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Sátántangó",
+    "creator": "Béla Tarr",
+    "domain": "cinema",
+    "practice": "durational long-take filmmaking"
+  },
+  "principle": "Systematic constraint of all formal registers to force attention into durational observation, converting cinema's default narrative progression through montage into architectural contemplation through sustained volumetric presence.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Durational shot-unit",
+      "description": "150 shots across 439 minutes, averaging 175 seconds per shot, with individual shots extending to 10+ minutes. The shot itself becomes the primary compositional unit rather than the cut, establishing duration as a structural parameter equal to framing or editing.",
+      "confidence": "high",
+      "evidence": [
+        "Quantified across full runtime: 150 shots, 439 minutes, 175 second average shot length",
+        "Individual shots documented at 10+ minutes",
+        "Stage 4 ranks this as central: remove it and the entire temporal resistance structure collapses"
+      ],
+      "rules": [
+        "duration functions as structural parameter equal to framing or editing"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Twelve-part temporal fold structure",
+      "description": "Chapters 1-6 progress forward chronologically; chapters 7-12 revisit the same temporal span from different spatial positions and character perspectives. The second half re-traverses the first half's timeline, creating narrative density through repetition rather than linear progression.",
+      "confidence": "high",
+      "evidence": [
+        "Explicit twelve-chapter mirror symmetry with documented temporal overlap in chapters 7-12",
+        "Total story-time approximately 48 hours shown multiple times from different positions across 439 minutes of screen time",
+        "The same rainstorm, bell-ringing, and departure appear multiple times with new spatial information each iteration"
+      ],
+      "rules": [
+        "temporal repetition triggers spatial displacement"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Deep-focus volumetric staging",
+      "description": "Consistent use of extreme depth of field to organize action across three or more spatial planes simultaneously visible, with figures at 100+ meters remaining in focus. The frame operates as a volumetric container rather than a flat picture plane.",
+      "confidence": "high",
+      "evidence": [
+        "Systematic across compositions with specific notation of 100+ meter depth maintenance",
+        "Foreground, middle ground, and deep background all carry narrative information concurrently",
+        "Stage 6 identifies this as the training substrate for volumetric attention distribution"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Lateral tracking accompaniment",
+      "description": "Horizontal camera movement that maintains fixed distance from subjects, producing parallel observation rather than approach or retreat. The camera moves predominantly in tracking shots following figures in profile while refusing to change proxemic distance.",
+      "confidence": "high",
+      "evidence": [
+        "Camera holds a zone approximately 3-8 meters from subjects, refusing intimacy and detachment",
+        "A 400-meter walk filmed in real time through lateral tracking produces verifiable duration synchronized with verifiable distance",
+        "Vertical movement such as tilts and cranes is rare; horizontal tracking is the dominant camera operation"
+      ],
+      "rules": [
+        "camera measures spatial displacement through lateral motion at fixed proxemic distance"
+      ]
+    },
+    {
+      "id": "E_real_time_action",
+      "kind": "element",
+      "label": "Real-time action presentation",
+      "description": "Many shots present actions in continuous real time without compression. A character walking 400 meters takes the actual time required; drinking, dressing, and counting money unfold at their natural pace, filling durational containers with observable process.",
+      "confidence": "high",
+      "evidence": [
+        "Systematic refusal of temporal compression documented in Stage 1 temporal operations",
+        "Stage 2 identifies duration and real-time presentation as a mutually dependent pair"
+      ],
+      "rules": [
+        "transformative durations must be observed in real time"
+      ]
+    },
+    {
+      "id": "E_perspective_rotation",
+      "kind": "element",
+      "label": "Perspective rotation system",
+      "description": "Events repeat across chapters from shifted vantage points. Each iteration of the same rainstorm, bell-ringing, or departure provides new spatial or character-specific information, so the work rotates around fixed temporal nodes rather than advancing linearly.",
+      "confidence": "high",
+      "evidence": [
+        "Same events appear multiple times, each iteration providing new spatial or character-specific information",
+        "Stage 2: whenever the narrative revisits a temporal node in the second half, it must shift spatial position or character vantage point"
+      ]
+    },
+    {
+      "id": "E_negative_space",
+      "kind": "element",
+      "label": "Negative space dominance",
+      "description": "Figures occupy small percentages of frame area; empty sky, floor, and wall dominate compositions. The void-to-occupied ratio heavily favors void, roughly 85-90 percent emptiness to 10-15 percent content, mirroring the narrative ratio of temporal void to plot event.",
+      "confidence": "high",
+      "evidence": [
+        "Compositional strategy favoring void over occupied area documented in Stage 1 spatial organization",
+        "Stage 2 identifies fractal correspondence: the same emptiness-to-event ratio governs single frames and the 439-minute narrative"
+      ],
+      "rules": [
+        "void-to-event ratio favors void across spatial and temporal registers"
+      ]
+    },
+    {
+      "id": "E_weather_transformer",
+      "kind": "element",
+      "label": "Weather as material transformer",
+      "description": "Rain, mud, fog, and snow continuously alter surface appearance within shots. Dry earth becomes reflective wet mud; clear air becomes obscuring fog. Weather operates as a time-based material process rather than static atmospheric condition.",
+      "confidence": "medium",
+      "evidence": [
+        "Surface transformations occur within shots, making weather a time-based process",
+        "Stage 4 rates this a supporting mechanism: prevents durational shots from becoming photographically inert but is surface modification rather than structural necessity"
+      ]
+    },
+    {
+      "id": "E_monochrome_stock",
+      "kind": "element",
+      "label": "Monochrome film stock",
+      "description": "Black-and-white film renders all surfaces into tonal relationships, eliminating color information and concentrating attention on texture, luminance, contrast, and spatial depth.",
+      "confidence": "medium",
+      "evidence": [
+        "Stage 1 documents elimination of chromatic variation foregrounding texture and contrast",
+        "Stage 4 classifies monochrome as incidental: aesthetic choice that enhances tonal focus but does not generate structural logic"
+      ]
+    },
+    {
+      "id": "E_vig_score",
+      "kind": "element",
+      "label": "Sparse Vig score at 60-80 BPM",
+      "description": "Mihály Vig accordion-and-piano score in a narrow 60-80 BPM tempo band with static minor-key harmonic fields and spectrally thin solo instrumentation. Cues extend for minutes without variation, establishing sustained tonal fields rather than punctuating action.",
+      "confidence": "high",
+      "evidence": [
+        "Score distribution documented: chapters 1-3 roughly 10 percent scored, chapters 4-9 roughly 40 percent, chapters 10-12 roughly 15 percent",
+        "A single accordion phrase may repeat for the duration of a 7-minute tracking shot",
+        "Stage 2: camera horizontal movement speed matches the score pulse when both are present"
+      ]
+    },
+    {
+      "id": "E_final_static_shot",
+      "kind": "element",
+      "label": "Final static shot of self-immurement",
+      "description": "The last extended shot does not track: it statically observes the doctor permanently sealing himself into immobility with a bricked window and sealed room, terminating the spatial displacement the camera spent 430 minutes documenting.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: the mechanism that measures movement through space-time culminates in the permanent cessation of movement",
+        "The load-bearing kinetic system self-terminates in static observation"
+      ],
+      "rule_violations": [
+        "camera measures spatial displacement through lateral motion at fixed proxemic distance"
+      ]
+    },
+    {
+      "id": "E_chapter_12_jump",
+      "kind": "element",
+      "label": "Chapter 12 forward chronological jump",
+      "description": "The final chapter abandons the revisitation mechanism entirely, jumping forward past all established chronology instead of providing the final angular data to triangulate the temporal nodes. The fold breaks open into linear progression at the moment geometric completion seems imminent.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: the structural rule operates for eleven iterations then fails in Chapter 12",
+        "Instead of completing geometric triangulation the chapter jumps past established chronology"
+      ],
+      "rule_violations": [
+        "temporal repetition triggers spatial displacement"
+      ]
+    },
+    {
+      "id": "E_doctor_writing_sequence",
+      "kind": "element",
+      "label": "Doctor writing sequence with text-filled frame",
+      "description": "In the sealed room the frame fills with handwritten pages consuming the visual field, inverting the void-dominant ratio exactly once. Maximum temporal void coincides with minimum spatial void at the structural terminus.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: negative space dominance inverts precisely once, in the doctor writing sequence",
+        "The 10-15 percent content ratio that governed 439 minutes reverses into density"
+      ],
+      "rule_violations": [
+        "void-to-event ratio favors void across spatial and temporal registers"
+      ]
+    },
+    {
+      "id": "E_offscreen_persuasion",
+      "kind": "element",
+      "label": "Off-screen persuasion speech of Irimias",
+      "description": "The climactic speech in the bar occurs off-screen. The work shows the before-state of skeptical villagers and the after-state of converted followers, but the transformative duration itself is never recorded by the real-time measurement apparatus.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: the mechanism built to measure observable process refuses to observe the pivotal persuasion",
+        "The measurement apparatus deliberately absents itself from the moment that structurally requires measurement"
+      ],
+      "rule_violations": [
+        "transformative durations must be observed in real time"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Shot duration requires deep-focus staging to justify observation time, otherwise extended shots become empty waiting rather than spatial exploration."
+    },
+    {
+      "from": "M3",
+      "to": "M4",
+      "kind": "requires",
+      "rationale": "Deep-focus staging requires lateral movement to reveal spatial volume, otherwise volumetric depth collapses into static depth painting."
+    },
+    {
+      "from": "M2",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "Temporal folding requires durational presentation to make re-observation structurally distinct from mere repetition."
+    },
+    {
+      "from": "M1",
+      "to": "E_real_time_action",
+      "kind": "requires",
+      "rationale": "Real-time action presentation fills durational containers with observable process, without which shot length becomes arbitrary endurance test."
+    },
+    {
+      "from": "M2",
+      "to": "E_perspective_rotation",
+      "kind": "requires",
+      "rationale": "The fold structure is rule-bound: whenever the narrative revisits a temporal node in the second half it must shift spatial position or character vantage, building geometric density through angular accumulation."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Lateral tracking adds kinetic dimension to durational observation, converting abstract duration into concrete spatial-temporal measurement; the work could theoretically function with static long-takes alone."
+    },
+    {
+      "from": "E_negative_space",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Negative space dominance at compositional scale must mirror temporal redundancy at narrative scale to maintain fractal void-to-event ratio across registers."
+    },
+    {
+      "from": "E_monochrome_stock",
+      "to": "E_weather_transformer",
+      "kind": "requires",
+      "rationale": "Monochrome stock requires weather as material transformer to prevent tonal stasis, converting precipitation into time-based contrast modulation since wet surfaces reflect and dry surfaces absorb light."
+    },
+    {
+      "from": "E_weather_transformer",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Weather provides time-based visual variation within static compositions, preventing durational shots from becoming photographically inert, but is surface modification rather than structural necessity."
+    },
+    {
+      "from": "E_vig_score",
+      "to": "M4",
+      "kind": "amplifies",
+      "rationale": "Sonic tempo must synchronize with lateral tracking velocity to create locked rhythmic correspondence between visual motion and auditory pulse; when score is absent, footstep patterns maintain the same tempo band."
+    },
+    {
+      "from": "E_vig_score",
+      "to": "E_negative_space",
+      "kind": "amplifies",
+      "rationale": "Spectral thinness in score must correspond to negative space dominance in frame to maintain consistent density ratio across registers; when the score thickens, compositions tighten correspondingly."
+    },
+    {
+      "from": "E_final_static_shot",
+      "to": "M4",
+      "kind": "contradicts",
+      "rationale": "The kinetic measurement system self-terminates: the final shot refuses to track and statically observes a figure eliminating his own capacity for the spatial displacement the camera spent 430 minutes documenting."
+    },
+    {
+      "from": "E_chapter_12_jump",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Chapter 12 abandons temporal revisitation and jumps forward past established chronology instead of completing geometric triangulation, breaking the fold rule after eleven iterations."
+    },
+    {
+      "from": "E_doctor_writing_sequence",
+      "to": "E_negative_space",
+      "kind": "contradicts",
+      "rationale": "The frame fills with handwritten text, inverting the void-to-event ratio that governed spatial and temporal registers throughout and collapsing the fractal correspondence at the structural terminus."
+    },
+    {
+      "from": "E_offscreen_persuasion",
+      "to": "E_real_time_action",
+      "kind": "contradicts",
+      "rationale": "The real-time measurement apparatus deliberately absents itself from the climactic persuasion, leaving the transformative duration unrecorded despite the system structurally requiring its documentation."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "camera measures spatial displacement through lateral motion at fixed proxemic distance"
+        ]
+      },
+      "consequence": "The kinetic measurement system self-terminates when the final static shot observes a character permanently sealing himself into immobility, negating the spatial displacement the camera spent 430 minutes documenting.",
+      "collapses_to": [
+        "M1",
+        "M3"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "temporal repetition triggers spatial displacement"
+        ]
+      },
+      "consequence": "The twelve-part fold breaks its own rule in Chapter 12 by abandoning temporal revisitation and jumping forward past established chronology instead of completing geometric triangulation; the fold breaks open into linear progression."
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "void-to-event ratio favors void across spatial and temporal registers"
+        ]
+      },
+      "consequence": "Negative space dominance inverts during the doctor writing sequence when the frame fills with text, collapsing the void-to-event ratio that governed spatial and temporal registers throughout; the fractal correspondence between frame and narrative breaks."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "violated": [
+          "transformative durations must be observed in real time"
+        ]
+      },
+      "consequence": "The real-time measurement apparatus deliberately absents itself from the climactic persuasion scene, refusing to observe the transformative duration that structurally requires documentation; only before and after states are shown."
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "If shot duration decreases, the spatial observation system collapses because insufficient time remains to explore volumetric depth across multiple planes; the work becomes conventionally paced cinema and the temporal resistance structure that all other mechanisms depend on disappears.",
+      "collapses_to": "nothing"
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "M3"
+        ]
+      },
+      "consequence": "If deep focus is abandoned, durational shots lose structural justification and become arbitrary waiting periods without observable spatial process; the eye has nowhere to travel during sustained observation.",
+      "collapses_to": [
+        "M2",
+        "E_monochrome_stock",
+        "E_vig_score"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work becomes conventionally paced cinema and the entire temporal resistance structure collapses, eliminating the experiential foundation that all other mechanisms depend on.",
+    "M2": "If removed, narrative becomes linear and the geometric accumulation through perspective rotation disappears, converting the work from spatial-temporal architecture into chronological storytelling.",
+    "M3": "If removed, extended duration becomes empty waiting rather than observable spatial process because the eye has nowhere to travel during sustained shots, breaking the duration-observation coupling.",
+    "M4": "If removed, walking loses its function as measurable temporal-spatial data and duration cannot be verified through synchronized distance traversal, reducing kinetic dimension to static observation."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-11T22:56:41.513Z",
+    "source_profile_id": "559aa980-5151-41ef-8495-5a6cdab7991b"
+  }
+}

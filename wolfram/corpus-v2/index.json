@@ -1,0 +1,172 @@
+{
+  "schema": "corev2-manifest/1",
+  "generated_at": "2026-08-11T23:42:40.474Z",
+  "count": 15,
+  "entries": [
+    {
+      "file": "09065764-ff36-4ad9-8cb3-afde3c83eb89.json",
+      "profile_id": "09065764-ff36-4ad9-8cb3-afde3c83eb89",
+      "title": "The Calling of Saint Matthew",
+      "creator": "Caravaggio",
+      "domain": "painting",
+      "nodes": 10,
+      "edges": 11,
+      "failure_modes": 6,
+      "warnings": 1
+    },
+    {
+      "file": "0bd9ff72-837f-4ebf-9f19-1745dfebc74d.json",
+      "profile_id": "0bd9ff72-837f-4ebf-9f19-1745dfebc74d",
+      "title": "Red Book of Westmarch",
+      "creator": "J. R. R. Tolkien",
+      "domain": "literature",
+      "nodes": 16,
+      "edges": 20,
+      "failure_modes": 8,
+      "warnings": 0
+    },
+    {
+      "file": "16b09742-a835-45b3-ba3e-dd904bc8fa6e.json",
+      "profile_id": "16b09742-a835-45b3-ba3e-dd904bc8fa6e",
+      "title": "Seven Samurai",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 13,
+      "edges": 12,
+      "failure_modes": 5,
+      "warnings": 1
+    },
+    {
+      "file": "18591654-5550-4c9b-858e-d0180ce2cb68.json",
+      "profile_id": "18591654-5550-4c9b-858e-d0180ce2cb68",
+      "title": "Seven Samurai",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 15,
+      "edges": 16,
+      "failure_modes": 5,
+      "warnings": 0
+    },
+    {
+      "file": "2eedaf0f-c135-422b-8c61-e9338af8dfe1.json",
+      "profile_id": "2eedaf0f-c135-422b-8c61-e9338af8dfe1",
+      "title": "Throne of Blood",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 16,
+      "edges": 18,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "529e5b36-cc56-4a09-88bc-19d619502e29.json",
+      "profile_id": "529e5b36-cc56-4a09-88bc-19d619502e29",
+      "title": "Battleship Potemkin",
+      "creator": "Sergei Eisenstein",
+      "domain": "cinema",
+      "nodes": 11,
+      "edges": 14,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "559aa980-5151-41ef-8495-5a6cdab7991b.json",
+      "profile_id": "559aa980-5151-41ef-8495-5a6cdab7991b",
+      "title": "Sátántangó",
+      "creator": "Béla Tarr",
+      "domain": "cinema",
+      "nodes": 14,
+      "edges": 15,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "5fe5bb51-7c40-4413-a5e8-141d3cc1d684.json",
+      "profile_id": "5fe5bb51-7c40-4413-a5e8-141d3cc1d684",
+      "title": "Girl with a Pearl Earring",
+      "creator": "Johannes Vermeer",
+      "domain": "painting",
+      "nodes": 11,
+      "edges": 12,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "8c596e2f-d9a3-4f3b-8ce6-984a952b7b2d.json",
+      "profile_id": "8c596e2f-d9a3-4f3b-8ce6-984a952b7b2d",
+      "title": "The Red Book",
+      "creator": "Carl Jung",
+      "domain": "literature",
+      "nodes": 13,
+      "edges": 15,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "9181ad6f-6133-4e0d-b149-e9d691b1c0ee.json",
+      "profile_id": "9181ad6f-6133-4e0d-b149-e9d691b1c0ee",
+      "title": "The Red Book",
+      "creator": "Carl Jung",
+      "domain": "literature",
+      "nodes": 14,
+      "edges": 18,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "93651b65-eb32-4e6c-9477-9d6a4223cdf0.json",
+      "profile_id": "93651b65-eb32-4e6c-9477-9d6a4223cdf0",
+      "title": "The School of Athens",
+      "creator": "Raphael",
+      "domain": "painting",
+      "nodes": 15,
+      "edges": 16,
+      "failure_modes": 8,
+      "warnings": 0
+    },
+    {
+      "file": "9510b48e-10a6-458c-a552-45cbfe939a00.json",
+      "profile_id": "9510b48e-10a6-458c-a552-45cbfe939a00",
+      "title": "Ikiru",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 15,
+      "edges": 18,
+      "failure_modes": 6,
+      "warnings": 0
+    },
+    {
+      "file": "a74be626-37a5-4bb5-8611-c2f7433c176b.json",
+      "profile_id": "a74be626-37a5-4bb5-8611-c2f7433c176b",
+      "title": "Ran",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 19,
+      "edges": 19,
+      "failure_modes": 5,
+      "warnings": 1
+    },
+    {
+      "file": "b467364e-1cf7-4f84-aa7e-ad73dbf1782d.json",
+      "profile_id": "b467364e-1cf7-4f84-aa7e-ad73dbf1782d",
+      "title": "Stray Dog",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 16,
+      "edges": 15,
+      "failure_modes": 4,
+      "warnings": 1
+    },
+    {
+      "file": "cf67d3e8-0e1c-40de-87a2-5c84cfd22546.json",
+      "profile_id": "cf67d3e8-0e1c-40de-87a2-5c84cfd22546",
+      "title": "Dreams",
+      "creator": "Akira Kurosawa",
+      "domain": "cinema",
+      "nodes": 19,
+      "edges": 18,
+      "failure_modes": 7,
+      "warnings": 2
+    }
+  ]
+}
