@@ -56,7 +56,7 @@ What this is *not* is a way to compute culture — see §9.
 
 *Status: [A] proposal, revising the domain-level framing of Paper 1. One row of consequences is [O].*
 
-Paper 1 proposes working kernels at **domain** level (Music: the Fifth; Cinema: the Cut; Physics: measurement — the last admittedly strained). The evidence that "domain" is too coarse is internal: the corpus already rules that centerless process music "does not enter — no kernel → classifier undefined," although process music is indisputably music. The kernel never belonged to *music*; it belongs to the twelve-tone equal-temperament **practice**, which was hegemonic enough to pass for the domain.
+Paper 1 proposes working kernels at **domain** level (Music: the Fifth; Cinema: the Cut; Physics: the Wave Function — superposition, with the measurement problem among its commas, and the corpus's own "uniquely contested" entry). The evidence that "domain" is too coarse is internal: the corpus already rules that centerless process music "does not enter — no kernel → classifier undefined," although process music is indisputably music. The kernel never belonged to *music*; it belongs to the twelve-tone equal-temperament **practice**, which was hegemonic enough to pass for the domain.
 
 The rescaling, stated as a principle:
 
