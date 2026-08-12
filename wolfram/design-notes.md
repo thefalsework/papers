@@ -507,10 +507,44 @@ design decisions worth recording:
    entailed or parameterized agreements never carry evidential
    weight in prose. The formula's value is that it looks provable;
    proving it (target: Lean) is the named next step.
-3. **Sizes reported, not fitted.** The latent aperture sizes
-   (Div72: 6, 4; Div144: 14, 12, 8; Div216: 18, 12, 12, 6) admit
-   no product form we tried; rather than fit a formula to twelve
-   points, they are reported as data and marked open.
+3. **Sizes reported, not fitted — then derived.** The latent
+   aperture sizes (Div72: 6, 4; Div144: 14, 12, 8; Div216: 18,
+   12, 12, 6) admitted no product form we tried; rather than fit
+   a formula to twelve points, they were reported as data and
+   marked open. The closed form (item 5 below) later derived
+   every one of them. The order matters: fit-then-justify would
+   have produced a wrong formula; refuse-then-derive produced a
+   theorem.
+4. **The discrimination episode (preserved in
+   `product-law-two-prime.mjs`).** The cloud run returned Div72
+   ambient apertures (9, 7, 9) that were not pre-registered and
+   suggested a third factor in the product law. Two candidates
+   fit the two-prime data identically: (2^b − 1) over other
+   primes, and N(complement) − 1. Their first non-degenerate
+   disagreement is on three-prime lattices; reviewer pressure
+   (correctly) rejected the Div60 fit as a degenerate-point
+   coincidence and demanded Div120/Div180, where the candidates
+   predict 3,3 vs 9,9 and 3,3 vs 7,7. Measured: 9, 9, 7, 7 —
+   4/4 for N(complement) − 1. The follow-up question "why the
+   −1?" (if there is no motivating story, a fitted constant is a
+   fudge) forced the derivation below, which subsumed both
+   candidates.
+5. **The closed form: derive, don't extrapolate.** Asking what
+   N(complement) − 1 *means* produced a three-step elementary
+   derivation: (i) nuclei on finite products factor
+   componentwise — believed to need a decomposition theorem,
+   actually four lines: (a,b) = (a,⊤) ∧ (⊤,b) plus
+   meet-preservation gives j = j_A × j_B; (ii) density and
+   regularity in a product world are coordinate-local; (iii)
+   per-chain counts D, R, DR are elementary subset counts. By
+   inclusion-exclusion: |Ap(k)| = ∏N − ∏D − ∏R + ∏DR. Verified
+   on all 164 elements of 15 lattices, zero mismatches,
+   including all 109 zero-aperture elements — the cancellation
+   cases where a fitted formula would leak
+   (`aperture-closed-form.mjs`). Everything earlier in the
+   scaling arc (product laws, latency characterization, latent
+   sizes) is now a corollary. Lean formalization of the general
+   statement is the named next step.
 
 The framing decision for the standalone preprint
 (`preprints/aperture/paper.md`): lead with the mathematics —
@@ -520,6 +554,38 @@ observer analogy afterward, as an analogy. A computed instance of
 observer-dependence framed as observer-dependence-first would read
 as an illustration of someone else's idea; framed as
 mathematics-first, the resonance is something the reader notices.
+
+## V2 addendum (August 2026, part 5): the theorem does the kernel's work
+
+The Lean session (2026-08-12) that moved the aperture anchors from
+[computed] to [K] contained one instructive failure. The first
+attempt at Div12 completeness — Ap(2) = {identity}, quantified over
+all nuclei — asked the kernel to `decide` over all 6⁶ = 46,656
+self-maps of the hand-rolled `Div12` inductive. It ran 18+ minutes
+and had to be killed: enumerated functions evaluate in the kernel
+through list machinery, and the constant factor is prohibitive.
+
+The fix was not more heartbeats. It was noticing that the paper's
+own Step 1 — nuclei on products factor componentwise
+(`nucleus_prod_iff`, kernel-checked in full generality the same
+day) — collapses the search space *inside the proof assistant*
+exactly as it does in the counting argument. Decide completeness on
+the exponent lattice C₃ × C₂ over the 3³·2² = 108 componentwise
+pairs (instant), then transport across the explicit exponent
+isomorphism, every structure-preservation fact of which (inverse
+laws, monotonicity, ⊓, ⇨, ⊥, the kernel image) is itself a decided
+lemma over the 6-element algebras. Same pattern for Div36:
+729 pairs instead of 9⁹ self-maps. Total build time for the
+anchors file after the restructure: 21 seconds, versus a crash.
+
+Two general transport lemmas (`IsNucleus.conj`, `Opens.conj` in
+`Lattice/NucleusFactorization.lean`) carry the results between
+presentations of the same algebra. Axiom audit on everything:
+`propext`, `Classical.choice`, `Quot.sound` only — no
+`native_decide`, no `sorry`. The methodological point, matching
+the sweep discipline: when brute force stalls, the response is
+not a bigger budget but a theorem that shrinks the space — and
+here the theorem needed was the one the paper had already derived.
 
 ## Provenance and references
 

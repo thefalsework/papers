@@ -57,6 +57,16 @@
    nothing and coarse observers see the four-fold, so the
    invariant provably detects something identity cannot.
 
+   THE CLOSED FORM (derived 2026-08-11 from the componentwise
+   nucleus factorization lemma; Node reference exact on all 164
+   elements of 15 lattices including 109 zero-aperture
+   cancellations - see aperture-closed-form.mjs):
+     |Ap(k)| = prod N_c - prod D_c - prod R_c + prod DR_c
+     N = 2^a, D = (2^e-1)2^(a-e)+1, R = 2^(a-e)+2^e-1, DR = 2^e
+   per prime chain (height a, kernel exponent e). Pre-registered
+   expectation for this cell's closed-form check: EXACT on every
+   element of all eight lattices enumerated here.
+
    CHARACTERIZATION (stated before the sweep, confirmed 10/10):
    on a divisor lattice, an element is LATENT iff every prime
    exponent is strictly interior (0 < e_i < a_i for all i).
@@ -174,3 +184,34 @@ latencyCheck[n_Integer] := Module[
     "  -> ", If[latent === predicted, "CONFIRMED", "FAILED"]];
 ];
 Scan[latencyCheck, {12, 24, 48, 96, 192, 36, 72, 30}];
+
+(* ---------- closed-form check (Theorem 5.1 of the aperture note) ----------
+   |Ap(k)| = prod N_c - prod D_c - prod R_c + prod DR_c over prime chains,
+   N = 2^a, D = (2^e-1)2^(a-e)+1, R = 2^(a-e)+2^e-1, DR = 2^e.
+   Derived from the componentwise nucleus factorization lemma; Node
+   reference verified it on all 164 elements of 15 lattices (2026-08-11).
+   This check compares the formula against the enumerated apertures for
+   EVERY element of the eight lattices above - second implementation. *)
+Print[""];
+Print["Closed-form check: |Ap(k)| = N - D - R + DR (per-prime-chain products):"];
+SClosedForm[n_Integer, k_Integer] := Module[{fn = FactorInteger[n], e},
+  Times @@ (2^#[[2]] & /@ fn) -
+  Times @@ ((e = IntegerExponent[k, #[[1]]];
+    (2^e - 1) 2^(#[[2]] - e) + 1) & /@ fn) -
+  Times @@ ((e = IntegerExponent[k, #[[1]]];
+    2^(#[[2]] - e) + 2^e - 1) & /@ fn) +
+  Times @@ (2^IntegerExponent[k, #[[1]]] & /@ fn)
+];
+closedFormResults = Map[
+  Function[n, Module[{H = SMakeHeyting[n], aps = apsAll[n], bad},
+    bad = Select[H["Elements"], aps[#] =!= SClosedForm[n, #] &];
+    {n, Length[H["Elements"]], Count[H["Elements"], e_ /; aps[e] === 0],
+     If[bad === {}, "EXACT", Row[{"FAILURES: ", bad}]]}]],
+  {12, 24, 48, 96, 192, 36, 72, 30}];
+Print[Grid[
+  Prepend[closedFormResults, Style[#, Bold] & /@
+    {"Div n", "elements", "zero-aperture", "closed form"}],
+  Frame -> All, Alignment -> Left, BaseStyle -> "Text",
+  Background -> {None, {LightGray, {None}}}]];
+Print["closed form exact on all elements of all lattices: ",
+  AllTrue[closedFormResults, #[[4]] === "EXACT" &]];

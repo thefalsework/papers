@@ -253,19 +253,28 @@ wolfram/
 │                              self-contained single cloud cell)
 ├── aperture-scaling.wl        aperture scaling: Div12→Div192 sequence, Div36
 │                              family break (latent ordinariness), Div72,
-│                              Div30 Boolean control; product-law check and
-│                              latency characterization check (second
-│                              self-contained cell)
+│                              Div30 Boolean control; product-law, latency
+│                              characterization, and closed-form checks
+│                              (second self-contained cell)
 ├── latency-sweep.mjs          Node sweep for the latency characterization:
 │                              10 divisor lattices, prediction stated in the
 │                              header before the run, confirmed 10/10
+├── aperture-closed-form.mjs   closed form |Ap(k)| = N−D−R+DR (paper §5,
+│                              Theorem 5.1) vs enumeration: all 164 elements
+│                              of 15 lattices, zero mismatches
+├── product-law-two-prime.mjs  intermediate step preserved for the record:
+│                              the two-candidate discrimination that led to
+│                              the closed form (see design-notes part 4)
 ├── retransduction-study.md    pre-registered comma-derivation repeatability
 │                              study: 3 passes × 15 profiles, layered
 │                              agreement, kappa with CI, H1/H2 adjudication
 ├── corpus-v2-pass2/           re-transduction pass 2 (15 cores + manifest)
 ├── corpus-v2-pass3/           re-transduction pass 3 (15 cores + manifest)
 └── results/
-    └── wolfram-cloud-run-2026-05-04-v1.5.nb   reference evaluated run
+    ├── wolfram-cloud-run-2026-05-04-v1.5.nb   reference evaluated run (V1 demo)
+    ├── wolfram-cloud-run-2026-08-11-v2.0.nb   V2 queries rerun (Q1–Q4, machine corpus)
+    ├── wolfram-cloud-run-2026-08-11-v2.1.nb   comma graduation + aperture prototype
+    └── wolfram-cloud-run-2026-08-12-v2.2.nb   aperture scaling + closed-form check
 ```
 
 ## Running the demo
@@ -604,7 +613,12 @@ relational, not a robustness measure.)
 
 **Scaling run** (`aperture-scaling.wl`, second self-contained
 cell; Node reference 2026-08-11, expectations pre-registered in
-the file header):
+the file header; **confirmed in Wolfram Cloud 2026-08-12** — all
+eight enumerations match the pre-registered table, product law
+15/15, latency characterization 8/8 CONFIRMED, and the closed-form
+check EXACT on all 79 elements including all 56 zero-aperture
+cancellations; evaluated notebook archived at
+`results/wolfram-cloud-run-2026-08-12-v2.2.nb`):
 
 | algebra | nuclei | ambient ordinary | apertures |
 |---|---|---|---|
@@ -630,6 +644,35 @@ Findings, in order of importance:
   recovers ambient ordinariness, but on Div36 identity sees
   nothing where coarse observers see the four-fold, so the
   invariant provably detects something identity cannot.
+- **The closed form (2026-08-11 late; supersedes the product-law
+  conjecture below).** For any element k of any divisor lattice
+  Div(∏ p_c^{a_c}) with exponents e_c:
+  |Ap(k)| = ∏ 2^{a_c} − ∏ D_c − ∏ R_c + ∏ DR_c, with
+  D = (2^e−1)2^{a−e}+1, R = 2^{a−e}+2^e−1, DR = 2^e per chain.
+  Derived, not fitted: nuclei on finite products factor
+  componentwise (four-line proof via (a,b) = (a,⊤)∧(⊤,b) and
+  meet-preservation), density/regularity are coordinate-local,
+  inclusion-exclusion does the rest. Exact on **all 164 elements
+  of 15 lattices, zero mismatches**, including 109 zero-aperture
+  cancellations and every mixed kernel
+  (`aperture-closed-form.mjs`); independently confirmed in
+  Wolfram Cloud 2026-08-12 via the closed-form check in
+  `aperture-scaling.wl` (EXACT on all 79 elements of its eight
+  lattices). Subsumes the latency
+  characterization, both product laws, and the latent sizes
+  previously reported as unfitted data. Lean status (2026-08-12):
+  the factorization lemma is kernel-checked in full generality
+  (`nucleus_prod_iff`, `lean/.../Lattice/NucleusFactorization.lean`),
+  and both smallest completeness instances are `[K]` —
+  Ap(2) = {identity} on Div12 over *all* nuclei
+  (`aperture_two_complete`) and Ap(6) = exactly the two latent
+  witnesses on Div36 (`latent_ordinariness_witness`,
+  `aperture_six_complete`, `lean/.../Examples/ApertureAnchors.lean`).
+  Both proofs use the factorization lemma to collapse the search
+  to componentwise pairs before `decide`; axiom audit clean (no
+  `native_decide`, no `sorry`). Steps 2–3 of the closed form
+  (coordinate-locality, chain counts) remain the named next
+  formalization step (paper §5, Theorem 5.1).
 - **The characterization, predicted then confirmed 10/10**
   (sweep 2026-08-11, prediction stated before the run): on a
   divisor lattice, an element is latent **iff every prime
@@ -641,17 +684,16 @@ Findings, in order of importance:
   {6,12,18,36} in Div216; none in square-free Div30/Div60. Div36
   is the smallest case of a predicted phenomenon, not an anomaly.
   Latent aperture *sizes* (72: 6, 4; 144: 14, 12, 8; 216: 18,
-  12, 12, 6) fit no obvious product form and are reported as
-  data, not fitted `[O]`.
-- **The product law** `[O]`: aperture(2^k in Div(2^a·3)) =
-  (2^k − 1)(2^(a−k) − 1), exact on all 15 (a,k) points. Framed
-  honestly: these lattices are chain products and nuclei counts
-  multiply over factors (2^(a+1) for the sequence; 4 × 4 for
-  Div36; 2³ for Div30), so the 15 points are **one structural
-  fact observed at fifteen resolutions**, not fifteen
-  confirmations. The formula's value is that it looks *provable*
-  — likely a short argument about nuclei on chain products —
-  and proving it (ideally in Lean) is the named next step.
+  12, 12, 6) were reported as unfitted data at the time; the
+  closed form now derives every one of them — the refusal to
+  curve-fit was the right call and cost nothing.
+- **The product law** (now Corollary 5.2 of the closed form):
+  aperture(2^k in Div(2^a·3)) = (2^k − 1)(2^(a−k) − 1), exact on
+  all 15 (a,k) points; two-prime generalization
+  (2^i−1)(2^{a−i}−1)(2^b−1), exact on 13 further points. The 15
+  points are **one structural fact observed at fifteen
+  resolutions**, not fifteen confirmations — which is why the
+  general derivation, not more data, was the next move.
 
 ## What this prototype does
 

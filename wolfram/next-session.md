@@ -53,7 +53,35 @@ discriminating test; the test favored N(complement)−1 on 4/4 points
 there's no story it's a fudge") produced the derivation, which subsumed
 both candidate forms.
 
-## Tomorrow, in order
+## Status update, 2026-08-12 (end of session)
+
+Items 1, 3, 4, 5 below are done; item 2's cloud rerun is the one
+remaining manual step.
+
+- **Paper** rewritten: §5 closed form as theorem with derivation,
+  Result 4.1 and Result 6.1 upgraded to [K], §8 table and §9 updated.
+- **Lean** (`Lattice/NucleusFactorization.lean`,
+  `Examples/ApertureAnchors.lean`): the factorization lemma is [K] in
+  full generality (`nucleus_prod_iff`); Ap(2) = {identity} on Div12
+  over all nuclei (`aperture_two_complete`) and Ap(6) = exactly
+  {jLeft, jRight} on Div36 (`latent_ordinariness_witness`,
+  `aperture_six_complete`) are [K]. Method: the brute-force decide
+  over 6⁶ self-maps crashed the kernel; the factorization lemma
+  collapses the search to componentwise pairs (108 for Div12 via the
+  exponent iso C₃ × C₂ + transport lemmas, 729 for Div36), after
+  which decide is instant. Axiom audit clean — no native_decide, no
+  sorry. Full `lake build` green. Episode recorded in design-notes
+  part 5.
+- **Still open on the Lean track:** Steps 2–3 of Theorem 5.1
+  (coordinate-locality of density/regularity in product worlds;
+  the chain counts) — that is what makes the closed form itself [K].
+- **Wolfram track: closed.** `aperture-scaling.wl` rerun in Wolfram
+  Cloud 2026-08-12: enumerations match the pre-registered table,
+  product law 15/15, latency 8/8 CONFIRMED, closed form EXACT on
+  all 79 elements (56 zero-aperture cancellations included).
+  Recorded in the README scaling section and closed-form bullet.
+
+## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
    closed form as a theorem-with-proof-sketch (the two paragraphs above).
