@@ -324,6 +324,27 @@ as the five V1 constraints:
    transduction's own graph, with contradictions reported instead of
    smoothed.
 
+### Related machinery, named before someone else names it
+
+Nothing in the fixpoint executor is algorithmically novel, and the
+artifact should not be read as claiming otherwise. Fixpoint closure
+under a `requires` relation is reachability — the defining operation
+of build systems, package resolvers, truth-maintenance systems
+(Doyle 1979), and Dung-style argumentation frameworks (1995), where
+"what else collapses if I retract this" is the core question. The
+framing — dependency graphs over artworks with falsifiable removal
+tests — also has a neighborhood: Moretti's operationalization
+program and computational literary studies generally. What this
+artifact contributes is not the graph algorithm but the seam
+discipline around it: the transduction-fidelity audit (an LLM's
+structured claims machine-checked against the graph the same LLM
+produced), the earned-or-absent comma, and the kernel anchoring
+that keeps the framework load-bearing in the schema. The
+predicate-entailment analysis in the README (Q2's baseline tier
+structure is forced by the configuration, not discovered by the
+run) is part of the same discipline: instrument characterization
+belongs to the instrument's authors.
+
 One V1 mechanism is deliberately neutralised on machine cores:
 `Compatibility` entries are namespaced with the core slug so that
 predicate 2 of `TransferBasis` (compatibility-set intersection) can

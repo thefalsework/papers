@@ -8,12 +8,14 @@
    from each graph; design decision 2) - the machine corpus has no
    curated type vocabulary, and none is invented for it.
 
-   Q2 runs over every ordered cross-domain pair. The comma channel
-   is expected to be silent (machine kernels carry
-   CommaStatus -> "underived"; design decision 1), which caps the
-   confidence at 0.68. V1's 0.92 ceiling was reachable only through
-   the hand-planted Tymoczko-Cutting comma match. The silence is
-   measured and printed, not assumed.
+   Q2 runs over every ordered cross-domain pair. On this corpus
+   configuration the comma channel is dead by construction (machine
+   kernels carry CommaStatus -> "underived"; design decision 1), so
+   the 0.68 ceiling and the tier structure are ENTAILED a priori -
+   this cell verifies the entailment and characterizes the
+   instrument; it does not discover facts about the works. V1's
+   0.92 ceiling was reachable only through the hand-planted
+   Tymoczko-Cutting comma match.
    ================================================================ *)
 
 (* ---------------- Q1: mechanism type + constraint type ---------- *)
@@ -68,9 +70,14 @@ Print["     candidates: ", Length[allCands],
   ";  max confidence: ", q2MaxConf];
 Print["     comma_shape_match fired in ", Length[commaFired],
   " candidates (expected 0: machine kernels carry no derived comma)"];
-Print["     V1 ceiling was 0.92, reachable only through the ",
-  "hand-planted comma channel; this measured ceiling is the honest ",
-  "baseline the comma-shape graduation must beat."];
+Print["     NOTE: on this configuration the tier structure is ",
+  "entailed, not discovered - comma dead by design decision 1, ",
+  "compatibility dead cross-work by namespacing, cross_domain ",
+  "guaranteed by the pair filter, runtime entailed by the type ",
+  "predicate. These numbers are instrument characterization ",
+  "(see README predicate-entailment analysis); the run verifies ",
+  "the entailment. V1's 0.92 was reachable only through the ",
+  "hand-planted comma channel."];
 
 topCands = Take[ReverseSortBy[allCands, #["Confidence"] &], UpTo[15]];
 

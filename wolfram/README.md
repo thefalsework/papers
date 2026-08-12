@@ -307,23 +307,30 @@ its stored structural profiles into **CoreV2 typed dependency graphs**
 (specification: `../papers/computable-criticism-roadmap.md` §5.1;
 transduction implementation: `lib/corev2/` in the node0000 repository),
 and `corev2-loader.wl` loads them as `Core[...]` objects the four
-queries run on unchanged. Fifteen graphs spanning literature, cinema,
-and painting are bundled verbatim in `corpus-v2/`. The corpus includes
-two independent transductions of the same work (Jung's *Red Book*) and
-two of *Seven Samurai* — deliberate replicate pairs for future
-stability measurement.
+queries run on unchanged. Fifteen graphs are bundled verbatim in
+`corpus-v2/`.
+
+**Corpus composition, stated plainly:** 9 cinema (7 of them
+Kurosawa), 3 painting, 3 literature — the corpus is whatever the
+falsework.dev database happened to contain, not a designed sample,
+and cross-domain results should be read with that skew in mind. It
+includes two independent transductions of the same work (Jung's
+*Red Book*) and two of *Seven Samurai* — replicate pairs, used
+throughout as free probes of transduction stability.
 
 ### The four design decisions
 
 1. **No fabricated comma.** Machine work-kernels carry
    `"CommaStatus" -> "underived"` and no `Comma` field. The
    transduction has not derived an irreducibility witness, so none is
-   asserted. Measured consequence: `comma_shape_match` never fires on
-   machine cores and the Q2 confidence ceiling is 0.68
-   (type + cross-domain), not V1's 0.92. V1's 0.92 was reachable only
-   because the Tymoczko ↔ Cutting comma match was hand-planted; the
-   machine corpus's silence on that channel is the honest baseline the
-   comma-shape graduation must beat.
+   asserted. Entailed consequence (verified by the run, not
+   discovered by it): `comma_shape_match` cannot fire on machine
+   cores and the Q2 confidence ceiling is 0.68 (type + cross-domain),
+   not V1's 0.92 — see the predicate-entailment analysis under the
+   reference run below. V1's 0.92 was reachable only because the
+   Tymoczko ↔ Cutting comma match was hand-planted; the silent
+   channel is the honest baseline the comma-shape graduation must
+   beat.
 2. **Derived structural types.** Machine mechanisms carry no curated
    type taxonomy. `Type` is computed from the graph — the sorted sets
    of edge kinds a node participates in, outgoing and incoming
@@ -393,12 +400,27 @@ Three findings worth naming:
    the LLM's own graph and found the inconsistencies. No hand-authored
    corpus could produce this result, because the analyst who authored
    the claims would have authored the graph to match.
-2. **Derived types discriminate weakly.** 10,991 Q2 candidates at a
-   flat 0.68 ceiling: with the comma channel silent and types derived
-   purely from edge-kind signatures, the transfer query over-fires.
-   This is the measured cost of refusing to fabricate commas, and it
-   is exactly the gap the comma-shape graduation (deliverable 2) is
-   specified to close.
+2. **Q2's baseline numbers are instrument characterization, not
+   findings — the tier structure was entailed before the run.**
+   Trace the five transfer predicates on this corpus configuration:
+   the comma channel is dead by design decision 1; the compatibility
+   channel is dead cross-work by design decision 4's namespacing;
+   `cross_domain` is guaranteed by Q2's own pair filter (only
+   cross-domain pairs are queried); and the runtime predicate is
+   entailed by the type predicate (if `mA` and `mB` share a type,
+   the target core trivially contains a node sharing `mA`'s type).
+   So every candidate's confidence was determined a priori: 0.68
+   where the two nodes share a derived type, 0.30 where the source
+   type matches elsewhere in the target core. The 10,991-candidate
+   count and the 0.68 ceiling are forced constants of this
+   instrument configuration; the run verifies the entailment rather
+   than discovering a fact about the works. What the configuration
+   does reveal: with the comma underived, the cross-domain apparatus
+   has nothing substantive to compute with — a derived-type match
+   between two LLM-generated graphs is a dependency-role coincidence,
+   not a structural-position claim. V2 demonstrates the pipeline, not
+   the thesis; the comma-shape graduation is therefore the
+   load-bearing next step, not an optional refinement.
 3. **Replicate variance is now a number.** The two independent
    transductions of Jung's *Red Book* produced graphs with deepest
    cascades of 4 (`9181ad6f`, seeded at `E_diary_timestamps`) and 1
