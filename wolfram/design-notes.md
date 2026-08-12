@@ -483,6 +483,44 @@ decisions:
    fragility is a fact about the minimal kernel-bearing algebra,
    not an artifact of the definition.
 
+## V2 addendum (August 2026, part 4): scaling, latency, and the sweep discipline
+
+The scaling run (`aperture-scaling.wl`, `latency-sweep.mjs`)
+extended the aperture from two data points to a pattern. Three
+design decisions worth recording:
+
+1. **Prediction before sweep.** The latency characterization
+   (latent iff every prime exponent strictly interior) was derived
+   from componentwise negation on chain products and stated
+   *before* the ten-algebra sweep ran — recorded in the sweep
+   file's header. It then confirmed 10/10, including three
+   consequences that could each have failed: no latency anywhere
+   in Div(2^a·3), none in square-free lattices, and elementwise
+   agreement on Div72/Div144/Div216. This is the same
+   pre-registration discipline as the re-transduction study,
+   applied to mathematics instead of transduction.
+2. **The 15/15 lesson, applied prophylactically.** The product law
+   holds on all fifteen (a,k) points, but those lattices are one
+   chain-product family with two parameters — one structural fact
+   at fifteen resolutions, not fifteen confirmations. After the
+   0.68 and the 10,991, the rule is now standing: counts of
+   entailed or parameterized agreements never carry evidential
+   weight in prose. The formula's value is that it looks provable;
+   proving it (target: Lean) is the named next step.
+3. **Sizes reported, not fitted.** The latent aperture sizes
+   (Div72: 6, 4; Div144: 14, 12, 8; Div216: 18, 12, 12, 6) admit
+   no product form we tried; rather than fit a formula to twelve
+   points, they are reported as data and marked open.
+
+The framing decision for the standalone preprint
+(`preprints/aperture/paper.md`): lead with the mathematics —
+latent ordinariness is a fact about Heyting algebras, true whether
+or not anyone accepts the observer reading — and state the
+observer analogy afterward, as an analogy. A computed instance of
+observer-dependence framed as observer-dependence-first would read
+as an illustration of someone else's idea; framed as
+mathematics-first, the resonance is something the reader notices.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a

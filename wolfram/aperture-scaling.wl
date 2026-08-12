@@ -4,13 +4,15 @@
    Aperture Scaling (companion cell to aperture-prototype.wl)
    ------------------------------------------------------------
    Extends the aperture computation from two data points to a
-   pattern, across three probe families:
+   pattern, across four probe families:
 
    1. THE 2-POWER SEQUENCE Div(2^a * 3), a = 2..6 (Div12, Div24,
       Div48, Div96, Div192). These lattices are chain products
       C_{a+1} x C_2.
    2. THE FAMILY BREAK Div36 = 2^2 * 3^2 (chain product C_3 x C_3).
-   3. THE BOOLEAN CONTROL Div30 = 2 * 3 * 5 (square-free, so the
+   3. THE LATENCY CONFIRMATION Div72 = 2^3 * 3^2 (C_4 x C_3):
+      predicted latent {6, 12} before any run of this file.
+   4. THE BOOLEAN CONTROL Div30 = 2 * 3 * 5 (square-free, so the
       divisor lattice is the Boolean cube C_2^3).
 
    Definitions identical to aperture-prototype.wl (nucleus =
@@ -33,21 +35,40 @@
    | Div96   |     64 | {2,4,8,16}       | 15, 21, 21, 15       |
    | Div192  |    128 | {2,4,8,16,32}    | 31, 45, 49, 45, 31   |
    | Div36   |     16 | {2,3}            | 3, 3, and 2 for 6(!) |
+   | Div72   |     32 | {2,3,4}          | + latent 6:ap6, 12:ap4 |
    | Div30   |      8 | {} (Boolean)     | all empty            |
 
-   THE PRODUCT LAW (conjecture, [O]; all 15 sequence data points):
+   THE PRODUCT LAW (conjecture, [O]):
      aperture(2^k in Div(2^a * 3)) = (2^k - 1) * (2^(a-k) - 1)
-   The aperture factors as (blur available below the kernel) x
-   (blur available above it). Plausible mechanism: these lattices
-   are chain products and nuclei counts multiply over the factors
+   Exact on all 15 (a,k) points - but these lattices are chain
+   products C_{a+1} x C_2 and nuclei counts multiply over factors
    (8, 16, 32, 64, 128 = 2^(a+1); Div36's 16 = 4 x 4; Div30's
-   8 = 2^3).
+   8 = 2^3), so the 15 points are ONE structural fact observed at
+   fifteen resolutions, not fifteen confirmations. The formula's
+   value is that it looks provable (likely a short argument about
+   nuclei on chain products); proving it is the named next step.
 
-   LATENT ORDINARINESS (Div36): element 6 is NOT ordinary at full
-   resolution, yet aperture(6) = 2 - two proper coarse-grainings
-   open a four-fold that identity cannot see. The aperture is not
-   a restriction of ambient ordinariness; some distinctions exist
-   only at a blur.
+   LATENT ORDINARINESS - the headline. Element 6 of Div36 is NOT
+   ordinary at full resolution (it is dense), yet aperture(6) = 2:
+   two proper coarse-grainings open a four-fold that identity
+   cannot see. Some distinctions exist only at a blur. This also
+   removes the circularity worry about Div12 (where the aperture
+   just recovered ambient ordinariness): on Div36 identity sees
+   nothing and coarse observers see the four-fold, so the
+   invariant provably detects something identity cannot.
+
+   CHARACTERIZATION (stated before the sweep, confirmed 10/10):
+   on a divisor lattice, an element is LATENT iff every prime
+   exponent is strictly interior (0 < e_i < a_i for all i).
+   Componentwise negation on chain products gives: ordinary iff
+   some exponent is 0 and some is interior; dense iff all are
+   > 0. Consequences, all confirmed by the Node sweep
+   (2026-08-11): no latency anywhere in Div(2^a*3) (the C_2
+   factor has no interior); latent {6} in Div36; {6,12} in
+   Div72; {6,12,24} in Div144; {6,12,18,36} in Div216; none in
+   square-free Div30/Div60. Latent aperture SIZES fit no obvious
+   product form (72: 6,4; 144: 14,12,8; 216: 18,12,12,6) and are
+   reported as data, not fitted.
 
    Author:    Chris Brink (independent), 2026
    Reference: https://github.com/thefalsework/papers
@@ -113,7 +134,7 @@ SReport[n_Integer] := Module[{H = SMakeHeyting[n], nucs, ord, aps},
 
 Print["Aperture scaling run (expectations pre-registered in header):"];
 Print[""];
-apsAll = Association @ Map[# -> SReport[#] &, {12, 24, 48, 96, 192, 36, 30}];
+apsAll = Association @ Map[# -> SReport[#] &, {12, 24, 48, 96, 192, 36, 72, 30}];
 
 (* ---------- product-law check over the 2-power sequence ---------- *)
 Print[""];
@@ -133,3 +154,23 @@ Print[Grid[
   Background -> {None, {LightGray, {None}}}]];
 Print["all points match: ",
   AllTrue[productLawResults, #[[5]] === True &]];
+
+(* ---------- latency characterization check ---------- *)
+(* Latent iff every prime exponent strictly interior. Pre-registered:
+   Div36 latent {6} (ap 2); Div72 latent {6, 12} (ap 6, 4); no
+   latency in the 2-power sequence. *)
+Print[""];
+Print["Latency characterization check (latent = nonempty aperture, ",
+  "not ambient-ordinary; predicted = all prime exponents interior):"];
+latencyCheck[n_Integer] := Module[
+  {H = SMakeHeyting[n], aps = apsAll[n], ord, latent, predicted, fn},
+  ord = Select[H["Elements"], SOrdinaryQ[H, #] &];
+  latent = Select[H["Elements"], !MemberQ[ord, #] && aps[#] > 0 &];
+  fn = FactorInteger[n];
+  predicted = Select[H["Elements"],
+    Function[d, AllTrue[fn,
+      1 <= IntegerExponent[d, #[[1]]] <= #[[2]] - 1 &]]];
+  Print["  Div", n, ": latent ", latent, "  predicted ", predicted,
+    "  -> ", If[latent === predicted, "CONFIRMED", "FAILED"]];
+];
+Scan[latencyCheck, {12, 24, 48, 96, 192, 36, 72, 30}];

@@ -252,9 +252,13 @@ wolfram/
 │                              see a kernel's four-fold open (email artifact 3;
 │                              self-contained single cloud cell)
 ├── aperture-scaling.wl        aperture scaling: Div12→Div192 sequence, Div36
-│                              family break (latent ordinariness), Div30
-│                              Boolean control; product-law check (second
+│                              family break (latent ordinariness), Div72,
+│                              Div30 Boolean control; product-law check and
+│                              latency characterization check (second
 │                              self-contained cell)
+├── latency-sweep.mjs          Node sweep for the latency characterization:
+│                              10 divisor lattices, prediction stated in the
+│                              header before the run, confirmed 10/10
 ├── retransduction-study.md    pre-registered comma-derivation repeatability
 │                              study: 3 passes × 15 profiles, layered
 │                              agreement, kappa with CI, H1/H2 adjudication
@@ -593,8 +597,10 @@ The Wolfram-vocabulary reading: the double-negation nucleus is
 the fully reduced (Boolean) observer, and it never sees a
 four-fold — the four-position structure lives strictly outside
 the Boolean pocket, at resolutions that retain some
-irreducibility. The aperture measures how much coarse-graining a
-kernel's distinction survives.
+irreducibility. (A first reading — "the aperture measures how much
+coarse-graining a distinction survives" — is refuted by the
+scaling run below: latent ordinariness shows the invariant is
+relational, not a robustness measure.)
 
 **Scaling run** (`aperture-scaling.wl`, second self-contained
 cell; Node reference 2026-08-11, expectations pre-registered in
@@ -608,23 +614,44 @@ the file header):
 | Div96 (a=5) | 64 | {2,4,8,16} | 15, 21, 21, 15 |
 | Div192 (a=6) | 128 | {2,4,8,16,32} | 31, 45, 49, 45, 31 |
 | Div36 | 16 | {2,3} | 3, 3 — and **2 for the non-ordinary 6** |
+| Div72 | 32 | {2,3,4} | latent 6 (ap 6), 12 (ap 4) — predicted before the run |
 | Div30 | 8 | {} (Boolean) | all empty |
 
-Two findings:
+Findings, in order of importance:
 
-- **The product law** `[O]` (conjecture; all 15 sequence points):
-  aperture(2^k in Div(2^a·3)) = (2^k − 1)(2^(a−k) − 1). The
-  aperture factors as (blur available below the kernel) × (blur
-  available above it). Plausible mechanism: these lattices are
-  chain products and nuclei counts multiply over the factors
-  (2^(a+1) for the sequence; 4 × 4 for Div36; 2³ for Div30).
-- **Latent ordinariness** (Div36): element 6 is *not* ordinary at
-  full resolution, yet two proper coarse-grainings make it
-  ordinary in their worlds — aperture(6) = 2. The aperture is not
-  a restriction of ambient ordinariness; **some distinctions exist
-  only at a blur**. This is the sharpest single sentence the
-  aperture computation has produced, and it is computed, not
-  asserted.
+- **Latent ordinariness — the headline.** Element 6 of Div36 is
+  *not* ordinary at full resolution (it is dense), yet two proper
+  coarse-grainings make it ordinary in their worlds —
+  aperture(6) = 2. **Some distinctions exist only at a blur.**
+  The aperture is not a robustness measure (how much blur a
+  distinction survives); it is genuinely relational — the
+  four-fold is a property of the pair (structure, observer). This
+  also removes a circularity worry: on Div12 the aperture merely
+  recovers ambient ordinariness, but on Div36 identity sees
+  nothing where coarse observers see the four-fold, so the
+  invariant provably detects something identity cannot.
+- **The characterization, predicted then confirmed 10/10**
+  (sweep 2026-08-11, prediction stated before the run): on a
+  divisor lattice, an element is latent **iff every prime
+  exponent is strictly interior** (0 < e_i < a_i for all i);
+  ordinary iff some exponent is 0 and some is interior.
+  Consequences, all confirmed: latency is *impossible* in the
+  Div(2^a·3) family (the C₂ factor has no interior); latent
+  {6} in Div36, {6,12} in Div72, {6,12,24} in Div144,
+  {6,12,18,36} in Div216; none in square-free Div30/Div60. Div36
+  is the smallest case of a predicted phenomenon, not an anomaly.
+  Latent aperture *sizes* (72: 6, 4; 144: 14, 12, 8; 216: 18,
+  12, 12, 6) fit no obvious product form and are reported as
+  data, not fitted `[O]`.
+- **The product law** `[O]`: aperture(2^k in Div(2^a·3)) =
+  (2^k − 1)(2^(a−k) − 1), exact on all 15 (a,k) points. Framed
+  honestly: these lattices are chain products and nuclei counts
+  multiply over factors (2^(a+1) for the sequence; 4 × 4 for
+  Div36; 2³ for Div30), so the 15 points are **one structural
+  fact observed at fifteen resolutions**, not fifteen
+  confirmations. The formula's value is that it looks *provable*
+  — likely a short argument about nuclei on chain products —
+  and proving it (ideally in Lean) is the named next step.
 
 ## What this prototype does
 
