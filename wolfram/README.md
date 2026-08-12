@@ -368,6 +368,44 @@ fetches the corpus from this repository's raw GitHub URLs
 run Q1–Q4 plus the corpus-wide claim audit; cell 7 prints the
 results table against the V1 reference run.
 
+### V2 reference run (August 11, 2026)
+
+Evaluated notebook: `results/wolfram-cloud-run-2026-08-11-v2.0.nb`.
+Every value pre-registered from the independent Node.js reference
+implementation (see `paste-cells-v2/README.md`) was reproduced
+exactly — a passed differential test of the cascade semantics across
+two independently written implementations.
+
+| Query | Measured output |
+|---|---|
+| Corpus load | 15 of 15 files fetched, revalidated in WL, constructed, `WellFormedCoreQ` |
+| Q1 | type `Sig[out:-|in:requires]` + constraint `requires`: 14 of 15 cores |
+| Q2 | 10,991 candidates over 126 ordered cross-domain pairs; max confidence 0.68; `comma_shape_match` fired 0 times |
+| Q3 | largest element-seeded cascade: `red-book-of-westmarch-0bd9ff72`, seed `E_note_on_shire_records`, closure 9 nodes with per-step causes; V1 single-step on the same seed sees 1/0/0/0 vs the fixpoint's 9 removed / 16 edges dropped / 2 degraded / 3 failures surfaced |
+| Claim audit | 47 declared failure conditions machine-evaluated under their own removal seeds; 4 survivor-claim contradictions (Saint Matthew F2: M4; Westmarch F8: M1, M2, M7; Sátántangó F6: M2; Dreams F6: M1) |
+| Q4 | all 15 machine cores: 250 self-transfers total; deepest cascade 8 nodes beyond seed (Westmarch); element nodes are the deepest cascade seeds in 8 of 15 cores |
+
+Three findings worth naming:
+
+1. **The audit catches the transducer.** Four failure modes claim
+   survivors (`collapses_to`) that their own condition's cascade
+   removes. The machine checked the LLM's structured claims against
+   the LLM's own graph and found the inconsistencies. No hand-authored
+   corpus could produce this result, because the analyst who authored
+   the claims would have authored the graph to match.
+2. **Derived types discriminate weakly.** 10,991 Q2 candidates at a
+   flat 0.68 ceiling: with the comma channel silent and types derived
+   purely from edge-kind signatures, the transfer query over-fires.
+   This is the measured cost of refusing to fabricate commas, and it
+   is exactly the gap the comma-shape graduation (deliverable 2) is
+   specified to close.
+3. **Replicate variance is now a number.** The two independent
+   transductions of Jung's *Red Book* produced graphs with deepest
+   cascades of 4 (`9181ad6f`, seeded at `E_diary_timestamps`) and 1
+   (`8c596e2f`). Same work, same model, different structural
+   commitments — the reliability program in the roadmap now has its
+   first measured datapoint.
+
 ## What this prototype does
 
 - Defines six symbolic types (`Kernel`, `Comma`, `Mechanism`, `Constraint`,
