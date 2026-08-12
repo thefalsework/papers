@@ -335,6 +335,46 @@ because the fixpoint executor supersedes it, and the Q3 paste cell
 prints both side by side so the difference is visible rather than
 implied.
 
+## V2 addendum (August 2026, part 2): the comma-shape graduation
+
+`comma-graduation.wl` addresses the risk this document names above
+("Numerical confidence vs structured evidence" was one honesty debt;
+the planted comma match was the other). Design decisions:
+
+1. **Earned or absent.** A machine kernel gets a comma only when its
+   graph contains a witness under pre-committed definitions (tension
+   pair, both poles load-bearing, neither resolving the other by
+   dependence). No witness, no comma — `CommaStatus` stays
+   `"underived"` and the transfer channel stays silent for that work.
+   10 of 15 corpus works stay underived; that selectivity is the
+   point.
+2. **Pre-committed, then measured.** The witness and feature
+   definitions were fixed and run through an independent Node.js
+   reference implementation before the WL cells were written into
+   the workflow; expected values are pre-registered in
+   `paste-cells-v2/README.md`. The definitions were not adjusted
+   after seeing results — including the two results that count
+   against the derivation (kind collapse: 4 of 5 derived commas
+   share a kind; replicate instability: both same-work transduction
+   pairs disagree about whether a comma exists).
+3. **Namespace separation.** Derived kinds are prefixed `tension_`;
+   V1 hand kinds (`iterative_noncoincidence`, ...) can never match
+   them. A V1 core and a machine core cannot comma-match, by
+   construction, until someone derives — rather than asserts — a
+   shape for the hand corpus too.
+4. **Epistemic grade preserved.** `GroundKind -> "computed"`
+   distinguishes machine-checked structural ground from V1's
+   classical-theorem ground. `CommaShape`'s `FormallyGrounded` flag
+   is true for both, but the two grades stay visible.
+
+The graduation changes what a comma match *means* in this algebra:
+in V1 it meant "the analyst asserted the same label twice"; now it
+means "two works' own dependency graphs each maintain a load-bearing
+non-canceling tension of the same computed shape". The vocabulary of
+shapes is still crude (eight kinds, and the corpus collapses onto
+two) — but crude measurement that reports its own weaknesses is the
+graduation; the refinement now has numbers to beat.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a

@@ -406,6 +406,48 @@ Three findings worth naming:
    commitments — the reliability program in the roadmap now has its
    first measured datapoint.
 
+### The comma-shape graduation (email artifact 2)
+
+`comma-graduation.wl` closes the loop V1's README opened: the
+Tymoczko ↔ Cutting comma match was planted in the data before the
+code found it (both kernels hand-assigned the same
+`IrreducibilityKind` string). For machine cores, a comma is now
+**earned or absent** — never assigned.
+
+Pre-committed definitions (fixed before any run; results reported,
+not tuned): a **tension pair** is two nodes joined by a `contradicts`
+edge; a **comma witness** ("a distinction that fails to cancel") is a
+tension pair whose poles are both load-bearing (each removal cascades
+or triggers a declared failure) and where neither pole falls in the
+other's cascade — the work maintains the tension rather than
+resolving it by dependence. The derived `IrreducibilityKind` is a
+canonical string from three computed features of the tension
+(shared requires-ground; dependency symmetry; failure-coupling).
+Derived kinds carry a `tension_` prefix, so they can never
+accidentally shape-match a V1 hand-authored comma. Derived commas
+carry `GroundKind -> "computed"`: their formal ground is
+machine-checked graph structure, not a classical theorem — a
+different epistemic grade from V1's Baker-1966-grounded Pythagorean
+comma, kept distinguishable on purpose.
+
+Measured results (Node.js reference 2026-08-11, pre-registered in
+`paste-cells-v2/README.md`; Wolfram Cloud confirmation pending):
+
+- **5 of 15 cores earn a comma** — the witness gate is genuinely
+  selective (~43 tension pairs in the corpus, 5 witnesses).
+- **The 0.92 tier returns on merit**: 128 candidates reach
+  type + derived-comma + cross-domain, against 1,516 at the old 0.68
+  ceiling; the comma channel fires on only 5 of ~105 core pairs.
+- **The kind vocabulary is the measured weakness**: 4 of 5 derived
+  commas share one kind, so current selectivity comes from the
+  witness gate, not kind diversity. Refining the feature set is the
+  named next step, with the numbers to beat stated here.
+- **Both replicate pairs mismatch** — one transduction of the same
+  work derives a comma, the other does not (Red Book and Seven
+  Samurai alike). Comma derivation is not yet stable under
+  re-transduction. This is the roadmap's reliability concern
+  surfacing exactly where predicted, reported as a finding.
+
 ## What this prototype does
 
 - Defines six symbolic types (`Kernel`, `Comma`, `Mechanism`, `Constraint`,

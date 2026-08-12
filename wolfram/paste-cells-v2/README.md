@@ -14,6 +14,15 @@ truth, no duplicated copies to drift:
 | 6 | `6-q4-recursive.wl` | Q4 (recursive self-application across all machine cores: self-transfers, load-bearing ranking, deepest cascades) |
 | 7 | `7-results-table.wl` | results table: machine-fed rerun vs the V1 reference run |
 
+Three further cells run the **comma-shape graduation** (email
+artifact 2). They can be appended to the same notebook after cell 7:
+
+| Cell | Paste the contents of | What it does |
+|---|---|---|
+| 8a | `../comma-graduation.wl` | pre-committed witness/feature definitions, `GraduateCore` (derives commas from graph structure; kernels that earn none stay underived) |
+| 8b | `8-comma-graduation.wl` | graduates the corpus; per-core table, kind distribution, the two replicate stability checks |
+| 9 | `9-q2-graduated.wl` | Q2 rerun over the graduated corpus; every difference from cell 4 is attributable to the graduation alone |
+
 ## Requirements
 
 - Cell 3 fetches JSON from `raw.githubusercontent.com` and therefore
@@ -69,6 +78,45 @@ under their own removal seeds; **4** survivor-claim contradictions:
 These four are the deliverable in miniature: the transduction's own
 structured claims checked against the transduction's own graph, with
 the machine catching the inconsistencies.
+
+## Pre-registered expected results — comma graduation (cells 8–9)
+
+Same discipline, same independent Node.js reference (run 2026-08-11,
+before the WL cells were committed). The WL run must reproduce:
+
+**Graduation (cell 8b)** — **5 of 15** cores derive a comma:
+
+| Core | Principal poles | Derived kind |
+|---|---|---|
+| `seven-samurai-16b09742` | M1, M4 | `tension_disjoint_balanced_constitutive` |
+| `throne-of-blood-2eedaf0f` | E_fog_exteriors, M1 | `tension_disjoint_balanced_constitutive` |
+| `girl-with-a-pearl-earring-5fe5bb51` | E_direct_gaze, E_pearl_earring | `tension_disjoint_balanced_constitutive` |
+| `the-red-book-8c596e2f` | E_septem_sermones, M3 | `tension_disjoint_balanced_constitutive` |
+| `ran-a74be626` | E_army_color_banners, E_hidetora_desaturation | `tension_disjoint_balanced_unmarked` |
+
+Each derived core has exactly **1 witness** among its tension pairs;
+the other ten cores have tension pairs but zero witnesses. Kind
+distribution: 4× `..._constitutive`, 1× `..._unmarked` — the kind
+vocabulary discriminates weakly; the witness gate carries the
+selectivity. **Both replicate checks MISMATCH** (Red Book: 8c596e2f
+derives, 9181ad6f underived; Seven Samurai: 16b09742 derives,
+18591654 underived) — comma derivation is not stable under
+re-transduction, reported as a headline reliability finding.
+
+**Graduated Q2 (cell 9)** — candidates **11,839** (baseline 10,991);
+max confidence **0.92** (baseline 0.68); `comma_shape_match` fired in
+**1,678** candidates (baseline 0); confidence tiers:
+0.92 → **128**, 0.68 → **1,516**, 0.62 → **1,550**, 0.30 → **8,645**.
+The comma channel fires on **5** cross-domain core pairs:
+
+- `girl-with-a-pearl-earring-5fe5bb51` ↔ `seven-samurai-16b09742`
+- `girl-with-a-pearl-earring-5fe5bb51` ↔ `the-red-book-8c596e2f`
+- `girl-with-a-pearl-earring-5fe5bb51` ↔ `throne-of-blood-2eedaf0f`
+- `seven-samurai-16b09742` ↔ `the-red-book-8c596e2f`
+- `the-red-book-8c596e2f` ↔ `throne-of-blood-2eedaf0f`
+
+(One within-domain kind match exists outside Q2's scope:
+`seven-samurai-16b09742` ↔ `throne-of-blood-2eedaf0f`.)
 
 ## Capturing the reference run
 
