@@ -82,7 +82,10 @@ the machine catching the inconsistencies.
 ## Pre-registered expected results — comma graduation (cells 8–9)
 
 Same discipline, same independent Node.js reference (run 2026-08-11,
-before the WL cells were committed). The WL run must reproduce:
+before the WL cells were committed). **Status: reproduced in Wolfram
+Cloud 2026-08-11** — 5/15 derived on the expected five cores, kind
+distribution 4 + 1, both replicate pairs mismatching, 128 candidates
+at the graduated 0.92 tier. The WL run must reproduce:
 
 **Graduation (cell 8b)** — **5 of 15** cores derive a comma:
 

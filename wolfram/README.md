@@ -459,10 +459,19 @@ different epistemic grade from V1's Baker-1966-grounded Pythagorean
 comma, kept distinguishable on purpose.
 
 Measured results (Node.js reference 2026-08-11, pre-registered in
-`paste-cells-v2/README.md`; Wolfram Cloud confirmation pending):
+`paste-cells-v2/README.md`; **confirmed in Wolfram Cloud
+2026-08-11** — 5/15 derived on the same five cores, kind
+distribution 4 + 1, both replicate pairs mismatching, 128
+candidates at the graduated 0.92 tier):
 
 - **5 of 15 cores earn a comma** — the witness gate is genuinely
-  selective (~43 tension pairs in the corpus, 5 witnesses).
+  selective (~43 tension pairs in the corpus, 5 witnesses). The
+  five, with principal poles: *Seven Samurai* (16b09742; M1 ~ M4),
+  *Throne of Blood* (fog exteriors ~ M1), *Girl with a Pearl
+  Earring* (direct gaze ~ pearl earring), *The Red Book* (8c596e2f;
+  Septem Sermones ~ M3) — all `tension_disjoint_balanced_
+  constitutive` — and *Ran* (color banners ~ Hidetora
+  desaturation), the sole `_unmarked`.
 - **The 0.92 tier returns on merit**: 128 candidates reach
   type + derived-comma + cross-domain, against 1,516 at the old 0.68
   ceiling; the comma channel fires on only 5 of ~105 core pairs.
@@ -496,7 +505,9 @@ reference brute-forces all `|H|^|H|` functions against the three
 nucleus laws; the WL file enumerates meet-closed families
 containing top and keeps the induced operators that satisfy the
 same laws. Pre-registered expectations (Node reference,
-2026-08-11; Wolfram Cloud confirmation pending):
+2026-08-11; **confirmed in Wolfram Cloud 2026-08-11** — all six
+Lean anchor checks PASS, every nucleus count and aperture below
+reproduced exactly):
 
 - **Div12** (the minimal kernel-bearing algebra, forced into the
   subobject lattice by any ordinary kernel): 8 nuclei;
