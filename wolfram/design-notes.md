@@ -396,6 +396,50 @@ shapes is still crude (eight kinds, and the corpus collapses onto
 two) — but crude measurement that reports its own weaknesses is the
 graduation; the refinement now has numbers to beat.
 
+## V2 addendum (August 2026, part 3): the aperture prototype
+
+`aperture-prototype.wl` operationalizes the observer question the
+roadmap poses in Wolfram's vocabulary: a nucleus is a
+coarse-graining, its fix-set is the world at that resolution, the
+double-negation quotient is the fully reduced (Boolean) pocket —
+and the aperture of a kernel is the set of observers who see its
+four-fold open, computed as ordinariness *inside each observer's
+world* (bottom `j(⊥)`, inherited implication). Four design
+decisions:
+
+1. **Observer-relative ordinariness, stated against the Lean
+   file.** `DivisorLattice12Nucleus.lean` proves the tritone
+   nucleus's kernel image is non-regular in the *ambient* algebra.
+   The aperture deliberately asks the relative question instead,
+   because that is what "which observers see the four-fold" means:
+   in the tritone nucleus's own world the tritone has become the
+   bottom, and a bottom is regular. Both statements are true; the
+   file says so explicitly rather than letting a reader discover
+   an apparent conflict.
+2. **Two algorithms, one answer.** The Node.js reference filters
+   all `|H|^|H|` functions by the three nucleus laws; the WL file
+   enumerates meet-closed families containing top and verifies the
+   induced operators against the same laws. Agreement was checked
+   in the reference itself (both algorithms implemented and
+   compared on all four algebras) before the WL file was written.
+   No characterization theorem is trusted: candidate generation
+   only needs the elementary direction (every fix-set is
+   meet-closed and contains top), and the laws are checked
+   directly.
+3. **Contrast algebras are part of the result.** Boolean Div6 and
+   the 4-chain have empty apertures everywhere — no observer sees
+   a four-fold in a Boolean or linear world. That is the negative
+   space that makes Div12's identity-only aperture and Div24's
+   graded one legible as facts about kernel-bearing structure.
+4. **Fragility reported, not smoothed.** On Div12 the answer is
+   maximally fragile: only the full-resolution observer sees the
+   tritone's four-fold. It would have been easy to stop there and
+   report a degenerate invariant; the Div24 probe (two ordinary
+   elements, apertures of size 3 with genuinely coarse members)
+   was added to establish that the invariant grades — Div12's
+   fragility is a fact about the minimal kernel-bearing algebra,
+   not an artifact of the definition.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a

@@ -245,6 +245,12 @@ wolfram/
 │                              copied verbatim from node0000 exports/corev2
 ├── paste-cells-v2/            V2: multi-cell Wolfram Cloud workflow for the
 │                              machine-fed rerun of Q1–Q4 (see its README.md)
+├── comma-graduation.wl        V2: derives comma shapes from machine graphs
+│                              (email artifact 2; see graduation section below)
+├── aperture-prototype.wl      aperture invariant: enumerate nuclei on Div12,
+│                              Div6, 4-chain, Div24; compute which observers
+│                              see a kernel's four-fold open (email artifact 3;
+│                              self-contained single cloud cell)
 └── results/
     └── wolfram-cloud-run-2026-05-04-v1.5.nb   reference evaluated run
 ```
@@ -469,6 +475,58 @@ Measured results (Node.js reference 2026-08-11, pre-registered in
   Samurai alike). Comma derivation is not yet stable under
   re-transduction. This is the roadmap's reliability concern
   surfacing exactly where predicted, reported as a finding.
+
+### The aperture prototype (email artifact 3)
+
+`aperture-prototype.wl` is self-contained (no other file needed):
+paste it as a single Wolfram Cloud cell and evaluate. It makes the
+observer question computable. A **nucleus** on a Heyting algebra is
+a coarse-graining operator (inflationary, idempotent, meet-
+preserving — the subobject trace of a Lawvere–Tierney topology);
+its fix-set is the world at that observer's resolution. The
+**aperture** of a kernel `k` is the set of nuclei `j` under which
+`j(k)` stays *ordinary* — neither regular nor dense — inside the
+observer's world, which by the kernel-checked bridge
+(`allFourCellsInhabited_iff`, `[K]`) is exactly the set of
+observers who see the kernel's four-fold open. Finite and
+enumerable on finite algebras.
+
+Two independent algorithms, one answer required: the Node.js
+reference brute-forces all `|H|^|H|` functions against the three
+nucleus laws; the WL file enumerates meet-closed families
+containing top and keeps the induced operators that satisfy the
+same laws. Pre-registered expectations (Node reference,
+2026-08-11; Wolfram Cloud confirmation pending):
+
+- **Div12** (the minimal kernel-bearing algebra, forced into the
+  subobject lattice by any ordinary kernel): 8 nuclei;
+  **aperture(tritone) = {identity} alone** — every proper
+  coarse-graining closes the four-fold. Notably the Lean-verified
+  `tritoneNucleus` is *not* in the aperture: in its world the
+  tritone has become the bottom, and a bottom is regular. (The
+  Lean file's non-regularity claim is about the ambient algebra;
+  the aperture asks the observer-relative question. Both are
+  true.)
+- **Div24**: 16 nuclei; aperture(2) = 3 and aperture(4) = 3,
+  including genuinely coarse observers — one maps the kernel
+  2 ↦ 4 and it stays ordinary in the coarser world; one coarsens
+  the bottom itself and 4 stays ordinary. The invariant grades;
+  Div12's fragility is a fact about Div12, not about the
+  definition.
+- **Boolean (Div6) and linear (4-chain) contrasts**: every
+  aperture empty. No observer at any resolution sees a four-fold
+  in a Boolean or linear world.
+- **Lean anchors** (`DivisorLattice12Nucleus.lean`, `[K]`): the
+  enumeration must contain `tritoneNucleus` and must reject
+  `tritoneClosure`; double negation (the fully Boolean observer)
+  and const-top (the blind observer) must not be in the aperture.
+
+The Wolfram-vocabulary reading: the double-negation nucleus is
+the fully reduced (Boolean) observer, and it never sees a
+four-fold — the four-position structure lives strictly outside
+the Boolean pocket, at resolutions that retain some
+irreducibility. The aperture measures how much coarse-graining a
+kernel's distinction survives.
 
 ## What this prototype does
 
