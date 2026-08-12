@@ -401,15 +401,29 @@ the disjointness condition biases derivation toward sparse
 transductions (more edges → poles more likely dependence-connected
 → w2 fails), which would make the criterion measure transduction
 thinness while appearing to measure structure. The corpus-wide
-decomposition refutes the mechanism: w1 (load-bearing), not w2
-(disjointness), is the binding constraint in 35 of 38 failures, and
-derived cores are spread across the density distribution. The
-replicate mismatches therefore read as variance in edge placement —
-whether the transducer's `requires`/`contradicts` choices make the
-specific tension poles load-bearing — which is a transduction
-reliability question, not a gate design flaw, and is measured
-directly by re-transducing the corpus. Full numbers in the README's
-graduation section.
+decomposition refutes that *specific mechanism*: w1 (load-bearing),
+not w2 (disjointness), is the binding constraint in 35 of 38
+failures, and derived cores are spread across the density
+distribution. What the decomposition does **not** settle is why the
+replicate pairs mismatch. Two hypotheses remain live, stated here
+before the study that decides between them:
+
+- **H1 (transduction variance):** the instability is upstream of
+  the gate — the transducer's `requires`/`contradicts` placement
+  differs run to run, changing whether the specific tension poles
+  are load-bearing. The gate is fine; the input wobbles.
+- **H2 (gate selects for thinness):** the instability is a gate
+  design property expressed through a channel other than w2 —
+  derivation systematically favors sparser descriptions, so the
+  criterion partly measures how much the transducer wrote down
+  rather than what the work is. The 2-for-2 sparser-member
+  direction in the replicate pairs is H2's standing evidence.
+
+Neither is concluded here. The pre-registered re-transduction study
+(`retransduction-study.md`) is designed to separate them: H2
+predicts a directional density effect in fresh passes; H1 predicts
+instability localized in edge placement with no density direction.
+Full probe numbers in the README's graduation section.
 
 ## V2 addendum (August 2026, part 3): the aperture prototype
 

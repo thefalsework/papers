@@ -507,11 +507,13 @@ candidates at the graduated 0.92 tier):
   involve w2; the disjointness condition is not the binding
   constraint. Derived cores sit at density ranks 1, 4, 8, 10, 11
   of 15 (mean edge density 1.06 derived vs 1.12 underived). No
-  sparse bias corpus-wide; the replicate direction (both derived
-  members sparser, 2/2) does not generalize and reads as edge
-  *placement* variance — whether the specific tension poles end up
-  load-bearing — which is exactly what the re-transduction study
-  will quantify.
+  sparse bias corpus-wide in this single pass — but the replicate
+  direction (both derived members sparser, 2/2) keeps a broader
+  thinness-selection hypothesis alive through channels other than
+  w2. Whether the instability is transduction variance (H1) or
+  gate design (H2) is deliberately left open here; the
+  pre-registered re-transduction study (`retransduction-study.md`)
+  decides it.
 - **Witness poles are node-kind heterogeneous by design.** The
   five principal commas include mechanism–mechanism,
   element–mechanism, and element–element poles. The pre-committed
