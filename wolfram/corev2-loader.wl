@@ -276,7 +276,7 @@ CoreV2IntegrityReport[a_Association] := Module[
   ids   = Lookup[#, "id"] & /@ nodes;
   dupes = Keys@Select[Counts[ids], # > 1 &];
   Scan[AppendTo[errs, "duplicate node id: " <> #] &, dupes];
-  idQ = AssociationThread[DeleteDuplicates[ids] -> True];
+  idQ = Association[(# -> True) & /@ DeleteDuplicates[ids]];
 
   mechIds = Lookup[#, "id"] & /@ Select[nodes, Lookup[#, "kind"] === "mechanism" &];
   If[mechIds === {}, AppendTo[errs, "graph has no mechanism nodes"]];
