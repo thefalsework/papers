@@ -483,7 +483,42 @@ candidates at the graduated 0.92 tier):
   work derives a comma, the other does not (Red Book and Seven
   Samurai alike). Comma derivation is not yet stable under
   re-transduction. This is the roadmap's reliability concern
-  surfacing exactly where predicted, reported as a finding.
+  surfacing exactly where predicted, reported as a finding. At
+  n=2 the replication rate is an anecdote, not a rate; a
+  corpus-wide re-transduction study (all 15 profiles transduced a
+  second time, comma-status agreement measured across 15 pairs) is
+  the named next step before the graduation result is presented as
+  more than a first pass.
+- **The gate is binary in practice.** Every derived core has
+  exactly one witness; no core has two. Selectivity comes entirely
+  from the witness gate; the kind vocabulary contributes no
+  discrimination on this corpus (the 4 + 1 split differs in a
+  single token). Derivation rate by tension-pair count (0/5 for
+  cores with ≤ 2 pairs, 5/10 at ≥ 3) is consistent with
+  independent per-pair firing at the observed ~12% per-pair rate —
+  more pairs are more chances, not an architectural threshold; the
+  gate runs on every pair.
+- **The density-bias alternative was checked and cleared**
+  (2026-08-11 probe, decomposing all 43 tension pairs). Hypothesis
+  under test: the disjointness condition (w2) gets harder to
+  satisfy as edges accumulate, so derivation would favor sparse —
+  impoverished — transductions. Measured: of 38 failed pairs, 35
+  fail purely on w1 (a pole is not load-bearing) and only 3
+  involve w2; the disjointness condition is not the binding
+  constraint. Derived cores sit at density ranks 1, 4, 8, 10, 11
+  of 15 (mean edge density 1.06 derived vs 1.12 underived). No
+  sparse bias corpus-wide; the replicate direction (both derived
+  members sparser, 2/2) does not generalize and reads as edge
+  *placement* variance — whether the specific tension poles end up
+  load-bearing — which is exactly what the re-transduction study
+  will quantify.
+- **Witness poles are node-kind heterogeneous by design.** The
+  five principal commas include mechanism–mechanism,
+  element–mechanism, and element–element poles. The pre-committed
+  definitions treat both node kinds alike: the comma constrains
+  the *shape* of the tension (load-bearing, non-canceling), not
+  the taxonomy of its poles. That is a definition choice at [A]
+  grade, stated here rather than left to be discovered.
 
 ### The aperture prototype (email artifact 3)
 

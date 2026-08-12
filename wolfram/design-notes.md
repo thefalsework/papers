@@ -396,6 +396,21 @@ shapes is still crude (eight kinds, and the corpus collapses onto
 two) — but crude measurement that reports its own weaknesses is the
 graduation; the refinement now has numbers to beat.
 
+A post-run audit note (2026-08-11): external review proposed that
+the disjointness condition biases derivation toward sparse
+transductions (more edges → poles more likely dependence-connected
+→ w2 fails), which would make the criterion measure transduction
+thinness while appearing to measure structure. The corpus-wide
+decomposition refutes the mechanism: w1 (load-bearing), not w2
+(disjointness), is the binding constraint in 35 of 38 failures, and
+derived cores are spread across the density distribution. The
+replicate mismatches therefore read as variance in edge placement —
+whether the transducer's `requires`/`contradicts` choices make the
+specific tension poles load-bearing — which is a transduction
+reliability question, not a gate design flaw, and is measured
+directly by re-transducing the corpus. Full numbers in the README's
+graduation section.
+
 ## V2 addendum (August 2026, part 3): the aperture prototype
 
 `aperture-prototype.wl` operationalizes the observer question the
