@@ -231,14 +231,21 @@ NucleiInclusionGraph[result_Association, kernel_, title_String] := Module[
       vlabels[[i]] -> vlabels[[k]], Nothing],
     {i, Length[fs]}, {k, Length[fs]}];
   inAp = InApertureQ[H, #, kernel] & /@ nucs;
+  (* explicit background and label styling so the figure is legible
+     on any notebook theme (the arXiv note needs readable fix-sets) *)
   Graph[vlabels, edges,
-    VertexLabels -> "Name",
+    VertexLabels -> Map[
+      # -> Placed[Style[#, 9, Black, Background -> White], Above] &,
+      vlabels],
     VertexSize -> 0.4,
     VertexStyle -> MapThread[
       #1 -> If[#2, RGBColor[0.85, 0.33, 0.1], LightGray] &,
       {vlabels, inAp}],
+    EdgeStyle -> Directive[Gray, Thin],
     GraphLayout -> "LayeredDigraphEmbedding",
-    PlotLabel -> title, ImageSize -> 420]
+    PlotLabel -> Style[title, Black],
+    Background -> White,
+    ImageSize -> 420]
 ];
 
 apertureFigure = GraphicsRow[{
