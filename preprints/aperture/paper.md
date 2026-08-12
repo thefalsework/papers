@@ -1,0 +1,133 @@
+# The Aperture of a Distinction: Observer-Relative Ordinariness in Heyting Algebras
+
+**Author.** Chris Brink (independent)
+**Version.** Draft v0.1, August 2026 — not yet posted
+**Target.** arXiv cs.AI (endorsement channel open); math.LO cross-list candidate
+**Status discipline.** Every claim in this paper carries one of four grades: **[K]** kernel-checked in Lean 4 against Mathlib4; **[C]** classical mathematics, cited; **[computed]** exhaustive finite computation, verified by two independent implementations but not yet kernel-checked; **[A]** structural analogy, argued not proved; **[O]** open. The grades are load-bearing: nothing below claims more than its tag.
+
+---
+
+## Abstract
+
+An element of a Heyting algebra is *ordinary* (Citkin) when it is neither regular (¬¬k = k) nor dense (¬k = ⊥). A prior kernel-checked result of this program shows that a four-position partition of structural positions around a distinguished element — the *kernel* of a distinction — is non-degenerate exactly when that element is ordinary **[K]**. This paper makes the *observer* side of that biconditional computable. A nucleus j on a Heyting algebra is a coarse-graining operator; its fix-set is the algebra as seen at resolution j. We define the **aperture** of a kernel k as the set of nuclei j under which j(k) is ordinary *inside the world Fix(j)* — the set of observers who see the kernel's four-fold structure open. On finite algebras the aperture is exhaustively enumerable. We compute it across nine algebras and report three results: (1) on the divisor lattice of 12 — the minimal kernel-bearing algebra, which any ordinary element forces into its ambient lattice **[K]** — the aperture of the unique ordinary element is the identity alone: every proper coarse-graining closes the four-fold **[computed]**; (2) across the sequence Div(2^a·3), a = 2..6, the aperture of the kernel 2^k obeys the product law (2^k − 1)(2^(a−k) − 1) on all fifteen data points **[computed]**, conjectured general **[O]**; (3) on Div36 an element that is *not* ordinary at full resolution has a nonempty aperture: two proper coarse-grainings open a four-fold that the identity observer cannot see — *some distinctions exist only at a blur* **[computed]**. We state a structural analogy between nuclei and observer theories of coarse-graining in computational frameworks **[A]**, and state its disanalogy — nuclei model static resolution, computational irreducibility models temporal cost — as an open bridge, not a result **[O]**.
+
+## 1. Introduction
+
+Two research programs approach the same question from opposite banks. Observer-centric accounts of computation hold that what a system *is* depends on the coarse-graining an observer brings to it: pockets of reducibility are where an observer's compression succeeds, and the world an observer inhabits is the quotient their equivalences induce. A structural program formalized in this repository holds that around any founding distinction — a *kernel* — the space of positions one can occupy relative to that distinction partitions four ways, and that this partition is non-degenerate precisely when the kernel is an *ordinary* element of the ambient Heyting algebra: neither regular nor dense, living at the boundary between what double negation recovers and what it erases.
+
+The two programs meet at a single mathematical object. A **nucleus** on a Heyting algebra — equivalently, the subobject-level trace of a Lawvere–Tierney topology, equivalently a sheafification **[C]** — is precisely a coarse-graining operator: inflationary (blur only ever merges, never splits), idempotent (blurring twice is blurring once), and binary-meet-preserving (blur respects conjunction). Its fix-set is the algebra at that resolution. If ordinariness is what opens the four-fold, and nuclei are what observers do, then the natural invariant is:
+
+> **The aperture of a kernel k: the set of nuclei j under which j(k) is ordinary inside Fix(j).** Which observers see the four-fold open.
+
+This paper defines the invariant, computes it exhaustively on nine finite algebras, and reports what the computation says. The results are stated plainly and graded; the two most interesting are negative-shaped: maximal fragility on the minimal kernel-bearing algebra, and the existence of *latently ordinary* elements — distinctions invisible at full resolution that a specific blur brings into existence.
+
+Terminological note: "kernel" throughout means the distinguished element of the algebra around which the partition is taken (this program's usage), not the congruence kernel of the nucleus. Where the two could collide we write j(⊥) for the latter's bottom.
+
+## 2. Preliminaries
+
+Throughout, H is a Heyting algebra with bottom ⊥, top ⊤, meet ∧, join ∨, implication ⇒, and negation ¬x = x ⇒ ⊥.
+
+**Definition 2.1 (Citkin).** An element k ∈ H is **regular** if ¬¬k = k, **dense** if ¬k = ⊥, and **ordinary** if it is neither.
+
+**Theorem 2.2 (the bridge, [K]).** The four-position partition around a kernel is non-degenerate — all four cells inhabited — if and only if the kernel is ordinary. Kernel-checked as `isOrdinary_iff_allFourCells` and, at the morphism level, `partition_nondegenerate_iff_kernel_ordinary` (`lean/FalseWorkPapers/Positions/OrdinaryKernel.lean`); axiom audit: standard Mathlib axioms only, no `sorry`.
+
+**Theorem 2.3 (the threshold, [K]).** Any Heyting algebra containing an ordinary element has at least six elements and order-embeds the divisor lattice of 12 (`ordinary_kernel_div12_embedding`, ibid.; the structure theory is developed in the companion preprint `ordinary-elements-z6/`). Div12 is therefore the *minimal kernel-bearing algebra*: the smallest world in which a four-fold can open at all.
+
+**Definition 2.4.** A **nucleus** on H is a function j : H → H that is inflationary (x ≤ j x), idempotent (j(j x) = j x), and binary-meet-preserving (j(x ∧ y) = j x ∧ j y). **[C]** Nuclei are exactly the subobject traces of Lawvere–Tierney topologies on the corresponding topos; their fix-sets Fix(j) = { x : j x = x } are Heyting algebras with bottom j(⊥), meets inherited, joins j(x ∨ y), and **implication inherited** — for x, y ∈ Fix(j), x ⇒ y already lies in Fix(j). (Johnstone, *Stone Spaces* / *Sketches of an Elephant*; Mac Lane–Moerdijk.) The double-negation operator x ↦ ¬¬x is always a nucleus and its fix-set is Boolean **[C]** (Glivenko).
+
+**Prior kernel-checked instance [K].** On Div12 the *maximal* tritone-closing closure operator (Moore family {2, 4, 6, 12}) is a nucleus, and the *minimal* one (Moore family {2, 12}) is not (`tritoneNucleus_isNucleus`, `tritoneClosure_not_nucleus`, `lean/FalseWorkPapers/Examples/DivisorLattice12Nucleus.lean`). These two theorems serve below as ground-truth anchors that any correct enumeration must reproduce.
+
+## 3. The aperture
+
+**Definition 3.1.** Let k ∈ H and let j be a nucleus on H. Write ⊥ⱼ = j(⊥) and, for x ∈ Fix(j), ¬ⱼx = x ⇒ ⊥ⱼ (the negation of the world Fix(j); the value lies in Fix(j) by Definition 2.4). Say **j opens k** if j(k) is ordinary in Fix(j):
+
+  ¬ⱼ(j k) ≠ ⊥ⱼ  (non-dense in the world)  and  ¬ⱼ¬ⱼ(j k) ≠ j k  (non-regular in the world).
+
+**Definition 3.2.** The **aperture** of k is Ap(k) = { j a nucleus on H : j opens k }. By Theorem 2.2, Ap(k) is exactly the set of observers whose world exhibits a non-degenerate four-fold around the image of k. On finite H, Ap(k) is finite and exhaustively enumerable.
+
+**Remark 3.3 (ambient vs. observer-relative — the two claims are different and both true).** The Lean file cited in §2 proves that the tritone nucleus's kernel image is non-regular *in the ambient algebra* **[K]**. Definition 3.1 asks a different question: ordinariness *inside the observer's world*. For the tritone nucleus these answers differ — in its own world the tritone has become the bottom ⊥ⱼ, and a bottom is regular, so the tritone nucleus does *not* open the tritone. The aperture is deliberately the observer-relative reading: "its fixed-point algebra is the world at that resolution" is the semantics the invariant is built to capture. Stating this explicitly prevents an apparent (nonexistent) conflict with the Lean result.
+
+**Remark 3.4 (identity and extremes).** The identity is a nucleus and opens k iff k is ordinary ambiently. The constant-⊤ nucleus (the blind observer, one-point world) opens nothing. The double-negation nucleus opens nothing either — its world is Boolean, and Boolean worlds have no ordinary elements **[C]**. The four-fold lives strictly outside the fully reduced pocket.
+
+## 4. Computation
+
+**Method.** Two independent implementations, written before either was run against the other's output, must agree exactly:
+
+1. A brute-force reference: enumerate all |H|^|H| functions, filter by the three nucleus laws (feasible to |H| = 8).
+2. The production enumerator: enumerate meet-closed subsets containing ⊤, induce j(a) = least member of the subset above a, keep exactly the candidates satisfying the three laws. This is sound and exhaustive *without* trusting any characterization theorem: the elementary direction (every nucleus fix-set is meet-closed and contains ⊤) suffices for candidate generation, and the laws are checked directly.
+
+The two algorithms agree on all algebras where both are feasible (Div12, Div6, the 4-chain, Div24) **[computed]**. The production enumerator alone handles the larger algebras. Both Lean anchors from §2 are reproduced: the tritone nucleus appears in the Div12 enumeration; the tritone closure is rejected. Source: `wolfram/aperture-prototype.wl` and `wolfram/aperture-scaling.wl` in the repository, each a self-contained Wolfram Cloud cell with the expected outputs pre-registered in its header; the Node.js reference is described in the repository's design notes. A cloud-evaluated notebook is archived at `wolfram/results/wolfram-cloud-run-2026-08-11-v2.1.nb`.
+
+**Results, first family [computed].**
+
+| algebra | elements | nuclei | ambient ordinary | apertures |
+|---|---|---|---|---|
+| Div12 | 6 | 8 | {2} | Ap(2) = 1 — identity alone |
+| Div6 (Boolean 2×2) | 4 | 4 | ∅ | all empty |
+| 4-chain (linear) | 4 | 8 | ∅ | all empty |
+| Div24 | 8 | 16 | {2, 4} | Ap(2) = 3, Ap(4) = 3 |
+
+**Result 4.1 (maximal fragility at the threshold) [computed].** On Div12 — the minimal kernel-bearing algebra, forced into the ambient lattice by any ordinary element (Theorem 2.3) — the aperture of the unique ordinary element is the identity alone. Every proper coarse-graining closes the four-fold. At the threshold of possibility, the four-fold is visible only at full resolution.
+
+**Result 4.2 (the invariant grades) [computed].** On Div24 the apertures have size 3 and include genuinely coarse observers: the nucleus with fix-set {1,3,4,8,12,24} maps the kernel 2 ↦ 4 and 4 stays ordinary in the coarser world; the nucleus with fix-set {2,4,6,8,12,24} coarsens the bottom itself (⊥ⱼ = 2) and 4 stays ordinary above it. Div12's fragility is a fact about Div12, not about the definition.
+
+**Results, scaling family [computed].**
+
+| algebra | nuclei | ambient ordinary | apertures (in order) |
+|---|---|---|---|
+| Div12 (a=2) | 8 | {2} | 1 |
+| Div24 (a=3) | 16 | {2,4} | 3, 3 |
+| Div48 (a=4) | 32 | {2,4,8} | 7, 9, 7 |
+| Div96 (a=5) | 64 | {2,4,8,16} | 15, 21, 21, 15 |
+| Div192 (a=6) | 128 | {2,4,8,16,32} | 31, 45, 49, 45, 31 |
+| Div36 = 2²·3² | 16 | {2,3} | 3, 3 — and Ap(6) = 2 with 6 *not* ordinary |
+| Div30 = 2·3·5 | 8 | ∅ (Boolean cube) | all empty |
+
+## 5. The product law
+
+**Conjecture 5.1 [O; 15/15 data points computed].** In Div(2^a·3), for 1 ≤ k ≤ a−1,
+
+  |Ap(2^k)| = (2^k − 1)(2^(a−k) − 1).
+
+All fifteen (a, k) pairs with 2 ≤ a ≤ 6 satisfy the law exactly. The aperture factors as *(blur available below the kernel) × (blur available above it)*.
+
+**Mechanism sketch [O].** Div(2^a·3) is the chain product C_(a+1) × C_2 as a poset, and the observed nucleus counts multiply over factors: 2^(a+1) for the sequence (a chain with m elements has 2^(m−1) nuclei — every subset containing ⊤ is a nucleus fix-set on a chain, verified computationally on the 4-chain), 4 × 4 = 16 for Div36 = C_3 × C_3, and 2³ = 8 for the Boolean cube Div30. If nuclei on finite products decompose as products of factor nuclei, the product law should reduce to counting which factor-pairs keep the kernel's coordinates strictly interior. We have not proved either step; the conjecture is stated with its data and its suspected mechanism, nothing more.
+
+## 6. Latent ordinariness
+
+**Result 6.1 [computed].** On Div36, the element 6 is not ordinary at full resolution (¬6 = ⊥: it is dense). Yet Ap(6) = 2: the nuclei with fix-sets {2,4,6,12,18,36} and {3,6,9,12,18,36} each make 6 ordinary in their worlds (in the first, ⊥ⱼ = 2, ¬ⱼ6 = 4, ¬ⱼ4 = 18 ≠ 6). Two proper coarse-grainings open a four-fold around a distinction that the identity observer cannot see.
+
+This breaks an inclusion one might have assumed: the aperture is *not* a restriction of ambient ordinariness (on the 2-power sequence it happens to be — every nonempty aperture there sits on an ambient-ordinary element — but Div36 refutes the general claim). The slogan form, earned by the computation: **some distinctions exist only at a blur.** An observer who coarsens the world in the right way sees structure that perfect resolution destroys — because at full resolution the element is dense (its negation vanishes; nothing stands against it), while the right blur gives it a nontrivial complement to push against.
+
+**Question 6.2 [O].** Characterize the latently ordinary elements — those with nonempty aperture — intrinsically (without quantifying over nuclei). On the evidence of §4–5, density at full resolution together with interior position in some chain factor suffices in products of chains; is that the general shape?
+
+## 7. The observer bridge, stated as an analogy
+
+The mapping that motivated this invariant **[A]**: a nucleus is an observer's coarse-graining; Fix(j) is the world at that observer's resolution; the double-negation quotient is the fully reduced, Boolean pocket of the world — the region where an observer's compression is total; ordinariness is the boundary condition between reducible and irreducible; the aperture of a kernel measures which observers a founding distinction survives — and Result 6.1 adds: which observers it *needs*.
+
+The disanalogy, stated with equal weight **[O]**: nuclei model *static* resolution — a fixed policy of merging — while computational irreducibility in observer-centric computation theories is a claim about *temporal cost*: no shortcut computes the future faster than running it. Nothing in this paper connects the aperture to time, dynamics, or cost. Whether a formal bridge exists (e.g., nuclei induced by the equivalences a bounded observer can afford to compute along a trajectory) is open and untouched here. The analogy is a map for intuition; the theorems and computations above stand without it.
+
+## 8. Epistemic status of every claim
+
+| claim | grade |
+|---|---|
+| four-fold non-degenerate ⟺ kernel ordinary | [K] (`OrdinaryKernel.lean`) |
+| ordinary element forces ≥ 6 elements, Div12 embedding | [K] (ibid.; `ordinary-elements-z6/`) |
+| tritone nucleus is a nucleus; tritone closure is not | [K] (`DivisorLattice12Nucleus.lean`) |
+| nuclei = Lawvere–Tierney traces; Fix(j) Heyting with ⊥ⱼ = j(⊥), implication inherited | [C] |
+| double-negation fix-set Boolean; Boolean worlds have no ordinary elements | [C] |
+| all aperture tables in §4; two-algorithm agreement; Lean-anchor reproduction | [computed] |
+| product law |Ap(2^k)| = (2^k−1)(2^(a−k)−1) in Div(2^a·3) | [O], 15/15 points [computed] |
+| nucleus counts multiply over chain-product factors (observed); general decomposition | [O] |
+| latent ordinariness exists (Div36, element 6) | [computed] |
+| intrinsic characterization of latent ordinariness | [O] |
+| nuclei-as-observers mapping | [A] |
+| bridge from aperture to dynamical/temporal irreducibility | [O], explicitly untouched |
+
+Lean-checking the enumeration itself (a `decide`-style finite verification that the eight Div12 nuclei are exactly the nuclei, and that Ap(2) = {id}) is the natural next hardening step and is open; the two-implementation discipline is the current guarantee.
+
+## 9. Reproducibility
+
+Everything reported is reproducible from the public repository (github.com/thefalsework/papers): `wolfram/aperture-prototype.wl` (first four algebras, Lean-anchor checks printed as PASS/FAIL, the two-panel figure) and `wolfram/aperture-scaling.wl` (the scaling table and the product-law check), each a single self-contained Wolfram Cloud cell with expected outputs pre-registered in its header; `lean/FalseWorkPapers/Positions/OrdinaryKernel.lean` and `lean/FalseWorkPapers/Examples/DivisorLattice12Nucleus.lean` for the [K] anchors; an evaluated cloud notebook under `wolfram/results/`.
+
+**Disclosure.** Drafting was AI-assisted under direction, per the project's validation architecture and its framework for epistemic dependency (Paper 2); all computations were executed and cross-checked as described, and the grade table in §8 is the author's warrant, not the assistant's.
