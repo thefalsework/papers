@@ -429,9 +429,15 @@ Full probe numbers in the README's graduation section.
 refuted on both of its pre-registered predictions (density
 correlations ≈ 0, sparser-derives 4/8); H1 supported at its core —
 instability enters at the edge layer (mean Jaccard 0.364 vs 0.598
-for nodes). Comma-status Fleiss kappa 0.600 against the
-pre-registered 0.4 threshold: the channel is presentable with
-stability classes as caveats.*
+for nodes). Comma-status Fleiss kappa 0.600 (95% CI [0.18, 0.90])
+against the pre-registered 0.4 threshold: the channel is
+presentable with stability classes as caveats. The structural
+consequence for this design: the executor is closure over
+`requires` and the witness gate is disjointness over the edge
+structure, so **every derived quantity in this algebra inherits
+from the transduction's least stable layer**. The instrument's
+ceiling is currently set by edge placement, and improving edge
+placement is the highest-leverage intervention available.*
 
 ## V2 addendum (August 2026, part 3): the aperture prototype
 

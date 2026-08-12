@@ -116,12 +116,25 @@ transductions, gate definitions unchanged from
 | raw pairwise agreement | 0.822 |
 | chance baseline 1 − 2p(1−p) | 0.556 |
 | **Fleiss kappa** | **0.600** |
+| kappa 95% CI (bootstrap over works, 10⁵ resamples) | **[0.18, 0.90]** |
+| P(kappa < 0.4) under the bootstrap | 0.18 |
 | stability classes | 3 stable-derived / 8 stable-underived / 4 unstable |
 
-Kappa 0.600 ≥ the pre-registered 0.4 threshold. Per the decision
-rule, the comma channel is presentable **with stability classes and
+Kappa 0.600 ≥ the pre-registered 0.4 threshold, so per the decision
+rule the comma channel is presentable **with stability classes and
 the layer decomposition as caveats** — not as an unqualified
-capability.
+capability. The interval is stated because n = 15 cannot pin the
+second decimal: the lower bound sits *below* the decision
+threshold, and roughly a fifth of the bootstrap mass is under 0.4.
+The threshold was cleared by the point estimate the rule named; the
+uncertainty around it is reported, not hidden.
+
+**Two different reliabilities, and only one of them is 0.600.**
+Status-level kappa measures the *gate's sensitivity* — does the
+yes/no fire consistently on this work? It does not measure the
+*derivation's identity* — is it the same comma each time? Those
+come apart cleanly in this data (see *Ran* below), and any use of
+the channel has to say which reliability it is claiming.
 
 Stability classes (status per pass, pass 1 → 3):
 
@@ -155,23 +168,44 @@ suggested and this fresh sample confirms.
 
 Mean pairwise Jaccard by layer: nodes **0.598**, edges **0.364**,
 tension pairs **0.393**, witnesses **0.711**. Instability enters at
-the **edge layer** — node identity is moderately stable, edge
-placement is roughly twice as unstable — which is H1's core claim.
-The witness-layer mean is inflated by empty–empty agreement
-(stable-underived works score Jaccard 1 by definition); among works
-that ever derive, witness agreement is low (see below). The
-monotone-degradation prediction fails at the witness layer for
-exactly that artifactual reason; the informative ordering
-(nodes ≥ tension ≈ edges) holds.
+the **edge layer** — the transducer roughly agrees on what the
+parts are and substantially disagrees on how they connect — which
+is H1's core claim. The witness-layer mean is inflated by
+empty–empty agreement (stable-underived works score Jaccard 1 by
+definition); among works that ever derive, witness agreement is low
+(see the headline finding). The monotone-degradation prediction
+fails at the witness layer for exactly that artifactual reason; the
+informative ordering (nodes ≥ tension ≈ edges) holds.
+
+Two consequences, stated plainly:
+
+- **The instrument's ceiling is currently set by edge placement.**
+  The executor is closure over `requires`; the witness gate is
+  disjointness over the edge structure; every derived quantity in
+  the algebra inherits from the least stable layer. Improving edge
+  placement is the highest-leverage intervention available to the
+  programme.
+- **Node Jaccard 0.598 is not high.** Two passes over the same
+  profile agree on about six parts in ten. "The same work" is more
+  of an approximation than the pipeline currently assumes; the
+  edges do not get to take all the blame.
+
+### The headline finding: one stable comma, not three stable works
+
+**One work out of fifteen produces the same comma three times.**
+*The Red Book* (8c596e2f) has witness Jaccard 1.00 — identical
+poles in all three passes. It is not merely the strongest case; it
+is the *only* case. *Ran* is the sharp counterpoint: status-stable
+but comma-unstable — it derives a comma every pass, from entirely
+different poles each time (witness Jaccard 0.00). *Girl with a
+Pearl Earring* is intermediate (0.33). So "this work has a comma"
+replicates for three works, while "this is the comma" replicates
+for exactly one — and the two claims come apart cleanly.
+"Three stable-derived" and "one stable comma" are very different
+claims; the second is the honest headline, with the gate's
+consistent yes/no on 11 of 15 works as the second-tier claim.
 
 ### Findings beyond the pre-registered questions
-
-- **Only one work derives the *same* comma every time.**
-  *The Red Book* (8c596e2f) has witness Jaccard 1.00 — identical
-  poles all three passes. *Ran* is status-stable but pole-unstable
-  (witness Jaccard 0.00: a comma every pass, different poles each
-  time); *Girl with a Pearl Earring* is intermediate (0.33).
-  Status-level stability overstates comma-level stability.
 - **The cross-profile "replicate mismatch" partially dissolves.**
   In passes 2 and 3, *both* Red Book profiles derive. The pass-1
   mismatch that motivated this study was partly transduction noise
@@ -182,9 +216,11 @@ exactly that artifactual reason; the informative ordering
 
 ### What goes in the email
 
-Per the decision rule: the comma channel appears with kappa 0.600,
-the chance baseline printed beside raw agreement, the three
-stability classes named, and the one fully witness-stable comma
-(*The Red Book*) identified as the current strongest single
-result of the graduation. The unstable works are listed, not
-hidden.
+Per the decision rule: the comma channel appears, with the claims
+graded. Headline: **one stable comma** (*The Red Book*, witness
+Jaccard 1.00 across three passes). Second tier: the gate's yes/no
+fires consistently on 11 of 15 works (kappa 0.600, 95% CI
+[0.18, 0.90], chance baseline printed beside raw agreement).
+Standing rule: **the 0.92 tier never appears without the note that
+its membership is pass-dependent for two of the five originally
+derived works.** The unstable works are listed, not hidden.

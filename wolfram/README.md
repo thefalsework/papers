@@ -487,12 +487,19 @@ candidates at the graduated 0.92 tier):
   n=2 that was an anecdote; the pre-registered three-pass
   re-transduction study (`retransduction-study.md`, corpora in
   `corpus-v2-pass2/` and `corpus-v2-pass3/`) turned it into a
-  rate: comma-status **Fleiss kappa 0.600** (raw agreement 0.822
-  against a 0.556 chance baseline), stability classes 3
-  stable-derived / 8 stable-underived / 4 unstable, thinness
-  selection (H2) refuted on its pre-registered predictions, and
-  exactly one work (*The Red Book*, 8c596e2f) deriving the
-  identical comma in all three passes.
+  rate, with the claims graded. Headline: **one stable comma** —
+  exactly one work of fifteen (*The Red Book*, 8c596e2f) derives
+  the identical comma in all three passes; *Ran* derives a comma
+  every pass from different poles each time, so "this work has a
+  comma" and "this is the comma" come apart. Second tier: the
+  gate's yes/no is consistent on 11 of 15 works — comma-status
+  Fleiss kappa 0.600 (95% CI [0.18, 0.90]; raw agreement 0.822
+  against a 0.556 chance baseline). Thinness selection (H2) was
+  refuted on its pre-registered predictions; instability enters at
+  edge placement (edge Jaccard 0.364 vs node 0.598). Standing
+  rule: the graduated 0.92 tier never appears without the note
+  that its membership is pass-dependent for two of the five
+  originally derived works.
 - **The gate is binary in practice.** Every derived core has
   exactly one witness; no core has two. Selectivity comes entirely
   from the witness gate; the kind vocabulary contributes no
