@@ -1,0 +1,375 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "The Red Book",
+    "creator": "Carl Jung",
+    "domain": "literature"
+  },
+  "principle": "The work generates meaning by staging its own archaeology, serializing private experience through a fixed episode template, splitting every unit into an experience stratum and an exegesis stratum, and framing the whole as a medieval codex so that seams and truncation register as deposited evidence.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Two-layer stratification",
+      "description": "Each chapter pairs a dated first-layer fantasy transcript with a later second-layer exegetical commentary; this raw-versus-worked split repeats fractally at page scale (text block versus painting) and book scale (calligraphic folio versus untranscribed typescript).",
+      "confidence": "high",
+      "evidence": [
+        "Nearly every chapter contains a dated transcript from the Black Book journals plus a retrospective hortatory commentary, typographically and stylistically distinct.",
+        "The split is documented at three scales: page (text-block versus invading painting), chapter (transcript versus commentary), book (folio versus typescript).",
+        "Stage 4 validates it as central with the strongest evidence density; subtraction leaves either a journal or a treatise, not both."
+      ],
+      "rules": [
+        "Performed rawness depends on partially concealing that both layers entered the folio in a single transcription campaign"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Codex-pastiche framing",
+      "description": "Illuminated-manuscript conventions such as Gothic calligraphy, rubrication, historiated initials, gold leaf, and incipit epigraphs frame the modern content, so that seams, revisions, and truncation register as monumental evidence rather than process failure.",
+      "confidence": "high",
+      "evidence": [
+        "Incipit page with Latin and German scriptural epigraphs, historiated initials, rubrication, ruled borders, two-column layout imitate a medieval codex.",
+        "A break-off in a notebook is unremarkable; a mid-sentence break in gold-leafed calligraphy registers as structural event.",
+        "Stage 3: illumination conventionally sanctifies completed anonymous text, but here the most gold-leafed material certifies the private, dated, and provisional."
+      ],
+      "rule_violations": [
+        "Illumination convention that the frame sanctifies completed, anonymous, traditional text is inverted to certify private provisional material"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Recurrent episode template",
+      "description": "Chapters follow a serial unit of descent or arrival, encounter with a personified figure, dialogue in dramatic script, reversal or instruction, then exegesis, repeated with variation across roughly two dozen chapters.",
+      "confidence": "high",
+      "evidence": [
+        "The descent, encounter, dialogue, reversal, exegesis cycle repeats across roughly two dozen chapters in Liber Primus and Secundus.",
+        "Descent topography of vertical movement and threshold crossing gives consistent orientation devices across disjunct episodes.",
+        "Stage 4: two dependent mechanisms (image-text collision and closure logic) rely on its regularity."
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Dated-entry anchoring",
+      "description": "Calendar dates on first-layer transcripts establish a diaristic chronology inside the mythic material and supply the evidence that the two layers are temporally distinct strata.",
+      "confidence": "high",
+      "evidence": [
+        "First-layer fantasies carry calendar dates beginning October to December 1913, producing a diaristic chronology inside the mythic frame.",
+        "Stage 2: the dates load-bear for the layers; without them stratification would read as stylistic variation.",
+        "Stage 3 caveat: the dates are testimony transcribed, not substrate evidence, since both layers entered the folio in one campaign."
+      ]
+    },
+    {
+      "id": "E_calendar_dates",
+      "kind": "element",
+      "label": "Calendar dates on first-layer transcripts",
+      "description": "Explicit dates carried by the fantasy transcripts, beginning October to December 1913, which anchor the diaristic chronology.",
+      "confidence": "high",
+      "evidence": [
+        "First-layer fantasies carry calendar dates beginning October to December 1913.",
+        "Several paintings are dated years after the passages they face, exposing the three-speed temporality."
+      ]
+    },
+    {
+      "id": "E_typographic_registers",
+      "kind": "element",
+      "label": "Typographic and stylistic register distinctions",
+      "description": "The layers are marked by distinct registers: dramatic script dialogue for the first layer, hortatory aphoristic homily for the second, painting for the third, allowing stratum assignment without dates.",
+      "confidence": "high",
+      "evidence": [
+        "The layers are typographically and stylistically distinct in the folio.",
+        "Stage 6: a trained reader assigns each passage and image to its stratum by register and typography alone, before any date confirms it.",
+        "Pacing correlates with layer: dialogic scene-duration belongs exclusively to the first layer, aphoristic compression to the second."
+      ]
+    },
+    {
+      "id": "E_full_page_paintings",
+      "kind": "element",
+      "label": "Non-corresponding full-page paintings",
+      "description": "Gouache and gold-leaf paintings, including mandalas such as Systema Munditotius and the Izdubar sequence, that frequently do not illustrate adjacent text and are sometimes dated years later, producing meaning by collision.",
+      "confidence": "medium",
+      "evidence": [
+        "Full-page paintings frequently do not illustrate adjacent text; several are dated years after the passages they face.",
+        "Stage 3: the latest paintings are the most autonomous and most heavily worked, escalating as calligraphic execution collapses.",
+        "Stage 4 rates image-text collision medium: the non-correspondence is enabled by the template rather than generative itself."
+      ],
+      "rule_violations": [
+        "The finish gradient of diminishing material finish from parchment to paper to typescript is inverted in the pictorial register"
+      ]
+    },
+    {
+      "id": "E_septem_sermones",
+      "kind": "element",
+      "label": "Septem Sermones ad Mortuos",
+      "description": "Seven sermons embedded in Scrutinies, attributed to the pseudonymous Basilides of Alexandria, delivered as monologic doctrinal address to the dead; the only finished, doctrinally closed unit in the book.",
+      "confidence": "medium",
+      "evidence": [
+        "Every other unit is anchored to the first-person I; the Sermones refuse that anchor while remaining inside the book.",
+        "Separately printed in 1916, they are the sole instance of achieved closure.",
+        "Stage 3: without one instance of achieved closure, the truncations would read as incapacity rather than refusal."
+      ],
+      "rule_violations": [
+        "Inverts the governing first-person dialogic system by using pseudepigraphic monologic address"
+      ]
+    },
+    {
+      "id": "E_double_truncation",
+      "kind": "element",
+      "label": "Double mid-sentence truncation",
+      "description": "The calligraphic transcription breaks off mid-sentence in 1930, and the 1959 epilogue also breaks off mid-sentence; two abandoned endings, both preserved as the boundary condition of the work.",
+      "confidence": "high",
+      "evidence": [
+        "The transcription breaks off mid-sentence in 1930; the 1959 epilogue also breaks off mid-sentence.",
+        "Stage 2: the mid-sentence break enacts materially the traversal-without-completion the template rehearses serially.",
+        "Stage 4 classifies double truncation as an effect produced by pastiche plus template plus seam-rule, not an independent mechanism."
+      ],
+      "rules": [
+        "Every sectional seam must be materialized in substrate or execution state"
+      ],
+      "rule_violations": [
+        "The 1959 resumption violates the implication that materialized boundaries are terminal, making closure iterable"
+      ]
+    },
+    {
+      "id": "E_substrate_shift",
+      "kind": "element",
+      "label": "Parchment-to-paper substrate shift",
+      "description": "Liber Primus is executed on parchment and Liber Secundus on paper bound into the red leather folio; the material seam coincides with the sectional seam and begins the finish gradient toward typescript.",
+      "confidence": "medium",
+      "evidence": [
+        "The parchment-to-paper change coincides exactly with the Primus and Secundus boundary.",
+        "Stage 4 classifies it incidental: a different material marker would serve identically.",
+        "It completes a gradient of diminishing material finish: parchment, paper, typescript."
+      ],
+      "rules": [
+        "Every sectional seam must be materialized in substrate or execution state"
+      ]
+    },
+    {
+      "id": "E_untranscribed_scrutinies",
+      "kind": "element",
+      "label": "Untranscribed Scrutinies typescript",
+      "description": "The third part was never transcribed into the calligraphic folio and exists only in typed draft, a structural asymmetry that materializes the book-scale raw-versus-worked split.",
+      "confidence": "high",
+      "evidence": [
+        "The third part exists only in typed draft, visible in the facsimile-plus-transcription edition.",
+        "Stage 2: the untranscribed section is systematic rather than accidental, completing the finish gradient from parchment to paper to typescript."
+      ],
+      "rules": [
+        "Every sectional seam must be materialized in substrate or execution state"
+      ]
+    },
+    {
+      "id": "E_blank_ruled_pages",
+      "kind": "element",
+      "label": "Blank ruled pages and unfinished initials",
+      "description": "Blank ruled pages after the break-off point and unfinished historiated initials leave the production state legible as material fact inside the finished-looking codex.",
+      "confidence": "high",
+      "evidence": [
+        "Unfinished initials and blank ruled pages after the break-off point are preserved in the object.",
+        "Stage 6: the reader experiences these seams first as apparent errors, then as evidence."
+      ]
+    },
+    {
+      "id": "E_single_transcription_campaign",
+      "kind": "element",
+      "label": "Single transcription campaign in one hand",
+      "description": "Both textual layers entered the calligraphic volume in a single transcription campaign in one hand, so the raw first layer is a fair copy of rawness and the exposure of process is itself staged.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3: both layers entered the calligraphic volume in a single transcription campaign, in one hand; what reads as sedimentary is staged.",
+        "The dates, called load-bearing, are testimony transcribed rather than substrate evidence."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M4",
+      "kind": "requires",
+      "rationale": "Stratification requires temporal markers such as dated entries to be legible as process rather than style; the dates load-bear for the layers."
+    },
+    {
+      "from": "M4",
+      "to": "E_calendar_dates",
+      "kind": "requires",
+      "rationale": "Dated-entry anchoring is inert without the calendar dates actually carried by the first-layer transcripts, beginning October to December 1913."
+    },
+    {
+      "from": "M1",
+      "to": "E_typographic_registers",
+      "kind": "requires",
+      "rationale": "Three-speed temporality on one opening requires typographic and register distinctions strong enough for stratum assignment without dates."
+    },
+    {
+      "from": "E_full_page_paintings",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Image-text non-correspondence requires the regularity of the episode template; if serial regularity decreases, pictorial looseness degrades into disorientation rather than productive collision."
+    },
+    {
+      "from": "E_double_truncation",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Incompletion registering as content requires the pastiche frame that promises finish; without the promise there is no violation, and a mid-sentence break reads as mere abandonment."
+    },
+    {
+      "from": "E_blank_ruled_pages",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Blank ruled pages and unfinished initials register as deposited evidence only inside the illuminated-manuscript frame that promises a finished authoritative object."
+    },
+    {
+      "from": "E_double_truncation",
+      "to": "E_septem_sermones",
+      "kind": "requires",
+      "rationale": "Truncation reading as refusal rather than incapacity requires at least one achieved-closure unit; the Sermones supply the sole instance of finished doctrinal closure."
+    },
+    {
+      "from": "E_substrate_shift",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Every sectional seam must be materialized in substrate or execution state; the parchment-to-paper shift enacts the Primus and Secundus boundary, reinforcing stratification at book scale, though another marker could substitute."
+    },
+    {
+      "from": "E_untranscribed_scrutinies",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "The untranscribed typescript completes the finish gradient and materializes the book-scale raw-versus-worked split, extending the seam-materialization rule to the outer architecture."
+    },
+    {
+      "from": "M2",
+      "to": "M1",
+      "kind": "certifies",
+      "rationale": "The frame's authority-conferring function is turned against authority: gold leaf and codex convention certify the private, dated, provisional strata as monumental evidence."
+    },
+    {
+      "from": "M3",
+      "to": "E_double_truncation",
+      "kind": "amplifies",
+      "rationale": "The double truncation is the template's final iteration executed in the register of production; the serial rehearsal of traversal-without-completion gives the break-off its meaning."
+    },
+    {
+      "from": "E_septem_sermones",
+      "to": "M3",
+      "kind": "contradicts",
+      "rationale": "The Sermones abandon the governing descent-encounter-dialogue template and the first-person anchor, and this rule-governed contrast is what lets refusal register as refusal."
+    },
+    {
+      "from": "E_full_page_paintings",
+      "to": "E_substrate_shift",
+      "kind": "contradicts",
+      "rationale": "As calligraphic finish declines along the parchment-paper-typescript gradient, pictorial elaboration intensifies, so the finish rule holds only per register; material decline and pictorial intensification cross."
+    },
+    {
+      "from": "E_single_transcription_campaign",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "The performed rawness of the first layer depends on concealing that both layers entered the folio in a single transcription campaign; the mechanism of exposed process is itself a finished artifact."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "removed": [
+          "M4",
+          "E_typographic_registers"
+        ]
+      },
+      "consequence": "Without dated anchors or register distinction, the layer split reads as inconsistent tone shifts rather than temporal strata; stratification loses legibility as process.",
+      "collapses_to": [
+        "M2",
+        "M3",
+        "E_full_page_paintings"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "removed": [
+          "M3"
+        ]
+      },
+      "consequence": "If the episode template loses regularity, non-corresponding paintings produce disorientation instead of productive collision, and the truncation loses its final-iteration meaning.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "Without the pastiche frame, mid-sentence break-offs and blank ruled pages read as mere abandonment rather than structural events, and the authority-inversion disappears; a stratified serial journal remains.",
+      "collapses_to": [
+        "M1",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "E_septem_sermones"
+        ]
+      },
+      "consequence": "Without one instance of achieved closure, the double truncation reads as authorial incapacity rather than deliberate refusal.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "E_double_truncation"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "violated": [
+          "Performed rawness depends on partially concealing that both layers entered the folio in a single transcription campaign"
+        ]
+      },
+      "consequence": "If the staging of rawness becomes fully invisible, the exposure claim turns fraudulent rather than performed; if fully exposed, the monument effect collapses. The mechanism survives only as a performed balance."
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "E_substrate_shift",
+          "E_untranscribed_scrutinies",
+          "E_double_truncation"
+        ],
+        "violated": [
+          "Every sectional seam must be materialized in substrate or execution state"
+        ]
+      },
+      "consequence": "If seams stop being materialized in substrate or execution state, section boundaries become notational and the seam-rule system loses coherence; the staged-archaeology principle loses its evidentiary deposits.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work collapses into either a single-genre journal or a treatise, and the seam-based identity of the object disappears.",
+    "M2": "If removed, the mid-sentence truncation and unfinished pages revert to reading as ordinary abandonment, and the authority-inversion effect vanishes.",
+    "M3": "If removed, the non-corresponding paintings collapse into incoherence rather than productive juxtaposition, and the truncation loses its meaning as a final template iteration.",
+    "M4": "If removed, the stratification becomes generic stylistic variation rather than legible exposed compositional process."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:50:23.522Z",
+    "source_profile_id": "8c596e2f-d9a3-4f3b-8ce6-984a952b7b2d"
+  }
+}

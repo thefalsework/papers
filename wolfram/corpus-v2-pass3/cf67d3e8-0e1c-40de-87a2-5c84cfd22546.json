@@ -1,0 +1,433 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Dreams",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Chromatic-spatial-sonic zoning creates episodic firewalls that permit radical material heterogeneity to coexist without requiring narrative or tonal reconciliation.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Episodic segmentation with hard boundaries",
+      "description": "Eight discrete segments separated by fade-to-black transitions and intertitles, with no narrative connective tissue. Each episode operates as a self-contained unit with distinct spatial, temporal, and chromatic parameters, functioning as a structural firewall that contains incompatible production methods.",
+      "confidence": "high",
+      "evidence": [
+        "Eight segments each titled with intertitles and separated by fade-to-black, with no narrative bridges between them",
+        "Stage 4 classifies this as central with high confidence: removal collapses material heterogeneity into incoherence",
+        "Segmentation absorbs incompatible production methods that would fracture a continuous narrative"
+      ],
+      "rules": [
+        "Episodes share no narrative or visual connective tissue",
+        "Each segment resets spatial, temporal, and chromatic parameters"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Chromatic zoning by segment",
+      "description": "Each episode establishes a dominant color palette functioning as structural identifier rather than gradual modulation: saturated primaries, pink-white blossoms, white-gray monochrome, concrete gray, post-Impressionist yellows and blues, apocalyptic red-orange, desaturated browns, earth tones.",
+      "confidence": "high",
+      "evidence": [
+        "Detailed palette catalog specifies a distinct dominant color scheme per episode across all eight segments",
+        "Color operates as episodic signature, not gradual modulation",
+        "Stage 4 rates central with high confidence: removal destroys the primary episode identification system"
+      ],
+      "rules": [
+        "Color shifts occur only at episode boundaries, never as gradual modulation within an episode"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Static-to-kinetic camera as ontological marker",
+      "description": "Episodes begin with locked-off compositions, then introduce camera movement at structurally significant moments. Lateral tracking or push-ins occur when ontology destabilizes: fox spirits appearing, snow woman materializing, paintings becoming traversable. Camera operates as binary switch, not expressive modulation.",
+      "confidence": "medium",
+      "evidence": [
+        "Pattern documented across multiple episodes: static framing during observation, tracking when fox spirits appear, push-ins during hallucination",
+        "Stage 3 documents inversion in Crows where continuous movement occurs during stable reality, undermining the marker",
+        "Stage 4 assigns medium confidence because the single counter-example weakens claims of structural necessity"
+      ],
+      "rules": [
+        "Camera stasis equals stable reality; camera motion equals reality breach",
+        "Each episode establishes a static baseline before any movement occurs"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Chromatic-spatial-sonic synchronization",
+      "description": "Three-register correspondence where chromatic palette, spatial volume, and sonic density move in parallel within each episode, creating predictable affective zones: saturation plus openness plus density produces wonder; desaturation plus compression plus sparseness produces dread.",
+      "confidence": "high",
+      "evidence": [
+        "Saturated episodes pair open landscapes with full orchestration; monochromatic episodes pair tight framing with thinned strings or silence",
+        "Tempo and harmonic language correlate with palette: major key at moderate tempo for pink-white visuals, dissonant fast brass clusters for red-orange apocalypse",
+        "Stage 5 names this synchronization the mechanism enabling the firewall principle"
+      ],
+      "rules": [
+        "All three registers shift simultaneously at zone transitions",
+        "Saturation plus openness plus density yields wonder; desaturation plus compression plus sparseness yields dread"
+      ]
+    },
+    {
+      "id": "E_fade_to_black_intertitles",
+      "kind": "element",
+      "label": "Fade-to-black transitions and episode intertitles",
+      "description": "The concrete boundary devices separating the eight segments: each episode ends in a fade to black and begins with a title card, providing the material punctuation that realizes hard segmentation.",
+      "confidence": "high",
+      "evidence": [
+        "Eight discrete segments separated by fade-to-black transitions, each titled with intertitles"
+      ]
+    },
+    {
+      "id": "E_episode_palettes",
+      "kind": "element",
+      "label": "Per-episode dominant color palettes",
+      "description": "The specific palette assignments: red and green primaries in Sunshine Through the Rain, pink-white blossoms in The Peach Orchard, white-gray in The Blizzard, concrete gray in The Tunnel, Van Gogh yellows and blues in Crows, red-orange in Mount Fuji in Red, sickly browns in The Weeping Demon, earth tones in Village of the Watermills.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1 catalogs a distinct dominant palette for each of the eight episodes"
+      ]
+    },
+    {
+      "id": "E_static_baseline_framing",
+      "kind": "element",
+      "label": "Locked-off opening compositions per episode",
+      "description": "The fixed, static framing that opens most segments: static observation of the wedding procession, fixed positions during Blizzard dialogue. This baseline is the precondition against which camera movement registers as an event.",
+      "confidence": "high",
+      "evidence": [
+        "Most segments begin with locked-off compositions before introducing movement",
+        "C4: without fixed framing baseline, movement cannot register as ontological marker"
+      ]
+    },
+    {
+      "id": "E_spatial_volume_alternation",
+      "kind": "element",
+      "label": "Enclosed versus open spatial volumes",
+      "description": "Interior spaces such as the house and the tunnel use tight framing and close walls; exteriors such as the peach orchard and wheat fields use wide shots with distant horizons. The work alternates compression and expansion without gradual transition.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1 documents alternation between compressed interiors and expansive exteriors with no gradual transition",
+        "Stage 2 pairs spatial openness with saturation and orchestral density as one of the three synchronized registers"
+      ]
+    },
+    {
+      "id": "E_orchestral_density_arc",
+      "kind": "element",
+      "label": "Orchestral density reduction toward silence and source music",
+      "description": "Full orchestration in early episodes thins to strings and woodwinds in The Blizzard, sparse brass in The Tunnel, and eliminates nondiegetic score entirely in Village of the Watermills, which uses only diegetic folk music and environmental sound.",
+      "confidence": "high",
+      "evidence": [
+        "Trajectory moves from lush underscore toward silence and source music across the work",
+        "Silence functions as structural punctuation marking ontological shifts, as in The Tunnel and The Weeping Demon"
+      ]
+    },
+    {
+      "id": "E_frontal_staging",
+      "kind": "element",
+      "label": "Frontal staging and tableau composition",
+      "description": "Figures arranged symmetrically and face-forward: the doll tribunal in horizontal register, the demon addressing camera directly, the funeral procession moving perpendicular to camera axis. Depth staging is minimal; elements organize across the horizontal plane.",
+      "confidence": "high",
+      "evidence": [
+        "Doll tribunal lines up in perfect horizontal register; demon addresses camera directly; procession moves perpendicular to camera axis",
+        "Stage 4 classifies frontal staging as supporting mechanism with high confidence"
+      ]
+    },
+    {
+      "id": "E_costume_chromatic_anchor",
+      "kind": "element",
+      "label": "Costume as chromatic and textural anchor",
+      "description": "Costumes carry the dominant chromatic and material information: red and white fox wedding garments as the only saturated color in the muted forest, translucent white fabric of the snow woman, prosthetic horns and distressed fabric of the demon, Van Gogh straw hat and blue jacket cited from the self-portraits.",
+      "confidence": "high",
+      "evidence": [
+        "Fox procession garments provide the only saturated color in the muted forest",
+        "Costume functions as material citation and chromatic punctuation, creating nested shot-level color organization within episode-level zoning"
+      ]
+    },
+    {
+      "id": "E_material_heterogeneity",
+      "kind": "element",
+      "label": "Alternation of location shooting, obvious artifice, and painterly reconstruction",
+      "description": "Village of the Watermills uses actual rural locations with working water wheels; The Peach Orchard constructs an artificial hillside with geometrically planted trees; Crows builds three-dimensional recreations of two-dimensional paintings. The artifice is visible and load-bearing.",
+      "confidence": "high",
+      "evidence": [
+        "The work does not disguise constructed elements; artifice is visible and load-bearing",
+        "Segmentation absorbs incompatible production methods; the viewer learns to read material treatment as episodic signature"
+      ]
+    },
+    {
+      "id": "E_threshold_spaces",
+      "kind": "element",
+      "label": "Threshold locations and transitional zones",
+      "description": "Liminal locations that anchor temporally unmoored episodes: the space beneath the house, the tunnel entrance, the bridge between Van Gogh paintings, the watermill village between mountain and valley. Characters occupy edges rather than centers.",
+      "confidence": "medium",
+      "evidence": [
+        "Multiple episodes organize around liminal locations that provide concrete spatial anchors",
+        "Stage 4 assigns medium confidence: the anchoring fails in The Weeping Demon, suggesting enhancement rather than foundation"
+      ]
+    },
+    {
+      "id": "E_horizontal_banding",
+      "kind": "element",
+      "label": "Horizontal banding in landscape composition",
+      "description": "Depth organized through stacked horizontal registers rather than perspectival recession: snow below gray sky in The Blizzard; crowd, lake, eruption in Mount Fuji in Red; river, village, mountain in Village of the Watermills.",
+      "confidence": "medium",
+      "evidence": [
+        "Frame divides into stacked horizontal registers across multiple episodes",
+        "Stage 4 lists horizontal banding among incidental mechanisms, though Stage 2 credits it with maintaining organizational geometry when temporal logic collapses"
+      ]
+    },
+    {
+      "id": "E_temporal_ambiguity",
+      "kind": "element",
+      "label": "Non-sequential seasons and absent chronological anchors",
+      "description": "The work spans childhood to old age but provides no chronological anchors; seasons appear non-sequentially: spring blossoms, winter blizzard, summer wheat, unspecified apocalypse, autumn funeral. Time operates as thematic variable rather than linear progression.",
+      "confidence": "high",
+      "evidence": [
+        "Seasons appear non-sequentially with no chronological anchors despite childhood-to-old-age arc",
+        "Stage 2: the work can afford temporal incoherence precisely because it is spatially systematic"
+      ]
+    },
+    {
+      "id": "E_recursive_motifs",
+      "kind": "element",
+      "label": "Recursive trans-episodic motifs: tunnels, thresholds, processions",
+      "description": "Repeated visual structures crossing episode boundaries: the tunnel in Episode 3 echoes the torii gate corridor in Episode 2; horizontal processions and circular arrangements recur across segments, creating continuity the segmentation structure denies.",
+      "confidence": "medium",
+      "evidence": [
+        "Tunnel in Episode 3 structurally echoes the torii corridor in Episode 2 while the fade-to-black insists no connection exists",
+        "Viewer must simultaneously read episodes as discrete and as variations on persistent structures"
+      ],
+      "rule_violations": [
+        "Episodes share no narrative or visual connective tissue"
+      ]
+    },
+    {
+      "id": "E_mount_fuji_narrative",
+      "kind": "element",
+      "label": "Nuclear catastrophe content of Mount Fuji in Red",
+      "description": "The narrative content of the apocalyptic episode: nuclear disaster and fleeing crowds. This semantic content overrides the affective prediction of the synchronization system, producing dread where the formal equation promises wonder.",
+      "confidence": "medium",
+      "evidence": [
+        "Apocalyptic saturation paired with sonic density should produce wonder per the pattern, yet narrative content overrides the structural logic",
+        "Stage 3: chromatic zoning is subordinate to narrative framing; the equation fails when meaning intervenes"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_fade_to_black_intertitles",
+      "kind": "requires",
+      "rationale": "Hard segmentation is materially realized through fade-to-black transitions and intertitles; these are the concrete boundary devices that constitute the firewall."
+    },
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "C1: Episodic discreteness requires chromatic differentiation to maintain zone legibility; without color variation, hard boundaries become arbitrary punctuation."
+    },
+    {
+      "from": "M2",
+      "to": "E_episode_palettes",
+      "kind": "requires",
+      "rationale": "Chromatic zoning is instantiated by the specific per-episode palette assignments; without distinct dominant palettes there is no episodic signature."
+    },
+    {
+      "from": "M3",
+      "to": "E_static_baseline_framing",
+      "kind": "requires",
+      "rationale": "C4: The static-to-kinetic pattern requires an initial stasis baseline within each episode; without fixed framing, movement cannot register as ontological marker."
+    },
+    {
+      "from": "M4",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "C2: Synchronization requires the chromatic register to shift with the others; the palette is one of the three registers whose simultaneous movement constitutes a zone transition."
+    },
+    {
+      "from": "M4",
+      "to": "E_spatial_volume_alternation",
+      "kind": "requires",
+      "rationale": "C2: Synchronization requires the spatial register; open versus compressed framing must shift alongside color and sound, or the change reads as stylistic variation rather than zone transition."
+    },
+    {
+      "from": "M4",
+      "to": "E_orchestral_density_arc",
+      "kind": "requires",
+      "rationale": "C2: Synchronization requires the sonic register; orchestral density must move in parallel with palette and spatial volume for transitions to register as total resets."
+    },
+    {
+      "from": "E_material_heterogeneity",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "C3: Material heterogeneity across location, artifice, and painterly reconstruction depends on episodic segmentation to prevent cross-contamination; continuous treatment would fracture into incoherence."
+    },
+    {
+      "from": "E_material_heterogeneity",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Stage 2 reinforcement loop: material variety makes each episode visually distinct, which in turn strengthens the perceived discreteness of the segmentation."
+    },
+    {
+      "from": "E_costume_chromatic_anchor",
+      "to": "E_frontal_staging",
+      "kind": "requires",
+      "rationale": "C6: Frontal staging maximizes costume legibility as chromatic information channel; depth staging would shift color dominance from costume to environment."
+    },
+    {
+      "from": "E_costume_chromatic_anchor",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Costume embeds episode-level chromatic zoning at shot level, producing nested fractal color organization; zoning survives without it but loses its dominant information carrier."
+    },
+    {
+      "from": "E_temporal_ambiguity",
+      "to": "E_threshold_spaces",
+      "kind": "requires",
+      "rationale": "C5: Temporal ambiguity increases reliance on spatial anchoring through threshold locations; concrete liminal sites anchor otherwise temporally unmoored episodes."
+    },
+    {
+      "from": "E_temporal_ambiguity",
+      "to": "E_horizontal_banding",
+      "kind": "requires",
+      "rationale": "C5: Horizontal banding maintains consistent organizational geometry even when temporal logic collapses; when both spatial systems fail simultaneously, episodic legibility collapses."
+    },
+    {
+      "from": "E_orchestral_density_arc",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "C7: Orchestral density reduction across episodes reinforces zone discreteness; maintaining constant sonic texture would suggest continuity the segmentation denies."
+    },
+    {
+      "from": "E_recursive_motifs",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "Recursive motifs create trans-episodic continuity that hard segmentation explicitly denies; the work architecturally separates what it visually unifies, an unresolved double vision."
+    },
+    {
+      "from": "E_mount_fuji_narrative",
+      "to": "M4",
+      "kind": "contradicts",
+      "rationale": "Nuclear catastrophe content overrides the affective prediction of the synchronization system: saturation plus density should produce wonder but yields dread, revealing zoning as subordinate to narrative framing."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "certifies",
+      "rationale": "The synchronized three-register shift supplies the warrant that boundary crossings are lawful zone transitions rather than arbitrary discontinuities; it makes the firewall legible as structure."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Camera stasis equals stable reality; camera motion equals reality breach"
+        ]
+      },
+      "consequence": "In Crows the camera moves continuously while Van Gogh paints, an activity coded as stable reality, before any supernatural breach. The structural marker operates backwards, rendering the ontological signal unreliable precisely when ontological clarity matters most.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Saturation plus openness plus density yields wonder; desaturation plus compression plus sparseness yields dread"
+        ]
+      },
+      "consequence": "In Mount Fuji in Red, apocalyptic saturation pairs with sonic density and spatial compression while nuclear catastrophe content overrides the formal affect equation. The most systematic mechanism is negated by semantic content, showing synchronization is contingent, not stable.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "E_threshold_spaces",
+          "E_horizontal_banding"
+        ]
+      },
+      "consequence": "In The Weeping Demon both spatial anchoring systems disappear alongside absent temporal markers. Given the pervasive temporal ambiguity, episodic legibility collapses at the moment of maximum ontological instability, suggesting spatial constancy was decorative rather than load-bearing.",
+      "collapses_to": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "violated": [
+          "Episodes share no narrative or visual connective tissue"
+        ]
+      },
+      "consequence": "Recursive motifs of tunnels, thresholds, and horizontal processions create trans-episodic continuity that contradicts hard segmentation, forcing viewers to simultaneously read episodes as discrete units and as variations on persistent structures, a paradox the work never resolves.",
+      "collapses_to": [
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "Without chromatic differentiation, hard boundaries become arbitrary punctuation, episodes lose their primary identification system, and the chromatic-spatial-sonic synchronization loses its first register, so material heterogeneity reads as incoherence rather than lawful variety.",
+      "collapses_to": [
+        "M3",
+        "E_threshold_spaces",
+        "E_horizontal_banding"
+      ]
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "Without episodic firewalls, incompatible production methods cross-contaminate: location shooting, theatrical artifice, and painterly reconstruction would fracture a continuous treatment, collapsing the material heterogeneity that constitutes the work.",
+      "collapses_to": [
+        "M3",
+        "E_frontal_staging"
+      ]
+    },
+    {
+      "id": "F7",
+      "condition": {
+        "removed": [
+          "E_static_baseline_framing"
+        ]
+      },
+      "consequence": "Without the locked-off baseline that opens each episode, camera movement cannot register as an event, and the static-to-kinetic ontological marker becomes inert: motion reads as ordinary coverage rather than reality breach.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the material heterogeneity collapses into incoherence; the work loses its ability to contain incompatible production methods (location shooting, theatrical artifice, painterly",
+    "M2": "If removed, episodes lose their primary identification system and the chromatic-spatial-sonic synchronization fails, making discrete zones indistinguishable and collapsing the organizational",
+    "M3": "If removed, the work loses its systematic method for signaling transitions between observed reality and supernatural intervention, making ontological boundaries illegible to viewers.",
+    "M4": "If removed, the episodic firewalls lose reinforcement across registers, reducing zone legibility and making material shifts read as arbitrary rather than lawful transitions between discrete"
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T02:09:11.049Z",
+    "source_profile_id": "cf67d3e8-0e1c-40de-87a2-5c84cfd22546"
+  }
+}

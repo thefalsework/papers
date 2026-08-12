@@ -484,11 +484,15 @@ candidates at the graduated 0.92 tier):
   Samurai alike). Comma derivation is not yet stable under
   re-transduction. This is the roadmap's reliability concern
   surfacing exactly where predicted, reported as a finding. At
-  n=2 the replication rate is an anecdote, not a rate; a
-  corpus-wide re-transduction study (all 15 profiles transduced a
-  second time, comma-status agreement measured across 15 pairs) is
-  the named next step before the graduation result is presented as
-  more than a first pass.
+  n=2 that was an anecdote; the pre-registered three-pass
+  re-transduction study (`retransduction-study.md`, corpora in
+  `corpus-v2-pass2/` and `corpus-v2-pass3/`) turned it into a
+  rate: comma-status **Fleiss kappa 0.600** (raw agreement 0.822
+  against a 0.556 chance baseline), stability classes 3
+  stable-derived / 8 stable-underived / 4 unstable, thinness
+  selection (H2) refuted on its pre-registered predictions, and
+  exactly one work (*The Red Book*, 8c596e2f) deriving the
+  identical comma in all three passes.
 - **The gate is binary in practice.** Every derived core has
   exactly one witness; no core has two. Selectivity comes entirely
   from the witness gate; the kind vocabulary contributes no

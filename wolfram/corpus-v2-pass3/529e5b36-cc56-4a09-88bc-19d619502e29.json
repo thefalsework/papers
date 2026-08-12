@@ -1,0 +1,334 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Battleship Potemkin",
+    "creator": "Sergei Eisenstein",
+    "domain": "cinema",
+    "practice": "Soviet montage / dialectical editing"
+  },
+  "principle": "Rhythmic collision through systematic desynchronization of temporal, spatial, and graphic registers that accelerate independently toward structural impossibility, producing intensification without spatial or temporal grounding.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Metric montage with variable unit length",
+      "description": "Shot duration operates as rhythmic structure, systematically accelerating from 6.2-second average (exposition) to 1.4-second average (Steps climax) then decelerating to 3.1 seconds (finale), creating a measurable compression-expansion curve across runtime.",
+      "confidence": "high",
+      "evidence": [
+        "Shot counts per minute quantified across all five acts, ranging from 12 (exposition) to 60+ (Steps climax)",
+        "Opening averages 6.2 seconds per shot; mutiny 2.8 seconds; Steps massacre 1.4 seconds; finale 3.1 seconds",
+        "Steps sequence deploys three distinct metric zones: crowd descent 2-3s, soldier march 1-2s, carriage 0.5-1s at climax"
+      ],
+      "rules": [
+        "Temporal compression must pair with proportional spatial compression via tighter facial framing",
+        "Metric acceleration and temporal expansion must remain desynchronized, moving in opposite directions"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Overlapping action temporal expansion",
+      "description": "Single diegetic events fragment across multiple shots from different angles, extending screen duration 4.5 to 7 times beyond story time. The pince-nez breaking uses 7 shots and 14 seconds for a 2-second event; the carriage descent uses 42 shots and 90 seconds for roughly 20 seconds of story time.",
+      "confidence": "high",
+      "evidence": [
+        "Pince-nez sequence: 7 shots, 14 seconds screen time for approximately 2 seconds of story time, a 7:1 expansion ratio",
+        "Carriage descent: 42 shots, 90 seconds screen time for approximately 20 seconds diegetic time, a 4.5:1 ratio"
+      ],
+      "rules": [
+        "Overlapping action must coincide with spatial incoherence so expansion reads as multi-perspectival viewing rather than repetition"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Tonal and graphic collision montage",
+      "description": "Shots organize by visual opposition rather than spatial continuity: binary cuts between extreme grayscale values (80% to 20% luminance) in ABABAB patterns, and compositional diagonals that contradict across cuts (45-degree descending versus 30-degree ascending vectors forming X-patterns).",
+      "confidence": "medium",
+      "evidence": [
+        "Officer confrontation alternates high-key and low-key extremes in an ABABAB pattern across 18 shots with no gradual transition",
+        "Twelve documented instances where adjacent shot diagonals form an X-pattern when superimposed in the Steps sequence"
+      ],
+      "rules": [
+        "Adjacent shots must oppose in luminance or vector; visual synthesis across cuts is prevented"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Serialized scalar close-up progression",
+      "description": "Faces advance through fixed scale increments from long shot to extreme close-up, with each step halving the number of visible faces. The spatial constriction mirrors the temporal constriction of metric montage, producing dual compression and exponential intensification.",
+      "confidence": "high",
+      "evidence": [
+        "Mourning sequence progresses long shot crowd to medium cluster of 5 to medium close-up of 3 to single face to eyes only",
+        "Pattern repeated four times across the harbor sequence with identical scalar intervals",
+        "Tightest facial framings coincide with 1.4-second average shot length; return to long shots coincides with 3.1-second finale"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Vertical spatial stratification",
+      "description": "The Steps sequence organizes bodies across six horizontal planes with strict hierarchical positioning: soldiers on the top plane only, crowd on planes 2-5, victims at ground level. The hierarchy is maintained across 170+ shots so that a single transgressive traversal registers structurally.",
+      "confidence": "medium",
+      "evidence": [
+        "Soldiers occupy top two bands exclusively; crowd scatters across lower four; segregation maintained through 170+ shots until final breach",
+        "The baby carriage is the only element to traverse the full vertical range"
+      ],
+      "rules": [
+        "Hierarchical plane boundaries must be maintained across 170+ shots until the final breach"
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "180-degree rule violation as structural principle",
+      "description": "Eyeline matches systematically disregard screen direction: sailors and officers both look the same screen direction across cuts, producing spatial impossibility. Repeated 8 times in the mutiny sequence; not continuity error but systematic refusal of spatial coherence.",
+      "confidence": "medium",
+      "evidence": [
+        "Eyeline violation repeated 8 times in the mutiny sequence",
+        "Pince-nez sequence shots show spatially impossible eyeline matches with both parties looking left"
+      ],
+      "rule_violations": [
+        "Classical continuity 180-degree rule and eyeline match conventions"
+      ]
+    },
+    {
+      "id": "E_sonic_absence",
+      "kind": "element",
+      "label": "Silent release with no structurally controlled sound",
+      "description": "The 1925 release had no structurally controlled sonic dimension. Sonic absence is load-bearing: temporal logic must function without auditory cues, forcing all metric information into shot duration and graphic rhythm, including 16:1 durational contrast ratios within the Steps sequence.",
+      "confidence": "high",
+      "evidence": [
+        "No sonic dimension structurally controlled in the 1925 release; later scores were supervised separately",
+        "Steps sequence alternates an 8-second sustained shot with 12 shots in 6 seconds, a 16:1 longest-to-shortest ratio functioning as visual syncopation"
+      ]
+    },
+    {
+      "id": "E_fabric_motion",
+      "kind": "element",
+      "label": "Fabric surfaces as kinetic indicators",
+      "description": "Flags, sails, tarpaulin, and clothing register wind and movement against static architecture. The fabric-to-rigid surface ratio increases from 1:4 (opening) to 3:1 (finale), tracking metric acceleration and eventually exceeding compensatory necessity to become an autonomous structural element.",
+      "confidence": "high",
+      "evidence": [
+        "The flag occupies 15% of frame area across 22 shots, always in motion, against static stone steps and ship hull",
+        "Fabric-to-rigid ratio shifts from 1:4 to 3:1 across the runtime, tracking the 6.2s to 1.4s metric acceleration",
+        "Fabric presence increases in the final act even after metric acceleration already supplies kinetic information"
+      ],
+      "rules": [
+        "Fabric-to-rigid ratio must increase as shot duration decreases to maintain kinetic information density"
+      ]
+    },
+    {
+      "id": "E_baby_carriage_descent",
+      "kind": "element",
+      "label": "Baby carriage descent through all six planes",
+      "description": "The carriage is the only element traversing the full vertical range of the Steps, descending through all planes during the expanded central act. Its 42-shot descent occurs at 2.8-second average shot length, slower than surrounding material, inverting the compression-equals-intensification logic.",
+      "confidence": "high",
+      "evidence": [
+        "Carriage descent: 42 shots, 90 seconds screen time, only element to traverse all six planes",
+        "Kinetic climax occurs at 2.8-second average shot length, slower than the 1.4-second surrounding material"
+      ],
+      "rules": [
+        "The kinetic climax occurs at decelerated tempo (2.8s average) rather than maximum metric velocity (1.4s)"
+      ],
+      "rule_violations": [
+        "The metric system logic that compression equals intensification"
+      ]
+    },
+    {
+      "id": "E_steps_grid",
+      "kind": "element",
+      "label": "Odessa Steps as architectural compositional grid",
+      "description": "The steps function as a built-in compositional armature: horizontal step edges divide the frame into 6-8 parallel bands, and figures are positioned at band intersections, supplying the physical scaffold for vertical stratification.",
+      "confidence": "medium",
+      "evidence": [
+        "Horizontal step edges divide the frame into 6-8 parallel bands with figures positioned at band intersections",
+        "Long-lens depth compression flattens the steps into graphic pattern of vertical rifle lines and horizontal step lines rather than navigable space"
+      ]
+    },
+    {
+      "id": "E_five_act_structure",
+      "kind": "element",
+      "label": "Five-act structure with asymmetric distribution",
+      "description": "Five titled segments of unequal duration, with the central Odessa Steps act consuming roughly one-third of runtime while bookend acts compress. This macro-scale asymmetry is replicated at micro scale by the six-plane spatial hierarchy within the Steps sequence.",
+      "confidence": "high",
+      "evidence": [
+        "Act durations approximately 10, 12, 10, 20, and 8 minutes; the central act consumes one-third of runtime",
+        "The carriage traversal of all six planes occurs during Act IV, the expanded central section, creating fractal correspondence between spatial and temporal hierarchies"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M2",
+      "to": "M6",
+      "kind": "requires",
+      "rationale": "Temporal expansion through overlapping action requires spatial incoherence via 180-degree rule violations to mask the temporal impossibility as multi-perspectival viewing rather than stuttering repetition."
+    },
+    {
+      "from": "M1",
+      "to": "M4",
+      "kind": "requires",
+      "rationale": "Metric acceleration requires serialized scalar progression to maintain information density per unit time; as shot duration halves, facial framing must tighten proportionally."
+    },
+    {
+      "from": "M1",
+      "to": "E_sonic_absence",
+      "kind": "requires",
+      "rationale": "Sonic absence forces metric information into visual parameters, making shot duration the sole temporal organizing principle and requiring 16:1 durational contrast ratios that would be redundant if musical tempo were present."
+    },
+    {
+      "from": "M1",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Graphic collision montage prevents visual synthesis across cuts, which enables metric acceleration to operate as one contradictory vector without resolving into coherent space-time."
+    },
+    {
+      "from": "M2",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Graphic collision montage prevents visual synthesis across cuts, which enables temporal expansion to operate against metric acceleration without the registers resolving into unified continuity."
+    },
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Metric montage accelerates shots toward 1.4s while overlapping action expands single moments 4.5:1 to 7:1; the vectors move in opposite directions, and this maintained tension is the core desynchronization of the work."
+    },
+    {
+      "from": "E_baby_carriage_descent",
+      "to": "M5",
+      "kind": "requires",
+      "rationale": "Vertical spatial stratification must maintain hierarchical boundaries across 170+ shots to make the carriage descent through all planes structurally legible as transgression."
+    },
+    {
+      "from": "E_baby_carriage_descent",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "The kinetic climax occurs at decelerated 2.8-second tempo, slower than surrounding 1.4-second material, inverting the metric promise that compression equals intensification; the durational logic fails precisely where it should culminate."
+    },
+    {
+      "from": "E_fabric_motion",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "As metric velocity increases with shorter shots, fabric-to-rigid surface ratios increase from 1:4 to 3:1 to maintain kinetic information density through visual motion markers; fabric also exceeds this function, surviving as autonomous element."
+    },
+    {
+      "from": "M5",
+      "to": "E_steps_grid",
+      "kind": "requires",
+      "rationale": "The six-plane stratification depends on the steps as built-in compositional armature: horizontal step edges divide the frame into parallel bands where figures are positioned and segregated."
+    },
+    {
+      "from": "E_five_act_structure",
+      "to": "M5",
+      "kind": "amplifies",
+      "rationale": "The asymmetric five-act distribution replicates at macro scale the spatial hierarchy within the Steps sequence, a fractal correspondence in which the compressed-bookend expanded-center pattern reinforces the stratified plane structure."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Metric acceleration and temporal expansion must remain desynchronized, moving in opposite directions"
+        ]
+      },
+      "consequence": "If metric montage and overlapping action synchronize their acceleration and expansion rates, the temporal contradiction collapses into simple fast cutting and the work becomes conventional continuity cinema.",
+      "collapses_to": [
+        "M4",
+        "E_five_act_structure"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "removed": [
+          "M6"
+        ]
+      },
+      "consequence": "If spatial continuity is maintained during overlapping action sequences, temporal expansion becomes legible as repetition error rather than multi-perspectival intensification; M2 loses its masking condition and fails.",
+      "collapses_to": [
+        "M1",
+        "M3",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "M3"
+        ],
+        "violated": [
+          "Adjacent shots must oppose in luminance or vector; visual synthesis across cuts is prevented"
+        ]
+      },
+      "consequence": "If graphic collision resolves into visual synthesis, the three measurement systems (metric, temporal, spatial) can unify into coherent space-time and the desynchronization mechanism fails; M1 and M2 lose their structural antagonist.",
+      "collapses_to": [
+        "M4",
+        "M5",
+        "E_five_act_structure"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "violated": [
+          "The kinetic climax occurs at decelerated tempo (2.8s average) rather than maximum metric velocity (1.4s)"
+        ]
+      },
+      "consequence": "If the carriage descent occurs at maximum metric velocity instead of decelerated tempo, the inversion of compression-equals-intensification logic breaks and the kinetic climax reads as mere continuation of the acceleration curve rather than structural inversion.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M5"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "violated": [
+          "Fabric-to-rigid ratio must increase as shot duration decreases to maintain kinetic information density"
+        ]
+      },
+      "consequence": "If fabric motion markers decrease during metric acceleration instead of increasing toward the 3:1 ratio, kinetic information density drops as temporal units compress and the visual rhythm becomes illegible in the absence of sonic tempo cues.",
+      "collapses_to": [
+        "M2",
+        "M3",
+        "M5"
+      ]
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "E_sonic_absence"
+        ]
+      },
+      "consequence": "If a structurally controlled auditory tempo were present, shot duration would no longer be the sole temporal organizing principle; the 16:1 durational contrast ratios become redundant and the metric montage loses its load-bearing status.",
+      "collapses_to": [
+        "M2",
+        "M3",
+        "M5",
+        "M6"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work becomes spatially continuous narrative cinema rather than rhythmically organized collision; the entire temporal architecture collapses and no other mechanism can replace its",
+    "M2": "If removed, single-perspective continuity editing replaces multi-angle fragmentation; the expansion ratios that define intensification through temporal impossibility disappear and the work loses its",
+    "M3": "If removed, shots organize by spatial logic and continuity rather than visual collision; the lighting alternations and diagonal vector contradictions that create meaning through graphic opposition",
+    "M4": "If removed, dual compression breaks: temporal compression proceeds without matching spatial compression, information density per unit time drops during acceleration, and the exponential intensification effect weakens, though other mechanisms survive.",
+    "M5": "If removed, the Steps sequence loses its visual hierarchy and the carriage descent loses legibility as transgression through all planes; the collision montage it serves loses its spatial scaffold within the sequence.",
+    "M6": "If removed, overlapping action reads as stuttering repetition rather than a single extended moment seen from multiple vantages; the spatial incoherence that masks temporal manipulation disappears and M2 becomes legible as error."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:53:57.980Z",
+    "source_profile_id": "529e5b36-cc56-4a09-88bc-19d619502e29"
+  }
+}

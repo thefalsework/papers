@@ -1,0 +1,354 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Throne of Blood",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Constraint multiplication across visual, spatial, temporal, and sonic registers held past comfort thresholds transforms stillness into unbearable perceptual pressure.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Geometric framing with static camera protocol",
+      "description": "Locked camera position combined with strict horizontal and vertical axis composition using architectural elements as subdividing frames. Camera remains fixed in 90 percent of shots, forcing complete geometric statements before filming. Interiors use posts, beams, and sliding doors to create nested rectangular zones. Movement occurs only through subject motion.",
+      "confidence": "high",
+      "evidence": [
+        "Camera remains locked during 90 percent of shots; movement occurs through subject motion within fixed frames or through cuts.",
+        "Interior compositions use posts, beams, and sliding doors as framing devices that subdivide the image into rectangular zones.",
+        "Stage 4 rates this central with HIGH confidence: pervasive across all interior sequences, generating multiple downstream effects."
+      ],
+      "rule_violations": [
+        "Orthogonal geometric clarity produces spatial legibility and navigational orientation"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Fog/architecture binary spatial system",
+      "description": "Systematic alternation between two opposed spatial states with consistent formal consequences. Interiors: geometric rigidity, camera stasis, extended duration, diegetic sound. Exteriors: fog erases depth cues and horizon lines, spatial dissolution, compressed duration, nondiegetic sound. Threshold crossings mark transitions between states.",
+      "confidence": "high",
+      "evidence": [
+        "Interior sequences cluster geometric rigidity, camera stasis, extended duration, and diegetic sound; exteriors cluster dissolution, movement, compression, and nondiegetic sound.",
+        "The binary governs macro structure via the three castle approaches and meso structure via scene types.",
+        "Stage 4 rates this central with HIGH confidence: the film is the alternation between geometric control and spatial dissolution."
+      ],
+      "rules": [
+        "Fog sequences guarantee spatial dissolution plus camera movement plus compressed duration"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Durational extension through stillness",
+      "description": "Scenes sustain static compositions for 40 or more seconds without movement or dialogue, holding shots beyond narrative necessity. The prophecy scene maintains a fixed two-shot for over 40 seconds. Waiting scenes extend single framings to make duration perceptible as formal element. Roughly 30 percent of runtime operates at near-silence.",
+      "confidence": "medium",
+      "evidence": [
+        "The prophecy scene sustains a fixed two-shot of Washizu and Miki for over 40 seconds without movement or dialogue.",
+        "Approximately 30 percent of runtime operates at near-silence: dialogue-free, music-free, minimal ambient sound.",
+        "Stage 4 rates this MEDIUM-HIGH: multiple quantified examples but fewer total instances than framing and camera mechanisms."
+      ],
+      "rule_violations": [
+        "Camera stasis produces contemplative distance rather than kinetic pressure"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Noh mask facial constraint",
+      "description": "Asaji performance eliminates micro-expressions through makeup and acting protocol functioning as a mask with three positions: neutral, slight smile, slight frown. This removes naturalistic facial vocabulary and substitutes a reduced symbolic set, isolated against other characters conventional film acting.",
+      "confidence": "high",
+      "evidence": [
+        "Asaji face operates as a mask with three positions: neutral, slight smile, slight frown, eliminating micro-expressions.",
+        "Other characters employ conventional film acting; Asaji constraint is isolated, making it visible as formal choice.",
+        "Stage 2 states the technique constitutes rather than represents her inhumanity by removing human facial range."
+      ]
+    },
+    {
+      "id": "E_locked_camera",
+      "kind": "element",
+      "label": "Locked camera position in 90 percent of shots",
+      "description": "The camera remains fixed as the default condition; the few tracking shots gain structural weight through scarcity. Movement is delegated to subjects and cuts.",
+      "confidence": "high",
+      "evidence": [
+        "Camera remains locked during 90 percent of shots; rare tracking shots such as the castle approach gain weight through scarcity."
+      ]
+    },
+    {
+      "id": "E_architectural_frames",
+      "kind": "element",
+      "label": "Posts, beams, sliding doors, and shoji screens as subdividing frames",
+      "description": "Castle interiors provide architectural elements that subdivide the image into nested rectangular zones: doorways within rooms, corridors bisecting the field, screens partitioning space into grids.",
+      "confidence": "high",
+      "evidence": [
+        "Interior compositions use posts, beams, and sliding doors as framing devices creating nested frames within the image."
+      ]
+    },
+    {
+      "id": "E_orthogonal_movement",
+      "kind": "element",
+      "label": "Architectural channeling into orthogonal movement",
+      "description": "Interior movement is channeled through narrow corridors; characters cannot move diagonally and must traverse horizontal hallways, turn 90 degrees, and proceed along perpendicular axes, eliminating organic blocking.",
+      "confidence": "high",
+      "evidence": [
+        "Characters traverse horizontal hallways, turn 90 degrees, and proceed along perpendicular axes; architecture enforces orthogonal movement patterns."
+      ]
+    },
+    {
+      "id": "E_telephoto_compression",
+      "kind": "element",
+      "label": "Telephoto depth-plane compression",
+      "description": "Telephoto lenses flatten spatial recession: forest trees appear as vertical strokes on a single plane, castle exteriors compress multiple levels into stacked horizontal bands, operating against the deep-focus convention of 1950s cinema.",
+      "confidence": "high",
+      "evidence": [
+        "Forest sequences eliminate depth cues; trees appear as vertical strokes on a single plane; exteriors compress levels into stacked bands."
+      ]
+    },
+    {
+      "id": "E_fog",
+      "kind": "element",
+      "label": "Fog as spatial dissolvent in exterior sequences",
+      "description": "Fog erases depth cues, horizon lines, and spatial orientation. Characters move through undifferentiated white fields where distance becomes unmeasurable, creating spatial conditions opposite to interior geometric rigidity.",
+      "confidence": "high",
+      "evidence": [
+        "Fog operates as negative space that consumes positive form; distance becomes unmeasurable in undifferentiated white fields.",
+        "The forest prophecy scene maintains extended duration and camera stasis despite atmospheric dissolution."
+      ],
+      "rule_violations": [
+        "Fog sequences guarantee spatial dissolution plus camera movement plus compressed duration"
+      ]
+    },
+    {
+      "id": "E_silence",
+      "kind": "element",
+      "label": "Extended near-silence passages",
+      "description": "Extended passages contain no music, minimal ambient sound, and no dialogue. The prophecy scene runs 90 seconds of near-silence with only breathing audible. Roughly 30 percent of runtime operates at near-silence as active sonic choice.",
+      "confidence": "high",
+      "evidence": [
+        "The prophecy scene runs 90 seconds of near-silence with only breathing audible.",
+        "Approximately 30 percent of runtime is dialogue-free, music-free, and minimally ambient."
+      ]
+    },
+    {
+      "id": "E_nondiegetic_score",
+      "kind": "element",
+      "label": "Nondiegetic scoring including Noh percussion cues",
+      "description": "Sparse nondiegetic cues of drums and flute from Noh theater mark scene transitions; the sonic ratio inverts from 80 percent diegetic in the first half to 60 percent nondiegetic post-murder as scoring fills gaps created by accelerated cutting.",
+      "confidence": "high",
+      "evidence": [
+        "The ratio inverts from 80 percent diegetic to 60 percent nondiegetic after the murder.",
+        "Approximately 15 brief Noh percussion cues across 110 minutes mark act boundaries."
+      ]
+    },
+    {
+      "id": "E_rhythmic_acceleration",
+      "kind": "element",
+      "label": "Systematic decrease in shot duration",
+      "description": "Average shot length decreases from 60 to 90 second takes early, to 10 to 20 second shots post-murder, to 2 to 5 second cuts in the final battle, producing measurable rhythmic acceleration across the runtime.",
+      "confidence": "high",
+      "evidence": [
+        "Shot duration decreases systematically from 60-90 seconds early to 2-5 seconds in the final battle."
+      ]
+    },
+    {
+      "id": "E_threshold_crossings",
+      "kind": "element",
+      "label": "Threshold multiplication at three scales",
+      "description": "Characters cross multiple thresholds sequentially, each filmed as a discrete crossing: macro castle approaches repeated three times, meso doorway traversals within scenes, and micro nested frames within single shots. The film refuses spatial elision.",
+      "confidence": "high",
+      "evidence": [
+        "Reaching the throne room requires crossing exterior gate, courtyard, entrance hall, corridor, antechamber, and throne room, each filmed discretely.",
+        "The approach to Spider Web Castle occurs three times with systematic atmospheric variation over a constant route."
+      ]
+    },
+    {
+      "id": "E_naturalistic_acting",
+      "kind": "element",
+      "label": "Conventional naturalistic acting by other characters",
+      "description": "Characters other than Asaji employ conventional film acting with full facial vocabulary, providing the naturalistic baseline against which the Noh mask constraint becomes visible as formal choice.",
+      "confidence": "high",
+      "evidence": [
+        "Other characters employ conventional film acting; Asaji constraint is isolated against this baseline."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_locked_camera",
+      "kind": "requires",
+      "rationale": "Geometric framing requires camera stasis because a locked camera cannot compensate for compositional weakness through reframing, forcing every shot to function as a complete geometric statement before filming begins."
+    },
+    {
+      "from": "M1",
+      "to": "E_architectural_frames",
+      "kind": "requires",
+      "rationale": "Geometric framing depends on architectural elements as subdividing devices; posts, beams, and sliding doors create the nested rectangular zones that constitute the compositional system."
+    },
+    {
+      "from": "E_orthogonal_movement",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Architectural orthogonal movement constraint eliminates diagonal recession; combined with telephoto compression it produces cumulative spatial flattening, intensifying the geometric imprisonment of the framing system."
+    },
+    {
+      "from": "E_telephoto_compression",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Telephoto depth-plane compression removes remaining depth cues so the image cannot represent depth while architecture prevents movement into it, approaching two-dimensionality despite three-dimensional subject matter."
+    },
+    {
+      "from": "M3",
+      "to": "E_silence",
+      "kind": "requires",
+      "rationale": "Durational extension through stillness requires silence to make duration perceptible; nondiegetic scoring would absorb temporal gaps into conventional scene rhythm, rendering duration invisible as formal material."
+    },
+    {
+      "from": "E_rhythmic_acceleration",
+      "to": "E_nondiegetic_score",
+      "kind": "requires",
+      "rationale": "Rhythmic acceleration increases nondiegetic scoring proportion from 20 to 60 percent as structural compensation, because shorter shots require more frequent sonic transitions that diegetic sound cannot provide without narrative justification."
+    },
+    {
+      "from": "M2",
+      "to": "E_fog",
+      "kind": "requires",
+      "rationale": "The binary spatial system needs fog as its dissolution pole; fog erases depth, horizon, and orientation, creating the spatial state opposed to interior geometric rigidity."
+    },
+    {
+      "from": "M2",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "The binary system needs geometric framing and camera stasis as its control pole; entering the castle guarantees geometric constraint, and the opposition only exists because each state defines the other."
+    },
+    {
+      "from": "E_fog",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Fog sequences violate the binary spatial system by maintaining extended duration and camera stasis despite atmospheric dissolution, suspending established structural rules without collapsing the system; the forest prophecy scene runs under architectural constraint protocols."
+    },
+    {
+      "from": "E_threshold_crossings",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Threshold multiplication operates at macro castle approaches and meso doorway traversals, marking transitions between the two spatial states and making every boundary between control and dissolution explicit on screen."
+    },
+    {
+      "from": "E_threshold_crossings",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "At the micro scale, nested frames within single shots replicate threshold logic within the composition itself; the largest structural pattern of repeated approach mirrors the smallest compositional unit of nested rectangles."
+    },
+    {
+      "from": "M4",
+      "to": "E_naturalistic_acting",
+      "kind": "requires",
+      "rationale": "The Noh mask constraint becomes visible content through isolation against naturalistic acting; the technique constitutes rather than represents inhumanity by removing human facial range against a conventional baseline."
+    },
+    {
+      "from": "M4",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "The Noh mask applies constraint to the human face, reinforcing the stillness logic of durational extension; the work would survive with conventional acting but the facial lock intensifies perceived pressure during static shots."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Asaji facial constraint extends geometric constraint logic into performance, applying the same degrees-of-freedom reduction to the face that framing applies to the image."
+    },
+    {
+      "from": "M3",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "The generative logic is recursive: constraint generates tension, which demands longer duration to register, which intensifies constraint perception; extended stillness makes the geometric trap felt as physical pressure rather than compositional choice."
+    },
+    {
+      "from": "E_rhythmic_acceleration",
+      "to": "M3",
+      "kind": "contradicts",
+      "rationale": "Systematic shot-length decrease from 60-90 seconds to 2-5 seconds progressively withdraws the extended durations that stillness depends on, operating as a variation on durational logic that ultimately fragments it in the final battle."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Orthogonal geometric clarity produces spatial legibility and navigational orientation"
+        ]
+      },
+      "consequence": "Geometric constraint inverts function: orthogonal architecture produces navigational impossibility and labyrinthine confusion rather than spatial clarity. Characters traverse identical corridors without spatial progress. The form succeeds at the opposite of its conventional function; the contradiction is load-bearing.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Camera stasis produces contemplative distance rather than kinetic pressure"
+        ]
+      },
+      "consequence": "Camera stasis generates kinetic pressure during the arrow sequence through immobility rather than contemplative distance, contradicting the durational extension logic established elsewhere. Stillness becomes the source of kinetic energy rather than its absence.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "E_nondiegetic_score"
+        ]
+      },
+      "consequence": "The final massacre withdraws nondiegetic scoring at maximum rhythmic acceleration, precisely when the structural compensation pattern demands it most. Silence returns as absence rather than durational extension, denying the established sonic solution and breaking the ratio inversion pattern.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "E_rhythmic_acceleration"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "Removing any single constraint register causes structural collapse rather than gradual degradation; the system requires visual, spatial, temporal, and sonic registers operating simultaneously to generate the perceptual vise. Removing geometric framing dissolves spatial pressure and cascades through the binary system that depends on it.",
+      "collapses_to": "nothing"
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "E_silence"
+        ]
+      },
+      "consequence": "Without near-silence, duration becomes invisible; the 40-second static shots are absorbed into conventional scene rhythm and durational extension ceases to function as perceptible form, removing the temporal register from the constraint system.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work becomes mobile spatial cinema; architectural imprisonment loses literal force as camera could escape its own compositions, eliminating the visual logic of spatial trap.",
+    "M2": "If removed, the work loses its fundamental structural oscillation; the film is the alternation between geometric control and spatial dissolution, each state defining the other through opposition.",
+    "M3": "If removed, the work becomes rhythmically conventional; the perceptual weight of time as material collapses as shots would cut at narrative necessity rather than formal extension.",
+    "M4": "If removed, constraint multiplication loses the human face register; geometric and temporal pressure would persist but facial expression would provide emotional release valve, reducing total systemic"
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:56:38.576Z",
+    "source_profile_id": "2eedaf0f-c135-422b-8c61-e9338af8dfe1"
+  }
+}

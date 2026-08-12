@@ -1,0 +1,425 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Ikiru",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Structural bifurcation into incompatible temporal systems at the transformation point, then systematic inversion of all formal ratios to enact dissolution through coordinated constriction across visual, spatial, and sonic registers simultaneously.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Bipartite division with incompatible temporal systems",
+      "description": "Hard structural split at 75 minutes separating linear chronology (first half) from fragmented testimonial reconstruction (second half) without transitional mechanism, creating two mutually exclusive temporal logics within a single work.",
+      "confidence": "high",
+      "evidence": [
+        "Split occurs via hard cut to funeral scene at approximately 75 minutes with no transition or fade",
+        "First half follows Watanabe in linear chronology; second half reconstructs events post-mortem through wake testimony",
+        "All subsequent inversions (spatial, sonic, compositional) hinge on this split per the mechanism hierarchy"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Ellipsis as load-bearing structural gap",
+      "description": "Critical transformation moments (decision to build park, death) occur off-screen between scenes, creating voids that second-half testimonies attempt but systematically fail to fill through contradictory accounts.",
+      "confidence": "high",
+      "evidence": [
+        "The film provides before-state and after-state but removes the transformation moment itself",
+        "Testimony scenes attempt to fill the void and fail systematically through contradictions",
+        "The gap generates the entire second-half investigative structure per the mechanism hierarchy"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Coordinated ratio inversions across registers",
+      "description": "Systematic inversion of quantified formal ratios at the 75-minute hinge: compositional centering to periphery, diegetic/nondiegetic sound from 60/40 to 30/70, figure occupancy from 60-70 percent to 15 percent, score density from full orchestration to silence.",
+      "confidence": "medium",
+      "evidence": [
+        "Diegetic/nondiegetic ratio inverts from roughly 60/40 to 30/70 coinciding with the structural division",
+        "Figure occupancy shifts from 60-70 percent of frame in early scenes to roughly 15 percent in the final swing scene",
+        "Musical cue frequency drops from 8-10 cues in the first 30 minutes to 2-3 in the final 30 minutes",
+        "Synchronization is documented but unifying these into one mechanism requires inference per validation stage"
+      ],
+      "rules": [
+        "All ratio inversions synchronize at the 75-minute structural hinge"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Repetition with systematic degradation",
+      "description": "The song Life is Brief appears five times with progressive reduction of sonic information (harmonic complexity, instrumental density, duration) while maintaining melodic skeleton, from full nightclub performance to barely audible humming.",
+      "confidence": "medium",
+      "evidence": [
+        "First instance is a full nightclub performance with complete verses; final instance is Watanabe humming alone on the swing, barely audible",
+        "Each iteration removes sonic information while maintaining the melodic skeleton",
+        "Validation stage notes the specific song is replaceable even if repetition-with-decay is not"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Flashback nesting with three-layer depth",
+      "description": "Second half embeds flashbacks within flashbacks to a maximum of three layers (wake, recalled park opening, Watanabe memory of construction obstacles), each layer marked by distinct visual treatment, then abandons the depth principle without formal marker.",
+      "confidence": "high",
+      "evidence": [
+        "Maximum nesting depth of three layers documented with distinct visual markers per layer (static medium shots vs camera movement and wider framing)",
+        "Fourth and fifth flashbacks flatten to two-layer depth with no formal marker signaling the shift",
+        "Nesting mirrors the part-to-whole relationship of the bipartite structure itself"
+      ],
+      "rules": [
+        "Nesting depth maxes at three layers with distinct visual markers per layer"
+      ],
+      "rule_violations": [
+        "Depth principle abandoned without formal marker when later flashbacks flatten to two layers"
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "Duration extension through stillness",
+      "description": "Static compositions held 45-90 seconds beyond narrative information transfer, operating as temporal weight; extended stillness synchronizes with silence passages to converge temporal and sonic withdrawal.",
+      "confidence": "medium",
+      "evidence": [
+        "Watanabe at desk held in a 47-second take with no movement or dialogue",
+        "Swing scene sustains roughly 90 seconds of minimal motion",
+        "These durations exceed narrative information transfer needs per the inventory"
+      ],
+      "rules": [
+        "Extended stillness always coincides with silence passages"
+      ]
+    },
+    {
+      "id": "E_hard_cut_75min",
+      "kind": "element",
+      "label": "Hard cut to funeral at the 75-minute mark",
+      "description": "The unmarked transition from linear first half to the wake scene: a hard cut with no fade or transitional device, functioning as the structural hinge where all formal ratios invert.",
+      "confidence": "high",
+      "evidence": [
+        "Split occurs via hard cut to funeral scene with no transition and no fade",
+        "Diegetic/nondiegetic sound shift coincides exactly with this structural division point"
+      ]
+    },
+    {
+      "id": "E_wake_testimonies",
+      "kind": "element",
+      "label": "Contradictory wake testimonies",
+      "description": "Bureaucrats at the wake recount Watanabe's transformation in overlapping but contradictory accounts, disagreeing on who suggested the park, when Watanabe decided, and what motivated him.",
+      "confidence": "high",
+      "evidence": [
+        "Accounts contradict on basic facts: who suggested the park, when Watanabe decided, what motivated him",
+        "Each testimony claims explanatory authority over the transformation moment yet fails to recover it",
+        "Vocal timbre stratification differentiates speakers independently of image"
+      ],
+      "rule_violations": [
+        "Testimonial reconstruction recovers the withheld event"
+      ]
+    },
+    {
+      "id": "E_life_is_brief_song",
+      "kind": "element",
+      "label": "Life is Brief song across five iterations",
+      "description": "The recurring song that carries the degradation mechanism: five appearances with progressively reduced duration, harmonic complexity, and instrumental density, while maintaining consistent tempo and melodic skeleton.",
+      "confidence": "high",
+      "evidence": [
+        "Five appearances documented from full nightclub performance to barely audible humming",
+        "The song maintains consistent tempo across iterations, creating metric stability against decaying surroundings"
+      ]
+    },
+    {
+      "id": "E_swing_scene",
+      "kind": "element",
+      "label": "Final swing scene",
+      "description": "Terminal scene of Watanabe on the swing in falling snow: roughly 90 seconds of minimal motion, figure occupying about 15 percent of frame, no score, barely audible humming, snow accumulating materially in real time.",
+      "confidence": "high",
+      "evidence": [
+        "Watanabe occupies approximately 15 percent of frame with remainder consumed by night sky and falling snow",
+        "Final song iteration synchronizes maximum sonic reduction with maximum spatial reduction",
+        "Snow accumulates visibly on hat, shoulders, and swing chains across the scene duration"
+      ]
+    },
+    {
+      "id": "E_silence_passages",
+      "kind": "element",
+      "label": "Three extended silence passages",
+      "description": "Three passages of 30-plus seconds with no score and minimal diegetic sound (post-diagnosis night walk, park construction montage midpoint, pre-swing approach) functioning as formal punctuation segmenting the work.",
+      "confidence": "high",
+      "evidence": [
+        "Three extended silence passages of 30-plus seconds documented at specific structural points",
+        "Silences function as formal punctuation, creating sonic voids that segment the work"
+      ],
+      "rules": [
+        "Silence operates as pure structural withdrawal of sonic information"
+      ]
+    },
+    {
+      "id": "E_compositional_decentering",
+      "kind": "element",
+      "label": "Compositional centering inversion",
+      "description": "First half consistently centers Watanabe in frame even in group scenes; second half places him at frame periphery during flashbacks while bureaucrats occupy center.",
+      "confidence": "high",
+      "evidence": [
+        "First half centers Watanabe with other figures pushed to edges or backgrounds",
+        "Second half decentralizes: Watanabe appears in frame periphery while bureaucrats occupy center"
+      ],
+      "rules": [
+        "Decentering always correlates with recession to background depth planes"
+      ]
+    },
+    {
+      "id": "E_depth_staging",
+      "kind": "element",
+      "label": "Depth staging with background recession",
+      "description": "Primary action placed in background depth planes (Watanabe at distant desk) while foreground contains sharp-focus secondary figures, inverting conventional depth hierarchy.",
+      "confidence": "high",
+      "evidence": [
+        "Bureaucratic office scenes place primary action in background while foreground holds secondary figures in sharp focus",
+        "Every flashback that marginalizes Watanabe compositionally also places him in background depth planes"
+      ]
+    },
+    {
+      "id": "E_diegetic_ratio_shift",
+      "kind": "element",
+      "label": "Diegetic/nondiegetic sound ratio shift",
+      "description": "Sound design inverts from roughly 60 percent nondiegetic score in the first half to roughly 70 percent diegetic ambience in the second half, coinciding with the structural division.",
+      "confidence": "high",
+      "evidence": [
+        "Ratio shift from approximately 60/40 nondiegetic to 70/30 diegetic documented at the 75-minute mark",
+        "Score density decays from full orchestral underscore to solo piano to extended silence"
+      ]
+    },
+    {
+      "id": "E_negative_space_inversion",
+      "kind": "element",
+      "label": "Negative space ratio inversion",
+      "description": "Figure-to-empty-space ratio shifts across the film from 60-70 percent figure occupancy in early scenes to roughly 15 percent in the final swing scene, with empty space consuming frame area.",
+      "confidence": "high",
+      "evidence": [
+        "Early scenes show figures filling 60-70 percent of frame; final swing scene shows roughly 15 percent occupancy",
+        "The ratio inverts across the work duration as a measurable trajectory"
+      ],
+      "rules": [
+        "Negative space expansion requires simultaneous sonic reduction"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Bipartite division requires the ellipsis gap to justify temporal system incompatibility, as linear chronology cannot accommodate the unknowable transformation moment."
+    },
+    {
+      "from": "M1",
+      "to": "E_hard_cut_75min",
+      "kind": "requires",
+      "rationale": "The division registers as incompatible temporal systems only because the split occurs as a hard cut without transitional mechanism; a fade or bridge would soften the systems into conventional flashback structure."
+    },
+    {
+      "from": "M2",
+      "to": "E_wake_testimonies",
+      "kind": "requires",
+      "rationale": "The gap registers as load-bearing rather than accidental only because testimonies attempt and systematically fail to fill it; their contradictions demonstrate the void is structural."
+    },
+    {
+      "from": "E_wake_testimonies",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Testimonial reconstruction must produce contradictions to preserve the ellipsis as unknowable, undermining its own conventional function of event recovery; the form operates against its purpose."
+    },
+    {
+      "from": "M3",
+      "to": "E_hard_cut_75min",
+      "kind": "requires",
+      "rationale": "All ratio inversions must synchronize at the 75-minute structural hinge to register as systematic consequence of temporal system change rather than gradual evolution."
+    },
+    {
+      "from": "M3",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "The bipartite division enables all inversions to read as consequence of temporal system change; without the split the ratio shifts would read as arbitrary or gradual drift."
+    },
+    {
+      "from": "M3",
+      "to": "E_compositional_decentering",
+      "kind": "requires",
+      "rationale": "The centering-to-periphery shift is one of the coordinated ratio inversions constituting the mechanism."
+    },
+    {
+      "from": "M3",
+      "to": "E_diegetic_ratio_shift",
+      "kind": "requires",
+      "rationale": "The 60/40 to 30/70 sound inversion is a constituent register of the coordinated inversion system."
+    },
+    {
+      "from": "M3",
+      "to": "E_negative_space_inversion",
+      "kind": "requires",
+      "rationale": "The figure occupancy inversion from 60-70 percent to 15 percent is a constituent register of the coordinated inversion system."
+    },
+    {
+      "from": "E_compositional_decentering",
+      "to": "E_depth_staging",
+      "kind": "requires",
+      "rationale": "Compositional decentering always correlates with spatial recession to background depth planes; the work cannot decenter Watanabe compositionally without also receding him spatially."
+    },
+    {
+      "from": "E_negative_space_inversion",
+      "to": "E_diegetic_ratio_shift",
+      "kind": "requires",
+      "rationale": "Negative space expansion requires simultaneous sonic reduction to maintain cross-register convergence on absence as formal principle."
+    },
+    {
+      "from": "M4",
+      "to": "E_life_is_brief_song",
+      "kind": "requires",
+      "rationale": "The degradation mechanism operates through the specific recurring song; its five iterations carry the progressive reduction of sonic information against a stable melodic skeleton."
+    },
+    {
+      "from": "M4",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Song degradation amplifies the ratio inversions through sonic parallel: as the song loses sonic information, Watanabe loses frame occupancy, both tracking the same trajectory of material subtraction."
+    },
+    {
+      "from": "E_swing_scene",
+      "to": "M3",
+      "kind": "certifies",
+      "rationale": "The final swing scene synchronizes maximum sonic reduction (barely audible melody) with maximum spatial reduction (15 percent frame occupancy), demonstrating that cross-register convergence on absence is a structural principle rather than coincidence."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "Without the wake as present-tense anchor supplied by the bipartite division, the three-layer nesting depth would collapse into chronological confusion."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "certifies",
+      "rationale": "Nesting justifies the division by demonstrating that linear chronology cannot contain the material; the transformation demands fragmented reconstruction because it occurred in the ellipsis gap."
+    },
+    {
+      "from": "M2",
+      "to": "M5",
+      "kind": "contradicts",
+      "rationale": "Flashback nesting depth cannot exceed three layers without clarifying rather than complicating; the work needs confusion to preserve the ellipsis, forcing structural abandonment of the depth principle exactly when additional nesting would resolve confusion."
+    },
+    {
+      "from": "M6",
+      "to": "E_silence_passages",
+      "kind": "requires",
+      "rationale": "Duration extension through stillness always coincides with silence passages, synchronizing temporal weight with sonic withdrawal; the 90-second swing scene pairs minimal motion with no score and sparse diegetic sound."
+    },
+    {
+      "from": "M6",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Extended stillness reinforces the coordinated constriction system by synchronizing temporal weight with sonic withdrawal, but the ratio inversions survive without the specific durations."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "violated": [
+          "Silence operates as pure structural withdrawal of sonic information"
+        ]
+      },
+      "consequence": "Silence passages intended as formal withdrawal become semantically saturated: maximum interpretive weight concentrates exactly where information withdraws, producing hermeneutic overflow instead of absence and inverting the mechanism function.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Nesting depth maxes at three layers with distinct visual markers per layer"
+        ]
+      },
+      "consequence": "Flashback nesting abruptly terminates at three layers without formal marker; fourth and fifth flashbacks flatten to two-layer depth, abandoning the depth principle exactly when additional nesting would clarify rather than complicate.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M6"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Testimonial reconstruction recovers the withheld event"
+        ]
+      },
+      "consequence": "Testimonial reconstruction form operates against its conventional purpose: rather than achieving event recovery, the contradictory accounts confirm that recovery is impossible, which the structure requires to keep the ellipsis unknowable."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "E_silence_passages"
+        ]
+      },
+      "consequence": "Extended stillness durations lose their sonic synchronization and exceed narrative information transfer needs without cross-register justification, risking viewer disengagement as temporal weight becomes unmoored from content.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "If the transformation moment is shown, the second-half testimonial investigation collapses into redundancy and the bipartite division loses its justification; the incompatible temporal systems no longer have an unknowable void to organize around.",
+      "collapses_to": [
+        "M4",
+        "M6"
+      ]
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "E_hard_cut_75min"
+        ]
+      },
+      "consequence": "Without the hard structural hinge, the ratio inversions read as gradual evolution rather than systematic consequence of temporal system change, and the bipartite division softens into conventional flashback structure.",
+      "collapses_to": [
+        "M2",
+        "M4",
+        "M6"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the work collapses into either conventional linear narrative or conventional flashback structure, losing the collision between chronological and reconstructive time that generates the",
+    "M2": "If removed by showing the transformation moment, the testimonial investigation structure becomes redundant and the unknowability that generates the entire second half collapses into conventional",
+    "M3": "If removed, the protagonist's dissolution loses its formal enactment across visual, spatial, and sonic registers, reducing structural tracking of absence to thematic description only.",
+    "M4": "If removed, the parallel tracking of material thinning across sonic and visual registers loses its auditory component, weakening the cross-register convergence on absence.",
+    "M5": "If removed or reduced to shallower flashbacks, the core bipartite structure survives, but the depth that intensifies the investigative failure is lost.",
+    "M6": "If removed or the specific durations varied, the principle of temporal weight matters more than exact implementation; the synchronization of stillness with silence weakens but the core structure survives."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T02:05:05.964Z",
+    "source_profile_id": "9510b48e-10a6-458c-a552-45cbfe939a00"
+  }
+}

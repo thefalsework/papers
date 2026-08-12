@@ -1,0 +1,388 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "The Red Book",
+    "creator": "Carl Jung",
+    "domain": "literature",
+    "practice": "illuminated manuscript composition"
+  },
+  "principle": "Private timestamped experience is converted into doctrine by re-inscribing it with a later interpretive stratum inside a facsimile of an authority-conferring scriptural form while leaving every seam of that conversion visibly exposed.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Two-register stratification with dated anchoring",
+      "description": "Each chapter pairs a dated first-person visionary episode transcribed from journals with a retrospective sermonic commentary in a distinct rhetorical register, held adjacent on the same page.",
+      "confidence": "high",
+      "evidence": [
+        "Documented in every chapter across all three books; identified as strongest evidence in the corpus.",
+        "Registers are typographically and rhetorically distinct: narrative past tense versus hortatory second-person address.",
+        "Commentary was composed months to years after the vision, placing two temporal positions in permanent adjacency on the page."
+      ],
+      "rules": [
+        "Every chapter pairs a dated visionary episode with a later sermonic commentary held adjacent on the page"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Codex facsimile plus archaizing diction",
+      "description": "A hand-executed medieval manuscript system of Gothic textura script, rubrication, illumination, and gold leaf, unified with sustained biblical and Zarathustran syntax, apostrophe, and prophetic imperatives across hundreds of pages.",
+      "confidence": "high",
+      "evidence": [
+        "Governing constraint sustained across hundreds of pages and the entire material artifact.",
+        "Large folio bound in red leather, parchment then paper, hand-drawn Gothic textura, rubricated headings, illuminated initials, gold leaf.",
+        "Prose systematically imitates the Luther Bible and Zarathustra: inverted syntax, apostrophe, anaphora, prophetic imperatives."
+      ],
+      "rules": [
+        "The artifact presents as timeless finished scripture"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Dialogic episode construction",
+      "description": "Content advances through direct dialogue with named figures such as Philemon, Elijah, and Salome, formatted as quasi-dramatic exchanges with alternating speakers and minimal narration.",
+      "confidence": "medium",
+      "evidence": [
+        "Systematic across episodes: Elijah, Salome, the Red One, Ammonius, Izdubar, Philemon, the soul, the dead all appear as speakers.",
+        "Speech attribution follows dramatic convention, producing a quasi-theatrical script inside prose framing.",
+        "Classified medium in validation because it depends on the scriptural frame for its doctrinal weight."
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Element refusal in the Septem Sermones",
+      "description": "One pseudonymous, doctrinal, non-narrative unit embedded within an otherwise experiential first-person system, violating the compression-to-extension alternation maintained everywhere else.",
+      "confidence": "medium",
+      "evidence": [
+        "The seven sermons abandon narrative and dialogue for doctrinal, aphoristic exposition attributed pseudonymously to Basilides of Alexandria.",
+        "Every other unit of the book is experiential and first-person; this unit is impersonal, catechistic, and third-voice.",
+        "Its refusal registers as rupture only because the alternation was maintained without exception; the rule-break requires the rule."
+      ],
+      "rule_violations": [
+        "Compressed episode alternates with extended commentary without exception",
+        "All units are experiential and first-person"
+      ]
+    },
+    {
+      "id": "E_diary_dates",
+      "kind": "element",
+      "label": "Diary timestamps imported from the Black Books",
+      "description": "Episodes are pinned to specific nights, such as 12 November 1913 onward, imported from journal chronology; dates sequence the visions and expose the measurable gap between experience and inscription.",
+      "confidence": "high",
+      "evidence": [
+        "Dates function as structural spine, not decoration; they sequence the visions and expose the gap between experience and inscription.",
+        "Diary timestamps are irreducibly modern apparatus; no scripture carries them, yet they are load-bearing."
+      ],
+      "rule_violations": [
+        "The artifact presents as timeless finished scripture"
+      ]
+    },
+    {
+      "id": "E_visionary_episodes",
+      "kind": "element",
+      "label": "First-person visionary episode stratum",
+      "description": "The dated first-person narrations of visionary encounters, transcribed from the Black Books journals, one per titled chapter, written in narrative past tense.",
+      "confidence": "high",
+      "evidence": [
+        "Each chapter typically contains one visionary episode transcribed from the dated Black Books journals.",
+        "Episode length is compressed; commentary frequently doubles or triples it."
+      ]
+    },
+    {
+      "id": "E_retrospective_commentary",
+      "kind": "element",
+      "label": "Retrospective sermonic commentary stratum",
+      "description": "Elevated hortatory commentary written months to years after each vision, in second-person address, materially co-present with the episode it interprets.",
+      "confidence": "high",
+      "evidence": [
+        "Retrospective commentary in elevated sermonic prose written months to years later, in hortatory second-person address.",
+        "Commentary manufactures the scriptural authority it then dissects; prophet and exegete are the same hand."
+      ]
+    },
+    {
+      "id": "E_alternation_rule",
+      "kind": "element",
+      "label": "Compression-to-extension alternation pattern",
+      "description": "The regular oscillation of compressed dramatic episode followed by extended discursive elaboration, maintained without exception for hundreds of pages before the Sermones.",
+      "confidence": "high",
+      "evidence": [
+        "Rhythm is generated by regular oscillation: compressed dramatic episode then extended discursive elaboration.",
+        "Predictability is manufactured precisely to make one violation legible."
+      ],
+      "rules": [
+        "Compressed episode alternates with extended commentary without exception"
+      ]
+    },
+    {
+      "id": "E_codex_materials",
+      "kind": "element",
+      "label": "Material codex apparatus",
+      "description": "The physical manuscript system: red leather folio binding, parchment and paper, Gothic textura script, rubricated headings, illuminated and historiated initials, ruled borders, gold leaf.",
+      "confidence": "high",
+      "evidence": [
+        "Material system deliberately reproduces illuminated-manuscript conventions circa 13th to 15th century as compositional strategy.",
+        "Navigation relies on rubrication and incipit conventions rather than pagination logic."
+      ]
+    },
+    {
+      "id": "E_archaizing_diction",
+      "kind": "element",
+      "label": "Archaizing biblical-Zarathustran diction",
+      "description": "Sustained verbal medievalism: inverted syntax, apostrophe such as O my soul, anaphoric repetition, and prophetic imperatives imitating the Luther Bible and Zarathustra across hundreds of pages.",
+      "confidence": "high",
+      "evidence": [
+        "This register is maintained across hundreds of pages as a governing constraint, not local ornament.",
+        "Biblical syntax alone would read as pastiche; joined to the material system it establishes prophetic address as the expected register."
+      ]
+    },
+    {
+      "id": "E_production_stratigraphy",
+      "kind": "element",
+      "label": "Exposed production stratigraphy",
+      "description": "The visible transmission chain from Black Books to Draft to Corrected Draft to calligraphic transcription, including revisions, the parchment-to-paper shift, and scribal hand variation across 1915 to circa 1930.",
+      "confidence": "medium",
+      "evidence": [
+        "The scaffolding of manufacture is not concealed: revisions, the parchment-to-paper shift, and variations in scribal hand remain observable.",
+        "Validation: it amplifies the facsimile contradiction, but a concealed production history would not alter the core system."
+      ],
+      "rule_violations": [
+        "The artifact presents as timeless finished scripture"
+      ]
+    },
+    {
+      "id": "E_image_track",
+      "kind": "element",
+      "label": "Progressively independent painted image track",
+      "description": "Full-page tempera and gouache paintings, including the mandala series and Systema Munditotius, that begin tightly coupled to text and progressively decouple until they occupy full pages with no textual referent.",
+      "confidence": "medium",
+      "evidence": [
+        "Early sections keep image and text tightly coupled; later paintings occupy full pages with no textual referent, a measurable proximity drift.",
+        "Validation: a consequence of transcription duration rather than a designed constraint; replaceable without identity loss."
+      ],
+      "rules": [
+        "Images begin tightly coupled to text and decouple progressively across the codex"
+      ]
+    },
+    {
+      "id": "E_terminal_incompletion",
+      "kind": "element",
+      "label": "Mid-sentence break and unfinished 1959 epilogue",
+      "description": "The calligraphic volume breaks off mid-sentence; a 1959 epilogue, itself unfinished, closes the artifact, leaving an exposed unrepaired boundary.",
+      "confidence": "low",
+      "evidence": [
+        "The text breaks off mid-sentence with an unfinished 1959 epilogue as the closing boundary.",
+        "Validation classifies it as structurally resonant but accidental; a completed codex would remain the same system."
+      ],
+      "rule_violations": [
+        "The artifact presents as timeless finished scripture"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_diary_dates",
+      "kind": "requires",
+      "rationale": "The double-time effect requires diary timestamps; removing the dates collapses the two registers toward a single authorial voice."
+    },
+    {
+      "from": "M1",
+      "to": "E_visionary_episodes",
+      "kind": "requires",
+      "rationale": "Remove the vision stratum and the stratification loses its primary layer; the book collapses into standalone sermon."
+    },
+    {
+      "from": "M1",
+      "to": "E_retrospective_commentary",
+      "kind": "requires",
+      "rationale": "Remove the commentary and the dates become mere journal apparatus; the call-and-response structure collapses into raw journal."
+    },
+    {
+      "from": "M2",
+      "to": "E_diary_dates",
+      "kind": "requires",
+      "rationale": "The medieval disguise depends structurally on the modern timestamps that betray it; subtracting the dates degrades the anachronism into mere pastiche."
+    },
+    {
+      "from": "E_diary_dates",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "Every other element enforces medieval timelessness; diary timestamps are irreducibly modern apparatus no scripture carries, yet they are load-bearing. The disguise depends on the one element that betrays it."
+    },
+    {
+      "from": "M4",
+      "to": "E_alternation_rule",
+      "kind": "requires",
+      "rationale": "The Sermones rupture requires the alternation rule to be maintained without exception; any prior violation would render the break illegible."
+    },
+    {
+      "from": "M4",
+      "to": "E_alternation_rule",
+      "kind": "contradicts",
+      "rationale": "The Sermones deliberately inverts the compression-extension rule and first-person experientiality; the violation is not an exception to the system but what the system was built to produce."
+    },
+    {
+      "from": "M2",
+      "to": "M3",
+      "kind": "certifies",
+      "rationale": "Dialogic authority requires the scriptural frame; without the material-verbal medievalism the named figures speak without doctrinal weight. Philemon and Elijah carry authority because the whole system has established a scriptural frame."
+    },
+    {
+      "from": "M2",
+      "to": "E_codex_materials",
+      "kind": "requires",
+      "rationale": "The unified facsimile system is inert without its material half; the physical manuscript apparatus is one of its two constitutive registers."
+    },
+    {
+      "from": "M2",
+      "to": "E_archaizing_diction",
+      "kind": "requires",
+      "rationale": "The unified facsimile system is inert without its verbal half; the sustained archaizing register is its other constitutive register."
+    },
+    {
+      "from": "E_archaizing_diction",
+      "to": "E_codex_materials",
+      "kind": "requires",
+      "rationale": "The archaizing diction requires the codex facsimile; biblical syntax alone reads as pastiche rather than governing system."
+    },
+    {
+      "from": "E_codex_materials",
+      "to": "E_archaizing_diction",
+      "kind": "requires",
+      "rationale": "The codex facsimile requires the archaizing diction; Gothic textura alone reads as antiquarian craft rather than governing system."
+    },
+    {
+      "from": "E_image_track",
+      "to": "E_production_stratigraphy",
+      "kind": "requires",
+      "rationale": "As transcription duration extends past composition, image-text coupling degrades, driving paintings from illustration toward an independent track; the stratigraphy does not merely coexist with the proximity drift, it produces it."
+    },
+    {
+      "from": "E_production_stratigraphy",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "The finished-scripture claim of the codex form is limited by exposed production stratigraphy, which continuously reveals the artifact as unclosed process; this contradiction is the content."
+    },
+    {
+      "from": "E_retrospective_commentary",
+      "to": "E_visionary_episodes",
+      "kind": "certifies",
+      "rationale": "Commentary manufactures the authority of the prior text it interprets; if the commentary stratum increases in autonomy, the vision stratum loses its certified significance."
+    },
+    {
+      "from": "M3",
+      "to": "E_visionary_episodes",
+      "kind": "amplifies",
+      "rationale": "Episodes advance almost entirely through direct dialogue with named figures; removing the dialogic engine weakens the visionary content but the vision stratum survives as narrated experience."
+    },
+    {
+      "from": "E_alternation_rule",
+      "to": "M1",
+      "kind": "requires",
+      "rationale": "The compression-extension oscillation is generated by the episode-commentary pairing itself; without the two-register stratification there is no alternation for the Sermones to break."
+    },
+    {
+      "from": "E_terminal_incompletion",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "The codex form promises the closure of a completed sacred text; the mid-sentence break and unfinished 1959 epilogue deny the ending and then deny the repair of that denial."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "removed": [
+          "M1"
+        ],
+        "violated": [
+          "Every chapter pairs a dated visionary episode with a later sermonic commentary held adjacent on the page"
+        ]
+      },
+      "consequence": "If the reader collapses the strata or the stratification is removed, the work registers as either uniform scripture or uniform pastiche, and the dual perception of authority and fabrication fails.",
+      "collapses_to": [
+        "M2",
+        "E_codex_materials",
+        "E_archaizing_diction",
+        "E_image_track"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "removed": [
+          "E_diary_dates"
+        ]
+      },
+      "consequence": "Without the dated anchoring, the retrospective commentary becomes indistinguishable from the visions and the system flattens into one undifferentiated voice; the medieval disguise simultaneously degrades from productive anachronism into mere pastiche.",
+      "collapses_to": [
+        "E_codex_materials",
+        "E_archaizing_diction",
+        "M3"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Compressed episode alternates with extended commentary without exception"
+        ]
+      },
+      "consequence": "If the alternation rule were violated more than once, the Sermones rupture would lose its singular structural force and read as inconsistency rather than designed break; M4 loses the manufactured predictability its refusal trades on."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "E_production_stratigraphy"
+        ]
+      },
+      "consequence": "Concealing the production stratigraphy would let the facsimile succeed as forgery, eliminating the productive contradiction between finished form and ongoing process; the image-track drift also loses its generating cause.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "violated": [
+          "Images begin tightly coupled to text and decouple progressively across the codex"
+        ]
+      },
+      "consequence": "Fully decoupled images without the earlier tight coupling would present as arbitrary insertion rather than a measurable proximity drift across the codex; the divergence would read as noise instead of documented desynchronization."
+    },
+    {
+      "id": "F6",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "Without the material-verbal scriptural frame, the named figures speak without doctrinal weight; dialogic episodes lose their borrowed canonical warrant and the conversion of private vision into doctrine fails.",
+      "collapses_to": [
+        "M1",
+        "E_diary_dates",
+        "E_visionary_episodes",
+        "E_retrospective_commentary"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the book collapses into either raw journal or standalone sermon; the measurable gap between vision-night and interpretation-moment disappears and the double-time structure breaks.",
+    "M2": "If either half is removed, the other reads as pastiche or antiquarian craft; the scriptural frame collapses and the dialogic figures lose their doctrinal authority.",
+    "M3": "If removed, the visionary content loses its dramatic engine, the figures cease to exist as speakers, and episodes become generic monologic description.",
+    "M4": "If removed, the alternation rule loses the single rupture it was built to make legible, and the system's manufactured predictability serves no structural payoff."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:39:55.933Z",
+    "source_profile_id": "9181ad6f-6133-4e0d-b149-e9d691b1c0ee"
+  }
+}

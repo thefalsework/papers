@@ -1,0 +1,428 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Ran",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Progressive constriction of all formal registers toward a single focal point produces experiential intensity through systematic reduction of perceptual options, with independent reduction mechanisms across visual, spatial, temporal, sonic, and material channels synchronizing at climax points.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Depth-staging architecture coupled with durational extension",
+      "description": "Three distinct spatial planes (foreground action, middle-ground masses, background landscape) operate independently within static wide shots held far beyond conventional duration, permitting sequential visual scanning across depth registers. Shot duration increases systematically as spatial complexity increases, enabling multiple simultaneous narrative threads per frame.",
+      "confidence": "high",
+      "evidence": [
+        "Castle siege: burning structures foreground right, fleeing figures middle-ground center, static mountain ridges background, all progressing in one unbroken take.",
+        "Single wide shot of the burning castle lasts 43 seconds without cut or camera movement.",
+        "Shot duration rises across acts: 4.2s (Act One) to 7.8s (Act Two) to 11.3s (Act Three).",
+        "Appears in every major exterior sequence per the validation stage."
+      ],
+      "rules": [
+        "Extended shot duration must scale with spatial complexity to preserve legibility"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Chromatic coding as dual-logic system",
+      "description": "Armies maintain chromatic constancy (yellow, red, blue uniform color fields) to mark identity persistence and enable spatial legibility of mass movement, while Hidetora undergoes systematic desaturation from saturated blues and golds to achromatic white to mark identity dissolution. The same chromatic grammar simultaneously affirms continuity for collectives and negates it for the protagonist.",
+      "confidence": "high",
+      "evidence": [
+        "Third Castle battle reads as geometric color zones: red mass enters left, yellow mass defends center, mixed zone expands rightward.",
+        "Hidetora shifts from saturated Act One costume colors to a uniformly white, near-zero-saturation madness robe.",
+        "Systematic across all three acts; every army scene and every Hidetora costume change confirms the mechanism."
+      ],
+      "rules": [
+        "Color constancy marks stable collective identity"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Diegetic sound withdrawal at narrative intensity peaks",
+      "description": "Diegetic sound percentage shifts from 60 percent (Act One architectural scenes) to 30 percent (Act Two siege with 14-minute silence) to 70 percent (Act Three landscape scenes), with maximum sonic withdrawal occurring precisely when visual density and event simultaneity reach maximum. Spectral density and harmonic complexity reduce in parallel, from full orchestra to solo instruments.",
+      "confidence": "medium",
+      "evidence": [
+        "The Third Castle siege eliminates all diegetic sound for its central 14 minutes; only orchestral score remains.",
+        "Diegetic ratio progression of 60 to 30 to 70 percent across acts supports systematic application.",
+        "Seven extended silences over 10 seconds occur at maximum narrative intensity points."
+      ],
+      "rule_violations": [
+        "Sound reinforces spatial parsing when visual complexity peaks"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Horizontal banding",
+      "description": "Compositions divide the frame into horizontal registers with hard boundaries that rarely interpenetrate, constraining vertical eye movement and channeling attention into horizontal scanning across depth planes in controlled sequence.",
+      "confidence": "high",
+      "evidence": [
+        "Opening hunt: sky occupies upper third, mountain ridge middle third, grassland lower third; figures do not break the horizon line into sky space.",
+        "Validation stage rates it high confidence as an amplifier of depth-staging rather than an independent enabler."
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Tempo and harmonic deceleration in score",
+      "description": "Takemitsu score decelerates from 120-132 BPM to 60-72 BPM to pulse-less sustained tones, while harmony simplifies from complex chromatic modulation to minor-mode drones to single-pitch sustained tones, mirroring shot duration increase and spatial descent.",
+      "confidence": "medium",
+      "evidence": [
+        "Opening hunt and council cues run 120-132 BPM; siege drops to 60-72 BPM; final act uses sustained tones with no discernible pulse.",
+        "Spectral bandwidth narrows from full orchestral texture to solo flute with no accompaniment in the final scene."
+      ],
+      "rules": [
+        "Register reduction mechanisms operate on independent timescales that align at climax points"
+      ]
+    },
+    {
+      "id": "E_extended_shot_duration",
+      "kind": "element",
+      "label": "Extended shot duration increasing across acts",
+      "description": "Average shot length rises from 4.2 seconds in Act One to 7.8 in Act Two to 11.3 in Act Three; critical moments are held in static frames far beyond conventional coverage, such as the 11-second hold on Lady Kaede's blood pattern.",
+      "confidence": "high",
+      "evidence": [
+        "Measured averages: 4.2s (first council sequence), 7.8s (castle siege), 11.3s (Hidetora wandering).",
+        "43-second static wide shot of the castle conflagration."
+      ]
+    },
+    {
+      "id": "E_static_wide_shots",
+      "kind": "element",
+      "label": "Static wide shots",
+      "description": "Camera remains static in wide framing during major sequences, presenting all spatial planes simultaneously without reframing or intercutting.",
+      "confidence": "high",
+      "evidence": [
+        "Castle burning sequence progresses three simultaneous events in one unbroken static take.",
+        "Council scene camera remains static while figures enter and exit along radial paths."
+      ]
+    },
+    {
+      "id": "E_widescreen_1_85",
+      "kind": "element",
+      "label": "1.85:1 widescreen aspect ratio",
+      "description": "The widescreen frame enforces horizontal composition: vertical action is compressed, horizontal action extended, shaping all compositional decisions as a visible constraint.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 1 names the aspect ratio as a boundary condition that compresses climbing and falling while extending armies crossing plains and processions."
+      ]
+    },
+    {
+      "id": "E_architectural_differentiation",
+      "kind": "element",
+      "label": "Orthogonal architecture defining spatial planes",
+      "description": "Castles, interiors, and formalized thresholds supply the built structures that define foreground, middle-ground, and background planes; gates are frontally framed and centered on their axis.",
+      "confidence": "high",
+      "evidence": [
+        "The castle gate appears in seventeen shots, always centered on its central axis.",
+        "Acts One and Two depth-staging is defined by built structures per the contradictions stage."
+      ]
+    },
+    {
+      "id": "E_army_color_fields",
+      "kind": "element",
+      "label": "Uniform army color fields (yellow, red, blue banners)",
+      "description": "Armies are distinguished by uniform color fields functioning as compositional blocks; wide battle shots read as geometric color zones in motion rather than individual combatants.",
+      "confidence": "high",
+      "evidence": [
+        "Taro yellow, Jiro red, Saburo blue banner systems.",
+        "Third Castle battle reads as colliding and mixing color zones across the frame."
+      ],
+      "rules": [
+        "Chromatic constancy marks identity persistence"
+      ]
+    },
+    {
+      "id": "E_hidetora_desaturation",
+      "kind": "element",
+      "label": "Hidetora costume desaturation progression",
+      "description": "Hidetora's appearance shifts from saturated deep blues and rich golds in Act One to desaturated earth tones and finally a near-zero-saturation white robe that reads as achromatic in outdoor light.",
+      "confidence": "high",
+      "evidence": [
+        "White madness robe is uniformly white with no shading, folds, or weathering, a geometric color plane on a moving body.",
+        "Desaturation tracks narrative dissolution across all three acts."
+      ],
+      "rule_violations": [
+        "Chromatic constancy marks identity persistence"
+      ]
+    },
+    {
+      "id": "E_montage_ellipsis",
+      "kind": "element",
+      "label": "Before/after battle montage ellipsis",
+      "description": "Battle outcomes are conveyed through before/after cuts with no transitional coverage; elapsed battle time is structurally absent, and force depletion reads through changed color density and formation.",
+      "confidence": "high",
+      "evidence": [
+        "Taro's army departs at full strength in organized columns; cut to its return decimated and scattered, with no combat depicted."
+      ]
+    },
+    {
+      "id": "E_silent_siege",
+      "kind": "element",
+      "label": "14-minute silent battle within the Third Castle siege",
+      "description": "The 22-minute siege eliminates all diegetic sound for its central 14 minutes: gunfire, screams, sword impacts, and structural collapse are absent, replaced entirely by orchestral score.",
+      "confidence": "high",
+      "evidence": [
+        "The most violent sequence is the most sonically sparse in diegetic register, a structural inversion named in the inventory."
+      ]
+    },
+    {
+      "id": "E_takemitsu_score",
+      "kind": "element",
+      "label": "Takemitsu orchestral score with solo flute markers",
+      "description": "Nondiegetic score substitutes for diegetic sound at intensity peaks; a consistent breathy solo flute punctuates major narrative thresholds, and orchestral texture reduces to solo lines by Act Three.",
+      "confidence": "high",
+      "evidence": [
+        "Score replaces battle sounds entirely during the siege.",
+        "Solo flute appears at Hidetora's exile, the siege climax, and Tsurumaru's death with consistent timbre, register, and melodic content."
+      ]
+    },
+    {
+      "id": "E_edge_frame_truncation",
+      "kind": "element",
+      "label": "Edge-frame truncation of significant action",
+      "description": "Significant action is positioned at frame edges or offscreen, forcing the viewer to traverse the horizontal field to locate narrative information and extending effective duration beyond actual shot length.",
+      "confidence": "medium",
+      "evidence": [
+        "Hidetora exits frame right while the camera holds on the empty interior for four seconds.",
+        "The beheading of Tsurumaru's family occurs entirely offscreen; only the executioner's return confirms completion."
+      ]
+    },
+    {
+      "id": "E_diagonal_army_movement",
+      "kind": "element",
+      "label": "Diagonal army movement against orthogonal architecture",
+      "description": "Armies move on 45-degree diagonals across the frame while castles maintain strict horizontal and vertical geometry, producing systematic angular collision between organic movement and the built grid.",
+      "confidence": "medium",
+      "evidence": [
+        "Stage 1 describes the organic refusing the grid as a systematic spatial organization principle."
+      ]
+    },
+    {
+      "id": "E_elevation_hierarchy",
+      "kind": "element",
+      "label": "Elevation hierarchy encoding power in frame position",
+      "description": "Power relations are encoded through vertical positioning: Hidetora begins in elevated upper-third positions, occupies lower-third positions after his fall, and ends ground-level or below in castle foundation ruins.",
+      "confidence": "medium",
+      "evidence": [
+        "Hidetora's trajectory runs upper third to lower third to ground level across the film."
+      ]
+    },
+    {
+      "id": "E_empty_grassland",
+      "kind": "element",
+      "label": "Act Three empty grassland void",
+      "description": "Undifferentiated horizontal landscape where empty space carries load-bearing compositional weight; Hidetora occupies the lower-left 15 percent of frame against 85 percent empty grassland, with no built structures to define depth planes.",
+      "confidence": "high",
+      "evidence": [
+        "Plains sequence after exile: the void has compositional weight equal to the figure.",
+        "The contradictions stage states depth-staging cannot function in this undifferentiated space."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "E_extended_shot_duration",
+      "kind": "requires",
+      "rationale": "Depth-staging architecture requires durational extension to permit sequential visual scanning across spatial planes; without extended shot duration, three-plane simultaneity collapses into decorative background."
+    },
+    {
+      "from": "M1",
+      "to": "E_static_wide_shots",
+      "kind": "requires",
+      "rationale": "Three-plane simultaneity operates within static wide shots; the 43-second unbroken castle burn shot is the condition under which three narrative threads progress in one frame."
+    },
+    {
+      "from": "M1",
+      "to": "E_architectural_differentiation",
+      "kind": "requires",
+      "rationale": "Depth-staging architecture cannot function in undifferentiated horizontal space; the mechanism requires architectural differentiation to define foreground, middle, and background planes."
+    },
+    {
+      "from": "E_extended_shot_duration",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "As shot duration increases across acts, spatial complexity can increase proportionally without overwhelming legibility; temporal extension permits greater depth-plane density."
+    },
+    {
+      "from": "M4",
+      "to": "E_widescreen_1_85",
+      "kind": "requires",
+      "rationale": "The 1.85:1 widescreen aspect ratio enforces horizontal composition, compressing vertical action and extending horizontal action, which channels compositional energy into horizontal registers."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Horizontal banding constrains vertical eye movement, forcing horizontal scanning that guides attention through the three-plane system and extends effective duration beyond actual shot length when combined with edge-frame truncation."
+    },
+    {
+      "from": "E_edge_frame_truncation",
+      "to": "M4",
+      "kind": "amplifies",
+      "rationale": "Edge-frame truncation combines with horizontal banding to produce a systematic delay mechanism: the viewer must traverse the entire horizontal field to locate narrative information."
+    },
+    {
+      "from": "E_montage_ellipsis",
+      "to": "E_army_color_fields",
+      "kind": "requires",
+      "rationale": "Chromatic constancy for armies enables montage ellipsis; before/after battle cuts communicate force depletion through color density changes without requiring transitional coverage."
+    },
+    {
+      "from": "M2",
+      "to": "E_army_color_fields",
+      "kind": "requires",
+      "rationale": "The constancy half of the dual logic depends on uniform army color fields; without them spatial legibility fails and armies become undifferentiated masses."
+    },
+    {
+      "from": "M2",
+      "to": "E_hidetora_desaturation",
+      "kind": "requires",
+      "rationale": "The decay half of the dual logic depends on Hidetora's systematic desaturation; without it his dissolution has no visual correlate and the system collapses to a single logic."
+    },
+    {
+      "from": "E_hidetora_desaturation",
+      "to": "E_army_color_fields",
+      "kind": "contradicts",
+      "rationale": "Hidetora's desaturation contradicts the structural promise that color carries stable identity; the same chromatic grammar simultaneously affirms continuity for collectives and negates it for the protagonist."
+    },
+    {
+      "from": "M2",
+      "to": "E_montage_ellipsis",
+      "kind": "certifies",
+      "rationale": "Color-coded massing creates the predictable visual grammar that makes montage ellipsis legible; narrative state changes become parsable through purely formal chromatic shifts."
+    },
+    {
+      "from": "M3",
+      "to": "E_takemitsu_score",
+      "kind": "requires",
+      "rationale": "Diegetic withdrawal trades on nondiegetic substitution: during the siege, Takemitsu's score replaces battle sounds entirely, making withdrawal a structured sonic state rather than mere absence."
+    },
+    {
+      "from": "E_silent_siege",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "The 14-minute silent battle is the clearest and most extreme instance of the withdrawal mechanism, dropping diegetic sound to its minimum precisely at maximum event density."
+    },
+    {
+      "from": "E_diagonal_army_movement",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Diegetic sound ratio inversely correlates with architectural geometry failure; as diagonal army movement overwhelms orthogonal structures, diegetic sound withdraws."
+    },
+    {
+      "from": "E_diagonal_army_movement",
+      "to": "E_architectural_differentiation",
+      "kind": "contradicts",
+      "rationale": "Armies move on 45-degree diagonals while built environments maintain strict horizontal and vertical geometry; the organic refuses the grid in systematic angular collision."
+    },
+    {
+      "from": "M3",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "Sonic withdrawal occurs exactly when visual density and event simultaneity peak, denying sensory coordination precisely when spatial parsing requires maximum perceptual bandwidth; the tension is productive, making the most legible sequence feel illegible."
+    },
+    {
+      "from": "M5",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Tempo deceleration synchronizes with shot duration increase and elevation hierarchy collapse; faster tempos accompany shorter shots and elevated positions, and pulse dissolves as duration extends and Hidetora descends."
+    },
+    {
+      "from": "M5",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Spectral density and harmonic complexity reduce in parallel with diegetic withdrawal, narrowing from full orchestral mass to single-line monophony and deepening the sonic constriction."
+    },
+    {
+      "from": "E_elevation_hierarchy",
+      "to": "M5",
+      "kind": "amplifies",
+      "rationale": "Hidetora's spatial descent from upper-third to ground-level positions provides the visual correlate that tempo deceleration mirrors; the convergence of achromatic costume, ground-level position, and pulse-less tones strengthens the cross-modal alignment."
+    },
+    {
+      "from": "E_empty_grassland",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "Act Three grassland offers no spatial stratification, yet the film continues applying static wide shots and extended duration there; the formal signature persists while the mechanism's functional basis is evacuated."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "removed": [
+          "E_architectural_differentiation"
+        ]
+      },
+      "consequence": "The depth-staging apparatus persists in Act Three empty grassland where spatial stratification cannot exist, applying load-bearing techniques (long, static, wide) to compositions lacking functional depth planes; the system runs on inertia toward decorative ends.",
+      "collapses_to": [
+        "E_static_wide_shots",
+        "E_extended_shot_duration",
+        "M4",
+        "E_empty_grassland"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "Chromatic constancy marks identity persistence"
+        ]
+      },
+      "consequence": "The chromatic grammar simultaneously affirms identity persistence for armies and negates it for Hidetora, creating a functional paradox where the same mechanism produces opposed structural outcomes; if either half is removed, spatial legibility or protagonist tracking fails.",
+      "collapses_to": [
+        "E_army_color_fields",
+        "E_montage_ellipsis"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Sound reinforces spatial parsing when visual complexity peaks"
+        ]
+      },
+      "consequence": "Maximum visual complexity during the castle siege coincides with diegetic sonic withdrawal, denying sensory coordination precisely when spatial parsing requires maximum perceptual bandwidth; removing this inversion returns the siege to conventional war cinema and dissolves the estrangement effect.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "E_takemitsu_score"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M5"
+        ],
+        "violated": [
+          "Register reduction mechanisms operate on independent timescales that align at climax points"
+        ]
+      },
+      "consequence": "If register constriction timescales desynchronize, convergence points fail to align and intensification-through-subtraction collapses into mere variation without cumulative pressure; the three-register convergence of achromatic costume, ground-level position, and pulse-less tone never forms.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the film collapses into conventional battle coverage; three-plane simultaneity that allows multiple narrative threads per frame becomes illegible without extended holds to permit visual",
+    "M2": "If removed, spatial legibility fails as armies become undifferentiated masses AND protagonist tracking fails as Hidetora's dissolution has no visual correlate; the film loses both mass movement",
+    "M3": "If removed, the castle siege becomes conventional war cinema; the perceptual contradiction of maximum visual density combined with sonic void that produces characteristic estrangement effect",
+    "M4": "If removed, depth-staging still functions but loses its attention-channeling amplifier; horizontal banding enhances rather than enables the core spatial system, so removal weakens scanning control without collapsing three-plane staging.",
+    "M5": "If removed, the visual mechanisms still function but lose cross-modal reinforcement; tempo and harmonic deceleration mirror and amplify shot duration increase and spatial dissolution rather than constituting an independent structural necessity."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:59:16.877Z",
+    "source_profile_id": "a74be626-37a5-4bb5-8611-c2f7433c176b"
+  }
+}

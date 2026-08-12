@@ -425,6 +425,14 @@ predicts a directional density effect in fresh passes; H1 predicts
 instability localized in edge placement with no density direction.
 Full probe numbers in the README's graduation section.
 
+*Adjudicated same day (results in `retransduction-study.md`): H2
+refuted on both of its pre-registered predictions (density
+correlations ≈ 0, sparser-derives 4/8); H1 supported at its core —
+instability enters at the edge layer (mean Jaccard 0.364 vs 0.598
+for nodes). Comma-status Fleiss kappa 0.600 against the
+pre-registered 0.4 threshold: the channel is presentable with
+stability classes as caveats.*
+
 ## V2 addendum (August 2026, part 3): the aperture prototype
 
 `aperture-prototype.wl` operationalizes the observer question the

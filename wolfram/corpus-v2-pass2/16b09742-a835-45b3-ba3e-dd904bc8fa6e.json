@@ -1,0 +1,375 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Seven Samurai",
+    "creator": "Akira Kurosawa",
+    "domain": "cinema"
+  },
+  "principle": "Structural depletion operates against false signals of escalation through simultaneous resource removal and tempo acceleration, creating contradiction between what diminishes and what amplifies.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Numerical countdown structure",
+      "description": "Systematic reduction from seven samurai to three survivors, with each death functioning as structural phase marker dividing the battle sequence into discrete units rather than continuous action.",
+      "confidence": "high",
+      "evidence": [
+        "Explicitly tracked across all analytical documents and identified as load-bearing constraint.",
+        "Each death divides the 77-minute battle into distinct phases rather than undifferentiated combat.",
+        "Reinforcement mechanisms and the depletion-escalation paradox both depend on it."
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Durational extension of preparation",
+      "description": "60-minute training block with minimal plot advancement, establishing labor investment through repeated similar actions (fence-building, spear practice) with slight variations.",
+      "confidence": "high",
+      "evidence": [
+        "Dedicated temporal analysis identifies duration itself as structural, not narrative.",
+        "Explicitly linked to making subsequent losses register structurally rather than as spectacle.",
+        "Validation identifies it as prerequisite for the countdown mechanism."
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Circular perimeter as tactical map",
+      "description": "Stable village geography established through hand-drawn map shown to characters, maintained with spatial consistency throughout battle sequences to allow viewer tracking of tactical positions at specific compass points.",
+      "confidence": "medium",
+      "evidence": [
+        "Defenders positioned at specific compass points; attacks come from predictable directions based on established geometry.",
+        "Identified as structural prerequisite for subsequent formal operations, not exposition.",
+        "Contradiction analysis shows the spatial system fails when this constraint is removed in the final phase.",
+        "Validation rates it medium-high confidence."
+      ],
+      "rules": [
+        "stable circular geometry enables tactical legibility"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Tempo acceleration across battle phases",
+      "description": "Systematic score tempo progression from 80 BPM in first attack to 140 BPM in final attack, creating linear acceleration independent of visual content through percussive rhythmic cells.",
+      "confidence": "medium",
+      "evidence": [
+        "Attack 1 averages 80 BPM, attack 2 100 BPM, attack 3 120 BPM, attack 4 140 BPM in linear progression.",
+        "Validation classifies it as supporting: it reinforces the countdown by creating false escalation against depletion but does not generate the core contradiction alone."
+      ]
+    },
+    {
+      "id": "E_silence_caesuras",
+      "kind": "element",
+      "label": "Silence-after-death caesuras",
+      "description": "Extended silences of 8 to 15 seconds immediately after each samurai death, plus 90 seconds before the final battle and 25 seconds after victory, functioning as structural punctuation between phases.",
+      "confidence": "medium",
+      "evidence": [
+        "Silence appears at three specific junctures: after each death, night before final battle, and final shot.",
+        "Validation notes it converts countdown arithmetic into phase markers but countdown operates without it."
+      ]
+    },
+    {
+      "id": "E_hand_drawn_map",
+      "kind": "element",
+      "label": "Hand-drawn village map",
+      "description": "Map shown to characters that establishes the circular village geography with bisecting stream, functioning as structural prerequisite rather than exposition.",
+      "confidence": "high",
+      "evidence": [
+        "Geography is established through the drawn map, then maintained with spatial consistency throughout battle sequences.",
+        "Stage 2 states the map is not exposition but structural prerequisite for subsequent formal operations."
+      ]
+    },
+    {
+      "id": "E_depth_staging",
+      "kind": "element",
+      "label": "Depth-staging composition",
+      "description": "Action arranged across three or more spatial planes within single frames, compressing multiple narrative threads into unified shots rather than requiring montage.",
+      "confidence": "high",
+      "evidence": [
+        "Foreground, middle-ground, and background action layered consistently through recruitment and battle scenes.",
+        "Validation classifies it as supporting: it amplifies spatial efficiency but could be replaced with montage without destroying the work's identity."
+      ]
+    },
+    {
+      "id": "E_vertical_stratification",
+      "kind": "element",
+      "label": "Vertical stratification in combat staging",
+      "description": "Elevation differences in battle: samurai on rooftops, bandits on lower ground, villagers in doorways at intermediate height, creating three vertical zones of action in single frames.",
+      "confidence": "high",
+      "evidence": [
+        "Three vertical zones allow simultaneous tracking of multiple combat threads without cutting.",
+        "Stage 2 states vertical staging becomes arbitrary without the geometric constraint."
+      ]
+    },
+    {
+      "id": "E_negative_space",
+      "kind": "element",
+      "label": "Negative space as tactical void",
+      "description": "Empty zones such as cleared fields around the village perimeter and vacant streets during attacks, functioning as kill zones where any movement is visually salient.",
+      "confidence": "high",
+      "evidence": [
+        "Voids create kill zones where bandits are exposed; emptiness is functional, not compositional accident.",
+        "Stage 2 states negative space loses tactical meaning without the known geometry."
+      ]
+    },
+    {
+      "id": "E_real_time_takes",
+      "kind": "element",
+      "label": "Real-time battle choreography in continuous takes",
+      "description": "Individual combat exchanges unfold in continuous takes of 30 to 90 seconds with no accelerated editing, creating temporal parity between viewer and character experience.",
+      "confidence": "medium",
+      "evidence": [
+        "Duration of sword exchanges, running, and falling matches performed duration.",
+        "Stage 2 states extended takes become spatially illegible without the geometric constraint."
+      ]
+    },
+    {
+      "id": "E_attack_interval_compression",
+      "kind": "element",
+      "label": "Recursive attacks with decreasing intervals",
+      "description": "Four bandit attacks with progressively shorter intervals between them: roughly 20 minutes, then 15, then 8, accelerating narrative momentum within a fixed four-wave structure.",
+      "confidence": "high",
+      "evidence": [
+        "Intervals measured explicitly: attack 1 to 2 about 20 minutes, 2 to 3 about 15, 3 to 4 about 8.",
+        "Stage 2 identifies interval compression as one register of nested compression carrying acceleration information."
+      ]
+    },
+    {
+      "id": "E_score_coverage_shift",
+      "kind": "element",
+      "label": "Diegetic-to-nondiegetic score coverage shift",
+      "description": "Nondiegetic score covers about 17 percent of the dispersed recruitment section and 68 percent of the concentrated battle section, a fourfold density increase as geography contracts, while ambient sound strips to near-silence.",
+      "confidence": "high",
+      "evidence": [
+        "Recruitment: roughly 12 minutes of score in 70 minutes; battle: roughly 52 minutes of score in 77 minutes.",
+        "Stage 2 establishes a predictive rule allowing tactical position to be read through sonic information alone."
+      ],
+      "rules": [
+        "spatial contraction equals sonic replacement"
+      ]
+    },
+    {
+      "id": "E_percussive_score",
+      "kind": "element",
+      "label": "Percussive score architecture",
+      "description": "Taiko drums, wood blocks, and struck instruments as primary battle timbres, operating through looping 4 to 8 beat rhythmic cells with no sustained melodic lines.",
+      "confidence": "medium",
+      "evidence": [
+        "Percussive vocabulary matches physical impact sounds of combat such as sword strikes and falling bodies.",
+        "The tempo progression is carried by these rhythmic cells."
+      ]
+    },
+    {
+      "id": "E_perimeter_breach",
+      "kind": "element",
+      "label": "Final-phase perimeter breach",
+      "description": "In the final battle phase, bandits breach the circular perimeter and combat moves to interior spaces where the circular logic cannot operate, producing deliberate spatial confusion.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3 states the film continues the same formal techniques without the geometric foundation that made them coherent.",
+        "Viewers cannot track position because the enabling constraint has been removed by design."
+      ],
+      "rule_violations": [
+        "stable circular geometry enables tactical legibility"
+      ]
+    },
+    {
+      "id": "E_kikuchiyo_death_silence",
+      "kind": "element",
+      "label": "Sonic void at Kikuchiyo death",
+      "description": "At Kikuchiyo's death, maximum spatial concentration produces near-silence rather than the predicted score density, inverting the spatial-sonic correspondence at the structural climax.",
+      "confidence": "high",
+      "evidence": [
+        "Stage 3 states the mechanism that predicted sonic density through 140 minutes fails at the moment of greatest load.",
+        "This is described as the system contradicting its own operational logic, not suspension for emphasis."
+      ],
+      "rule_violations": [
+        "spatial contraction equals sonic replacement"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Durational investment in preparation makes subsequent subtractions register as structural loss: without 60-minute labor accumulation, deaths become narrative events rather than load-bearing subtractions. Validation names M2 a prerequisite for the countdown."
+    },
+    {
+      "from": "E_silence_caesuras",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Each samurai death triggers an 8 to 15 second silence caesura that converts casualties into phase markers, preventing the countdown from becoming undifferentiated arithmetic; the countdown survives without it but weakens."
+    },
+    {
+      "from": "E_silence_caesuras",
+      "to": "M4",
+      "kind": "amplifies",
+      "rationale": "Each caesura resets the tempo baseline higher, so deaths accelerate what remains rather than slowing the work down, strengthening the linear tempo progression."
+    },
+    {
+      "from": "M4",
+      "to": "M1",
+      "kind": "contradicts",
+      "rationale": "Tempo acceleration from 80 to 140 BPM creates false expectation of escalation while the samurai count decreases; the sonic register moves opposite to the numerical register, generating the depletion-escalation tension."
+    },
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "contradicts",
+      "rationale": "As resources deplete from seven to three, tactical effectiveness increases rather than degrades, inverting the expectation that the durational investment established, namely that loss equals degradation."
+    },
+    {
+      "from": "E_attack_interval_compression",
+      "to": "M1",
+      "kind": "amplifies",
+      "rationale": "Attack intervals compress as personnel depletes: 20 minutes between attacks 1 and 2, 15 between 2 and 3, 8 between 3 and 4, accelerating momentum while the samurai count decreases."
+    },
+    {
+      "from": "E_depth_staging",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Depth-staging composition depends on circular perimeter stability: arranging action across three spatial planes requires known geometry to remain spatially coherent across cuts."
+    },
+    {
+      "from": "E_vertical_stratification",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Geometric constraint enables tactical legibility: vertical stratification requires the stable circular perimeter so rooftops, ground, and doorways maintain the same spatial relationships across cuts."
+    },
+    {
+      "from": "E_negative_space",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Geometric constraint enables tactical legibility: negative space functions predictably as kill zones only because cleared perimeter zones remain empty under known geometry."
+    },
+    {
+      "from": "E_real_time_takes",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Real-time battle choreography remains spatially coherent across 30 to 90 second continuous takes only because the geography is fixed; without the constraint, extended takes become spatially illegible."
+    },
+    {
+      "from": "M3",
+      "to": "E_hand_drawn_map",
+      "kind": "certifies",
+      "rationale": "The hand-drawn map shown to characters supplies the warrant for the stable geography; Stage 2 states the map is not exposition but the structural prerequisite establishing the geometry viewers then track."
+    },
+    {
+      "from": "M4",
+      "to": "E_percussive_score",
+      "kind": "requires",
+      "rationale": "The linear tempo progression is carried by looping 4 to 8 beat percussive rhythmic cells; without the percussive score architecture there is no vehicle for the systematic BPM acceleration."
+    },
+    {
+      "from": "E_score_coverage_shift",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Spatial contraction requires sonic replacement: as geography concentrates from dispersed recruitment to circular perimeter, nondiegetic score coverage increases from 17 to 68 percent, letting viewers read tactical position through sound alone."
+    },
+    {
+      "from": "E_perimeter_breach",
+      "to": "M3",
+      "kind": "contradicts",
+      "rationale": "The final-phase breach removes the enabling geometric condition while the same formal techniques continue, demonstrating the spatial system's dependency by violating it deliberately."
+    },
+    {
+      "from": "E_kikuchiyo_death_silence",
+      "to": "E_score_coverage_shift",
+      "kind": "contradicts",
+      "rationale": "At Kikuchiyo's death maximum spatial concentration produces sonic void rather than predicted score density, inverting the spatial-sonic correspondence rule after 140 minutes of reliable operation."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "removed": [
+          "M3"
+        ],
+        "violated": [
+          "stable circular geometry enables tactical legibility"
+        ]
+      },
+      "consequence": "When the circular perimeter constraint fails (as in the final-phase breach), spatial legibility collapses: vertical stratification becomes arbitrary, negative space loses tactical meaning, depth staging loses coherence, and extended takes become spatially illegible.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M4",
+        "E_silence_caesuras",
+        "E_attack_interval_compression",
+        "E_percussive_score"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "violated": [
+          "spatial contraction equals sonic replacement"
+        ]
+      },
+      "consequence": "At Kikuchiyo's death the spatial-sonic correspondence inverts: maximum spatial concentration produces sonic void rather than predicted score density, contradicting 140 minutes of operational logic at the moment of greatest structural load.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "removed": [
+          "M4",
+          "E_attack_interval_compression"
+        ]
+      },
+      "consequence": "If the escalation register is removed, the viewer tracks only attrition; the structural irony of simultaneous escalation and depletion disappears and the work reduces to simple tragedy rather than a contradiction held without reconciliation.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M1"
+        ]
+      },
+      "consequence": "Without the numerical countdown, the battle's phase structure becomes invisible, the fight collapses into undifferentiated action, and victory becomes formally indistinguishable from defeat except by the arithmetic fact of survival.",
+      "collapses_to": [
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "M2"
+        ]
+      },
+      "consequence": "Without the 60-minute labor accumulation, deaths become narrative events rather than structural losses; the countdown reduces to arithmetic and the depletion-escalation paradox cannot operate because no expectation of loss as degradation has been established.",
+      "collapses_to": [
+        "M3",
+        "M4"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, the battle becomes undifferentiated action without phase structure; the entire dramatic architecture collapses into generic combat lacking progressive depletion logic.",
+    "M2": "If removed, deaths lack structural weight because no labor investment is established; the countdown becomes arithmetic rather than tragedy; losses register as narrative events rather than structural",
+    "M3": "If removed, spatial coherence collapses; vertical stratification and extended takes become illegible; the viewer cannot track tactical positions and the geometric foundation for formal operations",
+    "M4": "If removed, the false escalation signal disappears; the contradiction between intensifying tempo and depleting resources collapses into simple attrition narrative without structural irony."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T01:48:33.398Z",
+    "source_profile_id": "16b09742-a835-45b3-ba3e-dd904bc8fa6e"
+  }
+}

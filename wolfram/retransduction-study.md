@@ -98,4 +98,93 @@ Aggregates:
 
 ## Results
 
-*(empty at registration — appended after passes 2 and 3)*
+*(appended 2026-08-11, after passes 2 and 3; registration commit
+913fc4b)*
+
+Passes 2 and 3 ran 2026-08-11 evening, 15/15 generated each, zero
+failures (one profile needed attempt 2 after a validator retry:
+Saint Matthew, pass 2). Corpora committed verbatim in
+`corpus-v2-pass2/` and `corpus-v2-pass3/`. Analysis over all 45
+transductions, gate definitions unchanged from
+`comma-graduation.wl`.
+
+### Status layer — the decision-rule numbers
+
+| quantity | value |
+|---|---|
+| base rate p(derived), 45 transductions | 0.333 |
+| raw pairwise agreement | 0.822 |
+| chance baseline 1 − 2p(1−p) | 0.556 |
+| **Fleiss kappa** | **0.600** |
+| stability classes | 3 stable-derived / 8 stable-underived / 4 unstable |
+
+Kappa 0.600 ≥ the pre-registered 0.4 threshold. Per the decision
+rule, the comma channel is presentable **with stability classes and
+the layer decomposition as caveats** — not as an unqualified
+capability.
+
+Stability classes (status per pass, pass 1 → 3):
+
+- **Stable-derived (3/3):** *Girl with a Pearl Earring*,
+  *The Red Book* (8c596e2f), *Ran*.
+- **Stable-underived (0/3):** 8 works.
+- **Unstable:** *Seven Samurai* 16b09742 [DuD], *Throne of Blood*
+  [Duu], *The Red Book* 9181ad6f [uDD], *Stray Dog* [uDu].
+
+So a reliable regime exists: 11 of 15 works answer identically
+three times out of three. Practical consequence stated plainly: 2
+of the 5 cores that derived commas in the original cell-8 run
+(Seven Samurai 16b09742, Throne of Blood) are in the unstable
+class, so the graduated Q2 top tier's membership is
+pass-dependent for those works.
+
+### H2 adjudication — refuted on its own pre-registered predictions
+
+- point-biserial r(derived, edge count) = **+0.038** (predicted
+  negative)
+- point-biserial r(derived, edge density) = **+0.028** (predicted
+  negative)
+- within unstable works, deriving pass sparser than non-deriving:
+  **4/8** (predicted majority)
+
+No thinness selection. The 2-for-2 sparser-member direction in the
+cross-profile pairs was coincidence, as the single-pass probe
+suggested and this fresh sample confirms.
+
+### H1 adjudication — supported at its core, with one artifact noted
+
+Mean pairwise Jaccard by layer: nodes **0.598**, edges **0.364**,
+tension pairs **0.393**, witnesses **0.711**. Instability enters at
+the **edge layer** — node identity is moderately stable, edge
+placement is roughly twice as unstable — which is H1's core claim.
+The witness-layer mean is inflated by empty–empty agreement
+(stable-underived works score Jaccard 1 by definition); among works
+that ever derive, witness agreement is low (see below). The
+monotone-degradation prediction fails at the witness layer for
+exactly that artifactual reason; the informative ordering
+(nodes ≥ tension ≈ edges) holds.
+
+### Findings beyond the pre-registered questions
+
+- **Only one work derives the *same* comma every time.**
+  *The Red Book* (8c596e2f) has witness Jaccard 1.00 — identical
+  poles all three passes. *Ran* is status-stable but pole-unstable
+  (witness Jaccard 0.00: a comma every pass, different poles each
+  time); *Girl with a Pearl Earring* is intermediate (0.33).
+  Status-level stability overstates comma-level stability.
+- **The cross-profile "replicate mismatch" partially dissolves.**
+  In passes 2 and 3, *both* Red Book profiles derive. The pass-1
+  mismatch that motivated this study was partly transduction noise
+  on profile 9181ad6f, not a stable profile-level disagreement.
+- **The Saint Matthew retry is visible in the data:** its pass-2
+  transduction differs most from its siblings (edge Jaccard 0.22),
+  consistent with a regenerated-after-validation-failure output.
+
+### What goes in the email
+
+Per the decision rule: the comma channel appears with kappa 0.600,
+the chance baseline printed beside raw agreement, the three
+stability classes named, and the one fully witness-stable comma
+(*The Red Book*) identified as the current strongest single
+result of the graduation. The unstable works are listed, not
+hidden.

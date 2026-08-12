@@ -1,0 +1,339 @@
+{
+  "schema": "v2",
+  "work": {
+    "title": "Girl with a Pearl Earring",
+    "creator": "Johannes Vermeer",
+    "domain": "painting",
+    "practice": "oil painting, tronie genre"
+  },
+  "principle": "Spatial compression through void elimination forces shallow relief space where bilateral asymmetry prevents compositional collapse into decorative symmetry.",
+  "nodes": [
+    {
+      "id": "M1",
+      "kind": "mechanism",
+      "label": "Void background compression",
+      "description": "Black ground eliminates all atmospheric depth cues, functioning as spatial clamp that forces figure into shallow relief plane approximately 6-8 inches deep rather than conventional portrait recession.",
+      "confidence": "high",
+      "evidence": [
+        "Explicitly identified as active compression, spatial clamp, and load-bearing across all analysis sections",
+        "Total spatial depth from background to nose tip approximately 8 inches",
+        "Void occupies roughly 60 percent of canvas area and wraps asymmetrically around the figure"
+      ],
+      "rules": [
+        "Eliminate all atmospheric and recessional depth cues while maintaining dimensional reading"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "mechanism",
+      "label": "Asymmetric bilateral structure",
+      "description": "Systematic asymmetry across compositional (negative space distribution), facial (lighting differential), and material (impasto versus glaze) registers prevents collapse into decorative symmetry and creates structural hierarchy.",
+      "confidence": "high",
+      "evidence": [
+        "Operates at every scale: compositional, facial, and material registers show correlated imbalance",
+        "Left face half receives direct illumination and full modeling; right side recedes with compressed tonal range",
+        "Identified as preventing symmetrical collapse and creating structural hierarchy in mechanism validation"
+      ],
+      "rules": [
+        "Asymmetry must operate across all registers simultaneously"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "mechanism",
+      "label": "Impasto highlight loading",
+      "description": "Thick paint application creating 1-2mm physical relief on pearl earring and lip moisture, providing the only forward spatial projection within compressed picture plane.",
+      "confidence": "high",
+      "evidence": [
+        "Pearl highlight is a single loaded brushstroke, structurally distinct from surrounding thin paint film",
+        "Raised surfaces catch actual light and physically protrude from the picture plane by approximately 1-2mm",
+        "Classified as supporting mechanism that provides the only forward spatial projection"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "mechanism",
+      "label": "Arrested rotation pose",
+      "description": "Three-quarter turn of approximately 120 degrees with over-shoulder glance captures a transitional moment, creating structural tension between forward gaze and rearward body orientation and generating temporal instability.",
+      "confidence": "medium",
+      "evidence": [
+        "Identified as load-bearing and structurally unstable in the inventory",
+        "Pose geometry structurally determines that one side receives direct light while the other recedes",
+        "Contradiction analysis shows material systems that resist the pose's temporal claim"
+      ],
+      "rules": [
+        "Pose must read as momentary capture rather than held position"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "mechanism",
+      "label": "Wet-in-wet blending",
+      "description": "Paint applied into wet underlayers produces seamless flesh gradations without visible brushwork, establishing the continuous tonal field against which impasto punctuations read as spatial events.",
+      "confidence": "medium",
+      "evidence": [
+        "Observable in seamless gradations across cheek and temple with no visible brushstrokes",
+        "Classified as supporting mechanism that enables impasto to read as spatial events rather than surface marks",
+        "Technique requires sustained wet paint and temporal control per contradiction analysis"
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "mechanism",
+      "label": "Pointillist turban rendering",
+      "description": "Discrete unblended touches of lighter yellow and white on the turban optically mix at viewing distance to suggest fabric weave, demonstrating nested optical systems that depend on viewer position.",
+      "confidence": "low",
+      "evidence": [
+        "Approximately 40-60 individual touches per square inch in the turban's lit areas",
+        "Under magnification marks resolve as separate strokes; at viewing distance they optically mix",
+        "Classified as low-confidence supporting mechanism localized to a single element"
+      ],
+      "rules": [
+        "Optical mixing requires viewing within a specific distance range"
+      ]
+    },
+    {
+      "id": "E_black_ground",
+      "kind": "element",
+      "label": "Black background ground",
+      "description": "The unbroken black ground behind the figure, occupying roughly 60 percent of the canvas and distributed asymmetrically, functioning as positive structural element rather than absence.",
+      "confidence": "high",
+      "evidence": [
+        "Described as not absence but active compression in the structural inventory",
+        "Negative space wraps asymmetrically: more above head than below chin, more to viewer's left than right"
+      ]
+    },
+    {
+      "id": "E_pearl_earring",
+      "kind": "element",
+      "label": "Pearl earring",
+      "description": "The left-side pearl rendered through optically accurate spherical light behavior, receiving the work's heaviest impasto and its title, sitting at the geometric center of the triangular mass distribution.",
+      "confidence": "high",
+      "evidence": [
+        "Pearl sits at the geometric center of the pyramidal composition, making placement structurally determined",
+        "Painted to replicate how light behaves on a reflective sphere rather than to mimic pearl material",
+        "Receives material emphasis and the title despite being spatially peripheral"
+      ]
+    },
+    {
+      "id": "E_direct_gaze",
+      "kind": "element",
+      "label": "Direct over-shoulder gaze",
+      "description": "Eye contact creating an orthogonal vector perpendicular to the picture plane, the only spatial element extending beyond the frame, located on the structurally subordinated right side.",
+      "confidence": "high",
+      "evidence": [
+        "Gaze vector operates independently of the figure's rotational axis, creating dual spatial systems",
+        "The right side, subordinated through thinner glazing, contains the actual point of psychological engagement"
+      ]
+    },
+    {
+      "id": "E_moisture_markers",
+      "kind": "element",
+      "label": "Moisture markers on lip and pearl",
+      "description": "Visible moisture on the lower lip and reflective sheen on the pearl acting as temporal anchors that prevent the composition from resolving into atemporal stasis.",
+      "confidence": "medium",
+      "evidence": [
+        "Identified as temporal markers of the painting session rather than narrative time",
+        "Analysis states the impasto moisture must remain visible to keep the arrested rotation from collapsing into static portraiture",
+        "Classified as incidental in mechanism validation: temporal anchors but not structural requirements"
+      ]
+    },
+    {
+      "id": "E_turban",
+      "kind": "element",
+      "label": "Yellow turban",
+      "description": "The turban whose fabric texture is produced entirely by discrete paint marks that behave like woven cloth without material imitation, forming the apex of the triangular mass distribution.",
+      "confidence": "medium",
+      "evidence": [
+        "Fabric texture is pure paint behavior producing the optical effect of woven cloth with the mechanism exposed",
+        "Turban apex anchors the top of the stable pyramidal geometry"
+      ]
+    },
+    {
+      "id": "E_optimal_viewing_distance",
+      "kind": "element",
+      "label": "Optimal viewing distance range",
+      "description": "The narrow band of viewer positions at which optical mixing and relief compression cohere; too close and marks separate, too far and texture and relief flatten.",
+      "confidence": "medium",
+      "evidence": [
+        "The work systematically requires specific viewing distances to maintain structural coherence across scales",
+        "At close range the compressed relief space disintegrates into paint marks; too far and it flattens"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "M1",
+      "to": "M3",
+      "kind": "requires",
+      "rationale": "Void compression requires impasto highlights to establish forward spatial projection; without physical paint relief, the shallow plane collapses into flatness rather than relief."
+    },
+    {
+      "from": "M1",
+      "to": "E_black_ground",
+      "kind": "requires",
+      "rationale": "The compression mechanism is enacted by the black ground itself, which eliminates all atmospheric depth cues and operates as the spatial clamp."
+    },
+    {
+      "from": "M1",
+      "to": "M2",
+      "kind": "requires",
+      "rationale": "Compressed space would naturally collapse into flat decorative pattern except that systematic asymmetry across registers creates structural hierarchy that reads as dimensional form."
+    },
+    {
+      "from": "M1",
+      "to": "E_optimal_viewing_distance",
+      "kind": "requires",
+      "rationale": "The compressed relief space only functions at proper viewing distance; too close and it disintegrates into paint marks, too far and it flattens, making spatial dominance conditional."
+    },
+    {
+      "from": "M3",
+      "to": "M2",
+      "kind": "amplifies",
+      "rationale": "Asymmetric distribution must operate across all registers simultaneously; the impasto versus glaze differential supplies the material register that keeps isolated asymmetry from failing into decorative collapse."
+    },
+    {
+      "from": "M3",
+      "to": "E_pearl_earring",
+      "kind": "requires",
+      "rationale": "The pearl highlight is the primary site of impasto loading, a single loaded brushstroke structurally distinct from the surrounding thin paint film."
+    },
+    {
+      "from": "M4",
+      "to": "M2",
+      "kind": "certifies",
+      "rationale": "Three-quarter rotation structurally determines lighting asymmetry; pose geometry makes differential illumination a consequence rather than arbitrary choice, warranting the asymmetry as structural."
+    },
+    {
+      "from": "M4",
+      "to": "E_direct_gaze",
+      "kind": "requires",
+      "rationale": "The arrested rotation's structural tension depends on the forward-facing gaze opposing the body's rearward orientation; without direct eye contact the transitional instability disappears."
+    },
+    {
+      "from": "M5",
+      "to": "M4",
+      "kind": "contradicts",
+      "rationale": "Wet-in-wet blending requires sustained wet paint, demanding temporal control that contradicts the arrested rotation pose's claim of momentary capture; the pose says passing instant while the paint says permanent state."
+    },
+    {
+      "from": "M5",
+      "to": "M3",
+      "kind": "amplifies",
+      "rationale": "Seamless wet-in-wet transitions make the impasto punctuations read as genuine spatial events rather than arbitrary surface decoration; remove continuous flesh modeling and the loaded highlights become arbitrary marks."
+    },
+    {
+      "from": "M6",
+      "to": "E_optimal_viewing_distance",
+      "kind": "requires",
+      "rationale": "Pointillist turban rendering and optical mixing require specific viewing distances; too close and marks separate, too far and texture flattens."
+    },
+    {
+      "from": "M6",
+      "to": "E_turban",
+      "kind": "requires",
+      "rationale": "The pointillist system is localized entirely to the turban fabric; the discrete unblended touches exist only on that element."
+    },
+    {
+      "from": "E_pearl_earring",
+      "to": "E_direct_gaze",
+      "kind": "contradicts",
+      "rationale": "Material emphasis on the left pearl contradicts attentional focus on the right-side gaze, creating an inversion between structural hierarchy and psychological engagement that the work cannot resolve."
+    },
+    {
+      "from": "E_moisture_markers",
+      "to": "M4",
+      "kind": "amplifies",
+      "rationale": "Moisture markers operate as temporal anchors keeping the arrested rotation from collapsing into static portraiture, though validation classifies them as incidental rather than structurally required."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "F1",
+      "condition": {
+        "removed": [
+          "M1",
+          "E_black_ground"
+        ]
+      },
+      "consequence": "Restoring atmospheric depth cues breaks void compression and returns the work to conventional portrait recession, eliminating the relief-space logic entirely.",
+      "collapses_to": [
+        "M2",
+        "M4",
+        "M5",
+        "M6"
+      ]
+    },
+    {
+      "id": "F2",
+      "condition": {
+        "removed": [
+          "M2"
+        ],
+        "violated": [
+          "Asymmetry must operate across all registers simultaneously"
+        ]
+      },
+      "consequence": "Imposing bilateral symmetry collapses the dimensional reading into flat decorative pattern as structural hierarchy disappears; the compressed space flattens like Byzantine icon or poster design.",
+      "collapses_to": [
+        "M4",
+        "M5",
+        "M6"
+      ]
+    },
+    {
+      "id": "F3",
+      "condition": {
+        "violated": [
+          "Optical mixing requires viewing within a specific distance range"
+        ]
+      },
+      "consequence": "Viewing outside the optimal distance range causes pointillist marks to separate or flatten, revealing the spatial system as distance-dependent illusion rather than structural necessity and undermining the void compression's authority."
+    },
+    {
+      "id": "F4",
+      "condition": {
+        "removed": [
+          "M3"
+        ]
+      },
+      "consequence": "Removing impasto highlights eliminates the only forward projection, causing the compressed space to suffocate into complete flatness; the void's compression becomes suffocation without physical relief.",
+      "collapses_to": [
+        "M2",
+        "M4",
+        "M5"
+      ]
+    },
+    {
+      "id": "F5",
+      "condition": {
+        "removed": [
+          "E_moisture_markers"
+        ],
+        "violated": [
+          "Pose must read as momentary capture rather than held position"
+        ]
+      },
+      "consequence": "Without the temporal decay markers, the contradiction between wet-in-wet temporal control and arrested rotation instability resolves into stasis; temporal ambiguity collapses and the work becomes static atemporal portraiture.",
+      "collapses_to": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    }
+  ],
+  "asserted_removal_tests": {
+    "M1": "If removed, spatial logic collapses into conventional atmospheric depth and the entire relief-space system fails as recessional cues return.",
+    "M2": "If removed through symmetrical organization, composition flattens into static decorative pattern and dimensional reading collapses.",
+    "M3": "If removed, relief space loses physical dimension and spatial compression becomes suffocating flatness rather than shallow sculptural presence.",
+    "M4": "If removed, temporal instability disappears and the work becomes an atemporal portrait; the over-shoulder glance generates both the spatial asymmetry and the transitional moment.",
+    "M5": "If removed, the impasto punctuations lose their continuous tonal field and read as arbitrary surface marks rather than spatial events; the core spatial logic weakens but is not generated by this mechanism.",
+    "M6": "If removed, the nested optical system demonstration is lost but no structural collapse follows; alternative fabric rendering could substitute without breaking the governing logic."
+  },
+  "provenance": {
+    "model": "claude-fable-5",
+    "prompt_version": "corev2-transduce/1.0",
+    "generated_at": "2026-08-12T02:10:12.883Z",
+    "source_profile_id": "5fe5bb51-7c40-4413-a5e8-141d3cc1d684"
+  }
+}
