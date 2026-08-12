@@ -251,6 +251,15 @@ wolfram/
 │                              Div6, 4-chain, Div24; compute which observers
 │                              see a kernel's four-fold open (email artifact 3;
 │                              self-contained single cloud cell)
+├── aperture-scaling.wl        aperture scaling: Div12→Div192 sequence, Div36
+│                              family break (latent ordinariness), Div30
+│                              Boolean control; product-law check (second
+│                              self-contained cell)
+├── retransduction-study.md    pre-registered comma-derivation repeatability
+│                              study: 3 passes × 15 profiles, layered
+│                              agreement, kappa with CI, H1/H2 adjudication
+├── corpus-v2-pass2/           re-transduction pass 2 (15 cores + manifest)
+├── corpus-v2-pass3/           re-transduction pass 3 (15 cores + manifest)
 └── results/
     └── wolfram-cloud-run-2026-05-04-v1.5.nb   reference evaluated run
 ```
@@ -586,6 +595,36 @@ four-fold — the four-position structure lives strictly outside
 the Boolean pocket, at resolutions that retain some
 irreducibility. The aperture measures how much coarse-graining a
 kernel's distinction survives.
+
+**Scaling run** (`aperture-scaling.wl`, second self-contained
+cell; Node reference 2026-08-11, expectations pre-registered in
+the file header):
+
+| algebra | nuclei | ambient ordinary | apertures |
+|---|---|---|---|
+| Div12 (a=2) | 8 | {2} | 1 |
+| Div24 (a=3) | 16 | {2,4} | 3, 3 |
+| Div48 (a=4) | 32 | {2,4,8} | 7, 9, 7 |
+| Div96 (a=5) | 64 | {2,4,8,16} | 15, 21, 21, 15 |
+| Div192 (a=6) | 128 | {2,4,8,16,32} | 31, 45, 49, 45, 31 |
+| Div36 | 16 | {2,3} | 3, 3 — and **2 for the non-ordinary 6** |
+| Div30 | 8 | {} (Boolean) | all empty |
+
+Two findings:
+
+- **The product law** `[O]` (conjecture; all 15 sequence points):
+  aperture(2^k in Div(2^a·3)) = (2^k − 1)(2^(a−k) − 1). The
+  aperture factors as (blur available below the kernel) × (blur
+  available above it). Plausible mechanism: these lattices are
+  chain products and nuclei counts multiply over the factors
+  (2^(a+1) for the sequence; 4 × 4 for Div36; 2³ for Div30).
+- **Latent ordinariness** (Div36): element 6 is *not* ordinary at
+  full resolution, yet two proper coarse-grainings make it
+  ordinary in their worlds — aperture(6) = 2. The aperture is not
+  a restriction of ambient ordinariness; **some distinctions exist
+  only at a blur**. This is the sharpest single sentence the
+  aperture computation has produced, and it is computed, not
+  asserted.
 
 ## What this prototype does
 
