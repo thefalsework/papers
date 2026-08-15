@@ -75,6 +75,45 @@ remaining manual step.
 - **Still open on the Lean track:** Steps 2–3 of Theorem 5.1
   (coordinate-locality of density/regularity in product worlds;
   the chain counts) — that is what makes the closed form itself [K].
+
+## Status update, 2026-08-14
+
+- **Lean track closed for the two-prime case.** Steps 2–3 of
+  Theorem 5.1 are [K] in `Lattice/ApertureClosedForm.lean`:
+  WorldDense/WorldRegular defined (Opens = neither, definitionally);
+  coordinate-locality on products; nucleus factorization upgraded to
+  a type equivalence; chain nuclei classified as top-sets
+  (`nucleusEquivTopSets`); the four chain counts proved as powerset
+  cardinalities on arbitrary finite bounded chains (D and R stated
+  additively to avoid ℕ-subtraction); inclusion-exclusion assembly
+  (`aperture_card_add_eq`) proved for any product of two finite
+  Heyting algebras; `aperture_closed_form_two_chains` (abstract, over
+  ℤ) and `aperture_closed_form_exponents` (Fin exponent lattices —
+  Theorem 5.1 verbatim, two-prime case) proved; Div12 cross-check
+  example `decide`s to 1, agreeing with `aperture_two_complete`.
+  Axiom audit: propext, Classical.choice, Quot.sound only — no
+  sorry, no native_decide. Paper §5/§6/§8/§9 and abstract updated:
+  closed form now [K] on two-prime lattices, [computed] for r > 2.
+- **Remaining Lean gap:** the r > 2 iteration of the binary
+  assembly (fold `aperture_card_add_eq` across an r-fold product).
+  Bookkeeping, not mathematics.
+
+## Status update, 2026-08-15
+
+- **Literature placement added to paper §5 + §8.** The chain-nucleus
+  classification (Step 3, structural half) is folklore in print:
+  Erné, "Nuclear ranges in implicative semilattices" (Algebra
+  Universalis 2022) states it for bounded chains; Bezhanishvili ×2,
+  Carai, Gabelaia, Ghilardi, Jibladze (arXiv:2001.11060) classify
+  nuclei on finite implicative semilattices via meet-prime subsets.
+  Ordinary elements remain active vocabulary in intermediate logics
+  (Citkin, "An Algebraic Proof of the Nishimura Theorem," Logics
+  2024). No trace found of: ordinariness relativized to nucleus
+  worlds, the aperture, latency, or the count. Novelty claims now
+  explicitly located there; search-not-review caveat marked [O].
+- **Due diligence before arXiv:** follow citation trails of the two
+  papers above; search "nucleus" + dense/regular element variants;
+  consider writing to Citkin directly.
 - **Wolfram track: closed.** `aperture-scaling.wl` rerun in Wolfram
   Cloud 2026-08-12: enumerations match the pre-registered table,
   product law 15/15, latency 8/8 CONFIRMED, closed form EXACT on

@@ -670,9 +670,26 @@ Findings, in order of importance:
   `aperture_six_complete`, `lean/.../Examples/ApertureAnchors.lean`).
   Both proofs use the factorization lemma to collapse the search
   to componentwise pairs before `decide`; axiom audit clean (no
-  `native_decide`, no `sorry`). Steps 2–3 of the closed form
-  (coordinate-locality, chain counts) remain the named next
-  formalization step (paper §5, Theorem 5.1).
+  `native_decide`, no `sorry`). **Steps 2–3 kernel-checked
+  2026-08-14** (`lean/.../Lattice/ApertureClosedForm.lean`):
+  coordinate-locality of world density/regularity on products
+  (`worldDense_prodMap_iff`, `worldRegular_prodMap_iff`,
+  `nucleusProdEquiv`), the chain-nucleus classification — nuclei
+  on any finite bounded chain are exactly the subsets containing
+  ⊤ (`nucleusEquivTopSets`) — and all four chain counts as
+  powerset cardinalities (`card_nuclei_chain`,
+  `card_worldDense_add`, `card_worldRegular_add`,
+  `card_worldDenseRegular`, the D/R counts in subtraction-free
+  additive form). The inclusion-exclusion assembly
+  (`aperture_card_add_eq`) is proved for a product of *any* two
+  finite Heyting algebras, and the instantiation
+  `aperture_closed_form_exponents` states Theorem 5.1 verbatim on
+  Fin(a+1) × Fin(b+1) — every two-prime divisor lattice, every
+  kernel, mixed included — with a `decide`d Div12 cross-check
+  (formula = 1, matching `aperture_two_complete`). Axiom audit
+  clean on the whole chain. The closed form is therefore [K] on
+  two-prime lattices; the r > 2 iteration of the binary assembly
+  is the remaining formalization step (paper §5, Theorem 5.1).
 - **The characterization, predicted then confirmed 10/10**
   (sweep 2026-08-11, prediction stated before the run): on a
   divisor lattice, an element is latent **iff every prime

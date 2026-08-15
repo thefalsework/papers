@@ -587,6 +587,50 @@ the sweep discipline: when brute force stalls, the response is
 not a bigger budget but a theorem that shrinks the space — and
 here the theorem needed was the one the paper had already derived.
 
+## V2 addendum (August 2026, part 6): the closed form goes [K]
+
+The follow-up session (2026-08-14) formalized Steps 2–3 of Theorem
+5.1 and assembled them (`Lattice/ApertureClosedForm.lean`), making
+the closed form kernel-checked on all two-prime divisor lattices.
+Three design decisions worth recording:
+
+1. **Counts stay in ℕ until the last moment, then move to ℤ.** The
+   paper's per-chain counts D = (2^b − 1)·2^u + 1 and
+   R = 2^u + 2^b − 1 contain subtractions that are treacherous in ℕ.
+   The chain-count theorems are stated *additively*
+   (`card_worldDense_add`: D + 2^u = 2^n + 1; `card_worldRegular_add`:
+   R + 1 = 2^u + 2^b), each an exact identity of naturals, and only
+   the final assembled statement (`aperture_closed_form_two_chains`)
+   casts to ℤ, where `linear_combination` closes the polynomial
+   identity. No count is ever a difference that could silently
+   truncate.
+
+2. **Each proof layer is an equivalence, not just a cardinality.**
+   Nuclei on a chain ≃ top-sets (`nucleusEquivTopSets`), nuclei on a
+   product ≃ pairs (`nucleusProdEquiv`), predicate-constrained nuclei
+   ≃ predicate-constrained top-sets (`nucleusCountEquiv`). Counting
+   is then `Fintype.card_congr` plus powerset arithmetic — the
+   combinatorics never re-proves the structure theory.
+
+3. **Instance discipline on products.** The one genuinely Lean-side
+   trap: a locally declared `DecidableLE (A × B)` instance in the
+   assembly section produced card terms *syntactically different*
+   from the ones in the instantiation section (which used Mathlib's
+   global product instance), and the final ring step failed on what
+   printed as `↑card − ↑card = 0`. Deleting the local instance so
+   both sections synthesize the same global one fixed it. Corollary
+   discipline: never declare a local instance that a global one
+   already covers.
+
+The assembly (`aperture_card_add_eq`) is deliberately proved for a
+product of any two finite *Heyting algebras*, not chains — the
+inclusion-exclusion needs nothing chain-specific — so the r > 2
+iteration and any future non-chain factors reuse it unchanged. The
+Div12 cross-check closes the loop: the formula, evaluated by
+`decide`, returns 1 on the kernel of Div12's exponent lattice,
+agreeing with the independently proved `aperture_two_complete` —
+two [K] results, derived by different routes, meeting at one number.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a
