@@ -120,6 +120,35 @@ remaining manual step.
   all 79 elements (56 zero-aperture cancellations included).
   Recorded in the README scaling section and closed-form bullet.
 
+## Status update, 2026-08-16
+
+- **New preprint drafted: `preprints/hearing/paper.md`** ("Hearing at
+  a Blur") — the cognitive hypothesis paper. States Hypothesis H:
+  settled auditory attention (metrical entrainment) acts on Div(n) as
+  a nucleus, decomposed into three independently falsifiable axioms
+  (H1 inflation / H2 idempotence / H3 meet-preservation as perceptual
+  laws). Introduces grade **[H]** (falsifiable empirical hypothesis,
+  untested) alongside the existing five. Transfers, conditional on H:
+  finite hearing spaces (8 for Div12, 16 for Div36), fragility
+  (Result 4.1), and latency as the strong prediction — organization
+  in-principle closed to full attention, open to exactly two
+  computable hearings. Locates H against Lerdahl–Jackendoff (1983),
+  Jones–Large (1999), London (2004), Bregman (1990): components all
+  known, the algebraic package unasked. §6 gives a pre-registrable
+  latency-detection design (36-pulse material, entrainment-primed
+  conditions, square-free 30-pulse structural control, predictions
+  P1–P5) with failure semantics mapped to axioms. Stimulus
+  construction (realizing the level-6 four-fold acoustically) flagged
+  [O] as the hard step. Bach (hemiola, BWV 645, augmentation) used as
+  illustration, graded [A], explicitly not evidence.
+- **Companion tooling:** interactive worksheet canvas (Div12/Div36
+  hearings, verdicts, closed-form panel) with click-layer
+  sonification — one layer per registered grid, coarse low/loud,
+  fine high/soft; doubles as the stimulus-generation spec for §6.
+  Verified against the Lean anchors before embedding
+  (`.scratch_worksheet_check.mjs`, brute-force nuclei from axioms +
+  per-chain verdict cross-check, zero mismatches).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
