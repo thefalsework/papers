@@ -149,6 +149,59 @@ remaining manual step.
   (`.scratch_worksheet_check.mjs`, brute-force nuclei from axioms +
   per-chain verdict cross-check, zero mismatches).
 
+## Tomorrow (2026-08-17): write the study — the positions casework
+
+The third companion is drafted next: **the four positions of the
+temperament commitment, one work per cell, fully worked** — the
+cultural wager alongside the mathematical (aperture) and perceptual
+(hearing) papers. Suggested location: `preprints/positions-casework/`
+(or `papers/` if it stays essay-register). It can now stand on
+Bach-at-the-Kernel v0.3 §4 instead of rebuilding the aperture layer.
+
+Structure agreed in session 2026-08-16:
+
+1. **Kernel and dictionary, committed once.** Kernel = the 12-EDO
+   temperament commitment; the work→element dictionary stated up
+   front, [A], defended per case. The 4-cell theorem's exclusivity is
+   the discipline: one cell per work *per committed reading*; arguing
+   a different cell requires changing the reading and defending the
+   change.
+2. **Four case studies, one per cell, each with its falsification
+   condition stated** (what would force a different cell under the
+   same reading):
+   - Infrastructure — *Well-Tempered Clavier* (load-bearing
+     demonstration from inside the commitment);
+   - Distribution — the common-practice modulation system /
+     enharmonic pivot practice (the shakiest chair; say so);
+   - Exploitation — *Giant Steps* (the major-third cycle as
+     equal-temperament surplus; the symmetry exists only in 12-EDO —
+     mining the residue), with blues intonation as the other corner;
+   - Refusal — Partch (43-tone just intonation; nearly self-evident,
+     say so), Johnston / La Monte Young as secondary witnesses.
+3. **Fragility profiles — the new instrument.** For each work, not
+   just "which cell" but "under which of the eight hearings does its
+   cell survive": Refusal needs the dense half alive, Exploitation
+   the regularity gap, so the four works have *different computable
+   collapse profiles*. Wire to the actual Div12 aperture data
+   (Ap(kernel) = {identity} [K] bounds everything: at full blur-depth
+   all placements die together; the profiles differ in *how* they
+   die — dense-side vs regular-side, per the worksheet verdicts).
+4. **Honesty apparatus:** Tymoczko's standing skepticism (does the
+   comma still actively matter on fixed-tuning instruments) logged in
+   the paper, not smoothed; the resolution-dependence finding (Paper
+   2 §3.7, 21% alignment) cited as measured cost; grades throughout
+   ([K] the partition/aperture facts, [A] every placement, no
+   quiet upgrades).
+5. **Feed-forward:** the fragility profiles double as the epistemic
+   paper's T2/T3 theses running on real cultural material — this
+   study is evidence infrastructure for the epistemology, not a
+   detour from it.
+
+Also pending from this weekend, lower priority: the epistemic reading
+paper (`preprints/epistemic/` — grain-of-description dictionary,
+T1–T4, statistical-mechanics latency case study); the r > 2 Lean
+iteration; pre-arXiv due diligence (2026-08-15 entry).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
