@@ -20,6 +20,21 @@ namespace-internal) import, down-sets as elements, coarse-grainings as nuclei. T
 study asks whether the four-position / aperture machinery, used as a measuring
 instrument on this data, detects anything a simpler statistic does not.
 
+## Setup (one step; no Lean install required)
+
+The scripts read Mathlib *source text* from `lean/.lake/packages/mathlib`, which is
+not tracked by this repository. Requirements: Node ≥ 18 (no npm packages) and git.
+Fetch the pinned corpus with:
+
+```bash
+git clone https://github.com/leanprover-community/mathlib4 lean/.lake/packages/mathlib
+git -C lean/.lake/packages/mathlib checkout 1fb6b28816d41e7b81bc0109124888c77ece34f9
+```
+
+This is the same revision the repository's `lean/lake-manifest.json` pins, so a
+Lean user who has already run `lake build` in `lean/` needs nothing extra. The
+clone also provides the git history that script 06 extracts snapshots from.
+
 ## The scripts, in narrative order
 
 Run each from the repository root: `node mathlib-study/NN-name.mjs`.

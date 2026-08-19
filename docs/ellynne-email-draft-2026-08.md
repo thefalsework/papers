@@ -7,21 +7,19 @@ Stephen was cc'd). Pre-send checklist at bottom.*
 
 ---
 
-**Subject:** Re: [thread] — the deferred question is answered: the method produced a
-new invariant, and its first measurement is of mathematics itself
+**Subject:** unchanged — reply-all on the May thread with its subject intact
+(threading is the asset; the hook goes in the opening line, not the subject)
 
 ---
 
 Dear Ellynne (cc Stephen),
 
-In May you asked four queries, and pressed a fifth we honestly deferred: can the
-method alter itself — produce new formal distinctions that affect subsequent
-analyses? This is the reply to that question. The four queries now run on a
-machine-fed corpus (V2 notebook linked below; the V1 hand-authored limitation is
-removed). But the deferred question got the better answer, and it arrived in a form
-none of us specified: the method produced a new computable invariant, the invariant
-became a measuring instrument, and the instrument's first result is a measurement of
-mathematics itself.
+In May you asked four queries and pressed a fifth we deferred: can the method
+produce new formal distinctions that alter subsequent analyses? It has. The four
+queries now run on a machine-fed corpus (V2 notebook linked below; the V1
+hand-authored limitation is removed) — and the deferred question got the better
+answer: the method produced a new computable invariant, the aperture, whose first
+act as an instrument was to measure mathematics itself.
 
 **The short version, in your house's language.** Observer theory, in the static
 case, became exactly countable. Take any finite dependency record — the frozen
@@ -47,33 +45,42 @@ every test pre-registered in the scripts' headers before first run:
   exists at all, is visible only to a few specific coarse observers — apertures
   roughly 18× narrower than degree-preserving randomizations of the same graph, an
   effect four simple graph invariants fail to explain (matched-null comparison).
-- **Latency is real**: most measured kernels have *no* four-position structure at
-  full resolution and acquire it only inside proper coarse-grained worlds. Structure
-  that exists only for the observer who ignores the right things — not hard to see
-  at full detail, but absent there, provably.
-- **Consolidation has an arrow**: over three years of git history, every namespace
-  trends the same way — latency rising, apertures narrowing. Young material is born
-  thin, sprawls while under construction, then consolidates and goes opaque. Stated
-  in your terms: a real computation record, as it grows, measurably manufactures
-  observer-scarcity. Irreducibility, viewed statically, is the progressive
-  disappearance of coarse observers who can still see structure — and we watched a
-  real system do it.
+- **Latency is real**: on the pre-registered 18-module cone, 11 of 18 principal
+  kernels have *no* four-position structure at full resolution and acquire it only
+  inside proper coarse-grained worlds (all 262,144 worlds enumerated per kernel).
+  Structure that exists only for the observer who ignores the right things — not
+  hard to see at full detail, but absent there, provably.
+- **Consolidation has a direction — stated with its control gap**: across six
+  git-history checkpoints (2023–2026), all six pre-registered trends (three
+  namespaces × two metrics) point the same way — latency rising, apertures
+  narrowing (Order strongest: ρ = +0.94 / −0.89). Unlike the cross-sectional
+  result, these trends have no per-snapshot randomization control; "any accreting
+  DAG narrows" is a live null we have not excluded, and excluding it is precisely
+  the joint question we propose below. The reading we grade [A] and offer anyway,
+  because it is why we care: a growing computation record appears to manufacture
+  observer-scarcity — irreducibility, viewed statically, as the progressive
+  disappearance of coarse observers who can still see structure.
 
-**And the recursion closed.** Stephen's January question — what happens under
-recursive self-application? — got a literal answer we did not plan. The first
-corpus the instrument measured contains the very files its own theorems are
-kernel-checked against: `Mathlib.Order.Heyting.Basic` appears among the measured
-cones, and the four-position structure around the Heyting algebra development
-itself turns out to be invisible at full resolution, open only under a narrow,
-exactly-computed set of coarse hearings. The method, applied to the public record
-of mathematics, measured the mathematics it is made of — and found that record
-hides its own structure from any observer who refuses to blur.
+**And the recursion closed — enjoyably, not evidentially.** Stephen's January
+question — what happens under recursive self-application? — got a literal answer
+we did not plan. The first corpus the instrument measured contains the very files
+its own theorems are kernel-checked against: `Mathlib.Order.Heyting.Basic` appears
+among the measured cones. We should say plainly that this is a consequence of
+corpus selection, not a coincidence — we measured the Order namespace, so the
+Heyting development was always going to be in frame — and we report it as a
+pleasure rather than a proof. But the content is real: the four-position structure
+around the Heyting algebra development itself is invisible at full resolution,
+open only under a narrow, exactly-computed set of coarse hearings. The method,
+applied to the public record of mathematics, measured the mathematics it is made
+of — and that record hides its own structure from any observer who refuses to
+blur.
 
 **Discipline, so the claims stay auditable.** Every claim carries a grade
 ([K] kernel-checked in Lean against Mathlib, [C] classical and cited, [computed]
 exhaustive finite computation, [A] interpretive). The observer census is [C], the
 pocket criterion and chain closed form are [K], the Mathlib results are [computed]
-with seeded, pre-registered nulls. The record includes two predictions of mine the
+with seeded, pre-registered nulls, and the observer-scarcity reading is [A],
+tagged where it appears above. The record includes two predictions of mine the
 instrument overruled in a single day — one in each direction — and one appealing
 hypothesis (that flat regions are maintained definitional interfaces) killed by its
 own pre-registered test three hours after I proposed it. The static/temporal
@@ -87,15 +94,20 @@ the natural joint question.
 - The mathematics (aperture invariant, closed form, latency; Lean artifacts cited
   per-claim): `preprints/aperture/paper.md`
 - The V2 machine-fed run answering the May queries:
-  `wolfram/results/wolfram-cloud-run-2026-08-11-v2.1.nb`
+  `wolfram/results/wolfram-cloud-run-2026-08-11-v2.0.nb` (the aperture-scaling
+  verification run is `...2026-08-12-v2.2.nb` in the same directory)
 
-**The ask.** A working session with the group. We bring the census, the criterion,
-and the Mathlib record; the question on the table is whether the static pocket
-census can be pushed toward your dynamical one — under what growth models does
-aperture narrowing become a theorem rather than a measurement. If the answer is
-yes, observer theory gets its first fully computable corner; if no, we will have
-found exactly where the static shadow stops tracking the temporal thing, which is
-worth knowing precisely.
+**The ask.** Whatever engagement format suits the group. Everything here is built
+to be examined without us in the room: the scripts run from the repo in minutes,
+the pre-registrations are inline, and the Lean artifacts are kernel-checked — the
+claims audit rather than requiring presentation. Written questions and an async
+exchange work well; if the group decides it earns one, a working session on the
+question we think is jointly interesting: under what growth models does aperture
+narrowing become a theorem rather than a measurement. If the answer is yes,
+observer theory gets its first fully computable corner; if no, we will have found
+exactly where the static shadow stops tracking the temporal thing, which is worth
+knowing precisely. We are equally glad simply to hear where the group thinks this
+is wrong.
 
 Warm regards,
 Chris Brink
@@ -106,13 +118,28 @@ Chris Brink
 
 - [x] Repo pushed through commit `9730d02` (2026-08-19) — mathlib-study/ and
       citations are live on origin/main.
-- [ ] Verify the V2 notebook filename/link renders on GitHub (or attach the .nb).
+- [x] Notebook link corrected to v2.0 (the May-queries run; v2.1 was the comma/
+      aperture prototype). Note: GitHub shows .nb files as raw/binary — recipients
+      download and open in Mathematica, which is fine for this audience; attach the
+      .nb to the email as a courtesy anyway.
+- [x] Verified 2026-08-19: repo is public (fetches unauthenticated); all three
+      linked paths exist on origin/main; scripts are Node-builtins-only; README now
+      has a no-Lean-required setup section (git clone + checkout of the pinned rev)
+      so the corpus fetch is one command.
 - [ ] Confirm Ellynne + Stephen addresses from the May thread; reply-all on that
       thread, do not start a new one (thread history is an asset).
 - [ ] Optional: Zenodo DOI of the current state for a citable timestamp before
       sending (cheap; one session).
-- [ ] Read once aloud for length; if trimming, cut from "The measurement" bullets,
-      never from the recursion paragraph or the discipline paragraph.
+- [ ] Read once aloud for length; if trimming, cut from the opening paragraph —
+      the measurement bullets are the only part that could not have been written
+      in May. Never cut the recursion caveat or the discipline paragraph.
+- [ ] Send only the letter body (greeting through signature). The internal note
+      below and this checklist MUST NOT be pasted into the mail.
+- [ ] If a session materializes: prep is one evening — the worksheet canvas as the
+      live demo, the seven scripts as the run-order, and a one-page [O] list as the
+      "here is where we want help" handout. Nervousness note: the format that
+      works is driving the demos and letting the artifacts answer; every claim's
+      grade is the answer to "how sure are you."
 
 ## Why the hook is shaped this way (internal note, not for sending)
 
