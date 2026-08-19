@@ -18,8 +18,9 @@ In May you asked four queries and pressed a fifth we deferred: can the method
 produce new formal distinctions that alter subsequent analyses? It has. The four
 queries now run on a machine-fed corpus (V2 notebook linked below; the V1
 hand-authored limitation is removed) — and the deferred question got the better
-answer: the method produced a new computable invariant, the aperture, whose first
-act as an instrument was to measure mathematics itself.
+answer: on top of a classical census we rediscovered and then located in the
+literature, the method produced a new computable invariant — the aperture — whose
+first act as an instrument was to measure mathematics itself.
 
 **The short version, in your house's language.** Observer theory, in the static
 case, became exactly countable. Take any finite dependency record — the frozen
@@ -45,15 +46,18 @@ every test pre-registered in the scripts' headers before first run:
   exists at all, is visible only to a few specific coarse observers — apertures
   roughly 18× narrower than degree-preserving randomizations of the same graph, an
   effect four simple graph invariants fail to explain (matched-null comparison).
-- **Latency is real**: on the pre-registered 18-module cone, 11 of 18 principal
-  kernels have *no* four-position structure at full resolution and acquire it only
-  inside proper coarse-grained worlds (all 262,144 worlds enumerated per kernel).
-  Structure that exists only for the observer who ignores the right things — not
-  hard to see at full detail, but absent there, provably.
+- **Latency is real** (pilot scale, complete census): on the one cone
+  pre-registered before any run, 11 of 18 principal kernels have *no*
+  four-position structure at full resolution and acquire it only inside proper
+  coarse-grained worlds — a complete enumeration of all 262,144 worlds per
+  kernel, not a sample of a large object but an exhaustive census of a small
+  one. Structure that exists only for the observer who ignores the right
+  things — not hard to see at full detail, but absent there, provably.
 - **Consolidation has a direction — stated with its control gap**: across six
   git-history checkpoints (2023–2026), all six pre-registered trends (three
   namespaces × two metrics) point the same way — latency rising, apertures
-  narrowing (Order strongest: ρ = +0.94 / −0.89). Unlike the cross-sectional
+  narrowing (Order strongest: Spearman ρ = +0.94 / −0.89 on six checkpoints —
+  n = 6, directional evidence, not significance). Unlike the cross-sectional
   result, these trends have no per-snapshot randomization control; "any accreting
   DAG narrows" is a live null we have not excluded, and excluding it is precisely
   the joint question we propose below. The reading we grade [A] and offer anyway,
@@ -97,12 +101,12 @@ the natural joint question.
   `wolfram/results/wolfram-cloud-run-2026-08-11-v2.0.nb` (the aperture-scaling
   verification run is `...2026-08-12-v2.2.nb` in the same directory)
 
-**The ask.** Whatever engagement format suits the group. Everything here is built
-to be examined without us in the room: the scripts run from the repo in minutes,
-the pre-registrations are inline, and the Lean artifacts are kernel-checked — the
-claims audit rather than requiring presentation. Written questions and an async
-exchange work well; if the group decides it earns one, a working session on the
-question we think is jointly interesting: under what growth models does aperture
+**The ask.** Everything here is built to be examined without us in the room: the
+scripts run from the repo in minutes, the pre-registrations are inline, and the
+Lean artifacts are kernel-checked — the claims audit rather than requiring
+presentation. Written questions and an async exchange work well; if the group
+decides it earns one, a working session on the question we think is jointly
+interesting: under what growth models does aperture
 narrowing become a theorem rather than a measurement. If the answer is yes,
 observer theory gets its first fully computable corner; if no, we will have found
 exactly where the static shadow stops tracking the temporal thing, which is worth
@@ -128,8 +132,11 @@ Chris Brink
       so the corpus fetch is one command.
 - [ ] Confirm Ellynne + Stephen addresses from the May thread; reply-all on that
       thread, do not start a new one (thread history is an asset).
-- [ ] Optional: Zenodo DOI of the current state for a citable timestamp before
-      sending (cheap; one session).
+- [ ] REQUIRED before sending (promoted 2026-08-19): Zenodo DOI of the current
+      state. It timestamps priority on the aperture invariant before handing the
+      construction to a well-resourced group, and it is the first item on the
+      publication record arXiv is now demanding. One session; `.zenodo.json` is
+      already at the repo root.
 - [ ] Read once aloud for length; if trimming, cut from the opening paragraph —
       the measurement bullets are the only part that could not have been written
       in May. Never cut the recursion caveat or the discipline paragraph.
