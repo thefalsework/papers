@@ -15,19 +15,23 @@ the asset; the hook goes in the opening line, not the subject)
 
 Dear Ellynne (cc Stephen),
 
+The question deferred in May is repaid: the method produced a new computable
+invariant — the aperture — and its first act as an instrument was to measure
+mathematics itself.
+
 In May you drew a line between recursive commentary and recursive computation.
 The prototype we returned the next day ran your four queries as named functions
 over a typed symbolic algebra, and deferred your deepest one — schema mutation
 under self-application, new formal distinctions that affect subsequent
 analyses — with a sentence I would still stand behind: demonstrating that "is
 research, not prototype, and I would rather acknowledge the gap than overclaim."
-This letter repays the deferral: the research happened. The four queries now run
-on a machine-fed corpus (V2 notebook linked below; the hand-authored limitation
-named in May is removed) — and the deferred question got a better answer than
-the `RecursiveSchemaUpdate` sketch in the May notebook's Section 7 imagined: on
-top of a classical census we rediscovered and then located in the literature,
-the method produced a new computable invariant — the aperture — whose first act
-as an instrument was to measure mathematics itself. It has crossed your line.
+The research happened. The four queries now run on a machine-fed corpus (V2
+notebook linked below; the hand-authored limitation named in May is removed) —
+and the deferred question got a better answer than the `RecursiveSchemaUpdate`
+sketch in the May notebook's Section 7 imagined: on top of a classical census we
+rediscovered and then located in the literature, the method produced an
+invariant your specification did not anticipate and could not have — it emerged
+from the mathematics, not the schema. It has crossed your line.
 
 **The short version, in your house's language.** Observer theory, in the static
 case, became exactly countable. Take any finite dependency record — the frozen
