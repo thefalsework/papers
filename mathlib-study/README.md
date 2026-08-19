@@ -40,8 +40,16 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
    11/18 principal kernels are latent (all 262,144 worlds enumerated per kernel).
    Consequence for the mathematics: **Ap(a) = { S ⊆ P : a∩S ordinary in Down(S) }**
    on any finite distributive lattice — the paper's open generalization problem
-   reduced to sub-poset combinatorics. (The finite-frames-have-only-spatial-
-   sublocales fact behind this is expected to be classical; citation hunt logged.)
+   reduced to sub-poset combinatorics. (The classification behind this is
+   classical, located 2026-08-19: Simmons, "Spaces with Boolean assemblies",
+   Colloq. Math. 43 (1980), Thm 4.5 — N(ΩS) is Boolean iff S is scattered;
+   poset form in Bezhanishvili–Bezhanishvili–Carai–Morandi et al., "The Frame
+   of Nuclei of an Alexandroff Space", Order 37 (2020), arXiv:1906.03640 —
+   N(O S) Boolean iff S noetherian, hence for finite P the assembly is the
+   Boolean algebra 2^|P| and nuclei are exactly the subspace nuclei. Algebraic
+   condition: Beazer–Macnab, Colloq. Math. 41 (1979). Grade of script 02's
+   Part A is therefore [C]-verified-[computed]; the aperture reduction built
+   on it appears to be new.)
 3. **`03-null-degree-preserving.mjs`** — is the latency profile explained by cone
    geometry? Null: 60 degree-preserving double-edge-swap rewires of the real graph,
    identical pipeline. Pre-registered expectation was that the finding would

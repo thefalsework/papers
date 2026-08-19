@@ -405,8 +405,57 @@ non-monotone cohort life cycle. It does NOT get the designed-pockets
 architecture — that reading lasted three hours, which is what
 pre-registration is for.
 
-Next when this thread resumes: (1) find the textbook citation for
-the finite-sublocale fact and restate the reduction as a lemma;
+**Citation hunt + novelty scan (same day): all three questions
+resolved.**
+
+1. *The subspace-nucleus correspondence is classical, precisely
+   located.* Simmons, "Spaces with Boolean assemblies", Colloq.
+   Math. 43 (1980), Thm 4.5: for a T0 space, the assembly N(ΩS) is
+   Boolean iff S is scattered. Poset/Alexandroff form: Bezhanishvili
+   et al., "The Frame of Nuclei of an Alexandroff Space", Order 37
+   (2020), arXiv:1906.03640 — N(O S) Boolean iff S is noetherian.
+   Finite posets are noetherian, so the assembly is Boolean on 2^|P|
+   atoms = our subsets-of-P census; Beazer–Macnab (Colloq. Math. 41,
+   1979) has the algebraic condition. Part A of script 02 regrades
+   [C]; the aperture reduction Ap(a) = {S : a∩S ordinary in Down(S)}
+   built on top appears unclaimed — the intersection (ordinariness
+   relativized to worlds + counting) remains ours, consistent with
+   the paper's earlier novelty scan.
+2. *Nearest empirical neighbor exists and is brand-new:* "The
+   Network Structure of Mathlib" (arXiv:2604.24797, 2026; Toronto/
+   UCLA/UCL/Google/Rutgers; dataset MathNetwork/MathlibGraph on
+   HuggingFace — 308k declarations, 8.4M edges, module + declaration
+   + namespace layers, historical commit pinned). Pure network
+   science: PageRank, betweenness, Louvain, DAG layers. Zero
+   Heyting/locale/nucleus content (grepped). Our instrument is
+   orthogonal (their toolkit cannot express "verdict inside a
+   coarse-grained world"), their dataset is directly usable for a
+   declaration-level rerun, and the authors are candidate empirical
+   collaborators.
+3. *Wolfram alignment is exact and the gap is real:* the Wolfram
+   Institute's own 2026 survey (Wiles, "Computational Metaphysics")
+   names "identifying reducible pockets in the ruliad" as a key open
+   problem; observer theory (Wolfram 2023 essay, 2026 metaphysics
+   essay) remains informal — no observer census, no computable
+   pocket criterion anywhere in that ecosystem. Our offering maps
+   1:1: complete finite observer census (Boolean assembly, [C]),
+   computable pocket criterion (ordinariness inside the world, [K]
+   bridge), closed form on chains ([K]), null-tested empirics on
+   real computation records ([computed], mathlib-study/). No prior
+   art found applying nuclei to dependency graphs (word-collisions
+   only: a localic-measure-theory blueprint graph, a Varela/ECI
+   self-reference project).
+
+Collaboration artifact decision pending: a working paper pitched at
+the Wolfram Institute framing mathlib-study as "a computable
+observer census and pocket-of-reducibility criterion for static
+computation records, demonstrated on Mathlib with pre-registered
+nulls" — their named open problem, our instrument, no publication
+gate required.
+
+Next when this thread resumes: (1) restate the reduction as a lemma
+with the Simmons/Bezhanishvili citations (done in mathlib-study
+README; propagate to the aperture paper when it next opens);
 (2) mine the Part C aperture counts (284, 1020×2, 3892, 4356, 5344,
 5888, 5916, 6780, 7728, 2^15) for the shape of the general formula —
 these are exact values on a real 18-point poset, ideal test data;
