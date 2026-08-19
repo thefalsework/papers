@@ -168,6 +168,14 @@ Six papers in total. Papers 1–5 form a coherent research programme on structur
 
 **Source.** [`bach-at-the-kernel.md`](bach-at-the-kernel.md)
 
+### Where the Error Goes (speculative essay — off the formal record by charter)
+
+**Full title.** *Where the Error Goes: A Speculative Extension.* (August 2026)
+
+**Register.** The ungraded wing, and deliberately so: the essay's own epigraph is "No grades, no proofs, no claims on the formal record. Everything below is invention." It borrows the *shape* of the kernel-checked results (the four positions, the Boolean collapse, fragility and latency, the aperture, the tritone-ear) without borrowing their warrant, and runs them loose across practices, institutions, selves, and machine observers. Nothing in it is citable as a result; its Coda states the correct relationship ("the sound those results make when they get loose in a head"). Preserved here for the timestamp and because the discipline of keeping one explicitly ungraded document is itself part of the grading architecture: the boundary is legible only if both sides of it exist in the record.
+
+**Source.** [`where-the-error-goes.pdf`](where-the-error-goes.pdf)
+
 ### Position-Taking from the Kernel Up (bedrock-to-interpretation map)
 
 **Full title.** *Position-Taking from the Kernel Up: The Four-Cell Partition from Heyting Bedrock to Bach, Schoenberg, and Beckett.* (v0.1, June 2026)
