@@ -1,6 +1,6 @@
 {
   "title": "The FalseWork Papers",
-  "description": "An open research programme on kernels, commas, and the structural limits of generative systems. Six CC-BY-4.0 papers with an open validation queue and a Lean 4 formalization target. Papers 1-5 form the core series; paper 6 is an exploratory practitioner-outcome companion. The repository maintains authoritative Markdown sources, per-paper release archives, public validation items, and a correction architecture described in Paper 2.",
+  "description": "An open research programme on kernels, commas, and the structural limits of generative systems. Six CC-BY-4.0 papers with an open validation queue, plus a preprint series and a Lean 4 formalization with kernel-checked artifacts. This release adds the aperture programme: a preprint defining the aperture of a distinction (observer-relative ordinariness in Heyting algebras, with latently ordinary elements and a closed-form aperture count on divisor lattices, the central steps kernel-checked in Lean 4 against Mathlib4), and an empirical study applying the aperture instrument to Mathlib's import structure (seven pre-registered scripts: narrow-aperture cones vs degree-preserving nulls, latency in the wild, invariant deflation tests, and a three-year git-history consolidation analysis). The repository maintains authoritative Markdown sources, per-paper release archives, public validation items, Wolfram Language verification runs, and a correction architecture described in Paper 2.",
   "creators": [
     {
       "name": "Brink, Chris",
@@ -11,6 +11,16 @@
     "kernels and commas",
     "philosophy of mathematics",
     "category theory",
+    "Heyting algebra",
+    "nucleus",
+    "locale theory",
+    "pointfree topology",
+    "aperture invariant",
+    "observer theory",
+    "coarse-graining",
+    "formalized mathematics",
+    "Mathlib",
+    "dependency graphs",
     "distinction operation",
     "Spencer-Brown",
     "epistemic dependency",
