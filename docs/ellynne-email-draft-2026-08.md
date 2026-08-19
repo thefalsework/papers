@@ -7,23 +7,27 @@ Stephen was cc'd). Pre-send checklist at bottom.*
 
 ---
 
-**Subject:** unchanged — reply-all on the May thread with its subject intact
-(threading is the asset; the hook goes in the opening line, not the subject)
+**Subject:** unchanged — reply-all on the existing thread: "Re: Fwd: Structural
+analysis of NKS answers with data and recursive analysis attached" (threading is
+the asset; the hook goes in the opening line, not the subject)
 
 ---
 
 Dear Ellynne (cc Stephen),
 
-In May you drew a line between recursive commentary and recursive computation,
-and pressed the question we deferred: can the method do more than describe
-itself — can it produce new formal distinctions that affect subsequent analyses?
-It has crossed your line. The four example queries from your prototype
-specification now run on a machine-fed corpus (the executable notebook you asked
-for is linked below; the V1 hand-authored limitation is removed) — and the
-deferred question got the better answer: on top of a classical census we
-rediscovered and then located in the literature, the method produced a new
-computable invariant — the aperture — whose first act as an instrument was to
-measure mathematics itself.
+In May you drew a line between recursive commentary and recursive computation.
+The prototype we returned the next day ran your four queries as named functions
+over a typed symbolic algebra, and deferred your deepest one — schema mutation
+under self-application, new formal distinctions that affect subsequent
+analyses — with a sentence I would still stand behind: demonstrating that "is
+research, not prototype, and I would rather acknowledge the gap than overclaim."
+This letter repays the deferral: the research happened. The four queries now run
+on a machine-fed corpus (V2 notebook linked below; the hand-authored limitation
+named in May is removed) — and the deferred question got a better answer than
+the `RecursiveSchemaUpdate` sketch in the May notebook's Section 7 imagined: on
+top of a classical census we rediscovered and then located in the literature,
+the method produced a new computable invariant — the aperture — whose first act
+as an instrument was to measure mathematics itself. It has crossed your line.
 
 **The short version, in your house's language.** Observer theory, in the static
 case, became exactly countable. Take any finite dependency record — the frozen
@@ -82,12 +86,13 @@ applied to the public record of mathematics, measured the mathematics it is made
 of — and that record hides its own structure from any observer who refuses to
 blur.
 
-**Your tests, taken literally.** You asked whether the removal test could be made
-computational rather than interpretive: a nucleus is exactly a lawful removal
-operator — it deletes resolution rather than text, and cannot be applied
-tendentiously because the census enumerates every one — and the aperture of a
-kernel is the complete answer to which removals change the predicted structural
-profile. You asked whether two objects could be compared by transformations over
+**Your tests, taken literally.** The May prototype answered these inside its
+small corpus; the aperture answers them without the caveat. You asked whether the
+removal test could be made computational rather than interpretive: a nucleus is
+exactly a lawful removal operator — it deletes resolution rather than text, and
+cannot be applied tendentiously because the census enumerates every one — and the
+aperture of a kernel is the complete answer to which removals change the
+predicted structural profile. You asked whether two objects could be compared by transformations over
 their cores rather than by prose analogy: dependency cones now compare by their
 aperture profiles — counts, not readings. And your warning that the system "risks
 remaining an interpretive apparatus that produces interesting readings" is the
@@ -113,8 +118,8 @@ the natural joint question.
   github.com/thefalsework/papers — `mathlib-study/`
 - The mathematics (aperture invariant, closed form, latency; Lean artifacts cited
   per-claim): `preprints/aperture/paper.md`
-- The executable Wolfram Language notebook your May letter specified (the four
-  example queries on a machine-fed corpus):
+- The machine-fed successor to the May prototype (your four queries, rerun on
+  the corpus that removes the V1 limitation):
   `wolfram/results/wolfram-cloud-run-2026-08-11-v2.0.nb` (the aperture-scaling
   verification run is `...2026-08-12-v2.2.nb` in the same directory)
 - Citable snapshot of everything above (release 2026.08, archived 2026-08-19):
@@ -132,8 +137,8 @@ exactly where the static shadow stops tracking the temporal thing, which is wort
 knowing precisely. We are equally glad simply to hear where the group thinks this
 is wrong.
 
-And yes to the Discord — once this thread has had first look, we will bring the
-study to the Institute community as you suggested.
+And the Discord pointer from May is taken up: once this thread has had first
+look, we will bring the study to the Institute community as you suggested.
 
 Warm regards,
 Chris Brink
@@ -152,8 +157,9 @@ Chris Brink
       linked paths exist on origin/main; scripts are Node-builtins-only; README now
       has a no-Lean-required setup section (git clone + checkout of the pinned rev)
       so the corpus fetch is one command.
-- [ ] Confirm Ellynne + Stephen addresses from the May thread; reply-all on that
-      thread, do not start a new one (thread history is an asset).
+- [x] Addresses confirmed from the sent May 4 reply: Ellynne Dec
+      <edec@wolframinstitute.org>, cc <s.wolfram@wolfram.com>, from
+      <chris@node0000.com>. Reply-all on that thread; do not start a new one.
 - [x] DONE 2026-08-19: Zenodo DOI minted — release 2026.08 archived as
       10.5281/zenodo.22016585 (concept DOI 10.5281/zenodo.19673672 unchanged).
       Priority on the aperture invariant is timestamped before the construction
@@ -164,14 +170,25 @@ Chris Brink
       in May. Never cut the recursion caveat or the discipline paragraph.
 - [ ] Send only the letter body (greeting through signature). The internal note
       below and this checklist MUST NOT be pasted into the mail.
+- [x] Thread state confirmed 2026-08-19 from the sent mail itself: her May 3
+      specification was answered May 4, 5:28 PM — V1 prototype with all four
+      queries as named functions (four-work corpus), her deepest question
+      explicitly deferred with the "research, not prototype" sentence, and the
+      `RecursiveSchemaUpdate` sketch flagged as V2 in the notebook's Section 7.
+      This letter is the SECOND reply: the deferral repaid, not a first
+      response. The opening quotes the deferral sentence verbatim and names the
+      Section 7 sketch.
 - [ ] Alignment check done 2026-08-19 against Ellynne's actual May letter: her
       "recursive commentary vs recursive computation" line is now the opening
       frame; her three operational tests (computational removal test, comparison
       by transformation, interpretive-apparatus risk) are answered in her own
       vocabulary in "Your tests, taken literally"; the V2.0 notebook is named as
       the executable prototype her letter specified; her Discord invitation is
-      accepted. Her NKS-images point is deliberately not re-litigated here — the
-      V2 corpus work is the response and the thread can pick it up if asked.
+      accepted (the May reply said "I'll look into the Discord too" — this one
+      commits). Her NKS-images point was already answered in the May reply
+      (spacetime_diagram_as_primary_evidence as a typed Mechanism in
+      cores/nks.wl, with her feedback cited in the header) — not re-litigated
+      here.
 - [ ] After sending: post the mathlib-study to the Wolfram Institute Discord
       (her invitation; community follow-through is part of the reply).
 - [ ] If a session materializes: prep is one evening — the worksheet canvas as the
