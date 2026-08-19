@@ -165,6 +165,257 @@ Erné's venue = right referees). The Citkin letter (already queued
 current aperture preprint for a DOI'd timestamp is cheap and should
 happen before the journal cycle starts.
 
+## Status update, 2026-08-19: the ordinariness gate runs on Mathlib itself
+
+First run of the four-position instrument on formalized mathematics
+(`.scratch_mathlib_gate.mjs`, untracked scratch; Mathlib pinned at
+1fb6b28816). Modeling choices pre-registered in the script header:
+namespace-internal import graph, down(x) = x's transitive imports,
+kernels = principal down-sets, pseudocomplement/double-negation in the
+down-set algebra.
+
+- **The geometry exists, and it is generic, not exceptional.**
+  Mathlib.Order: 306 modules, 0 dense / 20 regular / 286 ordinary
+  kernels. Mathlib.Topology: 658 modules, 0 dense / 11 regular / 647
+  ordinary. This *inverts* the divisor-lattice picture (109/164 empty
+  apertures): in wide sparse import posets ordinariness is the rule.
+  Honest reading: the gate alone is not the discriminating instrument
+  here; the cell-occupancy profile is.
+- **The node-empty-cell filter is sharp: 647 → 4.** In Topology,
+  exactly four ordinary kernels have a node-empty cell, and they are
+  one cluster: `Mathlib.Topology.CWComplex.Classical.*`, each with
+  Distribution = 0. Verified by hand: `CWComplex/Classical/Basic.lean`
+  imports *nothing* from Mathlib.Topology (enters via Analysis) — a
+  genuine island the instrument found mechanically. Nothing in the
+  namespace both builds on CW complexes and touches the rest of
+  Topology.
+- **Pre-registrable prediction (first forward prediction from the
+  instrument):** as Mathlib grows, the CWComplex cluster's
+  Distribution cell fills (bridging modules to Homotopy etc.) or the
+  cluster is re-founded on Topology-internal imports. Testable
+  against any future Mathlib revision by rerunning the script.
+- **Regular kernels = the classical shadow, as predicted:** the 20/11
+  gate-failures are leaf or near-isolated modules (|foundation| ≤ 3)
+  whose cone closure adds nothing — the Boolean-pocket picture
+  holding in the wild.
+- Caveats logged: namespace-internal restriction (paths leaving and
+  re-entering via other namespaces are invisible; the island reading
+  is relative to that choice); principal-kernel scope; single
+  revision, no baseline yet. Next steps if pursued: full-Mathlib
+  graph (declaration-level or module-level), aperture computation
+  (needs nuclei on general down-set algebras — the r > 2 / general
+  distributive lattice open problem, so this doubles as
+  reconnaissance for it), and a historical-revision backtest of the
+  gap prediction.
+
+## Status update, 2026-08-19 (later): subspace nuclei crack the general case; latency found in the wild
+
+Follow-up to the morning's gate run (`.scratch_subspace_nuclei.mjs`,
+untracked scratch; pre-registered header). Three results, in
+ascending order of importance:
+
+- **The subspace-nucleus correspondence [computed, likely (C)].** For
+  finite P, nuclei on Down(P) are exactly the subspace nuclei
+  j_S(A) = {p : ↓p ∩ S ⊆ A}, one per S ⊆ P, so #nuclei = 2^|P| and
+  Fix(j_S) ≅ Down(S). Verified from the axioms two independent ways
+  (fix-set enumeration on 12 posets: chains, antichains, V, Λ,
+  diamond, fence, unions, 5-pt mixed; raw enumeration of all
+  inflationary maps on the small ones). This should be classical —
+  finite frames have only spatial sublocales — so the grade target is
+  [C] with citation (Johnstone / Picado–Pultr; find the exact
+  statement before using it in print). Consequence, and it is large:
+  **the aperture problem on ANY finite distributive lattice reduces
+  to combinatorics on sub-posets**:
+      Ap(a) = { S ⊆ P : a ∩ S ordinary in Down(S) }.
+  The general closed form (the paper's named open problem) is now
+  "count the S with a∩S ordinary" — Theorem 5.1's chain counts are
+  the disjoint-union-of-chains special case.
+- **Third-way anchor check.** Down(chain2⊔chain1) ≅ Div12,
+  Down(chain2⊔chain2) ≅ Div36; aperture sizes computed by subset
+  enumeration match the closed form on all 15 elements, Ap(2) =
+  {identity} on Div12, and the Div36 latent pair comes out as
+  S = {p1,p2,q2} and {p2,q1,q2} — exactly the even-grid and
+  threes-grid hearings of the kernel-checked anchors. The closed form
+  has now survived a representation it was not derived in.
+- **Latency exists in formalized mathematics [computed].** Sub-poset:
+  the 18-module foundation cone of Mathlib.Order.Antisymmetrization
+  (pre-registered pick: largest foundation ≤ 18; Mathlib pinned
+  1fb6b28816). All 2^18 = 262,144 worlds enumerated per kernel.
+  11/18 principal kernels are LATENT: dense at identity (inside one
+  cone every foundation shares the base, so ¬a = ∅ at full
+  resolution) but ordinary in thousands of proper worlds (aperture
+  fractions 0.1%–3%). Reading: within a dependency cone, four-position
+  structure around a module exists only for observers who do NOT
+  register the common foundations. One kernel is ordinary at identity:
+  Defs.PartialOrder, with |Ap| = 32768 = 2^15 exactly — a suspiciously
+  clean count (2^(|P|−3)) that smells like the first data point of the
+  general counting theorem.
+
+**Null model result (same day, `.scratch_latency_null.mjs`): the
+latency finding SURVIVES, against the pre-registered expectation.**
+Null = 60 degree-preserving double-edge-swap rewires of the real
+Mathlib.Order DAG (forward edges wrt a fixed topological order, so
+in/out-degree sequences exact), same pre-registered cone pick, same
+analysis, seeded PRNG (20260819). The pre-registered expectation was
+that latency is generic cone geometry and Mathlib would sit in the
+null's central mass. Wrong, on every metric:
+
+    latentFrac   null 5/50/95% = .167/.278/.556   observed .611  (above all 60)
+    ordIdFrac    null 5/50/95% = .389/.556/.722   observed .056  (below all 60)
+    meanApFrac   null 5/50/95% = .186/.292/.449   observed .016  (below all 60)
+    maxApFrac    null 5/50/95% = .508/.702/.842   observed .125  (below all 60)
+
+Reading: degree-matched random cones have COMMON full-resolution
+ordinariness and WIDE apertures (structure robust, visible to many
+observers). The real Mathlib cone is the opposite: full-resolution
+structure is rare (foundations heavily shared, density generic),
+latency is elevated, and apertures are ~18x narrower than random —
+structure exists, but only for few, specific coarse-grainings. The
+degree sequence does not explain this; real formalization practice
+is doing something (consolidation through shared foundational
+modules) that the aperture instrument detects. Caveats: one cone,
+one namespace, 60 replicates (one-sided p ≈ 1/61 per metric,
+metrics correlated); replicate across namespaces and cones before
+this becomes a claim with a grade. The wrong pre-registered
+expectation is part of the record — the instrument outran the
+operator, which is what instruments are for.
+
+**Replication study (same day, `.scratch_latency_replication.mjs`):
+2 of 3 namespaces replicate; Algebra does not.** Pre-registered
+design: namespaces Order/Topology/Algebra, top-5 cones (foundation
+≤ 18) per graph, 30 degree-preserving rewires per namespace,
+criterion = latentFrac ≥ null-95 AND meanApFrac ≤ null-5 on the
+5-cone mean. Results, reported without reinterpretation:
+  - Order: REPLICATES (latentFrac .611 above all rewires; other
+    three metrics at 0th percentile). Caveat found in passing: the
+    top-5 Order cones share nearly all content (overlapping
+    foundations), so this is closer to one confirmation than five.
+  - Topology: REPLICATES (latentFrac .756 at 100th pct, ordIdFrac
+    .000 at 0th, meanApFrac at 3.3rd).
+  - Algebra: does NOT replicate. Directionally consistent
+    (percentiles 93.3 / 5.0 / 6.7 / 3.3 — all near the tails) but
+    misses both cutoffs. Post-hoc observation (flagged as such): the
+    five Algebra cones split into two regimes — three
+    narrow-aperture consolidated cones like Order/Topology, and two
+    cones (Homology.SpectralObject.HasSpectralSequence,
+    Order.Monoid.Canonical.Defs) with latent = 0, ordId ≈ .85, wide
+    apertures — i.e. cones that look like the RANDOM regime. The
+    within-namespace heterogeneity is real signal for a follow-up
+    with cone-level (not namespace-mean) statistics and
+    non-overlapping cone selection.
+Status of the claim: "real Mathlib dependency cones are
+narrow-aperture vs degree-matched null" holds in Order and Topology,
+is directionally supported but not established in Algebra, and the
+next design must fix the two flaws this run exposed (overlapping
+cones; namespace-mean masking a bimodal cone population).
+
+**Deflation test 1 (same day, `.scratch_deflation_invariants.mjs`):
+NOT deflated.** Threat tested: the narrow-aperture finding might be a
+repackaged simple graph statistic. Four pre-registered invariants per
+cone (mean pairwise foundation Jaccard J, normalized depth D, minimal
+fraction M, mean foundation fraction F), 315 cones pooled (15 real +
+300 from 20 rewires × 3 namespaces, seed 20260820). Results: all
+Spearman correlations with aperture metrics weak (best |rho| = 0.389,
+F vs meanApFrac; J — the honest-expectation favorite — essentially
+zero). Matched comparison on F: 13/15 real cones below their
+invariant-matched null median (criterion was ≥ 2/3). The two
+exceptions are exactly the two flat Algebra cones already identified
+(SpectralObject, Monoid.Canonical) — consistent with the two-regime
+picture, not a new anomaly. Deduped for overlapping cones (Order and
+Topology top-5s largely coincide): ~7/9 distinct cones below, still
+passing. Caveat: this rules out these four invariants, not all
+conceivable ones; a smarter statistic could still deflate, and we
+should keep inviting candidates. Bridge status: correspondence 4
+(aperture as static irreducibility signature, not reducible to depth
+or overlap) survives its first serious challenge. Remaining deflation
+tests, in order of danger: git-history flow (does flat material
+consolidate? kills the developmental story if not), and the
+generalized bimodality check (cone-level stats, non-overlapping
+cones, more namespaces).
+
+**Git-history flow test (same day, `.scratch_history_flow.mjs`;
+snapshots in `.scratch_mathlib_hist/`, git-archive extracts at
+2023-09/2024-03/2024-09/2025-03/2025-09 + HEAD pin):** verdict mixed
+in an informative way — P1 pass, P2 split, P3 2/3 with a named
+counterexample.
+
+- **P1 (library flow): PASS.** All six pre-registered trends point
+  the predicted way: latentFrac rises / meanApFrac falls over the
+  six checkpoints in every namespace (Order +0.94/−0.89 Spearman,
+  Topology +0.60/−0.43, Algebra +0.43/−0.31). The frontier-cone
+  aperture profile of the library consolidates over three years.
+  Caveat: n = 6 checkpoints, no significance claim; Order's sharp
+  2025 narrowing may ride a specific refactor event.
+- **P2 (cohort flow): SPLIT — the monotone-narrowing prediction is
+  falsified for young cones and confirmed for old ones.** All five
+  Order apexes (old modules) narrow with age (trends −0.43..−0.60).
+  All three traceable young Topology apexes WIDEN (+1.00): born as
+  thin chains (cone size 4–9, meanApFrac ≈ 0), they broaden while
+  under construction. The life cycle is non-monotone: born
+  thin-narrow → widen during construction → consolidate narrow.
+  The pre-registered strict prediction dies; the refined life-cycle
+  description is post-hoc and needs its own pre-registered test.
+- **P3 (youth of flat cones): 2/3.** SpectralObject (HEAD only) and
+  CWComplex (born 2025-03) are young as predicted.
+  **Order.Monoid.Canonical.Defs is the counterexample:** present
+  since 2023-09, and its cone has consistently WIDENED (ap 0.12 →
+  0.44, latency 0 throughout). Post-hoc reading, flagged as such:
+  the flat regime may track ROLE, not age — `Defs`-style
+  definitional interface files stay wide-shallow by design while
+  theorem-mass consolidates into narrow towers. If that holds under
+  a pre-registered test (classify cones by apex role, compare
+  profiles), the two regimes become: maintained reducible interfaces
+  vs consolidating irreducible towers — which is a sharper bridge
+  statement than the age story, not a weaker one.
+
+Bridge status after three deflation-adjacent tests: the static
+signature survived degree-matched and invariant-matched nulls; the
+dynamics exists at library level (P1) with a non-monotone cohort
+life cycle (P2) and a role-dependent persistent-flat class (P3).
+Next pre-registerable design: role-classified cohort study (Defs vs
+theorem apexes), plus more checkpoints to firm up P1.
+
+**Role-classified cone study (same day, `.scratch_role_study.mjs`):
+the role hypothesis FAILS; the age/life-cycle story stands.**
+Pre-registered design: 126 deduped cones (size 10–18) across the
+three namespaces at HEAD; role = cone-aggregate declaration mix
+(defFrac ≥ 0.5 = interface), secondary name-based classifier
+({Defs, Notation, Init} path component); age from the 2023-09 /
+2024-03 snapshots. Results, reported without re-thresholding:
+  - Primary classifier had zero dynamic range: NO cone reaches
+    defFrac 0.5 (theorem-like declarations dominate every cone's
+    aggregate). R1/R3 untestable as registered — a design failure,
+    logged as such.
+  - Continuous check (R2): Spearman(defFrac, meanApFrac) = +0.106,
+    (defFrac, latentFrac) = −0.079 — negligible. Declaration mix
+    carries no aperture signal.
+  - Name-based secondary: name-interface cones are NOT wider
+    (medAp 0.098 vs 0.122 — slightly narrower). Defs-named cones
+    span both extremes (UniformSpace.Defs among the narrowest,
+    Prime.Defs among the widest).
+  - Age effect present in the same sample: old cones medAp 0.081 vs
+    young 0.131 — young wider, consistent with the life-cycle
+    account (born thin → widen under construction → consolidate).
+Verdict: the post-hoc "maintained reducible interfaces" reading from
+the history test is withdrawn. Canonical.Defs stays on the books as
+an individual unexplained anomaly (old, flat, widening), not the tip
+of a class. The bridge keeps: static narrow-aperture signature
+(survived two nulls) + library-level consolidation arrow + a
+non-monotone cohort life cycle. It does NOT get the designed-pockets
+architecture — that reading lasted three hours, which is what
+pre-registration is for.
+
+Next when this thread resumes: (1) find the textbook citation for
+the finite-sublocale fact and restate the reduction as a lemma;
+(2) mine the Part C aperture counts (284, 1020×2, 3892, 4356, 5344,
+5888, 5916, 6780, 7728, 2^15) for the shape of the general formula —
+these are exact values on a real 18-point poset, ideal test data;
+(3) consider whether the Algebra Universalis extraction should state
+the subspace reduction (it strengthens the paper from "two-prime
+closed form + open problem" toward "general reduction + solved
+chain case"); (4) Lean-check the correspondence on small P via
+`decide` if cheap.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the
