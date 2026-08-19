@@ -1,4 +1,9 @@
-# Draft: reply-all to Ellynne Dec (cc Stephen Wolfram) — August 2026
+# SENT: reply-all to Ellynne Dec (cc Stephen Wolfram) — August 2026
+
+*Sent 2026-08-19 on the existing thread ("Re: Fwd: Structural analysis of NKS
+answers with data and recursive analysis attached"), to edec@wolframinstitute.org
+cc s.wolfram@wolfram.com, with the v2.0 notebook attached. Pathway Step 5 is
+complete.*
 
 *Drafted 2026-08-19. This is the pathway plan's Step 5 (`docs/wolfram-pathway.md`),
 updated for what August added: the aperture became an instrument and the instrument
