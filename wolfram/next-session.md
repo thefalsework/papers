@@ -149,6 +149,22 @@ remaining manual step.
   (`.scratch_worksheet_check.mjs`, brute-force nuclei from axioms +
   per-chain verdict cross-check, zero mismatches).
 
+## Status update, 2026-08-18: arXiv declines Paper 2 v2; routing changed
+
+arXiv moderation declined Paper 2's v2 submission (submit/7711078)
+and gated the account (journal DOI required for future submissions;
+reconsidered once a publication record exists). Full event note and
+routing decision logged in `papers/INDEX.md` (Paper 2 entry +
+next-revisions list). Consequences for this track: the **Algebra
+Universalis extraction of the aperture paper** is promoted from
+due-diligence item to the priority artifact — it is both the
+strongest material and the account-rehabilitation path (theorem-proof
+register, no framework vocabulary, Lean as supplementary material;
+Erné's venue = right referees). The Citkin letter (already queued
+2026-08-15) now also serves the submission. Zenodo deposit of the
+current aperture preprint for a DOI'd timestamp is cheap and should
+happen before the journal cycle starts.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the
