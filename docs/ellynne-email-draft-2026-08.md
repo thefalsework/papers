@@ -100,6 +100,8 @@ the natural joint question.
 - The V2 machine-fed run answering the May queries:
   `wolfram/results/wolfram-cloud-run-2026-08-11-v2.0.nb` (the aperture-scaling
   verification run is `...2026-08-12-v2.2.nb` in the same directory)
+- Citable snapshot of everything above (release 2026.08, archived 2026-08-19):
+  DOI 10.5281/zenodo.22016585
 
 **The ask.** Everything here is built to be examined without us in the room: the
 scripts run from the repo in minutes, the pre-registrations are inline, and the
@@ -132,11 +134,11 @@ Chris Brink
       so the corpus fetch is one command.
 - [ ] Confirm Ellynne + Stephen addresses from the May thread; reply-all on that
       thread, do not start a new one (thread history is an asset).
-- [ ] REQUIRED before sending (promoted 2026-08-19): Zenodo DOI of the current
-      state. It timestamps priority on the aperture invariant before handing the
-      construction to a well-resourced group, and it is the first item on the
-      publication record arXiv is now demanding. One session; `.zenodo.json` is
-      already at the repo root.
+- [x] DONE 2026-08-19: Zenodo DOI minted — release 2026.08 archived as
+      10.5281/zenodo.22016585 (concept DOI 10.5281/zenodo.19673672 unchanged).
+      Priority on the aperture invariant is timestamped before the construction
+      goes to a well-resourced group; the DOI is cited in the Materials list
+      above and in README's how-to-cite block.
 - [ ] Read once aloud for length; if trimming, cut from the opening paragraph —
       the measurement bullets are the only part that could not have been written
       in May. Never cut the recursion caveat or the discipline paragraph.

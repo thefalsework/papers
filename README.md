@@ -166,21 +166,21 @@ You may read, copy, translate, redistribute, and build on any of the content, co
 Every tagged release of this repository is archived to Zenodo and assigned a permanent Digital Object Identifier (DOI). Two DOI variants are available:
 
 - **Concept DOI** — `10.5281/zenodo.19673672` — always resolves to the most recent release. Use this when citing the project as a whole.
-- **Version DOI** — e.g. `10.5281/zenodo.19673673` for Release 2026.04 — resolves to one specific release. Use this when citing a specific claim at a specific version, because subsequent revisions may alter it.
+- **Version DOI** — e.g. `10.5281/zenodo.22016585` for Release 2026.08 (`10.5281/zenodo.19673673` for Release 2026.04) — resolves to one specific release. Use this when citing a specific claim at a specific version, because subsequent revisions may alter it.
 
 **Project-level citation** (concept DOI — follows the latest release):
 
 > Brink, C. (2026). *The FalseWork Papers*. Zenodo. https://doi.org/10.5281/zenodo.19673672
 
-**Release-level citation** (version DOI — pinned to Release 2026.04):
+**Release-level citation** (version DOI — pinned to Release 2026.08, which timestamps the aperture programme: the preprint, the kernel-checked closed form, and the Mathlib study):
 
-> Brink, C. (2026). *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
+> Brink, C. (2026). *The FalseWork Papers* (Release 2026.08). Zenodo. https://doi.org/10.5281/zenodo.22016585
 
 **Paper-at-version citation** (most precise — pinned to a specific paper inside a specific release):
 
-> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.8). In *The FalseWork Papers* (Release 2026.04). Zenodo. https://doi.org/10.5281/zenodo.19673673
+> Brink, C. (2026). *Kernels and Commas: A Structural Derivation of Universal Positions in Domains with Self-Limiting Generative Operations* (v11.8). In *The FalseWork Papers* (Release 2026.08). Zenodo. https://doi.org/10.5281/zenodo.22016585
 
-BibTeX, RIS, and EndNote entries for any version can be exported directly from the [Zenodo record page](https://zenodo.org/records/19673673). Both concept and version DOIs resolve programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access. Each subsequent release (per-paper or collection-wide) will receive its own version DOI under the same concept DOI.
+BibTeX, RIS, and EndNote entries for any version can be exported directly from the [Zenodo record page](https://zenodo.org/records/22016585). Both concept and version DOIs resolve programmatically — see the [Zenodo REST API](https://developers.zenodo.org/) for structured access. Each subsequent release (per-paper or collection-wide) will receive its own version DOI under the same concept DOI.
 
 ---
 
