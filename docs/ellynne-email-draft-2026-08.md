@@ -14,13 +14,16 @@ Stephen was cc'd). Pre-send checklist at bottom.*
 
 Dear Ellynne (cc Stephen),
 
-In May you asked four queries and pressed a fifth we deferred: can the method
-produce new formal distinctions that alter subsequent analyses? It has. The four
-queries now run on a machine-fed corpus (V2 notebook linked below; the V1
-hand-authored limitation is removed) — and the deferred question got the better
-answer: on top of a classical census we rediscovered and then located in the
-literature, the method produced a new computable invariant — the aperture — whose
-first act as an instrument was to measure mathematics itself.
+In May you drew a line between recursive commentary and recursive computation,
+and pressed the question we deferred: can the method do more than describe
+itself — can it produce new formal distinctions that affect subsequent analyses?
+It has crossed your line. The four example queries from your prototype
+specification now run on a machine-fed corpus (the executable notebook you asked
+for is linked below; the V1 hand-authored limitation is removed) — and the
+deferred question got the better answer: on top of a classical census we
+rediscovered and then located in the literature, the method produced a new
+computable invariant — the aperture — whose first act as an instrument was to
+measure mathematics itself.
 
 **The short version, in your house's language.** Observer theory, in the static
 case, became exactly countable. Take any finite dependency record — the frozen
@@ -79,6 +82,19 @@ applied to the public record of mathematics, measured the mathematics it is made
 of — and that record hides its own structure from any observer who refuses to
 blur.
 
+**Your tests, taken literally.** You asked whether the removal test could be made
+computational rather than interpretive: a nucleus is exactly a lawful removal
+operator — it deletes resolution rather than text, and cannot be applied
+tendentiously because the census enumerates every one — and the aperture of a
+kernel is the complete answer to which removals change the predicted structural
+profile. You asked whether two objects could be compared by transformations over
+their cores rather than by prose analogy: dependency cones now compare by their
+aperture profiles — counts, not readings. And your warning that the system "risks
+remaining an interpretive apparatus that produces interesting readings" is the
+risk we took most seriously: we moved the corpus to the one place the dictionary
+is uncontestable — a compiler-enforced dependency record — precisely so your
+tests could be passed rather than argued.
+
 **Discipline, so the claims stay auditable.** Every claim carries a grade
 ([K] kernel-checked in Lean against Mathlib, [C] classical and cited, [computed]
 exhaustive finite computation, [A] interpretive). The observer census is [C], the
@@ -97,7 +113,8 @@ the natural joint question.
   github.com/thefalsework/papers — `mathlib-study/`
 - The mathematics (aperture invariant, closed form, latency; Lean artifacts cited
   per-claim): `preprints/aperture/paper.md`
-- The V2 machine-fed run answering the May queries:
+- The executable Wolfram Language notebook your May letter specified (the four
+  example queries on a machine-fed corpus):
   `wolfram/results/wolfram-cloud-run-2026-08-11-v2.0.nb` (the aperture-scaling
   verification run is `...2026-08-12-v2.2.nb` in the same directory)
 - Citable snapshot of everything above (release 2026.08, archived 2026-08-19):
@@ -114,6 +131,9 @@ observer theory gets its first fully computable corner; if no, we will have foun
 exactly where the static shadow stops tracking the temporal thing, which is worth
 knowing precisely. We are equally glad simply to hear where the group thinks this
 is wrong.
+
+And yes to the Discord — once this thread has had first look, we will bring the
+study to the Institute community as you suggested.
 
 Warm regards,
 Chris Brink
@@ -144,6 +164,16 @@ Chris Brink
       in May. Never cut the recursion caveat or the discipline paragraph.
 - [ ] Send only the letter body (greeting through signature). The internal note
       below and this checklist MUST NOT be pasted into the mail.
+- [ ] Alignment check done 2026-08-19 against Ellynne's actual May letter: her
+      "recursive commentary vs recursive computation" line is now the opening
+      frame; her three operational tests (computational removal test, comparison
+      by transformation, interpretive-apparatus risk) are answered in her own
+      vocabulary in "Your tests, taken literally"; the V2.0 notebook is named as
+      the executable prototype her letter specified; her Discord invitation is
+      accepted. Her NKS-images point is deliberately not re-litigated here — the
+      V2 corpus work is the response and the thread can pick it up if asked.
+- [ ] After sending: post the mathlib-study to the Wolfram Institute Discord
+      (her invitation; community follow-through is part of the reply).
 - [ ] If a session materializes: prep is one evening — the worksheet canvas as the
       live demo, the seven scripts as the run-order, and a one-page [O] list as the
       "here is where we want help" handout. Nervousness note: the format that
