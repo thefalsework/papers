@@ -40,7 +40,9 @@ of p_c in k:
 **Corollaries (verified numerically, worth stating in the paper):** the
 two-prime law (2^i−1)(2^{a−i}−1)(2^b−1) [algebra checks], the original
 Div(2^a·3) product law, the latency characterization (all exponents
-interior), and the latent aperture sizes previously reported as
+interior — CORRECTED 2026-08-24: valid only at exactly two primes; see
+paper Result 6.3 and `latency-characterization-correction.mjs`), and the
+latent aperture sizes previously reported as
 "unfitted data" — the refusal to curve-fit was correct, and the derived
 form then explained them.
 

@@ -5,6 +5,16 @@
 // Predicts: no latency anywhere in Div(2^a * 3); latent {6} in Div36;
 // latent {6,12} in Div72; latent {6,12,24} in Div144; latent {6,12,18,36}
 // in Div216; none in square-free (Div30, Div60 has no all-interior point).
+//
+// POSTSCRIPT (2026-08-24, header above left as pre-registered): the latency
+// rule this sweep "confirmed" is WRONG outside two-prime lattices — every
+// algebra in this sweep is two-prime or square-free, exactly the shapes where
+// the wrong rule and the right one coincide, so 10/10 confirmation was a
+// coverage failure, not a validation. Counterexamples (both directions):
+// Div8 elements 2,4 (all-interior, aperture 0 — single chain has no second
+// coordinate); Div180 element 30 (5-exponent at chain top, aperture 4 — a
+// world can truncate/drop a chain). Corrected rule and full verification:
+// wolfram/latency-characterization-correction.mjs; paper Result 6.3.
 
 const gcd = (a, b) => (b ? gcd(b, a % b) : a)
 

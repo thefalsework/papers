@@ -70,6 +70,16 @@
    CHARACTERIZATION (stated before the sweep, confirmed 10/10):
    on a divisor lattice, an element is LATENT iff every prime
    exponent is strictly interior (0 < e_i < a_i for all i).
+   [POSTSCRIPT 2026-08-24, pre-registered text above unchanged:
+   this rule is valid ONLY for exactly-two-prime lattices, which
+   is all this sweep contains besides square-free ones. It fails
+   both ways elsewhere: Div8 elements 2,4 (all-interior, aperture
+   0) and Div180 element 30 (5-exponent at chain top, aperture 4).
+   Corrected rule: nonempty aperture iff some exponent strictly
+   interior AND some other chain below its top; latent iff also
+   no exponent zero. See latency-characterization-correction.mjs
+   and paper Result 6.3. The checks below still pass as written
+   because their lattices sit inside the old rule's valid domain.]
    Componentwise negation on chain products gives: ordinary iff
    some exponent is 0 and some is interior; dense iff all are
    > 0. Consequences, all confirmed by the Node sweep

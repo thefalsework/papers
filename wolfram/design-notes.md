@@ -499,6 +499,25 @@ design decisions worth recording:
    agreement on Div72/Div144/Div216. This is the same
    pre-registration discipline as the re-transduction study,
    applied to mathematics instead of transduction.
+
+   **Correction (2026-08-24).** The 10/10 confirmation was a
+   coverage failure wearing a validation's clothes: every sweep
+   lattice was two-prime or square-free, the exact shapes where
+   the stated rule coincides with the true one. The rule fails
+   both ways outside that set — Div8's all-interior elements have
+   empty apertures (a single chain has no second coordinate), and
+   Div180's element 30 is latent (aperture 4) with an exponent at
+   its chain top, because a world can truncate or drop a chain.
+   The corrected rule (some interior exponent + some *other* chain
+   below its top; latent iff additionally no zero exponent) is in
+   `latency-characterization-correction.mjs` and paper Result 6.3.
+   The lesson compounds the sweep discipline: pre-registration
+   protects against fitting after the fact, but not against a
+   sweep whose shapes all live inside the hypothesis's blind spot.
+   The counterexamples were already sitting in the closed-form
+   run's own 164 elements; Corollary 5.3's "routine, not written
+   out" symbolic step was where the error hid. Nothing the
+   machines computed was ever wrong — the prose summary was.
 2. **The 15/15 lesson, applied prophylactically.** The product law
    holds on all fifteen (a,k) points, but those lattices are one
    chain-product family with two parameters — one structural fact

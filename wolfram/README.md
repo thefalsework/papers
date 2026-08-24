@@ -690,16 +690,29 @@ Findings, in order of importance:
   clean on the whole chain. The closed form is therefore [K] on
   two-prime lattices; the r > 2 iteration of the binary assembly
   is the remaining formalization step (paper §5, Theorem 5.1).
-- **The characterization, predicted then confirmed 10/10**
-  (sweep 2026-08-11, prediction stated before the run): on a
-  divisor lattice, an element is latent **iff every prime
-  exponent is strictly interior** (0 < e_i < a_i for all i);
-  ordinary iff some exponent is 0 and some is interior.
-  Consequences, all confirmed: latency is *impossible* in the
-  Div(2^a·3) family (the C₂ factor has no interior); latent
-  {6} in Div36, {6,12} in Div72, {6,12,24} in Div144,
-  {6,12,18,36} in Div216; none in square-free Div30/Div60. Div36
-  is the smallest case of a predicted phenomenon, not an anomaly.
+- **The characterization, predicted then confirmed 10/10 — then
+  corrected (2026-08-24)**: the original rule (latent **iff every
+  prime exponent is strictly interior**) was confirmed 10/10 only
+  because every sweep lattice was two-prime or square-free — the
+  exact shapes where the wrong rule and the right one coincide.
+  It fails in both directions outside them: Div8 elements 2 and 4
+  are all-interior with aperture 0 (a single chain has no second
+  coordinate to break density with), and Div180 element 30 has
+  its 5-exponent at the chain top yet aperture 4 (a coarse world
+  can truncate or drop a chain, handing the image a zero-like
+  coordinate next to an interior one). Corrected rule: **Ap(d) ≠ ∅
+  iff some exponent is strictly interior and some other chain
+  sits below its top; latent iff additionally no exponent is
+  zero.** Verified against exhaustive enumeration on all 164
+  elements of the fifteen lattices and against closed-form
+  positivity on 252 more (Div360–Div44100):
+  `latency-characterization-correction.mjs`, paper Result 6.3.
+  What survives unchanged: ordinary iff some exponent is 0 and
+  some is interior; latency *impossible* in the Div(2^a·3) family
+  and in all square-free lattices; latent sets {6} in Div36,
+  {6,12} in Div72, {6,12,24} in Div144, {6,12,18,36} in Div216.
+  Div36 remains the smallest latent case — for the corrected
+  reason (interior chain + second chain below top).
   Latent aperture *sizes* (72: 6, 4; 144: 14, 12, 8; 216: 18,
   12, 12, 6) were reported as unfitted data at the time; the
   closed form now derives every one of them — the refusal to
