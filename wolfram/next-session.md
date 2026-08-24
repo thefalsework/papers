@@ -98,7 +98,8 @@ remaining manual step.
   closed form now [K] on two-prime lattices, [computed] for r > 2.
 - **Remaining Lean gap:** the r > 2 iteration of the binary
   assembly (fold `aperture_card_add_eq` across an r-fold product).
-  Bookkeeping, not mathematics.
+  Bookkeeping, not mathematics. (CLOSED 2026-08-24 — and not by
+  folding: see the 2026-08-24 status update.)
 
 ## Status update, 2026-08-15
 
@@ -467,6 +468,46 @@ closed form + open problem" toward "general reduction + solved
 chain case"); (4) Lean-check the correspondence on small P via
 `decide` if cheap.
 
+## Status update, 2026-08-24: latency rule corrected; closed form [K] at every arity
+
+Two events, same day, causally linked:
+
+- **The latency characterization was wrong, and the instrument
+  caught it.** Div180 element 30 (exponents (1,1,1), 5-exponent at
+  its chain top) has aperture 4 by the paper's own closed form —
+  refuting the "every exponent strictly interior" rule in the
+  false-negative direction. The violation hunt then found the
+  false-positive direction too: Div8 elements 2 and 4 are
+  all-interior with aperture 0 (single chain, no second coordinate).
+  All three witnesses were sitting, unread, in the published
+  164-element verification set; the ten-algebra sweep confirmed the
+  wrong rule 10/10 only because every sweep lattice was two-prime or
+  square-free — exactly where wrong and right rules coincide.
+  Corrected rule (paper Result 6.3): **Ap(d) ≠ ∅ iff some exponent
+  strictly interior and some other chain below its top; latent iff
+  additionally no exponent is zero.** Verified 164/164 vs
+  enumeration + 252 formula-only points
+  (`latency-characterization-correction.mjs`). Square-free and
+  Div(2^a·3) impossibility results survive. Paper bumped to v0.3
+  with the correction dated; original pre-registered headers kept
+  with postscripts. Fourth time the instrument has overruled the
+  operator.
+- **The r > 2 Lean iteration closed the same day**
+  (`Lattice/ApertureClosedFormPi.lean`) — pulled forward because the
+  correction produced witnesses only a general-arity theorem could
+  kernel-check. Not by folding the binary assembly: the Pi statement
+  is proved directly (`nucleusPiEquiv` via `x = ⨅ i, update ⊤ i (x i)`;
+  coordinatewise world predicates; `aperture_card_add_eq_pi`, whose
+  two inclusion-exclusion events do not multiply with arity).
+  `aperture_closed_form_pi` is Theorem 5.1 verbatim on
+  `Π i : Fin r, Fin (aᵢ + 1)`, any r. `decide`d cross-checks:
+  Div180/30 = 4, Div8/2 = Div8/4 = 0 (the correction witnesses,
+  kernel-certified), Div12 = 1 (re-meeting `aperture_two_complete`).
+  Axiom audit clean; full `lake build` green. **Theorem 5.1 is [K]
+  on all divisor lattices.** What stays [computed]: the exhaustive
+  sweeps and Result 6.3's general "iff" (its formula and witnesses
+  are [K]). Design notes part 7 has the Lean decisions.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the
@@ -518,7 +559,8 @@ Structure agreed in session 2026-08-16:
 Also pending from this weekend, lower priority: the epistemic reading
 paper (`preprints/epistemic/` — grain-of-description dictionary,
 T1–T4, statistical-mechanics latency case study); the r > 2 Lean
-iteration; pre-arXiv due diligence (2026-08-15 entry).
+iteration (DONE 2026-08-24); pre-arXiv due diligence (2026-08-15
+entry).
 
 ## Tomorrow, in order (original plan, 2026-08-11)
 

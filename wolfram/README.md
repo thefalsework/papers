@@ -687,9 +687,18 @@ Findings, in order of importance:
   Fin(a+1) × Fin(b+1) — every two-prime divisor lattice, every
   kernel, mixed included — with a `decide`d Div12 cross-check
   (formula = 1, matching `aperture_two_complete`). Axiom audit
-  clean on the whole chain. The closed form is therefore [K] on
-  two-prime lattices; the r > 2 iteration of the binary assembly
-  is the remaining formalization step (paper §5, Theorem 5.1).
+  clean on the whole chain. **Any-arity iteration kernel-checked
+  2026-08-24** (`lean/.../Lattice/ApertureClosedFormPi.lean`):
+  nuclei on any finite product factor componentwise in one step
+  (`nucleusPiEquiv`), the world predicates are coordinatewise on
+  Pi products, the inclusion-exclusion assembles at any arity
+  without growing (`aperture_card_add_eq_pi`), and
+  `aperture_closed_form_pi` states Theorem 5.1 verbatim for every
+  divisor lattice and every number of primes. `decide`d
+  cross-checks include both Result 6.3 correction witnesses
+  (Div180's 30 = 4, Div8's 2 and 4 = 0) plus the Div12 anchor.
+  Axiom audit clean. **The closed form is [K] on all divisor
+  lattices** (paper §5, Theorem 5.1).
 - **The characterization, predicted then confirmed 10/10 — then
   corrected (2026-08-24)**: the original rule (latent **iff every
   prime exponent is strictly interior**) was confirmed 10/10 only

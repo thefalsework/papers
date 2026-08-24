@@ -920,13 +920,13 @@ section Exponents
 local instance (n : ℕ) : BiheytingAlgebra (Fin (n + 1)) :=
   LinearOrder.toBiheytingAlgebra (Fin (n + 1))
 
-private theorem fin_card_nontop (m : ℕ) :
+theorem fin_card_nontop (m : ℕ) :
     (Finset.univ.erase (⊤ : Fin (m + 1))).card = m := by
   rw [Finset.card_erase_of_mem (Finset.mem_univ _), Finset.card_univ,
     Fintype.card_fin]
   omega
 
-private theorem fin_card_below (m : ℕ) (e : Fin (m + 1)) :
+theorem fin_card_below (m : ℕ) (e : Fin (m + 1)) :
     ((Finset.univ.erase (⊤ : Fin (m + 1))).filter fun x => x < e).card
       = (e : ℕ) := by
   have h1 : (Finset.univ.erase (⊤ : Fin (m + 1))).filter (fun x => x < e)
@@ -944,7 +944,7 @@ private theorem fin_card_below (m : ℕ) (e : Fin (m + 1)) :
     simp [Finset.mem_Iio]
   rw [h1, h2, Fin.card_Iio]
 
-private theorem fin_card_above (m : ℕ) (e : Fin (m + 1)) :
+theorem fin_card_above (m : ℕ) (e : Fin (m + 1)) :
     ((Finset.univ.erase (⊤ : Fin (m + 1))).filter fun x => e ≤ x).card
       = m - (e : ℕ) := by
   have h := card_below_add_card_above (α := Fin (m + 1)) e

@@ -650,6 +650,50 @@ Div12 cross-check closes the loop: the formula, evaluated by
 agreeing with the independently proved `aperture_two_complete` —
 two [K] results, derived by different routes, meeting at one number.
 
+## V2 addendum (August 2026, part 7): any arity, same day as the correction
+
+The r > 2 iteration was completed 2026-08-24
+(`Lattice/ApertureClosedFormPi.lean`) — the same day the Result 6.3
+latency correction landed, which is not a coincidence: the correction
+produced three witnesses (Div180's 30, Div8's 2 and 4) that only a
+general-arity theorem could kernel-check, and having a corrected
+statement to formalize is what moved the iteration to the front of
+the queue. Design decisions:
+
+1. **Don't fold the binary argument — prove the Pi statement
+   directly.** The plan of record was r − 1 applications of the
+   binary factorization. The direct route is shorter: any `x` in a
+   Pi type is the finite meet `⨅ i, update ⊤ i (x i)`, so
+   meet-preservation gives componentwise factorization at every
+   arity in one step (`nucleusPiEquiv`), with `Function.update ⊤ i a`
+   playing the role the pairs `(a, ⊤)`, `(⊤, b)` played in the
+   binary proof. The world predicates and the assembly generalize
+   the same way, because the inclusion-exclusion's two events —
+   "all coordinates dense", "all coordinates regular" — do not
+   multiply with arity. The final theorem
+   (`aperture_closed_form_pi`) is Theorem 5.1 verbatim on
+   `Π i : Fin r, Fin (aᵢ + 1)` over ℤ.
+
+2. **The instance trap recurred, and the fix generalizes.** Part
+   6's lesson (never shadow a global instance locally) reappeared in
+   Pi form: a `DecidableLE` instance declared inside a section made
+   `Fintype.card` terms in the assembly syntactically different from
+   the ones in the instantiation, and `linear_combination` saw
+   distinct atoms where there was one number. Hoisting the instance
+   to file scope — one instance, every section — fixed it.
+
+3. **The correction witnesses are `decide`d instances of the [K]
+   formula.** Div180's element 30 evaluates to 4, Div8's elements
+   2 and 4 to 0, Div12's kernel to 1 (re-meeting
+   `aperture_two_complete`). The three numbers that refuted the
+   old prose rule are now kernel-certified consequences of the
+   theorem the prose was summarizing — the failure mode (prose
+   drifting from formula) is closed at the exact points where it
+   fired. Axiom audit clean on the whole file (`propext`,
+   `Classical.choice`, `Quot.sound`; no `native_decide`, no
+   `sorry`). Theorem 5.1 is [K] on all divisor lattices; nothing
+   about the closed form remains at computed grade.
+
 ## Provenance and references
 
 - Origin: Stephen Wolfram, Jan 3 2026, in response to a
