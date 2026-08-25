@@ -450,6 +450,24 @@ export function buildRuns(rule = lifeRule) {
   return runs.map((r) => ({ ...r, hist: runCA(r.grid, r.T, rule) }));
 }
 
+// Quiescence class of a focus (v1.3 pre-check and study): restrict the
+// history to the focus's 5x5 neighborhood (clipped at the boundary);
+// "still" if that window is identical at t and t-1, "p2" if identical at
+// t and t-2 but not t-1, else "active".
+export function quiescenceClass(hist, r, c, t) {
+  const H = hist[0].length, W = hist[0][0].length;
+  const win = (g) => {
+    const rows = [];
+    for (let rr = Math.max(0, r - 2); rr <= Math.min(H - 1, r + 2); rr++)
+      rows.push(g[rr].slice(Math.max(0, c - 2), Math.min(W - 1, c + 2) + 1).join(""));
+    return rows.join("/");
+  };
+  const now = win(hist[t]);
+  if (win(hist[t - 1]) === now) return "still";
+  if (t >= 2 && win(hist[t - 2]) === now) return "p2";
+  return "active";
+}
+
 // F focus special case (v1.1 §3): the seed cell's update at t=1.
 export function focusFor(run) {
   if (run.cond === "F") {

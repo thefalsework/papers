@@ -1,0 +1,4931 @@
+{
+ "soupFoci": [
+  {
+   "soup": "soup-20260825001",
+   "r": 15,
+   "c": 17,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 15,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 16,
+   "c": 16,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 16,
+   "c": 17,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 16,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 17,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 18,
+   "c": 17,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 18,
+   "c": 19,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 18,
+   "c": 20,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 19,
+   "c": 16,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 19,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 20,
+   "c": 16,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 21,
+   "c": 16,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 21,
+   "c": 18,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 23,
+   "c": 17,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 23,
+   "c": 19,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 24,
+   "c": 17,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 24,
+   "c": 18,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 24,
+   "c": 19,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 24,
+   "c": 23,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 24,
+   "c": 24,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 25,
+   "c": 23,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825001",
+   "r": 25,
+   "c": 24,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 14,
+   "c": 14,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 15,
+   "c": 14,
+   "n": 17,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 16,
+   "c": 14,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 20,
+   "c": 21,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 21,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 21,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 21,
+   "c": 21,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 22,
+   "c": 18,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 22,
+   "c": 19,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 22,
+   "c": 21,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 23,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 23,
+   "c": 18,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 23,
+   "c": 20,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 23,
+   "c": 21,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 24,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 24,
+   "c": 17,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 24,
+   "c": 20,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 24,
+   "c": 21,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 25,
+   "c": 17,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825002",
+   "r": 25,
+   "c": 18,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 16,
+   "c": 18,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 16,
+   "c": 20,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 17,
+   "c": 16,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 17,
+   "c": 21,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 18,
+   "c": 16,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 18,
+   "c": 20,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 19,
+   "c": 14,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 19,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 19,
+   "c": 18,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 20,
+   "c": 14,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 20,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 20,
+   "c": 16,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 21,
+   "c": 14,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 21,
+   "c": 15,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 21,
+   "c": 16,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 21,
+   "c": 19,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 22,
+   "c": 16,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 22,
+   "c": 17,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 22,
+   "c": 20,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 23,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 23,
+   "c": 21,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 24,
+   "c": 16,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 24,
+   "c": 17,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 24,
+   "c": 21,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 25,
+   "c": 15,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 26,
+   "c": 15,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 26,
+   "c": 20,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 27,
+   "c": 19,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 28,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 28,
+   "c": 17,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825003",
+   "r": 28,
+   "c": 18,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 12,
+   "c": 20,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 12,
+   "c": 21,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 12,
+   "c": 22,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 13,
+   "c": 19,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 14,
+   "c": 18,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 14,
+   "c": 21,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 14,
+   "c": 23,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 14,
+   "c": 24,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 14,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 15,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 18,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 19,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 20,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 15,
+   "c": 24,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 16,
+   "c": 13,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 16,
+   "c": 16,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 16,
+   "c": 21,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 16,
+   "c": 24,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 17,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 17,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 17,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 18,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 18,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 18,
+   "c": 18,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 18,
+   "c": 22,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 19,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 20,
+   "c": 14,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 20,
+   "c": 15,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 20,
+   "c": 17,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 20,
+   "c": 21,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 21,
+   "c": 17,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 21,
+   "c": 20,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 21,
+   "c": 21,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 22,
+   "c": 16,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 22,
+   "c": 17,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 22,
+   "c": 18,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 22,
+   "c": 21,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 22,
+   "c": 22,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825004",
+   "r": 23,
+   "c": 21,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 13,
+   "c": 20,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 13,
+   "c": 21,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 14,
+   "c": 20,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 14,
+   "c": 21,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 16,
+   "c": 27,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 17,
+   "c": 27,
+   "n": 17,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 18,
+   "c": 27,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 19,
+   "c": 16,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 19,
+   "c": 18,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 20,
+   "c": 15,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 20,
+   "c": 18,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 21,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 21,
+   "c": 17,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 21,
+   "c": 18,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 21,
+   "c": 19,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 22,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 23,
+   "c": 19,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 23,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 24,
+   "c": 13,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 24,
+   "c": 14,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 25,
+   "c": 14,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 25,
+   "c": 15,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 25,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 25,
+   "c": 19,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 26,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 26,
+   "c": 19,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 27,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825005",
+   "r": 27,
+   "c": 18,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 12,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 12,
+   "c": 19,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 12,
+   "c": 20,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 13,
+   "c": 20,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 13,
+   "c": 21,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 13,
+   "c": 22,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 14,
+   "c": 17,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 14,
+   "c": 18,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 14,
+   "c": 20,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 14,
+   "c": 23,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 15,
+   "c": 17,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 15,
+   "c": 18,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 15,
+   "c": 20,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 18,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 20,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 21,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 22,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 16,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 17,
+   "c": 14,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 17,
+   "c": 17,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 17,
+   "c": 20,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 17,
+   "c": 23,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 18,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 18,
+   "c": 14,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 18,
+   "c": 19,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 18,
+   "c": 20,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 19,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 20,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 22,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 23,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 19,
+   "c": 25,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 15,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 19,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 22,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 23,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 25,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 20,
+   "c": 26,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 21,
+   "c": 16,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 21,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 21,
+   "c": 23,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 21,
+   "c": 27,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 22,
+   "c": 23,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 22,
+   "c": 27,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 23,
+   "c": 27,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 24,
+   "c": 24,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 24,
+   "c": 25,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 27,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 28,
+   "c": 15,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 28,
+   "c": 16,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825006",
+   "r": 28,
+   "c": 17,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 13,
+   "c": 19,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 14,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 14,
+   "c": 18,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 14,
+   "c": 20,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 14,
+   "c": 21,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 15,
+   "c": 19,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 19,
+   "c": 19,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 19,
+   "c": 20,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 19,
+   "c": 21,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 20,
+   "c": 21,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 21,
+   "c": 19,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 21,
+   "c": 21,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 22,
+   "c": 18,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 22,
+   "c": 19,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 23,
+   "c": 17,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 23,
+   "c": 18,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 24,
+   "c": 16,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 24,
+   "c": 19,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 25,
+   "c": 17,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825007",
+   "r": 25,
+   "c": 18,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 14,
+   "c": 15,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 15,
+   "c": 15,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 15,
+   "c": 22,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 15,
+   "c": 23,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 15,
+   "c": 24,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 16,
+   "c": 16,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 16,
+   "c": 22,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 16,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 16,
+   "c": 24,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 17,
+   "c": 21,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 17,
+   "c": 23,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 18,
+   "c": 15,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 18,
+   "c": 21,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 18,
+   "c": 23,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 19,
+   "c": 13,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 19,
+   "c": 17,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 19,
+   "c": 20,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 19,
+   "c": 23,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 20,
+   "c": 12,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 20,
+   "c": 14,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 20,
+   "c": 15,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 20,
+   "c": 18,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 20,
+   "c": 21,
+   "n": 6,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 21,
+   "c": 12,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 21,
+   "c": 13,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 21,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 21,
+   "c": 22,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 22,
+   "c": 13,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 22,
+   "c": 15,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 22,
+   "c": 18,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 23,
+   "c": 14,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 23,
+   "c": 16,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 24,
+   "c": 14,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 25,
+   "c": 14,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 25,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825008",
+   "r": 25,
+   "c": 16,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 15,
+   "c": 19,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 16,
+   "c": 19,
+   "n": 17,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 17,
+   "c": 19,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 19,
+   "c": 19,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 19,
+   "c": 20,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 20,
+   "c": 14,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 20,
+   "c": 15,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 20,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 20,
+   "c": 21,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 21,
+   "c": 15,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 21,
+   "c": 16,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 21,
+   "c": 20,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 22,
+   "c": 14,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 22,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 22,
+   "c": 19,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 22,
+   "c": 22,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 23,
+   "c": 14,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 23,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 23,
+   "c": 19,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 23,
+   "c": 21,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 23,
+   "c": 22,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 24,
+   "c": 14,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 24,
+   "c": 15,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 24,
+   "c": 21,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 24,
+   "c": 22,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 25,
+   "c": 13,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 25,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 25,
+   "c": 15,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 25,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 25,
+   "c": 20,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 26,
+   "c": 14,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 26,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 26,
+   "c": 18,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 26,
+   "c": 19,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 27,
+   "c": 15,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 27,
+   "c": 16,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825009",
+   "r": 28,
+   "c": 16,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 14,
+   "c": 24,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 15,
+   "c": 22,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 15,
+   "c": 24,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 16,
+   "c": 22,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 17,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 17,
+   "c": 18,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 18,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 18,
+   "c": 18,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 18,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 18,
+   "c": 24,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 18,
+   "c": 25,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 19,
+   "c": 18,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 19,
+   "c": 23,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 19,
+   "c": 24,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 19,
+   "c": 25,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 20,
+   "c": 16,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 20,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 20,
+   "c": 23,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 20,
+   "c": 25,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 20,
+   "c": 26,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 21,
+   "c": 13,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 21,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 21,
+   "c": 22,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 21,
+   "c": 23,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 21,
+   "c": 26,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 12,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 13,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 15,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 21,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 22,
+   "c": 26,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 23,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 23,
+   "c": 15,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 23,
+   "c": 16,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 23,
+   "c": 20,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 23,
+   "c": 26,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 13,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 15,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 16,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 18,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 20,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 24,
+   "c": 21,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 13,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 14,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 16,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 17,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 18,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 25,
+   "c": 22,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 26,
+   "c": 13,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 26,
+   "c": 18,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 27,
+   "c": 14,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 27,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 28,
+   "c": 15,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825010",
+   "r": 28,
+   "c": 16,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 13,
+   "c": 17,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 13,
+   "c": 18,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 13,
+   "c": 19,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 14,
+   "c": 17,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 14,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 14,
+   "c": 19,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 15,
+   "c": 16,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 15,
+   "c": 20,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 15,
+   "c": 21,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 16,
+   "c": 16,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 16,
+   "c": 17,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 16,
+   "c": 18,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 17,
+   "c": 15,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 17,
+   "c": 18,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 17,
+   "c": 20,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 17,
+   "c": 21,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 18,
+   "c": 14,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 18,
+   "c": 15,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 18,
+   "c": 16,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 18,
+   "c": 19,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 18,
+   "c": 20,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 19,
+   "c": 14,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 19,
+   "c": 17,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 13,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 16,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 17,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 19,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 21,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 20,
+   "c": 22,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 13,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 15,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 17,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 21,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 21,
+   "c": 22,
+   "n": 24,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 22,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 22,
+   "c": 17,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 23,
+   "c": 12,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 23,
+   "c": 15,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 23,
+   "c": 17,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 24,
+   "c": 13,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 24,
+   "c": 16,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 24,
+   "c": 18,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 24,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 24,
+   "c": 21,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 14,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 15,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 16,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 18,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 19,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 25,
+   "c": 21,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825011",
+   "r": 26,
+   "c": 16,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 15,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 15,
+   "c": 24,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 15,
+   "c": 25,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 16,
+   "c": 22,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 16,
+   "c": 25,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 17,
+   "c": 21,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 17,
+   "c": 23,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 17,
+   "c": 24,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 17,
+   "c": 25,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 17,
+   "c": 26,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 18,
+   "c": 21,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 18,
+   "c": 24,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 18,
+   "c": 25,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 19,
+   "c": 20,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 19,
+   "c": 21,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 19,
+   "c": 24,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 19,
+   "c": 26,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 20,
+   "c": 23,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 20,
+   "c": 25,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 20,
+   "c": 26,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 21,
+   "c": 20,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 21,
+   "c": 21,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 21,
+   "c": 23,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 21,
+   "c": 25,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 21,
+   "c": 26,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 22,
+   "c": 21,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 22,
+   "c": 23,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 23,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 23,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 23,
+   "c": 21,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 23,
+   "c": 23,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 24,
+   "c": 18,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 24,
+   "c": 19,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 24,
+   "c": 24,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 25,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 25,
+   "c": 20,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 25,
+   "c": 24,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 25,
+   "c": 25,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825012",
+   "r": 26,
+   "c": 20,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 14,
+   "c": 18,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 14,
+   "c": 19,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 16,
+   "n": 34,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 17,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 19,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 20,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 21,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 15,
+   "c": 22,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 13,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 17,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 19,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 20,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 21,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 16,
+   "c": 23,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 17,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 17,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 17,
+   "c": 16,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 17,
+   "c": 22,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 17,
+   "c": 23,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 18,
+   "c": 23,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 18,
+   "c": 24,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 20,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 21,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 21,
+   "c": 20,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 21,
+   "c": 21,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 23,
+   "c": 18,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 23,
+   "c": 19,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 24,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 25,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 26,
+   "c": 17,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 26,
+   "c": 19,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 27,
+   "c": 18,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825013",
+   "r": 27,
+   "c": 19,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 14,
+   "c": 12,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 14,
+   "c": 22,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 14,
+   "c": 23,
+   "n": 16,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 15,
+   "c": 11,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 15,
+   "c": 12,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 15,
+   "c": 22,
+   "n": 16,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 15,
+   "c": 23,
+   "n": 6,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 16,
+   "c": 10,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 17,
+   "c": 11,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 17,
+   "c": 12,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 17,
+   "c": 18,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 17,
+   "c": 25,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 18,
+   "c": 12,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 18,
+   "c": 18,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 18,
+   "c": 24,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 18,
+   "c": 25,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 19,
+   "c": 23,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 19,
+   "c": 26,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 21,
+   "c": 23,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 21,
+   "c": 25,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 22,
+   "c": 23,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 22,
+   "c": 24,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 22,
+   "c": 25,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 23,
+   "c": 22,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 23,
+   "c": 25,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 24,
+   "c": 13,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 24,
+   "c": 14,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 24,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 24,
+   "c": 22,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 24,
+   "c": 25,
+   "n": 9,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 25,
+   "c": 13,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 25,
+   "c": 16,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 25,
+   "c": 23,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 25,
+   "c": 24,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 26,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825014",
+   "r": 26,
+   "c": 15,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 14,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 14,
+   "c": 14,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 14,
+   "c": 16,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 15,
+   "c": 11,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 15,
+   "c": 15,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 15,
+   "c": 16,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 15,
+   "c": 17,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 16,
+   "c": 11,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 16,
+   "c": 18,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 17,
+   "c": 13,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 17,
+   "c": 16,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 17,
+   "c": 18,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 17,
+   "c": 19,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 18,
+   "c": 14,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 18,
+   "c": 16,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 18,
+   "c": 17,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 18,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 22,
+   "c": 19,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 23,
+   "c": 18,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 23,
+   "c": 20,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 24,
+   "c": 18,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 24,
+   "c": 21,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 25,
+   "c": 19,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825015",
+   "r": 25,
+   "c": 20,
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 16,
+   "c": 25,
+   "n": 16,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 16,
+   "c": 26,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 17,
+   "c": 14,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 17,
+   "c": 15,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 17,
+   "c": 16,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 17,
+   "c": 25,
+   "n": 16,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 17,
+   "c": 26,
+   "n": 23,
+   "quiescence": "still"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 18,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 18,
+   "c": 14,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 18,
+   "c": 17,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 19,
+   "c": 12,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 19,
+   "c": 14,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 20,
+   "c": 11,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 20,
+   "c": 12,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 20,
+   "c": 14,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 20,
+   "c": 20,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 20,
+   "c": 21,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 21,
+   "c": 12,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 21,
+   "c": 13,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 21,
+   "c": 14,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 21,
+   "c": 20,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 21,
+   "c": 22,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 22,
+   "c": 19,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 22,
+   "c": 22,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 23,
+   "c": 20,
+   "n": 6,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 23,
+   "c": 22,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 24,
+   "c": 16,
+   "n": 12,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 24,
+   "c": 17,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 25,
+   "c": 14,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 25,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 25,
+   "c": 17,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 26,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 26,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 27,
+   "c": 16,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825016",
+   "r": 27,
+   "c": 17,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 12,
+   "c": 23,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 12,
+   "c": 24,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 12,
+   "c": 25,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 13,
+   "c": 23,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 13,
+   "c": 24,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 13,
+   "c": 26,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 14,
+   "c": 26,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 15,
+   "c": 17,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 15,
+   "c": 25,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 16,
+   "c": 15,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 16,
+   "c": 18,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 16,
+   "c": 19,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 16,
+   "c": 26,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 16,
+   "c": 27,
+   "n": 6,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 17,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 17,
+   "c": 18,
+   "n": 10,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 17,
+   "c": 19,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 18,
+   "c": 14,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 18,
+   "c": 20,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 13,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 16,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 19,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 20,
+   "n": 15,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 21,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 19,
+   "c": 22,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 14,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 17,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 20,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 22,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 20,
+   "c": 23,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 21,
+   "c": 14,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 21,
+   "c": 21,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 21,
+   "c": 22,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 21,
+   "c": 23,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 21,
+   "c": 24,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 22,
+   "c": 20,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 22,
+   "c": 24,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 22,
+   "c": 25,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 22,
+   "c": 26,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 23,
+   "c": 22,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 23,
+   "c": 24,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 23,
+   "c": 25,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 24,
+   "c": 24,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 24,
+   "c": 25,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 25,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 25,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 25,
+   "c": 22,
+   "n": 20,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 25,
+   "c": 24,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 26,
+   "c": 18,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 26,
+   "c": 19,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825017",
+   "r": 26,
+   "c": 23,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 12,
+   "c": 24,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 13,
+   "c": 23,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 13,
+   "c": 25,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 14,
+   "c": 20,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 14,
+   "c": 26,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 19,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 20,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 22,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 23,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 15,
+   "c": 25,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 16,
+   "c": 17,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 16,
+   "c": 18,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 16,
+   "c": 19,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 16,
+   "c": 20,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 16,
+   "c": 24,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 17,
+   "c": 16,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 18,
+   "c": 17,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 18,
+   "c": 18,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 19,
+   "c": 18,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 19,
+   "c": 19,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 19,
+   "c": 20,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 20,
+   "c": 18,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 20,
+   "c": 19,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 20,
+   "c": 21,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 21,
+   "c": 17,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 21,
+   "c": 19,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 21,
+   "c": 21,
+   "n": 14,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 22,
+   "c": 14,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 22,
+   "c": 15,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 22,
+   "c": 21,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 22,
+   "c": 22,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 13,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 17,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 19,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 21,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 23,
+   "c": 22,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 24,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 24,
+   "c": 16,
+   "n": 33,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 24,
+   "c": 18,
+   "n": 25,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 25,
+   "c": 13,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 25,
+   "c": 15,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 26,
+   "c": 14,
+   "n": 24,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825018",
+   "r": 26,
+   "c": 15,
+   "n": 13,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 13,
+   "c": 24,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 14,
+   "c": 23,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 14,
+   "c": 25,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 15,
+   "c": 23,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 18,
+   "c": 23,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 18,
+   "c": 26,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 19,
+   "c": 23,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 19,
+   "c": 24,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 19,
+   "c": 25,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 21,
+   "c": 18,
+   "n": 29,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 21,
+   "c": 19,
+   "n": 17,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 21,
+   "c": 20,
+   "n": 31,
+   "quiescence": "p2"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 23,
+   "c": 22,
+   "n": 30,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 24,
+   "c": 22,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825019",
+   "r": 25,
+   "c": 22,
+   "n": 31,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 18,
+   "c": 15,
+   "n": 27,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 18,
+   "c": 20,
+   "n": 18,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 18,
+   "c": 21,
+   "n": 28,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 19,
+   "c": 14,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 19,
+   "c": 15,
+   "n": 17,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 19,
+   "c": 22,
+   "n": 32,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 20,
+   "c": 13,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 20,
+   "c": 22,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 21,
+   "c": 14,
+   "n": 22,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 21,
+   "c": 21,
+   "n": 23,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 22,
+   "c": 15,
+   "n": 21,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 23,
+   "c": 15,
+   "n": 29,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 23,
+   "c": 16,
+   "n": 19,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 24,
+   "c": 15,
+   "n": 26,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 24,
+   "c": 16,
+   "n": 16,
+   "quiescence": "active"
+  },
+  {
+   "soup": "soup-20260825020",
+   "r": 24,
+   "c": 17,
+   "n": 28,
+   "quiescence": "active"
+  }
+ ],
+ "newStills": [
+  {
+   "name": "tub",
+   "focus": [
+    18,
+    19,
+    8
+   ],
+   "n": 8,
+   "quiescence": "still"
+  },
+  {
+   "name": "pond",
+   "focus": [
+    18,
+    19,
+    8
+   ],
+   "n": 9,
+   "quiescence": "still"
+  },
+  {
+   "name": "boat",
+   "focus": [
+    18,
+    18,
+    8
+   ],
+   "n": 16,
+   "quiescence": "still"
+  },
+  {
+   "name": "ship",
+   "focus": [
+    18,
+    18,
+    8
+   ],
+   "n": 16,
+   "quiescence": "still"
+  }
+ ],
+ "feasibility": {
+  "8": 0,
+  "9": 5,
+  "16": 15,
+  "23": 14
+ }
+}

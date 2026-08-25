@@ -1,0 +1,15 @@
+{
+  "comment": "Study 10 v1.3 additions, committed with PREREGISTRATION-v1.3.md before the v1.3 study run. The v1.1 artifact seeds.json is untouched: same grid (40x40 dead boundary), same T=8, same focus rule, same soup seeds. This file adds four still lifes (breaking the beehive/loaf duopoly, per RESULTS.md disposition 3) and pins the v1.3 PRNG seeds.",
+  "stillLifes": [
+    { "name": "tub",  "cells": [[0,1],[1,0],[1,2],[2,1]] },
+    { "name": "pond", "cells": [[0,1],[0,2],[1,0],[1,3],[2,0],[2,3],[3,1],[3,2]] },
+    { "name": "boat", "cells": [[0,0],[0,1],[1,0],[1,2],[2,1]] },
+    { "name": "ship", "cells": [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]] }
+  ],
+  "sampledTier": { "samples": 262144, "prngSeed": 20260825301 },
+  "soupExtension": {
+    "comment": "Used only if the committed 20 soups yield fewer than 5 matched foci in the primary stratum (pre-check decides). Deterministic continuation of the v1.1 soup seed sequence, same region/density.",
+    "seeds": [20260825021, 20260825022, 20260825023, 20260825024, 20260825025,
+              20260825026, 20260825027, 20260825028, 20260825029, 20260825030]
+  }
+}
