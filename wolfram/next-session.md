@@ -508,6 +508,48 @@ Two events, same day, causally linked:
   sweeps and Result 6.3's general "iff" (its formula and witnesses
   are [K]). Design notes part 7 has the Lean decisions.
 
+## Status update, 2026-08-25: Study 10 (Life causal cones) — protocol died twice, honestly
+
+The Game of Life pilot (`ca-study/`) ran its full arc in one day:
+
+- **v1.0 died by inspection, before any run.** The registered syntactic
+  edge rule (every Moore pair, values never consulted) makes the causal
+  DAG state-independent: conditions A–E produce isomorphic depth-d
+  pyramids, N2 (rule randomization) is provably a no-op, and the budget
+  forces depth 1 = the 9-antichain-under-a-top, whose kernels are all
+  dense or regular. P1–P4 would have failed as theorems about the
+  construction. v1.0 is committed unexecuted with the proof as its
+  postscript. General diagnostic kept: *if a randomization cannot change
+  your object, your object does not depend on what you randomized.*
+- **v1.1 (counterfactual single-flip edges, all parameters pinned) was
+  registered, committed at `0b1c40a`, and executed.** Anchors 8/8
+  (Div12/Div36 kernel-checked values reproduced). Census: counterfactual
+  cones around live structure grow fast (glider 9 → 27 → 57), so 21 of 29
+  cones landed at depth 1. **P1 FAILED** (Mann–Whitney p = 0.738; stop
+  rule applied, nulls not run). Postmortem: every depth-1 cone is a fan,
+  and Down(fan) is a powerset with a dense top glued on — aperture
+  identically 0 in every world, provable in two lines. The budget policy,
+  not the invariant, decided the outcome; both pools were structural
+  zeros. The v1.0 postscript had already named the pyramid as blind; the
+  amendment changed which two-layer poset the budget buys, not the
+  blindness of two-layer posets.
+- **What the deep cones showed (descriptive only, cross-depth, not
+  licensed as claims):** still lifes have the thinnest counterfactual
+  margins and hence the deepest in-budget cones — beehive (n=15, d=3)
+  14/15 latent, medAp 0.153; loaf (n=16, d=3) 15/16, 0.171 — an order of
+  magnitude wider than depth-2 soups (0.004–0.016). Soup-20260825005 has
+  the substrate's first ambient-ordinary kernels. Figure-against-quiet-
+  ground is where the instrument's budget goes deepest, which is where
+  the interpretive hypothesis lives — suggestive, unproved, unclaimed.
+- **Named follow-up, not run:** v1.2 depth-matched design (fixed d = 2
+  all conditions, all-kernel enumeration under a wide-mask engine or a
+  budget raise to n ≤ 24). Requires a new pre-registration. Pending
+  manual step: the WL twin (`ca-study/wl/ca-aperture.wl`) in Wolfram
+  Cloud to confirm the Node-side P1 negative.
+- Fifth instrument-overrules-operator event, second within this study.
+  Lesson recorded: *a budget policy is part of the instrument, and it can
+  be the part that goes blind.*
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

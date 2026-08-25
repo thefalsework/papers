@@ -109,8 +109,8 @@ Module[{n, down}, {n, down} = chainUnion[{2, 2}];
 (* Focus rule (v1.1 §3): among live cells at t=T, lowest row then lowest
    column. Depths: use the exhaustive-tier depth from the Node census
    (results/census.json); set below after the census is committed. *)
-depths = <|"A/glider" -> Null, "B/block" -> Null, "C/blinker" -> Null,
-   "D/lwss" -> Null, "E/soup-20260825001" -> Null|>; (* fill from census.json *)
+depths = <|"A/glider" -> 1, "B/block" -> 1, "C/blinker" -> 1,
+   "D/lwss" -> 1, "E/soup-20260825001" -> 2|>; (* filled from results/census.json, 2026-08-25 *)
 
 Do[Module[{hist, gT, pos, focus, cn, ps, n, down, list, d},
    d = depths[k];

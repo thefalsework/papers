@@ -1,0 +1,10019 @@
+[
+ {
+  "cond": "A",
+  "name": "glider",
+  "defined": true,
+  "focus": [
+   20,
+   21,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 19,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 19,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 19,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 20,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 20,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 21,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 21,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 21,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 20,
+     "c": 21,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "B",
+  "name": "block",
+  "defined": true,
+  "focus": [
+   19,
+   19,
+   8
+  ],
+  "depth": 1,
+  "n": 6,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 18,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 20,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 19,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 6,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 23,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "B",
+  "name": "beehive",
+  "defined": true,
+  "focus": [
+   18,
+   19,
+   8
+  ],
+  "depth": 3,
+  "n": 15,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 5
+    },
+    "apSize": 5008,
+    "apFraction": 0.15283203125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     73,
+     81,
+     89
+    ],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 73,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 81,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 89,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 5
+    },
+    "apSize": 5004,
+    "apFraction": 0.1527099609375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     74,
+     82,
+     90
+    ],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 74,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 82,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 90,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 5
+    },
+    "apSize": 5004,
+    "apFraction": 0.1527099609375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     76,
+     84,
+     92
+    ],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 76,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 84,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 92,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 19,
+     "c": 21,
+     "t": 5
+    },
+    "apSize": 3658,
+    "apFraction": 0.11163330078125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     140,
+     152,
+     156
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 140,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 152,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 156,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 5
+    },
+    "apSize": 3658,
+    "apFraction": 0.11163330078125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     274,
+     280,
+     282
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 274,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 280,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 282,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 20,
+     "c": 20,
+     "t": 5
+    },
+    "apSize": 3902,
+    "apFraction": 0.11907958984375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     545,
+     548,
+     549
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 545,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 548,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 549,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 12640,
+    "apFraction": 0.3857421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     145,
+     146,
+     147
+    ],
+    "occId": {
+     "I": 4,
+     "R": 3,
+     "E": 0,
+     "D": 8
+    },
+    "occOpen": [
+     {
+      "S": 145,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 146,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 147,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 12190,
+    "apFraction": 0.37200927734375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     81,
+     82,
+     83
+    ],
+    "occId": {
+     "I": 4,
+     "R": 4,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 81,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 82,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 83,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 12190,
+    "apFraction": 0.37200927734375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     73,
+     76,
+     77
+    ],
+    "occId": {
+     "I": 4,
+     "R": 4,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 73,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 76,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 77,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 19,
+     "c": 21,
+     "t": 6
+    },
+    "apSize": 8718,
+    "apFraction": 0.26605224609375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     82,
+     90,
+     114
+    ],
+    "occId": {
+     "I": 4,
+     "R": 4,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 82,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 90,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 114,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 8718,
+    "apFraction": 0.26605224609375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     76,
+     92,
+     108
+    ],
+    "occId": {
+     "I": 4,
+     "R": 4,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 76,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 92,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 108,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 2584,
+    "apFraction": 0.078857421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1538,
+     1539,
+     1540
+    ],
+    "occId": {
+     "I": 9,
+     "R": 1,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 1538,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1539,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1540,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 1568,
+    "apFraction": 0.0478515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1281,
+     1283,
+     1289
+    ],
+    "occId": {
+     "I": 9,
+     "R": 1,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 1281,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1283,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1289,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 1568,
+    "apFraction": 0.0478515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     641,
+     645,
+     657
+    ],
+    "occId": {
+     "I": 9,
+     "R": 1,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 641,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 645,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 657,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 15,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 14,
+  "latentFraction": 0.9333333333333333,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.1527099609375,
+  "maxApFraction": 0.3857421875,
+  "sampled": {
+   "depth": 8,
+   "n": 39,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "B",
+  "name": "loaf",
+  "defined": true,
+  "focus": [
+   18,
+   19,
+   8
+  ],
+  "depth": 3,
+  "n": 16,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 5
+    },
+    "apSize": 10144,
+    "apFraction": 0.15478515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     137,
+     145,
+     153
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 137,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 145,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 153,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 5
+    },
+    "apSize": 10140,
+    "apFraction": 0.15472412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     138,
+     146,
+     154
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 138,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 146,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 154,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 5
+    },
+    "apSize": 10140,
+    "apFraction": 0.15472412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     140,
+     148,
+     156
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 140,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 148,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 156,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 19,
+     "c": 21,
+     "t": 5
+    },
+    "apSize": 7346,
+    "apFraction": 0.112091064453125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     268,
+     280,
+     284
+    ],
+    "occId": {
+     "I": 1,
+     "R": 10,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 268,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 280,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 284,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 5
+    },
+    "apSize": 7346,
+    "apFraction": 0.112091064453125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     530,
+     536,
+     538
+    ],
+    "occId": {
+     "I": 1,
+     "R": 10,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 530,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 536,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 538,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 20,
+     "c": 21,
+     "t": 5
+    },
+    "apSize": 4218,
+    "apFraction": 0.064361572265625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1057,
+     1060,
+     1061
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 1057,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1060,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1061,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 21,
+     "c": 20,
+     "t": 5
+    },
+    "apSize": 4218,
+    "apFraction": 0.064361572265625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2113,
+     2114,
+     2115
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 2113,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2114,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2115,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 27312,
+    "apFraction": 0.416748046875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     273,
+     274,
+     275
+    ],
+    "occId": {
+     "I": 4,
+     "R": 4,
+     "E": 0,
+     "D": 8
+    },
+    "occOpen": [
+     {
+      "S": 273,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 274,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 275,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 25606,
+    "apFraction": 0.390716552734375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     145,
+     146,
+     147
+    ],
+    "occId": {
+     "I": 4,
+     "R": 5,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 145,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 146,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 147,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 25606,
+    "apFraction": 0.390716552734375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     137,
+     140,
+     141
+    ],
+    "occId": {
+     "I": 4,
+     "R": 5,
+     "E": 0,
+     "D": 7
+    },
+    "occOpen": [
+     {
+      "S": 137,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 140,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 141,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 19,
+     "c": 21,
+     "t": 6
+    },
+    "apSize": 15906,
+    "apFraction": 0.242706298828125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     146,
+     154,
+     178
+    ],
+    "occId": {
+     "I": 4,
+     "R": 6,
+     "E": 0,
+     "D": 6
+    },
+    "occOpen": [
+     {
+      "S": 146,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 154,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 178,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 15906,
+    "apFraction": 0.242706298828125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     140,
+     156,
+     164
+    ],
+    "occId": {
+     "I": 4,
+     "R": 6,
+     "E": 0,
+     "D": 6
+    },
+    "occOpen": [
+     {
+      "S": 140,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 156,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 164,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 22936,
+    "apFraction": 0.3499755859375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1090,
+     1091,
+     1094
+    ],
+    "occId": {
+     "I": 9,
+     "R": 2,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 1090,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1091,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1094,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 12240,
+    "apFraction": 0.186767578125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     577,
+     579,
+     580
+    ],
+    "occId": {
+     "I": 9,
+     "R": 2,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 577,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 579,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 580,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 12240,
+    "apFraction": 0.186767578125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     289,
+     290,
+     291
+    ],
+    "occId": {
+     "I": 9,
+     "R": 2,
+     "E": 0,
+     "D": 5
+    },
+    "occOpen": [
+     {
+      "S": 289,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 290,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 291,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 15,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 16,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 15,
+  "latentFraction": 0.9375,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.1707763671875,
+  "maxApFraction": 0.416748046875,
+  "sampled": {
+   "depth": 6,
+   "n": 37,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "C",
+  "name": "blinker",
+  "defined": true,
+  "focus": [
+   19,
+   18,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 18,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 18,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 19,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 19,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 20,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 20,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 29,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "C",
+  "name": "toad",
+  "defined": true,
+  "focus": [
+   19,
+   19,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 18,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 18,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 18,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 19,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 19,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 20,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 20,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 20,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 19,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "C",
+  "name": "pulsar",
+  "defined": true,
+  "focus": [
+   13,
+   15,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 12,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 12,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 12,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 13,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 13,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 14,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 14,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 15,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 31,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "D",
+  "name": "lwss",
+  "defined": true,
+  "focus": [
+   18,
+   14,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 17,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 17,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 17,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 18,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 18,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 19,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 19,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 19,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 18,
+     "c": 14,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825001",
+  "defined": true,
+  "focus": [
+   15,
+   17,
+   8
+  ],
+  "depth": 2,
+  "n": 16,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 4094,
+    "apFraction": 0.062469482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4099,
+     4105,
+     4107
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4099,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4105,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4107,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 15,
+     "c": 16,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8195,
+     8210,
+     8211
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8195,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8210,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8211,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 15,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 4186,
+    "apFraction": 0.063873291015625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4102,
+     4108,
+     4110
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4102,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4108,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4110,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 15,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 1138,
+    "apFraction": 0.017364501953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8201,
+     8216,
+     8217
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8201,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8216,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8217,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     16401,
+     16402,
+     16403
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 16401,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16402,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16403,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 16,
+     "c": 16,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8225,
+     8240,
+     8241
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8225,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8240,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8241,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 16,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     16449,
+     16450,
+     16451
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 16449,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16450,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16451,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 16,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 4186,
+    "apFraction": 0.063873291015625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4226,
+     4232,
+     4234
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4226,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4232,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4234,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 17,
+     "c": 16,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8449,
+     8464,
+     8465
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8449,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8464,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8465,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 17,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 1138,
+    "apFraction": 0.017364501953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8705,
+     8720,
+     8721
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8705,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8720,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8721,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 17,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     9217,
+     9232,
+     9233
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 9217,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9232,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9233,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 17,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     18433,
+     18434,
+     18435
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 18433,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18434,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18435,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 15,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 360,
+    "apFraction": 0.0054931640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8212,
+     8213,
+     8260
+    ],
+    "occId": {
+     "I": 4,
+     "R": 10,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8212,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8213,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8260,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 16,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 12672,
+    "apFraction": 0.193359375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4116,
+     4118,
+     4124
+    ],
+    "occId": {
+     "I": 9,
+     "R": 4,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4116,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4118,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4124,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 16,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 288,
+    "apFraction": 0.00439453125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8201,
+     8217,
+     8265
+    ],
+    "occId": {
+     "I": 6,
+     "R": 8,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8201,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8217,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8265,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 15,
+    "node": {
+     "r": 15,
+     "c": 17,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 16,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 15,
+  "latentFraction": 0.9375,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.015594482421875,
+  "maxApFraction": 0.193359375,
+  "sampled": {
+   "depth": 3,
+   "n": 37,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825002",
+  "defined": true,
+  "focus": [
+   14,
+   14,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 15,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 14,
+     "c": 14,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 29,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825003",
+  "defined": true,
+  "focus": [
+   16,
+   18,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 15,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 15,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 16,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 16,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 17,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 17,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 17,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 16,
+     "c": 18,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 26,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825004",
+  "defined": true,
+  "focus": [
+   12,
+   20,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 11,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 11,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 11,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 12,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 12,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 13,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 13,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 13,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 12,
+     "c": 20,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 24,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825005",
+  "defined": true,
+  "focus": [
+   13,
+   20,
+   8
+  ],
+  "depth": 2,
+  "n": 12,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 62,
+    "apFraction": 0.01513671875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1027,
+     1029,
+     1031
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 1027,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1029,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1031,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 378,
+    "apFraction": 0.09228515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     259,
+     266,
+     267
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 259,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 266,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 267,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 21,
+     "t": 6
+    },
+    "apSize": 378,
+    "apFraction": 0.09228515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     261,
+     268,
+     269
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 261,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 268,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 269,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 62,
+    "apFraction": 0.01513671875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1034,
+     1036,
+     1038
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 1034,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1036,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1038,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 378,
+    "apFraction": 0.09228515625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     273,
+     280,
+     281
+    ],
+    "occId": {
+     "I": 1,
+     "R": 8,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 273,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 280,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 281,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 21,
+     "t": 6
+    },
+    "apSize": 62,
+    "apFraction": 0.01513671875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1058,
+     1060,
+     1062
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 1058,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1060,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1062,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 62,
+    "apFraction": 0.01513671875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1090,
+     1092,
+     1094
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 1090,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1092,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1094,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 62,
+    "apFraction": 0.01513671875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     1154,
+     1156,
+     1158
+    ],
+    "occId": {
+     "I": 1,
+     "R": 9,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 1154,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1156,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 1158,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 1764,
+    "apFraction": 0.4306640625,
+    "idOrdinary": true,
+    "idVerdict": "ordinary",
+    "latent": false,
+    "openingSamples": [
+     515,
+     517,
+     519
+    ],
+    "occId": {
+     "I": 4,
+     "R": 6,
+     "E": 1,
+     "D": 1
+    },
+    "occOpen": [
+     {
+      "S": 515,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 517,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 519,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 13,
+     "c": 21,
+     "t": 7
+    },
+    "apSize": 1764,
+    "apFraction": 0.4306640625,
+    "idOrdinary": true,
+    "idVerdict": "ordinary",
+    "latent": false,
+    "openingSamples": [
+     259,
+     261,
+     263
+    ],
+    "occId": {
+     "I": 4,
+     "R": 6,
+     "E": 1,
+     "D": 1
+    },
+    "occOpen": [
+     {
+      "S": 259,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 261,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 263,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 14,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 6,
+     "R": 5,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 13,
+     "c": 20,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 12,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 8,
+  "latentFraction": 0.6666666666666666,
+  "ordinaryAtIdCount": 2,
+  "medianApFraction": 0.01513671875,
+  "maxApFraction": 0.4306640625,
+  "sampled": {
+   "depth": 3,
+   "n": 33,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825006",
+  "defined": true,
+  "focus": [
+   12,
+   18,
+   8
+  ],
+  "depth": 2,
+  "n": 17,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 11,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.0019378662109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8201,
+     8225,
+     8233
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8201,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8225,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8233,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 11,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 2282,
+    "apFraction": 0.0174102783203125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8202,
+     8226,
+     8234
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8202,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8226,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8234,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 11,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 2282,
+    "apFraction": 0.0174102783203125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8204,
+     8228,
+     8236
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8204,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8228,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8236,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 11,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 2046,
+    "apFraction": 0.0156097412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     16393,
+     16408,
+     16409
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 16393,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16408,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16409,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 12,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 2282,
+    "apFraction": 0.0174102783203125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8216,
+     8240,
+     8248
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8216,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8240,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8248,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 12,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 4026,
+    "apFraction": 0.0307159423828125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     16417,
+     16432,
+     16433
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 16417,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16432,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16433,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 12,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.0019378662109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8264,
+     8288,
+     8296
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8264,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8288,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8296,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 12,
+     "c": 20,
+     "t": 6
+    },
+    "apSize": 2046,
+    "apFraction": 0.0156097412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     16513,
+     16528,
+     16529
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 16513,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16528,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 16529,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 2282,
+    "apFraction": 0.0174102783203125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8456,
+     8480,
+     8488
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8456,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8480,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8488,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 13,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.0019378662109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8712,
+     8736,
+     8744
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8712,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8736,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8744,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 13,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.0019378662109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     9224,
+     9248,
+     9256
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 9224,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9248,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9256,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 14,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 2046,
+    "apFraction": 0.0156097412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     34817,
+     34818,
+     34819
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 34817,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 34818,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 34819,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 14,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 2046,
+    "apFraction": 0.0156097412109375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     36865,
+     36866,
+     36867
+    ],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 36865,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 36866,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 36867,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 12,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 9600,
+    "apFraction": 0.0732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     18434,
+     18435,
+     18436
+    ],
+    "occId": {
+     "I": 9,
+     "R": 5,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 18434,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18435,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18436,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 12,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 2560,
+    "apFraction": 0.01953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     10242,
+     10244,
+     10246
+    ],
+    "occId": {
+     "I": 6,
+     "R": 8,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 10242,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 10244,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 10246,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 15,
+    "node": {
+     "r": 13,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 2560,
+    "apFraction": 0.01953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8216,
+     8248,
+     8336
+    ],
+    "occId": {
+     "I": 6,
+     "R": 8,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 8216,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8248,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8336,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 16,
+    "node": {
+     "r": 12,
+     "c": 18,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 17,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 16,
+  "latentFraction": 0.9411764705882353,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.0156097412109375,
+  "maxApFraction": 0.0732421875
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825007",
+  "defined": true,
+  "focus": [
+   13,
+   19,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 12,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 12,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 12,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 13,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 13,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 14,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 14,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 28,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825008",
+  "defined": true,
+  "focus": [
+   14,
+   15,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 15,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 14,
+     "c": 15,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 26,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825009",
+  "defined": true,
+  "focus": [
+   15,
+   19,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 14,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 14,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 15,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 15,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 16,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 16,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 16,
+     "c": 20,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 29,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825010",
+  "defined": true,
+  "focus": [
+   14,
+   24,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 15,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 14,
+     "c": 24,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 31,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825011",
+  "defined": true,
+  "focus": [
+   13,
+   17,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 12,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 12,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 12,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 13,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 13,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 14,
+     "c": 17,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 17,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825012",
+  "defined": true,
+  "focus": [
+   15,
+   23,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 14,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 14,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 14,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 15,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 15,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 16,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 16,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 16,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 15,
+     "c": 23,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825013",
+  "defined": true,
+  "focus": [
+   14,
+   18,
+   8
+  ],
+  "depth": 2,
+  "n": 16,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4113,
+     4609,
+     4625
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4113,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4609,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4625,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4114,
+     4610,
+     4626
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4114,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4610,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4626,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4116,
+     4612,
+     4628
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4116,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4612,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4628,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 1138,
+    "apFraction": 0.017364501953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4120,
+     4616,
+     4632
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4120,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4616,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4632,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8209,
+     8210,
+     8211
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8209,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8210,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8211,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 1138,
+    "apFraction": 0.017364501953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4144,
+     4640,
+     4656
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4144,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4640,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4656,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 126,
+    "apFraction": 0.001922607421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4176,
+     4672,
+     4688
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4176,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4672,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4688,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 4186,
+    "apFraction": 0.063873291015625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4240,
+     4736,
+     4752
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4240,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4736,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4752,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 4186,
+    "apFraction": 0.063873291015625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4368,
+     4864,
+     4880
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 4368,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4864,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4880,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 16,
+     "c": 17,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     8705,
+     8706,
+     8707
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 8705,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8706,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 8707,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 16,
+     "c": 18,
+     "t": 6
+    },
+    "apSize": 1022,
+    "apFraction": 0.015594482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     9217,
+     9218,
+     9219
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 9217,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9218,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 9219,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 16,
+     "c": 19,
+     "t": 6
+    },
+    "apSize": 4094,
+    "apFraction": 0.062469482421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     18433,
+     18434,
+     18435
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 18433,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18434,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 18435,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 12672,
+    "apFraction": 0.193359375,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     10248,
+     10249,
+     10250
+    ],
+    "occId": {
+     "I": 9,
+     "R": 4,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 10248,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 10249,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 10250,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 15,
+     "c": 18,
+     "t": 7
+    },
+    "apSize": 288,
+    "apFraction": 0.00439453125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     6152,
+     6168,
+     6176
+    ],
+    "occId": {
+     "I": 6,
+     "R": 8,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 6152,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 6168,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 6176,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 15,
+     "c": 19,
+     "t": 7
+    },
+    "apSize": 360,
+    "apFraction": 0.0054931640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4240,
+     4368,
+     4496
+    ],
+    "occId": {
+     "I": 4,
+     "R": 10,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4240,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4368,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4496,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 15,
+    "node": {
+     "r": 14,
+     "c": 18,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 16,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 15,
+  "latentFraction": 0.9375,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.015594482421875,
+  "maxApFraction": 0.193359375,
+  "sampled": {
+   "depth": 3,
+   "n": 37,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825014",
+  "defined": true,
+  "focus": [
+   14,
+   12,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 11,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 12,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 11,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 14,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 15,
+     "c": 11,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 12,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 15,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 14,
+     "c": 12,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 26,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825015",
+  "defined": true,
+  "focus": [
+   14,
+   13,
+   8
+  ],
+  "depth": 1,
+  "n": 6,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 13,
+     "c": 12,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 13,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 13,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 12,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 15,
+     "c": 13,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 4,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 13,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 6,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 24,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825016",
+  "defined": true,
+  "focus": [
+   16,
+   25,
+   8
+  ],
+  "depth": 2,
+  "n": 16,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 14,
+     "c": 24,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2057,
+     2113,
+     2121
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 2057,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2113,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2121,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 14,
+     "c": 25,
+     "t": 6
+    },
+    "apSize": 490,
+    "apFraction": 0.007476806640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2058,
+     2114,
+     2122
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 2058,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2114,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2122,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 14,
+     "c": 26,
+     "t": 6
+    },
+    "apSize": 490,
+    "apFraction": 0.007476806640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2060,
+     2116,
+     2124
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 2060,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2116,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2124,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 14,
+     "c": 27,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4105,
+     4120,
+     4121
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4105,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4120,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4121,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 15,
+     "c": 24,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2072,
+     2128,
+     2136
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 2072,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2128,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2136,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 15,
+     "c": 26,
+     "t": 6
+    },
+    "apSize": 490,
+    "apFraction": 0.007476806640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2088,
+     2144,
+     2152
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 2088,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2144,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2152,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 15,
+     "c": 27,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4161,
+     4176,
+     4177
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4161,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4176,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4177,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 16,
+     "c": 24,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2184,
+     2240,
+     2248
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 2184,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2240,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2248,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 16,
+     "c": 25,
+     "t": 6
+    },
+    "apSize": 490,
+    "apFraction": 0.007476806640625,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     2312,
+     2368,
+     2376
+    ],
+    "occId": {
+     "I": 1,
+     "R": 12,
+     "E": 0,
+     "D": 3
+    },
+    "occOpen": [
+     {
+      "S": 2312,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2368,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 2376,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 9,
+    "node": {
+     "r": 16,
+     "c": 27,
+     "t": 6
+    },
+    "apSize": 254,
+    "apFraction": 0.003875732421875,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     4609,
+     4624,
+     4625
+    ],
+    "occId": {
+     "I": 1,
+     "R": 13,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 4609,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4624,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 4625,
+      "occ": {
+       "I": 1,
+       "R": 2,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 10,
+    "node": {
+     "r": 15,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 11,
+    "node": {
+     "r": 15,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 3360,
+    "apFraction": 0.05126953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     5122,
+     5123,
+     5124
+    ],
+    "occId": {
+     "I": 8,
+     "R": 6,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 5122,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 5123,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 5124,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 12,
+    "node": {
+     "r": 15,
+     "c": 26,
+     "t": 7
+    },
+    "apSize": 3360,
+    "apFraction": 0.05126953125,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": true,
+    "openingSamples": [
+     3074,
+     3076,
+     3078
+    ],
+    "occId": {
+     "I": 8,
+     "R": 6,
+     "E": 0,
+     "D": 2
+    },
+    "occOpen": [
+     {
+      "S": 3074,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 3076,
+      "occ": {
+       "I": 1,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     },
+     {
+      "S": 3078,
+      "occ": {
+       "I": 2,
+       "R": 1,
+       "E": 1,
+       "D": 0
+      }
+     }
+    ]
+   },
+   {
+    "x": 13,
+    "node": {
+     "r": 16,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 14,
+    "node": {
+     "r": 17,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 14,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 15,
+    "node": {
+     "r": 16,
+     "c": 25,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 16,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 12,
+  "latentFraction": 0.75,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0.003875732421875,
+  "maxApFraction": 0.05126953125,
+  "sampled": {
+   "depth": 3,
+   "n": 39,
+   "skipped": "n > 30 exceeds 32-bit mask engine"
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825017",
+  "defined": true,
+  "focus": [
+   12,
+   23,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 11,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 11,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 11,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 12,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 12,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 13,
+     "c": 22,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 13,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 13,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 12,
+     "c": 23,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825018",
+  "defined": true,
+  "focus": [
+   12,
+   24,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 11,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 11,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 11,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 12,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 12,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 13,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 13,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 13,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 12,
+     "c": 24,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 29,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825019",
+  "defined": true,
+  "focus": [
+   13,
+   24,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 12,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 12,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 12,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 13,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 13,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 14,
+     "c": 23,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 14,
+     "c": 24,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 14,
+     "c": 25,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 13,
+     "c": 24,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 26,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "E",
+  "name": "soup-20260825020",
+  "defined": true,
+  "focus": [
+   18,
+   15,
+   8
+  ],
+  "depth": 1,
+  "n": 9,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 17,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 1,
+    "node": {
+     "r": 17,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 2,
+    "node": {
+     "r": 17,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 3,
+    "node": {
+     "r": 18,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 4,
+    "node": {
+     "r": 18,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 5,
+    "node": {
+     "r": 19,
+     "c": 14,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 6,
+    "node": {
+     "r": 19,
+     "c": 15,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 7,
+    "node": {
+     "r": 19,
+     "c": 16,
+     "t": 7
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "regular",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 7,
+     "E": 0,
+     "D": 1
+    },
+    "occOpen": []
+   },
+   {
+    "x": 8,
+    "node": {
+     "r": 18,
+     "c": 15,
+     "t": 8
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 9,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0,
+  "sampled": {
+   "depth": 2,
+   "n": 27,
+   "focusKernel": {
+    "hits": 0,
+    "samples": 262144,
+    "fraction": 0,
+    "ci95": 0
+   }
+  }
+ },
+ {
+  "cond": "F",
+  "name": "single",
+  "defined": true,
+  "focus": [
+   19,
+   19,
+   1
+  ],
+  "depth": 1,
+  "n": 1,
+  "kernels": [
+   {
+    "x": 0,
+    "node": {
+     "r": 19,
+     "c": 19,
+     "t": 1
+    },
+    "apSize": 0,
+    "apFraction": 0,
+    "idOrdinary": false,
+    "idVerdict": "dense",
+    "latent": false,
+    "openingSamples": [],
+    "occId": {
+     "I": 1,
+     "R": 0,
+     "E": 0,
+     "D": 0
+    },
+    "occOpen": []
+   }
+  ],
+  "latentCount": 0,
+  "latentFraction": 0,
+  "ordinaryAtIdCount": 0,
+  "medianApFraction": 0,
+  "maxApFraction": 0
+ }
+]

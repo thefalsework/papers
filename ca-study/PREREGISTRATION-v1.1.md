@@ -278,3 +278,20 @@ interpretive hypothesis of §1.
 
 *Committed unchanged before first execution. Deviations logged as dated
 postscripts below this line.*
+
+---
+
+**POSTSCRIPT (2026-08-25, after execution).** Anchors 8/8 PASS; census and
+study executed as registered. **P1 FAILED** (Mann–Whitney p = 0.738); the
+stop rule was applied — P2–P5 uninterpretable, nulls (script 04) not run.
+Full outcomes and postmortem in `RESULTS.md`. The postmortem cause: the §4
+depth policy put 21 of 29 cones at depth 1, and every depth-1 cone is a fan,
+whose down-set algebra is a powerset with a dense top glued on — every
+element regular or dense in every world, aperture identically 0, provable
+before running (the v1.0 pyramid again, state-dependently sized). The
+negative result is registered as the outcome of *this* protocol; a
+depth-matched design is named as follow-up and requires a new
+pre-registration (v1.2). One deviation to record: `wl/ca-aperture.wl` had
+its five census depths filled in after script 02 ran (the file was committed
+with placeholders pending the census); the WL confirmation run in Wolfram
+Cloud is a pending manual step.

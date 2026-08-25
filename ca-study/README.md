@@ -44,5 +44,10 @@ Must agree exactly with the Node reference; any mismatch stops the study.
 
 ## Results
 
-Raw per-kernel output is committed under `results/`, not only summaries.
-Findings are logged in `wolfram/next-session.md` status updates.
+**Executed 2026-08-25: P1 FAILED as registered (p = 0.738); stop rule
+applied; nulls not run.** See `RESULTS.md` for the outcomes and the
+postmortem (the depth policy forced 21 of 29 cones into depth-1 fans, which
+are provably aperture-blind — the budget, not the invariant, decided the
+outcome). A depth-matched v1.2 is the named follow-up and requires a new
+pre-registration. Raw per-kernel output is committed under `results/`.
+Findings are also logged in `wolfram/next-session.md` status updates.
