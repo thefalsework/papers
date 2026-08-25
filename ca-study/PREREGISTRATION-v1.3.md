@@ -146,3 +146,19 @@ cloud confirmation still the pending manual step for the study as a whole.
 `results/sizematch-precheck.json`, `seeds-v13.json`,
 `08-sizematch-precheck.mjs`, and `09-sizematch-study.mjs`. Deviations logged
 as dated postscripts below this line.*
+
+---
+
+**POSTSCRIPT (2026-08-25, after execution).** Anchors all PASS; study ran as
+registered, no deviations. **P7 FAILED, decisively** (one-sided p = 0.364;
+B and E medians essentially identical in all three strata). **S1 resolved
+the failure as R3 — deflation:** still-class and active-class soup cones at
+n = 9 are indistinguishable (p = 1.0). The disclosed prior (block's
+soup-range value) was right: v1.2's P6′ was a cone-size artifact. The size
+law is on the record as S3 (E-side medians 0.098 → 0.016 → 0.0075 across
+n = 9 → 16 → 23), with one sharpening found in the raw output: **all ten
+n = 9 cones — still lifes and soups, quiescent and active — share a single
+per-kernel aperture multiset**, so at the smallest matched size the
+"comparison" was between structurally identical algebra objects. Per §5,
+the CA study closes fully negative on every differentiation claim; no v1.4
+in this session. Full accounting in `RESULTS.md`.

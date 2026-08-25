@@ -146,5 +146,68 @@ execution. Raw outputs: `results/study-v12.json`, `results/nulls-v12.json`.
    not this session): size-controlled figure-vs-ground comparison, e.g.
    still-life cones vs soup sub-cones matched on n, plus more still-life
    seeds (pond, tub, boat, ship) to break the beehive/loaf duopoly.
+   *(Run as v1.3, below: the follow-up killed it.)*
 4. Two-implementation status unchanged: Node-side results; WL cloud
    confirmation of the primary cones remains the pending manual step.
+
+---
+
+# v1.3 results (2026-08-25, later session; size-controlled)
+
+**Protocol:** `PREREGISTRATION-v1.3.md`, committed at `e7252b2` with the
+sizes-only pre-check (`results/sizematch-precheck.json` — no aperture
+computed before registration), before execution. Anchors all PASS at run
+start. Raw output: `results/sizematch-v13.json`.
+
+## Outcomes, as registered
+
+| prediction | outcome |
+|---|---|
+| **P7 (size-controlled figure-vs-ground)** | **FAILS, decisively.** Stratified rank permutation test (strata n = 9, 16, 23; one-sided B > E; 100,000 permutations): p = 0.364. Stratum medians B vs E: 0.09766 vs 0.09766, 0.01559 vs 0.01559, 0.00743 vs 0.00753. |
+| **S1 (quiescence disambiguation)** | **R3 — deflation.** Still-class vs active-class soup cones at n = 9: identical (all medAp = 0.09766, Mann–Whitney p = 1.0). Local quiescent figure carries nothing at matched size. |
+| S2 (new still lifes) | The duopoly is broken and confirms the size law, not the condition: pond (n = 9) lands exactly on beehive/loaf; boat/ship (n = 16) land exactly on the n = 16 soup median; tub (n = 8, unmatched) fits the size trend. |
+| S3 (size effect) | The law that generated the illusion, now on the record: E-side median aperture fraction 0.098 → 0.016 → 0.0075 across n = 9 → 16 → 23. |
+
+## What the size-controlled data says
+
+- **v1.2's P6′ was a cone-size artifact.** The ~17× still-life/soup ratio
+  was the size law read across strata. The registration's disclosed prior
+  (block, the one still life with a soup-sized cone, sitting in the soup
+  range) pointed the right way and the permutation test confirmed it.
+- **At n = 9 the comparison was between identical objects.** All ten n = 9
+  cones — beehive, loaf, pond, and every matched soup focus, quiescent and
+  active alike — share a single per-kernel aperture multiset
+  (0, 30, 30, 50, 50, 56, 56, 64, 104 of 512): one structural class. The
+  d = 2 counterfactual construction around any size-9 history apparently
+  produces one poset up to the invariant. At n = 16 there are seven
+  distinct classes (boat/ship even have one to themselves), and the B–E
+  medians *still* coincide — variety exists and the condition label still
+  carries nothing.
+- **The CA study therefore closes fully negative on differentiation, end
+  to end:** not authored-vs-random (P1, P1′), not figure-vs-ground (P7),
+  not local quiescence (S1). On Life causal cones at d = 2 under this
+  construction, the aperture measures cone size and cone isomorphism
+  class, and nothing about what the pattern *is*.
+- **What stands, unaffected:** latency is generic on this substrate
+  (v1.3 data agrees: 7–22 latent kernels per cone, every cone); the
+  narrowness scoping (Mathlib's ≈18× is about curated dependency
+  structures, not causal graphs in general); and the size law itself, a
+  clean descriptive fact nobody registered a prediction about.
+
+## Disposition
+
+1. Per v1.3 §5 (R3 branch): **report at full prominence and stop.** No
+   v1.4 in this session; any return to this substrate needs a construction
+   that breaks the size-dominance (deeper horizons, different edge
+   relations, or intensive rather than extensive invariants), and that is
+   an open design question, not a scheduled study.
+2. The outward documents (both briefs) are updated in the same commit:
+   the still-life lead they reported this morning is retracted as a size
+   artifact, at the same prominence it was reported.
+3. Instrument-history note: sixth overrule. The program's one positive
+   lead on this substrate was killed by its own registered follow-up
+   within hours of being reported. The v1.3 registration named the
+   deflationary prior as better-supported before running; the discipline's
+   job was to make the hope pay rent, and it couldn't.
+4. Two-implementation status: Node-side; the WL twin remains the pending
+   manual confirmation step for the study as a whole.

@@ -586,6 +586,38 @@ calibration 106/108 committed with it at `c64ce3c`) and executed same day:
   Node-side primary cones; size-controlled P6′ follow-up as a fresh
   registration.
 
+## Status update, 2026-08-25 (final): Study 10 v1.3 — the follow-up killed P6′; study closes negative
+
+The size-controlled registration (`PREREGISTRATION-v1.3.md`, committed at
+`e7252b2` with a sizes-only pre-check — no aperture computed before
+registration, so the predictions stayed blind) ran the same day:
+
+- **P7 (size-controlled figure-vs-ground) FAILED decisively** (stratified
+  permutation test across matched strata n = 9/16/23, one-sided p = 0.364).
+  Stratum medians B vs E: 0.09766/0.09766, 0.01559/0.01559,
+  0.00743/0.00753 — essentially identical everywhere.
+- **S1 resolved the failure as deflation (R3):** still-class vs
+  active-class soup cones at n = 9 indistinguishable (p = 1.0). The v1.2
+  ~17× was the size law read across strata (E-side medians
+  0.098 → 0.016 → 0.0075 over n = 9 → 16 → 23).
+- Sharpest fact in the raw output: **all ten n = 9 cones — beehive, loaf,
+  pond, and every matched soup focus — share a single per-kernel aperture
+  multiset.** One structural class. At the smallest matched size the
+  "comparison" was between identical algebra objects.
+- **The CA study closes fully negative on every differentiation claim**
+  (P1, P1′, P7, S1). What stands: latency generic, narrowness scoped to
+  curated corpora, the size law [descriptive]. Both briefs updated in the
+  same commit — the still-life lead retracted at the prominence it was
+  reported.
+- Sixth instrument-overrules-operator event: the substrate's one positive
+  lead, killed by its own registered follow-up within hours of being
+  reported. The disclosed prior (block already sitting in the soup range
+  at n = 23) pointed the right way.
+- Any return to this substrate needs a construction that breaks
+  size-dominance (deeper horizons, different edge relations, intensive
+  invariants) — an open design question, not a scheduled study. Pending
+  manual step unchanged: the WL cloud confirmation run.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the
