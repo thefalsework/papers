@@ -127,3 +127,19 @@ depth on one rule, nothing more.
 *Committed unchanged before first v1.2 execution, together with the passing
 calibration output. Deviations logged as dated postscripts below this
 line.*
+
+---
+
+**POSTSCRIPT (2026-08-25, after execution).** Calibration 106/108 within CI
+(PASS); study and nulls executed as registered, no deviations. **P1′ FAILED
+as a genuine measurement** (p = 0.263; every cone carries real apertures —
+the fan artifact is gone and the pooled structured-vs-soup difference is
+absent). **P6′ HELD** (still lifes ~17× wider than soup, p = 0.044), with
+the cone-size entanglement recorded in `RESULTS.md`. P5′ held; P2′–P4′ not
+evaluated per the gate; nulls ran under the P6′ branch — N1 shows **no
+narrowness** (real cones inside their rewiring distributions), N2 shows
+random matched-density rules mostly killing the patterns. Full outcomes,
+the post-hoc soup-is-ash reading (flagged), and the named size-controlled
+follow-up are in `RESULTS.md`. Per the branch rule, the surviving thread is
+figure-vs-ground, not structured-vs-random, and no v1.3 is registered in
+this session.

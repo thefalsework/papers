@@ -550,6 +550,42 @@ The Game of Life pilot (`ca-study/`) ran its full arc in one day:
   Lesson recorded: *a budget policy is part of the instrument, and it can
   be the part that goes blind.*
 
+## Status update, 2026-08-25 (later): Study 10 v1.2 — the real answer, and it splits
+
+Depth-matched redesign registered cold (`PREREGISTRATION-v1.2.md`,
+calibration 106/108 committed with it at `c64ce3c`) and executed same day:
+
+- **P1′ (structured-vs-soup) FAILS as a genuine measurement** (p = 0.263).
+  With the fan artifact removed, every cone carries real apertures, and
+  gliders/oscillators/spaceships are statistically indistinguishable from
+  soup. The v1.1 negative is confirmed by clean design. Post-hoc reading,
+  flagged: soup at T = 8 is ash — still lifes and blinkers — so the
+  registered contrast compared zoo objects to a population of the same
+  kinds of objects; the question, not the instrument, may be ill-posed at
+  this horizon.
+- **P6′ (figure-vs-ground) HOLDS**: still-life cones ~17× wider than soup
+  at matched depth (0.0977 vs 0.0057, MW p = 0.044). Caveat recorded: the
+  signal rides on beehive/loaf's n = 9 cones and aperture fractions covary
+  with cone size — but thin counterfactual margins ARE the still-life
+  phenomenon, so signal and confound are entangled. Size-controlled
+  follow-up named, not run.
+- **Narrowness does NOT transfer**: real cones sit at percentiles 6-88 of
+  their own 100 degree-preserving rewirings. The Mathlib ≈18× is a fact
+  about curated dependency structures — the anticipated §8 reading of the
+  aperture paper's empirical scope, now measured.
+- **Latency is generic on the CA substrate** (67-94% of kernels in every
+  non-trivial cone; first ambient-ordinary kernels found in oscillator and
+  soup cones). Cross-substrate picture: latency rare on divisor lattices,
+  generic on Mathlib, generic on Life — full-resolution ordinariness is
+  the exception in the wild.
+- **N2**: random matched-density rules kill the pattern before T = 8 in
+  45-60% of runs; where defined, apertures run 0-0.0018 vs Life's
+  0.0037-0.0147 on the same seeds. Life makes wider-aperture causal
+  structure than a random rule of equal table density [descriptive].
+- Pending: WL cloud run (`ca-study/wl/ca-aperture.wl`) to confirm the
+  Node-side primary cones; size-controlled P6′ follow-up as a fresh
+  registration.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

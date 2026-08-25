@@ -44,10 +44,20 @@ Must agree exactly with the Node reference; any mismatch stops the study.
 
 ## Results
 
-**Executed 2026-08-25: P1 FAILED as registered (p = 0.738); stop rule
-applied; nulls not run.** See `RESULTS.md` for the outcomes and the
-postmortem (the depth policy forced 21 of 29 cones into depth-1 fans, which
-are provably aperture-blind — the budget, not the invariant, decided the
-outcome). A depth-matched v1.2 is the named follow-up and requires a new
-pre-registration. Raw per-kernel output is committed under `results/`.
-Findings are also logged in `wolfram/next-session.md` status updates.
+Three protocol versions, one day (2026-08-25), all in `RESULTS.md`:
+
+- **v1.0** died by inspection before any run (state-independent edges).
+- **v1.1** executed; P1 failed by artifact — its depth policy forced 21 of
+  29 cones into depth-1 fans, which are provably aperture-blind.
+- **v1.2** (depth-matched d = 2, calibrated mixed estimator, scripts
+  05–07) executed clean: **P1′ fails as a real measurement** — pooled
+  coherent patterns vs soup do not differ (p = 0.263) — while **P6′ holds**
+  (still-life cones ~17× wider than soup, p = 0.044, size entanglement
+  recorded), latency is generic (67–94% of kernels in every non-trivial
+  cone), and the Mathlib narrowness does **not** transfer (real cones sit
+  inside their degree-matched null distributions).
+
+Raw per-kernel output under `results/`; session log in
+`wolfram/next-session.md`. Named follow-up (new registration required):
+size-controlled figure-vs-ground comparison. Pending: WL cloud
+confirmation of the primary cones (`wl/ca-aperture.wl`).

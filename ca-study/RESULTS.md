@@ -78,3 +78,73 @@ conditions):
    prediction died by measurement with a cause the v1.0 postscript had
    already named). The lesson generalizes: *a budget policy is part of the
    instrument, and it can be the part that goes blind.*
+
+---
+
+# v1.2 results (2026-08-25, same day; depth-matched d = 2)
+
+**Protocol:** `PREREGISTRATION-v1.2.md`, committed with the passing
+calibration (106/108 per-kernel estimates within CI) at `c64ce3c`, before
+execution. Raw outputs: `results/study-v12.json`, `results/nulls-v12.json`.
+
+## Outcomes, as registered
+
+| prediction | outcome |
+|---|---|
+| **P1′ (differentiation)** | **FAILS — and this time it is a real measurement, not an artifact.** Pooled A–D vs E per-cone median aperture fraction: Mann–Whitney U = 102, z = 1.119, p = 0.263. Every cone has nonzero apertures; nothing is structurally blind at d = 2. |
+| P2′–P4′ | Not evaluated (P1′ gate). |
+| P5′ (control) | HOLDS (F clean). |
+| **P6′ (figure-vs-ground)** | **HOLDS**, direction and significance: median of B-cone medians 0.0977 vs E 0.0057 (~17×), Mann–Whitney p = 0.044 < 0.05. |
+| P3′ | Not evaluated (gate), but the N1 data is decisive descriptively: **no narrowness on this substrate** — real cones sit at percentiles 6, 88, 64, 76, 4 of their own 100 degree-preserving rewirings. The Mathlib ≈18× narrowness does not transfer; it is a fact about curated dependency structures. |
+
+## What the depth-matched data says
+
+- **The pooled structured-vs-random contrast is genuinely absent.** With
+  the fan confound removed, gliders, oscillators, and spaceships have
+  aperture profiles statistically indistinguishable from soup (movers'
+  medians 0.0040/0.0040 sit *inside* the soup range). The v1.1 stop-rule
+  negative is thus confirmed by a clean design: on Life causal cones,
+  "authored zoo object vs random soup" is not what the aperture measures.
+- **Post-hoc reading, flagged as such:** condition E at T = 8 is not
+  "unstructured" — decayed soup is largely ash (still lifes, blinkers).
+  The A–D vs E contrast compared zoo objects to a population containing
+  the same kinds of objects. The registered question may have been
+  ill-posed for this substrate at this horizon, which is a different
+  statement from "the invariant sees nothing."
+- **P6′ is the surviving positive thread, with a named caveat.** Still-life
+  cones are an order of magnitude wider than soup cones at matched depth —
+  but the B signal is carried by beehive/loaf, whose d = 2 cones have
+  n = 9 versus 23–31 elsewhere, and aperture *fractions* covary with cone
+  size. The small cone size is itself part of the still-life phenomenon
+  (thin counterfactual margins are what "static figure against quiet
+  ground" looks like in this construction), so the confound and the signal
+  are entangled. A size-controlled comparison is required before P6′
+  graduates to a claim.
+- **Latency is generic on this substrate** — 67–94% of kernels latent in
+  every non-trivial cone, soup included, with only 0–2 ambient-ordinary
+  kernels per cone (the substrate's first, found in oscillator and soup
+  cones). Cross-substrate picture now: latency rare on divisor lattices,
+  generic on Mathlib cones, generic on Life cones — full-resolution
+  ordinariness is the exception in the wild, not the rule.
+- **N2 (rule randomization, separate comparison):** random matched-density
+  rules kill the pattern before T = 8 in 45–60% of runs (undefined foci,
+  counted as registered); where defined, aperture medians run 0.0000–0.0018
+  versus Life's 0.0037–0.0147 on the same seeds. Life's rule produces
+  wider-aperture causal structure than a random totalistic rule of the
+  same table density — descriptive, not tested.
+
+## Disposition
+
+1. **The load-bearing negative stands and is now real:** the aperture does
+   not separate pooled coherent-pattern cones from soup cones on Life at
+   d = 2. Reported with the same prominence as any positive, per §8.
+2. **The narrowness result is now scoped:** it does not transfer to CA
+   causal graphs; Mathlib's 18× is about curated libraries. This sharpens
+   the program's empirical map rather than damaging it.
+3. **P6′ survives as the registered, falsifiable thread** — still lifes vs
+   soup, with the size entanglement named. Follow-up (new registration,
+   not this session): size-controlled figure-vs-ground comparison, e.g.
+   still-life cones vs soup sub-cones matched on n, plus more still-life
+   seeds (pond, tub, boat, ship) to break the beehive/loaf duopoly.
+4. Two-implementation status unchanged: Node-side results; WL cloud
+   confirmation of the primary cones remains the pending manual step.
