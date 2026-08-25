@@ -156,11 +156,14 @@ export function pastCone(hist, rule, focus, depth) {
 
 // Bitmask poset from a cone: order = transitive closure of direct edges,
 // computed by DP over ascending t (parents always precede children).
+// Largest usable mask: n <= 31 (bits 0..30 stay non-negative in int32 ops).
+export function fullMask(n) { return n === 31 ? 0x7fffffff : (1 << n) - 1; }
+
 export function conePoset(cone) {
   const list = [...cone.nodes.entries()].map(([k, v]) => ({ key: k, ...v }));
   list.sort((a, b) => a.t - b.t || a.r - b.r || a.c - b.c);
   const n = list.length;
-  if (n > 30) throw new Error("cone too large for 32-bit bitmask poset: n=" + n);
+  if (n > 31) throw new Error("cone too large for 32-bit bitmask poset: n=" + n);
   const idx = new Map(list.map((x, i) => [x.key, i]));
   const down = new Array(n);
   for (let i = 0; i < n; i++) {
@@ -262,6 +265,59 @@ export function apertureSampled(P, B, samples, rng) {
   const p = hits / samples;
   const ci = 1.96 * Math.sqrt((p * (1 - p)) / samples);
   return { hits, samples, fraction: p, ci95: ci };
+}
+
+// Single-kernel sampled aperture with exact identity verdict (v1.2 §2).
+export function kernelSampled(P, B, samples, rng) {
+  const size = Math.pow(2, P.n);
+  const full = fullMask(P.n);
+  let hits = 0;
+  for (let i = 0; i < samples; i++) {
+    const S = Math.floor(rng() * size);
+    if (worldVerdict(P, S, B).ordinary) hits++;
+  }
+  const idV = worldVerdict(P, full, B);
+  const p = hits / samples;
+  return {
+    apHits: hits, samples, apFraction: p,
+    ci95: 1.96 * Math.sqrt((p * (1 - p)) / samples),
+    idOrdinary: idV.ordinary,
+    idVerdict: idV.ordinary ? "ordinary" : idV.dense ? "dense" : "regular",
+    latent: !idV.ordinary && hits > 0,
+  };
+}
+
+// Mixed-estimator cone study (v1.2 §2): exact for n <= exactMaxN, else
+// sampled with `samples` worlds per kernel from the provided rng stream.
+export function coneStudyMixed(P, exactMaxN, samples, rng) {
+  const exact = P.n <= exactMaxN;
+  const kernels = [];
+  for (let x = 0; x < P.n; x++) {
+    const B = P.down[x];
+    let st;
+    if (exact) {
+      const e = apertureExhaustive(P, B);
+      st = { apHits: e.apSize, samples: 1 << P.n, apFraction: e.apFraction, ci95: 0,
+             idOrdinary: e.idOrdinary, idVerdict: e.idVerdict, latent: e.latent };
+    } else {
+      st = kernelSampled(P, B, samples, rng);
+    }
+    const node = P.list ? P.list[x] : null;
+    kernels.push({
+      x, node: node ? { r: node.r, c: node.c, t: node.t } : null, ...st,
+      occId: occupancy(P, fullMask(P.n), B),
+    });
+  }
+  const fr = kernels.map((k) => k.apFraction);
+  return {
+    n: P.n, estimator: exact ? "exact" : "sampled",
+    kernels,
+    latentCount: kernels.filter((k) => k.latent).length,
+    latentFraction: kernels.filter((k) => k.latent).length / P.n,
+    ordinaryAtIdCount: kernels.filter((k) => k.idOrdinary).length,
+    medianApFraction: median(fr),
+    maxApFraction: Math.max(...fr),
+  };
 }
 
 // All-kernel summary for a cone poset.
