@@ -1,0 +1,56 @@
+{
+ "pin": "1e072b5cc6b4a19ed1f4f905feddb07b884c9f2c",
+ "entries": 1014,
+ "theories": 10371,
+ "parse": {
+  "theoriesWithHeader": 10370,
+  "headerless": 1,
+  "tokens": 22299,
+  "withinEntry": 14535,
+  "crossEntry": 3257,
+  "distribution": 2685,
+  "unresolvedOther": 1822
+ },
+ "theoryGraph": {
+  "nodes": 10371,
+  "afpInternalEdges": 17774,
+  "hasCycles": true,
+  "sccCount": 10363
+ },
+ "entryGraph": {
+  "nodes": 1014,
+  "edges": 1360,
+  "nontrivialSccs": 1,
+  "largestScc": 4,
+  "condensationNodes": 1011,
+  "gateOnCondensation": {
+   "ordinary": 598,
+   "evaluable": 550
+  }
+ },
+ "topics": {
+  "entriesWithTopics": 1013,
+  "topLevel": {
+   "Computer science": 482,
+   "Logic": 135,
+   "Mathematics": 372,
+   "Tools": 24
+  }
+ },
+ "perEntryTheoryCounts": {
+  "top10": [
+   408,
+   177,
+   154,
+   130,
+   101,
+   93,
+   79,
+   75,
+   73,
+   72
+  ],
+  "median": 6,
+  "p90": 21
+ }
+}

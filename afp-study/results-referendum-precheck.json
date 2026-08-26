@@ -1,0 +1,30 @@
+{
+ "ALL": {
+  "n": 1013,
+  "edges": 1317,
+  "ordinary": 601,
+  "evaluable": 553,
+  "shareFrac": 0.054898961718996914
+ },
+ "Logic": {
+  "n": 135,
+  "edges": 113,
+  "ordinary": 67,
+  "evaluable": 54,
+  "shareFrac": 0.13499170812603647
+ },
+ "Mathematics": {
+  "n": 372,
+  "edges": 393,
+  "ordinary": 222,
+  "evaluable": 172,
+  "shareFrac": 0.15678346810422283
+ },
+ "ComputerScience": {
+  "n": 482,
+  "edges": 449,
+  "ordinary": 255,
+  "evaluable": 208,
+  "shareFrac": 0.09601366447839477
+ }
+}
