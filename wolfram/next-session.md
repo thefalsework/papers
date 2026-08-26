@@ -789,6 +789,25 @@ operator hypotheses 0-for-9). Both briefs point at it. Anyone can run
 it; the paper gets its standing falsifiable prediction either way.
 Next: the synthesis write-up.
 
+## Status update, 2026-08-26 (evening): the synthesis exists
+
+`preprints/field-deployments/paper.md` v0.1 — the account of record for
+the 08-19..08-26 field campaign, written for a reader who wasn't
+present. Structure: the instrument in five sentences (with the
+Simmons/Bezhanishvili reduction as the enabling fact); corpora and the
+uniform discipline; what survived (E-on-territory cross-ecosystem,
+latency generic, E > R as the one dynamical statement); what was
+scoped (narrowness to curated corpora, consolidation to maintained
+ones); the graveyard at full prominence (all nine
+instrument-overrules-operator events enumerated in order, the two
+instrument deaths with their portable diagnostics, the Life clean
+negative with the commitment-not-computation reading flagged [A]);
+the garden/museum table and the armed protocol; not-claimed;
+reproducibility. No new runs, no new claims — every number
+cross-checked against the study READMEs before writing. Both forward
+predictions (CWComplex island; software pair) are on its last pages.
+Philosophers-brief pointers now lead with it.
+
 The third companion is drafted next: **the four positions of the
 temperament commitment, one work per cell, fully worked** — the
 cultural wager alongside the mathematical (aperture) and perceptual

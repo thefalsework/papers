@@ -1,0 +1,374 @@
+# The Instrument in the Field: What an Algebraic Invariant Found, and Failed to Find, in Three Real Corpora
+
+**Author.** Chris Brink (independent)
+**Version.** Draft v0.1, 2026-08-26. Synthesis of the field deployments of
+2026-08-19 through 2026-08-26; primary sources are the study folders cited
+per-claim (`mathlib-study/`, `afp-study/`, `ca-study/`, `software-study/`),
+each of which carries its pre-registrations inline and its raw output
+committed.
+**Status discipline.** Every claim carries one of the program's grades:
+**[K]** kernel-checked in Lean 4 against Mathlib4 (axiom audits: `propext`,
+`Classical.choice`, `Quot.sound` only; no `sorry`); **[C]** classical
+mathematics, cited; **[computed]** exhaustive or registered finite
+computation — exact-tier results under two-implementation agreement;
+**[A]** interpretive, argued not proved; **[H]** falsifiable and registered,
+untested; **[O]** open. The grades are load-bearing. This paper contains no
+new theorems and no new runs: it is the account of record for work already
+committed, written so that a reader who was not present can audit the arc.
+
+---
+
+## Abstract
+
+A prior paper of this program defined the **aperture** of a distinction — the
+set of lawful coarse-grainings (nuclei) under which a distinguished element of
+a Heyting algebra retains a non-degenerate four-position structure — proved
+its central facts on divisor lattices in Lean **[K]**, and computed it
+exhaustively on fifteen finite algebras **[computed]**. This paper reports
+what happened when that invariant was used as a *measuring instrument* on
+corpora the program does not control: the import structure of Mathlib
+(twenty-one namespaces, ~7,900 modules, three years of history), the Archive
+of Formal Proofs (1,014 entries, a different proof assistant and community,
+twenty-two years of history), and the counterfactual causal graphs of Conway's
+Game of Life (the first substrate authored by no one). Every test was
+pre-registered before its first run; thirty-four scripts across the three
+study folders, plus the Life study's four versioned protocol documents,
+constitute the primary record. Two findings
+survived everything thrown at them: **Exploitation-cell members occupy the
+kernel's named territory** — a cross-ecosystem regularity, 16/16 registered
+Mathlib namespaces and the whole AFP graph with every stratum at the 100th
+percentile of placement-permutation nulls — and **latency is generic in the
+wild** — most real kernels show no four-position structure at full resolution
+and acquire it only under specific proper coarse-grainings, on every corpus
+measured. Two findings were *scoped* by failed transfer: aperture narrowness
+(≈18× vs degree-matched nulls on Mathlib; absent on Life cones) and the
+consolidation arrow (null-controlled on Mathlib; reversed on AFP). Nine
+registered operator hypotheses were overruled by the instrument, at a final
+score of operator 0, instrument 9; the graveyard is reported at the same
+prominence as the survivals, because the program regards the kill record as
+its methodological contribution. One pattern remains live: the two historical
+corpora separate along a maintained-versus-archival axis on two independent
+measurements. The paper closes with that hypothesis in its strongest testable
+form — a registered, unrun protocol on a named software pair, committed before
+any data acquisition, which anyone may execute **[H]**.
+
+## 1. What the instrument is, in five sentences
+
+Fix a Heyting algebra and a distinguished element (the **kernel**). Every
+element falls into exactly one of four positions relative to the kernel —
+Infrastructure (inside it), Refusal (wholly outside), Exploitation (in the
+double-negation residue: territory the kernel claims but does not settle), and
+Distribution (straddling the boundary) — and the partition is non-degenerate
+exactly when the kernel is **ordinary**: neither regular nor dense **[K]**
+(`four_position_partition`, `partition_nondegenerate_iff_kernel_ordinary`).
+A **nucleus** is a lawful coarse-graining — inflationary, idempotent,
+meet-preserving — whose fix-set is the world at that resolution **[C]**. The
+**aperture** of a kernel is the set of nuclei under which its image is
+ordinary *inside their world*: the census of observers for whom the
+four-position structure stays open. On finite algebras the aperture is
+exhaustively computable, on divisor lattices it has a kernel-checked closed
+form at every arity **[K]** (`aperture_closed_form_pi`), and on down-set
+algebras of finite posets the classical classification of nuclei (Simmons
+1980; Bezhanishvili et al., *Order* 2020) reduces it to sub-poset
+combinatorics: Ap(a) = { S ⊆ P : a ∩ S is ordinary in Down(S) } **[C]/[computed]**
+(`mathlib-study/02`).
+
+That last reduction is what makes field work possible. Any corpus with an
+inarguable dependency order — a compiler-enforced import graph, a registry's
+declared dependencies, a causal DAG — yields a finite distributive lattice of
+down-sets, principal down-sets as candidate kernels, and a complete finite
+census of observers. The instrument needs two things from a corpus: a
+dependency order nobody can argue with, and ground-truth labels made by people
+who have never heard of this program. The three corpora below supply both.
+
+## 2. The corpora and the discipline
+
+**Mathlib** (`mathlib-study/`, eighteen scripts, 2026-08-19 and 2026-08-26).
+The largest library of machine-checked mathematics; revision pinned
+(`1fb6b28816`, 2026-05-19); namespace-internal import graphs; six historical
+checkpoints 2023-09 → 2026-05 from the same clone. Ground truth: the human
+conceptual taxonomy in module name paths. All twenty-one top-level namespaces
+were eventually used, and are now spent for out-of-sample work.
+
+**The Archive of Formal Proofs** (`afp-study/`, seven scripts, 2026-08-26).
+1,014 refereed Isabelle entries, 10,371 theory files, pinned at
+`1e072b5cc6b4`; entry-level import graph; biennial checkpoints 2006–2026 read
+directly from git's object database. Ground truth: the archive's curated topic
+taxonomy — a different instrument from name paths, chosen precisely because it
+is different. AFP was staged as a **referendum**: every Mathlib-derived
+finding faced a different assistant, community, grain, and label system, with
+nothing from Mathlib's outcomes leaking into any input.
+
+**Conway's Game of Life** (`ca-study/`, nine scripts plus an independent
+Wolfram Language twin, 2026-08-24/25). Counterfactual causal DAGs (edge u → v
+iff flipping u's state changes v's value), down-set algebras over past cones,
+full 2^n observer census per kernel in the exhaustive tier. The first
+substrate where nothing was authored, curated, or chosen by anyone. Four
+protocol versions; the version history is itself a result (§5).
+
+**The discipline, uniform across all three.** Every test pre-registered in
+the script header before first run, with failure semantics fixed in advance;
+blind pre-checks that touch only occupancy counts and instrument resolution,
+never the quantity predicted; seeded PRNGs committed; raw per-kernel output
+committed, not only summaries; two independent implementations (Node.js and
+Wolfram Language, confirmed in Wolfram Cloud 2026-08-26 with exact agreement
+on every exact-tier value) for all exhaustive aperture computation; deviations
+logged as dated postscripts, never edits. Three families of null model, never
+pooled: degree-preserving edge rewiring (structure-matched), placement/label
+permutation (semantics-broken, structure intact), and rule randomization
+(process-changed, reported as a separate comparison).
+
+## 3. What survived everything
+
+### 3.1 Exploitation is on-territory — the flagship [computed]
+
+The four cells' *names* are an [A]-graded dictionary. Formal corpora are the
+one place the dictionary is cheaply testable, and one entry passed every test
+it was given: **modules and entries in the Exploitation cell — the
+double-negation residue, territory the kernel claims but does not settle —
+really do occupy the kernel's named territory**, closer to the apex in the
+human labeling system than chance placement allows.
+
+The finding's path, in order: discovered on three Mathlib namespaces at the
+99th–100th percentile of name-permutation nulls (`12`); sent as a registered
+prediction into thirteen held-out namespaces and confirmed 13/13 with zero
+reversals (`14`); descriptively positive on four of the final five small
+namespaces (`16`) — 16/16 registered, 20/21 overall; then replicated on AFP
+under a *different* ground-truth instrument (topic sharing, not name paths) at
+the 100th percentile of the whole-graph null and, descriptively, the 100th
+percentile inside every stratum (`afp-study/03`; sED = +0.0334 against a null
+band of ±0.0055; Logic stratum +0.385). Two assistants, two communities, two
+grains, two label systems, zero significant reversals anywhere.
+
+This is the program's strongest corpus finding, and it attaches to exactly the
+cell that cannot exist classically: in a Boolean algebra the double-negation
+residue is empty. The one structurally non-classical position is the one whose
+occupants are empirically distinctive.
+
+### 3.2 Latency is generic in the wild [computed]
+
+On divisor lattices, latent ordinariness — no four-position structure at full
+resolution, structure under specific proper coarse-grainings — is the
+*exception* (109 of 164 measured elements have empty apertures) **[K]/[computed]**.
+In the field it is the *rule*. On the pre-registered Mathlib cone, 11 of 18
+principal kernels are latent, with all 262,144 worlds enumerated per kernel
+(`mathlib-study/02`). On Life's causal cones, 67–94% of kernels in every
+non-trivial cone are latent (`ca-study/`, v1.2). The "just look closer"
+instinct — if structure exists, the finest resolution will show it — fails
+almost everywhere the instrument has been pointed: full-resolution
+ordinariness is rare, and structure-visible-to-*some*-lawful-observer is
+common. This is the cross-substrate constant of the entire field campaign.
+
+### 3.3 One dynamical statement [computed]
+
+Registered as a secondary on both historical corpora, held both times at the
+100th percentile of label-permutation nulls: **Exploitation-cell members
+outgrow Refusal-cell members** in future load-bearing degree, at matched
+degree (and on Mathlib, matched age). It is the only statement about *time*
+that has survived two corpora, and it is deliberately weak — it orders E
+against R, not against D (§5.3).
+
+## 4. What was scoped by failed transfer
+
+Scoping is not dying. Both findings below are real, null-controlled, and
+replicated where they hold; what failed was the tacit universality claim.
+
+### 4.1 Narrowness: a fact about curated libraries [computed]
+
+On Mathlib, real dependency cones are narrow-aperture: structure around a
+module, where it exists at all, is visible under ≈18× fewer coarse-grainings
+than in degree-preserving rewirings of the same graph (`03`; registered
+expectation was the opposite — that the finding would dissolve). Replicated
+in Order and Topology; directional but sub-threshold in Algebra, whose cones
+are bimodal (`04`). Not explained by four pre-registered graph invariants
+(best |ρ| = 0.39; matched on the best invariant, 13/15 real cones remain
+below their matched-null median; `05`).
+
+On Life, the same construction produces cones that sit *inside* their own
+degree-matched null distributions (`ca-study/` v1.2, P3). The ≈18× is
+therefore not a property of dependency DAGs as such. It is a property of
+*curated* dependency structures — something human formalization practice does
+(consolidation through shared foundations) that neither degree structure nor
+an unauthored causal process reproduces.
+
+### 4.2 Consolidation: a fact about maintained corpora [computed]
+
+Over six Mathlib checkpoints (2023-09 → 2026-05), all six registered trends
+point one way: latency rising, apertures narrowing (`06`; Order strongest at
+ρ = +0.94/−0.89). The control gap named at discovery was closed with the
+outcome registered in advance (`08`): the arrow survives per-snapshot
+degree-preserving nulls 6/6, with the sharper fact that **the 2023 library sat
+inside its own null envelope (percentiles 10–47) while the 2025/2026 library
+sits at the extremes (100th percentile latency, 0–3rd aperture, all three
+namespaces)**. Early Mathlib was statistically indistinguishable from its
+degree-random twin; mature Mathlib is nothing like it. Consolidation is a
+measured departure from degree structure, not a byproduct of growth.
+
+On AFP, over eight biennial checkpoints spanning two decades, the latency half
+transfers (Spearman +0.83) and the aperture half **reverses**: apertures widen
+(+0.64 where the registered prediction required ≤ −0.6; `afp-study/05`). The
+consolidation arrow is scoped to Mathlib wherever it is cited. The candidate
+explanation for *why* is §6.
+
+## 5. The graveyard, at full prominence
+
+Nine operator hypotheses were registered and executed; nine died. The program
+treats this ledger as a feature — an interpretive apparatus that can be
+applied to anything can be wrong about nothing — and reports it at the same
+prominence as §3.
+
+### 5.1 The nine, in order
+
+1. **"Latency will dissolve under degree-preserving nulls"** (registered
+   expectation, `mathlib-study/03`, 2026-08-19) — wrong on every metric;
+   the finding survived at the 0th/100th percentiles. The instrument's first
+   positive result was its operator's first overruled prediction.
+2. **"Cohort apertures narrow monotonically"** (`06`) — falsified for young
+   cones; the life cycle is born-thin → widen-under-construction →
+   consolidate-narrow.
+3. **"Flat cones are definitional interfaces"** (`07`) — the role classifier
+   had zero dynamic range; the age effect was present in the same sample; the
+   role story was withdrawn the day it was proposed.
+4. **The published latency characterization** (aperture paper v0.2,
+   corrected 2026-08-24) — the "every exponent strictly interior" rule failed
+   in both directions at three-plus primes and on single chains
+   (Div180's 30: aperture 4; Div8's 2 and 4: aperture 0). All three witnesses
+   sat unread in the paper's own published verification set. Corrected as
+   Result 6.3; the corrected rule and both counterexamples are now
+   kernel-checked instances of the closed form **[K]**.
+5. **The Life v1.1 budget policy** — the registered depth policy silently
+   forced 21 of 29 cones into depth-1 fans, which are provably aperture-blind;
+   P1's failure was an artifact of the instrument's own budget. Lesson kept:
+   *a budget policy is part of the instrument, and it can be the part that
+   goes blind.*
+6. **The still-life lead** (Life v1.2 → v1.3) — the one apparent positive on
+   the unauthored substrate (still-life cones ~17× wider than soup, p = 0.044)
+   was killed by its own registered size-controlled follow-up within hours:
+   at matched cone size, indistinguishable (p = 0.364); every smallest-stratum
+   cone in the study is a single structural class; quiescence carries nothing
+   (p = 1.0). The signal was a size law (median aperture fraction
+   0.098 → 0.016 → 0.0075 across n = 9 → 16 → 23), now the substrate's one
+   clean descriptive fact.
+7. **"Refusal is proximate"** (the corrected R/D gloss, `14`) — proposed
+   post hoc on Order/Topology, registered out-of-sample, refuted by
+   significant reversal in 8 of 13 held-out namespaces. Proposed, registered,
+   and killed within one day. With `16` (the original ordering failing on the
+   final five fresh namespaces) and AFP's R2, **no spatial gloss of Refusal or
+   Distribution survives in either direction on any corpus**. The proved cell
+   definitions are untouched; the geography is dead.
+8. **The growth engine** (`afp-study/07`) — "Exploitation-cell members become
+   load-bearing" failed by significant reversal: at matched degree,
+   *Distribution*-cell members grow (G_ED = −0.33, percentile 0;
+   ordering D > E > R).
+9. **The division of labor** (`mathlib-study/18`) — the AFP reversal,
+   registered as the hypothesis on Mathlib's history with age matched exactly,
+   reversed in the *opposite* direction: on Mathlib, *Exploitation* grows
+   (G_ED = +0.076, percentile 100; E > D > R). "E owns the geography, D owns
+   the dynamics" died one study after it was born.
+
+### 5.2 The instrument deaths
+
+Two failures were of the measuring apparatus rather than the hypothesis, and
+each produced a portable diagnostic:
+
+- **The saturated statistic** (`mathlib-study/10`): the shared-prefix median
+  had no dynamic range on the corpus — every cell pinned at the same value,
+  the permutation null degenerate at [0, 0]. A null that cannot move is a
+  diagnostic that the measure never touched the data. Its successor
+  (`11`/`12`) added a mandatory blind resolution pre-check, now house rule.
+- **The no-op null** (Life v1.0, killed by inspection before any run): the
+  registered syntactic edge relation was provably state-independent, so the
+  rule-randomization null was *identical* to the treatment. Kept as a general
+  lesson: *if a randomization cannot change your object, your object does not
+  depend on what you randomized.* The unexecuted protocol is committed with
+  its impossibility proof as a postscript.
+
+### 5.3 The clean negative
+
+The Life study closed **fully negative on every differentiation claim**: the
+invariant does not distinguish a glider from soup, a still life from debris,
+coherent from random computational history — at matched cone size it measures
+size and isomorphism class, nothing about what the pattern is. Stated at the
+prominence a positive would have received. The reading this licenses is
+narrow but real: on every corpus where the instrument found differential
+structure, the substrate was built by agents making commitments; on the one
+substrate with no author it found none. The instrument detects *commitment*,
+not *computation* **[A]** — an interpretation, flagged as such, whose next
+test is §6.
+
+## 6. The one live pattern, and its registered test
+
+The two historical corpora separate along a single axis on two measurements
+that share no code and no design:
+
+| | Mathlib (maintained) | AFP (archival) |
+|---|---|---|
+| Aperture arrow over history | narrows (−, null-controlled) | widens (+0.64) |
+| Growth cell at matched degree/age | Exploitation (E > D > R) | Distribution (D > E > R) |
+
+Mathlib is a *garden* — its existing dependency structure is continuously
+rewired by thousands of maintainers. AFP is a *museum* — entries are frozen at
+acceptance and never rewired. The hypothesis this suggests **[H]**: *the
+maintenance regime determines both the direction of consolidation and the
+identity of the growth cell.* Gardens go opaque and grow through their
+residue; museums stay loose and grow through their boundary-straddlers.
+
+Two corpora are a line through two points, both from one domain, and §5's
+base rate for readings at this stage of support is zero for nine. So the
+hypothesis is not asserted; it is *armed*: `software-study/PROTOCOL.md`
+(v1.0, committed 2026-08-26, before any data acquisition) fixes a
+cross-domain pair — the Go standard library as garden, the crates.io registry
+as museum, immutability platform-enforced on the museum side — with a
+manipulation check that gates all scoring, four-quadrant predictions with
+thresholds inherited from the null designs above, failure semantics including
+the diagonal case, and the prior stated in the document. It is preregistration
+in its strongest form (before acquisition, not merely before analysis), and
+anyone, including a skeptic, can execute it. This paper's last empirical
+sentence is therefore a standing prediction, not a result.
+
+A second forward prediction remains on the books from the first field day:
+the `Topology.CWComplex.Classical` cluster's empty Distribution cell — a
+genuine import island — either fills with bridging modules or the cluster is
+re-founded, testable against any future Mathlib revision by rerunning
+`mathlib-study/01` **[H]**.
+
+## 7. What is not claimed
+
+- **No universality.** The narrowness and consolidation findings are scoped
+  claims (§4), and the paper's own record shows what happens to unscoped ones.
+- **No semantics for the cells beyond what was tested.** One dictionary entry
+  (Exploitation's geography) has cross-ecosystem support; the R/D spatial
+  glosses are dead; the proved content of the partition — exhaustiveness,
+  exclusivity, the ordinariness gate — is [K] and was never at stake in the
+  field.
+- **No claim that the aperture measures meaning, value, or computation.** On
+  the one unauthored substrate it measures cone size. The commitment reading
+  of §5.3 is [A].
+- **No dynamics.** The growth studies measure who becomes load-bearing, not
+  why; the garden/museum axis is a registered hypothesis, not a mechanism.
+- **No priority beyond a search.** The classification of nuclei on finite
+  down-set algebras is classical (Simmons 1980; Bezhanishvili et al. 2020)
+  **[C]**; the aperture invariant, latency, the closed form, and the field
+  methodology appear new on a deliberate search **[O]**. Correction welcome.
+
+## 8. Reproducibility
+
+Everything runs from the repository with Node ≥ 18 and git; no Lean install
+is needed for the field studies, no npm packages are used, and every corpus
+is fetched by pinned revision (commands in each study's README). The Lean
+spine builds with `lake build` (axiom audits in the aperture paper). The
+Wolfram Language twins are self-contained cloud cells with expected outputs
+pre-registered (`ca-study/wl/`, `wolfram/`). Primary sources: `mathlib-study/`
+(eighteen scripts), `afp-study/` (seven), `ca-study/` (nine plus four
+protocol documents and `RESULTS.md`), `software-study/PROTOCOL.md` (unrun),
+and the session log `wolfram/next-session.md`. Citable snapshot of the
+program at the aperture paper's release: DOI 10.5281/zenodo.22016585.
+
+**Disclosure.** Drafting and execution were AI-assisted under direction, per
+the program's validation architecture; the grades are the author's warrant.
+
+---
+
+*v0.1, 2026-08-26. This synthesis reports work committed between 2026-08-19
+and 2026-08-26. Corrections and postscripts appear below this line, dated,
+never as silent edits.*
