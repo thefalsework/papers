@@ -662,6 +662,37 @@ Two studies, both registered before running (scripts 08–12 in
   (`ca-study/RESULTS.md`, confirmation section). No pending steps remain
   for Study 10.
 
+## Status update, 2026-08-26 (later): the dictionary through full out-of-sample confirmation; Mathlib exhausted
+
+The v2 postscript's two loose ends — the flagged post-hoc "refusal is
+proximate" reading, and the never-established original D/R ordering —
+were both taken to registration the same day (scripts 13–16), and the
+corpus is now spent: all 21 Mathlib namespaces used.
+
+- **G1 (14): Exploitation-on-territory replicates out-of-sample 13/13**
+  (above the 95th null percentile in 11, zero reversals) across every
+  held-out namespace ≥ 100 files. With the original three: **16/16
+  registered, 20/21 including descriptive runs**. This is now the
+  program's strongest corpus finding, full stop.
+- **G2 (14): the corrected "refusal is proximate" reading is REFUTED**
+  by significant reversal in 8 of 13 — Order/Topology were the outliers
+  that generated it, not the rule. Seventh instrument-overrules-operator
+  event, and the fastest: proposed, registered, and killed within a day.
+- **G3 (16): the original "Distribution nearer than Refusal" ordering,
+  scored on the final five fresh namespaces (sub-100-file), FAILS** —
+  positive 2/5, significantly reversed in Logic and SetTheory, which
+  pattern with Order and Topology. Final verdict for this corpus: the
+  R/D geography is namespace-contingent in both directions; outward
+  documents drop spatial language for those two cells (definitions [K]
+  untouched — what died is geography, not algebra).
+- Post-hoc, flagged, untestable here: the four refusal-proximate
+  namespaces (Order, Topology, Logic, SetTheory) are Mathlib's
+  foundational strata; the D-nearer namespaces are working mathematics.
+  If R/D geography tracks foundational-vs-applied character, only a
+  different corpus can say so.
+- Outward documents updated per the pre-committed interpretation tables:
+  both briefs, mathlib-study README.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

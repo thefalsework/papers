@@ -42,6 +42,29 @@
 //   scored (G1 already holds 16/16).
 //
 // Output: mathlib-study/results-rd-ordering.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). G3 FAILS: sDR positive in 2/5 (FieldTheory at the 99th
+// percentile, ModelTheory inside the null), zero in RepresentationTheory
+// (both cells fully off-territory), significantly REVERSED in Logic
+// (pctile 0) and SetTheory (pctile 2). Per the fixed interpretation: the
+// R/D geography is namespace-contingent full stop, no ordering claim
+// survives in either direction, and outward glosses of Refusal and
+// Distribution drop spatial language entirely. Mathlib is now exhausted
+// as a corpus for this question — 21 namespaces, all used, none fresh.
+//
+// POST-HOC observation, flagged as such and untestable on this corpus:
+// the four R-proximate namespaces (Order, Topology, Logic, SetTheory)
+// are Mathlib's foundational strata, while D-nearer namespaces are
+// working mathematics (Analysis, RingTheory, NumberTheory, Geometry...).
+// If the R/D geography tracks foundational-vs-applied character, only a
+// different corpus can say so.
+//
+// DESCRIPTIVE replication color: sED positive at the 99th-100th
+// percentile in 4 of 5 (ModelTheory inside the null at 31, the smallest
+// evaluable population in the whole program). Across every registered
+// run, "Exploitation on-territory" now stands at 20 of 21 namespaces
+// with zero significant reversals.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";

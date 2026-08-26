@@ -117,6 +117,24 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
     Order/Topology the Refusal cell is name-closer, a flagged post-hoc observation:
     refusal happens on-territory). C0′ calibration violated in Topology and
     explained: transitive foundations dilute I's proximity with deep roots.
+11. **`13-gloss-precheck.mjs` / `14-gloss-confirmation.mjs`** (2026-08-26) — 12's
+    two loose ends taken to *thirteen held-out namespaces* (every remaining top-level
+    dir ≥ 100 files). **G1 HOLDS: Exploitation-on-territory replicates out-of-sample
+    13/13** (above the null's 95th percentile in 11, zero reversals) — with the
+    original three, 16/16. **G2 (the post-hoc "refusal is proximate" reading) is
+    REFUTED by significant reversal in 8/13**: Order/Topology were the outliers,
+    not the rule. The reversal direction is the original dictionary ordering, which
+    (being unpredicted) got its own registration:
+12. **`15-smallns-precheck.mjs` / `16-rd-ordering.mjs`** (2026-08-26) — the original
+    "Distribution nearer than Refusal" ordering, scored on the *last* five fresh
+    namespaces (sub-100-file, ≥ 30 evaluable kernels). **G3 FAILS**: positive 2/5,
+    significantly reversed in Logic and SetTheory — which pattern with Order and
+    Topology. Verdict, final for this corpus (all 21 namespaces now used): the R/D
+    geography is namespace-contingent; no spatial gloss of Refusal or Distribution
+    survives in either direction. Post-hoc pattern, untestable here: the four
+    R-proximate namespaces are Mathlib's foundational strata. Descriptive: sED
+    positive at the 99th–100th percentile in 4/5, so Exploitation stands at 20/21
+    overall with zero significant reversals.
 
 ## Headline findings
 
@@ -133,10 +151,14 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
   library level over three years (08: survives per-snapshot degree-preserving
   nulls 6/6; the young library sat inside its null envelope, the mature library
   sits at the extremes), with a non-monotone cohort life cycle.
-- **The cell dictionary has its first empirical support where it is most
-  checkable**: Exploitation-cell modules really are on the kernel's named
-  territory (12); the Distribution gloss is not supported and is flagged
-  wherever outward documents lean on it.
+- **The cell dictionary splits cleanly under out-of-sample confirmation**
+  (12/14/16, all 21 namespaces used): "Exploitation is on-territory" is a corpus
+  regularity — 16/16 registered, 20/21 including descriptive runs, zero
+  significant reversals. The Refusal/Distribution *spatial* glosses are dead in
+  both directions: the original ordering failed on Order/Topology/Algebra, its
+  post-hoc correction was refuted 8/13 out-of-sample, and the original scored on
+  the final five fresh namespaces failed 2/5. The R/D geography is
+  namespace-contingent; outward documents drop spatial language for R and D.
 - **One forward prediction stands**: the `Topology.CWComplex.Classical` cluster's
   empty Distribution cell fills (bridging modules appear) or the cluster is
   re-founded — testable against any future Mathlib revision by rerunning 01.
