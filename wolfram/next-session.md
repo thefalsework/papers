@@ -618,6 +618,43 @@ registration, so the predictions stayed blind) ran the same day:
   invariants) — an open design question, not a scheduled study. Pending
   manual step unchanged: the WL cloud confirmation run.
 
+## Status update, 2026-08-26: the consolidation arrow survives its nulls; the cell dictionary gets its first test
+
+Two studies, both registered before running (scripts 08–12 in
+`mathlib-study/`), both closing gaps the record had named:
+
+- **Per-snapshot nulls for the consolidation arrow (08) — NP1: 6/6,
+  SURVIVES.** 30 degree-preserving rewires per checkpoint × namespace,
+  identical pipeline including the cone-pick rule. The sharper fact than
+  the criterion: 2023-09 observed values sit *inside* their null envelopes
+  (latency percentiles 10–47), 2025-09/2026-05 sit at the extremes (100 on
+  latency, 0–3 on aperture, all three namespaces). Early Mathlib was
+  statistically indistinguishable from its degree-random twin; mature
+  Mathlib is not. The arrow is a departure from degree structure, not a
+  growth artifact — exactly the confound class v1.3 caught on Life, tested
+  and excluded here. NP2 (continuity with 03/04) holds. The program's
+  flagship computational finding is now null-controlled end to end.
+- **Cell-composition study (09–12) — the dictionary tested where ground
+  truth is cheapest.** v1 (10) died by instrument saturation: shared-prefix
+  *median* pinned at 2.00 everywhere, permutation null degenerate at
+  [0,0] — the null-that-cannot-move diagnostic again; lesson recorded
+  (blindness discipline does not excuse skipping a resolution check on the
+  measure). v2 (12, resolution-checked k\*=3, pooled same-area statistic):
+  **C1′ HOLDS decisively — Exploitation-cell modules occupy the kernel's
+  named territory** (99th–100th pctile vs name-permutation null, all three
+  namespaces): first corpus-level empirical support for a contentful cell
+  reading, and for precisely the cell that exists only non-classically.
+  C2′ fails (Distribution not intermediate); post-hoc and flagged: Refusal
+  is name-*close* in Order/Topology — refusal happens on-territory.
+  C0′ violated in Topology and explained (transitive foundations dilute
+  I's proximity with deep roots).
+- Outward documents updated in the same commits: the consolidation
+  control-gap caveat resolved in both briefs; the cell-dictionary split
+  verdict added; mathlib-study README carries scripts 08–12.
+- Note for the record: the operator's stated prior after the CA deflation
+  was that the consolidation arrow would likely die the same way. It
+  didn't. The instrument cuts both directions.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

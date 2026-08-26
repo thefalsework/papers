@@ -94,6 +94,29 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
    effect is present in the same sample (old cones median aperture 0.081 vs young
    0.131). The role story is withdrawn; `Order.Monoid.Canonical.Defs` stays on the
    books as an individual anomaly.
+8. **`08-history-nulls.mjs`** (2026-08-26) — closes the control gap 06 named: per-
+   snapshot degree-preserving nulls (30 rewires per checkpoint × namespace, identical
+   pipeline including the pick rule). **NP1: 6/6 — the consolidation arrow survives.**
+   The sharper fact: 2023-09 observed values sit *inside* their null envelopes
+   (percentiles 10–47 on latency), 2025-09/2026-05 sit at the extremes (100 on
+   latency, 0–3 on aperture) in all three namespaces — early Mathlib was
+   statistically indistinguishable from its degree-random twin; mature Mathlib is
+   not. NP2 (continuity with 03/04's cross-sectional narrowness) holds.
+9. **`09-cell-precheck.mjs` / `10-cell-composition.mjs`** (2026-08-26) — first test
+   of the cell *dictionary* (do the four positions' names describe what falls in
+   them?). v1 died by instrument saturation: the shared-prefix median has no dynamic
+   range on this corpus (every cell median pinned at 2.00; permutation null
+   degenerate). Uninformative, lesson recorded in the postscript: blindness
+   discipline does not excuse skipping a resolution check.
+10. **`11-cell-precheck2.mjs` / `12-cell-composition2.mjs`** (2026-08-26) — v2 with
+    a resolution-checked measure (same-subarea fraction at k\* = 3, pooled).
+    **C1′ HOLDS decisively: Exploitation-cell modules occupy the kernel's named
+    territory** (99th–100th percentile vs 100 name-permutation nulls, all three
+    namespaces) — the first corpus-level empirical support for a contentful cell
+    reading. C2′ fails (Distribution is not at intermediate proximity; in
+    Order/Topology the Refusal cell is name-closer, a flagged post-hoc observation:
+    refusal happens on-territory). C0′ calibration violated in Topology and
+    explained: transitive foundations dilute I's proximity with deep roots.
 
 ## Headline findings
 
@@ -106,8 +129,14 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
 - **Latency exists in the wild**: most principal kernels in a real cone have no
   four-position structure at full resolution and acquire it only in proper
   sub-poset worlds.
-- **Consolidation is measurable and directional** at the library level over three
-  years, with a non-monotone cohort life cycle.
+- **Consolidation is measurable, directional, and now null-controlled** at the
+  library level over three years (08: survives per-snapshot degree-preserving
+  nulls 6/6; the young library sat inside its null envelope, the mature library
+  sits at the extremes), with a non-monotone cohort life cycle.
+- **The cell dictionary has its first empirical support where it is most
+  checkable**: Exploitation-cell modules really are on the kernel's named
+  territory (12); the Distribution gloss is not supported and is flagged
+  wherever outward documents lean on it.
 - **One forward prediction stands**: the `Topology.CWComplex.Classical` cluster's
   empty Distribution cell fills (bridging modules appear) or the cluster is
   re-founded — testable against any future Mathlib revision by rerunning 01.
