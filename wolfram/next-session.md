@@ -654,6 +654,13 @@ Two studies, both registered before running (scripts 08–12 in
 - Note for the record: the operator's stated prior after the CA deflation
   was that the consolidation arrow would likely die the same way. It
   didn't. The instrument cuts both directions.
+- **Same day, later: the WL cloud confirmation ran (operator, manual).**
+  Exact agreement on every exact-tier value — anchors, the four depth-1
+  fans, the E d = 2 cone's sixteen per-kernel apertures, and all six v1.3
+  still lifes including the single-class vectors. Two-implementation
+  requirement closed for everything the CA study's verdict rests on
+  (`ca-study/RESULTS.md`, confirmation section). No pending steps remain
+  for Study 10.
 
 ## Tomorrow (2026-08-17): write the study — the positions casework
 

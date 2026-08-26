@@ -55,8 +55,11 @@ unstructured computational history at all?
 ## Second implementation
 
 `wl/ca-aperture.wl` — independent Wolfram Language implementation (single
-cloud cell): anchors plus per-kernel apertures of the five primary cones.
-Must agree exactly with the Node reference; any mismatch stops the study.
+cloud cell): anchors, per-kernel apertures of the five primary cones, and
+the v1.3 exact-tier still lifes. Reference values in `wl/EXPECTED.md`.
+**Confirmed 2026-08-26 in Wolfram Cloud: exact agreement on every line**
+(see the confirmation section of `RESULTS.md`). The sampled tier (n ≥ 19)
+remains single-implementation.
 
 ## Results
 
@@ -81,5 +84,6 @@ Four protocol versions, two days (2026-08-24/25), all in `RESULTS.md`:
   0.098 → 0.016 → 0.0075 across n = 9 → 16 → 23).
 
 Raw per-kernel output under `results/`; session log in
-`wolfram/next-session.md`. Pending: WL cloud confirmation of the primary
-cones (`wl/ca-aperture.wl`).
+`wolfram/next-session.md`. The WL cloud confirmation ran 2026-08-26:
+exact agreement on every exact-tier value; no pending steps remain for
+this study.

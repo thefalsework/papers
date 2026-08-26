@@ -211,3 +211,31 @@ start. Raw output: `results/sizematch-v13.json`.
    job was to make the hope pay rent, and it couldn't.
 4. Two-implementation status: Node-side; the WL twin remains the pending
    manual confirmation step for the study as a whole.
+
+---
+
+# Two-implementation confirmation (2026-08-26, Wolfram Cloud)
+
+`wl/ca-aperture.wl` (extended 2026-08-26 with the v1.3 exact-tier still
+lifes; reference values in `wl/EXPECTED.md`) was run in Wolfram Cloud by
+the operator. **Every exact-tier number matches the Node reference
+exactly:**
+
+- Anchors: Div12 Ap(2) = 1, Div36 Ap(6) = 2.
+- v1.1 primary cones at registered depths: the four depth-1 fans all-zero
+  (fan blindness confirmed independently); the E/soup-20260825001 d = 2
+  cone matches on all sixteen per-kernel apertures (4094, 126, 4186,
+  1138, 1022, 126, 1022, 4186, 126, 1138, 126, 1022, 360, 12672, 288, 0),
+  latency flags and identity verdicts included.
+- v1.3 still lifes at d = 2: beehive/loaf/pond identical vectors
+  (64, 50, 50, 30, 30, 104, 56, 56, 0), tub (24, 22, 22, 22, 8, 8, 8, 0),
+  boat/ship identical (…, 2010, …, 960, 960, 0) — the single-structural-
+  class facts the deflation verdict rests on, reproduced by an
+  implementation written without reference to the Node code.
+
+This closes the two-implementation requirement (v1.1 §9) for the anchors,
+the v1.1 primary tier, the depth-1 blindness, and the exact-tier basis of
+the v1.3 verdict. The sampled tier (n ≥ 19) remains single-implementation
+Node estimates with stated confidence intervals, supporting no exact
+claim. The [computed] grade on the study's exact-tier findings is now
+fully earned under the program's own definition.
