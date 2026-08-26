@@ -67,6 +67,19 @@ Windows-reserved filenames like `Aux.thy`, so no tree is ever materialized).
    rather than *accumulated* ones (AFP entries are frozen at acceptance) —
    testable on maintained-vs-archival pairs elsewhere, not here.
 
+6. **`06-growth-precheck.mjs` / `07-growth-engine.mjs`** — the program's first
+   *dynamical* prediction, registered same day: E-cell members at checkpoint
+   *t* become load-bearing by *t+4y* (within-kernel, degree-matched E-vs-D
+   contrast; label-permutation null — designed to kill the preferential-
+   attachment confound). **GP1 FAILS by significant reversal** (G_ED = −0.33,
+   percentile 0): at matched degree, **Distribution-cell members** are the
+   ones that grow; GP2 (E outgrows R) holds at percentile 100. Matched growth
+   ordering: **D > E > R**. The growth-engine reading of Exploitation dies
+   here, never having reached an outward document. Post-hoc, flagged: the cell
+   with no static geography (D) carries the dynamical signal — bridges become
+   roads; E may own the geography and D the dynamics. Its own registration on
+   Mathlib history (with age matching) would be required to score that.
+
 ## The referendum's verdict
 
 - **Exploitation-on-territory graduates**: from a Mathlib fact to a

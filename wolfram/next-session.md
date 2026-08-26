@@ -720,6 +720,29 @@ topic-taxonomy ground truth, 22 years of history.
 - Outward documents updated per the fixed tables: referendum paragraphs
   added to both briefs; consolidation scoped; E-finding upgraded.
 
+## Status update, 2026-08-26 (night): the growth-engine study — reversal, and a new division of labor
+
+The dynamical extension of the E-finding ("residue-miners become
+tomorrow's foundations") was registered and executed the same day
+(afp-study 06/07: within-kernel, degree-matched E-vs-D contrasts over
+six baselines 2012-2022, horizon 4 years, label-permutation null built
+to kill preferential attachment).
+
+- **GP1 FAILS by significant reversal** (G_ED = −0.33, pctile 0, null
+  band ±0.03): at matched degree and neighborhood, DISTRIBUTION-cell
+  members become load-bearing, not E-members. Eighth
+  instrument-overrules-operator event. Died before reaching any outward
+  document, as the fixed table required.
+- **GP2 holds** (pctile 100): E outgrows R. Matched ordering: D > E > R.
+- Post-hoc, flagged, unscored: the cell with no static geography (D —
+  every spatial gloss dead) carries the dynamical signal; the cell with
+  confirmed static geography (E) carries none. If "E owns geography,
+  D owns dynamics" replicated on a fresh corpus (Mathlib history, with
+  age matching — E-members run ~2 years older than matched D-siblings),
+  the partition would be measuring two different arrows with two
+  different cells. That registration is the natural next computational
+  step.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

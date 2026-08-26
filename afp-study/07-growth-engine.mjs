@@ -61,6 +61,35 @@
 //     (expected weaker/noisier; no primary claim rests on it).
 //
 // Output: afp-study/results-growth-engine.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). GP1 FAILS by significant REVERSAL: G_ED = -0.3315 at
+// percentile 0 against a null band of [-0.027, +0.024]. At matched
+// degree, inside the same kernel's neighborhood, DISTRIBUTION-cell
+// members gain future dependents at a rate E-members do not approach.
+// The growth-engine reading of Exploitation is dead on this corpus, and
+// per the fixed interpretation it dies here, having never reached an
+// outward document. Eighth instrument-overrules-operator event; the
+// covariate guard is moot (it gated a GP1 win).
+//
+// GP2 (secondary) holds at percentile 100: E-members outgrow R-members
+// at matched degree. The full matched-growth ordering is D > E > R.
+//
+// POST-HOC observations, flagged as such, unscored, requiring their own
+// registration on a corpus not used here (Mathlib history is the
+// natural candidate, with age matching added — E-members here are ~2
+// years older than their matched D-siblings, a live confound for the
+// reversal's size though not obviously for its sign at percentile 0):
+//   1. The cell whose STATIC geography kept failing (Distribution:
+//      original gloss, corrected gloss, foundational-strata reading all
+//      dead) is the cell that carries the DYNAMICAL signal. Straddlers
+//      — entries anchored partly on the foundation and partly off it —
+//      are what the future builds on. Bridges become roads.
+//   2. Combined with the confirmed static finding, the two informative
+//      cells may divide the labor: Exploitation owns the geography
+//      (where work sits now), Distribution owns the dynamics (what work
+//      becomes). If that division replicated, the partition would be
+//      measuring two different arrows with two different cells.
 
 import { readFileSync, writeFileSync } from "node:fs";
 

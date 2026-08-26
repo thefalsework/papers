@@ -1,0 +1,55 @@
+{
+ "seed": 20260826951,
+ "perms": 1000,
+ "perBaseline": {
+  "2012": {
+   "horizonYear": 2016,
+   "matchedED": 13,
+   "matchedER": 14
+  },
+  "2014": {
+   "horizonYear": 2018,
+   "matchedED": 43,
+   "matchedER": 54
+  },
+  "2016": {
+   "horizonYear": 2020,
+   "matchedED": 185,
+   "matchedER": 194
+  },
+  "2018": {
+   "horizonYear": 2022,
+   "matchedED": 316,
+   "matchedER": 364
+  },
+  "2020": {
+   "horizonYear": 2024,
+   "matchedED": 593,
+   "matchedER": 601
+  },
+  "2022": {
+   "horizonYear": 2026,
+   "matchedED": 818,
+   "matchedER": 852
+  }
+ },
+ "matchedCells": {
+  "ED": 1968,
+  "ER": 2079
+ },
+ "GP1": {
+  "obs": -0.3314892586604784,
+  "p5": -0.02710985613527758,
+  "p95": 0.024290076902277295,
+  "obsPctile": 0,
+  "holds": false
+ },
+ "GP2": {
+  "obs": 0.15950537512625554,
+  "p5": -0.01729133909392375,
+  "p95": 0.01804808559249714,
+  "obsPctile": 100,
+  "holds": true
+ },
+ "ageGapED": -2.005743971568336
+}
