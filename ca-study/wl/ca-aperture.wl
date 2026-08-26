@@ -128,3 +128,31 @@ Do[Module[{hist, gT, pos, focus, cn, ps, n, down, list, d},
       "  @id=", idv, If[idv =!= "ordinary" && ap > 0, "  LATENT", ""]]],
     {x, n}]],
   {k, Keys[seeds]}];
+
+(* ---- v1.3 exact-tier still lifes (added 2026-08-26, after the Node v1.3
+   run; cells transcribed from seeds.json / seeds-v13.json, depth = 2 per
+   PREREGISTRATION-v1.3.md §2). These are the cones the v1.3 verdict rests
+   on; every per-kernel |Ap| must match wl/EXPECTED.md exactly. Block
+   (n = 23) is omitted: its Node values are sampled-tier estimates, so an
+   exact enumeration here would have no exact reference to match. ---- *)
+stillSeeds = <|
+  "B/beehive" -> place[{{0,1},{0,2},{1,0},{1,3},{2,1},{2,2}}],
+  "B/loaf" -> place[{{0,1},{0,2},{1,0},{1,3},{2,1},{2,3},{3,2}}],
+  "B/tub" -> place[{{0,1},{1,0},{1,2},{2,1}}],
+  "B/pond" -> place[{{0,1},{0,2},{1,0},{1,3},{2,0},{2,3},{3,1},{3,2}}],
+  "B/boat" -> place[{{0,0},{0,1},{1,0},{1,2},{2,1}}],
+  "B/ship" -> place[{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}}]|>;
+Print["=== v1.3 still lifes, d=2 (exact tier) ==="];
+Do[Module[{hist, gT, pos, focus, cn, n, down, list},
+   hist = run[stillSeeds[k], T];
+   gT = hist[[T + 1]];
+   pos = FirstPosition[gT, 1];
+   focus = {pos[[1]], pos[[2]], T};
+   cn = cone[hist, focus, 2];
+   {n, down, list} = poset[cn];
+   Print[k, "  n=", n, " d=2"];
+   Do[Module[{ap = apCount[down, down[[x]], n], idv = verdict[down, n, 2^n - 1, down[[x]]]},
+     Print["  kernel ", x - 1, " node(r,c,t)=", list[[x]] - {1, 1, 0}, "  |Ap|=", ap,
+      "  @id=", idv, If[idv =!= "ordinary" && ap > 0, "  LATENT", ""]]],
+    {x, n}]],
+  {k, Keys[stillSeeds]}];
