@@ -50,6 +50,39 @@
 // -> raw gradient is a cell-size artifact, reported as caught.
 //
 // Output: mathlib-study/results-cell-composition2.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — a split verdict, real this
+// time). Run as registered, no deviations.
+//
+// C1' HOLDS, decisively: sED positive in all three namespaces at the
+// 99th/100th/100th percentile of the permutation null (Order +0.0175,
+// Topology +0.0413, Algebra +0.0508 against null 95% bands of ±~0.009).
+// Exploitation-cell modules ARE on the kernel's named territory —
+// name-closer to the apex than Distribution-cell modules, far beyond
+// what cell sizes and name multiset predict. First corpus-level
+// empirical support for a contentful cell-dictionary claim.
+//
+// C2' FAILS: sDR negative in Order (-0.0056, pctile 38) and Topology
+// (-0.0070, pctile 41) — inside the null, so unsupported rather than
+// significantly reversed — and strongly positive only in Algebra
+// (+0.0353, pctile 100). "Distribution at intermediate proximity" is not
+// a corpus regularity; per the fixed interpretation table, the D-gloss is
+// flagged as unsupported-on-Mathlib wherever outward documents lean on it.
+//
+// C0' calibration VIOLATED in Topology (pooled E 0.1048 > I 0.1014), and
+// the registered inspect-first instruction was followed. The violation is
+// intelligible and does not touch C1': I is the apex's TRANSITIVE
+// foundation, which reaches down to name-distant deep roots, diluting its
+// proximity — the header's "near-definitional: I is name-close" was wrong
+// in an informative way (foundations are conceptually wide, not local).
+// C1' compares two non-foundation cells under a composition-preserving
+// null and is unaffected.
+//
+// POST-HOC observation, flagged as such and unregistered: R-cell modules
+// are name-CLOSE in Order/Topology (sDR < 0 means Refusal outranks
+// Distribution there) — refusal happens on-territory: self-contained
+// neighbors that share the conceptual street but none of the foundation.
+// If pursued, that needs its own registration.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
