@@ -1,0 +1,121 @@
+{
+ "FieldTheory": {
+  "modules": 82,
+  "ordinary": 73,
+  "evaluable": 73,
+  "kStar": 3,
+  "included": true,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.03523035230352303,
+   0.0009033423667570009,
+   0
+  ]
+ },
+ "Logic": {
+  "modules": 57,
+  "ordinary": 41,
+  "evaluable": 40,
+  "kStar": 3,
+  "included": true,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.15037593984962405,
+   0.0006265664160401002,
+   0
+  ]
+ },
+ "SetTheory": {
+  "modules": 49,
+  "ordinary": 41,
+  "evaluable": 36,
+  "kStar": 3,
+  "included": true,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.35459183673469385,
+   0.0008503401360544217,
+   0
+  ]
+ },
+ "RepresentationTheory": {
+  "modules": 38,
+  "ordinary": 34,
+  "evaluable": 34,
+  "kStar": 3,
+  "included": true,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.15362731152204837,
+   0.051209103840682786,
+   0
+  ]
+ },
+ "Computability": {
+  "modules": 36,
+  "ordinary": 32,
+  "evaluable": 23,
+  "kStar": 3,
+  "included": false,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.04285714285714286,
+   0
+  ]
+ },
+ "ModelTheory": {
+  "modules": 34,
+  "ordinary": 32,
+  "evaluable": 32,
+  "kStar": 3,
+  "included": true,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.0374331550802139,
+   0.0213903743315508,
+   0.0017825311942959,
+   0
+  ]
+ },
+ "Condensed": {
+  "modules": 34,
+  "ordinary": 22,
+  "evaluable": 22,
+  "kStar": 3,
+  "included": false,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.23172905525846701,
+   0
+  ]
+ },
+ "Dynamics": {
+  "modules": 33,
+  "ordinary": 28,
+  "evaluable": 20,
+  "kStar": 3,
+  "included": false,
+  "fracAtLeast": [
+   1,
+   1,
+   1,
+   0.14772727272727273,
+   0.005681818181818182,
+   0
+  ]
+ }
+}

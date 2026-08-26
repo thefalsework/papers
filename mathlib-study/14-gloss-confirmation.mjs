@@ -56,6 +56,28 @@
 //   exceedance) score as FAILS; no partial credit.
 //
 // Output: mathlib-study/results-gloss-confirmation.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). G1 HOLDS overwhelmingly: sED positive in 13/13 held-out
+// namespaces, above the null's 95th percentile in 11/13, no reversals.
+// With the original three, "Exploitation is on-territory" now stands in
+// 16 of 16 Mathlib namespaces — the program's strongest corpus finding.
+//
+// G2 FAILS decisively, and by significant REVERSAL: sRD positive in only
+// 4/13, above the 95th percentile in 1 (MeasureTheory), AT OR BELOW the
+// 5th percentile in 8 (Analysis, RingTheory, NumberTheory, Combinatorics,
+// GroupTheory, AlgebraicTopology, Geometry, Probability — Geometry at
+// sRD = -0.92). Per the fixed interpretation: the post-hoc "refusal is
+// proximate" reading did not replicate; no gloss is rewritten on its
+// basis; Order/Topology are recorded as the outliers that generated it.
+//
+// POST-HOC observation, flagged as such: the reversal direction —
+// Distribution name-closer than Refusal — is the ORIGINAL dictionary
+// ordering that v2's C2' failed to establish on Order/Topology/Algebra.
+// It is now the significant majority pattern out-of-sample, but scoring
+// it as a finding requires its own registration on corpora not used
+// here; the only fresh pool remaining is the sub-100-file namespaces
+// (script 16).
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
