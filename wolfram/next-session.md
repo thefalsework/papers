@@ -768,7 +768,26 @@ cells, label-permutation null).
 - Per the fixed tables, nothing ships to outward documents from this;
   briefs untouched.
 
-## Tomorrow (2026-08-17): write the study — the positions casework
+## Status update, 2026-08-26 (later): briefs updated; garden/museum protocol registered unrun
+
+Decision taken in session: stop measuring, write. The growth double
+reversal is now in both outward briefs — philosophers-brief §5 gains a
+"growth studies" paragraph (both reversals, the axis as [H], scoped to
+"a line through two points"); plain-brief gains "The growth question"
+under the referendum section, in the walled-city vocabulary. Script
+counts corrected (mathlib eighteen, afp seven).
+
+And the software pair is handled the strong way: registered as an
+unrun protocol, committed before any acquisition —
+`software-study/PROTOCOL.md` v1.0. Pair fixed (Go stdlib garden /
+crates.io museum, immutability platform-enforced on the museum side),
+manipulation check gates scoring (MC1 3x rewiring ratio, MC2 kernel
+evaluability), four-quadrant predictions with the thresholds and null
+designs inherited from mathlib-study 08/18, failure semantics
+including the diagonal case, prior stated honestly (registered
+operator hypotheses 0-for-9). Both briefs point at it. Anyone can run
+it; the paper gets its standing falsifiable prediction either way.
+Next: the synthesis write-up.
 
 The third companion is drafted next: **the four positions of the
 temperament commitment, one work per cell, fully worked** — the
