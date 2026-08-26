@@ -44,6 +44,32 @@
 //     every outward mention of consolidation names the scope.
 //
 // Output: afp-study/results-consolidation.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). Eight eligible checkpoints (2012-2026; 2006-2010 are
+// nearly edgeless as expected). H1 HOLDS: latentFrac rises, Spearman
+// +0.83 — latency is generic and increasingly so here too. H2 FAILS
+// decisively: meanApFrac RISES (Spearman +0.64 against a required
+// -0.6), from 0.022 (2012) to ~0.20 (2020-2026). The compound
+// consolidation arrow FAILS on AFP; per the fixed interpretation, the
+// arrow is scoped to Mathlib in every outward mention, and the script-06
+// null control is moot.
+//
+// INSTRUMENT OBSERVATION, on the record: the top-5 pick rule selects
+// IDENTICAL cones from 2022 onward (all metrics frozen at three
+// checkpoints) — old entries do not change, so the largest <= 18-node
+// cones stopped moving. The late-era trend carries no new information;
+// the 2012-2020 widening is the real signal within this design.
+//
+// POST-HOC reading, flagged as such and untested: AFP is a frozen
+// archive — entries are refereed, accepted, and never refactored —
+// while Mathlib is a living library under continuous rewiring. If
+// consolidation (apertures narrowing over time) is a property of
+// MAINTAINED corpora rather than accumulated ones, both outcomes are
+// explained: Mathlib narrows because someone is always tightening it;
+// AFP widens toward its random baseline because nobody rewires the
+// past. Testable on other maintained-vs-archival pairs (e.g. a
+// refactored codebase vs. its package registry); not testable here.
 
 import { readFileSync, writeFileSync } from "node:fs";
 

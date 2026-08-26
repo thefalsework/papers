@@ -1,0 +1,170 @@
+{
+ "rows": [
+  {
+   "year": 2006,
+   "rev": "9aa56028bbf9",
+   "n": 25,
+   "candidates": 0,
+   "eligible": false
+  },
+  {
+   "year": 2008,
+   "rev": "dc7f16d28d8a",
+   "n": 40,
+   "candidates": 0,
+   "eligible": false
+  },
+  {
+   "year": 2010,
+   "rev": "ba24dc309c76",
+   "n": 67,
+   "candidates": 0,
+   "eligible": false
+  },
+  {
+   "year": 2012,
+   "rev": "a17502dbbd1e",
+   "n": 105,
+   "candidates": 8,
+   "eligible": true,
+   "coneSizes": [
+    7,
+    7,
+    7,
+    6,
+    6
+   ],
+   "latentFrac": 0.30476190476190473,
+   "ordIdFrac": 0,
+   "meanApFrac": 0.021726190476190475
+  },
+  {
+   "year": 2014,
+   "rev": "c2d814963996",
+   "n": 154,
+   "candidates": 21,
+   "eligible": true,
+   "coneSizes": [
+    16,
+    16,
+    15,
+    14,
+    14
+   ],
+   "latentFrac": 0.19166666666666665,
+   "ordIdFrac": 0.2202380952380952,
+   "meanApFrac": 0.08537522088913692
+  },
+  {
+   "year": 2016,
+   "rev": "f9ed818fb17c",
+   "n": 249,
+   "candidates": 45,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    17,
+    16,
+    16,
+    15
+   ],
+   "latentFrac": 0.376797385620915,
+   "ordIdFrac": 0.42854575163398695,
+   "meanApFrac": 0.18484640183791617
+  },
+  {
+   "year": 2018,
+   "rev": "66eecb32eb21",
+   "n": 393,
+   "candidates": 80,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    18,
+    17,
+    16,
+    16
+   ],
+   "latentFrac": 0.3775326797385621,
+   "ordIdFrac": 0.39763071895424834,
+   "meanApFrac": 0.2191307990379583
+  },
+  {
+   "year": 2020,
+   "rev": "6924deccc1ec",
+   "n": 511,
+   "candidates": 96,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "latentFrac": 0.4222222222222222,
+   "ordIdFrac": 0.42222222222222217,
+   "meanApFrac": 0.23320804172092013
+  },
+  {
+   "year": 2022,
+   "rev": "3e9e75ee2d10",
+   "n": 652,
+   "candidates": 127,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "latentFrac": 0.38888888888888884,
+   "ordIdFrac": 0.4333333333333334,
+   "meanApFrac": 0.20056559244791666
+  },
+  {
+   "year": 2024,
+   "rev": "c55d9fd0f0cd",
+   "n": 797,
+   "candidates": 157,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "latentFrac": 0.38888888888888884,
+   "ordIdFrac": 0.4333333333333334,
+   "meanApFrac": 0.20056559244791666
+  },
+  {
+   "year": 2026,
+   "rev": "9c807053bea1",
+   "n": 950,
+   "candidates": 188,
+   "eligible": true,
+   "coneSizes": [
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "latentFrac": 0.38888888888888884,
+   "ordIdFrac": 0.4333333333333334,
+   "meanApFrac": 0.20056559244791666
+  }
+ ],
+ "verdict": {
+  "informative": true,
+  "eligible": 8,
+  "rhoLat": 0.8333333333333334,
+  "rhoAp": 0.6428571428571429,
+  "H1": true,
+  "H2": false,
+  "holds": false
+ }
+}

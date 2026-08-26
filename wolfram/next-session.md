@@ -693,6 +693,33 @@ corpus is now spent: all 21 Mathlib namespaces used.
 - Outward documents updated per the pre-committed interpretation tables:
   both briefs, mathlib-study README.
 
+## Status update, 2026-08-26 (evening): the AFP referendum — one graduation, one scoping
+
+The referendum named after the Mathlib exhaustion ran the same day
+(`afp-study/`, five scripts, blind pre-checks and registrations committed
+before every run). Corpus: Archive of Formal Proofs, 1,014 entries,
+topic-taxonomy ground truth, 22 years of history.
+
+- **R1 HOLDS at the 100th percentile: Exploitation-on-territory is
+  cross-ecosystem.** Full entry graph sED = +0.0334 vs null ±0.0055;
+  descriptively 100th percentile in every stratum (Logic +0.385). Two
+  assistants, two communities, two grains, two ground-truth instruments.
+  This is now the program's flagship empirical claim, and it is earned.
+- **R2 FAILS: the foundational-strata R/D reading does not replicate**
+  (Logic sRD −0.032, percentile 20 — inside the null, wrong sign).
+  R/D geography is dead on every corpus it has been scored on.
+- **H1/H2: the consolidation arrow FAILS to transfer.** Latency rises
+  (+0.83, as everywhere) but apertures WIDEN over 22 years (+0.64 vs
+  required ≤ −0.6). Scoped to Mathlib in all outward mentions. Flagged
+  post-hoc reading with testable content: maintained library vs frozen
+  archive — consolidation may be what maintenance looks like. Candidate
+  next corpus pair: a refactored codebase vs its package registry.
+- Engineering note for the record: the pre-check's fixpoint closure hung
+  on a JS signedness trap (`|` returns int32, Uint32Array reads
+  unsigned); caught before any measurement, fix documented in-line.
+- Outward documents updated per the fixed tables: referendum paragraphs
+  added to both briefs; consolidation scoped; E-finding upgraded.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the
