@@ -71,6 +71,28 @@
 //     reported.
 //
 // Output: afp-study/results-referendum.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). R1 HOLDS at the 100th percentile: sED = +0.0334 on the
+// full entry graph against a null band of ±0.0055 — and descriptively at
+// the 100th percentile inside every stratum (Logic +0.3853, Mathematics
+// +0.1232, Computer science +0.0309). "Exploitation is on-territory" has
+// now survived: two proof assistants, two communities, two grains
+// (module and refereed entry), and two ground-truth instruments (name
+// paths and curated topic labels). Per the fixed interpretation, it
+// graduates to a claim about collective formal work across ecosystems.
+//
+// R2 FAILS. R2a: Logic's sRD = -0.0320 at percentile 20 — inside the
+// null, wrong sign; the archive's foundational stratum shows no
+// refusal-proximity. R2b held (Mathematics -0.1366 and Computer science
+// -0.0859, both at percentile 0), but the compound prediction fails
+// without partial credit. The foundational-strata reading of R/D
+// geography, post-hoc on Mathlib, does not replicate when registered.
+// R/D geography stays dead as scored there. POST-HOC, flagged: on AFP
+// the D-nearer-than-R direction is significant everywhere it can be
+// (ALL/Math/CS at percentile 0) with Logic inside the null — AFP as a
+// whole resembles Mathlib's working namespaces, and the R-proximate
+// phenomenon has now been seen nowhere outside four Mathlib namespaces.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join, basename } from "node:path";
