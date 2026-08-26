@@ -1,0 +1,100 @@
+{
+ "seed": 20260826501,
+ "perms": 100,
+ "out": {
+  "Order": {
+   "evaluableKernels": 286,
+   "observed": {
+    "medDED": 0,
+    "medDDR": 0,
+    "fracED": 0.0034965034965034965,
+    "fracDR": 0.024475524475524476,
+    "cellMedians": {
+     "I": 2,
+     "R": 2,
+     "E": 2,
+     "D": 2
+    }
+   },
+   "null": {
+    "dED": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    },
+    "dDR": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    }
+   }
+  },
+  "Topology": {
+   "evaluableKernels": 643,
+   "observed": {
+    "medDED": 0,
+    "medDDR": 0,
+    "fracED": 0.006220839813374806,
+    "fracDR": 0.0015552099533437014,
+    "cellMedians": {
+     "I": 2,
+     "R": 2,
+     "E": 2,
+     "D": 2
+    }
+   },
+   "null": {
+    "dED": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    },
+    "dDR": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    }
+   }
+  },
+  "Algebra": {
+   "evaluableKernels": 1274,
+   "observed": {
+    "medDED": 0,
+    "medDDR": 0,
+    "fracED": 0.011773940345368918,
+    "fracDR": 0.02119309262166405,
+    "cellMedians": {
+     "I": 2,
+     "R": 2,
+     "E": 2,
+     "D": 2
+    }
+   },
+   "null": {
+    "dED": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    },
+    "dDR": {
+     "p5": 0,
+     "p95": 0,
+     "obsPctile": 50
+    }
+   }
+  }
+ },
+ "C1": {
+  "allPos": false,
+  "beat95": 0,
+  "rev5": false,
+  "holds": false
+ },
+ "C2": {
+  "allPos": false,
+  "beat95": 0,
+  "rev5": false,
+  "holds": false
+ },
+ "C0": true
+}

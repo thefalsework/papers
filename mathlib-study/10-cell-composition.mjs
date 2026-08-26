@@ -74,6 +74,28 @@
 //     cell-size artifact; report as artifact caught by control.
 //
 // Output: mathlib-study/results-cell-composition.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — uninformative by instrument
+// saturation, not a negative). Run as registered. C1 and C2 FAIL under the
+// registered criteria, but the failure is a measurement-resolution
+// artifact: the shared-prefix MEDIAN has no dynamic range on this corpus.
+// Nearly every module pair inside a namespace shares exactly the two
+// components `Mathlib.<Namespace>` and nothing deeper, so every cell's
+// median proximity is pinned at 2.00 in all three namespaces, every
+// per-kernel delta is 0, and the permutation null is degenerate at
+// [0.000, 0.000] — a null that provably cannot move, which is this
+// program's own recorded diagnostic (ca-study v1.0, N2) that the statistic
+// never touched the substrate. No evidence for or against the dictionary
+// was produced.
+//
+// LESSON, recorded: the blindness discipline (pre-check must not compute
+// the predicted quantity) does not excuse skipping a RESOLUTION check on
+// the measuring statistic. The dynamic range of prox(y, x) over ALL pairs
+// is computable without any cell information — blind to the alignment
+// under test, sighted on whether the instrument can move at all. v2
+// (scripts 11-12) adds exactly that pre-check and replaces the median
+// with a fraction-above-threshold statistic. Registered separately;
+// this file and its output stay on the books unchanged.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
