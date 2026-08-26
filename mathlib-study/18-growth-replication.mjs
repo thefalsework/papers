@@ -52,6 +52,34 @@
 //   MG2 alone proves nothing (color either way).
 //
 // Output: mathlib-study/results-growth-replication.json (raw, committed).
+//
+// POSTSCRIPT (2026-08-26, after execution — run as registered, no
+// deviations). MG1 FAILS by significant reversal in the OPPOSITE
+// direction from AFP: G_ED = +0.0757 at the 100th percentile (null
+// ±0.004), positive in all three namespaces (Order +0.048, Topology
+// +0.331, Algebra +0.058), over 38,249 matched cells with age matched
+// exactly. On Mathlib, EXPLOITATION-cell members become load-bearing;
+// on AFP it was Distribution-cell members. Per the fixed table: the
+// growth dynamics is corpus-contingent, no dynamical claim survives,
+// and the division-of-labor reading ("E owns geography, D owns
+// dynamics") is dead. Ninth instrument-overrules-operator event; it
+// died one study after it was born, which is the system working.
+//
+// MG2 HOLDS (G_ER = +0.0686, percentile 100): E outgrows R here too.
+// E > R is now the only dynamical statement to hold on both corpora
+// (both times as a registered secondary; it graduates to nothing by
+// itself, but it is twice-confirmed color).
+//
+// POST-HOC observation, flagged as such, unscored — and now the most
+// interesting live pattern in the program: the SAME two corpora that
+// split on consolidation (Mathlib narrows, AFP widens: garden vs
+// museum) split the SAME way on which cell carries growth (garden: the
+// residue-miners; museum: the bridges). Two independent measurements,
+// one axis. If the maintenance regime sets both the aperture arrow and
+// the identity of the growth cell, a maintained-vs-archival software
+// pair should show all four quadrants. That is now the most motivated
+// unrun study in the program; it requires a new corpus pair and its
+// own registration.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";

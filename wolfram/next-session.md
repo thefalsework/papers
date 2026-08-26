@@ -743,6 +743,31 @@ to kill preferential attachment).
   different cells. That registration is the natural next computational
   step.
 
+## Status update, 2026-08-26 (late): the growth replication — opposite reversal, and the garden/museum axis sharpens
+
+The AFP growth reversal was registered as the hypothesis on Mathlib's
+history (mathlib-study 17/18: degree x exact-age matching, 38k matched
+cells, label-permutation null).
+
+- **MG1 FAILS by reversal in the OPPOSITE direction** (G_ED = +0.076,
+  pctile 100, positive in all three namespaces): on Mathlib,
+  EXPLOITATION-cell members become load-bearing; on AFP it was
+  Distribution. Growth dynamics is corpus-contingent. The
+  division-of-labor reading died one study after it was born. Ninth
+  instrument-overrules-operator event.
+- **MG2 holds** (E > R, pctile 100) — E > R is now the only dynamical
+  statement confirmed on both corpora (twice, as registered secondary).
+- Post-hoc, flagged, now the program's most interesting live pattern:
+  the same two corpora split the same way on TWO independent
+  measurements — consolidation direction (Mathlib narrows / AFP widens)
+  and growth-cell identity (Mathlib: residue-miners grow / AFP: bridges
+  grow). One axis: maintained garden vs frozen museum. The
+  maintained-vs-archival software pair is now the most motivated unrun
+  study in the program (would show all four quadrants under one
+  registration).
+- Per the fixed tables, nothing ships to outward documents from this;
+  briefs untouched.
+
 ## Tomorrow (2026-08-17): write the study — the positions casework
 
 The third companion is drafted next: **the four positions of the

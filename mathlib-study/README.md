@@ -136,6 +136,19 @@ Run each from the repository root: `node mathlib-study/NN-name.mjs`.
     positive at the 99th–100th percentile in 4/5, so Exploitation stands at 20/21
     overall with zero significant reversals.
 
+13. **`17-growth-precheck.mjs` / `18-growth-replication.mjs`** (2026-08-26) —
+    replication of the AFP growth reversal (afp-study/07: D-cell members become
+    load-bearing, D > E > R) on Mathlib's history, with age matched exactly
+    (degree × first-seen strata; 38k matched cells). **MG1 FAILS by reversal in
+    the opposite direction**: on Mathlib, *Exploitation*-cell members grow
+    (G_ED = +0.076, 100th percentile, all three namespaces). Growth dynamics is
+    corpus-contingent; the division-of-labor reading is dead. MG2 holds: E > R
+    (100th percentile) — the only dynamical statement to hold on both corpora,
+    both times as a registered secondary. Post-hoc, flagged: the same two
+    corpora that split on consolidation (garden vs museum) split the same way
+    on which cell carries growth — the maintenance regime may set both. Needs a
+    maintained-vs-archival software pair; not testable on corpora used so far.
+
 ## Headline findings
 
 - **The four-position geometry exists in formalized mathematics and is generic;
