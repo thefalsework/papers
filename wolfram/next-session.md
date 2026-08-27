@@ -860,6 +860,38 @@ T1–T4, statistical-mechanics latency case study); the r > 2 Lean
 iteration (DONE 2026-08-24); pre-arXiv due diligence (2026-08-15
 entry).
 
+## Status update, 2026-08-27: the software pair executed — the garden/museum axis dies; first operator hit
+
+The registered protocol ran end to end in one day (`software-study/`,
+scripts 01-04; results as dated postscripts in the scripts and
+PROTOCOL.md). Sequence: acquisition (golang/go bare clone; crates
+history recovered from crates.io-index-archive snapshot branches after
+the live index proved squashed), blind census (one plumbing repair
+logged: Go build-ignored generator files were creating a false SCC),
+gates (MC1 rewiring ratio 3.13 >= 3, narrowly; MC2 6/6 checkpoints
+both corpora), then the registered quadrants.
+
+- **Q1-CONS FAILS by absence.** Go trends down (Spearman -0.71) but
+  the mature checkpoint sits at pct 43 of its own degree-preserving
+  nulls. The garden did not consolidate. SP1 fails on both corpora —
+  latency FALLS on Go, flat on crates. The latency arrow is now
+  scoped to proof libraries; the consolidation arrow to Mathlib alone.
+- **Q2-CONS holds** (predicted absence — the weak half).
+- **Q1-GROWTH HOLDS.** G_ED = +0.40, null ±0.06, pct 100. On Go,
+  E-cell members out-grow degree- and age-matched D siblings. **The
+  operator's first registered directional hit (record now 1-11).**
+- **Q2-GROWTH FAILS BY REVERSAL.** crates.io grows through E at
+  G_ED = +5.83 vs null ±0.59 — the largest effect ever measured in
+  the program. The museum grows through its shadows too.
+
+**Verdict: the garden/museum axis is dead on both rows.** What
+replaces it: E out-grows D on Mathlib, Go, and crates.io — maintained
+and archival, proofs and software — and reverses only on AFP. The
+anomaly to explain is AFP (refereed-acceptance gate as first suspect,
+post-hoc), not a maintenance regime. Docs updated same day: both
+briefs, the synthesis paper (v0.2, §5 graveyard items 10-11, §6
+rewritten), the piano essay's gardens-and-museums section.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

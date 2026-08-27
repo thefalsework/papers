@@ -144,12 +144,12 @@ Point it at anything built by agents who staked something — a library, an
 archive, arguably a fugue — and it sings. We may have accidentally built the
 first structure-detector that distinguishes *made* from *happened*.
 
-## Gardens and museums
+## Gardens and museums — a beautiful theory, killed on schedule
 
 The last discovery arrived sideways, out of a failed prediction — they all
-arrive out of failed predictions; the project's operator is zero-for-nine
-against his own instrument, and that losing streak is the strongest evidence
-the instrument is real.
+arrive out of failed predictions; the project's operator was zero-for-nine
+against his own instrument when this section was first drafted, and that
+losing streak is the strongest evidence the instrument is real.
 
 Two great collections of formal knowledge, measured the same way, disagreed
 twice — and both disagreements drew the same line. The library that is
@@ -157,15 +157,30 @@ endlessly *maintained* — refactored daily, tightened, re-wired — goes opaque
 over time, and its growth flows through the shadow-chair: the residue-miners
 become tomorrow's foundations. The archive that *freezes* every contribution
 on arrival stays loose and transparent, and its growth flows through the
-gate-straddlers: the bridge-builders become tomorrow's foundations. A
-**garden** grows through its shadows. A **museum** grows through its doors.
+gate-straddlers. A **garden** grows through its shadows, said the theory.
+A **museum** grows through its doors.
 
-If that holds — and there is a signed, sealed prediction in the repository,
-written before touching any data, naming a software garden and a software
-museum where it must hold if it's true — then the instrument isn't just
-reading structure. It's reading *how a community loves its knowledge*:
-whether it tends or collects, prunes or preserves. The difference between a
-living tradition and a beautiful cemetery, as a measurement.
+There was a signed, sealed prediction in the repository, written before
+touching any data, naming a software garden and a software museum where it
+had to hold if it was true. It was run the next day, and it did not hold.
+The software garden — the Go standard library, tended by one community for
+fifteen years — never went opaque. The software museum — the Rust package
+registry, whose published versions are frozen by law — grew through its
+*shadows*, harder than anything the instrument had ever measured. The
+garden/museum line was a coincidence of two worlds, and the project said so
+at full volume, the way its rules require.
+
+But the wreck left behind something better than the theory. One of the four
+sealed predictions landed — the first directional bet, in eleven tries, the
+operator has ever won: in the software garden, the shadow-dwellers really do
+become tomorrow's foundations. And across the whole ledger the score now
+reads: the shadow-chair is where growth comes from in *three worlds out of
+four* — the maintained library, the garden, and the frozen registry alike —
+with the one refereed proof archive as the lone dissenter. The question
+flipped overnight from "what do gardens do?" to "what is strange about that
+archive?" And the shadow-land — the ground a commitment claims but cannot
+digest — looks less like a special feature of tended knowledge and more like
+the seedbed of *everything* that grows.
 
 ## What it all says
 
@@ -177,8 +192,9 @@ hears is *staking*: the moment some community, some composer, some tradition
 takes an impossible remainder — a comma, a contradiction, a wrinkle — and
 says *we will live here, arranged around this*. That act carves the world
 into four kinds of ground. It opens a narrow window of viewpoints through
-which the arrangement can be seen. It starts a clock: gardens narrowing
-toward opacity, museums accumulating toward sprawl. Bach's temperament, the
+which the arrangement can be seen. And it plants a seedbed in its own
+shadow: the ground the commitment claims but cannot digest is, in world
+after world, where the next foundations grow. Bach's temperament, the
 mathematician's library, the constitution, the paradigm — one architecture,
 now with a measuring device.
 

@@ -1,11 +1,12 @@
-# The Instrument in the Field: What an Algebraic Invariant Found, and Failed to Find, in Three Real Corpora
+# The Instrument in the Field: What an Algebraic Invariant Found, and Failed to Find, in Five Real Corpora
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.1, 2026-08-26. Synthesis of the field deployments of
-2026-08-19 through 2026-08-26; primary sources are the study folders cited
+**Version.** Draft v0.2, 2026-08-27. Synthesis of the field deployments of
+2026-08-19 through 2026-08-27; primary sources are the study folders cited
 per-claim (`mathlib-study/`, `afp-study/`, `ca-study/`, `software-study/`),
 each of which carries its pre-registrations inline and its raw output
-committed.
+committed. v0.2 adds §6's executed verdict: the software-pair protocol,
+registered unrun in v0.1, was run the next day.
 **Status discipline.** Every claim carries one of the program's grades:
 **[K]** kernel-checked in Lean 4 against Mathlib4 (axiom audits: `propext`,
 `Classical.choice`, `Quot.sound` only; no `sorry`); **[C]** classical
@@ -29,9 +30,11 @@ what happened when that invariant was used as a *measuring instrument* on
 corpora the program does not control: the import structure of Mathlib
 (twenty-one namespaces, ~7,900 modules, three years of history), the Archive
 of Formal Proofs (1,014 entries, a different proof assistant and community,
-twenty-two years of history), and the counterfactual causal graphs of Conway's
-Game of Life (the first substrate authored by no one). Every test was
-pre-registered before its first run; thirty-four scripts across the three
+twenty-two years of history), the counterfactual causal graphs of Conway's
+Game of Life (the first substrate authored by no one), and — added in v0.2 —
+a cross-domain software pair, the Go standard library and the crates.io
+registry (a decade of history each). Every test was
+pre-registered before its first run; thirty-eight scripts across the four
 study folders, plus the Life study's four versioned protocol documents,
 constitute the primary record. Two findings
 survived everything thrown at them: **Exploitation-cell members occupy the
@@ -42,15 +45,19 @@ wild** — most real kernels show no four-position structure at full resolution
 and acquire it only under specific proper coarse-grainings, on every corpus
 measured. Two findings were *scoped* by failed transfer: aperture narrowness
 (≈18× vs degree-matched nulls on Mathlib; absent on Life cones) and the
-consolidation arrow (null-controlled on Mathlib; reversed on AFP). Nine
-registered operator hypotheses were overruled by the instrument, at a final
-score of operator 0, instrument 9; the graveyard is reported at the same
-prominence as the survivals, because the program regards the kill record as
-its methodological contribution. One pattern remains live: the two historical
-corpora separate along a maintained-versus-archival axis on two independent
-measurements. The paper closes with that hypothesis in its strongest testable
-form — a registered, unrun protocol on a named software pair, committed before
-any data acquisition, which anyone may execute **[H]**.
+consolidation arrow (null-controlled on Mathlib; reversed on AFP; absent on
+both software corpora). The maintained-versus-archival axis suggested by the
+two proof corpora was put to its registered cross-domain test and **died on
+both rows**: the garden did not consolidate, and the museum grew through
+Exploitation — the largest effect the instrument has ever measured, in the
+predicted-opposite cell. The same run produced the program's first registered
+directional hit: on the Go standard library, Exploitation-cell members
+out-grow their degree- and age-matched Distribution siblings, as predicted.
+The four-corpus growth record now reads: Exploitation grows on Mathlib, Go,
+and crates.io; AFP, not a regime axis, is the anomaly. Registered operator
+hypotheses stand at operator 1, instrument 11; the graveyard is reported at
+the same prominence as the survivals, because the program regards the kill
+record as its methodological contribution.
 
 ## 1. What the instrument is, in five sentences
 
@@ -208,16 +215,18 @@ On AFP, over eight biennial checkpoints spanning two decades, the latency half
 transfers (Spearman +0.83) and the aperture half **reverses**: apertures widen
 (+0.64 where the registered prediction required ≤ −0.6; `afp-study/05`). The
 consolidation arrow is scoped to Mathlib wherever it is cited. The candidate
-explanation for *why* is §6.
+explanation for *why* — the maintenance regime — was put to its registered
+cross-domain test and died; §6 has the verdict.
 
 ## 5. The graveyard, at full prominence
 
-Nine operator hypotheses were registered and executed; nine died. The program
+Twelve directional operator hypotheses have been registered and executed;
+eleven died, one landed (§6). The program
 treats this ledger as a feature — an interpretive apparatus that can be
 applied to anything can be wrong about nothing — and reports it at the same
 prominence as §3.
 
-### 5.1 The nine, in order
+### 5.1 The deaths, in order
 
 1. **"Latency will dissolve under degree-preserving nulls"** (registered
    expectation, `mathlib-study/03`, 2026-08-19) — wrong on every metric;
@@ -265,6 +274,17 @@ prominence as §3.
    reversed in the *opposite* direction: on Mathlib, *Exploitation* grows
    (G_ED = +0.076, percentile 100; E > D > R). "E owns the geography, D owns
    the dynamics" died one study after it was born.
+10. **The garden consolidates** (`software-study/03`) — Go's aperture trend
+    clears the registered slope (−0.71) but its mature checkpoint sits at the
+    43rd percentile of its own degree-preserving nulls: failure by absence,
+    not reversal. The latency arrow, generic on proof corpora, falls on Go
+    and is flat on crates — scoped to proof libraries.
+11. **The museum grows through Distribution** (`software-study/04`) — failed
+    by reversal at the largest effect ever measured in the program: crates.io
+    grows through *Exploitation* (G_ED = +5.83 against a null half-width of
+    ~0.59, percentile 100). With 10, the garden/museum axis is dead on both
+    rows (§6). The same run's Go quadrant is the operator's first registered
+    directional hit and is reported in §6, not here.
 
 ### 5.2 The instrument deaths
 
@@ -296,7 +316,7 @@ substrate with no author it found none. The instrument detects *commitment*,
 not *computation* **[A]** — an interpretation, flagged as such, whose next
 test is §6.
 
-## 6. The one live pattern, and its registered test
+## 6. The garden/museum axis: registered, executed, dead — and what it left behind
 
 The two historical corpora separate along a single axis on two measurements
 that share no code and no design:
@@ -308,23 +328,51 @@ that share no code and no design:
 
 Mathlib is a *garden* — its existing dependency structure is continuously
 rewired by thousands of maintainers. AFP is a *museum* — entries are frozen at
-acceptance and never rewired. The hypothesis this suggests **[H]**: *the
+acceptance and never rewired. The hypothesis this suggested **[H]**: *the
 maintenance regime determines both the direction of consolidation and the
 identity of the growth cell.* Gardens go opaque and grow through their
 residue; museums stay loose and grow through their boundary-straddlers.
 
 Two corpora are a line through two points, both from one domain, and §5's
-base rate for readings at this stage of support is zero for nine. So the
-hypothesis is not asserted; it is *armed*: `software-study/PROTOCOL.md`
-(v1.0, committed 2026-08-26, before any data acquisition) fixes a
+base rate for readings at this stage of support was zero for nine. So the
+hypothesis was not asserted; it was *armed*: `software-study/PROTOCOL.md`
+(v1.0, committed 2026-08-26, before any data acquisition) fixed a
 cross-domain pair — the Go standard library as garden, the crates.io registry
 as museum, immutability platform-enforced on the museum side — with a
-manipulation check that gates all scoring, four-quadrant predictions with
-thresholds inherited from the null designs above, failure semantics including
-the diagonal case, and the prior stated in the document. It is preregistration
-in its strongest form (before acquisition, not merely before analysis), and
-anyone, including a skeptic, can execute it. This paper's last empirical
-sentence is therefore a standing prediction, not a result.
+manipulation check gating all scoring, four-quadrant predictions with
+thresholds inherited from the null designs above, and failure semantics
+including the diagonal case. Preregistration in its strongest form: before
+acquisition, not merely before analysis.
+
+**It was executed the next day (2026-08-27, `software-study/`, four scripts),
+and the axis died on both rows [computed].** Both manipulation-check gates
+passed first (edge-rewiring ratio 3.13× garden over museum; ≥ 3 evaluable
+kernels at every checkpoint on both corpora), so the scoring was licensed.
+Then:
+
+| | Go (garden) | crates.io (museum) |
+|---|---|---|
+| Consolidation quadrant | **fails by absence** — trend −0.71 but the mature checkpoint sits at pct 43 of its own degree-preserving nulls | holds (predicted absence: −0.20, pct 97) |
+| Growth quadrant | **holds** — G_ED +0.40, null ±0.06, pct 100 | **fails by reversal** — G_ED +5.83, null ±0.59, pct 100: the museum grows through E |
+
+The latency arrow, which rose on both proof corpora, *falls* on Go and is
+flat on crates — scoping it to proof libraries. The maintained/frozen reading
+was a two-corpus coincidence, exactly as the protocol's stated prior
+expected.
+
+Two things survive the wreck, and they are better than what died. First, the
+garden growth quadrant is **the program's first registered directional
+prediction to land** (operator 1 for 11): on Go, Exploitation-cell members
+out-grow their degree- and age-matched Distribution siblings at the 100th
+percentile of the label-permutation null. Second, the four-corpus record now
+reads: **E out-grows D on Mathlib, Go, and crates.io — maintained and
+archival, proofs and software — and reverses only on AFP.** The residue cell,
+claimed-but-unsettled territory, looks like the generic growth engine of
+dependency-structured corpora, and the question worth a future protocol is no
+longer "what do gardens do?" but "what is different about AFP?" **[O]** —
+with its refereed-acceptance gate (entries enter whole, already pointed at
+the boundary) the natural first suspect, noted here as post-hoc reading, not
+prediction.
 
 A second forward prediction remains on the books from the first field day:
 the `Topology.CWComplex.Classical` cluster's empty Distribution cell — a
@@ -345,7 +393,9 @@ re-founded, testable against any future Mathlib revision by rerunning
   the one unauthored substrate it measures cone size. The commitment reading
   of §5.3 is [A].
 - **No dynamics.** The growth studies measure who becomes load-bearing, not
-  why; the garden/museum axis is a registered hypothesis, not a mechanism.
+  why; the garden/museum axis is dead (§6), and the "E is the generic growth
+  engine" reading that replaced it is a three-of-four-corpus regularity, not
+  a mechanism.
 - **No priority beyond a search.** The classification of nuclei on finite
   down-set algebras is classical (Simmons 1980; Bezhanishvili et al. 2020)
   **[C]**; the aperture invariant, latency, the closed form, and the field
@@ -360,8 +410,9 @@ spine builds with `lake build` (axiom audits in the aperture paper). The
 Wolfram Language twins are self-contained cloud cells with expected outputs
 pre-registered (`ca-study/wl/`, `wolfram/`). Primary sources: `mathlib-study/`
 (eighteen scripts), `afp-study/` (seven), `ca-study/` (nine plus four
-protocol documents and `RESULTS.md`), `software-study/PROTOCOL.md` (unrun),
-and the session log `wolfram/next-session.md`. Citable snapshot of the
+protocol documents and `RESULTS.md`), `software-study/` (four scripts plus
+`PROTOCOL.md`, executed with results as dated postscripts), and the session
+log `wolfram/next-session.md`. Citable snapshot of the
 program at the aperture paper's release: DOI 10.5281/zenodo.22016585.
 
 **Disclosure.** Drafting and execution were AI-assisted under direction, per
@@ -369,6 +420,7 @@ the program's validation architecture; the grades are the author's warrant.
 
 ---
 
-*v0.1, 2026-08-26. This synthesis reports work committed between 2026-08-19
-and 2026-08-26. Corrections and postscripts appear below this line, dated,
-never as silent edits.*
+*v0.1, 2026-08-26; v0.2, 2026-08-27 (adds the executed software-pair verdict
+to §6 and the abstract). This synthesis reports work committed between
+2026-08-19 and 2026-08-27. Corrections and postscripts appear below this
+line, dated, never as silent edits.*
