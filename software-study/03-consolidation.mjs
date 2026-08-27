@@ -49,6 +49,36 @@
 // untracked (large); regenerate via 01 against the pinned SHAs.
 //
 // Writes software-study/results-consolidation.json.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-08-27, after the single registered run).
+//
+//   go:     Spearman latent=-0.657  meanAp=-0.714  finalPct=43.3
+//   crates: Spearman latent=+0.314  meanAp=-0.200  finalPct=96.7
+//
+// Q1-CONS FAILS. Go's apertures do trend downward (Spearman -0.714,
+// clearing the -0.6 threshold), but the 2026 checkpoint sits at the
+// 43.3rd percentile of its own nulls — squarely inside the band. Mature
+// Go is not distinguishable from its degree-random twin on this metric.
+// The drop is also non-monotone (2024 dipped to pct 3.3, 2026 rebounded),
+// which a consolidation arrow should not do.
+//
+// Q2-CONS HOLDS. Crates does not narrow (Spearman -0.200, final pct
+// 96.7). As registered, this is the weak half: it predicted an absence.
+//
+// SP1 FAILS on both corpora: latency FALLS on Go (-0.657) and is flat
+// on crates (+0.314). The latency arrow — which held on Mathlib AND on
+// AFP — does not appear on either software corpus.
+//
+// consolidationFingerprint: NOT AS PREDICTED. Per protocol §5 the axis's
+// consolidation fingerprint does not count: the garden did not
+// consolidate. Note this is failure-by-absence in the garden quadrant,
+// not failure-by-reversal (crates did not consolidate either; no
+// diagonal). Reading: Mathlib's consolidation arrow now looks like a
+// fact about Mathlib specifically — one continuously-refactored corpus —
+// not about maintained corpora as a class. The garden/museum axis loses
+// its consolidation row regardless of what the growth quadrants say.
+// ---------------------------------------------------------------------
 
 import { readFileSync, writeFileSync } from "node:fs";
 

@@ -1,0 +1,445 @@
+{
+ "protocol": "software-study/PROTOCOL.md v1.0 §4 (consolidation row)",
+ "ranAt": "2026-08-27T21:26:54.969Z",
+ "go": {
+  "perYear": [
+   {
+    "year": 2016,
+    "obs": {
+     "cones": [
+      {
+       "apex": 66,
+       "n": 18
+      },
+      {
+       "apex": 105,
+       "n": 18
+      },
+      {
+       "apex": 127,
+       "n": 18
+      },
+      {
+       "apex": 152,
+       "n": 18
+      },
+      {
+       "apex": 20,
+       "n": 17
+      }
+     ],
+     "latentFrac": 0.3045751633986928,
+     "ordIdFrac": 0.5496732026143791,
+     "meanApFrac": 0.29183732076408037,
+     "maxApFrac": 0.7593948364257812
+    },
+    "pctLatent": 0,
+    "pctMeanAp": 90,
+    "nullMeanApMed": 0.2206,
+    "meanSwaps": 2100
+   },
+   {
+    "year": 2018,
+    "obs": {
+     "cones": [
+      {
+       "apex": 38,
+       "n": 18
+      },
+      {
+       "apex": 49,
+       "n": 18
+      },
+      {
+       "apex": 64,
+       "n": 18
+      },
+      {
+       "apex": 68,
+       "n": 18
+      },
+      {
+       "apex": 70,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.34444444444444444,
+     "ordIdFrac": 0.5,
+     "meanApFrac": 0.29396302964952253,
+     "maxApFrac": 0.7813995361328125
+    },
+    "pctLatent": 3.3,
+    "pctMeanAp": 96.7,
+    "nullMeanApMed": 0.1791,
+    "meanSwaps": 2440
+   },
+   {
+    "year": 2020,
+    "obs": {
+     "cones": [
+      {
+       "apex": 38,
+       "n": 18
+      },
+      {
+       "apex": 37,
+       "n": 17
+      },
+      {
+       "apex": 39,
+       "n": 17
+      },
+      {
+       "apex": 76,
+       "n": 17
+      },
+      {
+       "apex": 145,
+       "n": 17
+      }
+     ],
+     "latentFrac": 0.1869281045751634,
+     "ordIdFrac": 0.6045751633986928,
+     "meanApFrac": 0.31956586650773594,
+     "maxApFrac": 0.6502288818359375
+    },
+    "pctLatent": 0,
+    "pctMeanAp": 93.3,
+    "nullMeanApMed": 0.2414,
+    "meanSwaps": 2698
+   },
+   {
+    "year": 2022,
+    "obs": {
+     "cones": [
+      {
+       "apex": 75,
+       "n": 18
+      },
+      {
+       "apex": 81,
+       "n": 18
+      },
+      {
+       "apex": 36,
+       "n": 17
+      },
+      {
+       "apex": 28,
+       "n": 16
+      },
+      {
+       "apex": 31,
+       "n": 16
+      }
+     ],
+     "latentFrac": 0.2706699346405229,
+     "ordIdFrac": 0.5620915032679739,
+     "meanApFrac": 0.2874413484062245,
+     "maxApFrac": 0.5939895629882812
+    },
+    "pctLatent": 20,
+    "pctMeanAp": 96.7,
+    "nullMeanApMed": 0.1786,
+    "meanSwaps": 3208
+   },
+   {
+    "year": 2024,
+    "obs": {
+     "cones": [
+      {
+       "apex": 138,
+       "n": 8
+      },
+      {
+       "apex": 112,
+       "n": 6
+      },
+      {
+       "apex": 263,
+       "n": 5
+      },
+      {
+       "apex": 15,
+       "n": 4
+      },
+      {
+       "apex": 16,
+       "n": 4
+      }
+     ],
+     "latentFrac": 0.06666666666666667,
+     "ordIdFrac": 0.125,
+     "meanApFrac": 0.0435546875,
+     "maxApFrac": 0.0953125
+    },
+    "pctLatent": 3.3,
+    "pctMeanAp": 3.3,
+    "nullMeanApMed": 0.1337,
+    "meanSwaps": 4160
+   },
+   {
+    "year": 2026,
+    "obs": {
+     "cones": [
+      {
+       "apex": 16,
+       "n": 16
+      },
+      {
+       "apex": 20,
+       "n": 8
+      },
+      {
+       "apex": 24,
+       "n": 7
+      },
+      {
+       "apex": 380,
+       "n": 7
+      },
+      {
+       "apex": 43,
+       "n": 6
+      }
+     ],
+     "latentFrac": 0.2595238095238095,
+     "ordIdFrac": 0.35297619047619044,
+     "meanApFrac": 0.13954204377673923,
+     "maxApFrac": 0.293243408203125
+    },
+    "pctLatent": 13.3,
+    "pctMeanAp": 43.3,
+    "nullMeanApMed": 0.1532,
+    "meanSwaps": 5804
+   }
+  ],
+  "spearmanLatent": -0.657,
+  "spearmanMeanAp": -0.714,
+  "finalPctMeanAp": 43.3
+ },
+ "crates": {
+  "perYear": [
+   {
+    "year": 2016,
+    "obs": {
+     "cones": [
+      {
+       "apex": 164,
+       "n": 18
+      },
+      {
+       "apex": 804,
+       "n": 18
+      },
+      {
+       "apex": 838,
+       "n": 18
+      },
+      {
+       "apex": 852,
+       "n": 18
+      },
+      {
+       "apex": 1012,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.28888888888888886,
+     "ordIdFrac": 0.5,
+     "meanApFrac": 0.23724390665690104,
+     "maxApFrac": 0.6479629516601563
+    },
+    "pctLatent": 0,
+    "pctMeanAp": 96.7,
+    "nullMeanApMed": 0.1601,
+    "meanSwaps": 20076
+   },
+   {
+    "year": 2018,
+    "obs": {
+     "cones": [
+      {
+       "apex": 26,
+       "n": 18
+      },
+      {
+       "apex": 57,
+       "n": 18
+      },
+      {
+       "apex": 189,
+       "n": 18
+      },
+      {
+       "apex": 271,
+       "n": 18
+      },
+      {
+       "apex": 278,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.4666666666666666,
+     "ordIdFrac": 0.32222222222222224,
+     "meanApFrac": 0.20207901000976564,
+     "maxApFrac": 0.5712371826171875
+    },
+    "pctLatent": 15,
+    "pctMeanAp": 90,
+    "nullMeanApMed": 0.1472,
+    "meanSwaps": 95932
+   },
+   {
+    "year": 2020,
+    "obs": {
+     "cones": [
+      {
+       "apex": 239,
+       "n": 18
+      },
+      {
+       "apex": 378,
+       "n": 18
+      },
+      {
+       "apex": 386,
+       "n": 18
+      },
+      {
+       "apex": 429,
+       "n": 18
+      },
+      {
+       "apex": 491,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.4444444444444445,
+     "ordIdFrac": 0.25555555555555554,
+     "meanApFrac": 0.1675119188096788,
+     "maxApFrac": 0.48904266357421877
+    },
+    "pctLatent": 26.7,
+    "pctMeanAp": 66.7,
+    "nullMeanApMed": 0.1521,
+    "meanSwaps": 287556
+   },
+   {
+    "year": 2022,
+    "obs": {
+     "cones": [
+      {
+       "apex": 138,
+       "n": 18
+      },
+      {
+       "apex": 205,
+       "n": 18
+      },
+      {
+       "apex": 458,
+       "n": 18
+      },
+      {
+       "apex": 527,
+       "n": 18
+      },
+      {
+       "apex": 559,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.3333333333333333,
+     "ordIdFrac": 0.4222222222222222,
+     "meanApFrac": 0.24056108262803821,
+     "maxApFrac": 0.6887161254882812
+    },
+    "pctLatent": 0,
+    "pctMeanAp": 100,
+    "nullMeanApMed": 0.1362,
+    "meanSwaps": 669126
+   },
+   {
+    "year": 2024,
+    "obs": {
+     "cones": [
+      {
+       "apex": 97,
+       "n": 18
+      },
+      {
+       "apex": 165,
+       "n": 18
+      },
+      {
+       "apex": 265,
+       "n": 18
+      },
+      {
+       "apex": 297,
+       "n": 18
+      },
+      {
+       "apex": 341,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.5777777777777777,
+     "ordIdFrac": 0.22222222222222224,
+     "meanApFrac": 0.13295211791992187,
+     "maxApFrac": 0.49908294677734377
+    },
+    "pctLatent": 61.7,
+    "pctMeanAp": 73.3,
+    "nullMeanApMed": 0.1249,
+    "meanSwaps": 1332906
+   },
+   {
+    "year": 2026,
+    "obs": {
+     "cones": [
+      {
+       "apex": 314,
+       "n": 18
+      },
+      {
+       "apex": 332,
+       "n": 18
+      },
+      {
+       "apex": 377,
+       "n": 18
+      },
+      {
+       "apex": 591,
+       "n": 18
+      },
+      {
+       "apex": 618,
+       "n": 18
+      }
+     ],
+     "latentFrac": 0.3666666666666666,
+     "ordIdFrac": 0.4,
+     "meanApFrac": 0.23645451863606767,
+     "maxApFrac": 0.6847152709960938
+    },
+    "pctLatent": 0,
+    "pctMeanAp": 96.7,
+    "nullMeanApMed": 0.143,
+    "meanSwaps": 3391308
+   }
+  ],
+  "spearmanLatent": 0.314,
+  "spearmanMeanAp": -0.2,
+  "finalPctMeanAp": 96.7
+ },
+ "verdicts": {
+  "Q1-CONS (Go narrows, outside null)": "FAILS",
+  "Q2-CONS (crates does not narrow)": "HOLDS",
+  "SP1-go (latency rises)": "FAILS",
+  "SP1-crates (latency rises)": "FAILS",
+  "consolidationFingerprint": "NOT AS PREDICTED"
+ }
+}
