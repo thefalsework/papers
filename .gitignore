@@ -26,6 +26,15 @@ lean/lake-packages/
 # Local toolchain binaries (tectonic, etc.)
 .tools/
 
+# Untracked corpus checkouts (software-study, afp-study)
+.scratch_*/
+.scratch_*.mjs
+
+# Large regenerable checkpoint extracts (rerun software-study/01-census.mjs
+# against the SHAs pinned in results-census.json)
+software-study/history/crates-2024.json
+software-study/history/crates-2026.json
+
 # Temporary files
 _*.txt
 _p*.txt

@@ -1,0 +1,356 @@
+{
+ "protocol": "software-study/PROTOCOL.md v1.0",
+ "ranAt": "2026-08-27T21:03:37.196Z",
+ "go": {
+  "2016": {
+   "rev": "575a87166291e321745041944321002b3c0b72be",
+   "date": "2016-07-01 19:20:11 +0000",
+   "stats": {
+    "files": 1314,
+    "buildIgnored": 45,
+    "packages": 159,
+    "importTokens": 2590,
+    "resolved": 2558,
+    "cmd": 0,
+    "externalOrVendored": 10,
+    "unresolved": 22
+   },
+   "graph": {
+    "nodes": 159,
+    "edges": 1050,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 159,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 159,
+     "dense": 0,
+     "regular": 16,
+     "ordinary": 143,
+     "evaluable": 143
+    }
+   }
+  },
+  "2018": {
+   "rev": "28f9b880f6e9f95c61b31b6e0a7ac458cb6a0e0c",
+   "date": "2018-07-01 21:36:23 +0000",
+   "stats": {
+    "files": 1567,
+    "buildIgnored": 51,
+    "packages": 172,
+    "importTokens": 3109,
+    "resolved": 3063,
+    "cmd": 0,
+    "externalOrVendored": 0,
+    "unresolved": 46
+   },
+   "graph": {
+    "nodes": 172,
+    "edges": 1220,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 172,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 172,
+     "dense": 0,
+     "regular": 17,
+     "ordinary": 155,
+     "evaluable": 155
+    }
+   }
+  },
+  "2020": {
+   "rev": "a4ba411b19fa0111a3c8fe059fcf5489d3bd6bbf",
+   "date": "2020-07-01 15:29:29 +0000",
+   "stats": {
+    "files": 1740,
+    "buildIgnored": 57,
+    "packages": 190,
+    "importTokens": 3535,
+    "resolved": 3479,
+    "cmd": 0,
+    "externalOrVendored": 31,
+    "unresolved": 25
+   },
+   "graph": {
+    "nodes": 190,
+    "edges": 1349,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 190,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 190,
+     "dense": 0,
+     "regular": 17,
+     "ordinary": 173,
+     "evaluable": 173
+    }
+   }
+  },
+  "2022": {
+   "rev": "e822b1e26e20ef1c76672c0b77b0fd8a97a1fe84",
+   "date": "2022-07-01 15:57:45 +0000",
+   "stats": {
+    "files": 2056,
+    "buildIgnored": 59,
+    "packages": 231,
+    "importTokens": 4320,
+    "resolved": 4248,
+    "cmd": 0,
+    "externalOrVendored": 39,
+    "unresolved": 33
+   },
+   "graph": {
+    "nodes": 231,
+    "edges": 1604,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 231,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 231,
+     "dense": 0,
+     "regular": 25,
+     "ordinary": 206,
+     "evaluable": 206
+    }
+   }
+  },
+  "2024": {
+   "rev": "94982a07825aec711f11c97283e99e467838d616",
+   "date": "2024-07-01 19:41:15 +0000",
+   "stats": {
+    "files": 2440,
+    "buildIgnored": 61,
+    "packages": 298,
+    "importTokens": 5481,
+    "resolved": 5398,
+    "cmd": 0,
+    "externalOrVendored": 49,
+    "unresolved": 34
+   },
+   "graph": {
+    "nodes": 298,
+    "edges": 2080,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 298,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 298,
+     "dense": 0,
+     "regular": 37,
+     "ordinary": 261,
+     "evaluable": 261
+    }
+   }
+  },
+  "2026": {
+   "rev": "3d3798e7fb03345f79a192f0a2acfc753325739b",
+   "date": "2026-07-01 15:12:22 -0700",
+   "stats": {
+    "files": 2965,
+    "buildIgnored": 67,
+    "packages": 399,
+    "importTokens": 7347,
+    "resolved": 7186,
+    "cmd": 12,
+    "externalOrVendored": 99,
+    "unresolved": 50
+   },
+   "graph": {
+    "nodes": 399,
+    "edges": 2902,
+    "nontrivialSccs": 0,
+    "largestScc": 1,
+    "condensationNodes": 399,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 399,
+     "dense": 0,
+     "regular": 44,
+     "ordinary": 355,
+     "evaluable": 355
+    }
+   }
+  }
+ },
+ "crates": {
+  "2016": {
+   "rev": "894b42009d6697e3439bca800aa2961b5da0df1a",
+   "date": "2016-07-01 22:46:25 +0000",
+   "stats": {
+    "crateFiles": 5328,
+    "parsedCrates": 5241,
+    "allYanked": 87,
+    "badJson": 0,
+    "depTokens": 10339,
+    "resolved": 10042,
+    "unresolved": 3,
+    "targetConditional": 489
+   },
+   "graph": {
+    "nodes": 5241,
+    "edges": 10041,
+    "nontrivialSccs": 1,
+    "largestScc": 2,
+    "condensationNodes": 5240,
+    "gate": {
+     "method": "exact",
+     "kernelsTested": 5240,
+     "dense": 0,
+     "regular": 1620,
+     "ordinary": 3620,
+     "evaluable": 3524
+    }
+   }
+  },
+  "2018": {
+   "rev": "96772dcdae47ebefa497c1758053fe965428a5d6",
+   "date": "2018-07-01 23:42:09 +0000",
+   "stats": {
+    "crateFiles": 16650,
+    "parsedCrates": 16299,
+    "allYanked": 351,
+    "badJson": 0,
+    "depTokens": 48088,
+    "resolved": 47976,
+    "unresolved": 10,
+    "targetConditional": 1071
+   },
+   "graph": {
+    "nodes": 16299,
+    "edges": 47969,
+    "nontrivialSccs": 1,
+    "largestScc": 2,
+    "condensationNodes": 16298,
+    "gate": {
+     "method": "sample-2000-seed-20260827",
+     "kernelsTested": 2000,
+     "dense": 0,
+     "regular": 534,
+     "ordinary": 1466,
+     "evaluable": 1437
+    }
+   }
+  },
+  "2020": {
+   "rev": "d952d4f25a50700a696c12091259c1ad2ce672e2",
+   "date": "2020-07-01 23:48:33 +0000",
+   "stats": {
+    "crateFiles": 42547,
+    "parsedCrates": 41553,
+    "allYanked": 994,
+    "badJson": 0,
+    "depTokens": 144008,
+    "resolved": 143789,
+    "unresolved": 35,
+    "targetConditional": 2906
+   },
+   "graph": {
+    "nodes": 41553,
+    "edges": 143783,
+    "nontrivialSccs": 2,
+    "largestScc": 2,
+    "condensationNodes": 41551,
+    "gate": {
+     "method": "sample-2000-seed-20260827",
+     "kernelsTested": 2000,
+     "dense": 0,
+     "regular": 543,
+     "ordinary": 1457,
+     "evaluable": 1436
+    }
+   }
+  },
+  "2022": {
+   "rev": "f6eebe3745d9f457e1794a943051b6ba6ac7d729",
+   "date": "2022-07-01 23:59:03 +0000",
+   "stats": {
+    "crateFiles": 87171,
+    "parsedCrates": 84439,
+    "allYanked": 2732,
+    "badJson": 0,
+    "depTokens": 335146,
+    "resolved": 334597,
+    "unresolved": 109,
+    "targetConditional": 6663
+   },
+   "graph": {
+    "nodes": 84439,
+    "edges": 334584,
+    "nontrivialSccs": 9,
+    "largestScc": 2,
+    "condensationNodes": 84430,
+    "gate": {
+     "method": "sample-2000-seed-20260827",
+     "kernelsTested": 2000,
+     "dense": 0,
+     "regular": 531,
+     "ordinary": 1469,
+     "evaluable": 1451
+    }
+   }
+  },
+  "2024": {
+   "rev": "d635036e4d379ed422006e0dc6822c85e778f4dd",
+   "date": "2024-07-01 23:59:15 +0000",
+   "stats": {
+    "crateFiles": 149835,
+    "parsedCrates": 143997,
+    "allYanked": 5838,
+    "badJson": 0,
+    "depTokens": 667903,
+    "resolved": 666505,
+    "unresolved": 229,
+    "targetConditional": 13748
+   },
+   "graph": {
+    "nodes": 143997,
+    "edges": 666494,
+    "nontrivialSccs": 10,
+    "largestScc": 3,
+    "condensationNodes": 143986,
+    "gate": {
+     "method": "sample-2000-seed-20260827",
+     "kernelsTested": 2000,
+     "dense": 0,
+     "regular": 465,
+     "ordinary": 1535,
+     "evaluable": 1519
+    }
+   }
+  },
+  "2026": {
+   "rev": "2f6d20ff0713d3d5630cf758dbe93ca333629b0c",
+   "date": "2026-07-01 23:56:42 +0000",
+   "stats": {
+    "crateFiles": 292530,
+    "parsedCrates": 284734,
+    "allYanked": 7796,
+    "badJson": 0,
+    "depTokens": 1700345,
+    "resolved": 1695744,
+    "unresolved": 377,
+    "targetConditional": 37532
+   },
+   "graph": {
+    "nodes": 284734,
+    "edges": 1695726,
+    "nontrivialSccs": 11,
+    "largestScc": 5,
+    "condensationNodes": 284716,
+    "gate": {
+     "method": "sample-2000-seed-20260827",
+     "kernelsTested": 2000,
+     "dense": 0,
+     "regular": 328,
+     "ordinary": 1672,
+     "evaluable": 1661
+    }
+   }
+  }
+ }
+}
