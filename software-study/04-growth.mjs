@@ -53,6 +53,37 @@
 // prominence. The operator's prior, per the protocol: 0 for 9.
 //
 // Writes software-study/results-growth.json.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-08-27, after the single registered run).
+//
+//   go:     kernels=677  G_ED=+0.396  null[2.5,97.5]=[-0.057,+0.058]
+//           pctile=100; G_ER=+0.719 pctile=100
+//   crates: kernels=1200 G_ED=+5.826  null[2.5,97.5]=[-0.583,+0.596]
+//           pctile=100; G_ER=-0.676 pctile=7
+//
+// Q1-GROWTH HOLDS. On Go, Exploitation-cell members out-grow their
+// degree- and age-matched Distribution siblings, far outside the null.
+// Same direction as Mathlib (18).
+//
+// Q2-GROWTH FAILS BY REVERSAL. The museum was predicted to grow through
+// Distribution (the AFP pattern); instead crates grows through
+// Exploitation with the largest effect in the program (+5.83 vs null
+// half-width ~0.59). Full prominence per protocol §5.
+//
+// Secondary E>R: holds on Go, fails on crates (G_ER negative, pct 7 —
+// not significant either way at the registered convention).
+//
+// growthFingerprint: NOT AS PREDICTED. Combined with 03 (consolidation
+// NOT AS PREDICTED), the garden/museum axis fails on BOTH rows and is
+// dead as registered. What the four-corpus growth record now shows:
+// E out-grows D at matched degree and age on Mathlib, Go, and crates —
+// three corpora spanning maintained/archival and proof/software — and
+// reverses only on AFP. The anomaly needing explanation is AFP, not a
+// regime axis. The maintenance-regime hypothesis predicted the wrong
+// thing; the operator's registered-prediction record is now 1 for 11
+// (Q1-GROWTH is the first primary directional hit).
+// ---------------------------------------------------------------------
 
 import { readFileSync, writeFileSync } from "node:fs";
 

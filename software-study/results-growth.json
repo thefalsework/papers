@@ -1,0 +1,52 @@
+{
+ "protocol": "software-study/PROTOCOL.md v1.0 §4 (growth row)",
+ "seed": 20260827472,
+ "ranAt": "2026-08-27T22:02:42.946Z",
+ "go": {
+  "kernelsUsed": 677,
+  "matchedCells": {
+   "ED": 3910,
+   "ER": 2988
+  },
+  "nonSingletonSkipped": 0,
+  "G_ED": {
+   "obs": 0.396,
+   "null25": -0.0574,
+   "null975": 0.0576,
+   "obsPctile": 100
+  },
+  "G_ER": {
+   "obs": 0.7186,
+   "null25": -0.0904,
+   "null975": 0.0964,
+   "obsPctile": 100
+  }
+ },
+ "crates": {
+  "kernelsUsed": 1200,
+  "matchedCells": {
+   "ED": 11400,
+   "ER": 11416
+  },
+  "nonSingletonSkipped": 3900,
+  "G_ED": {
+   "obs": 5.8263,
+   "null25": -0.5826,
+   "null975": 0.5957,
+   "obsPctile": 100
+  },
+  "G_ER": {
+   "obs": -0.6758,
+   "null25": -0.8546,
+   "null975": 0.823,
+   "obsPctile": 7
+  }
+ },
+ "verdicts": {
+  "Q1-GROWTH (Go: E grows)": "HOLDS",
+  "Q2-GROWTH (crates: D grows)": "FAILS",
+  "secondary E>R go": "holds",
+  "secondary E>R crates": "fails",
+  "growthFingerprint": "NOT AS PREDICTED"
+ }
+}

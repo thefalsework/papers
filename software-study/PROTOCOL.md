@@ -154,3 +154,45 @@ in script headers before first run.
 
 *Committed unexecuted. Deviations, and eventually results, appear below this
 line as dated postscripts.*
+
+---
+
+**POSTSCRIPT (2026-08-27 — executed; the axis is dead on both rows).**
+
+Execution: acquisition and census 2026-08-27 (`01-census.mjs`; one plumbing
+repair logged there — Go build-ignored generator files were creating a false
+SCC; crates history recovered from `crates.io-index-archive` snapshot branches
+after the live index proved squashed). Gates passed: MC1 ratio 3.13 (≥ 3,
+narrowly), MC2 6/6 checkpoints ≥ 3 evaluable kernels on both corpora
+(`02-gates.mjs`, `results-gates.json`). Registered runs `03-consolidation.mjs`
+and `04-growth.mjs`, single runs each, seeds as committed.
+
+Results against the quadrant table:
+
+| | Consolidation | Growth cell |
+|---|---|---|
+| **Q1. Go stdlib** | **FAILS** — Spearman −0.714 clears the threshold but final checkpoint sits at pct 43.3 of its nulls (inside band) | **HOLDS** — G_ED +0.396, null ±0.058, pct 100 |
+| **Q2. crates.io** | **HOLDS** — Spearman −0.200, final pct 96.7 (predicted absence) | **FAILS BY REVERSAL** — G_ED +5.826, null ±0.59, pct 100: the museum grows through E |
+
+SP1 fails on both corpora: latency *falls* on Go (Spearman −0.657) and is flat
+on crates (+0.314). SP2 was not run: with both load-bearing rows already
+decided, the bonus prediction could not change the verdict and was left for a
+possible standalone E-on-territory replication.
+
+**Verdict, per §5: the axis dies.** The consolidation row failed by absence
+(the garden did not consolidate — no diagonal), and the growth row failed by
+reversal (the museum grew through Exploitation, with the largest effect ever
+measured in this program). The maintained/frozen reading of the
+Mathlib-vs-AFP contrast was a two-corpus coincidence, as the stated prior
+expected.
+
+What the four-corpus record now shows instead: **E out-grows D at matched
+degree and age on Mathlib, Go, and crates.io — maintained and archival,
+proofs and software — and reverses only on AFP.** The anomaly to explain is
+AFP, not a regime axis. Mathlib's consolidation arrow, having failed to
+appear on AFP, Go, or crates, is now scoped to Mathlib alone. The latency
+arrow, which held on both proof corpora, fails on both software corpora and
+is scoped to proof libraries.
+
+Operator's registered-primary record: Q1-GROWTH is the first directional hit
+(1 for 11).
