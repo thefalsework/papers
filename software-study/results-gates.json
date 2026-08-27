@@ -1,0 +1,164 @@
+{
+ "protocol": "software-study/PROTOCOL.md v1.0 §3",
+ "ranAt": "2026-08-27T21:21:41.229Z",
+ "mc1": {
+  "go": {
+   "pooledRate": 0.4312,
+   "pairs": [
+    {
+     "from": 2016,
+     "to": 2018,
+     "survived": 159,
+     "changed": 74,
+     "rate": 0.4654
+    },
+    {
+     "from": 2018,
+     "to": 2020,
+     "survived": 171,
+     "changed": 70,
+     "rate": 0.4094
+    },
+    {
+     "from": 2020,
+     "to": 2022,
+     "survived": 188,
+     "changed": 71,
+     "rate": 0.3777
+    },
+    {
+     "from": 2022,
+     "to": 2024,
+     "survived": 226,
+     "changed": 126,
+     "rate": 0.5575
+    },
+    {
+     "from": 2024,
+     "to": 2026,
+     "survived": 274,
+     "changed": 98,
+     "rate": 0.3577
+    }
+   ]
+  },
+  "crates": {
+   "pooledRate": 0.1376,
+   "pairs": [
+    {
+     "from": 2016,
+     "to": 2018,
+     "survived": 5174,
+     "changed": 1108,
+     "rate": 0.2141
+    },
+    {
+     "from": 2018,
+     "to": 2020,
+     "survived": 16189,
+     "changed": 2783,
+     "rate": 0.1719
+    },
+    {
+     "from": 2020,
+     "to": 2022,
+     "survived": 41083,
+     "changed": 6105,
+     "rate": 0.1486
+    },
+    {
+     "from": 2022,
+     "to": 2024,
+     "survived": 80814,
+     "changed": 11073,
+     "rate": 0.137
+    },
+    {
+     "from": 2024,
+     "to": 2026,
+     "survived": 138665,
+     "changed": 17730,
+     "rate": 0.1279
+    }
+   ]
+  },
+  "ratio": 3.13,
+  "threshold": 3,
+  "pass": true
+ },
+ "mc2": {
+  "go": {
+   "perYear": [
+    {
+     "year": 2016,
+     "evaluable": 143,
+     "method": "exact"
+    },
+    {
+     "year": 2018,
+     "evaluable": 155,
+     "method": "exact"
+    },
+    {
+     "year": 2020,
+     "evaluable": 173,
+     "method": "exact"
+    },
+    {
+     "year": 2022,
+     "evaluable": 206,
+     "method": "exact"
+    },
+    {
+     "year": 2024,
+     "evaluable": 261,
+     "method": "exact"
+    },
+    {
+     "year": 2026,
+     "evaluable": 355,
+     "method": "exact"
+    }
+   ],
+   "checkpointsWithGE3": 6,
+   "pass": true
+  },
+  "crates": {
+   "perYear": [
+    {
+     "year": 2016,
+     "evaluable": 3524,
+     "method": "exact"
+    },
+    {
+     "year": 2018,
+     "evaluable": 1437,
+     "method": "sample-2000-seed-20260827"
+    },
+    {
+     "year": 2020,
+     "evaluable": 1436,
+     "method": "sample-2000-seed-20260827"
+    },
+    {
+     "year": 2022,
+     "evaluable": 1451,
+     "method": "sample-2000-seed-20260827"
+    },
+    {
+     "year": 2024,
+     "evaluable": 1519,
+     "method": "sample-2000-seed-20260827"
+    },
+    {
+     "year": 2026,
+     "evaluable": 1661,
+     "method": "sample-2000-seed-20260827"
+    }
+   ],
+   "checkpointsWithGE3": 6,
+   "pass": true
+  }
+ },
+ "verdict": "GATES PASS - proceed to phase 3 (registered quadrants)"
+}
