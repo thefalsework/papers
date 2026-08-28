@@ -17,6 +17,7 @@
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { gzipSync } from "node:zlib";
 
 const SEED = 20260827881;
 const BIN = (d) => (d === 0 ? 0 : d <= 2 ? 1 : d <= 7 ? 2 : 3);
@@ -372,5 +373,5 @@ const freezeCondensation = (label, snap, fsMap, kernelQuota, sideCap) => {
   out.afp = { meta: { baseline: `afp 2026 rev ${raw.rev} (${raw.date})`, kernels: f.kernels }, deg: f.deg, fs: f.fs, cells: f.cells };
 }
 
-writeFileSync("predictions/frozen-2026.json", JSON.stringify(out));
-console.log("wrote predictions/frozen-2026.json");
+writeFileSync("predictions/frozen-2026.json.gz", gzipSync(JSON.stringify(out), { level: 9 }));
+console.log("wrote predictions/frozen-2026.json.gz");

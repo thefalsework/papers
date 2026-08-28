@@ -99,3 +99,11 @@ against any future Mathlib revision by rerunning `mathlib-study/01` [H].
 ---
 
 *Registered 2026-08-27, before any horizon data exists. Postscripts below.*
+
+**NOTE (2026-08-27, same session, before push).** The freeze ran once
+(deterministic; a rerun to switch the artifact to gzip produced
+byte-identical content). Frozen populations: Mathlib 450 kernels / 7,711
+cells; Go 355 / 5,384; crates 100 / 2,331; AFP 511 / 4,626. The scorer's
+plumbing was smoke-tested against the baselines themselves (all gains zero
+by construction, G_ED = 0.0000 on all corpora, every frozen cell matched) —
+a parsing check, carrying no information about 2028.

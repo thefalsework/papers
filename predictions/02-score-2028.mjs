@@ -29,6 +29,7 @@
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { gunzipSync } from "node:zlib";
 
 const PERMS = 1000;
 const SEED = 20280701;
@@ -46,7 +47,9 @@ const args = {};
 for (let i = 2; i < process.argv.length; i += 2)
   args[process.argv[i].replace(/^--/, "")] = process.argv[i + 1];
 
-const frozen = JSON.parse(readFileSync("predictions/frozen-2026.json", "utf8"));
+const frozen = JSON.parse(
+  gunzipSync(readFileSync("predictions/frozen-2026.json.gz")).toString("utf8"),
+);
 
 // ---- horizon in-degree extractors ----
 const horizonDegSoftware = (path) => {
