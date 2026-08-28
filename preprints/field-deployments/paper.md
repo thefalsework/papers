@@ -374,11 +374,17 @@ with its refereed-acceptance gate (entries enter whole, already pointed at
 the boundary) the natural first suspect, noted here as post-hoc reading, not
 prediction.
 
-A second forward prediction remains on the books from the first field day:
-the `Topology.CWComplex.Classical` cluster's empty Distribution cell — a
-genuine import island — either fills with bridging modules or the cluster is
-re-founded, testable against any future Mathlib revision by rerunning
-`mathlib-study/01` **[H]**.
+The program's standing forward bets now live in one registered place:
+`predictions/REGISTER.md` (committed 2026-08-27, with the 2026 baseline
+cell memberships frozen and the scorer frozen alongside). Four predictions,
+horizon 2028-07-01: E out-grows matched D on Go, crates.io, and Mathlib;
+and the AFP reversal *persists* — the referee bet. These are the program's
+first true forward predictions (everything above was blinded retrodiction);
+the git history is the timestamp **[H]**. A fifth remains on the books from
+the first field day: the `Topology.CWComplex.Classical` cluster's empty
+Distribution cell — a genuine import island — either fills with bridging
+modules or the cluster is re-founded, testable against any future Mathlib
+revision by rerunning `mathlib-study/01` **[H]**.
 
 ## 7. What is not claimed
 

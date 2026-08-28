@@ -892,6 +892,33 @@ post-hoc), not a maintenance regime. Docs updated same day: both
 briefs, the synthesis paper (v0.2, §5 graveyard items 10-11, §6
 rewritten), the piano essay's gardens-and-museums section.
 
+## Status update, 2026-08-27 (late): Phase 1 — true forward registration live
+
+`predictions/REGISTER.md` + frozen baselines + frozen scorer, committed
+and pushed. Four bets, horizon 2028-07-01 (last commit on or before):
+
+- P1 Go, P2 crates, P3 Mathlib (Order/Topology/Algebra): **G_ED > 0 at
+  >= 97.5th pct** — "E is the growth engine" as genuine prediction.
+- P4 AFP: **G_ED < 0 at <= 2.5th pct** — the referee bet (the reversal
+  is institutional, so it persists).
+
+Baseline cell memberships frozen at the 2026 checkpoints
+(`frozen-2026.json.gz`, deterministic seed 20260827881: mathlib 450
+kernels / 7,711 cells; go 355 / 5,384; crates 100 / 2,331; afp 511 /
+4,626). Scorer `02-score-2028.mjs` frozen now (estimator, null, seed
+20280701, MIN_CELLS=30 uninformative floor); plumbing smoke-tested
+against baselines (all-zero gains, as constructed). Since no horizon
+data exists, nothing in the freeze can leak — this is the program's
+first registration where peeking is physically impossible.
+
+Remaining spec phases (registered in chat, 2026-08-27): Phase 2 the
+referee study (RF1 within-AFP library labels; RF2 Isabelle
+distribution grows through E — the decisive one; RF3 a refereed
+archive outside formal proof). Phase 3 Study 11 phase one (observer
+kinematics on Div12..Div72; verify Simmons direction first; T3 stop
+rule). Phase 4 the Wolfram Institute package, after P1-P4 are on
+record. Music study stays parked until the formal arc closes.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
