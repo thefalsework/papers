@@ -1,0 +1,197 @@
+{
+ "perYear": [
+  {
+   "year": 2006,
+   "nodes": 834,
+   "edges": 958,
+   "comps": 834,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 524,
+   "ambiguousRate": 0.148
+  },
+  {
+   "year": 2008,
+   "nodes": 959,
+   "edges": 1142,
+   "comps": 959,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 634,
+   "ambiguousRate": 0.143
+  },
+  {
+   "year": 2010,
+   "nodes": 1094,
+   "edges": 1453,
+   "comps": 1094,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 754,
+   "ambiguousRate": 0.137
+  },
+  {
+   "year": 2012,
+   "nodes": 1273,
+   "edges": 1595,
+   "comps": 1273,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 827,
+   "ambiguousRate": 0.116
+  },
+  {
+   "year": 2014,
+   "nodes": 1486,
+   "edges": 1744,
+   "comps": 1486,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 913,
+   "ambiguousRate": 0.158
+  },
+  {
+   "year": 2016,
+   "nodes": 1568,
+   "edges": 1834,
+   "comps": 1568,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 893,
+   "ambiguousRate": 0.151
+  },
+  {
+   "year": 2018,
+   "nodes": 1645,
+   "edges": 2559,
+   "comps": 1645,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 1620,
+   "ambiguousRate": 0.031
+  },
+  {
+   "year": 2020,
+   "nodes": 1760,
+   "edges": 2812,
+   "comps": 1760,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 1740,
+   "ambiguousRate": 0.027
+  },
+  {
+   "year": 2022,
+   "nodes": 1790,
+   "edges": 2868,
+   "comps": 1790,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 1770,
+   "ambiguousRate": 0.027
+  },
+  {
+   "year": 2024,
+   "nodes": 1828,
+   "edges": 2950,
+   "comps": 1828,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 1807,
+   "ambiguousRate": 0.027
+  },
+  {
+   "year": 2026,
+   "nodes": 1843,
+   "edges": 3002,
+   "comps": 1843,
+   "nontrivialSccs": 0,
+   "maxScc": 1,
+   "evaluableKernels": 1822,
+   "ambiguousRate": 0.025
+  }
+ ],
+ "perBaseline": [
+  {
+   "baseline": 2006,
+   "horizon": 2010,
+   "nodes": 834,
+   "aliveAtHorizon": 642,
+   "survival": 0.77,
+   "strataTotal": 4,
+   "strataFeasible": 4
+  },
+  {
+   "baseline": 2008,
+   "horizon": 2012,
+   "nodes": 959,
+   "aliveAtHorizon": 587,
+   "survival": 0.612,
+   "strataTotal": 8,
+   "strataFeasible": 8
+  },
+  {
+   "baseline": 2010,
+   "horizon": 2014,
+   "nodes": 1094,
+   "aliveAtHorizon": 796,
+   "survival": 0.728,
+   "strataTotal": 12,
+   "strataFeasible": 11
+  },
+  {
+   "baseline": 2012,
+   "horizon": 2016,
+   "nodes": 1273,
+   "aliveAtHorizon": 1098,
+   "survival": 0.863,
+   "strataTotal": 15,
+   "strataFeasible": 15
+  },
+  {
+   "baseline": 2014,
+   "horizon": 2018,
+   "nodes": 1486,
+   "aliveAtHorizon": 1219,
+   "survival": 0.82,
+   "strataTotal": 19,
+   "strataFeasible": 19
+  },
+  {
+   "baseline": 2016,
+   "horizon": 2020,
+   "nodes": 1568,
+   "aliveAtHorizon": 1392,
+   "survival": 0.888,
+   "strataTotal": 22,
+   "strataFeasible": 21
+  },
+  {
+   "baseline": 2018,
+   "horizon": 2022,
+   "nodes": 1645,
+   "aliveAtHorizon": 1576,
+   "survival": 0.958,
+   "strataTotal": 28,
+   "strataFeasible": 26
+  },
+  {
+   "baseline": 2020,
+   "horizon": 2024,
+   "nodes": 1760,
+   "aliveAtHorizon": 1707,
+   "survival": 0.97,
+   "strataTotal": 31,
+   "strataFeasible": 29
+  },
+  {
+   "baseline": 2022,
+   "horizon": 2026,
+   "nodes": 1790,
+   "aliveAtHorizon": 1768,
+   "survival": 0.988,
+   "strataTotal": 35,
+   "strataFeasible": 32
+  }
+ ]
+}
