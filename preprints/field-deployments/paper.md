@@ -1,12 +1,14 @@
 # The Instrument in the Field: What an Algebraic Invariant Found, and Failed to Find, in Five Real Corpora
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.2, 2026-08-27. Synthesis of the field deployments of
-2026-08-19 through 2026-08-27; primary sources are the study folders cited
-per-claim (`mathlib-study/`, `afp-study/`, `ca-study/`, `software-study/`),
+**Version.** Draft v0.3, 2026-08-30. Synthesis of the field deployments of
+2026-08-19 through 2026-08-30; primary sources are the study folders cited
+per-claim (`mathlib-study/`, `afp-study/`, `ca-study/`, `software-study/`,
+`isabelle-study/`, `deflation-control/`),
 each of which carries its pre-registrations inline and its raw output
 committed. v0.2 adds §6's executed verdict: the software-pair protocol,
-registered unrun in v0.1, was run the next day.
+registered unrun in v0.1, was run the next day. v0.3 adds the distance-matched
+deflation control, which splits the E > R law by domain (§3.3, postscripts).
 **Status discipline.** Every claim carries one of the program's grades:
 **[K]** kernel-checked in Lean 4 against Mathlib4 (axiom audits: `propext`,
 `Classical.choice`, `Quot.sound` only; no `sorry`); **[C]** classical
@@ -53,9 +55,17 @@ Exploitation — the largest effect the instrument has ever measured, in the
 predicted-opposite cell. The same run produced the program's first registered
 directional hit: on the Go standard library, Exploitation-cell members
 out-grow their degree- and age-matched Distribution siblings, as predicted.
-The four-corpus growth record now reads: Exploitation grows on Mathlib, Go,
-and crates.io; AFP, not a regime axis, is the anomaly. Registered operator
-hypotheses stand at operator 1, instrument 11; the graveyard is reported at
+The four-corpus growth record after that run read: Exploitation grows on
+Mathlib, Go, and crates.io; AFP the anomaly. v0.3's registered
+**deflation control** then subjected the one statement that had held
+everywhere — Exploitation-cell members out-grow matched Refusal-cell
+members — to its hardest confound, exact graph distance to the kernel, and
+split it: in the software ecosystems the cell effect **survives loudly** at
+matched connectivity (Go and crates.io, 100th percentile), while in all
+three proof corpora it deflates or inverts — Mathlib's E > R was
+connectivity in costume, and AFP and the Isabelle distribution actually
+favor the *Refusal* side at matched distance. Registered directional
+predictions stand at 3 for 18; the graveyard is reported at
 the same prominence as the survivals, because the program regards the kill
 record as its methodological contribution.
 
@@ -166,14 +176,33 @@ almost everywhere the instrument has been pointed: full-resolution
 ordinariness is rare, and structure-visible-to-*some*-lawful-observer is
 common. This is the cross-substrate constant of the entire field campaign.
 
-### 3.3 One dynamical statement [computed]
+### 3.3 One dynamical statement [computed] — split by its own control (v0.3)
 
-Registered as a secondary on both historical corpora, held both times at the
-100th percentile of label-permutation nulls: **Exploitation-cell members
+Registered as a secondary on both historical corpora, it held everywhere it
+was measured — five corpora by 2026-08-30: **Exploitation-cell members
 outgrow Refusal-cell members** in future load-bearing degree, at matched
-degree (and on Mathlib, matched age). It is the only statement about *time*
-that has survived two corpora, and it is deliberately weak — it orders E
-against R, not against D (§5.3).
+degree (and where history permits, matched age). It had an obvious skeptic's
+compression — *connected periphery grows, disconnected periphery doesn't*;
+E-members are by construction downward-connected to the kernel and R-members
+are not, and degree matching cannot dispose of a global property — so the
+program ran the control (`deflation-control/`, blind occupancy pre-check
+committed first, interpretation table fixed in advance): the same estimator
+with **exact undirected graph distance to the kernel's down-set** added to
+the matching key. The law split by domain. On the software ecosystems it
+survives loudly — Go G_ER = +2.42 against a null half-width of ±0.51,
+crates.io +15.68 against ±3.58, both at the 100th percentile: at identical
+degree, age, *and* connectivity, the cell still predicts growth. On all
+three proof corpora it deflates or inverts: Mathlib collapses to null
+(percentile 79 on 26,937 matched cells) — its E > R *was* connectivity in
+costume — and AFP (percentile 0.3) and the Isabelle distribution
+(percentile 0.0) reverse: among equally-distant members, the *Refusal* side
+grows more. The unmatched E > R both archives showed was proximity masking
+an R advantage, which retro-dissolves the "AFP anomaly": proof archives were
+never anomalous, their regime was hidden under a connectivity confound.
+One further survival from the same run: Mathlib's E > D growth ordering is
+**not** a distance artifact (100th percentile at matched distance on 99,231
+cells), so the partition retains dynamical content on proof corpora — it
+just isn't the E-over-R content previously claimed.
 
 ## 4. What was scoped by failed transfer
 
@@ -399,9 +428,10 @@ revision by rerunning `mathlib-study/01` **[H]**.
   the one unauthored substrate it measures cone size. The commitment reading
   of §5.3 is [A].
 - **No dynamics.** The growth studies measure who becomes load-bearing, not
-  why; the garden/museum axis is dead (§6), and the "E is the generic growth
-  engine" reading that replaced it is a three-of-four-corpus regularity, not
-  a mechanism.
+  why; the garden/museum axis is dead (§6), the "E is the generic growth
+  engine" reading that replaced it is dead in proof corpora (§3.3, the
+  deflation control), and the surviving software-ecosystem cell effect is a
+  regularity, not a mechanism.
 - **No priority beyond a search.** The classification of nuclei on finite
   down-set algebras is classical (Simmons 1980; Bezhanishvili et al. 2020)
   **[C]**; the aperture invariant, latency, the closed form, and the field
@@ -427,8 +457,9 @@ the program's validation architecture; the grades are the author's warrant.
 ---
 
 *v0.1, 2026-08-26; v0.2, 2026-08-27 (adds the executed software-pair verdict
-to §6 and the abstract). This synthesis reports work committed between
-2026-08-19 and 2026-08-27. Corrections and postscripts appear below this
+to §6 and the abstract); v0.3, 2026-08-30 (adds the deflation control to
+§3.3 and the abstract). This synthesis reports work committed between
+2026-08-19 and 2026-08-30. Corrections and postscripts appear below this
 line, dated, never as silent edits.*
 
 ---
@@ -447,3 +478,22 @@ refereed/open, proofs/software, entry/file grain) is dead. E > R held
 again, on every corpus measured. The 2028 bets (`predictions/REGISTER.md`)
 are unchanged; P4's rationale note is postscripted there. Operator's
 registered-directional record: 1 for 13.
+
+**POSTSCRIPT (2026-08-30, later).** The E > R law itself — §3.3's "only
+statement about time to survive everything," by then five-for-five across
+corpora — was sent to its deflation control: the same estimator with exact
+undirected graph distance to the kernel's down-set added to the matching
+key (`deflation-control/`, blind occupancy pre-check committed before the
+registered run, interpretation table fixed in advance, operator prior on
+record leaning deflation). Verdict, per corpus: Mathlib **NULL** (its
+E > R was connectivity in costume); AFP and the Isabelle distribution
+**REVERSE** (at matched distance the *Refusal* side grows more — the
+archives' unmatched E > R was proximity masking an R advantage, so the
+"AFP anomaly" dissolves: it was the proof-archive regime showing through);
+Go and crates.io **HOLD** at the 100th percentile (G_ER +2.42 and +15.68
+against null half-widths ±0.51 and ±3.58) — in package ecosystems the
+cell predicts growth beyond degree, age, and connectivity. Descriptively,
+Mathlib's E > D ordering survives distance matching (100th percentile,
+99,231 cells): the partition keeps dynamical content on proof corpora,
+but not the content §3.3 claimed before this control. §3.3 rewritten in
+v0.3; briefs updated. Registered-directional record: 3 for 18.

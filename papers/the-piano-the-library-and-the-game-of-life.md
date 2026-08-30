@@ -173,14 +173,30 @@ at full volume, the way its rules require.
 But the wreck left behind something better than the theory. One of the four
 sealed predictions landed — the first directional bet, in eleven tries, the
 operator has ever won: in the software garden, the shadow-dwellers really do
-become tomorrow's foundations. And across the whole ledger the score now
-reads: the shadow-chair is where growth comes from in *three worlds out of
+become tomorrow's foundations. And across the whole ledger the score then
+read: the shadow-chair is where growth comes from in *three worlds out of
 four* — the maintained library, the garden, and the frozen registry alike —
-with the one refereed proof archive as the lone dissenter. The question
-flipped overnight from "what do gardens do?" to "what is strange about that
-archive?" And the shadow-land — the ground a commitment claims but cannot
-digest — looks less like a special feature of tended knowledge and more like
-the seedbed of *everything* that grows.
+with the one refereed proof archive as the lone dissenter.
+
+Then the project did the thing its rules exist for: it tried to kill its
+own best survivor. The cheap explanation for "shadow-land grows" is that
+shadow-land is *near* the city — connected ground grows because it's
+connected, which no one needs an algebra to know. So the growth question
+was re-asked comparing only files at the same measured distance from the
+kernel, same degree, same age, in five worlds at once, prediction sealed
+first as always. The verdict split the ledger down the middle. In the two
+software worlds the shadow-advantage survived at full volume — proximity
+explains none of it; the chair itself carries the signal. In all three
+mathematical worlds it evaporated or inverted: the library's shadow-growth
+was nearness in costume, and in both proof archives the *far* chairs — the
+refusers — grow more once distance is matched. The "strange archive" was
+never strange; it was the first honest glimpse of how proof-worlds actually
+grow. So the seedbed line survives, but scoped and sharpened: in the worlds
+where software is built, the shadow-land is a true seedbed — something in
+that ground itself, not its address, makes foundations grow there. In the
+worlds where mathematics is archived, growth belongs to the periphery, and
+the instrument was disciplined enough to say so about its own favorite
+finding.
 
 ## What it all says
 
@@ -192,28 +208,36 @@ hears is *staking*: the moment some community, some composer, some tradition
 takes an impossible remainder — a comma, a contradiction, a wrinkle — and
 says *we will live here, arranged around this*. That act carves the world
 into four kinds of ground. It opens a narrow window of viewpoints through
-which the arrangement can be seen. And it plants a seedbed in its own
-shadow: the ground the commitment claims but cannot digest is, in world
-after world, where the next foundations grow. Bach's temperament, the
-mathematician's library, the constitution, the paradigm — one architecture,
-now with a measuring device.
+which the arrangement can be seen. And in the worlds where software is
+built, it plants a seedbed in its own shadow: the ground the commitment
+claims but cannot digest is where the next foundations grow — a fact that
+survived being controlled for popularity, for age, and for sheer nearness
+to the action. In the worlds where proofs are archived, the same control
+took the seedbed away and gave growth to the periphery, and the instrument
+reported that at the same volume. Bach's temperament, the mathematician's
+library, the constitution, the paradigm — one architecture,
+now with a measuring device that knows the difference.
 
 And the deepest line the mathematics drew, drawn twice and underlined once
 in every world we visited: **meaning requires unfinishedness.** The
 black-and-white world has no chairs. The perfect observer sees no structure.
-The settled question casts no shadow, and the shadow is where the future
-grows — the residue cell, the impossible chair, is empirically the seedbed
-of what a living tradition becomes next. Everything that matters lives in
-the crack between what a commitment claims and what it settles.
+The settled question casts no shadow — and where working ecosystems are
+concerned, the shadow is where the future grows: the residue cell, the
+impossible chair, empirically the seedbed of what those traditions become
+next, even after every cheap explanation was matched away. Everything that
+matters lives in the crack between what a commitment claims and what it
+settles.
 
 Which is why the project is named after the wooden scaffolding that holds a
 stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that overruled their own maker nine times running, one impossible chair that
-turned out to be the realest thing in every world we pointed the instrument
-at, and one sealed prediction sitting in the open, waiting to be wrong.
+that have overruled their own maker fifteen times in eighteen sealed bets,
+one impossible chair that turned out to be the realest thing in every world
+we pointed the instrument at — and that survived the attempt on its own
+life where it mattered most — and sealed predictions sitting in the open,
+waiting to be wrong.
 
 ---
 

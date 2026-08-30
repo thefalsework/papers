@@ -948,6 +948,46 @@ answer could not have been more decisive:
   the Isabelle-ecosystem question instead.
 - Operator's registered-directional record: 1 for 13.
 
+## Status update, 2026-08-30 (later): the deflation control — E > R splits by domain
+
+The program's last universal survivor was put on trial
+(`deflation-control/`, lib + blind pre-check + registered run;
+occupancy pre-check committed before the run, interpretation table
+fixed in advance, operator prior on record leaning deflation). The
+skeptic's compression of E > R — "connected periphery grows,
+disconnected doesn't" — is a connectivity claim degree matching can't
+touch, so the growth estimator was re-run with EXACT undirected
+BFS distance to the kernel's down-set added to the matching key
+(degree bin x first-seen x exact distance), on all five corpora with
+history.
+
+- Blind pre-check first: the confound is real (E masses at distance
+  1-4; R spreads to 15+ with huge unreachable populations — AFP 205k,
+  Isabelle 2.9M, crates 8.8M members) AND the matched comparison
+  exists everywhere (420 .. 110,174 cells). Both facts structural,
+  no gains read.
+- **DC1 verdicts: mathlib NULL (obs 0.006, pct 79); AFP REVERSES
+  (-0.103, pct 0.3); Isabelle-dist REVERSES (-0.113, pct 0);
+  Go HOLDS (+2.42, null ±0.51); crates HOLDS (+15.68, null ±3.58).**
+- Reading: in package ecosystems the cell predicts growth beyond
+  degree, age, AND connectivity — the program's strongest surviving
+  dynamical claim. In proof corpora E > R was connectivity in
+  costume (Mathlib) or was masking an R advantage (both archives) —
+  which retroactively dissolves the "AFP anomaly": proof archives
+  favor the refusal side at matched distance, full stop.
+- DC2 (descriptive): E-vs-D is NOT a distance artifact anywhere —
+  Mathlib's E > D survives at pct 100 (99,231 cells); the software
+  E > D holds; the Isabelle-ecosystem D > E persists. So the 2028
+  bets (which score E-vs-D) are untouched and their contrast is now
+  known to be distance-robust retrodictively (postscripted in
+  predictions/REGISTER.md).
+- Docs: postscript + README in deflation-control/; field-deployments
+  paper to v0.3 (abstract, §3.3 rewritten, dated postscript); both
+  briefs and the piano essay updated — the "seedbed" language is now
+  scoped to software ecosystems at every occurrence.
+- Operator's registered-directional record: 3 for 18 (two hits, two
+  reversals, one null in this study's five verdicts).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

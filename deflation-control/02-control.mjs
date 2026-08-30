@@ -58,6 +58,54 @@
 //     this time would have been nicer.
 //
 // Writes deflation-control/results-control.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-08-30)
+//
+//   DC1:  mathlib NULL   afp REVERSES   isabelle REVERSES
+//         go HOLDS       crates HOLDS
+//
+// The universal law is dead; what killed it is more interesting than
+// the law was. E > R splits cleanly by domain:
+//
+//   PROOF CORPORA — DEFLATED OR INVERTED. Mathlib: at matched degree,
+//   age, and exact undirected distance, the E-over-R gap collapses to
+//   null (obs 0.0055, pct 79.3, 26,937 cells). Its E > R was
+//   connectivity in costume, exactly the skeptic's compression. AFP
+//   (obs -0.1034, pct 0.3) and the Isabelle distribution (obs -0.1130,
+//   pct 0.0) go further: among equally-distant members, REFUSAL-side
+//   members out-grow exploitation-side members. The unmatched E > R
+//   that both showed was proximity masking an underlying R advantage.
+//
+//   SOFTWARE ECOSYSTEMS — SURVIVES, LOUDLY. Go: obs 2.4180 against a
+//   null band of ±0.51, pct 100. crates.io: obs 15.68 against ±3.58,
+//   pct 100. At identical connectivity, degree, and age, sitting in
+//   the exploitation cell still predicts several extra dependents of
+//   growth. In software the cell carries information that graph
+//   distance does not.
+//
+//   DC2 (descriptive): Mathlib's E > D SURVIVES distance matching
+//   (obs 0.0550, pct 100.0 on 99,231 cells) — the consolidation-era
+//   E-vs-D gap is NOT a proximity artifact even though E-vs-R was.
+//   AFP and Isabelle's D-advantages persist at matched distance
+//   (pct 0.0 both); go and crates E > D holds (pct 100 both).
+//
+// SCOREBOARD: five registered per-corpus verdicts, two hits, two
+// reversals, one null. Registered-directional record: 3 for 18. The
+// operator's on-record prior (leaning deflation) was half right, which
+// is to say wrong with good posture.
+//
+// WHAT THE BRIEFS MAY NOW SAY: not "growth happens in the shadow-land"
+// as a law of formal corpora — that dies here. The defensible residue:
+// (1) in package ecosystems, the aperture cell predicts growth beyond
+// degree, age, AND connectivity — a genuine, hard-to-vary positive;
+// (2) in proof corpora the cells reduce to geometry for E-vs-R but NOT
+// for E-vs-D — the partition is not empty there, it just doesn't say
+// what we said it said; (3) the AFP "anomaly" was never an anomaly:
+// proof archives favor the refusal side at matched distance, and the
+// unmatched sign was hiding it. Three briefs and the synthesis paper
+// updated accordingly.
+// ============================================================
 
 import { writeFileSync } from "node:fs";
 import { BIN, CORPORA, firstSeenOf, makeGate, makeDistancer, CRATES_KERNELS } from "./lib.mjs";

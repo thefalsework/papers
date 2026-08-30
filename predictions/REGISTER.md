@@ -117,3 +117,17 @@ unchanged — the prediction that the AFP reversal persists is frozen and
 will be scored as registered — but a pass now confirms persistence of an
 ecosystem-level regularity, not a referee mechanism. Nothing else in this
 registration is affected.
+
+**POSTSCRIPT (2026-08-30, later): what the deflation control means for
+P1–P4.** The distance-matched control (`deflation-control/`) tested E-vs-R,
+not the E-vs-D contrast these bets score, so no prediction here changes.
+For the record of what a pass would mean: the control showed the E-vs-D
+ordering is *not* a connectivity artifact anywhere it was measured —
+Mathlib's E > D, Go's and crates' E > D, and both Isabelle-ecosystem
+corpora's D > E all persist at matched exact distance. So P1–P4 remain
+tests of a cell-level regularity that has already survived the distance
+confound retrodictively; 2028 tests whether it persists forward. The
+E-vs-R law, by contrast, deflated on all three proof corpora (null on
+Mathlib, reversed on AFP and the Isabelle distribution) and survived
+loudly on Go and crates — the registered-directional record after that
+five-verdict study stands at 3 for 18.
