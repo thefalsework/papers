@@ -60,6 +60,45 @@
 // favor either side.
 //
 // Writes isabelle-study/results-growth.json.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-08-30, after the single registered run).
+//
+//   kernels=9,675  cellsED=103,641  cellsER=99,588
+//   G_ED = -0.0208  null[2.5,97.5] = [-0.0025, +0.0027]  percentile 0
+//   G_ER = +0.2616  percentile 100
+//
+// RF2 FAILS BY REVERSAL. The Isabelle distribution grows through
+// DISTRIBUTION, like AFP — at matched degree and age, ~8x outside the
+// null band on the low side. Per the pre-registered interpretation
+// table: **the referee hypothesis is dead.** Same community, same
+// logic, same decades, OPPOSITE institutions (continuously-refactored
+// garden vs refereed frozen archive) — and the SAME growth regime. The
+// acceptance gate was never the mechanism.
+//
+// Secondary holds: E > R (pct 100), as on every corpus measured.
+//
+// What the six-corpus record now shows (post-hoc, flagged, untested):
+// E > D on Mathlib, Go, crates.io; D > E on AFP and the Isabelle
+// distribution. The split is not maintained/frozen (dead on the
+// software pair), not refereed/open (dead here), not proof/software
+// (both sides of it have proof corpora), and not grain (AFP is entry-
+// grain, the distribution theory-grain — both reverse). What the two
+// reversing corpora uniquely share is the ISABELLE ECOSYSTEM — its
+// community and its dependency conventions. "What is strange about
+// AFP?" has widened to "what is strange about Isabelle world?" and lost
+// its best candidate answer. No replacement hypothesis is registered
+// here; effect-size note for any future one: the reversal is tiny in
+// absolute terms (-0.02 dependents/member over 4y vs AFP's -0.33)
+// though statistically clean.
+//
+// Consequence for predictions/REGISTER.md P4: the BET stands unchanged
+// (registered, frozen), but its stated rationale ("the mechanism is
+// institutional") is now dead. If P4 holds in 2028 it confirms the
+// reversal's persistence, not the referee mechanism.
+//
+// Operator's registered-directional record: 1 for 13.
+// ---------------------------------------------------------------------
 
 import { readFileSync, writeFileSync } from "node:fs";
 

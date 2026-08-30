@@ -1,8 +1,18 @@
-# The referee study: is the AFP anomaly institutional?
+# The referee study: is the AFP anomaly institutional? (Answer: no.)
 
-**Date.** 2026-08-30. **Status.** [computed] for anything below a run
-postscript; [H] for RF3. Every scored test pre-registered in the script
-headers before first run; blind census committed first.
+**Date.** 2026-08-30. **Status.** [computed]; RF3 [H], registered unrun.
+Every scored test pre-registered in the script headers before first run;
+blind census committed first.
+
+**Verdict (single registered run, postscript in `03-growth.mjs`): RF2
+FAILS BY REVERSAL.** The Isabelle distribution grows through Distribution
+(G_ED = −0.021, percentile 0), like AFP — same community, opposite
+institution, same regime. **The referee hypothesis is dead.** The
+six-corpus split is now Mathlib/Go/crates (E grows) vs AFP/Isabelle
+distribution (D grows), and every candidate axis so far — maintained vs
+frozen, refereed vs open, proofs vs software, entry-grain vs file-grain —
+is dead; the reversing pair uniquely shares the Isabelle ecosystem. E > R
+held here too (percentile 100), on every corpus measured so far.
 
 ## The question
 

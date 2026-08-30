@@ -430,3 +430,20 @@ the program's validation architecture; the grades are the author's warrant.
 to §6 and the abstract). This synthesis reports work committed between
 2026-08-19 and 2026-08-27. Corrections and postscripts appear below this
 line, dated, never as silent edits.*
+
+---
+
+**POSTSCRIPT (2026-08-30).** §6's closing suspect — AFP's
+refereed-acceptance gate as the explanation for its growth reversal — was
+promoted to a registered hypothesis and killed the same day
+(`isabelle-study/`, three scripts, blind census first). The controlled
+contrast: the Isabelle *distribution*, maintained by the same community
+with no per-entry freeze and no referee, grows through **Distribution**
+exactly like AFP (G_ED = −0.021, percentile 0 of the label-permutation
+null; RF2 failed by reversal). The six-corpus growth record now reads
+E > D on Mathlib, Go, and crates.io; D > E on both Isabelle-ecosystem
+corpora — and every simple axis offered so far (maintained/frozen,
+refereed/open, proofs/software, entry/file grain) is dead. E > R held
+again, on every corpus measured. The 2028 bets (`predictions/REGISTER.md`)
+are unchanged; P4's rationale note is postscripted there. Operator's
+registered-directional record: 1 for 13.

@@ -1,0 +1,21 @@
+{
+ "kernels": 9675,
+ "cellsED": 103641,
+ "cellsER": 99588,
+ "G_ED": {
+  "obs": -0.02081094678324886,
+  "lo": -0.0025415329941825744,
+  "hi": 0.0026900469827864626,
+  "pct": 0
+ },
+ "G_ER": {
+  "obs": 0.2616288511794457,
+  "lo": -0.012945148382094613,
+  "hi": 0.013587124013605375,
+  "pct": 100
+ },
+ "verdicts": {
+  "RF2 (distribution grows through E)": "FAILS BY REVERSAL",
+  "secondary E>R (descriptive)": "holds"
+ }
+}

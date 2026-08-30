@@ -919,6 +919,35 @@ kinematics on Div12..Div72; verify Simmons direction first; T3 stop
 rule). Phase 4 the Wolfram Institute package, after P1-P4 are on
 record. Music study stays parked until the formal arc closes.
 
+## Status update, 2026-08-30: RF2 executed — the referee hypothesis dies
+
+Phase 2 of the post-synthesis spec ran end to end (`isabelle-study/`,
+scripts 01-03; registration committed before the run; blind census
+first). The controlled contrast could not have been cleaner and the
+answer could not have been more decisive:
+
+- Corpus: the Isabelle DISTRIBUTION's theory-import graphs, eleven
+  biennial checkpoints 2006-2026 (834 -> 1,843 theories, perfectly
+  acyclic at every checkpoint). One plumbing repair logged: checkpoint
+  resolution restricted to the first-parent line (the hg-converted
+  history handed 2010 a grafted jEdit-only side commit).
+- **RF2 FAILS BY REVERSAL**: G_ED = -0.0208, null [-0.0025, +0.0027],
+  percentile 0 (9,675 kernels, 103,641 matched cells). The
+  distribution grows through D, like AFP — same community, opposite
+  institution, same regime. **The referee hypothesis is dead.**
+- Secondary E > R holds (pct 100) — now on every corpus measured.
+- Six-corpus record: E > D on Mathlib/Go/crates; D > E on
+  AFP/Isabelle-dist. Dead axes: maintained/frozen, refereed/open,
+  proofs/software, entry/file grain. The reversing pair uniquely
+  shares the Isabelle ecosystem. No replacement hypothesis registered.
+- P4's rationale postscripted in predictions/REGISTER.md (bet stands).
+- RF1 (AFP library-label sidebar) still deferred; RF3 (RFC series)
+  registered unrun in isabelle-study/README.md — note its prediction
+  (D grows in refereed archives) was written before RF2 killed the
+  referee mechanism; if executed, reframe first or expect it to score
+  the Isabelle-ecosystem question instead.
+- Operator's registered-directional record: 1 for 13.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

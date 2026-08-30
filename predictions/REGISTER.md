@@ -107,3 +107,13 @@ cells; Go 355 / 5,384; crates 100 / 2,331; AFP 511 / 4,626. The scorer's
 plumbing was smoke-tested against the baselines themselves (all gains zero
 by construction, G_ED = 0.0000 on all corpora, every frozen cell matched) —
 a parsing check, carrying no information about 2028.
+
+**POSTSCRIPT (2026-08-30): P4's rationale is dead; the bet stands.** The
+referee hypothesis behind P4's "because the mechanism is institutional"
+was killed by its registered within-community test (`isabelle-study/03`,
+RF2 failed by reversal: the continuously-maintained, ungated Isabelle
+distribution grows through D exactly like refereed AFP). P4 itself is
+unchanged — the prediction that the AFP reversal persists is frozen and
+will be scored as registered — but a pass now confirms persistence of an
+ecosystem-level regularity, not a referee mechanism. Nothing else in this
+registration is affected.
