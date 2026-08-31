@@ -96,7 +96,10 @@ declared dependencies, a causal DAG — yields a finite distributive lattice of
 down-sets, principal down-sets as candidate kernels, and a complete finite
 census of observers. The instrument needs two things from a corpus: a
 dependency order nobody can argue with, and ground-truth labels made by people
-who have never heard of this program. The three corpora below supply both.
+who have never heard of this program. The corpora below supply both — three
+described in full (the original deployments), with the software pair (§6), the
+Isabelle distribution, and the Debian archive documented in their study
+folders and the postscripts.
 
 ## 2. The corpora and the discipline
 
@@ -123,7 +126,7 @@ full 2^n observer census per kernel in the exhaustive tier. The first
 substrate where nothing was authored, curated, or chosen by anyone. Four
 protocol versions; the version history is itself a result (§5).
 
-**The discipline, uniform across all three.** Every test pre-registered in
+**The discipline, uniform across every corpus.** Every test pre-registered in
 the script header before first run, with failure semantics fixed in advance;
 blind pre-checks that touch only occupancy counts and instrument resolution,
 never the quantity predicted; seeded PRNGs committed; raw per-kernel output
