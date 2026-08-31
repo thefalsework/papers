@@ -60,6 +60,39 @@
 //                   Go itself becomes the anomaly to explain.
 //
 // Writes debian-study/results-bet.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-08-31)
+//
+//   DB1 (primary): **HOLDS.** Delta_ER = +0.0979, null band
+//   [-0.0149, +0.0136], percentile 100.0, on 264,330 matched pairs,
+//   maxSMD 0.0097 (gate 0.10 passed with a factor of ten to spare).
+//   2,400 kernels across eight baselines, 2007-2021, horizons +4yr.
+//
+//   Descriptive secondary: Delta_ED = -0.1554, percentile 0.0 on
+//   962,323 pairs — Debian's Distribution cell out-grows its
+//   Exploitation cell at matched everything.
+//
+// WHAT THE HIT MEANS: the sealed out-of-sample bet landed, on the
+// first try, on a corpus untouched by the program until yesterday.
+// The gatekeeper sentence now exists in its two-ecosystem form:
+// membership in the Exploitation cell predicts future dependency
+// growth beyond degree, out-degree, age, exact graph distance,
+// PageRank, and k-core, pre-registered, on Go and Debian — with
+// crates.io's deflation reported alongside as the method catching
+// its own artifact. Registered-directional record: 5 for 21.
+//
+// WHAT THE SECONDARY ADDS (new, unpredicted, honestly labeled): the
+// E-vs-R effect and the E-vs-D ordering are INDEPENDENT axes. Debian
+// grows its boundary-straddlers hardest (D > E > R at matched
+// battery), like the Isabelle-ecosystem archives and unlike Go —
+// yet its E > R cell effect is real and battery-proof. So "the
+// shadow out-grows the outside" (E > R) is the claim with
+// cross-ecosystem legs, while "the shadow is the single biggest
+// growth engine" (E > D) remains corpus-contingent. The 2028
+// forward bets score E-vs-D and are untouched; P1-P3's rationale
+// should be read with this scoping in mind at horizon.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { buildSnap, makeGate, makeDistancer, firstSeenOf } from "../deflation-control/lib.mjs";

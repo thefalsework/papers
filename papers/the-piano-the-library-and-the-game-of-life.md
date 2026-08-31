@@ -197,14 +197,21 @@ matched twins. The Rust registry's shadow-advantage dissolved under it
 (fine-grained popularity in costume, caught at home before any critic
 could), and Go's did not: even against twins matched on everything at
 once, its shadow-dwellers still become tomorrow's foundations. So the
-seedbed line survives, but scoped to its last stronghold and sharpened to
-its hardest form: in one relentlessly tested world, something in the
-shadow-ground itself — not its address, not its traffic, not its prestige
-— makes foundations grow there. In the worlds where mathematics is
-archived, growth belongs to the periphery. And a sealed bet on untouched
-ground (Debian) now decides whether the stronghold is an outpost of a law
-or a fact about one world — the instrument was disciplined enough to say
-all of this about its own favorite finding.
+seedbed line survived, scoped to its last stronghold — and then the
+project did the only thing left: it named untouched ground (Debian,
+twenty years of the most institutional software collection there is),
+sealed the prediction, and ran. The bet landed on the first try. Against
+twins matched on everything at once — address, traffic, prestige, age,
+embeddedness — Debian's shadow-dwellers out-grow the refusers across a
+quarter-million matched pairs, at the top of the scale. The seedbed law
+now stands on two unrelated worlds, with the world where it dissolved
+reported at the same volume, and one more gift from the fresh ground:
+in Debian the gate-straddlers grow hardest of all, so "the shadow beats
+the outside" and "the shadow is the biggest engine" are provably
+different questions with different answers. In the worlds where
+mathematics is archived, growth still belongs to the periphery — the
+instrument remains disciplined enough to say all of this about its own
+favorite finding.
 
 ## What it all says
 
@@ -233,22 +240,23 @@ decide how far the seedbed law reaches.
 And the deepest line the mathematics drew, drawn twice and underlined once
 in every world we visited: **meaning requires unfinishedness.** The
 black-and-white world has no chairs. The perfect observer sees no structure.
-The settled question casts no shadow — and in the one working ecosystem
-that has endured every test, the shadow is where the future grows: the
-residue cell, the impossible chair, empirically the seedbed of what that
-tradition becomes next, after every cheap explanation was matched away.
-Everything that matters lives in the crack between what a commitment
-claims and what it settles.
+The settled question casts no shadow — and in the two working ecosystems
+that have endured every test, one of them bet on sealed and untouched,
+the shadow is where the future grows: the residue cell, the impossible
+chair, empirically the seedbed of what those traditions become next,
+after every cheap explanation was matched away. Everything that matters
+lives in the crack between what a commitment claims and what it settles.
 
 Which is why the project is named after the wooden scaffolding that holds a
 stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that have overruled their own maker sixteen times in twenty sealed bets,
+that have overruled their own maker sixteen times in twenty-one sealed
+bets — and handed him the win that mattered most on the twenty-first —
 one impossible chair that turned out to be the realest thing in every world
-we pointed the instrument at — and that survived the attempt on its own
-life where it mattered most — and sealed predictions sitting in the open,
+we pointed the instrument at, one fresh world that behaved exactly as the
+sealed envelope said it would, and more predictions sitting in the open,
 waiting to be wrong.
 
 ---

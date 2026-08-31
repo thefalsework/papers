@@ -520,3 +520,26 @@ effect has survived every control the program can construct — and the
 registered Debian out-of-sample bet is named the tiebreaker for
 whether the general claim exists. Registered-directional record:
 4 for 20.
+
+**POSTSCRIPT (2026-08-31, later): the tiebreaker lands.** The Debian
+archive — ten stable releases 2007–2025, main/binary-amd64, a corpus
+untouched by the program until the same day, with the strongest reuse
+semantics available (a dependency is installed, executed code) — was
+extracted with all parsing choices fixed first, censused blind
+(near-acyclic; 2,400 evaluable kernels; 264k+ matchable pairs at
+near-perfect balance), and bet on under the full gauntlet design
+(`debian-study/`, registration committed before the run). **DB1
+HOLDS**: Δ_ER = +0.098, null ±0.015, percentile 100, 264,330 pairs,
+maxSMD 0.0097. The sealed out-of-sample bet landed on the first try,
+and the two-ecosystem sentence now exists: *Exploitation-cell
+membership predicts future dependency growth beyond degree,
+out-degree, age, exact graph distance, PageRank, and k-core,
+pre-registered, on Go and Debian* — with crates.io's deflation
+standing alongside as the method catching its own artifact. The
+descriptive secondary is a new fact, unpredicted and reported at
+equal volume: Debian's E-vs-D ordering *reverses* (Δ_ED = −0.155,
+percentile 0; D > E > R at matched battery), like the
+Isabelle-ecosystem archives and unlike Go — so E-vs-R (battery-proof,
+two ecosystems) and E-vs-D (corpus-contingent) are independent axes,
+which also scopes how P1–P3's E-vs-D forward bets should be read at
+their 2028 horizon. Registered-directional record: 5 for 21.

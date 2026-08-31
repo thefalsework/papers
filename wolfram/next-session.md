@@ -1030,6 +1030,41 @@ committed first; caliper 0.5 fixed from blind output).
   for Order; if it dies, the growth chapter closes scoped to Go and
   the program leads with E-on-territory + latency + the theorems.
 
+## Status update, 2026-08-31 (later): THE TIEBREAKER LANDS — Debian holds under the full gauntlet
+
+Same day, the whole plan executed (`debian-study/`, three scripts):
+
+- Extraction: ten stable releases 2007-2025 (etch..trixie),
+  main/binary-amd64, all parsing choices fixed in the header before
+  any analysis (Depends+Pre-Depends, first alternative, unresolved
+  virtuals dropped and logged). 17.7k -> 68.8k packages, monotone.
+- Blind census: near-acyclic at every checkpoint (largest SCC <= 44),
+  survival 70-81% at +2, kernel evaluability 2,400/2,773, pair
+  feasibility enormous (268k ER pairs at caliper 0.5, maxSMD 0.0093).
+  Caliper 0.5 fixed from this. Registration committed before the run.
+- **DB1 HOLDS: Delta_ER = +0.0979, null [-0.0149, +0.0136], pct
+  100.0, 264,330 pairs, maxSMD 0.0097.** The sealed out-of-sample bet
+  landed on the first try, on a corpus untouched until the same day.
+- Descriptive secondary, unpredicted, reported at equal volume:
+  Delta_ED = -0.1554, pct 0 — Debian's D cell out-grows its E cell at
+  matched everything (D > E > R), like the Isabelle archives, unlike
+  Go. So E-vs-R (battery-proof, two ecosystems) and E-vs-D
+  (corpus-contingent) are INDEPENDENT axes. Note for 2028: P1-P3
+  score E-vs-D, and that ordering is now known to be corpus-local.
+- THE GATEKEEPER SENTENCE EXISTS: "membership in an algebraically
+  defined cell predicts future dependency growth beyond degree,
+  out-degree, age, exact graph distance, PageRank, and k-core,
+  pre-registered, on Go and Debian — one of them measured after the
+  hypothesis was fixed — with crates.io's deflation reported
+  alongside as the method catching its own artifact."
+- Record: 5 for 21. Docs: postscripts in 03 + field-deployments
+  paper; README; both briefs + piano essay updated.
+- NEXT: write the two papers — (1) the empirical growth paper shaped
+  for MSR/EMSE referees (Go + Debian primary, crates deflation as the
+  methods showcase, proof-corpus reversals as scope); (2) the lattice
+  paper (aperture closed form + factorization lemma) for Order or
+  Algebra Universalis. Then outreach; stop collecting corpora.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
