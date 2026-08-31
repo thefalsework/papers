@@ -988,6 +988,48 @@ history.
 - Operator's registered-directional record: 3 for 18 (two hits, two
   reversals, one null in this study's five verdicts).
 
+## Status update, 2026-08-31: the baseline gauntlet — crates deflates, Go survives everything
+
+Strategy session first: the gatekeeper question. The compelling
+sentence, if it exists, is "an algebraically defined cell predicts
+future dependency growth beyond every standard graph predictor,
+pre-registered, including one corpus measured after the hypothesis was
+fixed." Two studies stand between here and that sentence: the baseline
+gauntlet (standard-predictor battery) and the sealed Debian rank bet.
+The gauntlet ran today (`baseline-gauntlet/`, blind balance pre-check
+committed first; caliper 0.5 fixed from blind output).
+
+- Design: within kernel x EXACT distance, greedy nearest-neighbor
+  E-R (and E-D) pairs on z-scored [log in-deg, log out-deg, age,
+  log PageRank, k-core], caliper 0.5, balance gate maxSMD <= 0.10,
+  within-pair sign-flip nulls. Declared exclusions: betweenness
+  (infeasible at crates scale), clustering coefficient.
+- Blind pre-check pass 1 showed distance was the imbalanced dimension
+  in one z-space; revised (still blind) to exact-distance groups —
+  balance then passed everywhere at 0.5.
+- **BG1 (Go) HOLDS**: Delta_ER +0.2198, null ±0.088, pct 100,
+  182 pairs. Descriptive E-D also holds: +0.1529, pct 100, 11,478
+  pairs. Go's cell effect has now survived degree, age, exact
+  distance, out-degree, PageRank, and k-core simultaneously.
+- **BG2 (crates) NULL**: Delta_ER -0.0348, pct 44, 61,444 pairs
+  (E-D nulls too: +0.017, pct 60). Diagnosis: the deflation control's
+  +15.7 lived inside the coarse degree bins (top bin unbounded);
+  matched on fine-grained popularity the crates cell carries nothing.
+  Preferential attachment hiding in the bin widths — found in-house
+  before any referee.
+- Per the pre-registered interpretation table: PARTIAL — claim scopes
+  to Go; the Debian registration must name itself the tiebreaker.
+- Docs: postscripts in 02 + field-deployments paper; README; both
+  briefs and the piano essay tempered (seedbed now "one relentlessly
+  tested world" + the Debian bet).
+- Record: 4 for 20 (BG1 hit, BG2 miss).
+- NEXT, in order: (1) Debian extractor + blind census; (2) sealed
+  Debian bet — registered rank/direction: Delta_ER > 0 under the FULL
+  gauntlet design (not the coarse-bin one); (3) if it lands, write the
+  empirical paper for an MSR/EMSE-shaped venue and the lattice paper
+  for Order; if it dies, the growth chapter closes scoped to Go and
+  the program leads with E-on-territory + latency + the theorems.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

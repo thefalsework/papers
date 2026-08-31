@@ -70,6 +70,47 @@
 //     latency, and the E-vs-D orderings.
 //
 // Writes baseline-gauntlet/results-gauntlet.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-08-31)
+//
+//   BG1 (Go):     HOLDS — Delta_ER = +0.2198, null [-0.088, +0.088],
+//                 pct 100, 182 pairs, maxSMD 0.068.
+//   BG2 (crates): NULL  — Delta_ER = -0.0348, null [-0.309, +0.319],
+//                 pct 44.4, 61,444 pairs, maxSMD 0.026.
+//   Descriptive:  Go Delta_ED +0.1529, pct 100 (11,478 pairs) — HOLDS.
+//                 crates Delta_ED +0.0171, pct 60.4 (146,956 pairs) —
+//                 NULL.
+//
+// The registered interpretation table's middle row fires: PARTIAL. The
+// claim scopes to Go, and the Debian registration must name itself the
+// tiebreaker.
+//
+// WHAT HAPPENED TO CRATES: its distance-matched effect (deflation
+// control: G_ER +15.7, G_ED +4.2) was measured within DEGREE BINS
+// (0/1-2/3-7/8+), whose top bin is unbounded. The pair design matches
+// popularity at fine grain — log-degree, PageRank, k-core as continuous
+// features under a 0.5 caliper — and at that grain the crates cell
+// effect vanishes entirely (and its E-vs-D ordering with it). Reading:
+// on crates, E-membership was a proxy for fine-grained popularity
+// structure inside the coarse bins. Preferential attachment, the
+// oldest deflator in the book, was hiding in the bin widths. This is
+// exactly the artifact a competent referee would have hunted first;
+// the program found it first.
+//
+// WHAT SURVIVED ON GO, AND HOW MUCH: at matched exact distance AND
+// matched log-in-degree, log-out-degree, age, PageRank, and k-core,
+// Go E-members still gain ~0.22 more dependents than their R twins
+// (two-year horizon) and ~0.15 more than their D twins — both at the
+// 100th percentile. Every check the program knows how to throw at a
+// two-year-old finding has now been thrown at Go's cell effect;
+// it has passed all of them. But 182 pairs on one corpus is a thin
+// foundation for the gatekeeper sentence, exactly as the registration
+// anticipated: Debian is now the whole ballgame.
+//
+// SCOREBOARD: BG1 hit, BG2 miss. Registered-directional record:
+// 4 for 20.
+// ============================================================
 
 import { writeFileSync } from "node:fs";
 import { CORPORA, firstSeenOf, makeGate, makeDistancer, CRATES_KERNELS } from "../deflation-control/lib.mjs";

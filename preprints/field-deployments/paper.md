@@ -497,3 +497,26 @@ Mathlib's E > D ordering survives distance matching (100th percentile,
 99,231 cells): the partition keeps dynamical content on proof corpora,
 but not the content §3.3 claimed before this control. §3.3 rewritten in
 v0.3; briefs updated. Registered-directional record: 3 for 18.
+
+**POSTSCRIPT (2026-08-31): the baseline gauntlet — crates deflates,
+Go survives everything.** The surviving software claim was sent
+against the reviewer's arsenal (`baseline-gauntlet/`, blind balance
+pre-check committed first): E-members matched to R-members within
+kernel and exact distance, then nearest-neighbor on the full standard
+battery — log in-degree, log out-degree, age, log PageRank, k-core —
+under a caliper fixed blind, a pre-registered balance gate
+(max SMD ≤ 0.10, passed everywhere scored), and within-pair sign-flip
+nulls. Verdict: **BG1 (Go) HOLDS** — Δ_ER = +0.22 dependents, null
+±0.088, percentile 100, 182 pairs; Go's E > D also holds (+0.15,
+percentile 100, 11,478 pairs). **BG2 (crates) NULL** — Δ_ER = −0.035,
+percentile 44 on 61,444 pairs; its E-vs-D nulls too. The diagnosis is
+instructive: crates' enormous distance-matched effect lived inside the
+coarse degree bins of the stratified design — matched on popularity at
+fine grain, the cell carries nothing there. Preferential attachment
+was hiding in the bin widths, found by the program before a referee
+could find it. Per the gauntlet's pre-registered interpretation table,
+the software growth claim now scopes to Go — the one corpus whose cell
+effect has survived every control the program can construct — and the
+registered Debian out-of-sample bet is named the tiebreaker for
+whether the general claim exists. Registered-directional record:
+4 for 20.
