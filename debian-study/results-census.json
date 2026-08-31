@@ -1,0 +1,165 @@
+{
+ "structure": [
+  {
+   "year": 2007,
+   "nodes": 17712,
+   "comps": 17602,
+   "nontrivialSccs": 57,
+   "largestScc": 38,
+   "survivalAtHorizon": 0.6983
+  },
+  {
+   "year": 2009,
+   "nodes": 21990,
+   "comps": 21867,
+   "nontrivialSccs": 63,
+   "largestScc": 44,
+   "survivalAtHorizon": 0.717
+  },
+  {
+   "year": 2011,
+   "nodes": 28059,
+   "comps": 27974,
+   "nontrivialSccs": 39,
+   "largestScc": 36,
+   "survivalAtHorizon": 0.7232
+  },
+  {
+   "year": 2013,
+   "nodes": 35911,
+   "comps": 35866,
+   "nontrivialSccs": 29,
+   "largestScc": 9,
+   "survivalAtHorizon": 0.7389
+  },
+  {
+   "year": 2015,
+   "nodes": 42444,
+   "comps": 42386,
+   "nontrivialSccs": 32,
+   "largestScc": 11,
+   "survivalAtHorizon": 0.7535
+  },
+  {
+   "year": 2017,
+   "nodes": 50770,
+   "comps": 50721,
+   "nontrivialSccs": 33,
+   "largestScc": 11,
+   "survivalAtHorizon": 0.7481
+  },
+  {
+   "year": 2019,
+   "nodes": 56910,
+   "comps": 56842,
+   "nontrivialSccs": 47,
+   "largestScc": 13,
+   "survivalAtHorizon": 0.7898
+  },
+  {
+   "year": 2021,
+   "nodes": 58653,
+   "comps": 58588,
+   "nontrivialSccs": 44,
+   "largestScc": 6,
+   "survivalAtHorizon": 0.8076
+  },
+  {
+   "year": 2023,
+   "nodes": 63436,
+   "comps": 63353,
+   "nontrivialSccs": 55,
+   "largestScc": 7,
+   "survivalAtHorizon": null
+  },
+  {
+   "year": 2025,
+   "nodes": 68750,
+   "comps": 68638,
+   "nontrivialSccs": 68,
+   "largestScc": 7,
+   "survivalAtHorizon": null
+  }
+ ],
+ "feasibility": {
+  "kernelsEval": 2400,
+  "kernelsTried": 2773,
+  "candE": 24801013,
+  "candR": 14458397,
+  "candD": 31602226,
+  "calipers": {
+   "1": {
+    "ER": {
+     "pairs": 523507,
+     "smd": {
+      "logIn": 0.0235,
+      "logOut": 0.2558,
+      "age": 0.0316,
+      "logPR": 0.0025,
+      "core": 0.0534
+     },
+     "maxSmd": 0.2558
+    },
+    "ED": {
+     "pairs": 1370601,
+     "smd": {
+      "logIn": 0.0107,
+      "logOut": 0.1617,
+      "age": 0.0003,
+      "logPR": 0.0138,
+      "core": 0.0824
+     },
+     "maxSmd": 0.1617
+    }
+   },
+   "0.25": {
+    "ER": {
+     "pairs": 220726,
+     "smd": {
+      "logIn": 0.0001,
+      "logOut": 0.0001,
+      "age": 0,
+      "logPR": 0.0042,
+      "core": 0.0019
+     },
+     "maxSmd": 0.0042
+    },
+    "ED": {
+     "pairs": 783443,
+     "smd": {
+      "logIn": 0,
+      "logOut": 0.0004,
+      "age": 0,
+      "logPR": 0.001,
+      "core": 0.0006
+     },
+     "maxSmd": 0.001
+    }
+   },
+   "0.5": {
+    "ER": {
+     "pairs": 268559,
+     "smd": {
+      "logIn": 0.0055,
+      "logOut": 0.0011,
+      "age": 0.0093,
+      "logPR": 0.0065,
+      "core": 0.0092
+     },
+     "maxSmd": 0.0093
+    },
+    "ED": {
+     "pairs": 971535,
+     "smd": {
+      "logIn": 0.0007,
+      "logOut": 0.0233,
+      "age": 0.0022,
+      "logPR": 0.0025,
+      "core": 0.0153
+     },
+     "maxSmd": 0.0233
+    }
+   }
+  }
+ }
+}
