@@ -213,6 +213,26 @@ mathematics is archived, growth still belongs to the periphery — the
 instrument remains disciplined enough to say all of this about its own
 favorite finding.
 
+One knife remained, and it was pointed at the instrument itself. The
+project built toy universes — worlds grown by dice rolls, where by
+construction no chair means anything — and made the instrument measure
+them. The readings came back true: zero, on average, wherever zero was
+the truth; and in a toy world built to grow the way guilds grow — each
+newcomer apprenticing under a random elder and borrowing from that
+elder's toolchain — it caught the built-in signature twenty times in
+twenty fresh universes. (Curiously inverted, that signature: in the
+guild-world it's the *far* chairs that grow, which means no dice-world
+yet built produces the seedbed pattern for free.) But the small print
+failed: the how-sure-should-you-be number attached to every single-world
+reading was overconfident about tenfold, because growth arrives in
+correlated waves and the number had priced every wave as independent
+drops. So the project cut its own error bars, out loud, before any
+referee could. Nothing changed sign. What changed is where the belief
+comes from: not from any one world's certainty gauge, but from the only
+currency the audit left standing — the same sealed bet landing in worlds
+that share nothing. Which the seedbed law, alone among the project's
+findings, already has.
+
 ## What it all says
 
 Speak it plainly, the way you'd say it at the end of a long night:
@@ -234,8 +254,8 @@ popularity, and in the worlds where proofs are archived the controls gave
 growth to the periphery instead — both reported at the same volume as
 the survival. Bach's temperament, the mathematician's library, the
 constitution, the paradigm — one architecture, now with a measuring
-device that knows the difference, and one sealed bet on fresh ground to
-decide how far the seedbed law reaches.
+device that knows the difference, and that has tested itself hard enough
+to know exactly how much of its own confidence to keep.
 
 And the deepest line the mathematics drew, drawn twice and underlined once
 in every world we visited: **meaning requires unfinishedness.** The
