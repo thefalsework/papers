@@ -1197,6 +1197,40 @@ cap 200 — the confound the accretion theory derived.
   the battery-v2 result with the Go reclassification as a centerpiece
   of method credibility.
 
+## Status update, 2026-09-01 (night): Phase D — the conjecture dies, the search comes home empty, and both negatives are the finding
+
+Two registered/committed-first runs closed the day.
+
+- SIGN MEASUREMENT (03-sign.mjs, 10 fresh PC(0) universes,
+  registered S1-S3): S1 CONFIRMS 10/10 — the flux law's core is true
+  (corr(upset, gain) ≈ 0.23 in every universe). S2 INDETERMINATE —
+  the up-set gap inside matched E-R pairs is ~10x too small to carry
+  the effect. S3 RESIDUAL — with log1p(upset_200) ADDED to the
+  battery, Delta_ER = -0.123 at t = -5.6. THEORY.md's sign
+  conjecture is DEAD as the explanation: PC(0)'s R > E > D is not
+  primarily up-set flux at cap 200. Live suspects: cap saturation
+  (raise/exact counts), cone-weighting (1/|cone| flux weights).
+  FIELD COROLLARY, on the record in THEORY.md: battery-v2
+  certification means "beyond these six features," and the synthetic
+  world now exhibits a cell beating all six — the partition keeps
+  seeing what fixed batteries cannot. Deepest credential or warning;
+  both readings recorded.
+- PHASE D EXPLORATION (SPEC-D.md committed first; 04-explore-d.mjs,
+  15 universes, battery v2): SIB (co-user rule) R > E > D at
+  t = -10.9 — the prior was wrong, adopting-what-co-users-adopt
+  rewards the REFUSAL cell. MIX(0.5) same sign (t = -4.6).
+  FRONT(2000) null on both axes. NOTHING GRADUATES. Seven mechanism
+  families on record (U, PA, PC(beta), SIB, FRONT, MIX — plus the
+  degenerate popularity-platform variant), none produces the field's
+  E > R. The graveyard is the product, per the spec's honesty clause.
+- Standing theory picture, one line: cone-locality explains why cells
+  CAN out-inform any fixed battery; nothing yet explains why the
+  field's winner is E rather than R. The E > R generative problem is
+  now the program's sharpest open question, with three named
+  candidate channels (territory-anchored deepening, two-platform
+  straddling, root-protected popularity platforms) queued for a
+  future replicate-first tier.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

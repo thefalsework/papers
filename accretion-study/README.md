@@ -56,6 +56,24 @@ truncated transitive-dependent count to the field matching battery and
 re-run Go/Debian: if E-over-R survives, the claim strengthens
 materially; if it dissolves, that's the third artifact caught in-house.
 
+**Phase D (2026-09-01, evening): the sign problem measured, the search
+begun — two honest negatives.**
+
+- The registered sign measurement (`03-sign.mjs`, 10 fresh PC(0)
+  universes): S1 CONFIRMS — up-set size predicts gain in 10/10
+  universes; the flux law's core is true. But S2/S3 killed the
+  conjectured *explanation*: the up-set gap in matched pairs is ~10×
+  too small, and adding up-set to the battery leaves Δ_ER = −0.123 at
+  t = −5.6. PC(0)'s inversion is not primarily up-set flux at cap 200.
+  Live candidates: truncation saturation, cone-weighting (`THEORY.md`
+  §3, updated in place).
+- The exploratory search for the field's ordering (`SPEC-D.md`,
+  `04-explore-d.mjs`, 15 universes, battery v2): SIB (co-user rule)
+  and MIX(0.5) force R > E > D strongly; FRONT(2000) is null on both
+  axes. **Nothing graduates.** Seven mechanism families now on record,
+  none produces E > R. The field ordering remains unexplained — which
+  is the finding.
+
 **Files.**
 - `SPEC.md` — registered spec + two dated postscripts (audit; B′/C).
 - `sim-lib.mjs` — growers (U, PA, PC(β)) + the shared Debian-grade estimator.
@@ -63,4 +81,7 @@ materially; if it dissolves, that's the third artifact caught in-house.
 - `01b-calibrate.mjs` / `results-calibrate.json` — the replicate calibration that found the null failure.
 - `01c-validate-clustered-null.mjs` — kernel-clustered flips tested and found insufficient.
 - `02-confirm.mjs` / `results-confirm.json` — registered Phase B′; verdicts in the postscript.
-- `THEORY.md` — Phase C.
+- `THEORY.md` — Phase C (flux law; sign conjecture now marked dead by measurement).
+- `SPEC-D.md` — Phase D spec (candidate rules, honesty clauses).
+- `03-sign.mjs` / `results-sign.json` — registered sign measurement (S1 confirms, S2/S3 kill the conjecture).
+- `04-explore-d.mjs` / `results-explore-d.json` — exploratory search; nothing graduates.

@@ -6,6 +6,36 @@
 //
 // R = 5 universes per rule; seeds 930000+100r+off (grow),
 // 935000+100r+off (estimator); N = 30k; battery: 6.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-09-01, after the single exploratory run; 15
+// universes, all 1200 kernels evaluable everywhere)
+//
+//   SIB:         Delta_ER mean -0.330, t = -10.9 (5/5 negative);
+//                Delta_ED mean +0.119, t = +6.5. R > E > D, strongly —
+//                the co-user channel REWARDS the refusal cell, the
+//                prior in SPEC-D 2 was wrong.
+//   FRONT(2000): both contrasts null (t = -1.0, +0.3). Frontier
+//                platforms erase the signature entirely.
+//   MIX(0.5):    Delta_ER -0.181, t = -4.6; Delta_ED +0.169, t = +8.4.
+//                Half a dose of the co-user channel, same sign.
+//
+// NOTHING GRADUATES. The exploratory result, per SPEC-D's honesty
+// clause, IS the result: every cone-flavored accretion rule yet built
+// (PC family, SIB, MIX) forces R > E at matched battery v2, and
+// diffuse rules (U, PA, FRONT) force nothing. The field ordering
+// E > R — Go at battery v1, Debian at v1 and v2 — is now UNEXPLAINED
+// BY SEVEN MECHANISM FAMILIES. Whatever grows real package
+// ecosystems toward their Exploitation cells, it is none of these.
+// Combined with 03-sign's residual, the honest state of theory:
+// cone-locality explains why cells CAN beat batteries, and nothing
+// yet explains why the field's winner is E rather than R. Candidate
+// channels for a future tier, named now: territory-anchored choice
+// (newcomers pick platforms then deepen INTO the platform's unmet
+// region — requires care not to beg the question), two-platform
+// integration (straddling), and popularity-weighted platforms with
+// root-mass protection against the universal-ancestor degeneracy.
+// ---------------------------------------------------------------------
 
 import { writeFileSync } from "node:fs";
 import { grow, toSnaps, runEstimator } from "./sim-lib.mjs";
