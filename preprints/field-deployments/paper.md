@@ -598,3 +598,30 @@ size is exactly the confound the current battery cannot see. Note the
 synthetic ordering is the *inverse* of the field's (R above E), so no
 tested rule models package-ecosystem growth; the generative search for
 rules that force E > R is open and will be run replicate-first.
+
+**POSTSCRIPT (2026-09-01, evening): battery v2 — the flux law's
+confound taken to the field, and the claim table rewritten.** The
+queued methods upgrade ran the same day (`battery-v2/`, blind
+pre-check first, registration committed before the scored run).
+The pre-check alone rewrote the Go story: in the 182 five-feature
+pairs behind Go's +0.22, E-members carried far larger truncated
+up-sets than their R twins (signed SMD +0.69 — the inflation
+direction the flux law predicts), and the imbalance is unrepairable
+(51 balanceable pairs at every caliper, still over the 0.10 gate).
+The registered outcomes: **BV1, Debian E-vs-R at the six-feature
+battery, HOLDS** — Δ = +0.0834 against a conditional null of ±0.012
+on 237,078 pairs, all six SMDs ≤ 0.0104; the v1 estimate (+0.098)
+moved by −0.015 and stayed eight null-widths above zero. **BV2, Go
+E-vs-D, HOLDS** — Δ = +0.1524, unchanged from v1. The pre-declared
+descriptive line: Go E-vs-R on its 51 near-balanced pairs reads
+−1.00 — gone and inverted. The honest claim table is therefore:
+*Debian's Exploitation cell predicts future dependency growth beyond
+in-degree, out-degree, age, exact distance, PageRank, k-core, and
+transitive-dependent count — the last confound supplied by the
+program's own generative theory; Go's E-over-R is reclassified as
+up-set-confounded (third in-house artifact catch, first caught by
+theory); Go's E-over-D survives battery v2; Debian's D-over-E
+reversal is up-set-robust.* Bookkeeping correction recorded in the
+study postscript: the registered-directional record now stands at
+**8 for 24**, with three hits in a row (B2, BV1, BV2) — the first
+bets in the program's history called with a mechanism in hand.

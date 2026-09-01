@@ -1148,6 +1148,55 @@ Everything queued above is done, same day.
   correlated platform choice, β between 0.75 and 1. Replicate-first
   from birth.
 
+## Status update, 2026-09-01 (evening): BATTERY V2 — the theory's knife cuts one throat of two
+
+The flux law went to the field the same day it was proved
+(battery-v2/, blind pre-check first, registration committed before
+the scored run). New sixth feature: log1p(truncated up-set size),
+cap 200 — the confound the accretion theory derived.
+
+- BLIND PRE-CHECK, the finding that rewrites Go: in the 182
+  five-feature pairs behind Go's +0.22, E-members carried up-sets
+  +0.69 standardized units LARGER than their R twins (the inflation
+  direction, exactly per the flux law) — and it is UNREPAIRABLE
+  (51 balanceable pairs at every caliper 0.25-0.5, SMD(upset) 0.113,
+  still over the 0.10 gate). Registered in advance: Go E-vs-R scores
+  nothing; reported descriptive.
+- BV1 (Debian E-vs-R at the SIX-feature battery, PRIMARY): HOLDS.
+  Delta +0.0834, conditional null ±0.012, 237,078 pairs, all six
+  SMDs <= 0.0104. v1 was +0.098: moved -0.015, stayed 8 null-widths
+  up. Debian is now certified beyond every standard predictor PLUS
+  the theory-derived one.
+- BV2 (Go E-vs-D): HOLDS, unchanged (+0.1524 vs v1 +0.1529). Go's
+  E-over-D was never up-set flux.
+- Descriptive: Go E-vs-R on the 51 near-balanced pairs: -1.00 —
+  gone and INVERTED. Honest reclassification, at full volume: GO'S
+  CELEBRATED E > R WAS MOST LIKELY UP-SET FLUX IN COSTUME. Third
+  artifact caught in-house; FIRST caught by the program's own theory.
+  Debian's D-over-E reversal is up-set-robust (-0.165): the two-axis
+  picture stands.
+- BOOKKEEPING CORRECTION (recorded in the study postscript): the
+  registration header's "7 for 24" miscounted; correct record after
+  BV1+BV2 is 8 FOR 24 — with three directional hits in a row
+  (B2, BV1, BV2), the first bets ever called with mechanism in hand.
+- Gatekeeper sentence v3 (no percentile anywhere in it): "In Debian,
+  an algebraically defined cell predicts future dependency growth
+  beyond in-degree, out-degree, age, exact distance, PageRank,
+  k-core, and transitive-dependent count — the last confound supplied
+  by the program's own generative theory — in a design whose original
+  version landed as a sealed out-of-sample bet."
+- Docs updated: synthesis paper postscript, both briefs, essay
+  (including the closing scoreboard).
+- NEXT, in order of value: (1) the up-set-by-cell measurement in
+  PC(0) universes (closes the theory's open sign problem — why R
+  above E there); (2) the generative search for rules that force the
+  FIELD ordering E > R at matched battery v2 — candidate families:
+  popularity-weighted platforms with cone-locality, territory-
+  correlated platform choice; replicate-first from birth; (3) consider
+  whether the empirical paper (Go+Debian) should now be drafted around
+  the battery-v2 result with the Go reclassification as a centerpiece
+  of method credibility.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

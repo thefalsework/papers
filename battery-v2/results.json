@@ -1,0 +1,76 @@
+{
+ "go": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 51,
+   "maxSmd": 0.1133,
+   "obs": -1,
+   "lo": -0.2941,
+   "hi": 0.2941,
+   "pct": 0,
+   "verdict": "GATE-FAILED (descriptive only)",
+   "smd": {
+    "logIn": 0,
+    "logOut": 0,
+    "age": 0,
+    "logPR": 0.0747,
+    "core": 0,
+    "logUpset": 0.1133
+   }
+  },
+  "ED": {
+   "pairs": 10243,
+   "maxSmd": 0.0735,
+   "obs": 0.1524,
+   "lo": -0.0589,
+   "hi": 0.0597,
+   "pct": 100,
+   "verdict": "HOLDS",
+   "smd": {
+    "logIn": 0.0082,
+    "logOut": 0.0735,
+    "age": 0,
+    "logPR": 0.0131,
+    "core": 0.0072,
+    "logUpset": 0.0003
+   }
+  }
+ },
+ "debian": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 237078,
+   "maxSmd": 0.0104,
+   "obs": 0.0834,
+   "lo": -0.012,
+   "hi": 0.0127,
+   "pct": 100,
+   "verdict": "HOLDS",
+   "smd": {
+    "logIn": 0.002,
+    "logOut": 0,
+    "age": 0.0088,
+    "logPR": 0.0104,
+    "core": 0.0101,
+    "logUpset": 0.0008
+   }
+  },
+  "ED": {
+   "pairs": 891961,
+   "maxSmd": 0.023,
+   "obs": -0.1646,
+   "lo": -0.0093,
+   "hi": 0.0096,
+   "pct": 0,
+   "verdict": "REVERSES",
+   "smd": {
+    "logIn": 0,
+    "logOut": 0.023,
+    "age": 0.002,
+    "logPR": 0.0019,
+    "core": 0.0153,
+    "logUpset": 0.0014
+   }
+  }
+ }
+}

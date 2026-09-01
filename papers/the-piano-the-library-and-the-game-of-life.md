@@ -233,6 +233,24 @@ currency the audit left standing — the same sealed bet landing in worlds
 that share nothing. Which the seedbed law, alone among the project's
 findings, already has.
 
+And then the toy world did something no audit was asked to do: it named
+a suspect. In guild-worlds, growth flows to the deeply built-upon — to
+files with many *descendants* — and descendant count was on no
+reviewer's checklist, including ours. Same evening, the project added
+it to the twin-matching kit and re-tried its own two trophies, sealed
+predictions first. Go — the oldest trophy, the 182 pairs that had
+survived everything — fell: its shadow-files had hugely more
+descendants than their twins all along, the imbalance cannot be
+repaired, and on the few pairs that can be balanced the advantage is
+gone and inverted. Descendants in costume; the third artifact caught
+at home, and the first caught by the project's own theory rather than
+by a referee's suspicion. Debian — the world that landed sealed —
+passed untouched: descendant count matched, a quarter-million pairs,
+the shadow still out-grows the refusers. And Go kept a clean second
+crown, descendant-proof: its shadow out-grows the gate-straddlers.
+The knife the theory forged cut exactly one of the two throats it was
+pointed at, and the one left standing is the one that was bet blind.
+
 ## What it all says
 
 Speak it plainly, the way you'd say it at the end of a long night:
@@ -260,24 +278,28 @@ to know exactly how much of its own confidence to keep.
 And the deepest line the mathematics drew, drawn twice and underlined once
 in every world we visited: **meaning requires unfinishedness.** The
 black-and-white world has no chairs. The perfect observer sees no structure.
-The settled question casts no shadow — and in the two working ecosystems
-that have endured every test, one of them bet on sealed and untouched,
-the shadow is where the future grows: the residue cell, the impossible
-chair, empirically the seedbed of what those traditions become next,
-after every cheap explanation was matched away. Everything that matters
-lives in the crack between what a commitment claims and what it settles.
+The settled question casts no shadow — and in the one ecosystem that
+has endured every test the project knows how to build, including the
+test its own theory invented, the shadow is where the future grows: the
+residue cell, the impossible chair, empirically the seedbed of what
+that tradition becomes next, after every cheap explanation — including
+the one no reviewer had named — was matched away. Everything that
+matters lives in the crack between what a commitment claims and what it
+settles.
 
 Which is why the project is named after the wooden scaffolding that holds a
 stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that have overruled their own maker sixteen times in twenty-one sealed
-bets — and handed him the win that mattered most on the twenty-first —
+that have overruled their own maker sixteen times in twenty-four sealed
+bets — and then, once the instrument had been audited and the theory had
+learned to name its own confounds, handed him three wins in a row —
 one impossible chair that turned out to be the realest thing in every world
 we pointed the instrument at, one fresh world that behaved exactly as the
-sealed envelope said it would, and more predictions sitting in the open,
-waiting to be wrong.
+sealed envelope said it would even after the theory's own knife was added
+to the test, and more predictions sitting in the open, waiting to be
+wrong.
 
 ---
 

@@ -74,6 +74,57 @@
 //   BV2 null/reverses -> Go exits the certified-claims table entirely.
 //
 // Writes battery-v2/results.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-09-01)
+//
+//   BV1 (Debian E-vs-R, PRIMARY): **HOLDS.** Delta_ER = +0.0834,
+//   null [-0.0120, +0.0127], pct 100, 237,078 pairs, maxSMD 0.0104
+//   across all six features. The v1 estimate was +0.0979; adding the
+//   flux-law confound moved it by -0.015 and left it eight null-widths
+//   above zero. Debian's cell effect is now certified beyond every
+//   standard predictor AND beyond truncated transitive-dependent
+//   count — the one confound the program's own theory named.
+//
+//   BV2 (Go E-vs-D): **HOLDS.** Delta_ED = +0.1524, null
+//   [-0.0589, +0.0597], pct 100, 10,243 pairs, maxSMD 0.0735.
+//   Unchanged from v1 (+0.1529): Go's E-over-D was never up-set flux.
+//
+//   Descriptive, pre-declared gate-failed (scores nothing): Go E-vs-R
+//   on the 51 balanceable pairs reads Delta_ER = -1.00 (pct 0 of its
+//   own conditional null). Not certified (gate failed at SMD(upset)
+//   0.113; 51 pairs; conditional null) — but the direction says the
+//   obvious thing loudly: at even-approximately-matched up-set size,
+//   Go's E-advantage over R is GONE, and then some. Combined with the
+//   +0.69 signed imbalance in the old pairs and the flux law's
+//   mechanism, the honest reclassification is: GO'S E > R WAS MOST
+//   LIKELY UP-SET FLUX IN COSTUME — the program's third artifact
+//   caught in-house, and the first caught by its own theory before
+//   any referee could have named the variable.
+//
+//   Debian descriptive Delta_ED = -0.1646 (v1: -0.1554): the D > E
+//   reversal is up-set-robust too; the two-axis picture stands.
+//
+// BOOKKEEPING CORRECTION: the header's "going in: 7 for 24" miscounted.
+// Correct going-in record: 6 for 22 (5 for 21 after Debian; accretion
+// B' added one directional bet, B2, which hit; its B1 verdicts
+// predicted nulls and are not counted as directional bets). After
+// BV1 + BV2 both land: **8 for 24** — three registered directional
+// hits in a row (B2, BV1, BV2), all three called with mechanism in
+// hand.
+//
+// THE GATEKEEPER SENTENCE, REWRITTEN (v3): "In the Debian archive —
+// ten stable releases, 2007-2025 — membership in the Exploitation cell
+// of an algebraically defined partition predicts future dependency
+// growth beyond in-degree, out-degree, age, exact graph distance,
+// PageRank, k-core, AND transitive-dependent count, in a design whose
+// confound list was extended by the program's own generative theory
+// and whose original version landed as a sealed out-of-sample bet.
+// In Go, the same cell carries a battery-v2-proof E-over-D effect,
+// while its celebrated E-over-R effect is reclassified as
+// up-set-confounded — caught by the same theory." That sentence has
+// no percentile in it and survives the audit's reading discipline.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { CORPORA, buildSnap, firstSeenOf, makeGate, makeDistancer } from "../deflation-control/lib.mjs";
