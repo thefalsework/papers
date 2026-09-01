@@ -1105,6 +1105,49 @@ statistical flaw. Full record in SPEC.md postscripts; short version:
   gatekeeper sentence; then Phase B-prime registration; then Phase C
   (prove unbiasedness + the sign of the PC effect analytically).
 
+## Status update, 2026-09-01 (later): Phase B′ CONFIRMS 3/3; Phase C on paper; queue cleared
+
+Everything queued above is done, same day.
+
+- **Editorial repricing, done.** Dated audit paragraphs added to
+  plain-brief, philosophers-brief, and the piano essay (which also
+  lost its stale "one sealed bet pending" closing — Debian already
+  ran). The reframed gatekeeper sentence, now in the philosophers'
+  brief: the E-over-R claim's warrant was never a percentile — it was
+  found in one ecosystem and landed as a sealed prediction in an
+  unrelated one, and that is the only currency the audit left standing.
+- **Phase B′ (02-confirm.mjs, registered before its single run; 100
+  fresh-seed universes, 37 min): ALL THREE VERDICTS LANDED.**
+  - B1 CONFIRMS-NULL: U (t_ER −0.89, t_ED −1.78) and PA (−1.22,
+    −1.34) read zero on fresh seeds. The estimator is unbiased.
+  - B2 CONFIRMS: PC(0) forces R > E > D generator-level — t_ER
+    −10.2 (0/20 universes positive), t_ED +10.8 (20/20). First
+    confirmed generator-level fact of the middle track.
+  - B3 (descriptive): the contrasts DECOUPLE on one dial — R-over-E
+    fades smoothly with β (−0.17 → −0.01); E-over-D flat positive
+    through β = 0.75, dead at β = 1. Both die at β = 1, so every
+    signature in the family is cone-locality's. The synthetic family
+    reproduces the field's dissociation of the two axes for free.
+- **Phase C (THEORY.md), done on paper.** U-null proved exactly;
+  PA-null by exchangeability given in-degree; the two-level analysis
+  of the sign-flip failure (within-kernel priceable, universe-level
+  not); and the PC FLUX LAW: cone-local expected gain tracks truncated
+  UP-SET SIZE — a quantity the battery does not carry. That is the
+  constructive mechanism by which a cell can out-inform the reviewer's
+  arsenal. Sign of the PC effect (why R over E) stated open, with the
+  registered next measurable: baseline up-set size by cell at matched
+  battery in PC(0) universes.
+- **Next moves, in order of value:** (1) "battery v2" — add truncated
+  transitive-dependent count to the field battery and re-run Go and
+  Debian; the flux law says this is the sharpest remaining knife, and
+  it either strengthens the two-ecosystem claim materially or catches
+  artifact number three in-house. (2) The up-set-by-cell measurement in
+  PC(0) universes (closes the sign problem). (3) The E>R generative
+  search: which rule families force the *field* ordering — candidates:
+  popularity-weighted platforms with cone-locality, territory-
+  correlated platform choice, β between 0.75 and 1. Replicate-first
+  from birth.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

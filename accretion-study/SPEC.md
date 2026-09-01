@@ -270,3 +270,29 @@ be drafted from the Phase A landscape (the PC family's R > E > D is
 the anchor). (d) Phase C's target shifts accordingly: prove
 unbiasedness (done empirically) AND characterize the sign of the
 PC-family effect analytically.
+
+---
+
+## Postscript 2 (2026-09-01, later the same day): Phase B′ registered; Phase C delivered
+
+Action (c) is executed: `02-confirm.mjs` is the replicate-based
+confirmation, committed before its first run. Registered content: B1 —
+U and PA, 20 fresh universes each (seed base 910000/915000, disjoint
+from every Phase A seed), both contrasts |t| < 2 or the estimator is
+declared biased; B2 — PC(0), 20 fresh universes, t_ER ≤ −3 AND
+t_ED ≥ +3 confirms the R > E > D signature; B3 — descriptive β
+gradient at R = 10 per point, scores nothing. No within-universe
+percentile appears in any verdict.
+
+Action (d) is executed on paper: `THEORY.md` proves the U null exactly
+and the PA null given exact in-degree matching (Propositions 1–2),
+separates the two correlation levels behind the sign-flip failure
+(within-kernel, priceable; universe-level, not priceable by any
+within-universe scheme), and derives the PC flux law — expected gain
+under cone-local accretion tracks truncated up-set size, a quantity
+absent from the battery. The sign of the PC(0) effect (why R above E
+at matched battery) remains open, with a registered next measurable
+(mean baseline up-set size by cell at matched battery). The flux law
+also yields a field methods improvement, queued as "battery v2": add
+truncated transitive-dependent count to the matching battery and re-run
+Go/Debian.

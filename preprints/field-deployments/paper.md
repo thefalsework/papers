@@ -574,3 +574,27 @@ percentile language suggested. The 2028 forward register gains weight
 under this reframing: fresh time is the only fresh randomness a real
 corpus provides. Detailed audit record: `accretion-study/SPEC.md`
 postscripts; synthetic replicate data: `accretion-study/results-*.json`.
+
+**POSTSCRIPT (2026-09-01, later): the audit's confirmatory half landed,
+3 for 3.** The replicate-based confirmation (`accretion-study/02-confirm.mjs`,
+registered before its single run, 100 universes on seeds no exploratory
+eye had seen) delivered all three registered verdicts. The estimator is
+unbiased on fresh seeds (uniform and preferential attachment both read
+zero, |t| ≤ 1.8 across 20 universes each). Cone-local accretion (PC(0))
+forces R > E > D at matched full battery as a *generator-level* fact
+(t = −10.2 and +10.8; unanimous sign across 20 fresh universes) — a
+constructive existence proof that a baseline-definable cell can carry
+growth information beyond the entire standard battery, with the
+mechanism identified on paper (`accretion-study/THEORY.md`): under
+cone-local growth, expected gain tracks truncated *up-set size*, which
+no battery feature measures. Two consequences for this paper. First,
+the descriptive β-gradient shows E-vs-R and E-vs-D decoupling on a
+single dial in the synthetic family, mirroring the field's dissociation
+(Debian holding one axis and reversing the other). Second, a queued
+methods upgrade ("battery v2"): adding truncated transitive-dependent
+count to the matching battery and re-running Go and Debian is now the
+sharpest cheap test of the surviving claim — the flux law says up-set
+size is exactly the confound the current battery cannot see. Note the
+synthetic ordering is the *inverse* of the field's (R above E), so no
+tested rule models package-ecosystem growth; the generative search for
+rules that force E > R is open and will be run replicate-first.

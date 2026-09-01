@@ -90,3 +90,43 @@ console.log(JSON.stringify(v, null, 1));
 out.verdicts = v;
 writeFileSync("accretion-study/results-confirm.json", JSON.stringify(out, null, 1));
 console.log("wrote accretion-study/results-confirm.json");
+
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-09-01, written after the single registered run;
+// results-confirm.json is the artifact; 37 minutes, 100 universes).
+//
+// ALL THREE REGISTERED VERDICTS LANDED.
+//
+// B1 CONFIRMS-NULL, both rules. U: t_ER = -0.89, t_ED = -1.78.
+// PA: t_ER = -1.22, t_ED = -1.34. On seeds no exploratory eye ever
+// saw, the estimator reads zero where zero is the truth — the
+// empirical half of THEORY.md Propositions 1-2.
+//
+// B2 CONFIRMS, far past threshold. PC(0): t_ER = -10.23 with 0 of 20
+// universes positive; t_ED = +10.77 with 20 of 20 positive. Cone-local
+// accretion forces R > E > D at matched battery as a GENERATOR-LEVEL
+// fact — the program's first confirmed theorem target about growth
+// rules, and the constructive proof that a baseline-definable cell can
+// out-inform the full reviewer battery (per the THEORY.md flux law:
+// the flux tracks up-set size, which the battery does not carry).
+//
+// B3 (descriptive): the two contrasts DECOUPLE across the beta
+// gradient, and not in the naively expected way.
+//   ER mean: -0.172 (beta 0) -> -0.117 -> -0.083 -> -0.043 -> -0.008
+//     (beta 1): fades smoothly to zero as footprint breadth grows.
+//   ED mean: +0.067 / +0.068 / +0.072 / +0.084 (beta <= 0.75), then
+//     DEAD at beta 1 (-0.000, t = -0.03).
+// So E-over-D tolerates substantial breadth but requires SOME cone
+// component; R-over-E requires a lot of it; and at beta 1 (platform
+// pick + uniform deps) BOTH die, meaning the uniform platform pick
+// alone contributes nothing — every signature in this family is
+// cone-locality's. The synthetic family reproduces the field's central
+// dissociation (E-vs-R and E-vs-D as independent axes, cf. Debian
+// holding one and reversing the other) from a single dial.
+//
+// Nothing here models Go/Debian (the field ordering is E > R; this
+// family's is R > E). The open generative question stands as specced:
+// which rule families force E > R. Registered next measurable for the
+// sign problem: baseline up-set size by cell at matched battery in
+// PC(0) universes (THEORY.md section 3).
+// ---------------------------------------------------------------------
