@@ -111,16 +111,27 @@ Consequences:
   survives *that*, the claim strengthens materially; if it dissolves,
   the program will have caught its third artifact in-house — either
   way the flux law says this is the sharpest cheap knife not yet run.
-- **The open sign problem.** Why R above E at matched battery in
-  PC(0)? Conjecture: E-members sit *interior* to the kernel's sector
-  (their cones fall inside its territory), while distance- and
-  battery-matched R-members are relatively more root-like within
-  foreign sectors and therefore appear in more future cones — larger
-  up-sets at equal battery. This is checkable without new machinery:
-  measure mean baseline up-set size by cell at matched battery in the
-  PC(0) universes. Registered as the first exploratory question of any
-  Phase D. Until measured, the sign explanation is conjecture and is
-  graded so.
+- **The open sign problem — MEASURED, AND THE CONJECTURE DIED
+  (2026-09-01, `03-sign.mjs`).** The registered measurement: S1
+  (flux law direct) CONFIRMS, 10/10 universes, corr ≈ 0.23. S2 (the
+  up-set-gap conjecture stated below) came back INDETERMINATE — the
+  gap inside matched pairs is real but ~10× too small (z-gap −0.015)
+  to carry the effect. S3 (closure): adding log1p(upset_200) to the
+  battery leaves Δ_ER = −0.123 at t = −5.6 — the inversion is NOT
+  primarily up-set flux at cap 200. The original conjecture
+  (E-members interior, R twins more root-like with larger up-sets)
+  is dead as the explanation. Live candidates for the residual,
+  next measurables: truncation (raise the cap / exact counts — the
+  feature saturates at 200 and cannot see order-of-magnitude
+  differences above it) and cone-weighting (flux weights up-set
+  members by 1/|cone|; equal capped up-sets can carry unequal flux).
+  Field-side corollary, stated at full volume: battery-v2
+  certification means "beyond these six features," and the synthetic
+  world now exhibits a cell carrying signal beyond all six — the
+  partition keeps seeing structure that fixed feature batteries do
+  not, which is either its deepest credential or a warning that no
+  finite battery closes the question. Both readings are on the
+  record.
 - **What PC(0) does *not* explain.** It produces the inverse of the
   Go/Debian ordering, so uniform-platform cone-locality as-is is not a
   model of package-ecosystem growth. The generative question Phase B′

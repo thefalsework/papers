@@ -39,6 +39,44 @@
 //      is incomplete.
 //
 // Writes accretion-study/results-sign.json.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-09-01, after the single registered run; 10 universes)
+//
+// S1 CONFIRMS (10/10): pooled corr(log1p(upset_200), gain) is positive
+// in every universe (0.20-0.28). The flux law's core is right: up-set
+// size predicts gain under cone-local growth.
+//
+// S2 INDETERMINATE: the up-set gap inside 5-feature-matched E-R pairs
+// is real but SMALL (mean z-gap -0.015, t = -2.32) — nowhere near
+// large enough to carry the -0.17 gain difference. The conjecture
+// ("matched R twins have much bigger up-sets") is not confirmed.
+//
+// S3 — THE HONEST SURPRISE — RESIDUAL EFFECT: with log1p(upset_200)
+// ADDED to the battery (the battery-v2 move, run synthetically),
+// Delta_ER = -0.123 at t = -5.6 across universes. Matching away the
+// up-set gap removes only ~25% of the effect. PC(0)'s R > E > D is
+// NOT primarily up-set flux at this truncation. THEORY.md's sign
+// conjecture dies as an explanation; the flux law survives as a true
+// but insufficient mechanism.
+//
+// WHAT COULD CARRY THE RESIDUAL (next measurables, not yet run):
+// (a) TRUNCATION: upset_200 saturates at 200; deep nodes differ by
+//     orders of magnitude above the cap and the feature cannot see
+//     it. Re-run S3 with cap 5000 (or exact counts via reverse
+//     topological DP on the DAG condensation).
+// (b) CONE-WEIGHTING: the flux law weights up-set members by
+//     1/|cone(u)| — flux is up-set size weighted by the SMALLNESS of
+//     the cones through which it is reached. Two nodes with equal
+//     capped up-set can differ in weighted flux.
+// FIELD IMPLICATION, stated plainly: battery v2's certification means
+// "beyond these six features," not "beyond every definable structural
+// feature" — the synthetic world just demonstrated a cell carrying
+// signal beyond all six. That cuts both ways: it makes Debian's
+// battery-v2 survival weaker as a mechanism claim, and the cell
+// partition stronger as an instrument (it keeps seeing what fixed
+// batteries cannot).
+// ---------------------------------------------------------------------
 
 import { writeFileSync } from "node:fs";
 import { grow, toSnaps, mulberry } from "./sim-lib.mjs";

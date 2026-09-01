@@ -10,6 +10,7 @@
 
 import { buildSnap, makeGate, makeDistancer, firstSeenOf } from "../deflation-control/lib.mjs";
 import { pagerank, coreNumbers, zStats, greedyMatch } from "../baseline-gauntlet/gauntlet-lib.mjs";
+import { upsetSizes } from "../battery-v2/lib.mjs";
 
 export const mulberry = (seed) => {
   let s = seed;
@@ -24,10 +25,16 @@ export const mulberry = (seed) => {
 const CONE_CAP = 200; // SPEC 3: truncated BFS cap for platform cones
 
 // rule: "U" | "PA" | number beta in [0,1] for PC(beta)
+//     | { type: "SIB" }            — co-user rule (SPEC-D 2): anchor u,
+//       deps = down-into-cone(u) then one up-step (uniform dependent)
+//     | { type: "FRONT", K }       — PC(0) with platform uniform from
+//       the K most recent nodes
+//     | { type: "MIX", p }         — each dep: SIB draw w.p. p, else uniform
 export const grow = (rule, N, schedule, seed) => {
   const rand = mulberry(seed);
   const edges = [];
   const depsOf = []; // per node, its dependency list (for cone BFS)
+  const dependentsOf = []; // per node, who depends on it (for SIB up-step)
   const bag = [];    // PA bag: node appears (inDeg + 1) times
   const edgeCountAt = new Map();
   let schedIdx = 0;
@@ -44,10 +51,67 @@ export const grow = (rule, N, schedule, seed) => {
     // 2026-09-01; see SPEC postscript). Real corpora are full of roots.
     if (t > 0) {
       const m = Math.floor(rand() * 5);
+      // truncated down-BFS cone of u, excluding u
+      const coneOf = (u) => {
+        const cone = [];
+        const seen = new Set([u]);
+        const q = [u];
+        while (q.length && cone.length < CONE_CAP) {
+          const v = q.shift();
+          for (const w of depsOf[v]) {
+            if (seen.has(w)) continue;
+            seen.add(w);
+            cone.push(w);
+            if (cone.length >= CONE_CAP) break;
+            q.push(w);
+          }
+        }
+        return cone;
+      };
       if (rule === "U") {
         for (let k = 0; k < m; k++) myDeps.add(Math.floor(rand() * t));
       } else if (rule === "PA") {
         for (let k = 0; k < m; k++) myDeps.add(bag[Math.floor(rand() * bag.length)]);
+      } else if (typeof rule === "object" && rule.type === "SIB") {
+        // one anchor per newcomer; each dep goes down into the anchor's
+        // cone, then one step up to a uniform dependent of the landing
+        // node (if it has any; else the landing node itself). Root
+        // anchors (empty cone) fall back to uniform draws.
+        if (m >= 1) {
+          const u = Math.floor(rand() * t);
+          const cone = coneOf(u);
+          for (let k = 0; k < m; k++) {
+            if (cone.length === 0) { myDeps.add(Math.floor(rand() * t)); continue; }
+            const w = cone[Math.floor(rand() * cone.length)];
+            const ups = dependentsOf[w];
+            myDeps.add(ups.length ? ups[Math.floor(rand() * ups.length)] : w);
+          }
+        }
+      } else if (typeof rule === "object" && rule.type === "FRONT") {
+        // PC(0) with the platform drawn from the K most recent nodes
+        if (m >= 1) {
+          const lo = Math.max(0, t - rule.K);
+          const u = lo + Math.floor(rand() * (t - lo));
+          myDeps.add(u);
+          const cone = coneOf(u);
+          for (let k = 1; k < m; k++) {
+            if (cone.length === 0) myDeps.add(Math.floor(rand() * t));
+            else myDeps.add(cone[Math.floor(rand() * cone.length)]);
+          }
+        }
+      } else if (typeof rule === "object" && rule.type === "MIX") {
+        if (m >= 1) {
+          const u = Math.floor(rand() * t);
+          let cone = null;
+          for (let k = 0; k < m; k++) {
+            if (rand() >= rule.p) { myDeps.add(Math.floor(rand() * t)); continue; }
+            if (cone === null) cone = coneOf(u);
+            if (cone.length === 0) { myDeps.add(Math.floor(rand() * t)); continue; }
+            const w = cone[Math.floor(rand() * cone.length)];
+            const ups = dependentsOf[w];
+            myDeps.add(ups.length ? ups[Math.floor(rand() * ups.length)] : w);
+          }
+        }
       } else {
         // PC(beta): UNIFORM platform, then cone/global mix. Platform
         // choice was PA-weighted in the first draft; that funnels every
@@ -91,7 +155,8 @@ export const grow = (rule, N, schedule, seed) => {
     }
     const list = [...myDeps];
     depsOf.push(list);
-    for (const d of list) { edges.push([t, d]); bag.push(d); }
+    dependentsOf.push([]);
+    for (const d of list) { edges.push([t, d]); bag.push(d); dependentsOf[d].push(t); }
     bag.push(t); // birth weight
   }
   while (schedIdx < schedule.length) { edgeCountAt.set(schedule[schedIdx], edges.length); schedIdx++; }
@@ -111,9 +176,13 @@ export const toSnaps = (grown, schedule) => {
 // variance under cross-pair dependence — see 01b calibration) or
 // "kernel" (flips all pairs of one kernel together; the clustered
 // null adopted after the audit).
-export const runEstimator = (snaps, { baselines, horizon, kernelCap, seed, nullMode = "pair" }) => {
+// battery: 5 (the original design) or 6 (battery v2: adds z-scored
+// log1p(upset_200) to the caliper and the balance gate; SPEC-D 3).
+export const runEstimator = (snaps, { baselines, horizon, kernelCap, seed, nullMode = "pair", battery = 5 }) => {
   const CALIPER = 0.5, SIDE_CAP = 300, PERMS = 1000, MIN_PAIRS = 50, SMD_GATE = 0.10;
-  const FEATS = ["logIn", "logOut", "age", "logPR", "core"];
+  const FEATS = battery === 6
+    ? ["logIn", "logOut", "age", "logPR", "core", "logUpset"]
+    : ["logIn", "logOut", "age", "logPR", "core"];
   const rand = mulberry(seed);
   const fsMap = firstSeenOf(snaps);
   const out = { ER: { diffs: [], kernelOf: [], sumE: FEATS.map(() => 0), sumB: FEATS.map(() => 0) },
@@ -127,6 +196,7 @@ export const runEstimator = (snaps, { baselines, horizon, kernelCap, seed, nullM
     const { nComp, compMembers, names, inDeg } = snap;
     const pr = pagerank(snap);
     const core = coreNumbers(snap);
+    const upset = battery === 6 ? upsetSizes(snap) : null;
     const globalRows = [];
     for (let c = 0; c < nComp; c++) {
       const members = compMembers[c];
@@ -139,6 +209,7 @@ export const runEstimator = (snaps, { baselines, horizon, kernelCap, seed, nullM
     const gAge = zStats(globalRows.map((c) => fsMap.get(names[compMembers[c][0]])));
     const gPR = zStats(globalRows.map((c) => Math.log(pr[c])));
     const gCore = zStats(globalRows.map((c) => core[c]));
+    const gUp = battery === 6 ? zStats(globalRows.map((c) => Math.log1p(upset[c]))) : null;
     const order = Array.from({ length: nComp }, (_, i) => i);
     for (let i = 0; i < nComp; i++) {
       const j = i + Math.floor(rand() * (nComp - i));
@@ -164,13 +235,15 @@ export const runEstimator = (snaps, { baselines, horizon, kernelCap, seed, nullM
       candD += [...groups.D.values()].reduce((s, v) => s + v.length, 0);
       const featOf = (c) => {
         const nm = names[compMembers[c][0]];
-        return [
+        const f = [
           (Math.log1p(inDeg.get(nm) ?? 0) - gIn.mu) / gIn.sd,
           (Math.log1p(snap.cIn[c].length) - gOut.mu) / gOut.sd,
           (fsMap.get(nm) - gAge.mu) / gAge.sd,
           (Math.log(pr[c]) - gPR.mu) / gPR.sd,
           (core[c] - gCore.mu) / gCore.sd,
         ];
+        if (battery === 6) f.push((Math.log1p(upset[c]) - gUp.mu) / gUp.sd);
+        return f;
       };
       const gainOf = (c) => {
         const nm = names[compMembers[c][0]];
