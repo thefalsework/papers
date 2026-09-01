@@ -1065,6 +1065,46 @@ Same day, the whole plan executed (`debian-study/`, three scripts):
   paper (aperture closed form + factorization lemma) for Order or
   Algebra Universalis. Then outreach; stop collecting corpora.
 
+## Status update, 2026-09-01: accretion study Phase A — THE SELF-TEST FIRED
+
+The middle track began (accretion-study/, SPEC committed 08-31 before
+any code). Phase A was supposed to map which growth rules produce
+which signatures. It did something more important instead: the
+registered instrument self-test (feature-blind rules must come out
+NULL) FAILED, and the follow-up calibration found a program-wide
+statistical flaw. Full record in SPEC.md postscripts; short version:
+
+- Feasibility: rootless growth models cannot host the partition at
+  all (universal ancestor -> Refusal empty -> nothing evaluable).
+  Fixed openly in Phase A (m in {0..4}; uniform platforms).
+- Exploratory grid: U and PA (provably null generators) returned
+  significant verdicts under the pair-level sign-flip null.
+- Replicate-universe calibration (20 universes/rule): the point
+  estimator is UNBIASED, but the sign-flip null understates true
+  across-universe variance ~9-11x. Kernel-clustered flips do NOT fix
+  it: the dependence is universe-level. No within-corpus resampling
+  recovers generator-level uncertainty. (Mathematical point, not a
+  bug.)
+- Real Phase-A discovery: PC(0) cone-local growth has a REAL,
+  20/20-replicated signature: R > E > D at matched battery — the
+  OPPOSITE of registered C2. The conjecture set needs rebuilding.
+- Consequences for the field claims, recorded in a postscript in the
+  synthesis paper: every single-corpus percentile is conditional on
+  the realized corpus; generator-level claims rest on cross-corpus
+  sign replication + sealed direction. Battery-grade E>R: Go +0.22,
+  Debian +0.098 (sealed, landed), crates null. Evidence with honest
+  error bars (~1.6-4 sigma if synthetic universe noise transfers),
+  not "percentile 100." The 2028 register gains importance: fresh
+  time is the only fresh randomness a corpus provides.
+- Phase B as specced (single-universe verdicts) is CANCELLED;
+  confirmatory design must be replicate-based (R fresh universes,
+  across-universe mean vs SD). New conjectures from the Phase A
+  landscape, anchored on the PC family's R > E > D.
+- QUEUED (not yet done): temper "percentile 100" language in
+  plain-brief, philosophers-brief, piano essay; decide the reframed
+  gatekeeper sentence; then Phase B-prime registration; then Phase C
+  (prove unbiasedness + the sign of the PC effect analytically).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

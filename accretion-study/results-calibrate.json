@@ -1,0 +1,56 @@
+{
+ "U": {
+  "er": {
+   "mu": 0.0083,
+   "sd": 0.0554,
+   "min": -0.0761,
+   "max": 0.1196
+  },
+  "ed": {
+   "mu": 0.0165,
+   "sd": 0.0282,
+   "min": -0.0287,
+   "max": 0.0705
+  },
+  "meanSignFlipHalfBandER": 0.0099,
+  "meanSignFlipHalfBandED": 0.007,
+  "inflationER": 10.97,
+  "inflationED": 7.9
+ },
+ "PA": {
+  "er": {
+   "mu": -0.0293,
+   "sd": 0.0616,
+   "min": -0.1407,
+   "max": 0.0742
+  },
+  "ed": {
+   "mu": 0.0007,
+   "sd": 0.0337,
+   "min": -0.0552,
+   "max": 0.0667
+  },
+  "meanSignFlipHalfBandER": 0.0111,
+  "meanSignFlipHalfBandED": 0.0077,
+  "inflationER": 10.88,
+  "inflationED": 8.58
+ },
+ "PC(0)": {
+  "er": {
+   "mu": -0.1644,
+   "sd": 0.0665,
+   "min": -0.2999,
+   "max": -0.0626
+  },
+  "ed": {
+   "mu": 0.0809,
+   "sd": 0.0245,
+   "min": 0.0433,
+   "max": 0.145
+  },
+  "meanSignFlipHalfBandER": 0.0146,
+  "meanSignFlipHalfBandED": 0.0046,
+  "inflationER": 8.93,
+  "inflationED": 10.44
+ }
+}

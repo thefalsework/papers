@@ -1,0 +1,170 @@
+{
+ "U": {
+  "kernels": 1200,
+  "candE": 632985,
+  "candR": 4922896,
+  "candD": 9274797,
+  "ER": {
+   "pairs": 125855,
+   "maxSmd": 0.02,
+   "obs": -0.0286,
+   "lo": -0.009,
+   "hi": 0.0091,
+   "pct": 0,
+   "verdict": "REVERSES"
+  },
+  "ED": {
+   "pairs": 219974,
+   "maxSmd": 0.0279,
+   "obs": 0.0388,
+   "lo": -0.0067,
+   "hi": 0.0067,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PA": {
+  "kernels": 1200,
+  "candE": 2057233,
+  "candR": 4331913,
+  "candD": 8588434,
+  "ER": {
+   "pairs": 156361,
+   "maxSmd": 0.0034,
+   "obs": 0.0604,
+   "lo": -0.0104,
+   "hi": 0.0107,
+   "pct": 100,
+   "verdict": "HOLDS"
+  },
+  "ED": {
+   "pairs": 367215,
+   "maxSmd": 0.0058,
+   "obs": 0.0213,
+   "lo": -0.0078,
+   "hi": 0.0075,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PC(0)": {
+  "kernels": 1200,
+  "candE": 3153522,
+  "candR": 7522678,
+  "candD": 4308877,
+  "ER": {
+   "pairs": 97188,
+   "maxSmd": 0.0153,
+   "obs": -0.1708,
+   "lo": -0.0111,
+   "hi": 0.0108,
+   "pct": 0,
+   "verdict": "REVERSES"
+  },
+  "ED": {
+   "pairs": 556890,
+   "maxSmd": 0.0128,
+   "obs": 0.0647,
+   "lo": -0.0037,
+   "hi": 0.0039,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PC(0.25)": {
+  "kernels": 1200,
+  "candE": 964356,
+  "candR": 6762840,
+  "candD": 7239543,
+  "ER": {
+   "pairs": 101636,
+   "maxSmd": 0.0252,
+   "obs": -0.1885,
+   "lo": -0.0124,
+   "hi": 0.0135,
+   "pct": 0,
+   "verdict": "REVERSES"
+  },
+  "ED": {
+   "pairs": 347479,
+   "maxSmd": 0.0106,
+   "obs": 0.0289,
+   "lo": -0.0052,
+   "hi": 0.0053,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PC(0.5)": {
+  "kernels": 1200,
+  "candE": 615305,
+  "candR": 5821749,
+  "candD": 8499323,
+  "ER": {
+   "pairs": 99571,
+   "maxSmd": 0.0171,
+   "obs": -0.0821,
+   "lo": -0.0116,
+   "hi": 0.0129,
+   "pct": 0,
+   "verdict": "REVERSES"
+  },
+  "ED": {
+   "pairs": 248356,
+   "maxSmd": 0.0102,
+   "obs": 0.1179,
+   "lo": -0.007,
+   "hi": 0.0074,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PC(0.75)": {
+  "kernels": 1200,
+  "candE": 751109,
+  "candR": 4823047,
+  "candD": 9317265,
+  "ER": {
+   "pairs": 110913,
+   "maxSmd": 0.0287,
+   "obs": 0.03,
+   "lo": -0.0099,
+   "hi": 0.0102,
+   "pct": 100,
+   "verdict": "HOLDS"
+  },
+  "ED": {
+   "pairs": 249518,
+   "maxSmd": 0.0181,
+   "obs": 0.0178,
+   "lo": -0.0075,
+   "hi": 0.0066,
+   "pct": 100,
+   "verdict": "HOLDS"
+  }
+ },
+ "PC(1)": {
+  "kernels": 1200,
+  "candE": 647891,
+  "candR": 4789847,
+  "candD": 9370910,
+  "ER": {
+   "pairs": 100169,
+   "maxSmd": 0.0196,
+   "obs": -0.0684,
+   "lo": -0.0097,
+   "hi": 0.0092,
+   "pct": 0,
+   "verdict": "REVERSES"
+  },
+  "ED": {
+   "pairs": 210696,
+   "maxSmd": 0.0271,
+   "obs": -0.0229,
+   "lo": -0.007,
+   "hi": 0.0066,
+   "pct": 0,
+   "verdict": "REVERSES"
+  }
+ }
+}

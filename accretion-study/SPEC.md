@@ -162,3 +162,111 @@ invented for the synthetic worlds.
 *Spec committed 2026-08-31, before any simulation code exists in the
 repository. Deviations will appear below this line as dated postscripts,
 never as silent edits.*
+
+---
+
+**POSTSCRIPT (2026-09-01): two Phase-A feasibility adjustments, as
+provided for in §8.** The first exploratory pass produced ZERO evaluable
+kernels on every rule, and the census machinery localized why — a
+structural fact worth keeping:
+
+1. **No roots, no partition.** With out-degree m ∈ {1..4}, every
+   dependency chain strictly descends and terminates at node 0, so a
+   universal ancestor sits in every kernel's down-set, every node has a
+   path into every down-set, Refusal is empty for every kernel, and the
+   four-position structure degenerates *globally*. Fix: m ∈ {0..4} —
+   the zero mass creates dependency roots, as in every real corpus
+   (fonts, data packages, importless theories).
+2. **Popularity-weighted platforms re-create the universal ancestor.**
+   With PC platforms drawn ∝ in-degree+1, all cones funnel through a
+   few primordial hubs and Refusal empties again even with roots
+   present (and an unconditional platform dependency made PC nodes
+   rootless besides). Fix: uniform platform choice, and m = 0 nodes
+   are roots under every rule. The mechanism under test (cone
+   locality) is untouched; what was lost is only a popularity
+   confound the estimator matches away anyway.
+
+Both adjustments are openly made in Phase A, before any Phase-B
+registration, exactly as §8 reserves. The structural finding is worth a
+line in the eventual paper: **pure rich-get-richer accretion without
+roots cannot even host the four-position partition — evaluability
+itself requires a population that refuses the hub stratum.** Post-fix
+feasibility (N = 5,000 pilot, 300 kernels sampled): U 246 evaluable,
+PA 246, PC(0) 230, PC(1) 234.
+
+---
+
+**POSTSCRIPT (2026-09-01, later): THE SELF-TEST FIRED. Phase A's
+instrument audit found a program-wide calibration flaw; the exploratory
+grid, the calibration, and the consequences follow. This is the most
+consequential postscript in the repository.**
+
+**1. The exploratory grid (seed set A, no confirmatory weight).**
+Verdicts under the original pair-level sign-flip null: U — ER
+"REVERSES", ED "HOLDS"; PA — ER "HOLDS", ED "HOLDS"; PC(0), PC(0.25),
+PC(0.5) — ER "REVERSES", ED "HOLDS"; PC(0.75) — both "HOLDS"; PC(1) —
+both "REVERSE". Two of these are impossible: under U every alive node
+has identical expected gain conditional on the baseline graph, and
+under PA at matched baseline in-degree the two members' gain processes
+are exchangeable. Feature-blind generators were returning significant
+verdicts. C1's failure row fired — but at the calibration layer, not
+the leakage layer: see (2).
+
+**2. Replicate-universe calibration (01b; 20 universes per rule).**
+The gold standard available only in synthetic worlds: regenerate the
+universe and watch the statistic's true spread.
+- The POINT ESTIMATOR IS UNBIASED on null generators: across-universe
+  mean Δ_ER = +0.008 (U), −0.029 (PA), both ≈ 0 within their SDs. The
+  matching machinery does not leak.
+- The PAIR-LEVEL SIGN-FLIP NULL UNDERSTATES VARIANCE ≈ 9–11×:
+  across-universe SD ≈ 0.055–0.067 against sign-flip-implied SD
+  ≈ 0.005–0.007, on both contrasts, all three rules tested.
+- PC(0) HAS A REAL, REPLICATED EFFECT — AND IT CONTRADICTS C2 AS
+  REGISTERED: all 20 universes give Δ_ER < 0 (mean −0.164, SD 0.066)
+  and all 20 give Δ_ED > 0 (mean +0.081, SD 0.025). Cone-local
+  accretion robustly produces the ordering R > E > D at matched
+  battery, not the predicted E > R. The conjecture set needs rebuilding
+  before any Phase B.
+
+**3. Clustered nulls do not fix it (01c).** Kernel-level sign flips
+yield half-bands ≈ the pair-level ones (≈ 0.009 vs the honest ≈ 0.11).
+The dependence is not within-kernel; it is UNIVERSE-LEVEL — every
+kernel, stratum, and pair shares the one realized graph, and members
+recur across kernels. No within-universe resampling scheme can recover
+generator-level variance. This is a mathematical point, not an
+implementation defect.
+
+**4. What this means for the FIELD results (the audit clause of §7,
+executed).** Every single-corpus percentile in the program — the
+growth studies, the deflation control, the gauntlet, the Debian bet —
+is a CONDITIONAL statement: "in this realized corpus, at matched
+features, the cell labels align with gains beyond within-stratum
+relabeling." That statement is true as computed and worth keeping. What
+it is NOT is a generator-level statement — "this ecosystem's growth
+process reads the cell" — because a feature-blind generator can
+produce |Δ| up to ~0.14 in a single universe while its within-universe
+permutation null shows percentile 0 or 100. Generator-level claims can
+only be carried by REPLICATION ACROSS UNIVERSES: independent corpora
+agreeing in sign, and sealed out-of-sample directional hits. On that
+honest scale the program currently has: battery-grade Δ_ER positive on
+Go (+0.22) and Debian (+0.098, sealed direction, landed) — two of two,
+with crates null — and the proof-corpora reversals at distance grain.
+Evidence, genuinely; proof, no. If synthetic universe-scale noise
+(SD ≈ 0.06) transfers even roughly, Debian's +0.098 is ≈ 1.6–2σ of
+generator noise and Go's +0.22 ≈ 3–4σ — suggestive-to-strong, not
+"percentile 100." The 2028 forward register becomes MORE important
+under this reframing, not less: fresh time is the only fresh
+randomness a real corpus ever provides.
+
+**5. Actions.** (a) This postscript, the session log, and a caveat
+postscript in the synthesis paper are committed today; the briefs'
+"percentile 100" language will be tempered in the next editorial pass
+(queued, not silent). (b) `sim-lib.mjs` now supports kernel-clustered
+nulls; adopted for completeness, insufficient alone. (c) Phase B as
+registered (single-universe verdicts) is CANCELLED; the confirmatory
+design must be replicate-based: R fresh universes per rule, statistic
+= across-universe mean against across-universe SD. New conjectures to
+be drafted from the Phase A landscape (the PC family's R > E > D is
+the anchor). (d) Phase C's target shifts accordingly: prove
+unbiasedness (done empirically) AND characterize the sign of the
+PC-family effect analytically.

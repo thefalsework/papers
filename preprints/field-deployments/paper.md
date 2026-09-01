@@ -546,3 +546,31 @@ Isabelle-ecosystem archives and unlike Go — so E-vs-R (battery-proof,
 two ecosystems) and E-vs-D (corpus-contingent) are independent axes,
 which also scopes how P1–P3's E-vs-D forward bets should be read at
 their 2028 horizon. Registered-directional record: 5 for 21.
+
+**POSTSCRIPT (2026-09-01): a program-wide calibration caveat, found by
+the program's own instrument audit.** The accretion study
+(`accretion-study/`, SPEC committed before any code) ran the planned
+self-test: feed the exact Debian-grade estimator synthetic corpora
+grown by rules that provably carry no cell signal (uniform attachment;
+preferential attachment at matched degree). The estimator's point
+statistic came back unbiased — but its within-corpus permutation nulls
+returned confident false verdicts, because the pair-level (and even
+kernel-clustered) sign-flip null understates the true across-universe
+variance of the statistic by roughly an order of magnitude. The
+dependence is universe-level — every pair shares the one realized
+graph — and no within-corpus resampling can recover generator-level
+uncertainty. Consequence, stated at the volume the program's rules
+require: **every single-corpus percentile in this paper is a
+conditional statement about the realized corpus, not a demonstrated
+property of the ecosystem's growth process.** Generator-level claims
+rest on replication across corpora and on sealed out-of-sample
+direction, and on that scale the battery-grade growth finding stands
+at: positive on Go (+0.22) and on Debian (+0.098, the sealed
+tiebreaker, direction called in advance), null on crates — two of two
+sealed-or-survived, one deflation caught in-house — with the
+proof-corpora reversals at distance grain as the contrast class. That
+is genuine evidence with honest error bars, not the certainty the
+percentile language suggested. The 2028 forward register gains weight
+under this reframing: fresh time is the only fresh randomness a real
+corpus provides. Detailed audit record: `accretion-study/SPEC.md`
+postscripts; synthetic replicate data: `accretion-study/results-*.json`.
