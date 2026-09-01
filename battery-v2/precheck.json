@@ -1,0 +1,134 @@
+{
+ "featNames": [
+  "logIn",
+  "logOut",
+  "age",
+  "logPR",
+  "core",
+  "logUpset"
+ ],
+ "go-5f": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 182,
+   "smd": [
+    0.0679,
+    0,
+    0,
+    0.0382,
+    0.0494,
+    0.6961
+   ],
+   "maxSmd5": 0.0679,
+   "smdUpset": 0.6961,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 11489,
+   "smd": [
+    0.0123,
+    0.0804,
+    0,
+    0.0142,
+    0.0063,
+    0.0799
+   ],
+   "maxSmd5": 0.0804,
+   "smdUpset": 0.0799,
+   "feasible": true
+  }
+ },
+ "go-6f": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 51,
+   "smd": [
+    0,
+    0,
+    0,
+    0.0747,
+    0,
+    0.1133
+   ],
+   "maxSmd5": 0.0747,
+   "smdUpset": 0.1133,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 10228,
+   "smd": [
+    0.0079,
+    0.0734,
+    0,
+    0.0132,
+    0.0059,
+    0.0008
+   ],
+   "maxSmd5": 0.0734,
+   "smdUpset": 0.0008,
+   "feasible": true
+  }
+ },
+ "debian-5f": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 268223,
+   "smd": [
+    0.0056,
+    0.0013,
+    0.0096,
+    0.0063,
+    0.0099,
+    0.0478
+   ],
+   "maxSmd5": 0.0099,
+   "smdUpset": 0.0478,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 975145,
+   "smd": [
+    0.0005,
+    0.0234,
+    0.0026,
+    0.0023,
+    0.0152,
+    0.0072
+   ],
+   "maxSmd5": 0.0234,
+   "smdUpset": 0.0072,
+   "feasible": true
+  }
+ },
+ "debian-6f": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 239587,
+   "smd": [
+    0.0018,
+    0.0003,
+    0.0101,
+    0.0104,
+    0.01,
+    0.0006
+   ],
+   "maxSmd5": 0.0104,
+   "smdUpset": 0.0006,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 898051,
+   "smd": [
+    0,
+    0.0231,
+    0.002,
+    0.0017,
+    0.0154,
+    0.0014
+   ],
+   "maxSmd5": 0.0231,
+   "smdUpset": 0.0014,
+   "feasible": true
+  }
+ }
+}
