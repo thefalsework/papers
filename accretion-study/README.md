@@ -85,3 +85,4 @@ begun — two honest negatives.**
 - `SPEC-D.md` — Phase D spec (candidate rules, honesty clauses).
 - `03-sign.mjs` / `results-sign.json` — registered sign measurement (S1 confirms, S2/S3 kill the conjecture).
 - `04-explore-d.mjs` / `results-explore-d.json` — exploratory search; nothing graduates.
+- `05-oracle.mjs` / `results-oracle.json` — the oracle test: **mechanism fully identified.** The cell's battery-transcending signal in PC(0) is harmonic cone-membership mass, ORACLE(x) = Σ 1/|cone(u)| over cones containing x (O2: with ORACLE matched, Δ_ER = −0.004, t = −0.25). Exact uncapped descendant counts do *not* close it (O3, t = −7.0): the structure is concentration of reach, not volume. ORACLE is a pure graph feature → battery v3 is defined for the field.

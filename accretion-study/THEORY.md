@@ -120,11 +120,24 @@ Consequences:
   battery leaves Δ_ER = −0.123 at t = −5.6 — the inversion is NOT
   primarily up-set flux at cap 200. The original conjecture
   (E-members interior, R twins more root-like with larger up-sets)
-  is dead as the explanation. Live candidates for the residual,
+  is dead as the explanation.   Live candidates for the residual,
   next measurables: truncation (raise the cap / exact counts — the
   feature saturates at 200 and cannot see order-of-magnitude
   differences above it) and cone-weighting (flux weights up-set
   members by 1/|cone|; equal capped up-sets can carry unequal flux).
+  **RESOLVED same day (`05-oracle.mjs`, registered): the second
+  suspect is the whole story.** O1: the exact flux functional
+  ORACLE(x) = Σ_{u: x ∈ cone(u)} 1/|cone(u)| out-predicts capped
+  counts in 10/10 universes (corr ≈ 0.44 vs 0.23). O2: with ORACLE
+  in the battery, Δ_ER = −0.004 at t = −0.25 — the inversion
+  vanishes completely; mechanism fully identified. O3: exact
+  *uncapped* counts do NOT close it (t = −7.0) — the missing
+  structure was never volume of reach but **concentration** of
+  reach: membership in many small footprints, harmonically weighted.
+  ORACLE is a pure graph feature, computable on field corpora
+  without reference to any growth rule; battery v3 = v2 + ORACLE is
+  therefore defined, and the Debian claim's next registered test is
+  fixed.
   Field-side corollary, stated at full volume: battery-v2
   certification means "beyond these six features," and the synthetic
   world now exhibits a cell carrying signal beyond all six — the

@@ -48,6 +48,49 @@
 //   Descriptive: battery C, and per-universe corr values.
 //
 // Writes accretion-study/results-oracle.json.
+//
+// ---------------------------------------------------------------------
+// POSTSCRIPT (2026-09-01, after the single registered run; 10 fresh
+// universes, ~80k ER pairs per universe per battery)
+//
+// O1 CONFIRMS, 10/10: corr(ORACLE, gain) ~ 0.41-0.52 in every
+// universe vs 0.20-0.29 for upset_200. The derived functional is the
+// best single predictor of growth, everywhere, as the flux law says.
+//
+// O2 CONFIRMS — MECHANISM FULLY IDENTIFIED: with log1p(ORACLE) in the
+// battery, the across-universe mean Delta_ER = -0.0044, t = -0.25.
+// The R > E effect — which stood at -0.17 (t = -10) against battery
+// v1 and -0.12 (t = -5.6) against battery v2 — VANISHES COMPLETELY
+// when cone-weighted membership mass is matched. Nothing is left for
+// feedback to explain. In PC(0) universes, "what the cell was seeing"
+// now has a closed-form answer:
+//
+//     ORACLE(x) = sum over platforms u with x in cone(u) of 1/|cone(u)|
+//
+// — membership in many SMALL dependency footprints. You grow by being
+// a large share of many toolchains, not by having many dependents.
+//
+// O3: CAP NOT THE STORY (t = -7.0): EXACT uncapped descendant counts
+// leave the effect at -0.147 — barely better than capped. This is the
+// sharpest lesson of the day: the missing structure was never volume
+// of reach, it was CONCENTRATION of reach. Two nodes with identical
+// descendant counts differ enormously in flux if one sits inside a
+// few giant cones and the other inside many small ones. No count
+// feature sees that; the harmonic weighting does.
+//
+// WHY THIS MATTERS BEYOND THE LAB: ORACLE(x) is computable on ANY
+// dependency graph without knowing the growth rule — it is a pure
+// graph feature (harmonic cone-membership mass). It is therefore
+// admissible as a field battery feature. BATTERY V3 = v2 + ORACLE is
+// now defined, and Debian's certified claim has exactly one more
+// knife to survive. If it survives: the cell carries signal beyond
+// the very functional that fully explains the best synthetic
+// counterexample — the strongest certification this method can
+// produce. If it dissolves: package-ecosystem growth is harmonic
+// cone-mass flux, the cells were reading it, and the program has a
+// complete mechanistic account of the field effect. Either branch is
+// a result worth having; the field run should be registered next.
+// ---------------------------------------------------------------------
 
 import { writeFileSync } from "node:fs";
 import { grow, toSnaps, mulberry } from "./sim-lib.mjs";

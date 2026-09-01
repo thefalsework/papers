@@ -1231,6 +1231,38 @@ Two registered/committed-first runs closed the day.
   straddling, root-protected popularity platforms) queued for a
   future replicate-first tier.
 
+## Status update, 2026-09-01 (late night): THE ORACLE TEST — first complete mechanism identification in program history
+
+Registered before run (05-oracle.mjs, 10 fresh PC(0) universes,
+seeds 950000+). The question: what structure does the cell see that
+survives all six battery features?
+
+- O1 CONFIRMS 10/10: the derived flux functional ORACLE(x) =
+  sum over platforms u with x in cone_200(u) of 1/|cone_200(u)|
+  out-predicts capped descendant count in every universe
+  (corr ~0.44 vs ~0.23).
+- O2 CONFIRMS — MECHANISM FULLY IDENTIFIED: with ORACLE in the
+  battery, Delta_ER = -0.0044 at t = -0.25. The R > E inversion
+  (-0.17 at v1, -0.12 at v2) VANISHES. Nothing left for feedback.
+- O3 — the sharpest lesson: exact UNCAPPED descendant counts do NOT
+  close it (t = -7.0). The missing structure was never volume of
+  reach; it is CONCENTRATION of reach — being a large share of many
+  small toolchains, harmonically weighted. No count feature can see
+  it; the 1/|cone| weighting is essential.
+- Answer to "what is the cell seeing, something deeper?": in the lab,
+  YES, and it now has a closed form. The cells were reading harmonic
+  cone-membership mass — a relational-flavored quantity no standard
+  battery carries.
+- NEXT, the obvious and high-stakes move: ORACLE is a pure graph
+  feature, computable on any dependency snapshot with no reference
+  to a growth rule. BATTERY V3 = v2 + ORACLE. Register the Debian
+  (and Go E-vs-D) re-run behind a blind balance pre-check. If Debian
+  survives v3: strongest certification this method can produce (the
+  claim survives the very functional that fully explains the best
+  synthetic counterexample). If it dissolves: complete mechanistic
+  account of field growth (harmonic cone-mass flux) and the cells
+  were its reader. Either branch publishes.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
