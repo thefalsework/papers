@@ -1445,6 +1445,46 @@ regulation-from-within as a sharper temporal-bridge question — does the
 system's own structure induce which observer moves are available?
 (Study 11 trajectories currently impose moves externally.)
 
+## Status update, 2026-09-02 (later): THE ORACLE SCANNER — the flux functional finds work in the wild
+
+The day after the growth claim died, its mathematical residue got a
+job. New folder `oracle-scanner/`: ORACLE repurposed as a supply-chain
+concentration metric, NO causal claim — a ranking judged only by what
+it flags. Four descriptive studies, expectations written first, all
+committed:
+
+1. **xz retrodiction (01).** Debian bookworm 2023, the last release
+   before CVE-2024-3094: liblzma5 ranks **#8 of 63,436 by ORACLE** vs
+   #173 by in-degree (PageRank #36; capped transitive counts saturate
+   and tie at #700). libgcrypt20 #49 vs #150, libexpat1 #38 vs #102;
+   famous packages high on everything. The divergence list surfaces
+   "gateway plumbing" (deg-1, huge cone membership: python3-minimal,
+   libpam-modules-bin) — the exact topology of the xz attack.
+2. **Cap sweep (02).** liblzma5 #8 at every cone cap 50→800; top-100
+   overlap 0.92–0.99 across caps. Not a truncation artifact.
+   (oracleMass gained an optional cap arg, default 200, battery runs
+   untouched.)
+3. **crates.io replication (03).** Starker, as predicted for an open
+   registry: **unicode-ident ORACLE #2 of 84,439 vs in-degree #3,582**
+   (six direct dependents; the canonical quiet single-maintainer crate
+   inside every Rust build). Head = the macro toolchain (libc #1,
+   proc-macro2 #3, quote #4, syn #5). Divergence list is a THREAT
+   CLASS: deg-1 proc-macro companion crates (openssl-macros,
+   wasm-bindgen-macro, ...) — arbitrary code execution at build time,
+   one direct dependent, inside everything.
+4. **Incumbent join (04).** OpenSSF criticality top-1000 (June-2022
+   vintage, matches crates snapshot, pre-dates xz attack; official v2
+   bucket is dead — billing disabled). Of crates ORACLE top-10, ONE
+   present (libc #257). **serde absent, zlib absent**, threat class
+   0/7, xz not-on-GitHub hence structurally invisible. Pike measures
+   fame-and-activity; ORACLE measures load. Pitch with receipts: the
+   incumbent's list contains kubernetes and misses zlib.
+
+Status: strongest applied result the program has produced. Next
+moves if pursued: npm/PyPI replication (bigger corpora, need
+extraction); a short standalone paper or OpenSSF WG writeup; possible
+tie-in as the applied section of the replicate-first methods paper.
+
 **The succession pilot (named, not started).** The workable next
 empirical line, superior to shopping for another tritone (which was
 forced twice over — logic at six, arithmetic at twelve — and cannot be

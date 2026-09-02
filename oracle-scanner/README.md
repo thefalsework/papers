@@ -33,13 +33,25 @@ crates (openssl-macros, wasm-bindgen-macro, …) — arbitrary code
 execution at build time, one direct dependent, inside everything,
 unseen by dependent-count scoring.
 
+**The incumbent test: one-sided.** Joined against the OpenSSF
+criticality-score top-1000 (June-2022 vintage — matches the crates
+snapshot, pre-dates the xz backdoor). Of the crates ORACLE top-10,
+**one** appears in the incumbent's 1000 (libc, #257): serde absent,
+zlib absent, syn/proc-macro2/quote/unicode-ident absent, the deg-1
+proc-macro threat class 0-for-7. xz itself was not on GitHub in 2022 —
+structurally invisible to the GitHub-only pipeline at any rank. The
+Pike score measures fame-and-activity; ORACLE measures load. The pitch
+with receipts: the incumbent's list contains kubernetes and misses
+zlib.
+
 **Honest limits.** Descriptive, unscored; global rank correlation with
 volume metrics is high (0.95–0.99) — the new information lives at the
 head of the ranking, which is where prioritization decisions are made.
-Remaining named measurable: join against published OpenSSF criticality
-scores (the direct incumbent test).
+The incumbent join uses the v1-era list (the v2 all.csv bucket is dead:
+billing disabled); mappings hand-curated; one-directional test.
 
 **Files.**
 - `01-xz-retrodiction.mjs` / `xz-retrodiction.json` — the pilot; expectations in header, verdict in postscript.
 - `02-cap-sweep.mjs` / `cap-sweep.json` — truncation robustness.
 - `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
+- `04-incumbent.mjs` / `incumbent.json` / `ossf-top1000.csv` — the incumbent join; verdict in postscript.

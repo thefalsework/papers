@@ -1,0 +1,222 @@
+{
+ "incumbentSize": 999,
+ "oracleTop10": [
+  {
+   "oracleRank": 1,
+   "name": "libc",
+   "inDeg": 4330,
+   "repo": "rust-lang/libc",
+   "inTop1000": true,
+   "incumbentRank": 257,
+   "pike": 0.76607
+  },
+  {
+   "oracleRank": 2,
+   "name": "unicode-ident",
+   "inDeg": 6,
+   "repo": "dtolnay/unicode-ident",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 3,
+   "name": "proc-macro2",
+   "inDeg": 3392,
+   "repo": "dtolnay/proc-macro2",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 4,
+   "name": "quote",
+   "inDeg": 4135,
+   "repo": "dtolnay/quote",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 5,
+   "name": "syn",
+   "inDeg": 4202,
+   "repo": "dtolnay/syn",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 6,
+   "name": "cfg-if",
+   "inDeg": 835,
+   "repo": "alexcrichton/cfg-if",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 7,
+   "name": "serde",
+   "inDeg": 16012,
+   "repo": "serde-rs/serde",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 8,
+   "name": "num-traits",
+   "inDeg": 2040,
+   "repo": "rust-num/num-traits",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 9,
+   "name": "bitflags",
+   "inDeg": 1628,
+   "repo": "bitflags/bitflags",
+   "inTop1000": false
+  },
+  {
+   "oracleRank": 10,
+   "name": "lazy_static",
+   "inDeg": 5033,
+   "repo": "rust-lang-nursery/lazy-static.rs",
+   "inTop1000": false
+  }
+ ],
+ "watchCrates": [
+  {
+   "pkg": "unicode-ident",
+   "name": "unicode-ident",
+   "repo": "dtolnay/unicode-ident",
+   "inTop1000": false
+  },
+  {
+   "pkg": "proc-macro2",
+   "name": "proc-macro2",
+   "repo": "dtolnay/proc-macro2",
+   "inTop1000": false
+  },
+  {
+   "pkg": "syn",
+   "name": "syn",
+   "repo": "dtolnay/syn",
+   "inTop1000": false
+  },
+  {
+   "pkg": "cfg-if",
+   "name": "cfg-if",
+   "repo": "alexcrichton/cfg-if",
+   "inTop1000": false
+  },
+  {
+   "pkg": "memchr",
+   "name": "memchr",
+   "repo": "BurntSushi/memchr",
+   "inTop1000": false
+  },
+  {
+   "pkg": "once_cell",
+   "name": "once_cell",
+   "repo": "matklad/once_cell",
+   "inTop1000": false
+  },
+  {
+   "pkg": "serde",
+   "name": "serde",
+   "repo": "serde-rs/serde",
+   "inTop1000": false
+  },
+  {
+   "pkg": "libc",
+   "name": "libc",
+   "repo": "rust-lang/libc",
+   "inTop1000": true,
+   "incumbentRank": 257,
+   "pike": 0.76607
+  }
+ ],
+ "threatRows": [
+  {
+   "pkg": "minimal-lexical",
+   "name": "minimal-lexical",
+   "repo": "Alexhuszagh/minimal-lexical",
+   "inTop1000": false
+  },
+  {
+   "pkg": "proc-macro-error-attr",
+   "name": "proc-macro-error-attr",
+   "repo": "TedDriggs/proc-macro-error",
+   "inTop1000": false
+  },
+  {
+   "pkg": "wasm-bindgen-macro",
+   "name": "wasm-bindgen-macro",
+   "repo": "rustwasm/wasm-bindgen",
+   "inTop1000": false
+  },
+  {
+   "pkg": "want",
+   "name": "want",
+   "repo": "seanmonstar/want",
+   "inTop1000": false
+  },
+  {
+   "pkg": "darling_macro",
+   "name": "darling_macro",
+   "repo": "TedDriggs/darling",
+   "inTop1000": false
+  },
+  {
+   "pkg": "openssl-macros",
+   "name": "openssl-macros",
+   "repo": "sfackler/rust-openssl",
+   "inTop1000": false
+  },
+  {
+   "pkg": "pin-project-internal",
+   "name": "pin-project-internal",
+   "repo": "taiki-e/pin-project",
+   "inTop1000": false
+  }
+ ],
+ "watchDebian": [
+  {
+   "pkg": "liblzma5",
+   "name": "liblzma5",
+   "repo": "NOT ON GITHUB",
+   "inTop1000": false,
+   "structurallyInvisible": true
+  },
+  {
+   "pkg": "xz-utils",
+   "name": "xz-utils",
+   "repo": "NOT ON GITHUB",
+   "inTop1000": false,
+   "structurallyInvisible": true
+  },
+  {
+   "pkg": "zlib1g",
+   "name": "zlib1g",
+   "repo": "madler/zlib",
+   "inTop1000": false
+  },
+  {
+   "pkg": "libssl3",
+   "name": "libssl3",
+   "repo": "openssl/openssl",
+   "inTop1000": true,
+   "incumbentRank": 42,
+   "pike": 0.82697
+  },
+  {
+   "pkg": "libexpat1",
+   "name": "libexpat1",
+   "repo": "libexpat/libexpat",
+   "inTop1000": false
+  },
+  {
+   "pkg": "libxml2",
+   "name": "libxml2",
+   "repo": "GNOME/libxml2",
+   "inTop1000": false
+  },
+  {
+   "pkg": "libgcrypt20",
+   "name": "libgcrypt20",
+   "repo": "NOT ON GITHUB",
+   "inTop1000": false,
+   "structurallyInvisible": true
+  }
+ ]
+}
