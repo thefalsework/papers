@@ -50,6 +50,42 @@
 //
 // Depends on: sim-lib.mjs growers; C:/dev/conemass/conemass.mjs (the
 // shipped CLI, pinned by commit in the postscript).
+//
+// ------------------------------------------------------------------
+// POSTSCRIPT (2026-09-02, after the one registered run; instrument =
+// conemass commit 6d9d8b1, this script registered at e8a5ae0).
+//
+// E1 LANDS: every real corpus shows the signature, strongly
+//   (QUIET50 = 33 / 32 / 20; liblzma5 and unicode-ident are exemplar
+//   rows, as expected).
+// E2 FAILS: the null generators show it too (U mean 16.3, PA 5.3).
+// E3 FAILS, INVERTED: PC(0) — the cone-local mechanism, the one whose
+//   growth signal ORACLE completely explains — produces QUIET50 = 0
+//   in all replicates. So do PC(0.5) and FRONT(2000). The mechanisms
+//   we predicted would produce the quiet head are precisely the ones
+//   that cannot.
+// E4: non-monotone (0, 0, 19.7 across beta) — same inversion.
+//
+// VERDICT per the fixed interpretation table: the quiet-head signature
+// is a GENERIC BYPRODUCT of growth with global (uniform-reachable)
+// dependency draws, not a mechanism fingerprint. The validity-metric
+// idea is DEAD as registered. Honest bonus finding, descriptive only:
+// the inversion is clean and symmetric — cone-LOCAL draws (PC(0),
+// PC(0.5), FRONT) yield QUIET50 = 0 because within-cone draws keep
+// handing direct dependents to exactly the packages that sit in many
+// cones, welding concentration rank to volume rank at the head;
+// global draws (U, PA, PC(1), SIB, MIX) let old deep nodes accumulate
+// cone membership without proportional in-degree, opening the gap.
+// Divergence between concentration and volume at the head is a
+// signature of growth where newcomers can attach anywhere, which real
+// ecosystems evidently are.
+//
+// WHAT THIS DOES NOT TOUCH: the retrodictive facts (liblzma5 #8,
+// unicode-ident #2) are facts about real corpora and stand regardless
+// of which mechanisms can or cannot fake the signature. What dies is
+// only the "conemass as realism check for synthetic corpora" idea:
+// even uniform attachment passes that check.
+// ------------------------------------------------------------------
 
 import { grow } from "./sim-lib.mjs";
 import { writeFileSync, readFileSync, rmSync } from "node:fs";

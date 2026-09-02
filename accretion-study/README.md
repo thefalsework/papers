@@ -74,6 +74,20 @@ begun — two honest negatives.**
   none produces E > R. The field ordering remains unexplained — which
   is the finding.
 
+**Phase E (2026-09-02): the discriminator experiment — registered kill,
+with an inversion worth keeping.** Is the quiet-load-bearing head
+signature (high concentration rank, low dependent-count rank — the
+liblzma5/unicode-ident profile conemass surfaces) a mechanism
+fingerprint or a generic byproduct? Registered QUIET50 statistic, one
+run (`06-signature.mjs`). E1 lands (all real corpora show it, 20-33 of
+the top 50); E2 fails (U and PA show it too); E3 fails **inverted**
+(PC(0), PC(0.5), FRONT — the cone-local family — produce exactly zero).
+Verdict per the pre-fixed table: generic byproduct; the
+"conemass-as-validity-check-for-synthetic-corpora" idea is dead. The
+descriptive inversion: cone-local draws weld concentration rank to
+volume rank at the head; global draws open the gap. The retrodictive
+facts about real corpora are untouched.
+
 **Files.**
 - `SPEC.md` — registered spec + two dated postscripts (audit; B′/C).
 - `sim-lib.mjs` — growers (U, PA, PC(β)) + the shared Debian-grade estimator.
@@ -85,4 +99,5 @@ begun — two honest negatives.**
 - `SPEC-D.md` — Phase D spec (candidate rules, honesty clauses).
 - `03-sign.mjs` / `results-sign.json` — registered sign measurement (S1 confirms, S2/S3 kill the conjecture).
 - `04-explore-d.mjs` / `results-explore-d.json` — exploratory search; nothing graduates.
+- `06-signature.mjs` / `results-signature.json` — Phase E discriminator: registered kill (generic byproduct) + the cone-local inversion.
 - `05-oracle.mjs` / `results-oracle.json` — the oracle test: **mechanism fully identified.** The cell's battery-transcending signal in PC(0) is harmonic cone-membership mass, ORACLE(x) = Σ 1/|cone(u)| over cones containing x (O2: with ORACLE matched, Δ_ER = −0.004, t = −0.25). Exact uncapped descendant counts do *not* close it (O3, t = −7.0): the structure is concentration of reach, not volume. ORACLE is a pure graph feature → battery v3 is defined for the field.
