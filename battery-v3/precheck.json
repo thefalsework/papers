@@ -1,0 +1,143 @@
+{
+ "featNames": [
+  "logIn",
+  "logOut",
+  "age",
+  "logPR",
+  "core",
+  "logUpset",
+  "logOracle"
+ ],
+ "go-6f": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 51,
+   "signed": [
+    0,
+    0,
+    0,
+    0.0747,
+    0,
+    0.1133,
+    0.0711
+   ],
+   "maxSmdMatched": 0.1133,
+   "smdOracle": 0.0711,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 10262,
+   "signed": [
+    -0.0062,
+    -0.0759,
+    0,
+    0.0141,
+    -0.0071,
+    0.0002,
+    0.0158
+   ],
+   "maxSmdMatched": 0.0759,
+   "smdOracle": 0.0158,
+   "feasible": true
+  }
+ },
+ "go-7f": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 51,
+   "signed": [
+    0,
+    0,
+    0,
+    0.0747,
+    0,
+    0.1133,
+    0.0711
+   ],
+   "maxSmdMatched": 0.1133,
+   "smdOracle": 0.0711,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 10074,
+   "signed": [
+    -0.0046,
+    -0.074,
+    0,
+    0.0133,
+    -0.0055,
+    -0.0024,
+    0.0131
+   ],
+   "maxSmdMatched": 0.074,
+   "smdOracle": 0.0131,
+   "feasible": true
+  }
+ },
+ "debian-6f": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 241129,
+   "signed": [
+    -0.0019,
+    0.0001,
+    -0.0098,
+    0.0102,
+    0.0103,
+    -0.0004,
+    -0.0253
+   ],
+   "maxSmdMatched": 0.0103,
+   "smdOracle": -0.0253,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 902761,
+   "signed": [
+    0.0001,
+    -0.0231,
+    -0.0018,
+    0.0018,
+    -0.0154,
+    0.0014,
+    0.0146
+   ],
+   "maxSmdMatched": 0.0231,
+   "smdOracle": 0.0146,
+   "feasible": true
+  }
+ },
+ "debian-7f": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 229646,
+   "signed": [
+    -0.0018,
+    0,
+    -0.0102,
+    0.0114,
+    0.0104,
+    -0.0008,
+    -0.0002
+   ],
+   "maxSmdMatched": 0.0114,
+   "smdOracle": -0.0002,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 884598,
+   "signed": [
+    0,
+    -0.0222,
+    -0.0023,
+    0.0005,
+    -0.0151,
+    0.0007,
+    0.0089
+   ],
+   "maxSmdMatched": 0.0222,
+   "smdOracle": 0.0089,
+   "feasible": true
+  }
+ }
+}
