@@ -1,0 +1,82 @@
+{
+ "featNames": [
+  "logIn",
+  "logOut",
+  "age",
+  "logPR",
+  "core",
+  "logUpset",
+  "logOracle",
+  "momentum"
+ ],
+ "debian-7f-b1to7": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 215861,
+   "signed": [
+    -0.0008,
+    -0.0001,
+    -0.0103,
+    0.0112,
+    0.0097,
+    -0.0009,
+    -0.0006,
+    -0.0242
+   ],
+   "maxSmdMatched": 0.0112,
+   "smdMomentum": -0.0242,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 750526,
+   "signed": [
+    -0.0001,
+    -0.0217,
+    -0.0026,
+    0.0007,
+    -0.0158,
+    0.0008,
+    0.0089,
+    -0.0084
+   ],
+   "maxSmdMatched": 0.0217,
+   "smdMomentum": -0.0084,
+   "feasible": true
+  }
+ },
+ "debian-8f-b1to7": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 201031,
+   "signed": [
+    -0.0002,
+    0.0005,
+    -0.0099,
+    0.0113,
+    0.0099,
+    -0.0006,
+    0.0003,
+    -0.0001
+   ],
+   "maxSmdMatched": 0.0113,
+   "smdMomentum": -0.0001,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 703078,
+   "signed": [
+    -0.0001,
+    -0.0214,
+    -0.0026,
+    0.0007,
+    -0.0157,
+    0.0007,
+    0.0075,
+    0
+   ],
+   "maxSmdMatched": 0.0214,
+   "smdMomentum": 0,
+   "feasible": true
+  }
+ }
+}
