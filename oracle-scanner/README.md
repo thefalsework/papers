@@ -6,8 +6,9 @@
 dated top-1000 rankings for Debian trixie (2025) and crates.io (2022).
 It was split out of this directory with history intact; this folder
 keeps the research record (the study scripts and their raw outputs).
-The writeup for a security audience is
-`preprints/quiet-criticality/paper.md`.
+The writeup for a security audience ships with the tool:
+[conemass/paper/quiet-criticality.md](https://github.com/thefalsework/conemass/blob/main/paper/quiet-criticality.md)
+(`preprints/quiet-criticality/` here is a pointer).
 
 **Idea.** ORACLE(x) = Σ 1/|cone(u)| over truncated dependency cones
 containing x — the flux-law functional from `accretion-study/THEORY.md`,
