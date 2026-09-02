@@ -48,6 +48,26 @@
 //     (per the program's rules, at full volume, same day).
 //
 // Writes battery-v4/results.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-09-01)
+//
+//   BV4-1 (Debian E-vs-R, PRIMARY): **HOLDS.** Delta_ER = +0.0828,
+//   null [-0.0104, +0.0106], pct 100, 203,437 pairs, maxSMD 0.0117
+//   over all eight features. The 7-feature bridge on the same
+//   baselines reads +0.0809 — momentum's marginal contribution to the
+//   estimate is +0.002, i.e. nothing. The full trajectory, now four
+//   battery generations: +0.098 (v1) -> +0.083 (v2) -> +0.090 (v3)
+//   -> +0.083 (v4, baselines 1..7). The most standard control in
+//   growth prediction changes the answer not at all.
+//
+//   Descriptive: Delta_ED = -0.1344 (REVERSES) — D > E robust to
+//   momentum as well; the two-axis picture unchanged.
+//
+// SCOREBOARD: BV4-1 hit. Registered-directional record: 10 for 27.
+// The seedbed paper's §7 [H] commitment is RESOLVED to survival; the
+// paper's result of record becomes battery v4.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { buildSnap, firstSeenOf, makeGate, makeDistancer } from "../deflation-control/lib.mjs";

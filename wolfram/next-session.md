@@ -1319,6 +1319,44 @@ channels); (3) ORACLE-vs-criticality-score comparison (practical
 pitch); (4) consider arXiv routing for the seedbed paper once
 battery v4 has run (the [H] should be resolved before submission).
 
+## Status update, 2026-09-01 (after review notes): BATTERY V4 — Debian survives momentum; the paper reaches v0.2
+
+External-context review of the paper draft ordered priorities: momentum
+first, everything else editing. Executed same evening.
+
+**Battery v4 (battery-v4/).** Momentum = signed-log prior-interval
+in-degree gain, baseline-measurable; baselines shift to 2009–2021 (2007
+has no predecessor), with a 7-feature bridge on identical baselines to
+separate feature effect from baseline change. Blind pre-check: momentum
+already nearly balanced inside v3-battery pairs, signed SMD −0.024 —
+*against* E, same conservative shape as the oracle pre-check; 8-feature
+match fully feasible. Registered run: **BV4-1 HOLDS** — Delta_ER =
++0.0828 on 203,437 pairs, maxSMD 0.0117 over eight features; bridge
+reads +0.0809, so momentum's marginal contribution is +0.002 (nothing).
+Descriptive Delta_ED = −0.134 (D > E robust to momentum too). Four
+battery generations: +0.098 → +0.083 → +0.090 → +0.083. **Record: 10
+for 27.** The paper's [H] commitment is resolved to survival.
+
+**Paper v0.2 (preprints/seedbed/paper.md).** All four review edits:
+(1) retitled — "Seedbed" cut; now "A Pre-Registered Growth Effect in
+the Debian Archive, and the Adversarial Program That Failed to Kill
+It"; (2) abstract cut to claim → four-battery stability → kill record;
+(3) §5 "to our knowledge, an unusual loop" replaced with a description
+plus nearest-neighbor practices named (adversarial collaboration,
+specification curves, placebo outcomes), letting the reader judge;
+(4) §7 momentum admission replaced by the resolution; remaining named
+knives are relational features and institutional covariates. §3 gains
+step 9; §4 gains the v4 row + bridge note; §6 gains one line noting a
+standalone methods paper is planned for the flux law/oracle/audit (the
+one-paper-or-two decision: this paper stays Debian; the methods paper
+is queued). Briefs and essay scoreboards updated to 10/27.
+
+NEXT SESSION, in order: (1) arXiv routing for the paper — the [H] is
+resolved, nothing blocks submission prep; (2) the standalone methods
+paper (flux law + oracle + replicate-first audit) — reviewer judged it
+strong enough to stand alone; (3) the E > R generative search (three
+named channels); (4) ORACLE-vs-criticality-score comparison.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

@@ -1,0 +1,82 @@
+{
+ "v4": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 203437,
+   "maxSmd": 0.0117,
+   "obs": 0.0828,
+   "lo": -0.0104,
+   "hi": 0.0106,
+   "pct": 100,
+   "verdict": "HOLDS",
+   "smd": {
+    "logIn": 0.0002,
+    "logOut": 0.0004,
+    "age": 0.0103,
+    "logPR": 0.0117,
+    "core": 0.0097,
+    "logUpset": 0.0002,
+    "logOracle": 0.0005,
+    "momentum": 0.0001
+   }
+  },
+  "ED": {
+   "pairs": 703638,
+   "maxSmd": 0.0218,
+   "obs": -0.1344,
+   "lo": -0.0099,
+   "hi": 0.0097,
+   "pct": 0,
+   "verdict": "REVERSES",
+   "smd": {
+    "logIn": 0,
+    "logOut": 0.0218,
+    "age": 0.0027,
+    "logPR": 0.0005,
+    "core": 0.0161,
+    "logUpset": 0.0008,
+    "logOracle": 0.0074,
+    "momentum": 0
+   }
+  }
+ },
+ "bridge7f": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 216969,
+   "maxSmd": 0.0113,
+   "obs": 0.0809,
+   "lo": -0.0107,
+   "hi": 0.0098,
+   "pct": 100,
+   "verdict": "HOLDS",
+   "smd": {
+    "logIn": 0.0007,
+    "logOut": 0.0001,
+    "age": 0.0111,
+    "logPR": 0.0113,
+    "core": 0.01,
+    "logUpset": 0.0005,
+    "logOracle": 0.0003
+   }
+  },
+  "ED": {
+   "pairs": 752128,
+   "maxSmd": 0.0215,
+   "obs": -0.1459,
+   "lo": -0.0098,
+   "hi": 0.0102,
+   "pct": 0,
+   "verdict": "REVERSES",
+   "smd": {
+    "logIn": 0.0001,
+    "logOut": 0.0215,
+    "age": 0.0028,
+    "logPR": 0.001,
+    "core": 0.016,
+    "logUpset": 0.0007,
+    "logOracle": 0.009
+   }
+  }
+ }
+}

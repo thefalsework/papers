@@ -264,12 +264,17 @@ world grows; it reads off any dependency graph. So it went to the
 field, sealed bets first. Go's last crown dissolved — a miss, scored
 as a miss, and the garden leaves the certified table with every one
 of its celebrated effects explained by the project's own hand. Debian
-did not move. Three generations of ever-sharper twins — the
-reviewer's arsenal, the theory's first knife, the theory's perfect
-knife — and its number sat still: +0.098, +0.083, +0.090. One claim
-stands, the one that was bet blind on untouched ground, and what
-remains unexplained is exactly the right thing to be haunted by:
-nothing anyone has built grows the way Debian grows.
+did not move. Then the paper draft named its own last soft spot in
+print — nobody had yet matched on a package's *own recent growth*, the
+plainest control in any reviewer's toolbox — and rather than submit
+with a promise, the project ran it the same evening, sealed as
+always. Debian did not move. Four generations of ever-sharper twins —
+the reviewer's arsenal, the theory's first knife, the theory's
+perfect knife, the reviewer's first question — and its number sat
+still: +0.098, +0.083, +0.090, +0.083. One claim stands, the one that
+was bet blind on untouched ground, and what remains unexplained is
+exactly the right thing to be haunted by: nothing anyone has built
+grows the way Debian grows.
 
 ## What it all says
 
@@ -312,12 +317,13 @@ stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that have overruled their own maker seventeen times in twenty-six sealed
+that have overruled their own maker seventeen times in twenty-seven sealed
 bets, one impossible chair that turned out to be the realest thing in every
 world we pointed the instrument at, one fresh world whose number would not
-move through three generations of ever-sharper knives — the last one
-forged by the theory itself and perfect against its own toy worlds — and
-more predictions sitting in the open, waiting to be wrong.
+move through four generations of ever-sharper knives — one forged by the
+theory itself and perfect against its own toy worlds, the last the
+plainest control in the reviewer's toolbox — and more predictions sitting
+in the open, waiting to be wrong.
 
 ---
 

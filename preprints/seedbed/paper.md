@@ -1,12 +1,15 @@
-# The Seedbed Claim: A Pre-Registered Growth Effect in the Debian Archive, and the Adversarial Program That Failed to Kill It
+# A Pre-Registered Growth Effect in the Debian Archive, and the Adversarial Program That Failed to Kill It
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.1, 2026-09-01. Written the day the result reached its
-final form. Primary sources are the study folders cited per-claim
-(`software-study/`, `deflation-control/`, `baseline-gauntlet/`,
-`debian-study/`, `accretion-study/`, `battery-v2/`, `battery-v3/`), each
-carrying its pre-registrations inline — committed before first run — and its
-raw output. This paper contains no new runs: it is the account of record.
+**Version.** Draft v0.2, 2026-09-01. v0.1 was written the day the result
+reached battery-v3 form and committed to running the momentum control
+before submission; v0.2 reports that run (battery v4, sealed, HOLDS),
+retitles, and tightens the abstract. Primary sources are the study folders
+cited per-claim (`software-study/`, `deflation-control/`,
+`baseline-gauntlet/`, `debian-study/`, `accretion-study/`, `battery-v2/`,
+`battery-v3/`, `battery-v4/`), each carrying its pre-registrations
+inline — committed before first run — and its raw output. This paper
+contains no new runs: it is the account of record.
 **Status discipline.** Every claim carries one of the program's grades:
 **[K]** kernel-checked in Lean 4 against Mathlib4 (axiom audits: `propext`,
 `Classical.choice`, `Quot.sound` only; no `sorry`); **[C]** classical
@@ -19,36 +22,26 @@ load-bearing.
 
 ## Abstract
 
-We report one empirical claim and the record of every attempt to destroy it.
-**The claim [computed]:** in the Debian archive (ten stable releases,
-2007–2025, main/binary-amd64; a dependency is installed, executed code),
-membership in the *Exploitation cell* of an algebraically defined partition —
-the territory a commitment claims but does not settle, computed from the
-dependency graph alone — predicts future dependency growth beyond in-degree,
-out-degree, age, exact undirected graph distance, PageRank, k-core,
-truncated transitive-dependent count, and harmonic cone-membership mass.
-The effect was **sealed as an out-of-sample directional bet before the
-corpus was ever measured** and landed on the first try; across three
-generations of successively sharper matching batteries its point estimate
-did not move (+0.098 → +0.083 → +0.090 mean excess dependents per matched
-pair, final form on 229,513 pairs balanced to max |SMD| = 0.0116 over seven
-features). **The record:** the same instrument run by the same program
-produced three comparable effects in other corpora — crates.io, and two on
-the Go standard library — and the program killed all three itself, the
-last two with confounds *derived from its own generative theory* rather
-than guessed: a replicate-universe audit exposed a program-wide ~10×
-variance understatement in within-corpus permutation nulls; a flux law
-proved on synthetic accretion models identified truncated
-transitive-dependent count and then harmonic cone-mass as the quantities
-standard batteries cannot see; each was added to the battery in a sealed
-re-run; each killed a Go effect and left Debian unmoved. The registered
-directional record across the program is 9 for 26, every miss reported at
-the prominence of a hit. Seven mechanism families of synthetic growth were
-tested; none produces the Debian ordering, and the one complete synthetic
-counterexample is fully explained by a closed-form functional that fails
-to explain Debian. What grows Debian's claimed-but-unsettled territory is,
-at present, structure no feature we can derive expresses and no rule we
-can write produces. We state exactly what would kill the claim, and when.
+In the Debian archive (ten stable releases, 2007–2025; a dependency is
+installed, executed code), membership in the *Exploitation cell* of an
+algebraically defined partition — territory a commitment claims but does
+not settle, computed from the dependency graph alone — predicts future
+dependency growth beyond in-degree, out-degree, age, exact graph distance,
+PageRank, k-core, transitive-dependent count, harmonic cone-membership
+mass, and the node's own prior growth [computed]. The direction was sealed
+as an out-of-sample bet before the corpus was first measured and landed on
+the first try; across four generations of successively sharper matching
+batteries the estimate has not moved (+0.098 → +0.083 → +0.090 → +0.083
+excess dependents per matched pair; final form 203,437 pairs, eight
+features balanced to max |SMD| = 0.0117). The claim's warrant is its
+adversarial history: the same instrument produced three comparable effects
+elsewhere (crates.io; two on Go), and the program killed all three itself
+— the last two with confounds derived from its own generative theory,
+built to explain synthetic counterexamples and aimed at the program's own
+trophies the same day. The registered directional record is 10 for 27,
+every miss reported at the prominence of a hit; no mechanism yet written
+produces the Debian ordering and no feature yet derived deflates it. We
+state exactly what would kill the claim, and when.
 
 ## 1. The claim, in full
 
@@ -65,22 +58,24 @@ alone; no future information enters.
 **Claim [computed]:** pair each Exploitation-cell package with a
 Refusal-cell package under the same kernel at *identical* exact undirected
 graph distance to the kernel's down-set, matched greedily without
-replacement within a 0.5-caliper ball in the z-space of seven features —
+replacement within a 0.5-caliper ball in the z-space of eight features —
 log1p in-degree, log1p out-degree, first-seen index, log PageRank
 (α = 0.85, depended-upon direction), k-core number, log1p truncated
 transitive-dependent count (cap 200), log1p harmonic cone-membership mass
-(§6) — with a pre-registered balance gate of max |SMD| ≤ 0.10 per feature.
-Over 2,400 kernels across eight biennial baselines (2007–2021, horizon two
-releases ≈ four years), the Exploitation member gains, on average, **+0.090
-more dependents** than its matched Refusal twin (229,513 pairs; post-match
-max |SMD| = 0.0116; conditional sign-flip band ±0.009; `battery-v3/`).
-Under the six-feature battery the estimate was +0.083 (237,078 pairs);
-under the original five-feature battery, +0.098 (264,330 pairs); the
-original run was a sealed out-of-sample bet registered before the corpus
-was first scored (`debian-study/03-bet.mjs`). The registered-descriptive
-secondary, reported at equal volume: Debian's Distribution cell out-grows
-its Exploitation cell at matched everything (−0.158 at v3) — the E-over-R
-and E-versus-D axes are independent, and only the first is claimed.
+(§6), and signed-log momentum (the package's own prior-interval in-degree
+gain) — with a pre-registered balance gate of max |SMD| ≤ 0.10 per
+feature. Over 2,100 kernels across seven biennial baselines (2009–2021,
+horizon two releases ≈ four years), the Exploitation member gains, on
+average, **+0.083 more dependents** than its matched Refusal twin
+(203,437 pairs; post-match max |SMD| = 0.0117; conditional sign-flip band
+±0.011; `battery-v4/`). Under earlier batteries: +0.090 (seven features,
+229,513 pairs), +0.083 (six features), +0.098 (five features, 264,330
+pairs) — the original run a sealed out-of-sample bet registered before
+the corpus was first scored (`debian-study/03-bet.mjs`). The
+registered-descriptive secondary, reported at equal volume: Debian's
+Distribution cell out-grows its Exploitation cell at matched everything
+(−0.134 at v4) — the E-over-R and E-versus-D axes are independent, and
+only the first is claimed.
 
 ## 2. The instrument
 
@@ -109,7 +104,7 @@ and confirmed on fresh seeds at 20 universes per rule [computed];
 universe level; no within-corpus resampling recovers generator-level
 variance [computed]. Consequently this paper's percentiles are reported
 only as *conditional* statements, and the claim's warrant is provenance:
-a sealed directional bet on an untouched corpus, followed by three
+a sealed directional bet on an untouched corpus, followed by four
 generations of sealed re-runs under successively sharper batteries. That
 is the strongest form of evidence this method can produce, and the paper
 claims no stronger form.
@@ -168,9 +163,17 @@ The claim's credibility is the kill record around it. In order
    table entirely: every Go and crates effect the program ever
    celebrated was caught and explained in-house, the last two by
    same-day theory.
+9. **Battery v4 (2026-09-01).** Momentum — the standard autoregressive
+   control, and this paper's own declared lead vulnerability in v0.1 —
+   added under sealed registration (baselines shift to 2009–2021; a
+   seven-feature bridge on identical baselines separates the feature's
+   effect from the baseline change). Blind pre-check: momentum nearly
+   balanced in the prior pairs, slightly *against* E (signed SMD
+   −0.024). **Debian held** (+0.083 vs bridge +0.081: momentum's
+   marginal contribution is +0.002).
 
-Registered directional record across the program after step 8: **9 for
-26**. The graveyard is not overhead; under §2(b)'s reading discipline it
+Registered directional record across the program after step 9: **10 for
+27**. The graveyard is not overhead; under §2(b)'s reading discipline it
 is most of the evidence.
 
 ## 4. The result of record
@@ -180,15 +183,20 @@ is most of the evidence.
 | v1 (sealed bet) | in, out, age, PageRank, core | 264,330 | 0.0097 | **+0.098** | ±0.015 |
 | v2 (+ up-set) | + transitive dependents (cap 200) | 237,078 | 0.0104 | **+0.083** | ±0.012 |
 | v3 (+ oracle) | + harmonic cone-mass | 229,513 | 0.0116 | **+0.090** | ±0.009 |
+| v4 (+ momentum) | + prior-interval gain (baselines 2009–2021) | 203,437 | 0.0117 | **+0.083** | ±0.011 |
 
-Eight baselines, 2007–2021; horizon two releases; 2,400 evaluable kernels;
-gains = horizon in-degree minus baseline in-degree at the package level.
-The stability is the finding: each battery generation was added *because
-it had just killed another corpus's effect*, and Debian's estimate moved
-within noise each time. Secondary, registered-descriptive throughout:
-Δ_ED ≈ −0.16 at every battery — in Debian the boundary-straddlers grow
-hardest of all, so the certified claim is specifically *shadow-over-
-outside*, not *shadow-over-everything*.
+v1–v3: eight baselines 2007–2021, 2,400 evaluable kernels; v4: seven
+baselines 2009–2021, 2,100 kernels (momentum needs a predecessor
+snapshot), with a seven-feature bridge on the v4 baselines reading +0.081
+— the baseline change, not the feature, accounts for the small shift from
+v3. Horizon two releases; gains = horizon in-degree minus baseline
+in-degree at the package level. The stability is the finding: batteries
+v2 and v3 were each added *because they had just killed another corpus's
+effect*, v4 because it was the strongest control not yet run, and
+Debian's estimate moved within noise each time. Secondary,
+registered-descriptive throughout: Δ_ED ≈ −0.13 to −0.16 at every battery
+— in Debian the boundary-straddlers grow hardest of all, so the certified
+claim is specifically *shadow-over-outside*, not *shadow-over-everything*.
 
 ## 5. What killed the others (and why that is the method)
 
@@ -207,10 +215,14 @@ Debian survived, each caught by the program before any external referee:
 The pattern deserves emphasis: **the second and third knives were derived,
 not guessed.** The program built generative models, proved what they
 reward, extracted the reward functional in closed form, and aimed it at
-its own certified results. This is, to our knowledge, an unusual loop:
-theory manufactured specifically to assassinate the theory's own best
-empirical support — with the survivor earning its standing from the
-quality of the assassins.
+its own certified results, twice, the same day each functional was
+identified. We simply describe the loop — generative theory manufactured
+specifically to attack the theory's own best empirical support, with the
+survivor's standing resting on the quality of the attacks — and let the
+reader judge its relation to existing practice (adversarial
+collaboration, specification-curve analysis, placebo-outcome designs are
+the nearest neighbors we know; none, as far as we can tell, derives its
+confounds from a mechanistic model built for the purpose).
 
 ## 6. The theory contribution: the flux law and the oracle functional
 
@@ -235,6 +247,11 @@ it persists at t = −7.0. The operative structure is **concentration of
 reach, not volume** — invisible to every count-style predictor including
 PageRank, expressible only with the harmonic weighting.
 
+(The flux law, the oracle functional, and the replicate-first audit
+methodology are summarized here at the depth this paper needs; a
+standalone methods paper is planned, since a network-science reader
+should not have to find these results inside a Debian study.)
+
 **The negative that frames the field result.** Seven mechanism families
 (uniform, preferential, cone-local at five mixing levels, co-user,
 frontier, mixed) were run replicate-first; every rule with any cone
@@ -249,7 +266,7 @@ straddling, root-protected popularity platforms).
 ## 7. What is claimed, what is not, and what would kill it
 
 **Claimed.** The §1 statement, at its stated grade: a pre-registered,
-sealed-provenance, battery-v3-robust conditional association in one
+sealed-provenance, battery-v4-robust conditional association in one
 corpus, with an unbiased estimator and honestly-priced uncertainty.
 
 **Not claimed.** (a) Any percentile as a generator-level probability
@@ -261,14 +278,18 @@ is one corpus. (d) The E-versus-D ordering — it reverses in Debian.
 graph-theoretic throughout.
 
 **Declared unmatched features (the next knives, named in advance).**
-(i) **Momentum**: the node's own prior-interval gain — the classic
-autoregressive control — has never been in any battery generation;
-battery v4 should lead with it. (ii) **Relational features**: overlap of
-a candidate's up-set with the kernel's territory; region-level recent
-growth. (iii) Debian-specific institutional covariates (section/priority
-metadata, maintainer counts). A battery-v4 run that dissolves Debian's
-effect under any of these kills the claim, and the program commits to
-running (i) and reporting the outcome whichever way it falls **[H]**.
+v0.1 of this paper named **momentum** — the node's own prior-interval
+gain, the classic autoregressive control — as its lead vulnerability and
+committed to running it before submission. That commitment is resolved:
+battery v4 ran sealed the same day (§3 step 9, §4) and the claim held,
+with momentum's marginal contribution to the estimate measured at +0.002.
+The remaining named knives, not yet run: (i) **relational features** —
+overlap of a candidate's up-set with the kernel's territory; region-level
+recent growth (these require design care, since they begin to overlap
+with what the cell *is*); (ii) Debian-specific institutional covariates
+(section/priority metadata, maintainer counts, team sponsorship). A
+sealed run that dissolves the effect under either kills the claim and
+will be reported at full volume, per the program's standing rules.
 
 **Standing falsifiers with clocks.** The 2028 forward register
 (`predictions/REGISTER.md`) scores sealed cell-level growth predictions
@@ -285,7 +306,8 @@ any result in this paper. The full chain for the headline number is:
 `debian-study/01-extract.mjs` (parsing choices fixed in-header) →
 `02-census.mjs` (blind) → `03-bet.mjs` (sealed, v1) →
 `battery-v2/01-precheck.mjs` (blind) → `02-batteryv2.mjs` (sealed, v2) →
-`battery-v3/01-precheck.mjs` (blind) → `02-batteryv3.mjs` (sealed, v3);
+`battery-v3/01-precheck.mjs` (blind) → `02-batteryv3.mjs` (sealed, v3) →
+`battery-v4/01-precheck.mjs` (blind) → `02-batteryv4.mjs` (sealed, v4);
 the theory chain is `accretion-study/SPEC.md` → `01…05` → `THEORY.md`.
 Repository: github.com/thefalsework/papers.
 
@@ -294,13 +316,15 @@ Repository: github.com/thefalsework/papers.
 A matched-pair estimate that holds its value while its matching battery
 absorbs, one by one, the exact quantities that destroyed every comparable
 result — including a functional that provably and completely explains the
-best synthetic counterexample — is behaving the way real structure
-behaves. It may still die; §7 names how. But after twenty-six sealed bets,
-seventeen self-inflicted kills, one program-wide statistical audit, and a
-day in which the theory twice built the weapon and twice fired it at its
-own trophies, the surviving sentence is short: **in the one ecosystem bet
-on blind, the territory a commitment claims but cannot settle is where
-the future grows, and nothing we can derive explains it away.**
+best synthetic counterexample, and finally the standard autoregressive
+control — is behaving the way real structure behaves. It may still die;
+§7 names how. But after twenty-seven sealed bets, seventeen overrules
+reported at full volume, three rival effects killed in-house, one
+program-wide statistical audit, and a day in which the theory twice built
+the weapon and twice fired it at its own trophies, the surviving sentence
+is short: **in the one ecosystem bet on blind, the territory a commitment
+claims but cannot settle is where the future grows, and nothing we can
+derive explains it away.**
 
 **Disclosure.** Drafting was AI-assisted under direction, per the
 program's validation architecture; the grades are the author's warrant.
