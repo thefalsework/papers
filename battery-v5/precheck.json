@@ -1,0 +1,40 @@
+{
+ "debian-8f-v4replica": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 202928,
+   "sectionAgreeRate": 0.0605,
+   "libShareE": 0.1311,
+   "libShareB": 0.0539,
+   "maxSmdMatched": 0.0116,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 703585,
+   "sectionAgreeRate": 0.0784,
+   "libShareE": 0.1811,
+   "libShareB": 0.1954,
+   "maxSmdMatched": 0.0216,
+   "feasible": true
+  }
+ },
+ "debian-8f-sectionStratified": {
+  "kernels": 2100,
+  "ER": {
+   "pairs": 79167,
+   "sectionAgreeRate": 1,
+   "libShareE": 0.1625,
+   "libShareB": 0.1625,
+   "maxSmdMatched": 0.009,
+   "feasible": true
+  },
+  "ED": {
+   "pairs": 3816824,
+   "sectionAgreeRate": 1,
+   "libShareE": 0.1551,
+   "libShareB": 0.1551,
+   "maxSmdMatched": 0.0519,
+   "feasible": true
+  }
+ }
+}
