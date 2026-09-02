@@ -1298,6 +1298,27 @@ blind pre-check, sealed registration, single run).
   comparison) — the "unmet needs map" pitch now has a validated
   ingredient and a maximally certified target.
 
+## Status update, 2026-09-01 (close of day): THE PAPER EXISTS
+
+preprints/seedbed/paper.md, v0.1 — "The Seedbed Claim: A
+Pre-Registered Growth Effect in the Debian Archive, and the
+Adversarial Program That Failed to Kill It." Structure: the claim in
+full (S1) -> instrument + the audit's reading discipline (S2) ->
+provenance sequence with the graveyard as evidence (S3) -> the
+result-of-record table across three battery generations (S4) -> why
+the kills are the method (S5) -> flux law + oracle + the generative
+negative (S6) -> claimed/not-claimed/named next knives, with momentum
+declared as battery v4's lead feature and an [H] commitment to run it
+(S7) -> reproducibility chain (S8) -> coda. Pointer added to the
+philosophers' brief. The paper claims exactly one thing at exactly
+its earned grade and names its own falsifiers with clocks.
+
+NEXT SESSION, in order: (1) battery v4 with momentum — the paper
+commits to it; (2) the E > R generative search (three named
+channels); (3) ORACLE-vs-criticality-score comparison (practical
+pitch); (4) consider arXiv routing for the seedbed paper once
+battery v4 has run (the [H] should be resolved before submission).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the
