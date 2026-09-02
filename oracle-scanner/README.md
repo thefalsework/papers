@@ -1,7 +1,7 @@
 # Oracle scanner — concentration-of-reach as a supply-chain metric
 
 **The tool lives at
-[github.com/thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)**
+[github.com/thefalsework/conemass](https://github.com/thefalsework/conemass)**
 — a self-contained, zero-dependency CLI (Apache-2.0) plus the published
 dated top-1000 rankings for Debian trixie (2025) and crates.io (2022).
 It was split out of this directory with history intact; this folder
@@ -65,6 +65,9 @@ billing disabled); mappings hand-curated; one-directional test.
 - `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
 - `04-incumbent.mjs` / `incumbent.json` / `ossf-top1000.csv` — the incumbent join; verdict in postscript.
 
-The CLI (`oracle-rank.mjs`) and the published `rankings/` moved to
-[thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)
-so the tool has one home and the artifact cannot drift from it.
+The CLI (`conemass.mjs`) and the published `rankings/` moved to
+[thefalsework/conemass](https://github.com/thefalsework/conemass)
+so the tool has one home and the artifact cannot drift from it. (The
+tool was briefly named oracle-rank; renamed to avoid the SEO wall and
+the test-oracle collision. The metric inside keeps the name ORACLE —
+that is its derivation history; see `accretion-study/THEORY.md`.)

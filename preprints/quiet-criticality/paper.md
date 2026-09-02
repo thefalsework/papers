@@ -7,7 +7,8 @@
 v0.3: package-versus-repository distinction made explicit; recommendation
 section ends on the artifact; CLI gained direct Cargo.lock support.
 v0.4: tool and rankings split to their own repo,
-github.com/thefalsework/oracle-rank, with commit history intact).
+github.com/thefalsework/conemass, with commit history intact; the tool
+is named conemass — the metric keeps the name ORACLE in this text).
 All computations cited here are committed with their code and raw output
 in `oracle-scanner/` at github.com/thefalsework/papers; each script
 states its expectations in a header written before the run and its
@@ -235,13 +236,13 @@ case at rank eight of sixty-three thousand, twenty-one months before
 anyone knew to look.
 
 Rather than end on the ask, we end on the artifact.
-[github.com/thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)
+[github.com/thefalsework/conemass](https://github.com/thefalsework/conemass)
 contains the ORACLE top-1000 for Debian
 trixie (2025) and crates.io, computed 2026-09-02 and published as-is.
 The files are dated; every future incident either involves a package in
 them or it does not, and either outcome scores the metric in public.
 The CLI beside them runs on any dependency graph in seconds —
-`node oracle-rank.mjs Cargo.lock --top 50` works directly on a Rust
+`node conemass.mjs Cargo.lock --top 50` works directly on a Rust
 project's lockfile — with no dependencies of its own, under Apache-2.0.
 The rows to read are the ones where `oracle_rank` is far ahead of
 `dependents_rank`.
@@ -252,7 +253,7 @@ Two artifacts accompany this piece so that its claims can be used, not
 just checked:
 
 - **Published rankings**
-  ([thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank),
+  ([thefalsework/conemass](https://github.com/thefalsework/conemass),
   `rankings/`): dated top-1000 ORACLE rankings for Debian trixie (2025)
   and crates.io (2022), with the dependent-count comparison columns
   inline.
