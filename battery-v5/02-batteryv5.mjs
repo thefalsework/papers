@@ -45,6 +45,45 @@
 //
 // Constants identical to battery-v4/02 except stratification and seed.
 // Seed 20260901777 (fresh). Writes battery-v5/results.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-09-01)
+//
+//   BV5-1 (Debian E-vs-R, same-section twins, PRIMARY): **REVERSES.**
+//   Delta_ER = -0.0764, null [-0.0114, +0.0124], pct 0.0, 79,822
+//   pairs, maxSMD 0.0095 — the cleanest balance of any generation.
+//   Within functional role, Refusal out-grows Exploitation.
+//
+//   Descriptive Delta_ED (same-section twins): +0.0025, NULL — the
+//   D-over-E ordering, robust through four generations, ALSO
+//   dissolves at role. Both axes were functional role in costume.
+//
+//   Per-section Delta_ER (registered-descriptive, five largest):
+//     doc        29,931 pairs  +0.015
+//     javascript 11,109 pairs  -0.531
+//     devel       6,077 pairs  -0.270
+//     libdevel    6,027 pairs  -0.048
+//     games       4,978 pairs  -0.021
+//   The reversal is broad-based outside doc, deepest in javascript.
+//
+//   MECHANISM READING (descriptive): the blind pre-check had already
+//   located the engine — E-members were 2.4x more library-flavored
+//   than their R twins (libs+libdevel+devel share 13.1% vs 5.4%), and
+//   only 6% of v4 pairs agreed on section. The four earlier batteries
+//   matched everything about a package EXCEPT what kind of thing it
+//   is; the E cell was enriched in roles that accrete dependents, and
+//   that enrichment WAS the effect. Note the estimand shift, priced
+//   and registered in the header: v5's population is the same-section
+//   subpopulation (doc-heavy), not v4's. That is not an escape hatch
+//   — the interpretation table was fixed in advance and the verdict
+//   is the verdict.
+//
+// PER THE PRE-REGISTERED INTERPRETATION TABLE: fourth in-house kill.
+// The certified-claims table is now EMPTY. The seedbed paper is
+// rewritten around the graveyard as the sole finding, same day, full
+// volume. SCOREBOARD: BV5-1 missed. Registered-directional record:
+// 10 for 28.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { buildSnap, firstSeenOf, makeGate, makeDistancer } from "../deflation-control/lib.mjs";

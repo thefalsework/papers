@@ -271,10 +271,38 @@ with a promise, the project ran it the same evening, sealed as
 always. Debian did not move. Four generations of ever-sharper twins —
 the reviewer's arsenal, the theory's first knife, the theory's
 perfect knife, the reviewer's first question — and its number sat
-still: +0.098, +0.083, +0.090, +0.083. One claim stands, the one that
-was bet blind on untouched ground, and what remains unexplained is
-exactly the right thing to be haunted by: nothing anyone has built
-grows the way Debian grows.
+still: +0.098, +0.083, +0.090, +0.083.
+
+And then the fifth knife killed it.
+
+A friend reading the paper draft asked the question a Debian person
+asks in the first minute: aren't the shadow-files just *libraries*?
+Debian tags every package with what kind of thing it is — a library, a
+developer tool, documentation, a game — and no graph measurement can
+see those tags, because they aren't in the graph. The project checked,
+blind-audit first, and the audit lit up red for the first time in
+three knives: the shadow-files were two and a half times more
+library-flavored than their twins. Every previous knife had leaned
+*against* the effect before the run; this one leaned into it. The
+sealed run confirmed the worst honestly available reading: compare a
+library only to a library, a doc package only to a doc package — same
+kernel, same distance, same everything else — and the shadow advantage
+doesn't shrink, it *reverses*. The refusers out-grow the shadow. The
+boundary-straddlers' advantage dissolved in the same run. Four
+generations of stability had proven only that the project owned no
+knife made of the right material: the effect was never about shadow at
+all. It was about what kind of package you are — a fact filed in the
+archive's paperwork, not written in its geometry — wearing algebra.
+
+So the last trophy went to the graveyard by the project's own hand, on
+the eve of its own submission, and the paper that was written to
+announce it was rewritten the same night to bury it: same data, same
+method, same volume. The scoreboard reads ten wins in twenty-eight
+sealed bets. What stands at the end of the growth chapter is not a
+growth effect. It is the thing the project actually built: an
+instrument that catches its own artifacts — four of four, before any
+referee — and a discipline that publishes the unmasking at the volume
+it would have published the miracle.
 
 ## What it all says
 
@@ -286,44 +314,49 @@ hears is *staking*: the moment some community, some composer, some tradition
 takes an impossible remainder — a comma, a contradiction, a wrinkle — and
 says *we will live here, arranged around this*. That act carves the world
 into four kinds of ground. It opens a narrow window of viewpoints through
-which the arrangement can be seen. And in at least one living ecosystem —
-the most heavily tested ground the project has — it plants a seedbed in
-its own shadow: the ground the commitment claims but cannot digest is
-where the next foundations grow, a fact that has now survived every
-control the project knows how to build: popularity at the finest grain,
-age, prestige, embeddedness, and sheer nearness to the action. In a
-second ecosystem the same tests dissolved the seedbed into ordinary
-popularity, and in the worlds where proofs are archived the controls gave
-growth to the periphery instead — both reported at the same volume as
-the survival. Bach's temperament, the mathematician's library, the
+which the arrangement can be seen. For one long day it looked like it did
+one thing more — planted a seedbed in its own shadow, the ground the
+commitment claims but cannot digest becoming where the next foundations
+grow. Four ecosystems said so; four times the project sharpened its own
+knives and cut the claim down: popularity at the finest grain took one,
+descendant-flux took another, the theory's own perfect formula took a
+third, and the last and best-defended — the one that landed as a sealed
+bet and would not move for four generations — fell to the plainest fact
+of all, one written in the archive's paperwork instead of its geometry:
+libraries grow because they are libraries. The seedbed is dead; the
+project killed it; every kill is in the record at full volume. What the
+carving demonstrably does is what the theorems said and only that: it
+exists, it is computable, and no cheap story anyone proposed — including
+every story the project itself wanted to believe — survives contact with
+its own instrument. Bach's temperament, the mathematician's library, the
 constitution, the paradigm — one architecture, now with a measuring
 device that knows the difference, and that has tested itself hard enough
-to know exactly how much of its own confidence to keep.
+to know exactly how much of its own confidence to keep: none beyond what
+it can prove.
 
 And the deepest line the mathematics drew, drawn twice and underlined once
 in every world we visited: **meaning requires unfinishedness.** The
 black-and-white world has no chairs. The perfect observer sees no structure.
-The settled question casts no shadow — and in the one ecosystem that
-has endured every test the project knows how to build, including the
-test its own theory invented, the shadow is where the future grows: the
-residue cell, the impossible chair, empirically the seedbed of what
-that tradition becomes next, after every cheap explanation — including
-the one no reviewer had named — was matched away. Everything that
-matters lives in the crack between what a commitment claims and what it
-settles.
+The settled question casts no shadow. That line was proved, not measured,
+and it survives the graveyard untouched — what died was every attempt so
+far to catch the shadow *doing* something, and what lived was the
+instrument that checks. Everything that matters still lives in the crack
+between what a commitment claims and what it settles; whether anything
+*grows* there is, tonight, an open question again, and the project knows
+exactly what a real answer would have to survive.
 
 Which is why the project is named after the wooden scaffolding that holds a
 stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that have overruled their own maker seventeen times in twenty-seven sealed
-bets, one impossible chair that turned out to be the realest thing in every
-world we pointed the instrument at, one fresh world whose number would not
-move through four generations of ever-sharper knives — one forged by the
-theory itself and perfect against its own toy worlds, the last the
-plainest control in the reviewer's toolbox — and more predictions sitting
-in the open, waiting to be wrong.
+that have overruled their own maker eighteen times in twenty-eight sealed
+bets, four celebrated effects executed by the project's own knives — the
+last on the eve of its own submission — and more predictions sitting in
+the open, waiting to be wrong. Some scaffolds come down and reveal an
+arch. This one came down and revealed which stones were real: the
+theorems, the instrument, and the discipline. The growth story was
+falsework, and the project is named for knowing the difference.
 
 ---
 

@@ -131,3 +131,19 @@ E-vs-R law, by contrast, deflated on all three proof corpora (null on
 Mathlib, reversed on AFP and the Isabelle distribution) and survived
 loudly on Go and crates — the registered-directional record after that
 five-verdict study stands at 3 for 18.
+
+**POSTSCRIPT (2026-09-01): expectations reprice; the bets stand.** Battery
+v5 (`battery-v5/`) killed the program's last certified growth claim:
+functional role (archive Section, institutional metadata invisible to
+every graph feature) reverses Debian's E-over-R and nulls its D-over-E at
+exact same-section stratification, after the effect had survived four
+generations of graph-structural and autoregressive controls. Every growth
+effect the program ever certified is now explained in-house (crates: fine
+popularity; Go E-R: up-set flux; Go E-D: cone-mass; Debian: role). No
+prediction here changes — P1–P4 are frozen and will be scored as written
+in 2028 — but the program's own expectation is now that cell-level growth
+orderings reflect corpus-specific composition, not a cell mechanism, and
+misses will be reported as misses of the worldview that registered them.
+These corpora (Mathlib, Go, crates, AFP) carry no functional-role control;
+a 2028 pass would therefore be evidence of persistence, not of mechanism,
+and will be stated as such when scored.

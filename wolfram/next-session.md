@@ -1357,6 +1357,63 @@ paper (flux law + oracle + replicate-first audit) — reviewer judged it
 strong enough to stand alone; (3) the E > R generative search (three
 named channels); (4) ORACLE-vs-criticality-score comparison.
 
+## Status update, 2026-09-01 (the end of the growth chapter): BATTERY V5 — FUNCTIONAL ROLE KILLS THE DEBIAN CLAIM
+
+Review follow-up asked for two things before submission: the
+functional-role check (the confound a Debian person raises immediately)
+and a preemptive Ubuntu-is-not-independent-replication note. The first
+one killed the paper's claim.
+
+**Extraction.** debian-study/04-sections.mjs — supplementary Section
+metadata for all ten releases (32–58 sections; libs/libdevel/devel
+dominate), parsing fixed in-header.
+
+**Battery v5 (battery-v5/).** Control = EXACT stratification: pairs must
+agree on kernel, exact distance, AND Section, with the full v4
+eight-feature caliper battery inside each stratum. Blind pre-check — and
+for the first time in program history it leaned WITH the deflating
+story: only 6% of v4-style pairs agreed on section, and the E side was
+2.4x more library-flavored (libs+libdevel+devel 13.1% vs 5.4%).
+Registered run: **BV5-1 REVERSES** — Delta_ER = −0.0764 on 79,822
+same-section pairs, maxSMD 0.0095 (cleanest balance of any generation);
+descriptive Delta_ED = +0.0025 NULL (the D-over-E axis dies in the same
+run). Per-section: doc +0.015, javascript −0.531, devel −0.270,
+libdevel −0.048, games −0.021. Both axes were functional role in
+costume: four battery generations had matched everything about a
+package except what kind of thing it is — a covariate that lives in the
+archive's metadata, not its graph, which is exactly the blind spot the
+synthetic audit could never see (it certifies against structural
+confounds only). **Fourth in-house kill; the certified-claims table is
+EMPTY; record 10 for 28.**
+
+**Executed per the program's rules, same day, full volume:**
+- Paper rewritten as v0.3 post-mortem: retitled "...and the Adversarial
+  Program That Killed It"; abstract, §1, §3 (step 10), §4 (v5 row +
+  per-section), §5 (four kills incl. the headline), §6 (generative
+  question closes against the field), §7 (claimed = the method + theory;
+  dead = both Debian axes; the role-control lesson; the Ubuntu
+  derivative-replication note included as requested), §8 (v5 chain),
+  §9 (the corpse coda).
+- Briefs + essay: kill postscripts, endings rewritten (the essay's
+  closing now reads the falsework metaphor honestly: the growth story
+  was the falsework; theorems + instrument + discipline are the stones).
+- predictions/REGISTER.md: postscript — bets stand frozen, expectations
+  repriced; 2028 passes would be persistence, not mechanism.
+
+**What survives untouched:** the [K] theorems (never rested on growth);
+the estimator unbiasedness results; the ~10x variance audit; the flux
+law + oracle mechanism identification; the method itself, now
+demonstrated end-to-end including on its own headline.
+
+NEXT SESSION, in order: (1) decide the seedbed post-mortem's venue —
+it is now a methods-and-negative-results paper and arguably stronger
+as one; (2) the standalone methods paper (flux law + oracle +
+replicate-first audit) — unaffected by the kill and now the program's
+strongest asset; (3) if any growth question is reopened, role controls
+enter at battery v1, on any corpus, from day one; (4)
+ORACLE-vs-criticality-score comparison (practical pitch, also
+unaffected by the kill).
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

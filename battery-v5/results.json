@@ -1,0 +1,63 @@
+{
+ "kernels": 2100,
+ "ER": {
+  "pairs": 79822,
+  "maxSmd": 0.0095,
+  "obs": -0.0764,
+  "lo": -0.0114,
+  "hi": 0.0124,
+  "pct": 0,
+  "verdict": "REVERSES",
+  "smd": {
+   "logIn": 0.0025,
+   "logOut": 0.0007,
+   "age": 0.0095,
+   "logPR": 0.0078,
+   "core": 0.0062,
+   "logUpset": 0.0046,
+   "logOracle": 0.0038,
+   "momentum": 0
+  }
+ },
+ "ED": {
+  "pairs": 3832440,
+  "maxSmd": 0.0519,
+  "obs": 0.0025,
+  "lo": -0.0028,
+  "hi": 0.0029,
+  "pct": 95.8,
+  "verdict": "NULL",
+  "smd": {
+   "logIn": 0.0003,
+   "logOut": 0.0519,
+   "age": 0.0006,
+   "logPR": 0,
+   "core": 0.0332,
+   "logUpset": 0.0004,
+   "logOracle": 0.0067,
+   "momentum": 0.0001
+  }
+ },
+ "perSectionER": {
+  "doc": {
+   "pairs": 29931,
+   "obs": 0.0149
+  },
+  "javascript": {
+   "pairs": 11109,
+   "obs": -0.5308
+  },
+  "devel": {
+   "pairs": 6077,
+   "obs": -0.2695
+  },
+  "libdevel": {
+   "pairs": 6027,
+   "obs": -0.0481
+  },
+  "games": {
+   "pairs": 4978,
+   "obs": -0.0209
+  }
+ }
+}
