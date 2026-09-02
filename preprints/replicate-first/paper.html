@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Replicate-First</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pdf-style.css" />
+</head>
+<body>
+<h1
+id="replicate-first-honest-uncertainty-a-flux-law-and-complete-mechanism-identification-for-matched-pair-growth-studies-on-evolving-dependency-graphs">Replicate-First:
+Honest Uncertainty, a Flux Law, and Complete Mechanism Identification
+for Matched-Pair Growth Studies on Evolving Dependency Graphs</h1>
+<p><strong>Author.</strong> Chris Brink (independent)
+<strong>Version.</strong> Draft v0.2, 2026-09-02 (v0.2: adds the Phase E
+registered kill to §4). Assembled from the accretion-study laboratory
+(<code>accretion-study/</code>: <code>SPEC.md</code>,
+<code>SPEC-D.md</code>, <code>THEORY.md</code>, scripts
+<code>01</code>–<code>06</code> with registered results committed beside
+them) and the five-generation field program it audited
+(<code>debian-study/</code>,
+<code>battery-v2/</code>–<code>battery-v5/</code>). This paper contains
+no new runs: every number cites a registration committed before its
+single scored execution. <strong>Status discipline.</strong> Claims
+carry grades: <strong>[C]</strong> classical mathematics, proved in text
+or cited; <strong>[computed]</strong> registered finite computation,
+single scored run per registration; <strong>[A]</strong> interpretive.
+The grades are load-bearing.</p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>Matched-pair designs are a standard instrument for growth claims on
+evolving networks: pair structurally similar nodes, difference their
+future gains, and read significance off a permutation null. We report
+three results about this instrument, each established in a synthetic
+laboratory where ground truth is available by construction, and then
+demonstrated end-to-end on a real registered program whose final act was
+killing its own headline claim. <strong>(1) The audit.</strong> The
+matched-pair point estimator is unbiased on generators provably blind to
+the tested partition — exactly under uniform attachment, by
+exchangeability under preferential attachment [C] — but the standard
+within-corpus sign-flip null understates true across-universe variance
+by roughly an order of magnitude [computed]. The failure has two levels,
+only one of which any within-corpus resampling can price: pairs sharing
+a kernel share a neighborhood (repairable by clustered flips), and all
+pairs share the one realized growth history (not repairable by any
+rearrangement of it). For a corpus that exists once, ensemble
+uncertainty is not samplable from within; the honest warrant is
+replication across independent corpora and sealed out-of-sample
+prediction. <strong>(2) The flux law.</strong> Under cone-local
+accretion — newcomers pick a platform and draw dependencies from its
+truncated transitive closure — expected per-step gain is affine in
+<strong>ORACLE(x) = Σ_{u : x ∈ cone(u)} 1/|cone(u)|</strong>, harmonic
+cone-membership mass [C-style derivation, confirmed 10/10 universes].
+This quantity is absent from standard predictor batteries (degree, age,
+PageRank, k-core), which is a constructive proof that a
+baseline-computable partition can carry growth signal beyond any such
+battery without magic. <strong>(3) Complete mechanism
+identification.</strong> In the laboratory, matching on ORACLE
+extinguishes the partition’s signal exactly (t = −0.25 from t = −10.2),
+while matching on exact <em>uncapped</em> descendant counts does not (t
+= −7.0): the operative structure is concentration of reach, not volume
+[computed]. The field demonstration: five sealed battery generations on
+the Debian archive, in which the laboratory’s derived features killed
+two prior certified effects on another corpus, and an
+institutional-metadata control — outside the graph, hence outside the
+audit’s guarantee — finally killed the program’s own
+four-generation-stable headline. We distill the method into a checklist
+we commit to and recommend: replicate-first designs for generators,
+cross-corpus replication and sealed bets for single-history corpora,
+flux-law features and non-structural covariates in the battery from
+generation one, and interpretation tables fixed before every run.</p>
+<h2 id="setting">1. Setting</h2>
+<p>A growing directed graph is observed at snapshots; a study fixes a
+baseline snapshot, computes node features and a node partition from the
+baseline only, and asks whether partition membership predicts in-degree
+gain over a horizon beyond the features. The estimator throughout: for a
+sampled set of <em>kernels</em> (reference nodes making the partition
+non-degenerate), candidate nodes are grouped by partition cell and exact
+undirected graph distance to the kernel’s territory; cross-cell pairs
+are matched greedily without replacement within a 0.5-caliper ball in
+the z-space of the feature battery, subject to a pre-registered balance
+gate (max |SMD| ≤ 0.10 per feature); the statistic is the mean
+within-pair gain difference; the conventional null flips pair signs. The
+partition under study is the aperture program’s four-cell structure
+(Exploitation / Refusal / Infrastructure / Distribution;
+<code>preprints/aperture/paper.md</code>), but nothing in this paper
+depends on its specifics: the results apply to any baseline-computable
+node classification tested by matched pairs.</p>
+<p>The laboratory (<code>accretion-study/sim-lib.mjs</code>) grows
+synthetic universes from fixed rules — uniform attachment (U),
+preferential attachment (PA), and platform-cone accretion PC(β), where a
+newcomer picks a platform uniformly and draws dependencies from the
+platform’s truncated down-set (β mixes cone-local with global draws) —
+and runs the <em>identical</em> estimator code on them. Two features of
+real corpora proved structurally necessary for non-degeneracy and are
+part of the recipe: root nodes must exist (dependency count m = 0 with
+positive probability; otherwise the first node is a universal ancestor
+and the Refusal cell is empty everywhere), and platform choice must not
+be popularity-weighted from birth (or primordial hubs recreate the
+universal ancestor). Both failures, and their fixes, are documented in
+<code>SPEC.md</code> [computed].</p>
+<h2 id="the-audit-what-permutation-percentiles-measure">2. The audit:
+what permutation percentiles measure</h2>
+<p><strong>Proposition 1 (uniform attachment is exactly null)
+[C].</strong> Under U, for any pairing rule measurable in the baseline
+graph, E[Δ] = 0. <em>Proof:</em> at each future step every existing node
+is hit with equal probability regardless of any baseline property;
+conditional expected gain is a shared constant; pair differences vanish
+in expectation by the tower property. ∎</p>
+<p><strong>Proposition 2 (PA is null given in-degree matching)
+[C].</strong> Under PA, baseline nodes of equal in-degree have
+exchangeable futures (the transition law sees only the weights), hence
+equal expected gains; any exact-in-degree pairing has E[Δ] = 0. ∎ (The
+estimator matches log in-degree within a caliper, not exactly; the
+balance gate bounds the residual, and replicate calibration measured
+means indistinguishable from zero on both U and PA, as the propositions
+predict [computed].)</p>
+<p><strong>The variance failure [computed].</strong> Replicate
+calibration — many independent universes per rule, the estimator run
+once per universe — found the across-universe standard deviation of the
+statistic roughly <strong>10× the sign-flip band</strong>, on generators
+where the truth is null. The percentile attached to any single
+universe’s run is therefore not a generator-level tail probability;
+confident false positives on provably null rules are routine.
+Kernel-clustered flips (flipping each kernel’s pairs as a block) were
+tested and found insufficient
+(<code>01c-validate-clustered-null.mjs</code>).</p>
+<p><strong>Why, precisely.</strong> Var(mean) = Σd²/n² is correct only
+if pair differences are uncorrelated given magnitudes. They are
+correlated at two levels: <em>within kernel</em> — pairs sharing a
+kernel share the local neighborhood, and a growth wave moves them
+together (clustered flips price exactly this) — and <em>across the
+universe</em> — which regions of the graph are fertile over a horizon is
+a property of the one realized trajectory, and every kernel rides it. No
+within-corpus rearrangement can price the second level, because every
+rearrangement sees the same single trajectory. A within-corpus
+percentile is a statement about pair-exchangeable rearrangements of one
+history, not about the ensemble of histories.</p>
+<p><strong>Consequences for practice.</strong> For synthetic generators,
+run replicate-first: the universe, not the pair, is the unit of
+inference (the laboratory’s confirmatory phase used 20 universes per
+rule and t-statistics across universes [computed]). For a real corpus —
+which exists once — the ensemble is not samplable from within; report
+percentiles only as conditional statements, and carry the warrant with
+replication across independent corpora and sealed out-of-sample
+directional bets registered before first measurement. We adopted this
+reading discipline retroactively for an entire field program the same
+day the calibration landed, repricing every previously reported
+percentile (<code>SPEC.md</code> postscript; the briefs’ dated
+corrections).</p>
+<h2 id="the-flux-law-and-the-feature-batteries-cannot-see">3. The flux
+law, and the feature batteries cannot see</h2>
+<p>Under PC(0), fix a node x and let up(x) = {u : x ∈ cone(u)} be the
+set of nodes whose truncated dependency cone contains x. Per growth
+step,</p>
+<p>P(x gains) ≈ (1/t) · [ 1 + (m̄ − 1) · Σ_{u ∈ up(x)} 1/|cone(u)| ],</p>
+<p>one term for being drawn as platform, one for being sampled from a
+cone containing x. Expected gain is affine in <strong>harmonic
+cone-membership mass</strong>, ORACLE(x) = Σ_{u ∈ up(x)} 1/|cone(u)|:
+<em>being a large share of many small toolchains</em> [C-style
+derivation, <code>THEORY.md</code> §3; direct confirmation, 10/10
+universes, <code>03-sign.mjs</code>].</p>
+<p>Standard batteries (in/out-degree, age, PageRank, k-core) contain no
+up-set measure — PageRank in the depended-upon orientation is a damped,
+normalized cousin, truncated hard by both. Consequently a generator
+whose flux tracks cone mass leaves room for a baseline-computable
+partition to carry growth signal <em>at matched battery</em>. PC(0)
+realizes this: its cell ordering R &gt; E &gt; D holds at t ≈ 10 across
+20 universes against the full five-feature battery [computed]. This is a
+constructive possibility proof with two edges, and we state both: a
+partition can legitimately out-inform a reviewer’s arsenal (no leakage,
+no artifact — the battery is simply blind to the operative quantity),
+and <em>any</em> field claim certified “beyond battery X” is one derived
+feature away from reclassification.</p>
+<h2 id="complete-mechanism-identification-demonstrated">4. Complete
+mechanism identification, demonstrated</h2>
+<p>The laboratory then closed its own loop under registration
+(<code>05-oracle.mjs</code>) [computed]:</p>
+<ul>
+<li><strong>O1.</strong> ORACLE out-predicts truncated descendant
+<em>count</em> in 10/10 universes (r ≈ 0.44 vs 0.23).</li>
+<li><strong>O2.</strong> With ORACLE added to the battery, the PC(0)
+cell effect vanishes exactly: Δ_ER = −0.004, t = −0.25 (from t = −10.2).
+The mechanism is <em>completely</em> identified — nothing residual
+remains for the partition to explain.</li>
+<li><strong>O3.</strong> With exact <strong>uncapped</strong> descendant
+counts matched instead, the effect persists at t = −7.0. Volume of reach
+is not the structure; <strong>concentration</strong> of reach is, and
+only the harmonic weighting expresses it.</li>
+</ul>
+<p>We know of no published matched-pair growth study that identifies the
+complete mechanism of its own effect in closed form and then
+demonstrates extinction-by-matching. The loop is available to any study
+with a generative model of its domain: derive what the model rewards,
+express it as a baseline feature, and aim it at your own result.</p>
+<p><strong>A registered kill from the same loop (Phase E)
+[computed].</strong> ORACLE, repurposed as a descriptive ranking on real
+corpora, surfaces a distinctive head signature: packages whose
+concentration rank far outruns their dependent-count rank. We registered
+the conjecture that this signature is a mechanism fingerprint — present
+in real corpora and in cone-local generators, absent under the null
+rules — with statistic, thresholds, and an interpretation table fixed
+before one run (<code>06-signature.mjs</code>). The real half landed
+(all three corpora, 20–33 of the top 50). The synthetic half failed in
+both directions at once: uniform attachment <em>shows</em> the signature
+(mean 16 of 50), and the cone-local family — the very mechanism whose
+growth signal ORACLE completely explains — produces <em>exactly
+zero</em>, in every replicate. Per the pre-fixed table, the conjectured
+use died on the spot. The inversion it leaves behind is clean:
+cone-local draws weld concentration rank to volume rank at the head,
+because within-cone sampling keeps handing direct dependents to exactly
+the nodes sitting in many cones; global draws let deep old nodes
+accumulate cone membership without proportional in-degree, opening the
+gap. Divergence between concentration and volume is a signature of
+growth where newcomers can attach anywhere — not of the mechanism ORACLE
+was derived from. We include this kill because it is the checklist of §6
+operating at full speed: conjecture to registered run to verdict in one
+afternoon, thresholds untouched after the result.</p>
+<h2 id="the-field-demonstration-five-batteries-four-kills">5. The field
+demonstration: five batteries, four kills</h2>
+<p>The method’s field trial was a registered program on real dependency
+corpora, run at full adversarial volume (primary sources:
+<code>debian-study/</code>,
+<code>battery-v2/</code>–<code>battery-v5/</code>; narrative account:
+<code>preprints/seedbed/paper.md</code>). In brief [all computed]:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Generation</th>
+<th>Knife added</th>
+<th>Origin</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td>fine-grain degree, out, age, PageRank, k-core</td>
+<td>reviewer’s arsenal</td>
+<td>killed crates.io (+15.7 → popularity); Debian sealed bet landed
+(+0.098)</td>
+</tr>
+<tr>
+<td>v2</td>
+<td>truncated up-set size</td>
+<td>flux law (§3)</td>
+<td>killed Go E-over-R (+0.22 → up-set imbalance, unrepairable); Debian
+held</td>
+</tr>
+<tr>
+<td>v3</td>
+<td>ORACLE</td>
+<td>mechanism (§4)</td>
+<td>killed Go E-over-D (+0.152 → +0.018); Debian held</td>
+</tr>
+<tr>
+<td>v4</td>
+<td>momentum (prior-interval gain)</td>
+<td>standard autoregressive control</td>
+<td>Debian held (+0.083; marginal contribution +0.002)</td>
+</tr>
+<tr>
+<td>v5</td>
+<td>functional role (archive Section, exact stratum)</td>
+<td>institutional metadata</td>
+<td><strong>killed Debian</strong> (+0.083 → −0.076; within-role
+null-to-negative, reversal javascript-dominated)</td>
+</tr>
+</tbody>
+</table>
+<p>Two lessons carry beyond the program. First, the theory-derived
+knives (v2, v3) killed effects that had survived everything a reviewer
+would ask for — derived confounds are sharper than guessed ones. Second,
+the fatal covariate for the final claim was <em>not a function of the
+graph</em>: package role lives in archive metadata, and the audit of §2
+— which certifies the estimator against structural confounds on
+generators — is constitutionally silent about covariates outside the
+object the generator produces. A matched-pair estimate stable under any
+number of structural controls is evidence only about the controls you
+have. The program’s blind pre-check protocol surfaced the danger before
+the run (role imbalance leaned <em>with</em> the deflating story, the
+first knife to do so), the registration fixed the kill condition before
+the verdict, and the claim’s obituary was published at the volume its
+survival would have received, the same day.</p>
+<h2 id="the-checklist">6. The checklist</h2>
+<p>For any matched-pair growth study on an evolving network, we commit
+to and recommend:</p>
+<ol type="1">
+<li><strong>Replicate-first for anything with a generator.</strong> The
+universe is the unit of inference. Single-universe percentiles on
+synthetic data are not evidence.</li>
+<li><strong>For single-history corpora:</strong> percentiles as
+conditional statements only; warrant from independent-corpus replication
+and sealed directional bets registered before first measurement.</li>
+<li><strong>Battery contents, from generation one:</strong> the standard
+arsenal, <em>plus</em> truncated up-set size, <em>plus</em> ORACLE (both
+pure graph features, cheap at cap 200), <em>plus</em> the node’s own
+prior-interval gain, <em>plus</em> every available non-structural
+covariate of node kind (role taxonomies, categories, institutional
+metadata) — the last as exact strata, not z-features, where cardinality
+permits.</li>
+<li><strong>Blind pre-checks</strong> (balance and composition audits
+touching no outcomes) before every registered run; publish them with the
+run.</li>
+<li><strong>Interpretation tables fixed before execution</strong>,
+including what kills the claim; single scored run per registration;
+kills reported at the volume of wins.</li>
+<li><strong>If a generative model of the domain exists, derive its
+reward functional and aim it at your own result</strong> before anyone
+else does.</li>
+</ol>
+<h2 id="reproducibility">7. Reproducibility</h2>
+<p>Every number above cites a registration committed before its single
+scored run; seeds are constants in the scripts; raw outputs are
+committed beside them. Laboratory chain:
+<code>accretion-study/SPEC.md</code> → <code>01-explore.mjs</code> →
+<code>01b-calibrate.mjs</code> →
+<code>01c-validate-clustered-null.mjs</code> →
+<code>02-confirm.mjs</code> → <code>THEORY.md</code> →
+<code>SPEC-D.md</code> → <code>03-sign.mjs</code> →
+<code>04-explore-d.mjs</code> → <code>05-oracle.mjs</code> →
+<code>06-signature.mjs</code>. Field chain: see
+<code>preprints/seedbed/paper.md</code> §8. Repository:
+github.com/thefalsework/papers. The ORACLE ranking tool referenced in §4
+Phase E is published separately as conemass
+(github.com/thefalsework/conemass), with dated rankings.</p>
+<p><strong>Disclosure.</strong> Drafting was AI-assisted under
+direction; the grades are the author’s warrant.</p>
+</body>
+</html>

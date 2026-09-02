@@ -1,9 +1,10 @@
 # Replicate-First: Honest Uncertainty, a Flux Law, and Complete Mechanism Identification for Matched-Pair Growth Studies on Evolving Dependency Graphs
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.1, 2026-09-02. Assembled from the accretion-study
-laboratory (`accretion-study/`: `SPEC.md`, `SPEC-D.md`, `THEORY.md`,
-scripts `01`–`05` with registered results committed beside them) and the
+**Version.** Draft v0.2, 2026-09-02 (v0.2: adds the Phase E registered
+kill to §4). Assembled from the accretion-study laboratory
+(`accretion-study/`: `SPEC.md`, `SPEC-D.md`, `THEORY.md`, scripts
+`01`–`06` with registered results committed beside them) and the
 five-generation field program it audited (`debian-study/`,
 `battery-v2/`–`battery-v5/`). This paper contains no new runs: every
 number cites a registration committed before its single scored execution.
@@ -186,6 +187,30 @@ demonstrates extinction-by-matching. The loop is available to any study
 with a generative model of its domain: derive what the model rewards,
 express it as a baseline feature, and aim it at your own result.
 
+**A registered kill from the same loop (Phase E) [computed].** ORACLE,
+repurposed as a descriptive ranking on real corpora, surfaces a
+distinctive head signature: packages whose concentration rank far
+outruns their dependent-count rank. We registered the conjecture that
+this signature is a mechanism fingerprint — present in real corpora and
+in cone-local generators, absent under the null rules — with statistic,
+thresholds, and an interpretation table fixed before one run
+(`06-signature.mjs`). The real half landed (all three corpora, 20–33 of
+the top 50). The synthetic half failed in both directions at once:
+uniform attachment *shows* the signature (mean 16 of 50), and the
+cone-local family — the very mechanism whose growth signal ORACLE
+completely explains — produces *exactly zero*, in every replicate. Per
+the pre-fixed table, the conjectured use died on the spot. The
+inversion it leaves behind is clean: cone-local draws weld
+concentration rank to volume rank at the head, because within-cone
+sampling keeps handing direct dependents to exactly the nodes sitting
+in many cones; global draws let deep old nodes accumulate cone
+membership without proportional in-degree, opening the gap. Divergence
+between concentration and volume is a signature of growth where
+newcomers can attach anywhere — not of the mechanism ORACLE was derived
+from. We include this kill because it is the checklist of §6 operating
+at full speed: conjecture to registered run to verdict in one afternoon,
+thresholds untouched after the result.
+
 ## 5. The field demonstration: five batteries, four kills
 
 The method's field trial was a registered program on real dependency
@@ -248,9 +273,11 @@ scored run; seeds are constants in the scripts; raw outputs are committed
 beside them. Laboratory chain: `accretion-study/SPEC.md` →
 `01-explore.mjs` → `01b-calibrate.mjs` → `01c-validate-clustered-null.mjs`
 → `02-confirm.mjs` → `THEORY.md` → `SPEC-D.md` → `03-sign.mjs` →
-`04-explore-d.mjs` → `05-oracle.mjs`. Field chain: see
-`preprints/seedbed/paper.md` §8. Repository:
-github.com/thefalsework/papers.
+`04-explore-d.mjs` → `05-oracle.mjs` → `06-signature.mjs`. Field chain:
+see `preprints/seedbed/paper.md` §8. Repository:
+github.com/thefalsework/papers. The ORACLE ranking tool referenced in
+§4 Phase E is published separately as conemass
+(github.com/thefalsework/conemass), with dated rankings.
 
 **Disclosure.** Drafting was AI-assisted under direction; the grades are
 the author's warrant.
