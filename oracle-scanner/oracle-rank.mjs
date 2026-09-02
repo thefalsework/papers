@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SPDX-License-Identifier: Apache-2.0
 // oracle-rank — rank a dependency graph by concentration of reach.
 //
 //   ORACLE(x) = sum over packages u whose truncated dependency cone
@@ -15,7 +16,9 @@
 // USAGE
 //   node oracle-rank.mjs <input> [--cap N] [--top N] [--out FILE]
 //
-//   <input>  dependency graph, either:
+//   <input>  dependency graph, one of:
+//            - Cargo.lock: parsed directly ("node oracle-rank.mjs
+//              Cargo.lock --top 50" works on any Rust project);
 //            - .json: {"nodes":[names...],"edges":[[depIdx,depIdx]...]}
 //              (edges as [dependent, dependency] index pairs), or a
 //              plain JSON array of [dependent, dependency] name pairs;
@@ -58,7 +61,26 @@ const id = (nm) => {
   return i;
 };
 const text = readFileSync(input, "utf8");
-if (input.endsWith(".json")) {
+const isCargoLock = /(^|[\\/])Cargo\.lock$/.test(input) ||
+  (!input.endsWith(".json") && /^\[\[package\]\]/m.test(text));
+if (isCargoLock) {
+  // Cargo.lock: [[package]] blocks with name = "..." followed by an
+  // optional dependencies = [ "name", "name version", ... ] array.
+  let cur = null, inDeps = false;
+  for (const rawLine of text.split("\n")) {
+    const line = rawLine.trim();
+    if (line === "[[package]]") { cur = null; inDeps = false; continue; }
+    if (inDeps) {
+      if (line.startsWith("]")) { inDeps = false; continue; }
+      const dep = line.match(/^"([^" ]+)/);
+      if (dep && cur !== null) edges.push([cur, id(dep[1])]);
+      continue;
+    }
+    const nm = line.match(/^name = "([^"]+)"/);
+    if (nm) { cur = id(nm[1]); continue; }
+    if (line.startsWith("dependencies = [") && !line.includes("]")) inDeps = true;
+  }
+} else if (input.endsWith(".json")) {
   const raw = JSON.parse(text);
   if (Array.isArray(raw)) {
     for (const [a, b] of raw) edges.push([id(String(a)), id(String(b))]);

@@ -22,12 +22,14 @@ top-1000).
 **Run it on your own graph:**
 
 ```
+node oracle-rank.mjs Cargo.lock --top 50
 node oracle-rank.mjs your-edges.csv --top 100
 ```
 
-where `your-edges.csv` is one `dependent,dependency` pair per line (or a
-JSON graph; see the header of `oracle-rank.mjs`). No dependencies, one
-file, cycles handled. A 100k-node registry takes seconds.
+Rust lockfiles are parsed directly; otherwise supply one
+`dependent,dependency` pair per line or a JSON graph (see the header of
+`oracle-rank.mjs`). No dependencies, one file, cycles handled,
+Apache-2.0. A 100k-node registry takes seconds.
 
 **Caveats.** Descriptive rankings, not certified claims; one
 retrodiction is one retrodiction; ORACLE's head is deliberately

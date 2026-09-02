@@ -3,11 +3,13 @@
 ## Dependency concentration as a criticality signal
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.2, 2026-09-02 (v0.2: retitled; artifacts section
-added). All computations cited here are committed with their code and
-raw output in `oracle-scanner/` at github.com/thefalsework/papers; each
-script states its expectations in a header written before the run and
-its results in a dated postscript.
+**Version.** Draft v0.3, 2026-09-02 (v0.2: retitled; artifacts section.
+v0.3: package-versus-repository distinction made explicit; recommendation
+section ends on the artifact; CLI gained direct Cargo.lock support).
+All computations cited here are committed with their code and raw output
+in `oracle-scanner/` at github.com/thefalsework/papers; each script
+states its expectations in a header written before the run and its
+results in a dated postscript. Code is Apache-2.0; text is CC-BY-4.0.
 
 ---
 
@@ -16,14 +18,24 @@ its results in a dated postscript.
 The OpenSSF criticality-score top-1000 — the list consumed by the
 Securing Critical Projects working group — contains Kubernetes and misses
 zlib. It also misses serde, syn, proc-macro2, libexpat, and libxml2, and
-its collection pipeline could not have ranked xz at any position in 2022,
-because xz was not hosted on GitHub. We describe a complementary metric,
-computable from a dependency graph alone, whose top ranks are precisely
-the packages the incumbent misses: on the last Debian release before the
-xz backdoor, it ranks liblzma eighth in the archive, against #173 by
-dependent count; on crates.io it ranks unicode-ident — six direct
-dependents, one maintainer, present in nearly every Rust build — second
-in the registry, against #3,582 by dependent count. The metric is not a
+its collection pipeline, which enumerates GitHub-hosted source
+repositories, could not have ranked the xz project at any position in
+2022, because xz was hosted elsewhere. One distinction runs through this
+piece and is best fixed now: the metric we describe ranks *shipped
+packages*, the objects dependency graphs contain — the Debian binary
+package liblzma5, the crate unicode-ident — while the incumbent ranks
+*upstream source repositories*. Our comparison maps packages to their
+upstream repositories by hand, and the two xz facts below are facts
+about two different objects: the package shipping the backdoored code
+ranked eighth in its archive by concentration, and the project's
+repository sat entirely outside the incumbent pipeline's coverage. We
+describe a complementary metric, computable from a dependency graph
+alone, whose top ranks are precisely the packages the incumbent misses:
+on the last Debian release before the xz backdoor, it ranks liblzma5
+eighth in the archive, against #173 by dependent count; on crates.io it
+ranks unicode-ident — six direct dependents, one maintainer, present in
+nearly every Rust build — second in the registry, against #3,582 by
+dependent count. The metric is not a
 replacement for criticality scoring. It measures a different quantity —
 load rather than fame — and the two disagree exactly where
 prioritization mistakes are most expensive.
@@ -209,7 +221,7 @@ piece is descriptive throughout.
   join are a table in the published script; errors in it are ours and
   correctable.
 
-## Recommendation
+## Recommendation, ending on the artifact
 
 Concentration of reach should be a column in criticality dashboards,
 next to — not instead of — activity-based scores. The two metrics
@@ -218,8 +230,18 @@ deeply embedded libraries and degree-one build-time plumbing. That set
 is small (the head of the ORACLE ranking), cheap to compute for any
 registry with a dependency graph, and contains the known catastrophic
 case at rank eight of sixty-three thousand, twenty-one months before
-anyone knew to look. Funders and working groups triaging audit targets
-can compute it this afternoon.
+anyone knew to look.
+
+Rather than end on the ask, we end on the artifact.
+`oracle-scanner/rankings/` contains the ORACLE top-1000 for Debian
+trixie (2025) and crates.io, computed 2026-09-02 and published as-is.
+The files are dated; every future incident either involves a package in
+them or it does not, and either outcome scores the metric in public.
+The CLI beside them runs on any dependency graph in seconds —
+`node oracle-rank.mjs Cargo.lock --top 50` works directly on a Rust
+project's lockfile — with no dependencies of its own, under Apache-2.0.
+The rows to read are the ones where `oracle_rank` is far ahead of
+`dependents_rank`.
 
 ## Artifacts and reproducibility
 
@@ -229,12 +251,13 @@ just checked:
 - **Published rankings** (`oracle-scanner/rankings/`): dated top-1000
   ORACLE rankings for Debian trixie (2025) and crates.io (2022), with
   the dependent-count comparison columns inline.
-- **A standalone CLI** (`oracle-scanner/oracle-rank.mjs`): a single
-  zero-dependency Node script that takes any dependency graph — an
-  edge-list CSV of `dependent,dependency` pairs or a JSON graph —
-  handles cycles, and emits the ranking. A 100,000-node registry takes
-  seconds. Run it on your own graph and inspect the rows where
-  `oracle_rank` is far ahead of `dependents_rank`.
+- **A standalone CLI** (`oracle-scanner/oracle-rank.mjs`, Apache-2.0):
+  a single zero-dependency Node script that takes any dependency graph
+  — a `Cargo.lock` directly, an edge-list CSV of `dependent,dependency`
+  pairs, or a JSON graph — handles cycles, and emits the ranking. A
+  100,000-node registry takes seconds. Run it on your own graph and
+  inspect the rows where `oracle_rank` is far ahead of
+  `dependents_rank`.
 
 `oracle-scanner/` also contains the four studies behind this piece
 (retrodiction, cap sweep, crates replication, incumbent join), their

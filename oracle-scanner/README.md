@@ -1,10 +1,13 @@
 # Oracle scanner — concentration-of-reach as a supply-chain metric
 
-**Use it now:** `node oracle-rank.mjs <your-graph> --top 100` — a
-self-contained, zero-dependency CLI that ranks any dependency graph
-(edge-list CSV or JSON; cycles handled) in seconds. Published dated
-rankings for Debian trixie (2025) and crates.io (2022) are in
-`rankings/`. The writeup for a security audience is
+**Use it now:** `node oracle-rank.mjs Cargo.lock --top 50` — a
+self-contained, zero-dependency CLI (Apache-2.0, per the repo's
+`LICENSE-CODE`) that ranks any dependency graph in seconds: a
+`Cargo.lock` directly, an edge-list CSV, or a JSON graph; cycles
+handled (`test-cargo.lock` is a worked example — unicode-ident comes
+out #1 even on an eight-package toy). Published dated rankings for
+Debian trixie (2025) and crates.io (2022) are in `rankings/`. The
+writeup for a security audience is
 `preprints/quiet-criticality/paper.md`.
 
 **Idea.** ORACLE(x) = Σ 1/|cone(u)| over truncated dependency cones
