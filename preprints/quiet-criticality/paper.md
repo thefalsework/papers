@@ -16,6 +16,9 @@ All computations cited here are committed with their code and raw output
 in `oracle-scanner/` at github.com/thefalsework/papers; each script
 states its expectations in a header written before the run and its
 results in a dated postscript. Code is Apache-2.0; text is CC-BY-4.0.
+Archived: this repository at DOI 10.5281/zenodo.22261990; the conemass
+tool and dated rankings at DOI 10.5281/zenodo.22261985; both also at
+Software Heritage.
 
 ---
 
