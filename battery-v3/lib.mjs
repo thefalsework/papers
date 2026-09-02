@@ -19,7 +19,9 @@
 
 const CONE_CAP = 200;
 
-export const oracleMass = (snap) => {
+// cap parametrized for the oracle-scanner sensitivity sweep; default 200
+// keeps every battery run byte-identical.
+export const oracleMass = (snap, cap = CONE_CAP) => {
   const { nComp, cIn } = snap;
   const orc = new Float64Array(nComp);
   const seen = new Int32Array(nComp).fill(-1);
@@ -27,13 +29,13 @@ export const oracleMass = (snap) => {
     const cone = [];
     seen[u] = u;
     const q = [u];
-    while (q.length && cone.length < CONE_CAP) {
+    while (q.length && cone.length < cap) {
       const v = q.shift();
       for (const w of cIn[v]) {
         if (seen[w] === u) continue;
         seen[w] = u;
         cone.push(w);
-        if (cone.length >= CONE_CAP) break;
+        if (cone.length >= cap) break;
         q.push(w);
       }
     }

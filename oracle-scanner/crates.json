@@ -1,0 +1,290 @@
+{
+ "n": 84439,
+ "spearman": {
+  "oracle_vs_inDeg": 0.9825,
+  "oracle_vs_pageRank": 0.9939
+ },
+ "watchlist": [
+  {
+   "name": "proc-macro2",
+   "inDeg": 3392,
+   "oracle": 1940.622,
+   "rank_oracle": 3,
+   "rank_inDeg": 17,
+   "rank_pageRank": 2
+  },
+  {
+   "name": "quote",
+   "inDeg": 4135,
+   "oracle": 1894.331,
+   "rank_oracle": 4,
+   "rank_inDeg": 16,
+   "rank_pageRank": 6
+  },
+  {
+   "name": "syn",
+   "inDeg": 4202,
+   "oracle": 1863.894,
+   "rank_oracle": 5,
+   "rank_inDeg": 15,
+   "rank_pageRank": 7
+  },
+  {
+   "name": "cfg-if",
+   "inDeg": 835,
+   "oracle": 1341.009,
+   "rank_oracle": 6,
+   "rank_inDeg": 52,
+   "rank_pageRank": 5
+  },
+  {
+   "name": "autocfg",
+   "inDeg": 1,
+   "oracle": 0.5,
+   "rank_oracle": 4414,
+   "rank_inDeg": 18339,
+   "rank_pageRank": 9503
+  },
+  {
+   "name": "version_check",
+   "inDeg": 5,
+   "oracle": 0.616,
+   "rank_oracle": 3755,
+   "rank_inDeg": 4242,
+   "rank_pageRank": 6547
+  },
+  {
+   "name": "memchr",
+   "inDeg": 303,
+   "oracle": 427.981,
+   "rank_oracle": 28,
+   "rank_inDeg": 131,
+   "rank_pageRank": 38
+  },
+  {
+   "name": "once_cell",
+   "inDeg": 1625,
+   "oracle": 319.367,
+   "rank_oracle": 30,
+   "rank_inDeg": 33,
+   "rank_pageRank": 40
+  },
+  {
+   "name": "unicode-ident",
+   "inDeg": 6,
+   "oracle": 1941.007,
+   "rank_oracle": 2,
+   "rank_inDeg": 3582,
+   "rank_pageRank": 1
+  },
+  {
+   "name": "serde",
+   "inDeg": 16012,
+   "oracle": 1172.457,
+   "rank_oracle": 7,
+   "rank_inDeg": 1,
+   "rank_pageRank": 3
+  },
+  {
+   "name": "libc",
+   "inDeg": 4330,
+   "oracle": 2311.34,
+   "rank_oracle": 1,
+   "rank_inDeg": 14,
+   "rank_pageRank": 4
+  },
+  {
+   "name": "rand",
+   "inDeg": 5255,
+   "oracle": 643.845,
+   "rank_oracle": 16,
+   "rank_inDeg": 6,
+   "rank_pageRank": 12
+  },
+  {
+   "name": "lazy_static",
+   "inDeg": 5033,
+   "oracle": 849.991,
+   "rank_oracle": 10,
+   "rank_inDeg": 9,
+   "rank_pageRank": 16
+  }
+ ],
+ "divergenceTop25": [
+  {
+   "name": "minimal-lexical",
+   "rank_oracle": 68,
+   "rank_inDeg": 18339,
+   "gap": 18271,
+   "inDeg": 1
+  },
+  {
+   "name": "proc-macro-error-attr",
+   "rank_oracle": 94,
+   "rank_inDeg": 18339,
+   "gap": 18245,
+   "inDeg": 1
+  },
+  {
+   "name": "wasm-bindgen-macro",
+   "rank_oracle": 101,
+   "rank_inDeg": 18339,
+   "gap": 18238,
+   "inDeg": 1
+  },
+  {
+   "name": "want",
+   "rank_oracle": 125,
+   "rank_inDeg": 18339,
+   "gap": 18214,
+   "inDeg": 1
+  },
+  {
+   "name": "darling_macro",
+   "rank_oracle": 169,
+   "rank_inDeg": 18339,
+   "gap": 18170,
+   "inDeg": 1
+  },
+  {
+   "name": "proc-macro-hack-impl",
+   "rank_oracle": 188,
+   "rank_inDeg": 18339,
+   "gap": 18151,
+   "inDeg": 1
+  },
+  {
+   "name": "pin-project-internal",
+   "rank_oracle": 203,
+   "rank_inDeg": 18339,
+   "gap": 18136,
+   "inDeg": 1
+  },
+  {
+   "name": "foreign-types-macros",
+   "rank_oracle": 233,
+   "rank_inDeg": 18339,
+   "gap": 18106,
+   "inDeg": 1
+  },
+  {
+   "name": "inout",
+   "rank_oracle": 263,
+   "rank_inDeg": 18339,
+   "gap": 18076,
+   "inDeg": 1
+  },
+  {
+   "name": "errno-dragonfly",
+   "rank_oracle": 269,
+   "rank_inDeg": 18339,
+   "gap": 18070,
+   "inDeg": 1
+  },
+  {
+   "name": "crc-catalog",
+   "rank_oracle": 311,
+   "rank_inDeg": 18339,
+   "gap": 18028,
+   "inDeg": 1
+  },
+  {
+   "name": "include_dir_macros",
+   "rank_oracle": 315,
+   "rank_inDeg": 18339,
+   "gap": 18024,
+   "inDeg": 1
+  },
+  {
+   "name": "openssl-macros",
+   "rank_oracle": 334,
+   "rank_inDeg": 18339,
+   "gap": 18005,
+   "inDeg": 1
+  },
+  {
+   "name": "async-stream-impl",
+   "rank_oracle": 407,
+   "rank_inDeg": 18339,
+   "gap": 17932,
+   "inDeg": 1
+  },
+  {
+   "name": "derive_builder_core",
+   "rank_oracle": 484,
+   "rank_inDeg": 18339,
+   "gap": 17855,
+   "inDeg": 1
+  },
+  {
+   "name": "derive_builder_macro",
+   "rank_oracle": 486,
+   "rank_inDeg": 18339,
+   "gap": 17853,
+   "inDeg": 1
+  },
+  {
+   "name": "encoding-index-simpchinese",
+   "rank_oracle": 495,
+   "rank_inDeg": 18339,
+   "gap": 17844,
+   "inDeg": 1
+  },
+  {
+   "name": "encoding-index-singlebyte",
+   "rank_oracle": 495,
+   "rank_inDeg": 18339,
+   "gap": 17844,
+   "inDeg": 1
+  },
+  {
+   "name": "encoding-index-tradchinese",
+   "rank_oracle": 495,
+   "rank_inDeg": 18339,
+   "gap": 17844,
+   "inDeg": 1
+  },
+  {
+   "name": "encoding-index-japanese",
+   "rank_oracle": 495,
+   "rank_inDeg": 18339,
+   "gap": 17844,
+   "inDeg": 1
+  },
+  {
+   "name": "ref-cast-impl",
+   "rank_oracle": 512,
+   "rank_inDeg": 18339,
+   "gap": 17827,
+   "inDeg": 1
+  },
+  {
+   "name": "ndk-macro",
+   "rank_oracle": 524,
+   "rank_inDeg": 18339,
+   "gap": 17815,
+   "inDeg": 1
+  },
+  {
+   "name": "glib-macros",
+   "rank_oracle": 590,
+   "rank_inDeg": 18339,
+   "gap": 17749,
+   "inDeg": 1
+  },
+  {
+   "name": "cxxbridge-macro",
+   "rank_oracle": 596,
+   "rank_inDeg": 18339,
+   "gap": 17743,
+   "inDeg": 1
+  },
+  {
+   "name": "kqueue-sys",
+   "rank_oracle": 632,
+   "rank_inDeg": 18339,
+   "gap": 17707,
+   "inDeg": 1
+  }
+ ]
+}

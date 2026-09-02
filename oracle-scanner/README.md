@@ -19,12 +19,27 @@ cone membership: python3-minimal, libpam-modules-bin, libc-dev-bin) —
 the exact topology the xz attack exploited via the systemd gateway —
 mixed with doc/data noise a product would filter.
 
-**Honest limits.** Descriptive, unscored, one corpus, one retrodiction;
-global rank correlation with volume metrics is high (0.95–0.97) — the
-new information lives at the head of the ranking, which is where
-prioritization decisions are made. Named next measurables: cap
-sensitivity; join against actual OpenSSF criticality scores; npm/PyPI
-replication.
+**Cap sweep: robust.** liblzma5 is #8 at every cone cap from 50 to 800;
+top-100 overlap 0.92–0.99 between adjacent caps. The headline is not a
+truncation artifact.
+
+**Second ecosystem (crates.io 2022): replicates, starker.**
+**unicode-ident — ORACLE #2 of 84,439, in-degree #3,582** (six direct
+dependents): the canonical quiet single-maintainer crate inside every
+Rust build, invisible to volume metrics. Head of ranking = the macro
+toolchain nobody types (libc #1, proc-macro2 #3, quote #4, syn #5). The
+divergence list is a threat class, not noise: deg-1 proc-macro companion
+crates (openssl-macros, wasm-bindgen-macro, …) — arbitrary code
+execution at build time, one direct dependent, inside everything,
+unseen by dependent-count scoring.
+
+**Honest limits.** Descriptive, unscored; global rank correlation with
+volume metrics is high (0.95–0.99) — the new information lives at the
+head of the ranking, which is where prioritization decisions are made.
+Remaining named measurable: join against published OpenSSF criticality
+scores (the direct incumbent test).
 
 **Files.**
 - `01-xz-retrodiction.mjs` / `xz-retrodiction.json` — the pilot; expectations in header, verdict in postscript.
+- `02-cap-sweep.mjs` / `cap-sweep.json` — truncation robustness.
+- `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
