@@ -625,3 +625,30 @@ reversal is up-set-robust.* Bookkeeping correction recorded in the
 study postscript: the registered-directional record now stands at
 **8 for 24**, with three hits in a row (B2, BV1, BV2) — the first
 bets in the program's history called with a mechanism in hand.
+
+**POSTSCRIPT (2026-09-01, night): the oracle, and battery v3 — the
+growth chapter reaches its final form.** The same evening, the lab
+closed its own open question: the registered oracle test
+(`accretion-study/05-oracle.mjs`) identified the *complete* mechanism
+of the synthetic cell effect as **harmonic cone-membership mass** —
+ORACLE(x) = Σ 1/|cone₂₀₀(u)| over cones containing x. With ORACLE
+matched, the synthetic inversion is exactly zero (t = −0.25); exact
+uncapped descendant counts leave it at t = −7.0, so the operative
+structure is *concentration* of reach (being a large share of many
+small toolchains), not volume — a quantity no count-style predictor
+carries. ORACLE is a pure graph feature, so it went straight into the
+field battery (`battery-v3/`, blind pre-check, sealed registration).
+Outcomes: **BV3-1, Debian E-vs-R, HOLDS** — Δ = +0.0898 on 229,513
+pairs, all seven SMDs ≤ 0.0116; the estimate has now sat still across
+three battery generations (+0.098, +0.083, +0.090). **BV3-2, Go
+E-vs-D, NULL — dissolved** (+0.152 → +0.018), a registered miss
+scored as a miss, and per the pre-registered table Go exits the
+certified-claims table entirely: every effect the program ever
+certified on Go has been explained, in-house, by theory-derived
+structural features. Record: **9 for 26**. The chapter's honest final
+sentence: one claim stands, the sealed-bet one — Debian's
+Exploitation cell predicts growth beyond every standard predictor,
+the first-order flux feature, and the complete mechanism of its best
+synthetic counterexample; no rule yet built produces it, no feature
+yet derived deflates it, and the theory that killed everything else
+was built and aimed by the program itself in a single day.

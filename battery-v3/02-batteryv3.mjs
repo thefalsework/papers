@@ -60,6 +60,48 @@
 //     Debian stands alone, maximally certified.
 //
 // Writes battery-v3/results.json.
+//
+// ============================================================
+// POSTSCRIPT (added after the single registered run, 2026-09-01)
+//
+//   BV3-1 (Debian E-vs-R, PRIMARY): **HOLDS.** Delta_ER = +0.0898,
+//   null [-0.0090, +0.0092], pct 100, 229,513 pairs, maxSMD 0.0116
+//   over all seven features. The trajectory across batteries:
+//   +0.098 (v1) -> +0.083 (v2) -> +0.090 (v3). The effect does not
+//   move. Debian's Exploitation cell now predicts future dependency
+//   growth beyond every standard predictor, beyond the first-order
+//   flux feature, and beyond the HARMONIC CONE-MASS functional that
+//   completely explains the strongest synthetic counterexample. This
+//   is the strongest certification this method can produce.
+//
+//   BV3-2 (Go E-vs-D): **NULL — DISSOLVED.** Delta_ED = +0.0177,
+//   pct 80.5 (v2: +0.1524, pct 100). Go's last certified effect was
+//   harmonic cone-mass in costume: with pairs agreeing on ORACLE
+//   pointwise, D-siblings grow like E-members. The registered miss is
+//   scored as a miss. GO EXITS THE CERTIFIED-CLAIMS TABLE ENTIRELY,
+//   per the pre-registered interpretation table: every Go effect the
+//   program ever certified has now been explained by theory-derived
+//   structural features — which is itself a mechanistic account of
+//   Go's growth (attribute- and flux-driven), reported at full volume.
+//
+//   Descriptive: Debian E-vs-D REVERSES as always (-0.158); Go E-vs-R
+//   remains gate-failed (51 pairs, -1.00).
+//
+// SCOREBOARD: BV3-1 hit, BV3-2 miss. Registered-directional record:
+// 9 for 26.
+//
+// THE STATE OF THE GROWTH CHAPTER, one paragraph, no percentile:
+// One corpus stands — the one that was bet on sealed and untouched —
+// and it stands against everything: the reviewer's arsenal, the
+// program's own confound list, and the complete mechanism of its best
+// synthetic counterexample. Everything else the program ever
+// celebrated on this axis (crates, Go E-over-R, Go E-over-D) was
+// caught, named, and explained BY THE PROGRAM ITSELF, most of it by
+// a theory it built in a single day. What remains unexplained is
+// exactly one thing, and it is the right thing: what grows Debian's
+// shadow. No mechanism yet built produces it; no feature yet derived
+// deflates it.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { CORPORA, buildSnap, firstSeenOf, makeGate, makeDistancer } from "../deflation-control/lib.mjs";

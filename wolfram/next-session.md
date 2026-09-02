@@ -1263,6 +1263,41 @@ survives all six battery features?
   account of field growth (harmonic cone-mass flux) and the cells
   were its reader. Either branch publishes.
 
+## Status update, 2026-09-01 (final): BATTERY V3 — Debian survives the perfect knife; Go exits the table
+
+The oracle went to the field the hour it was identified (battery-v3/,
+blind pre-check, sealed registration, single run).
+
+- Pre-check (blind): the v2-certified Debian pairs were already
+  nearly balanced on ORACLE (signed SMD -0.025, slightly AGAINST E);
+  7-feature matching fully feasible (Debian ER 229,646 pairs at
+  maxSMD 0.0114; Go ED 10,074).
+- BV3-1 (Debian E-vs-R, PRIMARY): HOLDS. Delta +0.0898, pct 100,
+  229,513 pairs, all seven SMDs <= 0.0116. ACROSS THREE BATTERY
+  GENERATIONS THE ESTIMATE HAS NOT MOVED: +0.098 (v1) -> +0.083 (v2)
+  -> +0.090 (v3). Debian is certified beyond every standard
+  predictor, the first-order flux feature, and the complete
+  mechanism of the strongest synthetic counterexample.
+- BV3-2 (Go E-vs-D): NULL — DISSOLVED (+0.152 -> +0.018, pct 80.5).
+  Registered miss, scored as a miss. GO EXITS THE CERTIFIED TABLE
+  ENTIRELY per the pre-registered interpretation table: crates
+  (v-gauntlet), Go E-over-R (v2), and Go E-over-D (v3) were all
+  caught and explained in-house, the last two by same-day theory.
+- Record: 9 for 26.
+- THE GROWTH CHAPTER'S FINAL FORM, no percentile: one claim stands,
+  the sealed-bet one. What grows Debian's shadow is (a) not any
+  standard predictor, (b) not first-order flux, (c) not harmonic
+  cone-mass, (d) not producible by any of seven mechanism families.
+  The E > R generative problem is the program's central open
+  question, now with the sharpest possible boundary around it.
+- NEXT: (1) the empirical paper (Debian-centered, with the
+  crates/Go deflations as the method's credibility spine and the
+  oracle as its theoretical contribution); (2) the E > R generative
+  search with the three named candidate channels; (3) consider
+  ORACLE as a practical ranking signal (criticality-score
+  comparison) — the "unmet needs map" pitch now has a validated
+  ingredient and a maximally certified target.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

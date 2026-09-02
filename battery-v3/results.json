@@ -1,0 +1,80 @@
+{
+ "go": {
+  "kernels": 677,
+  "ER": {
+   "pairs": 51,
+   "maxSmd": 0.1133,
+   "obs": -1,
+   "lo": -0.2941,
+   "hi": 0.2549,
+   "pct": 0,
+   "verdict": "GATE-FAILED (descriptive only)",
+   "smd": {
+    "logIn": 0,
+    "logOut": 0,
+    "age": 0,
+    "logPR": 0.0747,
+    "core": 0,
+    "logUpset": 0.1133,
+    "logOracle": 0.0711
+   }
+  },
+  "ED": {
+   "pairs": 10076,
+   "maxSmd": 0.0734,
+   "obs": 0.0177,
+   "lo": -0.0417,
+   "hi": 0.0385,
+   "pct": 80.5,
+   "verdict": "NULL",
+   "smd": {
+    "logIn": 0.0059,
+    "logOut": 0.0734,
+    "age": 0,
+    "logPR": 0.0123,
+    "core": 0.0046,
+    "logUpset": 0.0011,
+    "logOracle": 0.0127
+   }
+  }
+ },
+ "debian": {
+  "kernels": 2400,
+  "ER": {
+   "pairs": 229513,
+   "maxSmd": 0.0116,
+   "obs": 0.0898,
+   "lo": -0.009,
+   "hi": 0.0092,
+   "pct": 100,
+   "verdict": "HOLDS",
+   "smd": {
+    "logIn": 0.0018,
+    "logOut": 0.0002,
+    "age": 0.0097,
+    "logPR": 0.0116,
+    "core": 0.0105,
+    "logUpset": 0.0008,
+    "logOracle": 0.0004
+   }
+  },
+  "ED": {
+   "pairs": 879577,
+   "maxSmd": 0.0223,
+   "obs": -0.1582,
+   "lo": -0.0088,
+   "hi": 0.0092,
+   "pct": 0,
+   "verdict": "REVERSES",
+   "smd": {
+    "logIn": 0.0001,
+    "logOut": 0.0223,
+    "age": 0.0021,
+    "logPR": 0.0005,
+    "core": 0.0151,
+    "logUpset": 0.0007,
+    "logOracle": 0.0088
+   }
+  }
+ }
+}

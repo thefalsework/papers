@@ -251,6 +251,26 @@ crown, descendant-proof: its shadow out-grows the gate-straddlers.
 The knife the theory forged cut exactly one of the two throats it was
 pointed at, and the one left standing is the one that was bet blind.
 
+Then, before the night was out, the toy world surrendered its entire
+secret, and the project forged the sharpest knife it will ever hold.
+Not *that* descendants matter — the exact formula for how: growth
+flows to whatever is a large share of many small toolchains, weighted
+harmonically, so that being half of ten little kits beats being a
+sliver of a thousand cathedrals. Match on that formula and the toy
+mystery vanishes to zero exactly; match on raw counts, however
+perfect, and it stands untouched — concentration, not volume, was the
+hidden variable all along. The formula needs no knowledge of how a
+world grows; it reads off any dependency graph. So it went to the
+field, sealed bets first. Go's last crown dissolved — a miss, scored
+as a miss, and the garden leaves the certified table with every one
+of its celebrated effects explained by the project's own hand. Debian
+did not move. Three generations of ever-sharper twins — the
+reviewer's arsenal, the theory's first knife, the theory's perfect
+knife — and its number sat still: +0.098, +0.083, +0.090. One claim
+stands, the one that was bet blind on untouched ground, and what
+remains unexplained is exactly the right thing to be haunted by:
+nothing anyone has built grows the way Debian grows.
+
 ## What it all says
 
 Speak it plainly, the way you'd say it at the end of a long night:
@@ -292,14 +312,12 @@ stone arch while it's built. The scaffold carries everything — until the
 keystone goes in. Then you pull the wood away, and the arch stands or it
 never was one. The wood is up. The stones are set. And the arch is now
 holding some real weight: theorems that can't be sweet-talked, measurements
-that have overruled their own maker sixteen times in twenty-four sealed
-bets — and then, once the instrument had been audited and the theory had
-learned to name its own confounds, handed him three wins in a row —
-one impossible chair that turned out to be the realest thing in every world
-we pointed the instrument at, one fresh world that behaved exactly as the
-sealed envelope said it would even after the theory's own knife was added
-to the test, and more predictions sitting in the open, waiting to be
-wrong.
+that have overruled their own maker seventeen times in twenty-six sealed
+bets, one impossible chair that turned out to be the realest thing in every
+world we pointed the instrument at, one fresh world whose number would not
+move through three generations of ever-sharper knives — the last one
+forged by the theory itself and perfect against its own toy worlds — and
+more predictions sitting in the open, waiting to be wrong.
 
 ---
 
