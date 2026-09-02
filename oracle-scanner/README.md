@@ -1,5 +1,12 @@
 # Oracle scanner — concentration-of-reach as a supply-chain metric
 
+**Use it now:** `node oracle-rank.mjs <your-graph> --top 100` — a
+self-contained, zero-dependency CLI that ranks any dependency graph
+(edge-list CSV or JSON; cycles handled) in seconds. Published dated
+rankings for Debian trixie (2025) and crates.io (2022) are in
+`rankings/`. The writeup for a security audience is
+`preprints/quiet-criticality/paper.md`.
+
 **Idea.** ORACLE(x) = Σ 1/|cone(u)| over truncated dependency cones
 containing x — the flux-law functional from `accretion-study/THEORY.md`,
 repurposed with no causal claim attached: not "predicts growth" (that
@@ -55,3 +62,5 @@ billing disabled); mappings hand-curated; one-directional test.
 - `02-cap-sweep.mjs` / `cap-sweep.json` — truncation robustness.
 - `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
 - `04-incumbent.mjs` / `incumbent.json` / `ossf-top1000.csv` — the incumbent join; verdict in postscript.
+- `oracle-rank.mjs` — the standalone CLI (usage in file header).
+- `rankings/` — published dated top-1000 rankings (Debian 2025, crates 2022).

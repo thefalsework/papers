@@ -1,10 +1,13 @@
-# Dependency Concentration as a Criticality Signal: What Fame-Weighted Scoring Misses
+# The Critical-Projects List Contains Kubernetes and Misses zlib
+
+## Dependency concentration as a criticality signal
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.1, 2026-09-02. All computations cited here are
-committed with their code and raw output in `oracle-scanner/` at
-github.com/thefalsework/papers; each script states its expectations in a
-header written before the run and its results in a dated postscript.
+**Version.** Draft v0.2, 2026-09-02 (v0.2: retitled; artifacts section
+added). All computations cited here are committed with their code and
+raw output in `oracle-scanner/` at github.com/thefalsework/papers; each
+script states its expectations in a header written before the run and
+its results in a dated postscript.
 
 ---
 
@@ -218,9 +221,22 @@ case at rank eight of sixty-three thousand, twenty-one months before
 anyone knew to look. Funders and working groups triaging audit targets
 can compute it this afternoon.
 
-## Reproducibility
+## Artifacts and reproducibility
 
-`oracle-scanner/` in the repository contains the four scripts
+Two artifacts accompany this piece so that its claims can be used, not
+just checked:
+
+- **Published rankings** (`oracle-scanner/rankings/`): dated top-1000
+  ORACLE rankings for Debian trixie (2025) and crates.io (2022), with
+  the dependent-count comparison columns inline.
+- **A standalone CLI** (`oracle-scanner/oracle-rank.mjs`): a single
+  zero-dependency Node script that takes any dependency graph — an
+  edge-list CSV of `dependent,dependency` pairs or a JSON graph —
+  handles cycles, and emits the ranking. A 100,000-node registry takes
+  seconds. Run it on your own graph and inspect the rows where
+  `oracle_rank` is far ahead of `dependents_rank`.
+
+`oracle-scanner/` also contains the four studies behind this piece
 (retrodiction, cap sweep, crates replication, incumbent join), their
 raw outputs, the incumbent CSV as retrieved, and the hand-curated
 mapping table. Dependency snapshots and their extraction scripts are in
