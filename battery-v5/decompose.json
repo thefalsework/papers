@@ -1,0 +1,548 @@
+{
+ "ER": {
+  "pairs": 79822,
+  "obs": -0.0764,
+  "perSection": [
+   {
+    "section": "doc",
+    "pairs": 29931,
+    "obs": 0.0149
+   },
+   {
+    "section": "javascript",
+    "pairs": 11109,
+    "obs": -0.5308
+   },
+   {
+    "section": "devel",
+    "pairs": 6077,
+    "obs": -0.2695
+   },
+   {
+    "section": "libdevel",
+    "pairs": 6027,
+    "obs": -0.0481
+   },
+   {
+    "section": "games",
+    "pairs": 4978,
+    "obs": -0.0209
+   },
+   {
+    "section": "web",
+    "pairs": 4303,
+    "obs": -0.5043
+   },
+   {
+    "section": "java",
+    "pairs": 2821,
+    "obs": 0.6735
+   },
+   {
+    "section": "science",
+    "pairs": 1534,
+    "obs": 0.0984
+   },
+   {
+    "section": "interpreters",
+    "pairs": 1407,
+    "obs": 0.1464
+   },
+   {
+    "section": "utils",
+    "pairs": 1131,
+    "obs": 0.0663
+   },
+   {
+    "section": "admin",
+    "pairs": 1061,
+    "obs": 0.2074
+   },
+   {
+    "section": "lisp",
+    "pairs": 1048,
+    "obs": 0.3025
+   },
+   {
+    "section": "libs",
+    "pairs": 880,
+    "obs": -0.4011
+   },
+   {
+    "section": "ocaml",
+    "pairs": 845,
+    "obs": 0.0556
+   },
+   {
+    "section": "text",
+    "pairs": 817,
+    "obs": 0
+   },
+   {
+    "section": "golang",
+    "pairs": 788,
+    "obs": -0.6104
+   },
+   {
+    "section": "misc",
+    "pairs": 757,
+    "obs": 0
+   },
+   {
+    "section": "math",
+    "pairs": 740,
+    "obs": 0.1811
+   },
+   {
+    "section": "fonts",
+    "pairs": 694,
+    "obs": 0
+   },
+   {
+    "section": "net",
+    "pairs": 635,
+    "obs": 0.1874
+   },
+   {
+    "section": "x11",
+    "pairs": 448,
+    "obs": 0.6518
+   },
+   {
+    "section": "sound",
+    "pairs": 362,
+    "obs": 0
+   },
+   {
+    "section": "editors",
+    "pairs": 346,
+    "obs": 0
+   },
+   {
+    "section": "python",
+    "pairs": 285,
+    "obs": 4.2807
+   },
+   {
+    "section": "rust",
+    "pairs": 281,
+    "obs": -1
+   },
+   {
+    "section": "oldlibs",
+    "pairs": 253,
+    "obs": 0
+   },
+   {
+    "section": "mail",
+    "pairs": 183,
+    "obs": 0
+   },
+   {
+    "section": "database",
+    "pairs": 57,
+    "obs": 0
+   },
+   {
+    "section": "ruby",
+    "pairs": 24,
+    "obs": -0.5
+   }
+  ],
+  "leaveOneOut": [
+   {
+    "without": "doc",
+    "pairs": 49891,
+    "obs": -0.1312
+   },
+   {
+    "without": "javascript",
+    "pairs": 68713,
+    "obs": -0.0029
+   },
+   {
+    "without": "devel",
+    "pairs": 73745,
+    "obs": -0.0605
+   },
+   {
+    "without": "libdevel",
+    "pairs": 73795,
+    "obs": -0.0787
+   },
+   {
+    "without": "games",
+    "pairs": 74844,
+    "obs": -0.0801
+   },
+   {
+    "without": "web",
+    "pairs": 75519,
+    "obs": -0.052
+   },
+   {
+    "without": "java",
+    "pairs": 77001,
+    "obs": -0.1039
+   },
+   {
+    "without": "science",
+    "pairs": 78288,
+    "obs": -0.0798
+   },
+   {
+    "without": "interpreters",
+    "pairs": 78415,
+    "obs": -0.0804
+   },
+   {
+    "without": "utils",
+    "pairs": 78691,
+    "obs": -0.0785
+   }
+  ]
+ },
+ "ED": {
+  "pairs": 3832440,
+  "obs": 0.0025,
+  "perSection": [
+   {
+    "section": "net",
+    "pairs": 317178,
+    "obs": 0.028
+   },
+   {
+    "section": "libdevel",
+    "pairs": 260299,
+    "obs": 0.0715
+   },
+   {
+    "section": "utils",
+    "pairs": 257791,
+    "obs": 0.0791
+   },
+   {
+    "section": "admin",
+    "pairs": 246156,
+    "obs": -0.0153
+   },
+   {
+    "section": "perl",
+    "pairs": 245671,
+    "obs": 0.0796
+   },
+   {
+    "section": "devel",
+    "pairs": 241446,
+    "obs": 0.0495
+   },
+   {
+    "section": "science",
+    "pairs": 207263,
+    "obs": 0.0694
+   },
+   {
+    "section": "debug",
+    "pairs": 206307,
+    "obs": -0.0022
+   },
+   {
+    "section": "sound",
+    "pairs": 170011,
+    "obs": -0.0003
+   },
+   {
+    "section": "games",
+    "pairs": 159535,
+    "obs": -0.0116
+   },
+   {
+    "section": "text",
+    "pairs": 137791,
+    "obs": -0.0328
+   },
+   {
+    "section": "misc",
+    "pairs": 112621,
+    "obs": -0.0071
+   },
+   {
+    "section": "web",
+    "pairs": 104553,
+    "obs": 0.0168
+   },
+   {
+    "section": "haskell",
+    "pairs": 99495,
+    "obs": -0.0071
+   },
+   {
+    "section": "mail",
+    "pairs": 93545,
+    "obs": 0.0212
+   },
+   {
+    "section": "libs",
+    "pairs": 91413,
+    "obs": -1.0544
+   },
+   {
+    "section": "graphics",
+    "pairs": 83634,
+    "obs": 0.0407
+   },
+   {
+    "section": "x11",
+    "pairs": 75828,
+    "obs": 0.0119
+   },
+   {
+    "section": "python",
+    "pairs": 63634,
+    "obs": 0.2485
+   },
+   {
+    "section": "math",
+    "pairs": 62331,
+    "obs": -0.0872
+   },
+   {
+    "section": "doc",
+    "pairs": 61634,
+    "obs": 0.0025
+   },
+   {
+    "section": "interpreters",
+    "pairs": 55148,
+    "obs": -0.1229
+   },
+   {
+    "section": "ocaml",
+    "pairs": 54586,
+    "obs": -0.0534
+   },
+   {
+    "section": "javascript",
+    "pairs": 48759,
+    "obs": -0.0085
+   },
+   {
+    "section": "php",
+    "pairs": 42859,
+    "obs": 0.3946
+   },
+   {
+    "section": "editors",
+    "pairs": 30718,
+    "obs": 0.1866
+   },
+   {
+    "section": "video",
+    "pairs": 25929,
+    "obs": 0.0243
+   },
+   {
+    "section": "cli-mono",
+    "pairs": 23969,
+    "obs": 0.1555
+   },
+   {
+    "section": "comm",
+    "pairs": 22545,
+    "obs": 0.035
+   },
+   {
+    "section": "ruby",
+    "pairs": 22025,
+    "obs": 0.1374
+   },
+   {
+    "section": "otherosfs",
+    "pairs": 18868,
+    "obs": 0.1268
+   },
+   {
+    "section": "tex",
+    "pairs": 18206,
+    "obs": -0.1426
+   },
+   {
+    "section": "introspection",
+    "pairs": 18100,
+    "obs": -0.1342
+   },
+   {
+    "section": "hamradio",
+    "pairs": 17009,
+    "obs": 0.0146
+   },
+   {
+    "section": "java",
+    "pairs": 16694,
+    "obs": -0.726
+   },
+   {
+    "section": "electronics",
+    "pairs": 15648,
+    "obs": -0.0566
+   },
+   {
+    "section": "database",
+    "pairs": 12021,
+    "obs": -0.04
+   },
+   {
+    "section": "httpd",
+    "pairs": 11855,
+    "obs": 0.0202
+   },
+   {
+    "section": "lisp",
+    "pairs": 11504,
+    "obs": 0.0336
+   },
+   {
+    "section": "vcs",
+    "pairs": 10208,
+    "obs": 0.0212
+   },
+   {
+    "section": "localization",
+    "pairs": 8027,
+    "obs": -0.0938
+   },
+   {
+    "section": "news",
+    "pairs": 7442,
+    "obs": 0
+   },
+   {
+    "section": "gnome",
+    "pairs": 6447,
+    "obs": 0.0433
+   },
+   {
+    "section": "rust",
+    "pairs": 6063,
+    "obs": -0.14
+   },
+   {
+    "section": "tasks",
+    "pairs": 4232,
+    "obs": 0.1066
+   },
+   {
+    "section": "fonts",
+    "pairs": 4051,
+    "obs": -0.1859
+   },
+   {
+    "section": "kde",
+    "pairs": 3786,
+    "obs": -0.0985
+   },
+   {
+    "section": "oldlibs",
+    "pairs": 3612,
+    "obs": -0.2957
+   },
+   {
+    "section": "shells",
+    "pairs": 3276,
+    "obs": 0.1691
+   },
+   {
+    "section": "embedded",
+    "pairs": 3031,
+    "obs": 0.0462
+   },
+   {
+    "section": "metapackages",
+    "pairs": 2544,
+    "obs": 0.2461
+   },
+   {
+    "section": "golang",
+    "pairs": 2112,
+    "obs": 0.0469
+   },
+   {
+    "section": "gnu-r",
+    "pairs": 1345,
+    "obs": 1.371
+   },
+   {
+    "section": "kernel",
+    "pairs": 1294,
+    "obs": -0.0046
+   },
+   {
+    "section": "education",
+    "pairs": 200,
+    "obs": 0
+   },
+   {
+    "section": "xfce",
+    "pairs": 139,
+    "obs": 0.5468
+   },
+   {
+    "section": "gnustep",
+    "pairs": 52,
+    "obs": 0
+   }
+  ],
+  "leaveOneOut": [
+   {
+    "without": "net",
+    "pairs": 3515262,
+    "obs": 0.0003
+   },
+   {
+    "without": "libdevel",
+    "pairs": 3572141,
+    "obs": -0.0025
+   },
+   {
+    "without": "utils",
+    "pairs": 3574649,
+    "obs": -0.003
+   },
+   {
+    "without": "admin",
+    "pairs": 3586284,
+    "obs": 0.0038
+   },
+   {
+    "without": "perl",
+    "pairs": 3586769,
+    "obs": -0.0027
+   },
+   {
+    "without": "devel",
+    "pairs": 3590994,
+    "obs": -0.0006
+   },
+   {
+    "without": "science",
+    "pairs": 3625177,
+    "obs": -0.0013
+   },
+   {
+    "without": "debug",
+    "pairs": 3626133,
+    "obs": 0.0028
+   },
+   {
+    "without": "sound",
+    "pairs": 3662429,
+    "obs": 0.0027
+   },
+   {
+    "without": "games",
+    "pairs": 3672905,
+    "obs": 0.0032
+   }
+  ]
+ }
+}

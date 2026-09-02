@@ -83,6 +83,22 @@
 // rewritten around the graveyard as the sole finding, same day, full
 // volume. SCOREBOARD: BV5-1 missed. Registered-directional record:
 // 10 for 28.
+//
+// POST-POSTSCRIPT (2026-09-02): external review of the kill asked for
+// the anatomy, which is checkable on the pair set this run already
+// produced. See 03-decompose.mjs (descriptive, unscored; reproduces
+// the identical pair stream from this seed). Headlines: the
+// within-role reversal is HETEROGENEOUS, not uniform — javascript
+// -0.53 (11,109 pairs) and web -0.50 (4,303) carry it; doc reads
+// +0.015 (29,931), java +0.67 (2,821). Leave-one-out: WITHOUT
+// JAVASCRIPT the pooled within-role estimate is -0.003 — zero.
+// Precise obituary, two sentences: (1) the CROSS-ROLE claim (+0.083
+// through v4) is dead — it was role composition, and that verdict
+// does not depend on the decomposition; (2) the WITHIN-ROLE effect is
+// null-to-negative — the reversal's magnitude is mostly Debian's
+// atypical javascript packaging (thousands of tiny node-module
+// packages), and without it same-role twins show nothing at all.
+// No reading of the data leaves a positive effect anywhere.
 // ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";

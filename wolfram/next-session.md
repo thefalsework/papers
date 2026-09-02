@@ -1414,6 +1414,55 @@ enter at battery v1, on any corpus, from day one; (4)
 ORACLE-vs-criticality-score comparison (practical pitch, also
 unaffected by the kill).
 
+## Status update, 2026-09-02: the kill's anatomy; Beer; the succession pilot named
+
+**Post-hoc decomposition (battery-v5/03-decompose.mjs, descriptive,
+unscored).** External review asked for the reversal's anatomy. It is
+heterogeneity, not uniformity: javascript −0.531 (11,109 pairs) and web
+−0.504 carry it; doc +0.015 (29,931), java +0.674. Leave-one-out:
+without doc −0.131; **without javascript −0.003 — zero.** Precise
+obituary now in the paper (v0.4): the cross-role claim died of role
+composition (verdict independent of the decomposition); the within-role
+estimand is null-to-negative, its sign mostly Debian's atypical
+javascript packaging. No reading leaves a positive effect. §1 now states
+the estimand distinction explicitly (cross-role vs within-role — the
+stratification changed the question as well as the answer); §4 carries
+the anatomy; both-axes-collapse stated as the strongest sentence: the
+entire dynamical content of the partition on Debian was functional role.
+
+**Beer 1962 (intellectual context, recorded not actioned).** Stafford
+Beer's "defies analysis; no test can be applied" is a 1962 anticipation
+of computational irreducibility from steel-plant management — reached
+through statistics because that's what 1962 had, where Wolfram derives
+it from deterministic simple rules. The difference worth keeping:
+Wolfram's irreducibility is epistemic (what's knowable); Beer's is an
+engineering premise (regulation must be generated from within — VSM,
+Cybersyn). Third independent convergence this week (Shannon, Wolfram,
+Beer) on bounded-observer / coarse-graining / actionable pockets. The
+program's novelty claim survives all three: none of them could COUNT
+the pockets in a restricted setting. The thing to steal: Beer's
+regulation-from-within as a sharper temporal-bridge question — does the
+system's own structure induce which observer moves are available?
+(Study 11 trajectories currently impose moves externally.)
+
+**The succession pilot (named, not started).** The workable next
+empirical line, superior to shopping for another tritone (which was
+forced twice over — logic at six, arithmetic at twelve — and cannot be
+shopped for): the claim that when a domain fixes a kernel, the four
+cells become available at that moment and their ORDER OF OCCUPATION is
+constrained (Bach worked three; the fourth waited 150 years for
+Debussy). Cheapest honest test: temperament history — the succession
+Pythagorean → meantone → well-temperament → equal is documented and
+dated by others, the systems are formal objects, and "which position
+did each occupy, in what order" is answerable without a new corpus.
+If the framework cannot retrodict the sequence on the domain we know
+best, looser domains (art movements etc.) are hopeless; if it can,
+that's the method-plus-worked-case needed before any interpretive
+corpus. Guardrails if any interpretive poset is ever used: build it
+from someone else's published, dated account; the trichotomy theorem
+still refuses (regular/dense kernels reject the reading in advance);
+the empty-cell prediction is structure-generated, not chosen.
+
 ## Tomorrow, in order (original plan, 2026-08-11)
 
 1. **Paper §5 rewrite** — replace the product-law conjecture with the

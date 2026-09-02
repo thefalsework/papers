@@ -1,14 +1,17 @@
 # A Pre-Registered Growth Effect in the Debian Archive, and the Adversarial Program That Killed It
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.3, 2026-09-01. v0.1 was written the day the result
+**Version.** Draft v0.4, 2026-09-02. v0.1 was written the day the result
 reached battery-v3 form and committed to running the momentum control
 before submission; v0.2 reported that run (battery v4, sealed, HOLDS) and
 retitled; v0.3 reports battery v5 — functional role, the confound any
 Debian developer would name first — under which the headline claim
 **reversed and died**. The paper's title, abstract, and conclusions are
 rewritten accordingly, per the program's standing rule that kills are
-reported at the volume of wins, the same day. Primary sources are the
+reported at the volume of wins, the same day. v0.4 adds the kill's
+anatomy: the estimand distinction the stratification introduces (§1) and
+a post-hoc descriptive decomposition of the reversal (§4), which locates
+its magnitude almost entirely in one atypical section. Primary sources are the
 study folders cited per-claim (`software-study/`, `deflation-control/`,
 `baseline-gauntlet/`, `debian-study/`, `accretion-study/`, `battery-v2/`
 through `battery-v5/`), each carrying its pre-registrations inline —
@@ -44,7 +47,10 @@ libs, devel, doc, …) — metadata no graph feature carries — the effect
 balance of any generation) [computed]. Blind pre-check had already located
 the engine: Exploitation members were 2.4× more library-flavored than
 their matched Refusal twins; four batteries had matched everything about a
-package except what kind of thing it is. This was the program's fourth
+package except what kind of thing it is. Post-hoc anatomy sharpens the
+obituary: the cross-role effect was role composition, and the within-role
+reversal is carried almost entirely by one atypical section (javascript);
+no reading of the data leaves a positive effect anywhere. This was the program's fourth
 in-house kill — after crates.io (fine-grained popularity) and two Go
 effects (confounds derived from the program's own generative theory) — and
 it empties the certified-claims table. The registered directional record
@@ -93,12 +99,23 @@ section, and the Exploitation side was 2.4× more library-flavored
 whose pre-check leaned *with* the deflating story rather than against it.
 The sealed verdict: **Δ_ER = −0.076** on 79,822 same-section pairs
 (conditional band ±0.012; max |SMD| = 0.0095, the cleanest balance of any
-generation). Within functional role, Refusal out-grows Exploitation. The
-registered-descriptive secondary died with it: Debian's D-over-E ordering
-(−0.13 to −0.16 across four generations) collapsed to NULL at role. Both
-axes were functional role in costume. Per the interpretation table fixed
-in the registration before the run, the claim is dead and the
-certified-claims table is empty.
+generation). The registered-descriptive secondary died with it: Debian's
+D-over-E ordering (−0.13 to −0.16 across four generations) collapsed to
+NULL at role. Per the interpretation table fixed in the registration
+before the run, the claim is dead and the certified-claims table is empty.
+
+**The estimand, stated precisely.** Stratification changes the question
+as well as the answer, and both halves of the obituary matter. The
+*cross-role* question — does cell membership predict growth, package
+roles falling where they fall — is the claim v1–v4 certified, and it is
+dead: its +0.083 was role composition, an Exploitation cell enriched in
+kinds of packages that accrete dependents. The *within-role* question —
+does cell membership predict growth between same-role twins — is a
+different and narrower estimand, asked on the 79,822-pair subpopulation
+whose E and R members share a section; there the point estimate is
+negative, and its anatomy is heterogeneous (§4). Both directions of the
+partition's dynamical content collapsed in the same run: on Debian, what
+the cells knew about growth was what kind of package you are.
 
 ## 2. The instrument
 
@@ -219,15 +236,30 @@ certified.
 
 v1–v3: eight baselines 2007–2021, 2,400 evaluable kernels; v4–v5: seven
 baselines 2009–2021, 2,100 kernels. Horizon two releases; gains = horizon
-in-degree minus baseline in-degree at the package level. The v5 population
-is the same-section subpopulation (dominated by doc, javascript, devel,
-libdevel, games); per-section estimates, registered-descriptive: doc
-+0.015, javascript −0.531, devel −0.270, libdevel −0.048, games −0.021 —
-the reversal is broad-based outside doc. The four-generation stability now
-reads as what it was: five graph-structural knives and one autoregressive
-knife, none of which could see the covariate that mattered, because it is
-not a function of the graph. The stability of an estimate under controls
-is evidence only about the controls you have.
+in-degree minus baseline in-degree at the package level.
+
+**The anatomy of the reversal [post-hoc descriptive, unscored;
+`battery-v5/03-decompose.mjs` reproduces the registered pair stream and
+scores nothing].** The within-role reversal is not uniform — it is
+heterogeneity dominated by one section. Per-section estimates on the v5
+pairs: javascript −0.531 (11,109 pairs), web −0.504 (4,303), devel
+−0.270 (6,077), libdevel −0.048 (6,027), games −0.021 (4,978), doc
++0.015 (29,931), java +0.674 (2,821), with smaller sections scattered on
+both sides. Leave-one-out on the pooled estimate: remove doc and it
+deepens to −0.131; **remove javascript and it reads −0.003 — zero.**
+Debian's javascript packaging is notoriously atypical (thousands of tiny
+node-module packages with unusual dependency shapes), so the honest
+summary has two clauses: the cross-role claim died of role composition —
+a verdict independent of this decomposition — and the within-role
+estimand is null-to-negative, its negative sign carried almost entirely
+by javascript. No reading of the data leaves a positive effect anywhere.
+
+The four-generation stability now reads as what it was: five
+graph-structural knives and one autoregressive knife, none of which could
+see the covariate that mattered, because it is not a function of the
+graph. The entire dynamical content of the partition on Debian — both
+orderings, E-over-R and D-over-E — was functional role. The stability of
+an estimate under controls is evidence only about the controls you have.
 
 ## 5. What killed the others (and why that is the method)
 
@@ -353,7 +385,8 @@ any result in this paper. The full chain for the headline history is:
 `battery-v4/01-precheck.mjs` (blind) → `02-batteryv4.mjs` (sealed, v4) →
 `debian-study/04-sections.mjs` (supplementary extraction, parsing fixed
 in-header) → `battery-v5/01-precheck.mjs` (blind) → `02-batteryv5.mjs`
-(sealed, v5, the kill); the theory chain is `accretion-study/SPEC.md` →
+(sealed, v5, the kill) → `03-decompose.mjs` (post-hoc descriptive
+anatomy, unscored); the theory chain is `accretion-study/SPEC.md` →
 `01…05` → `THEORY.md`. Repository: github.com/thefalsework/papers.
 
 ## 9. Coda: why the corpse is worth a paper
