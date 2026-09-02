@@ -29,9 +29,17 @@ node oracle-rank.mjs your-edges.csv --top 100
 Rust lockfiles are parsed directly; otherwise supply one
 `dependent,dependency` pair per line or a JSON graph (see the header of
 `oracle-rank.mjs`). No dependencies, one file, cycles handled,
-Apache-2.0. A 100k-node registry takes seconds.
+Apache-2.0 (`../LICENSE`). A 100k-node registry takes seconds. Output
+is deterministic: the same graph produces byte-identical CSV regardless
+of input file ordering (traversal and float accumulation order are
+canonicalized by package name).
 
 **Caveats.** Descriptive rankings, not certified claims; one
 retrodiction is one retrodiction; ORACLE's head is deliberately
 library-heavy (libraries are the attack surface). Known limitation:
 packages inside a dependency cycle share a score (SCC condensation).
+Ties take the minimum rank; the study scripts behind the paper use
+average rank, so tied positions differ between the two (unicode-ident's
+dependent-count rank is 3,304 here and 3,582 in the paper — same six
+direct dependents, thousands of crates tied at that count; its ORACLE
+rank is #2 under both conventions).

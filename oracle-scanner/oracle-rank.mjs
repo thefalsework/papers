@@ -13,6 +13,11 @@
 // Self-contained: no dependencies, single file. Handles cycles via SCC
 // condensation (members of a cycle share a score).
 //
+// Deterministic: cones are truncated at --cap, and traversal order is
+// fixed by sorting adjacency by package name before the BFS, so the
+// same graph produces byte-identical output regardless of how the
+// input file happens to be ordered.
+//
 // USAGE
 //   node oracle-rank.mjs <input> [--cap N] [--top N] [--out FILE]
 //
@@ -110,7 +115,9 @@ if (!n) { console.error("no nodes parsed"); process.exit(1); }
   const clean = [];
   for (const [a, b] of edges) {
     if (a === b) continue;
-    const k = a * 4294967296 + b;
+    // string key: numeric packing (a * 2^32 + b) silently collides past
+    // ~2M nodes (2^53 limit), which npm-scale graphs would hit
+    const k = a + ":" + b;
     if (seen.has(k)) continue;
     seen.add(k);
     clean.push([a, b]);
@@ -176,6 +183,24 @@ const comp = new Int32Array(n).fill(-1);
   var NC = nComp;
 }
 
+// canonicalize component ids (sorted by lexicographically minimal
+// member name): Tarjan's numbering depends on edge order in the input,
+// and it sets the float accumulation order below — without this,
+// last-ulp summation noise makes tie groups split differently across
+// reorderings of the same graph
+{
+  const repName = new Array(NC);
+  for (let i = 0; i < n; i++) {
+    const c = comp[i];
+    if (repName[c] === undefined || names[i] < repName[c]) repName[c] = names[i];
+  }
+  const perm = Array.from({ length: NC }, (_, c) => c)
+    .sort((x, y) => (repName[x] < repName[y] ? -1 : 1));
+  const newId = new Int32Array(NC);
+  perm.forEach((old, ni) => { newId[old] = ni; });
+  for (let i = 0; i < n; i++) comp[i] = newId[comp[i]];
+}
+
 // condensation adjacency (component -> component dependencies, unique)
 const cDeps = Array.from({ length: NC }, () => []);
 {
@@ -183,12 +208,17 @@ const cDeps = Array.from({ length: NC }, () => []);
   for (const [a, b] of edges) {
     const ca = comp[a], cb = comp[b];
     if (ca === cb) continue;
-    const k = ca * 4294967296 + cb;
+    const k = ca + ":" + cb;
     if (seen.has(k)) continue;
     seen.add(k);
     cDeps[ca].push(cb);
   }
 }
+
+// sort adjacency (ids are canonical, so this is by representative
+// name) so that cone truncation at the cap boundary does not depend on
+// the order edges appeared in the input file
+for (const list of cDeps) list.sort((x, y) => x - y);
 
 // ---- ORACLE over the condensation ----
 const orc = new Float64Array(NC);
@@ -205,6 +235,9 @@ const orc = new Float64Array(NC);
         if (seen[w] === u) continue;
         seen[w] = u;
         cone.push(w);
+        // intentional: cone is full, remaining neighbors of v are
+        // dropped (this is the truncation; adjacency is pre-sorted
+        // above so the drop is deterministic)
         if (cone.length >= CAP) break;
         q.push(w);
       }
@@ -218,7 +251,8 @@ const orc = new Float64Array(NC);
 // ---- ranks and output ----
 const oracleOf = (i) => orc[comp[i]];
 const rankOf = (valOf) => {
-  const order = Array.from({ length: n }, (_, i) => i).sort((a, b) => valOf(b) - valOf(a));
+  const order = Array.from({ length: n }, (_, i) => i)
+    .sort((a, b) => valOf(b) - valOf(a) || (names[a] < names[b] ? -1 : 1));
   const ranks = new Int32Array(n);
   let i = 0;
   while (i < n) {
