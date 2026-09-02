@@ -23,7 +23,13 @@
 //
 //   <input>  dependency graph, one of:
 //            - Cargo.lock: parsed directly ("node oracle-rank.mjs
-//              Cargo.lock --top 50" works on any Rust project);
+//              Cargo.lock --top 50" works on any Rust project).
+//              Both dependency entry forms resolve ("serde" and
+//              "serde 1.0.188"). Versions are COLLAPSED to package
+//              names: a crate present at two versions is one node
+//              whose dependency set is the union — consistent with
+//              the package-level Debian and crates.io rankings
+//              published alongside this tool;
 //            - .json: {"nodes":[names...],"edges":[[depIdx,depIdx]...]}
 //              (edges as [dependent, dependency] index pairs), or a
 //              plain JSON array of [dependent, dependency] name pairs;
