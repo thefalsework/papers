@@ -1,0 +1,397 @@
+{
+ "n": 63436,
+ "spearman": {
+  "oracle_vs_inDeg": 0.9491,
+  "oracle_vs_pageRank": 0.9726,
+  "oracle_vs_upset": 0.9608,
+  "inDeg_vs_pageRank": 0.9606
+ },
+ "watchlist": [
+  {
+   "name": "liblzma5",
+   "section": "libs",
+   "inDeg": 136,
+   "oracle": 706.97,
+   "rank_oracle": 8,
+   "rank_inDeg": 173,
+   "rank_pageRank": 36,
+   "rank_upset": 700,
+   "pct_oracle": 0.01,
+   "pct_inDeg": 0.27
+  },
+  {
+   "name": "xz-utils",
+   "section": "utils",
+   "inDeg": 55,
+   "oracle": 7.523,
+   "rank_oracle": 623,
+   "rank_inDeg": 463,
+   "rank_pageRank": 424,
+   "rank_upset": 700,
+   "pct_oracle": 0.98,
+   "pct_inDeg": 0.73
+  },
+  {
+   "name": "zlib1g",
+   "section": "libs",
+   "inDeg": 2201,
+   "oracle": 1108.497,
+   "rank_oracle": 4,
+   "rank_inDeg": 7,
+   "rank_pageRank": 8,
+   "rank_upset": 700,
+   "pct_oracle": 0.01,
+   "pct_inDeg": 0.01
+  },
+  {
+   "name": "libssl3",
+   "section": "libs",
+   "inDeg": 838,
+   "oracle": 503.748,
+   "rank_oracle": 18,
+   "rank_inDeg": 19,
+   "rank_pageRank": 35,
+   "rank_upset": 700,
+   "pct_oracle": 0.03,
+   "pct_inDeg": 0.03
+  },
+  {
+   "name": "libexpat1",
+   "section": "libs",
+   "inDeg": 205,
+   "oracle": 236.599,
+   "rank_oracle": 38,
+   "rank_inDeg": 102,
+   "rank_pageRank": 56,
+   "rank_upset": 700,
+   "pct_oracle": 0.06,
+   "pct_inDeg": 0.16
+  },
+  {
+   "name": "libxml2",
+   "section": "libs",
+   "inDeg": 663,
+   "oracle": 167.182,
+   "rank_oracle": 48,
+   "rank_inDeg": 25,
+   "rank_pageRank": 60,
+   "rank_upset": 700,
+   "pct_oracle": 0.08,
+   "pct_inDeg": 0.04
+  },
+  {
+   "name": "libgcrypt20",
+   "section": "libs",
+   "inDeg": 155,
+   "oracle": 164.824,
+   "rank_oracle": 49,
+   "rank_inDeg": 150,
+   "rank_pageRank": 151,
+   "rank_upset": 700,
+   "pct_oracle": 0.08,
+   "pct_inDeg": 0.24
+  }
+ ],
+ "divergenceTop30": [
+  {
+   "name": "python3-minimal",
+   "section": "python",
+   "rank_oracle": 79,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 15,
+   "gap": 23001,
+   "inDeg": 1,
+   "oracle": 120.911
+  },
+  {
+   "name": "libaudit-common",
+   "section": "libs",
+   "rank_oracle": 105,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 554,
+   "gap": 22975,
+   "inDeg": 1,
+   "oracle": 77.993
+  },
+  {
+   "name": "libsasl2-modules-db",
+   "section": "libs",
+   "rank_oracle": 112,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 669,
+   "gap": 22968,
+   "inDeg": 1,
+   "oracle": 65.867
+  },
+  {
+   "name": "libpam-modules-bin",
+   "section": "admin",
+   "rank_oracle": 125,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 2491,
+   "gap": 22955,
+   "inDeg": 1,
+   "oracle": 61.274
+  },
+  {
+   "name": "libsemanage-common",
+   "section": "libs",
+   "rank_oracle": 132,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 2271,
+   "gap": 22948,
+   "inDeg": 1,
+   "oracle": 59.643
+  },
+  {
+   "name": "usrmerge",
+   "section": "admin",
+   "rank_oracle": 147,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 103,
+   "gap": 22933,
+   "inDeg": 1,
+   "oracle": 53.424
+  },
+  {
+   "name": "ruby-xmlrpc",
+   "section": "ruby",
+   "rank_oracle": 154,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 231,
+   "gap": 22927,
+   "inDeg": 1,
+   "oracle": 48.969
+  },
+  {
+   "name": "libasound2-data",
+   "section": "libs",
+   "rank_oracle": 177,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 272,
+   "gap": 22903,
+   "inDeg": 1,
+   "oracle": 40.986
+  },
+  {
+   "name": "libdrm-common",
+   "section": "libs",
+   "rank_oracle": 180,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 689,
+   "gap": 22900,
+   "inDeg": 1,
+   "oracle": 40.483
+  },
+  {
+   "name": "libc-dev-bin",
+   "section": "libdevel",
+   "rank_oracle": 189,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 446,
+   "gap": 22891,
+   "inDeg": 1,
+   "oracle": 39.282
+  },
+  {
+   "name": "libcrypt-dev",
+   "section": "libdevel",
+   "rank_oracle": 190,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 446,
+   "gap": 22890,
+   "inDeg": 1,
+   "oracle": 39.242
+  },
+  {
+   "name": "libnsl-dev",
+   "section": "libdevel",
+   "rank_oracle": 191,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 446,
+   "gap": 22889,
+   "inDeg": 1,
+   "oracle": 39.227
+  },
+  {
+   "name": "rpcsvc-proto",
+   "section": "libs",
+   "rank_oracle": 192,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 446,
+   "gap": 22888,
+   "inDeg": 1,
+   "oracle": 39.197
+  },
+  {
+   "name": "libthai-data",
+   "section": "libs",
+   "rank_oracle": 195,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 1296,
+   "gap": 22885,
+   "inDeg": 1,
+   "oracle": 38.551
+  },
+  {
+   "name": "node-busboy",
+   "section": "javascript",
+   "rank_oracle": 213,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 486,
+   "gap": 22867,
+   "inDeg": 1,
+   "oracle": 33.376
+  },
+  {
+   "name": "node-undici",
+   "section": "javascript",
+   "rank_oracle": 219,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 441,
+   "gap": 22861,
+   "inDeg": 1,
+   "oracle": 32.411
+  },
+  {
+   "name": "libgdk-pixbuf2.0-common",
+   "section": "libs",
+   "rank_oracle": 247,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 541,
+   "gap": 22833,
+   "inDeg": 1,
+   "oracle": 28.009
+  },
+  {
+   "name": "libsensors-config",
+   "section": "utils",
+   "rank_oracle": 266,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 2312,
+   "gap": 22814,
+   "inDeg": 1,
+   "oracle": 25.902
+  },
+  {
+   "name": "dconf-service",
+   "section": "libs",
+   "rank_oracle": 302,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 292,
+   "gap": 22778,
+   "inDeg": 1,
+   "oracle": 20.368
+  },
+  {
+   "name": "pkgconf-bin",
+   "section": "devel",
+   "rank_oracle": 305,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 153,
+   "gap": 22775,
+   "inDeg": 1,
+   "oracle": 20.002
+  },
+  {
+   "name": "libcore-specs-alpha-clojure",
+   "section": "java",
+   "rank_oracle": 327,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 408,
+   "gap": 22754,
+   "inDeg": 1,
+   "oracle": 18.905
+  },
+  {
+   "name": "libegl-mesa0",
+   "section": "libs",
+   "rank_oracle": 329,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 1748,
+   "gap": 22751,
+   "inDeg": 1,
+   "oracle": 18.873
+  },
+  {
+   "name": "libjs-jquery-ui-theme-base",
+   "section": "javascript",
+   "rank_oracle": 343,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 492,
+   "gap": 22737,
+   "inDeg": 1,
+   "oracle": 18.33
+  },
+  {
+   "name": "openjdk-17-doc",
+   "section": "doc",
+   "rank_oracle": 349,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 168,
+   "gap": 22731,
+   "inDeg": 1,
+   "oracle": 17.996
+  },
+  {
+   "name": "libinput-bin",
+   "section": "libs",
+   "rank_oracle": 388,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 6084,
+   "gap": 22692,
+   "inDeg": 1,
+   "oracle": 15.875
+  },
+  {
+   "name": "libmagic-mgc",
+   "section": "libs",
+   "rank_oracle": 426,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 2105,
+   "gap": 22654,
+   "inDeg": 1,
+   "oracle": 13.352
+  },
+  {
+   "name": "libwacom-common",
+   "section": "libs",
+   "rank_oracle": 427,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 11135,
+   "gap": 22653,
+   "inDeg": 1,
+   "oracle": 13.317
+  },
+  {
+   "name": "libjs-inherits",
+   "section": "javascript",
+   "rank_oracle": 499,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 461,
+   "gap": 22581,
+   "inDeg": 1,
+   "oracle": 10.142
+  },
+  {
+   "name": "mysql-common",
+   "section": "database",
+   "rank_oracle": 538,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 1388,
+   "gap": 22542,
+   "inDeg": 1,
+   "oracle": 9.283
+  },
+  {
+   "name": "tasksel-data",
+   "section": "admin",
+   "rank_oracle": 542,
+   "rank_inDeg": 23080,
+   "rank_pageRank": 46,
+   "gap": 22539,
+   "inDeg": 1,
+   "oracle": 9.189
+  }
+ ]
+}
