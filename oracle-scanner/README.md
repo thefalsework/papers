@@ -1,13 +1,12 @@
 # Oracle scanner — concentration-of-reach as a supply-chain metric
 
-**Use it now:** `node oracle-rank.mjs Cargo.lock --top 50` — a
-self-contained, zero-dependency CLI (Apache-2.0, per the repo's
-`LICENSE-CODE`) that ranks any dependency graph in seconds: a
-`Cargo.lock` directly, an edge-list CSV, or a JSON graph; cycles
-handled (`test-cargo.lock` is a worked example — unicode-ident comes
-out #1 even on an eight-package toy). Published dated rankings for
-Debian trixie (2025) and crates.io (2022) are in `rankings/`. The
-writeup for a security audience is
+**The tool lives at
+[github.com/thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)**
+— a self-contained, zero-dependency CLI (Apache-2.0) plus the published
+dated top-1000 rankings for Debian trixie (2025) and crates.io (2022).
+It was split out of this directory with history intact; this folder
+keeps the research record (the study scripts and their raw outputs).
+The writeup for a security audience is
 `preprints/quiet-criticality/paper.md`.
 
 **Idea.** ORACLE(x) = Σ 1/|cone(u)| over truncated dependency cones
@@ -65,5 +64,7 @@ billing disabled); mappings hand-curated; one-directional test.
 - `02-cap-sweep.mjs` / `cap-sweep.json` — truncation robustness.
 - `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
 - `04-incumbent.mjs` / `incumbent.json` / `ossf-top1000.csv` — the incumbent join; verdict in postscript.
-- `oracle-rank.mjs` — the standalone CLI (usage in file header).
-- `rankings/` — published dated top-1000 rankings (Debian 2025, crates 2022).
+
+The CLI (`oracle-rank.mjs`) and the published `rankings/` moved to
+[thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)
+so the tool has one home and the artifact cannot drift from it.

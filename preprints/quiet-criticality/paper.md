@@ -3,9 +3,11 @@
 ## Dependency concentration as a criticality signal
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.3, 2026-09-02 (v0.2: retitled; artifacts section.
+**Version.** Draft v0.4, 2026-09-02 (v0.2: retitled; artifacts section.
 v0.3: package-versus-repository distinction made explicit; recommendation
-section ends on the artifact; CLI gained direct Cargo.lock support).
+section ends on the artifact; CLI gained direct Cargo.lock support.
+v0.4: tool and rankings split to their own repo,
+github.com/thefalsework/oracle-rank, with commit history intact).
 All computations cited here are committed with their code and raw output
 in `oracle-scanner/` at github.com/thefalsework/papers; each script
 states its expectations in a header written before the run and its
@@ -233,7 +235,8 @@ case at rank eight of sixty-three thousand, twenty-one months before
 anyone knew to look.
 
 Rather than end on the ask, we end on the artifact.
-`oracle-scanner/rankings/` contains the ORACLE top-1000 for Debian
+[github.com/thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank)
+contains the ORACLE top-1000 for Debian
 trixie (2025) and crates.io, computed 2026-09-02 and published as-is.
 The files are dated; every future incident either involves a package in
 them or it does not, and either outcome scores the metric in public.
@@ -248,16 +251,20 @@ The rows to read are the ones where `oracle_rank` is far ahead of
 Two artifacts accompany this piece so that its claims can be used, not
 just checked:
 
-- **Published rankings** (`oracle-scanner/rankings/`): dated top-1000
-  ORACLE rankings for Debian trixie (2025) and crates.io (2022), with
-  the dependent-count comparison columns inline.
-- **A standalone CLI** (`oracle-scanner/oracle-rank.mjs`, Apache-2.0):
-  a single zero-dependency Node script that takes any dependency graph
-  — a `Cargo.lock` directly, an edge-list CSV of `dependent,dependency`
-  pairs, or a JSON graph — handles cycles, and emits the ranking. A
-  100,000-node registry takes seconds. Run it on your own graph and
-  inspect the rows where `oracle_rank` is far ahead of
-  `dependents_rank`.
+- **Published rankings**
+  ([thefalsework/oracle-rank](https://github.com/thefalsework/oracle-rank),
+  `rankings/`): dated top-1000 ORACLE rankings for Debian trixie (2025)
+  and crates.io (2022), with the dependent-count comparison columns
+  inline.
+- **A standalone CLI** (same repo, Apache-2.0): a single zero-dependency
+  Node script that takes any dependency graph — a `Cargo.lock` directly,
+  an edge-list CSV of `dependent,dependency` pairs, or a JSON graph —
+  handles cycles, and emits a deterministic ranking. A 100,000-node
+  registry takes seconds. Run it on your own graph and inspect the rows
+  where `oracle_rank` is far ahead of `dependents_rank`. The repo's
+  eight-package `test-cargo.lock` reproduces the metric's whole argument
+  in one command: unicode-ident ranks first with two direct dependents,
+  above proc-macro2 with three.
 
 `oracle-scanner/` also contains the four studies behind this piece
 (retrodiction, cap sweep, crates replication, incumbent join), their
