@@ -64,6 +64,7 @@ billing disabled); mappings hand-curated; one-directional test.
 - `02-cap-sweep.mjs` / `cap-sweep.json` — truncation robustness.
 - `03-crates.mjs` / `crates.json` — open-registry replication; verdict in postscript.
 - `04-incumbent.mjs` / `incumbent.json` / `ossf-top1000.csv` — the incumbent join; verdict in postscript.
+- `05-rustsec.mjs` / `rustsec.json` — **the registered RustSec retrodiction: ORACLE lost.** Labels = advisories dated strictly after the 2022 snapshot; at the registered headline cell (share of future-advisory crates in the top decile) dependent count 0.629 > PageRank 0.598 > ORACLE 0.554, all >> null 0.10. Reported in the paper's limitations verbatim. The divergent-head claim is a different cell, untested either way.
 
 The CLI (`conemass.mjs`) and the published `rankings/` moved to
 [thefalsework/conemass](https://github.com/thefalsework/conemass)

@@ -56,6 +56,33 @@
 //   R3 fails -> UNINFORMATIVE; report and stop. No threshold tuning
 //     in any branch.
 
+// ------------------------------------------------------------------
+// POSTSCRIPT (2026-09-02, after the one registered run; registration
+// commit 080077d; advisory-db commit in rustsec.json).
+//
+// R3 GATE PASSES (inDeg primary top-10% = 0.629 >= 0.20). Scored.
+// R1 FAILS: ORACLE primary top-10% = 0.554 < inDeg 0.629.
+// R2 FAILS: ORACLE 0.554 < PageRank 0.598.
+//
+// Reading, per the table fixed above: ORACLE does NOT beat dependent
+// count at pooled advisory retrodiction. The structural-embeddedness
+// claim (A) is untouched; the security-prediction upgrade (B/C) did
+// not receive support at the registered cell, and this loss goes into
+// the quiet-criticality paper's limitations verbatim. The adverse
+// label bias (scrutiny follows popularity) was stated in advance and
+// makes the loss confounded — but the registration committed to
+// reporting it as a loss regardless, and that is what it is.
+//
+// Descriptive context, no claims: every graph metric crushes the
+// random null (55-63% of future-advisory crates sit in the top decile
+// vs 10% by chance); ORACLE's median labeled crate sits at quantile
+// 0.064. The information in these labels is overwhelmingly shared
+// between concentration and volume — the paper's divergence-head
+// claim (value where oracle_rank far outruns dependents_rank) is a
+// different, untested question and remains exactly as unproven as it
+// was this morning. Betweenness is far behind everything (0.17).
+// ------------------------------------------------------------------
+
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { buildSnap } from "../deflation-control/lib.mjs";

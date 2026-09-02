@@ -3,12 +3,15 @@
 ## Dependency concentration as a criticality signal
 
 **Author.** Chris Brink (independent)
-**Version.** Draft v0.4, 2026-09-02 (v0.2: retitled; artifacts section.
+**Version.** Draft v0.5, 2026-09-02 (v0.2: retitled; artifacts section.
 v0.3: package-versus-repository distinction made explicit; recommendation
 section ends on the artifact; CLI gained direct Cargo.lock support.
 v0.4: tool and rankings split to their own repo,
 github.com/thefalsework/conemass, with commit history intact; the tool
-is named conemass — the metric keeps the name ORACLE in this text).
+is named conemass — the metric keeps the name ORACLE in this text.
+v0.5: registered RustSec pooled-retrodiction result added to
+limitations — ORACLE lost the pooled cell to dependent count, reported
+in full).
 All computations cited here are committed with their code and raw output
 in `oracle-scanner/` at github.com/thefalsework/papers; each script
 states its expectations in a header written before the run and its
@@ -208,6 +211,22 @@ piece is descriptive throughout.
   post-hoc case, chosen because it is the consensus catastrophe. The
   metric's forward value is untested. The honest deployment model is a
   standing ranking whose future hits and misses accumulate in public.
+- **A registered pooled retrodiction against RustSec advisories went
+  against us, and we report it.** After this piece was drafted we ran
+  the natural stress test: metrics computed on the 2022 crates snapshot,
+  labels = RustSec vulnerability advisories dated strictly after it
+  (159 affected crates in-snapshot), share of labeled crates in each
+  metric's top decile. Every graph metric crushes the random null
+  (55–63% vs 10%), but ORACLE (0.554) **lost** to dependent count
+  (0.629) and PageRank (0.598) at the registered headline cell. Label
+  bias favors popular crates (advisories are filed where the scrutiny
+  is) and was stated before the run — but the registration committed to
+  reporting the outcome as a loss, so: at *pooled* advisory
+  retrodiction, concentration does not beat volume. This piece's claim
+  is complementary value at the divergent head, which is a different
+  cell and remains untested either way; a reader should still know the
+  pooled test went the other way (`05-rustsec.mjs`, registered,
+  single run).
 - **Global rank correlation with volume metrics is high** (Spearman
   0.95–0.99 across full registries). The divergence is concentrated at
   the head of the ranking — which is where prioritization decisions are
