@@ -29,3 +29,4 @@ import FalseWorkPapers.Lattice.NucleusFactorization
 import FalseWorkPapers.Lattice.ApertureClosedForm
 import FalseWorkPapers.Lattice.ApertureClosedFormPi
 import FalseWorkPapers.Examples.ApertureAnchors
+import FalseWorkPapers.Examples.PerceptronRegular

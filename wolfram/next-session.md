@@ -1,3 +1,39 @@
+# Status 2026-09-04: the Levin bridge (`PerceptronRegular.lean`, kernel-checked)
+
+Ilya Levin sent his published Synthese paper ("From Symbols to Geometry: An
+Indexical Epistemology of Generative AI," Synthese 208:132). He last saw
+paper 1 v11.5–v11.7 (spring) — the five-position verbal derivation. He has
+never seen the four-cell theorem, the ordinariness criterion, or the
+aperture work, all of which postdate the exchange. His corpus (six 2026
+papers, checked in full) never engages any non-classical logic: his foil is
+Boolean throughout (career: threshold logic, circuit synthesis, Boolean
+concepts learning), and when the symbolic mode ends at his threshold, logic
+exits his account entirely.
+
+The bridge, now [K] (`lean/FalseWorkPapers/Examples/PerceptronRegular.lean`,
+builds against the existing `IsOrdinary` / `AllFourCellsInhabited`
+machinery): threshold devices' decision regions are elements of `Opens ℝ`
+(a frame), so the four-position theorems apply to them literally, no
+analogy. Results: (1) `coe_hnot` / `coe_hnot_hnot` — Heyting negation in
+`Opens X` is interior-of-complement, double negation is
+interior-of-closure; (2) a single threshold unit (`Ioi θ` / `Iio θ`) is a
+regular element — the perceptron is classical, no four-fold opens around
+it (`unit_not_ordinary`); (3) the composed region `(0,1) ∪ (1,2)`, built
+in-lattice from four units by `⊓`/`⊔`, is ordinary —
+`composed_allFourCells` gives the non-degenerate partition; (4)
+`composed_seam` — the `¬¬`-remainder is exactly the phantom wall `{1}`,
+the algebraic form of Levin's manifold-membership undecidability
+(hallucination locus). Open [O]: whether real learned manifolds have
+substantial `¬¬`-remainder; the corridor conjecture (regular below the
+Cover transition, dense above saturation, ordinary only in the corridor).
+
+Reply to Levin drafted on this spine: conemass as an empirical instance of
+his positional-vs-symbolic migration (liblzma5 #8 positional vs #173 fame),
+the Battery v5 kill as the refusal mechanism his framework lacks, the
+four-cell theorem + the bridge file as the payload. Sent [pending].
+
+---
+
 # Next session: write the aperture closed form into the paper (2026-08-12)
 
 ## State at end of 2026-08-11
