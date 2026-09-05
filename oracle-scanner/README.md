@@ -10,6 +10,12 @@ The writeup for a security audience ships with the tool:
 [conemass/paper/quiet-criticality.md](https://github.com/thefalsework/conemass/blob/main/paper/quiet-criticality.md)
 (`preprints/quiet-criticality/` here is a pointer).
 
+**Naming.** As of 2026-09-05 the metric is named **conemass** in all
+public artifacts (tool, CSV columns, paper, rankings). ORACLE is its
+working name from the derivation (`accretion-study/THEORY.md`), and the
+frozen study scripts and outputs below retain it; the two names denote
+the same quantity, and the rename changed no computation.
+
 **Idea.** ORACLE(x) = Σ 1/|cone(u)| over truncated dependency cones
 containing x — the flux-law functional from `accretion-study/THEORY.md`,
 repurposed with no causal claim attached: not "predicts growth" (that
@@ -71,5 +77,6 @@ The CLI (`conemass.mjs`) and the published `rankings/` moved to
 [thefalsework/conemass](https://github.com/thefalsework/conemass)
 so the tool has one home and the artifact cannot drift from it. (The
 tool was briefly named oracle-rank; renamed to avoid the SEO wall and
-the test-oracle collision. The metric inside keeps the name ORACLE —
-that is its derivation history; see `accretion-study/THEORY.md`.)
+the test-oracle collision. On 2026-09-05 the metric itself was also
+renamed conemass in the public artifacts — a pure rename; ORACLE
+remains the working name in this frozen research record.)
