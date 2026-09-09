@@ -1,3 +1,42 @@
+# Status 2026-09-09: the co-aperture (`CoApertureClosedForm.lean`, kernel-checked)
+
+The dual ledger the program lacked: the aperture counts observers under
+which a kernel stays ordinary (what survives); the co-aperture measures
+what each observer destroys. Registered spec with hand-computed
+expectations committed *before* the Lean work
+(`preprints/aperture/coaperture-spec.md`); everything verified same day,
+no deviations.
+
+Definition: a nucleus doesn't delete, it conflates — `Icc k (j k)` is
+exactly the set of elements the observer `j` cannot distinguish from `k`
+from above (`IsNucleus.le_apply_iff`, two lines, any `SemilatticeInf`).
+Its size is the phantom mass of `k` under `j`;
+`coaperture k = Σ over nuclei j of |Icc k (j k)|` is the total phantom
+mass. The phantom framing matters: not a blind spot (absence) but
+confident false presence — `composed_seam`'s wall, generalized from one
+observer to the whole ledger.
+
+Results, all [K] (`lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`):
+chain closed form `coaperture e + 2^e = 2^(m+1)` by double counting;
+**exact multiplicativity on finite products** (`coaperture_pi`, any
+finite semilattices with ⊤ — note the aperture needs
+inclusion–exclusion, the destruction ledger just multiplies); divisor
+lattice closed form `∏ᵢ(2^{aᵢ+1} − 2^{kᵢ})`; and the independence
+witnesses in both directions — Div24 kernels 2, 4: same aperture (3),
+co-apertures 42 vs 36; Div72 kernels 4, 6: same co-aperture (84),
+apertures 9 vs 6. Neither invariant determines the other: survival and
+destruction are independent coordinates on kernels.
+
+Open [O]: the conservation question (is there an exact identity linking
+the two ledgers through the total observer count?); the cost-functional
+reading (phantom mass as the price of an observer, cf. the
+latency/co-aperture thread); whether the co-aperture of the composed
+perceptron region has the corridor behavior conjectured for real
+manifolds. Next theorem for the Levin thread if wanted: phantom mass of
+`composed` under specific nuclei on `Opens ℝ`.
+
+---
+
 # Status 2026-09-04: the Levin bridge (`PerceptronRegular.lean`, kernel-checked)
 
 Ilya Levin sent his published Synthese paper ("From Symbols to Geometry: An

@@ -30,3 +30,4 @@ import FalseWorkPapers.Lattice.ApertureClosedForm
 import FalseWorkPapers.Lattice.ApertureClosedFormPi
 import FalseWorkPapers.Examples.ApertureAnchors
 import FalseWorkPapers.Examples.PerceptronRegular
+import FalseWorkPapers.Lattice.CoApertureClosedForm

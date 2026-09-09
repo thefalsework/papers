@@ -107,6 +107,38 @@ only on 2^{Σkᵢ} and the co-heights aᵢ − kᵢ... stated more carefully:
 depends only on the co-exponents aᵢ − kᵢ. Recorded as an observation
 on the formula, not a separate theorem.
 
+## Postscript (2026-09-09, same day, after execution)
+
+`lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean` builds clean;
+every expectation above is now [K]:
+
+- **E0** = `IsNucleus.le_apply_iff`, proved on any `SemilatticeInf` —
+  two lines from inflationary + monotone + idempotent, as expected.
+- **E1** = `coaperture_chain_add`, stated additively
+  (`coaperture e + 2^e = 2^(m+1)`) to stay in ℕ. The proof is the
+  registered double count: transfer the sum to top-sets, count
+  (observer, conflated element) pairs the other way, geometric series.
+- **E2** = `coaperture_pi`, proved at full generality (any finite
+  family of finite semilattices with ⊤, not just chains). One
+  structural surprise worth recording: the aperture needs
+  inclusion–exclusion to assemble across coordinates; the co-aperture
+  is *exactly multiplicative* — `Pi.card_Icc` turns the phantom
+  interval of a product into a product of intervals and the sum
+  factors. The destruction ledger composes more simply than the
+  survival count.
+- **E3** = `coaperture_closed_form_pi`: ∏ᵢ(2^{aᵢ+1} − 2^{kᵢ}), over ℤ,
+  exactly as registered.
+- **E4**: all four hand-computed witnesses verified by `decide`
+  through the closed forms. Div24 kernels (1,0) and (2,0): apertures
+  3 and 3, co-apertures 42 and 36. Div72 kernels (2,0) and (1,1):
+  co-apertures 84 and 84, apertures 9 and 6. No hand computation was
+  wrong; independence holds in both directions.
+
+Deviations from spec: none in content. One presentational deviation:
+E1 is stated additively rather than with ℕ-subtraction, matching the
+house convention of the aperture files (`card_worldDense_add` etc.);
+the subtraction form appears in E3 over ℤ.
+
 ## What this is not
 
 No empirical claim, no application, no connection to conemass beyond
