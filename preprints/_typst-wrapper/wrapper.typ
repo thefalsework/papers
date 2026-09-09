@@ -1,0 +1,10 @@
+// Shared Typst wrapper for FalseWork preprint PDFs (pandoc body fragments).
+#set page(paper: "us-letter", margin: (x: 1in, y: 1in), numbering: "1")
+#set text(font: ("Libertinus Serif", "Segoe UI Symbol", "Cambria Math"), size: 10.5pt)
+#set par(justify: true, leading: 0.65em)
+#show heading: set block(above: 1.2em, below: 0.7em)
+#show link: set text(fill: rgb("#1a4a8a"))
+#show raw: set text(font: "Consolas", size: 9pt)
+#set table(stroke: 0.5pt + gray)
+#let horizontalrule = align(center, line(length: 30%, stroke: 0.5pt + gray))
+#let blockquote(body) = block(inset: (left: 1em), stroke: (left: 2pt + gray), pad(left: 0.5em, body))
