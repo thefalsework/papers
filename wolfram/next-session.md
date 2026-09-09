@@ -1,7 +1,7 @@
-# Status 2026-09-09 (citable homes): all Levin-tempting results now deposit-ready
+# Status 2026-09-09 (citable homes): the recent results now have deposit-ready preprints
 
-The citation-gap audit (what Levin could cite vs. what has a citable home)
-is closed on the repo side. Done this session:
+The citation-gap audit (kernel-checked results vs. what has a citable
+home with a DOI) is closed on the repo side. Done this session:
 
 - **New preprint `preprints/perceptron-bridge/paper.md` (v1.0)** — the
   citable home for the perceptron bridge: units regular / composition
@@ -25,35 +25,32 @@ aperture; fresh deposits for perceptron-bridge and four-position-partition),
 then drop the DOIs back into the papers' how-to-cite blocks. Steps given
 in chat 2026-09-09.
 
-# Status 2026-09-09 (correspondence): Levin thread, full ledger reviewed
+# Status 2026-09-09 (correspondence): Levin thread reviewed
 
 Full email thread (Mar 29 → present) reviewed in session. State:
 
-- **Chris's letter of ~Sept 8 is sent and unanswered** (the one with
+- **The ~Sept 8 letter is sent and unanswered** (the one with
   the perceptron bridge, conemass/xz, four-cell partition, and three
   closing questions held "askable now, not answered").
-- **Ledger favors us.** Levin's substantive reply to the May 1 letter
-  was promised (May 6: "shortly after the 21st") and never arrived;
-  his Sept 4 email reopened the thread while releasing himself from
-  that debt ("no need, of course, for a detailed response").
-- **His pattern:** acknowledgments in 1–3 days; substance in ~3+ weeks
-  (Apr 6 preprint → Apr 30 careful reading); one substantive debt
-  simply lapsed. Reliable on concrete commitments (endorsement, three
-  months of bureaucracy, delivered). Expect the real reply late
-  September; absence of a quick ack is not alarming.
-- **The follow-up is loaded:** the letter's second open question —
-  substantial double-negation remainder in real models — was answered
-  by the phantom pilot the day after sending (K1, codimension-2
-  mechanism). Plan: ~3 weeks after sending (≈ Sept 29), if no reply,
-  send a short self-contained report answering our own registered
-  question. Not a nudge; the letter answering itself.
+- **Timeline for expectations:** past exchanges ran acknowledgment in
+  1–3 days, substantive engagement in ~3+ weeks (Apr 6 preprint →
+  Apr 30 careful reading); his Sept 4 note reopening the thread said
+  "no need, of course, for a detailed response" to the May letter.
+  A substantive reply, if it comes, is plausible late September;
+  absence of a quick ack is not informative either way.
+- **The follow-up has real content:** the letter's second open
+  question — substantial double-negation remainder in real models —
+  was answered by the phantom pilot the day after sending (K1,
+  codimension-2 mechanism). Plan: ~3 weeks after sending (≈ Sept 29),
+  if no reply, send a short self-contained report answering our own
+  registered question.
 
 **Contents checklist for the next letter (whether follow-up or reply):**
 
 1. **Open the frame with his own Apr 7 words**: the two programs are
    "complementary halves" — the pilot is the first *measurement* taken
    at the seam between them.
-2. **The new algebra he hasn't seen**: the co-aperture — phantom mass
+2. **The new algebra since the Sept 8 letter**: the co-aperture — phantom mass
    `|Icc k (j k)|` as what an observer *manufactures* (confusion, not
    deletion), closed forms on chains/products/divisor lattices, and
    the independence of aperture and co-aperture in both directions,
@@ -69,7 +66,7 @@ Full email thread (Mar 29 → present) reviewed in session. State:
    polytope faces *meet*, not along faces (caveat: 3-resolution fit).
    One line: *the remainder is real in the algebra and vanishing in
    the geometry of trained ReLU nets.*
-5. **The survivor that bears on his story (E2)**: at fixed 64-neuron
+5. **The survivor that bears on his threshold account (E2)**: at fixed 64-neuron
    budget, depth increases phantom mass (ρ = 0.77, p < 10⁻⁴) where
    Hanin–Rolnick predicts flat — composition manufactures the
    remainder even as training crushes it. Mechanism confirmed,
@@ -82,7 +79,7 @@ Full email thread (Mar 29 → present) reviewed in session. State:
 7. **Links**: `phantom-study/SPEC.md` (registered spec with dated
    postscripts) and `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`.
 8. **Style constraints**: ≤ one-third the length of the Sept 8 letter;
-   no re-raise of conemass; no new asks; hold the reopeners
+   don't repeat conemass; no new requests; hold the reopeners
    (non-piecewise-linear activations, segmentation) to one sentence,
    marked askable-not-answered, mirroring the sent letter's close.
 
