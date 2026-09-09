@@ -200,6 +200,30 @@ Verdict: **no K0 — proceed**, with one sharpening and one amendment.
   contradict the connectivity literature and demand extra scrutiny of
   the rasterization before being believed.
 
+## Phase 0 addendum (2026-09-09, morphology-side search, at review)
+
+The search a hostile reviewer runs — "morphological closing" against
+classifiers, and the shape-analysis literature — came back with no K0
+and two named neighbors:
+
+- **Closing as cleanup, never as measurement.** Segmentation practice
+  (remote sensing, medical imaging) routinely applies closing to
+  classifier output maps to "remove noise" before downstream use. That
+  practice *assumes* the residual cells are errors and discards them
+  unexamined. No work found measures the residual as a diagnostic of
+  the classifier, tracks its scaling, or tests the error assumption.
+  E3 is a direct test of an assumption practitioners already bet on —
+  strengthening, not redundancy.
+- **Nearest shape-analysis relatives, distinguished.** (i) Convexity
+  of decision regions (Euclidean/graph interpolation measures, Nature
+  Comms 2025): convexity defect is the *hull* gap — a crescent-shaped
+  region is massively non-convex yet nearly phantom-free; closing at
+  scale ε sees only thin structure, not global concavity. (ii)
+  Boundary thickness (Yang et al. 2020) and boundary-piece counting
+  (Piwek et al. 2023): both measure the between-class boundary, not
+  intra-region slits. The phantom is a distinct quantity from all
+  three, and the crescent example goes in any writeup.
+
 ## What passing buys, and what it does not
 
 E1'+E2 alive: composition measurably manufactures phantom in trained
