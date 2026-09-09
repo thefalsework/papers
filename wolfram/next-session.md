@@ -1,3 +1,42 @@
+# Status 2026-09-09 (later): phantom-mass pilot — K1, thread dead, mechanism confirmed
+
+The AI-hallucination application of the co-aperture ran its registered
+pilot (`phantom-study/SPEC.md`, spec + Phase 0 + Phase 1 postscripts
+all dated; code `phantom-study/01-pilot.py`, numpy only). 80 runs:
+ReLU MLPs at fixed 64-neuron budget, depths 1/2/4/8, two-moons and
+two-spirals, accuracy-banded, 10 seeds, morphological-closing residual
+over a 3-octave resolution sweep.
+
+**Verdict: K1.** Phantom mass at data scale tops out at ~0.1% of
+region mass (spirals depth 8) and the scaling exponent is α ≈ 1.5–2.25
+everywhere against the registered α ≤ 0.5. The α ≈ 2 is a dimensional
+readout, not just "fast": in 2D, codimension-c structure gives
+residual fraction ~ ε^c, so the phantom concentrates at codimension 2
+— where polytope faces *meet*, not along the faces (caveat: 3-point
+scaling fit, no further). The confident-error-measure framing is dead
+for ReLU nets of this class.
+
+What survived: (1) **E2, spirals: mechanism confirmed, magnitude not
+— separate claims that came apart.** p(ε*) rises with depth at fixed
+64-neuron budget (ρ = 0.77, p < 10⁻⁴) where Hanin–Rolnick predicts
+flat; phantom mass is not linear-region count, so no contradiction —
+but a depth-scaling quantity nobody has measured is a positive finding
+in its own right. (2) E3: consistent with error-enrichment (+37/+38pp
+over distance-matched controls at depth 8) and underpowered to
+establish it; the population is intrinsically tiny by the same K1
+fact, so this design cannot strengthen it — segmentation is where the
+cells are. (3) 266 fjords, 0 islands — the registered rasterization
+check came back clean, so the kill is believed.
+
+For the Levin letter: this replaces an analogy with a checked answer —
+the remainder is real in the algebra (`composed_seam`, co-aperture
+closed forms, all [K]) and vanishing in the geometry of trained ReLU
+nets (K1, with the codimension-2 mechanism). Reopeners (registered,
+not promised): non-piecewise-linear activations, or very deep
+low-width regimes where the E2 slope might cross into signal.
+
+---
+
 # Status 2026-09-09: the co-aperture (`CoApertureClosedForm.lean`, kernel-checked)
 
 The dual ledger the program lacked: the aperture counts observers under

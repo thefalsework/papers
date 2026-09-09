@@ -1,0 +1,2224 @@
+[
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 530,
+  "eps_star": 0.024208202863022367,
+  "p_star": 0.0,
+  "alpha0": 1.9977333722522348,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.948,
+  "epoch": 370,
+  "eps_star": 0.023710331267750767,
+  "p_star": 0.0,
+  "alpha0": 2.50102363673675,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 345,
+  "eps_star": 0.02362888573566064,
+  "p_star": 5.309546564723373e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1211,
+    "err_ct": 0.4772914946325351
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 390,
+  "eps_star": 0.022558172422869355,
+  "p_star": 5.124000819840131e-05,
+  "alpha0": 2.001013856903072,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1296,
+    "err_ct": 0.4521604938271605
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 330,
+  "eps_star": 0.02447360638322983,
+  "p_star": 5.621767483696874e-05,
+  "alpha0": 2.498823415578006,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1142,
+    "err_ct": 0.45709281961471104
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 360,
+  "eps_star": 0.021261354569692706,
+  "p_star": 7.075137965190322e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 1268,
+    "err_ct": 0.4416403785488959
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 440,
+  "eps_star": 0.023511937721926446,
+  "p_star": 5.663797009515179e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1231,
+    "err_ct": 0.44110479285134035
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 350,
+  "eps_star": 0.023255632945299743,
+  "p_star": 0.00012328253304712576,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1270,
+    "err_ct": 0.4582677165354331
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1659,
+    "err_ct": 0.3887884267631103
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 365,
+  "eps_star": 0.023625395993475053,
+  "p_star": 0.0001013829413169513,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1146,
+    "err_ct": 0.4258289703315881
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1817,
+    "err_ct": 0.47936158503026965
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 1,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 350,
+  "eps_star": 0.022508346060112885,
+  "p_star": 7.704951715635916e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 1248,
+    "err_ct": 0.43349358974358976
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 120,
+  "eps_star": 0.025448564751209726,
+  "p_star": 0.0,
+  "alpha0": 1.7066684586947907,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 160,
+  "eps_star": 0.023778122024696764,
+  "p_star": 6.37608577974249e-05,
+  "alpha0": 2.4988369505140713,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1229,
+    "err_ct": 0.43938161106590723
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1605,
+    "err_ct": 0.4766355140186916
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 145,
+  "eps_star": 0.022539068619137667,
+  "p_star": 4.500045000450004e-05,
+  "alpha0": 2.0012608560549143,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1229,
+    "err_ct": 0.3807973962571196
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.948,
+  "epoch": 170,
+  "eps_star": 0.02426440078117898,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 145,
+  "eps_star": 0.02253154734749956,
+  "p_star": 2.4783147459727385e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1251,
+    "err_ct": 0.41886490807354115
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 115,
+  "eps_star": 0.023966926737727212,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 230,
+  "eps_star": 0.024335725207006255,
+  "p_star": 2.7641107855602852e-05,
+  "alpha0": 2.5009162543016443,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1163,
+    "err_ct": 0.41960447119518485
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 180,
+  "eps_star": 0.023801735804360822,
+  "p_star": 0.00013149961485642343,
+  "alpha0": 2.0021575423914775,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1191,
+    "err_ct": 0.45759865659109994
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1558,
+    "err_ct": 0.4306803594351733
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 170,
+  "eps_star": 0.024357845376084486,
+  "p_star": 2.6635414447048795e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1168,
+    "err_ct": 0.4263698630136986
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 2,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 155,
+  "eps_star": 0.02270121444709634,
+  "p_star": 7.252332833728183e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 1217,
+    "err_ct": 0.456861133935908
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 110,
+  "eps_star": 0.022766365855309015,
+  "p_star": 2.2139567835635848e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1254,
+    "err_ct": 0.3963317384370016
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 80,
+  "eps_star": 0.02214986986393503,
+  "p_star": 0.00011051390170777761,
+  "alpha0": Infinity,
+  "alpha1": 2.0014170791802406,
+  "stable_votes": 2,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1328,
+    "err_ct": 0.4118975903614458
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1734,
+    "err_ct": 0.43829296424452135
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 95,
+  "eps_star": 0.02235044948240119,
+  "p_star": 2.2850875188519722e-05,
+  "alpha0": 1.709170940073752,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1225,
+    "err_ct": 0.37142857142857144
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 90,
+  "eps_star": 0.02390515801819071,
+  "p_star": 2.8855032317636195e-05,
+  "alpha0": 2.0000058855590286,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1232,
+    "err_ct": 0.42045454545454547
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.949,
+  "epoch": 130,
+  "eps_star": 0.0243236203798589,
+  "p_star": 6.500083573105942e-05,
+  "alpha0": 1.9999743895742352,
+  "alpha1": 1.9991437361895765,
+  "stable_votes": 4,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1299,
+    "err_ct": 0.4472671285604311
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1302,
+    "err_ct": 0.4815668202764977
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 95,
+  "eps_star": 0.024178138608675993,
+  "p_star": 3.114876650884625e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1175,
+    "err_ct": 0.4195744680851064
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.949,
+  "epoch": 120,
+  "eps_star": 0.022478033659370074,
+  "p_star": 8.203247204634177e-05,
+  "alpha0": 1.5021735576398039,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1320,
+    "err_ct": 0.42348484848484846
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1726,
+    "err_ct": 0.4507531865585168
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.95,
+  "epoch": 105,
+  "eps_star": 0.02254127408252835,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 105,
+  "eps_star": 0.024620656591075058,
+  "p_star": 9.856389075960648e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1204,
+    "err_ct": 0.4019933554817276
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1573,
+    "err_ct": 0.4291163382072473
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 4,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.949,
+  "epoch": 125,
+  "eps_star": 0.022475893325532213,
+  "p_star": 0.00010197084935364745,
+  "alpha0": 2.0009440347903835,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1848,
+    "err_ct": 0.46645021645021645
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1908,
+    "err_ct": 0.430293501048218
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.95,
+  "epoch": 150,
+  "eps_star": 0.023883031551526428,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 115,
+  "eps_star": 0.02226984766975468,
+  "p_star": 2.3388530264758163e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1347,
+    "err_ct": 0.3526354862657758
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 90,
+  "eps_star": 0.024531316486122917,
+  "p_star": 0.0009975946569141538,
+  "alpha0": 1.9989013947262355,
+  "alpha1": 2.660014057027009,
+  "stable_votes": 2,
+  "fjords": 8,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 34,
+    "err_ph": 0.9705882352941176,
+    "n_ct": 1216,
+    "err_ct": 0.3470394736842105
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1535,
+    "err_ct": 0.48729641693811077
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.949,
+  "epoch": 100,
+  "eps_star": 0.024698614189714335,
+  "p_star": 6.194635445704021e-05,
+  "alpha0": 1.20770486441874,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 1250,
+    "err_ct": 0.4352
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.946,
+  "epoch": 95,
+  "eps_star": 0.023305121251308084,
+  "p_star": 0.00149484583040942,
+  "alpha0": 2.096893514360412,
+  "alpha1": 1.3893738143703702,
+  "stable_votes": 4,
+  "fjords": 10,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 9,
+    "err_ph": 0.5555555555555556,
+    "n_ct": 1194,
+    "err_ct": 0.5544388609715243
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 42,
+    "err_ph": 0.9523809523809523,
+    "n_ct": 1121,
+    "err_ct": 0.33987511150758254
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 90,
+  "eps_star": 0.022468241462547257,
+  "p_star": 0.0001676629690121233,
+  "alpha0": 2.0001096785671764,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 5,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.25,
+    "n_ct": 1360,
+    "err_ct": 0.44191176470588234
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 1789,
+    "err_ct": 0.4695360536612633
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.947,
+  "epoch": 95,
+  "eps_star": 0.02309189171623932,
+  "p_star": 0.00011366648291652455,
+  "alpha0": 1.9994973095167823,
+  "alpha1": 1.5010994498920498,
+  "stable_votes": 1,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.0,
+    "n_ct": 1318,
+    "err_ct": 0.5091047040971168
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1691,
+    "err_ct": 0.43347131874630396
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 75,
+  "eps_star": 0.02195602041952912,
+  "p_star": 7.090522335145356e-05,
+  "alpha0": 1.997754764386222,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 1445,
+    "err_ct": 0.3972318339100346
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 75,
+  "eps_star": 0.024537542531918418,
+  "p_star": 0.00010225382969455534,
+  "alpha0": 2.002245650489861,
+  "alpha1": 1.9985872955193507,
+  "stable_votes": 3,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1279,
+    "err_ct": 0.4409695074276779
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1285,
+    "err_ct": 0.4832684824902724
+   }
+  ]
+ },
+ {
+  "ds": "moons",
+  "depth": 8,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.945,
+  "epoch": 105,
+  "eps_star": 0.022312459383545032,
+  "p_star": 2.249718785151856e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 1221,
+    "err_ct": 0.17117117117117117
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 295,
+  "eps_star": 0.0365736020906268,
+  "p_star": 4.308487720809996e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 850,
+    "err_ct": 0.4235294117647059
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 610,
+  "eps_star": 0.03729080927281739,
+  "p_star": 0.0001657639986677074,
+  "alpha0": 1.4979525716048996,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 4,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 890,
+    "err_ct": 0.3325842696629214
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 889,
+    "err_ct": 0.40832395950506184
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 830,
+  "eps_star": 0.035053617730358255,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 1120,
+  "eps_star": 0.03504016693143924,
+  "p_star": 0.00015307500543592712,
+  "alpha0": Infinity,
+  "alpha1": 2.2935540922882414,
+  "stable_votes": 2,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 929,
+    "err_ct": 0.35522066738428415
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.6666666666666666,
+    "n_ct": 928,
+    "err_ct": 0.33405172413793105
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 505,
+  "eps_star": 0.035422887423131516,
+  "p_star": 3.902591320636903e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 882,
+    "err_ct": 0.3888888888888889
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 685,
+  "eps_star": 0.033662709159028484,
+  "p_star": 7.515406583496167e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 918,
+    "err_ct": 0.3616557734204793
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 625,
+  "eps_star": 0.036229821685040534,
+  "p_star": 0.000169432355809652,
+  "alpha0": 0.9998959292191792,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.0,
+    "n_ct": 900,
+    "err_ct": 0.34
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 902,
+    "err_ct": 0.38470066518847007
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 410,
+  "eps_star": 0.03578173673689035,
+  "p_star": 7.640423220236402e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 915,
+    "err_ct": 0.3377049180327869
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 914,
+    "err_ct": 0.3730853391684901
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 700,
+  "eps_star": 0.03626389038928644,
+  "p_star": 8.504847763225038e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 882,
+    "err_ct": 0.3424036281179138
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 1,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 665,
+  "eps_star": 0.034585173701679656,
+  "p_star": 0.0002624735373608168,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 4,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.5,
+    "n_ct": 921,
+    "err_ct": 0.4495114006514658
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.0,
+    "n_ct": 922,
+    "err_ct": 0.37852494577006507
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.957,
+  "epoch": 255,
+  "eps_star": 0.03841499195308024,
+  "p_star": 0.0001372495196266813,
+  "alpha0": 2.000580732432715,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 864,
+    "err_ct": 0.4375
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.955,
+  "epoch": 230,
+  "eps_star": 0.03887194333360957,
+  "p_star": 9.260116677470137e-05,
+  "alpha0": Infinity,
+  "alpha1": 2.000031010170909,
+  "stable_votes": 2,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 825,
+    "err_ct": 0.3466666666666667
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.955,
+  "epoch": 205,
+  "eps_star": 0.03445329733531745,
+  "p_star": 3.725227238861571e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 945,
+    "err_ct": 0.3216931216931217
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.954,
+  "epoch": 230,
+  "eps_star": 0.03271163733279362,
+  "p_star": 0.00016841533547284573,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 4,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.6666666666666666,
+    "n_ct": 1014,
+    "err_ct": 0.47041420118343197
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 1018,
+    "err_ct": 0.25245579567779963
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 195,
+  "eps_star": 0.036463714536981516,
+  "p_star": 0.00016904931172780226,
+  "alpha0": 1.7087403025682637,
+  "alpha1": 0.9999854477939031,
+  "stable_votes": 2,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 866,
+    "err_ct": 0.4445727482678984
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.0,
+    "n_ct": 868,
+    "err_ct": 0.3317972350230415
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.956,
+  "epoch": 225,
+  "eps_star": 0.033407637665449436,
+  "p_star": 0.00013808340237503452,
+  "alpha0": 1.4996562836789307,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.25,
+    "n_ct": 979,
+    "err_ct": 0.355464759959142
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 165,
+  "eps_star": 0.03544792500628599,
+  "p_star": 3.846745653177412e-05,
+  "alpha0": Infinity,
+  "alpha1": 2.16037583910965,
+  "stable_votes": 4,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 927,
+    "err_ct": 0.4412081984897519
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 185,
+  "eps_star": 0.03269700352989923,
+  "p_star": 0.00016553002714692446,
+  "alpha0": Infinity,
+  "alpha1": 1.7934650192859813,
+  "stable_votes": 0,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 5,
+    "err_ph": 0.4,
+    "n_ct": 987,
+    "err_ct": 0.3485309017223911
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.956,
+  "epoch": 175,
+  "eps_star": 0.03386126258986195,
+  "p_star": 0.0,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "spirals",
+  "depth": 2,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 195,
+  "eps_star": 0.034811289753251096,
+  "p_star": 0.0,
+  "alpha0": 1.5018793123659682,
+  "alpha1": Infinity,
+  "stable_votes": 0,
+  "fjords": 0,
+  "islands": 0,
+  "e3": []
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.958,
+  "epoch": 165,
+  "eps_star": 0.03560151264107127,
+  "p_star": 0.00023846666900657104,
+  "alpha0": 2.1602564041065704,
+  "alpha1": 2.0006800673044465,
+  "stable_votes": 4,
+  "fjords": 4,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 1028,
+    "err_ct": 0.34922178988326846
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.25,
+    "n_ct": 1026,
+    "err_ct": 0.30214424951267055
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 150,
+  "eps_star": 0.036035619746155795,
+  "p_star": 0.00011751878122353714,
+  "alpha0": Infinity,
+  "alpha1": 1.708362159101842,
+  "stable_votes": 4,
+  "fjords": 3,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 1,
+    "err_ph": 0.0,
+    "n_ct": 936,
+    "err_ct": 0.2767094017094017
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 933,
+    "err_ct": 0.3665594855305466
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 155,
+  "eps_star": 0.03508797428543378,
+  "p_star": 0.00030501335779716877,
+  "alpha0": 1.9978056060317213,
+  "alpha1": 2.339762737782601,
+  "stable_votes": 4,
+  "fjords": 5,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.0,
+    "n_ct": 972,
+    "err_ct": 0.19444444444444445
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 5,
+    "err_ph": 0.6,
+    "n_ct": 968,
+    "err_ct": 0.4132231404958678
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.959,
+  "epoch": 125,
+  "eps_star": 0.034162073109235594,
+  "p_star": 0.00024509803921568627,
+  "alpha0": 2.659174930724326,
+  "alpha1": 1.389328321440014,
+  "stable_votes": 1,
+  "fjords": 5,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 0.2857142857142857,
+    "n_ct": 969,
+    "err_ct": 0.3684210526315789
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 130,
+  "eps_star": 0.036685517875158974,
+  "p_star": 0.00034057054439288114,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 1,
+  "fjords": 5,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.75,
+    "n_ct": 890,
+    "err_ct": 0.3235955056179775
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.0,
+    "n_ct": 891,
+    "err_ct": 0.3333333333333333
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 135,
+  "eps_star": 0.03457877458064821,
+  "p_star": 0.0004476086892591948,
+  "alpha0": Infinity,
+  "alpha1": 1.3398999489617314,
+  "stable_votes": 3,
+  "fjords": 7,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 5,
+    "err_ph": 0.8,
+    "n_ct": 1123,
+    "err_ct": 0.35529830810329477
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 0.5714285714285714,
+    "n_ct": 1123,
+    "err_ct": 0.3170080142475512
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 160,
+  "eps_star": 0.036599960141613555,
+  "p_star": 0.00036235461767376663,
+  "alpha0": Infinity,
+  "alpha1": 2.659660134720598,
+  "stable_votes": 0,
+  "fjords": 5,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 5,
+    "err_ph": 0.8,
+    "n_ct": 927,
+    "err_ct": 0.267529665587918
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.5,
+    "n_ct": 927,
+    "err_ct": 0.3926645091693635
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.954,
+  "epoch": 105,
+  "eps_star": 0.035326921378588616,
+  "p_star": 0.00020458265139116204,
+  "alpha0": 2.0000176514527745,
+  "alpha1": 1.4999839013392413,
+  "stable_votes": 4,
+  "fjords": 1,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 5,
+    "err_ph": 1.0,
+    "n_ct": 937,
+    "err_ct": 0.423692636072572
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.951,
+  "epoch": 150,
+  "eps_star": 0.03502219080515457,
+  "p_star": 8.353521009105338e-05,
+  "alpha0": Infinity,
+  "alpha1": Infinity,
+  "stable_votes": 3,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 0.5,
+    "n_ct": 983,
+    "err_ct": 0.3743641912512716
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 4,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 145,
+  "eps_star": 0.03627473375426098,
+  "p_star": 0.00041839393666550257,
+  "alpha0": 1.4992677787901958,
+  "alpha1": 3.9043195668955915,
+  "stable_votes": 4,
+  "fjords": 2,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 2,
+    "err_ph": 1.0,
+    "n_ct": 906,
+    "err_ct": 0.35209713024282563
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 8,
+    "err_ph": 1.0,
+    "n_ct": 901,
+    "err_ct": 0.41287458379578246
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 0,
+  "excluded": false,
+  "val_acc": 0.961,
+  "epoch": 485,
+  "eps_star": 0.03737976912082158,
+  "p_star": 0.0012471946702190912,
+  "alpha0": 2.708143579055301,
+  "alpha1": Infinity,
+  "stable_votes": 4,
+  "fjords": 13,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 16,
+    "err_ph": 0.8125,
+    "n_ct": 463,
+    "err_ct": 0.3563714902807775
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 11,
+    "err_ph": 0.9090909090909091,
+    "n_ct": 472,
+    "err_ct": 0.423728813559322
+   },
+   {
+    "cls": 1,
+    "decile": 1,
+    "n_ph": 1,
+    "err_ph": 1.0,
+    "n_ct": 1375,
+    "err_ct": 0.21818181818181817
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 1,
+  "excluded": false,
+  "val_acc": 0.963,
+  "epoch": 520,
+  "eps_star": 0.03483864471711262,
+  "p_star": 0.0009765931821752107,
+  "alpha0": 1.8698463309842648,
+  "alpha1": 1.3759904027855332,
+  "stable_votes": 4,
+  "fjords": 13,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 0.5714285714285714,
+    "n_ct": 1188,
+    "err_ct": 0.3434343434343434
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 20,
+    "err_ph": 0.75,
+    "n_ct": 1128,
+    "err_ct": 0.3049645390070922
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 2,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 180,
+  "eps_star": 0.03582100341286161,
+  "p_star": 0.001184393360409051,
+  "alpha0": 1.70815578215884,
+  "alpha1": 1.706958647067638,
+  "stable_votes": 4,
+  "fjords": 9,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 6,
+    "err_ph": 0.6666666666666666,
+    "n_ct": 1197,
+    "err_ct": 0.3366750208855472
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 23,
+    "err_ph": 0.8260869565217391,
+    "n_ct": 1157,
+    "err_ct": 0.34226447709593777
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 3,
+  "excluded": false,
+  "val_acc": 0.952,
+  "epoch": 195,
+  "eps_star": 0.03486885879533129,
+  "p_star": 0.00046165854017470086,
+  "alpha0": 2.403286518794597,
+  "alpha1": 2.9993141665370855,
+  "stable_votes": 4,
+  "fjords": 6,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 9,
+    "err_ph": 0.8888888888888888,
+    "n_ct": 988,
+    "err_ct": 0.4665991902834008
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 3,
+    "err_ph": 0.3333333333333333,
+    "n_ct": 998,
+    "err_ct": 0.23346693386773548
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 4,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 180,
+  "eps_star": 0.03551058526607713,
+  "p_star": 0.0008236078482149583,
+  "alpha0": 1.9505623100826137,
+  "alpha1": 1.727107181321144,
+  "stable_votes": 3,
+  "fjords": 12,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 0.5714285714285714,
+    "n_ct": 502,
+    "err_ct": 0.41434262948207173
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 12,
+    "err_ph": 0.75,
+    "n_ct": 1206,
+    "err_ct": 0.373134328358209
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 5,
+  "excluded": false,
+  "val_acc": 0.953,
+  "epoch": 155,
+  "eps_star": 0.03592355531674197,
+  "p_star": 0.0006699080202316307,
+  "alpha0": 1.861656434329415,
+  "alpha1": 1.0980318264448339,
+  "stable_votes": 2,
+  "fjords": 10,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 9,
+    "err_ph": 0.8888888888888888,
+    "n_ct": 1087,
+    "err_ct": 0.33670653173873044
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 0.7142857142857143,
+    "n_ct": 459,
+    "err_ct": 0.3877995642701525
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 6,
+  "excluded": false,
+  "val_acc": 0.956,
+  "epoch": 140,
+  "eps_star": 0.04046761807301978,
+  "p_star": 0.0021352835351858145,
+  "alpha0": 2.58554121038872,
+  "alpha1": 1.889429856387782,
+  "stable_votes": 4,
+  "fjords": 11,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 36,
+    "err_ph": 0.6666666666666666,
+    "n_ct": 442,
+    "err_ct": 0.35294117647058826
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 9,
+    "err_ph": 0.7777777777777778,
+    "n_ct": 1119,
+    "err_ct": 0.44325290437890974
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 7,
+  "excluded": false,
+  "val_acc": 0.956,
+  "epoch": 175,
+  "eps_star": 0.03475969527331116,
+  "p_star": 0.0007533683879111729,
+  "alpha0": 2.1305712887624892,
+  "alpha1": 2.1626585470342463,
+  "stable_votes": 3,
+  "fjords": 9,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 12,
+    "err_ph": 0.75,
+    "n_ct": 1273,
+    "err_ct": 0.42812254516889237
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 7,
+    "err_ph": 1.0,
+    "n_ct": 544,
+    "err_ct": 0.36213235294117646
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 8,
+  "excluded": false,
+  "val_acc": 0.955,
+  "epoch": 175,
+  "eps_star": 0.03694552055175456,
+  "p_star": 0.0008864810411469569,
+  "alpha0": 1.4318057490482963,
+  "alpha1": 1.2613255459661687,
+  "stable_votes": 2,
+  "fjords": 13,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 9,
+    "err_ph": 0.7777777777777778,
+    "n_ct": 513,
+    "err_ct": 0.43079922027290446
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 12,
+    "err_ph": 0.5,
+    "n_ct": 1193,
+    "err_ct": 0.3235540653813915
+   }
+  ]
+ },
+ {
+  "ds": "spirals",
+  "depth": 8,
+  "seed": 9,
+  "excluded": false,
+  "val_acc": 0.958,
+  "epoch": 110,
+  "eps_star": 0.03359231240421104,
+  "p_star": 0.0004918212779500764,
+  "alpha0": 1.9149918652639928,
+  "alpha1": 1.839994040491006,
+  "stable_votes": 3,
+  "fjords": 9,
+  "islands": 0,
+  "e3": [
+   {
+    "cls": 0,
+    "decile": 0,
+    "n_ph": 4,
+    "err_ph": 0.0,
+    "n_ct": 1074,
+    "err_ct": 0.40502793296089384
+   },
+   {
+    "cls": 1,
+    "decile": 0,
+    "n_ph": 10,
+    "err_ph": 0.9,
+    "n_ct": 1067,
+    "err_ct": 0.3880037488284911
+   }
+  ]
+ }
+]

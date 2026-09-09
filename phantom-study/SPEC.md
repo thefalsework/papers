@@ -224,6 +224,80 @@ and two named neighbors:
   intra-region slits. The phantom is a distinct quantity from all
   three, and the crescent example goes in any writeup.
 
+## Phase 1 postscript (2026-09-09, after execution): K1 — thread dead as registered
+
+Full pilot ran to completion: 80 runs (2 datasets × 4 depths × 10
+seeds), zero exclusions, spirals band calibrated and logged at
+(0.951, 0.981) before any measurement run. Raw curves in
+`out/pilot-rows-run.csv`, per-run summaries in
+`out/pilot-summary-run.json`.
+
+**The kill.** E1' fails at every depth on both datasets, on both
+prongs:
+
+- Mass: mean p(ε*) ranges from 0.004% (shallow) to 0.096% (spirals
+  depth 8) — everything under the registered 0.1% floor, the deepest
+  spirals nets within 4% of it but not over.
+- Scaling: median fitted α is 1.5–2.25 everywhere, against the
+  registered α ≤ 0.5. This is not just "faster than linear" — in a 2D
+  rasterization the residual *fraction* of structure with codimension c
+  scales as ε^c, so α ≈ 1 is the signature of face-like seams and
+  α ≈ 2 of codimension-2 structure: points and corners. The dimensional
+  readout says the phantom in trained nets concentrates **where
+  polytope faces meet, not along the faces themselves** — grid cells
+  straddling vertices of the linear-region complex. Caveat, binding on
+  any use of this sentence: it rests on a scaling fit over three
+  resolutions and should not be pushed further than that. This is
+  registered prior #1 confirmed with a mechanism attached, and the
+  scaling-discipline amendment is what makes the kill a mechanism
+  rather than a threshold quibble about "small but nonzero mass."
+
+**K1 verdict, binding:** trained nets in this class carry no phantom
+at data scale. The "confident-error measure from geometry alone"
+framing is dead for ReLU MLPs of this size, and no writeup may use it.
+
+**What survived the kill:**
+
+1. **E2 passed on spirals: the mechanism is confirmed and the
+   magnitude is not, and those are separate claims that came apart.**
+   Spearman(depth, p*) = 0.767, permutation p < 0.0001, at *fixed*
+   total neuron budget (the Phase 0 amendment); moons marginal
+   (ρ = 0.32, p = 0.058). This is a whisper in a place where
+   Hanin–Rolnick predicts silence — at fixed budget, linear-region
+   count is roughly depth-flat, and p(ε*) is not. No direct
+   contradiction: phantom mass is not linear-region count. But the
+   composition mechanism producing *something* that depth-scales while
+   region count does not is a real finding about a quantity nobody
+   has measured. Reported as a positive result in its own right, not
+   folded into the kill.
+2. **E3 is consistent with error-enrichment and underpowered to
+   establish it.** At depth 8, phantom-cell true error exceeds
+   distance-matched controls by +37.0pp (moons, n=106) and +38.1pp
+   (spirals, n=230); depth 4 spirals +27.2pp; below that, no signal.
+   The population is intrinsically tiny — the same K1 fact that kills
+   the instrument caps the sample — so the enrichment claim **cannot
+   be strengthened by this design**; more seeds buy more of the same
+   small n per run. If that answer is ever wanted, the segmentation
+   setting (dense per-pixel decisions) is where the cells are. K3 did
+   not trigger; K1 binds anyway.
+3. **Fjords 266, islands 0** across all 80 runs. The registered
+   falsifiability check (islands would indict the rasterization, not
+   the theory) came back clean, so the kill is believed.
+
+**Deviations from spec:** none. Stability control was mixed (11/33
+and 19/37 runs at ≥3/4 offsets) but K2 is moot with no mass to
+stabilize; runs with larger p* passed stability at higher rates
+(spirals depth 8: 8/10), consistent with the artifact reading of the
+shallow-depth residue.
+
+**What would reopen the thread** (registered now, not promised):
+non-ReLU geometry (sigmoid/attention decision surfaces are not
+piecewise-linear, so the measure-zero argument does not apply),
+or the depth trend continuing past the toy regime — the E2 slope
+is real, and someone with reason to train very deep low-width nets
+could check whether p(ε*) ever crosses into signal. Neither is this
+program's next move.
+
 ## What passing buys, and what it does not
 
 E1'+E2 alive: composition measurably manufactures phantom in trained
