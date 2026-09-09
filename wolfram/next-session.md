@@ -17,13 +17,47 @@ Full email thread (Mar 29 → present) reviewed in session. State:
 - **The follow-up is loaded:** the letter's second open question —
   substantial double-negation remainder in real models — was answered
   by the phantom pilot the day after sending (K1, codimension-2
-  mechanism). Plan: ~3 weeks after sending, if no reply, send a short
-  self-contained report answering our own registered question. Frame
-  available from his own Apr 7 words: the two programs are
-  "complementary halves"; the pilot is the first measurement at the
-  seam between them — the algebra's object is real, his geometry
-  crushes it to measure zero in trained ReLU nets. Not a nudge; the
-  letter answering itself.
+  mechanism). Plan: ~3 weeks after sending (≈ Sept 29), if no reply,
+  send a short self-contained report answering our own registered
+  question. Not a nudge; the letter answering itself.
+
+**Contents checklist for the next letter (whether follow-up or reply):**
+
+1. **Open the frame with his own Apr 7 words**: the two programs are
+   "complementary halves" — the pilot is the first *measurement* taken
+   at the seam between them.
+2. **The new algebra he hasn't seen**: the co-aperture — phantom mass
+   `|Icc k (j k)|` as what an observer *manufactures* (confusion, not
+   deletion), closed forms on chains/products/divisor lattices, and
+   the independence of aperture and co-aperture in both directions,
+   all kernel-checked (`CoApertureClosedForm.lean`). The sent letter
+   only had the bridge; this is the dual ledger.
+3. **The instrument**: morphological closing at resolution ε *is* a
+   nucleus — so the empirical study applies his devices' own algebra
+   to his devices, not an analogy. Include the registered honesty
+   note: one one-parameter family of nuclei, not the full co-aperture.
+4. **The answer (K1)**: 80 runs, registered spec and kill conditions
+   written before code; phantom mass ≤ ~0.1% at data scale, α ≈ 2 —
+   the codimension-2 readout: the remainder concentrates where
+   polytope faces *meet*, not along faces (caveat: 3-resolution fit).
+   One line: *the remainder is real in the algebra and vanishing in
+   the geometry of trained ReLU nets.*
+5. **The survivor that bears on his story (E2)**: at fixed 64-neuron
+   budget, depth increases phantom mass (ρ = 0.77, p < 10⁻⁴) where
+   Hanin–Rolnick predicts flat — composition manufactures the
+   remainder even as training crushes it. Mechanism confirmed,
+   magnitude not: separate claims that came apart. This is his
+   threshold transition seen from the algebra side.
+6. **The two honest attenuators**: E3 consistent with error-enrichment
+   (+37/+38pp at depth 8, distance-matched) but underpowered by the
+   same K1 fact; 266 fjords / 0 islands — the registered
+   falsifiability check passed, so the kill is believed.
+7. **Links**: `phantom-study/SPEC.md` (registered spec with dated
+   postscripts) and `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`.
+8. **Style constraints**: ≤ one-third the length of the Sept 8 letter;
+   no re-raise of conemass; no new asks; hold the reopeners
+   (non-piecewise-linear activations, segmentation) to one sentence,
+   marked askable-not-answered, mirroring the sent letter's close.
 
 ---
 
