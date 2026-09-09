@@ -1,3 +1,32 @@
+# Status 2026-09-09 (correspondence): Levin thread, full ledger reviewed
+
+Full email thread (Mar 29 → present) reviewed in session. State:
+
+- **Chris's letter of ~Sept 8 is sent and unanswered** (the one with
+  the perceptron bridge, conemass/xz, four-cell partition, and three
+  closing questions held "askable now, not answered").
+- **Ledger favors us.** Levin's substantive reply to the May 1 letter
+  was promised (May 6: "shortly after the 21st") and never arrived;
+  his Sept 4 email reopened the thread while releasing himself from
+  that debt ("no need, of course, for a detailed response").
+- **His pattern:** acknowledgments in 1–3 days; substance in ~3+ weeks
+  (Apr 6 preprint → Apr 30 careful reading); one substantive debt
+  simply lapsed. Reliable on concrete commitments (endorsement, three
+  months of bureaucracy, delivered). Expect the real reply late
+  September; absence of a quick ack is not alarming.
+- **The follow-up is loaded:** the letter's second open question —
+  substantial double-negation remainder in real models — was answered
+  by the phantom pilot the day after sending (K1, codimension-2
+  mechanism). Plan: ~3 weeks after sending, if no reply, send a short
+  self-contained report answering our own registered question. Frame
+  available from his own Apr 7 words: the two programs are
+  "complementary halves"; the pilot is the first measurement at the
+  seam between them — the algebra's object is real, his geometry
+  crushes it to measure zero in trained ReLU nets. Not a nudge; the
+  letter answering itself.
+
+---
+
 # Status 2026-09-09 (later): phantom-mass pilot — K1, thread dead, mechanism confirmed
 
 The AI-hallucination application of the co-aperture ran its registered
