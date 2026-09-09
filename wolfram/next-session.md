@@ -1,3 +1,30 @@
+# Status 2026-09-09 (citable homes): all Levin-tempting results now deposit-ready
+
+The citation-gap audit (what Levin could cite vs. what has a citable home)
+is closed on the repo side. Done this session:
+
+- **New preprint `preprints/perceptron-bridge/paper.md` (v1.0)** — the
+  citable home for the perceptron bridge: units regular / composition
+  ordinary / seam = {1} [K]; the co-aperture summary [K]; and the phantom
+  pilot's registered negative result [R] with the codimension-2 mechanism,
+  the E2 survivor, and the fjords-not-islands check (266–0). Cites Levin
+  arXiv:2604.02476 (exact title verified) and Synthese 208:132.
+- **Aperture paper → v0.4** — new §7 (co-aperture: confusion-class lemma,
+  chain/product/divisor closed forms, independence both directions, all
+  [K]), former §§7–9 renumbered §§8–10, abstract and grade table updated.
+  Ready for a new Zenodo version over the superseded v0.2 DOI
+  (10.5281/zenodo.22016585).
+- **Four-position-partition paper → v1.1** — deposit metadata, how-to-cite
+  block, and a companion-results postscript (non-degeneracy criterion,
+  perceptron instance, aperture/co-aperture). No mathematical changes.
+- **`preprints/README.md`** — aperture entry refreshed to v0.4 (was stale
+  at v0.1), perceptron-bridge entry added, four-position entry bumped.
+
+Remaining is the user-side deposit: Zenodo uploads (new version for
+aperture; fresh deposits for perceptron-bridge and four-position-partition),
+then drop the DOIs back into the papers' how-to-cite blocks. Steps given
+in chat 2026-09-09.
+
 # Status 2026-09-09 (correspondence): Levin thread, full ledger reviewed
 
 Full email thread (Mar 29 → present) reviewed in session. State:

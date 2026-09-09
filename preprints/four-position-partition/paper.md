@@ -2,7 +2,7 @@
 
 **Chris Brink**
 falsework.dev
-May 2026 — preprint, not yet submitted.
+**Version.** v1.1, September 2026 (first archived deposit) — preprint, not yet submitted to a venue. v1.0 was the May 2026 draft; v1.1 changes no mathematical content and adds the deposit metadata, the citation block, and the companion-results postscript recording lattice-level developments (the non-degeneracy criterion, the perceptron bridge) that postdate the May draft.
 
 ---
 
@@ -208,6 +208,24 @@ The theorem does not validate classifications of specific works or practitioners
 The theorem does not address the framework's *Commitment gate* — a binary predicate operating orthogonally within each position to characterize structural completion. The gate is documented as schema-level architecture in the framework's papers (Brink 2026, [`comma-formal-structure-note`](../../papers/comma-formal-structure-note.md)) and has been shown through formalization testing to not admit theorem-grade unification of its four position-specific extension operators.
 
 The theorem does not claim novelty as topos theory in any strong sense. The mathematical building blocks are standard. The framing as a structural partition with these specific Heyting conditions tied to the distinction-structure apparatus does not appear in the standard topos theory literature the author has surveyed; specialist literature search has not been undertaken and prior work in adjacent registers may exist that has not been located.
+
+---
+
+## Postscript: companion results (September 2026, v1.1)
+
+Three developments postdating the May draft sharpen the theorem's standing; all are kernel-checked in the same repository and none changes anything above.
+
+1. **The non-degeneracy criterion.** The four cells are simultaneously inhabited, at the lattice level, if and only if the kernel element is *ordinary* in Citkin's sense (neither regular nor dense) — so the partition's non-degeneracy has an exact algebraic characterization, and any Heyting algebra carrying a non-degenerate partition has at least six elements and order-embeds Z₆. Kernel-checked (`isOrdinary_iff_allFourCells`, `Positions/OrdinaryKernel.lean`); full development with prior-art adjudication in the companion preprint `preprints/ordinary-elements-z6/`.
+2. **A concrete inhabited instance from threshold logic.** In Opens ℝ, a single threshold unit's decision region is a *regular* element (the partition around it is degenerate — a lone perceptron is classical), while a two-layer composed region is *ordinary*, with all four cells inhabited and the double-negation remainder computed exactly (`Examples/PerceptronRegular.lean`). This supplies what §7.3's scope note asked for: a naturally occurring, non-constructed instance where the four-fold provably opens. Companion note: `preprints/perceptron-bridge/`.
+3. **Observer-relative refinement.** The partition's kernel-dependence is developed into two kernel-checked invariants — the *aperture* (which coarse-grainings keep the four-fold open) and the *co-aperture* (how much confusion each coarse-graining manufactures), independent of each other in both directions — in `preprints/aperture/`.
+
+## How to cite
+
+Until a DOI is minted for this preprint, cite as:
+
+> Brink, C. (2026). *A four-position partition of morphisms in elementary topoi with distinction structure.* Preprint v1.1, September 2026. github.com/thefalsework/papers, `preprints/four-position-partition/`.
+
+When the Zenodo deposit exists, prefer the versioned DOI from the deposit page. The Lean formalization is part of the citable object: `lean/FalseWorkPapers/Positions/` at the tagged release accompanying the deposit.
 
 ---
 
