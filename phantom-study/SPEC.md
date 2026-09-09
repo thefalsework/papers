@@ -159,7 +159,48 @@ average is therefore **not** the test. Registered test:
   but the "confident-error measure" framing is dead and the writeup,
   if any, must not use it.
 
-### What passing buys, and what it does not
+## Phase 0 postscript (2026-09-09, before any pilot code)
+
+Verdict: **no K0 — proceed**, with one sharpening and one amendment.
+
+- **P0a.** The TDA-of-decision-boundaries line (Ramamurthy et al. 2019,
+  ICML; Li et al. 2020, NeurIPS) infers *homology* of the between-class
+  boundary from labeled samples, for model selection. No closing
+  residuals, no healed decision regions, no error-signal use. Not
+  redundant.
+- **P0b.** Named prior against us: Goodfellow, Shlens & Szegedy 2014 —
+  adversarial examples occupy broad contiguous subspaces along
+  gradient directions; "space is not full of pockets." Plus the
+  boundary-tilting account (Tanay & Griffin). Both say confident error
+  lives near tilted boundaries, not in interior structure.
+- **P0c → protocol amendment (pre-execution, binding).** Hanin &
+  Rolnick 2019: in trained and initialized nets the number of linear
+  regions scales with **total neuron count**, far below the
+  exponential-in-depth bound, and is roughly depth-independent at
+  fixed budget. This is a direct competing account of E2. Amendment:
+  the depth sweep holds **total hidden neurons fixed at 64**
+  (64×1, 32×2, 16×4, 8×8) in addition to the accuracy band. Under
+  Hanin–Rolnick, p(ε*) should be flat across depths; under the
+  composition mechanism, increasing. E2 is thereby a discriminator
+  between two named accounts, not just a trend test.
+- **P0d — the sharpening.** Path-connectivity of class regions is
+  empirically supported (Fawzi et al. 2018), connectivity has
+  theorem-level support under architectural conditions (Nguyen et al.
+  2018; extensions 2019), and 2026 work reports empirical *simple*
+  connectivity (loop-filling, six architectures). None of this
+  forecloses the phantom: **slits and fjords are invisible to
+  homology** — a disk minus a slit is still simply connected — while
+  closing sees exactly them. The phantom is a morphological invariant,
+  not a homological one; the literature's instruments are structurally
+  blind to it. What P0d does foreclose (jointly with P0b) is
+  island-type phantom. Registered refinement: any phantom mass found
+  is expected to be *attached* thin structure (fjords/slits), and the
+  pilot logs, per phantom component, whether it touches the rival
+  region (fjord) or not (island); a predominance of islands would
+  contradict the connectivity literature and demand extra scrutiny of
+  the rasterization before being believed.
+
+## What passing buys, and what it does not
 
 E1'+E2 alive: composition measurably manufactures phantom in trained
 nets — the Lean theorem's mechanism observed in the wild. E3 alive on
