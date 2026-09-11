@@ -1,3 +1,34 @@
+# Status 2026-09-11 (correspondence): Levin replied — substantive, collaborative
+
+Reply received ~3 days after the Sept 8 letter. Contents:
+
+- Confirms the convergence ("closely related problems ... different
+  methods") and singles out the load-bearing claim: the threshold
+  transition ↔ Heyting algebra connection, "especially the suggestion
+  that what ends at the threshold may be Booleanness rather than
+  logic — seems to me important and deserving of careful thought."
+- Commits to "consider the mathematical argument and its
+  formalization carefully."
+- Proposes involving one of his doctoral students in "this shared
+  line of inquiry" and developing "a more sustained collaboration."
+  "The thread is indeed renewed, and I take its possibilities very
+  seriously."
+
+Consequences:
+
+- The Sept 29 contingency (self-contained follow-up report) is
+  superseded: the same content — co-aperture, the pilot's K1 answer
+  to the letter's own second question, E2 — now goes in a direct
+  reply. The existing contents checklist below still applies.
+- The reply must answer the student overture concretely: scoped
+  problems with checkable deliverables, drawn from the registered
+  reopeners (corridor conjecture across the Cover transition;
+  phantom mass under smooth activations, where the ReLU measure-zero
+  argument doesn't apply; segmentation-setting E3).
+- Before sending: mint the three Zenodo DOIs (deposit steps in chat
+  2026-09-09) so the reply can cite the perceptron-bridge note and
+  the updated aperture paper by DOI rather than by repo path.
+
 # Status 2026-09-09 (citable homes): the recent results now have deposit-ready preprints
 
 The citation-gap audit (kernel-checked results vs. what has a citable
