@@ -221,11 +221,9 @@ Three developments postdating the May draft sharpen the theorem's standing; all 
 
 ## How to cite
 
-Until a DOI is minted for this preprint, cite as:
+> Brink, C. (2026). *A four-position partition of morphisms in elementary topoi with distinction structure.* Preprint v1.1, September 2026. Zenodo. doi:10.5281/zenodo.22715070.
 
-> Brink, C. (2026). *A four-position partition of morphisms in elementary topoi with distinction structure.* Preprint v1.1, September 2026. github.com/thefalsework/papers, `preprints/four-position-partition/`.
-
-When the Zenodo deposit exists, prefer the versioned DOI from the deposit page. The Lean formalization is part of the citable object: `lean/FalseWorkPapers/Positions/` at the tagged release accompanying the deposit.
+The Lean formalization is part of the citable object: `lean/FalseWorkPapers/Positions/` at github.com/thefalsework/papers.
 
 ---
 

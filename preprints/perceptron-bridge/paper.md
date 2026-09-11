@@ -149,20 +149,18 @@ Empirical artifacts: `phantom-study/SPEC.md` (registered spec, Phase 0 and Phase
 
 ## How to cite
 
-Until a DOI is minted for this preprint, cite as:
+> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.0, September 2026. Zenodo. doi:10.5281/zenodo.22715062.
 
-> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.0, September 2026. github.com/thefalsework/papers, `preprints/perceptron-bridge/`.
-
-When the Zenodo deposit exists, prefer the versioned DOI from the deposit page. The Lean formalization and the registered empirical artifacts are part of the citable object: `lean/FalseWorkPapers/Examples/PerceptronRegular.lean`, `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`, and `phantom-study/` at the tagged release accompanying the deposit.
+The Lean formalization and the registered empirical artifacts are part of the citable object: `lean/FalseWorkPapers/Examples/PerceptronRegular.lean`, `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`, and `phantom-study/` at github.com/thefalsework/papers.
 
 ---
 
 ## References
 
-- Brink, C. (2026a). A four-position partition of morphisms in elementary topoi with distinction structure. Preprint, github.com/thefalsework/papers, `preprints/four-position-partition/`.
+- Brink, C. (2026a). A four-position partition of morphisms in elementary topoi with distinction structure. Preprint v1.1. Zenodo. doi:10.5281/zenodo.22715070.
 - Brink, C. (2026b). The unique ordinary element of a one-generated Heyting algebra, the subgroup lattice of ℤ/12ℤ, and a characterization of n = p²q. Preprint, ibid., `preprints/ordinary-elements-z6/`.
 - Brink, C. (2026c). The opened square: Aristotle, Spencer-Brown, and the kernel-checked foundation of the four-position lens. Preprint, ibid., `preprints/opposition-figure/`.
-- Brink, C. (2026d). The aperture of a distinction: observer-relative ordinariness in Heyting algebras. Preprint, ibid., `preprints/aperture/`; v0.2 snapshot DOI 10.5281/zenodo.22016585.
+- Brink, C. (2026d). The aperture of a distinction: observer-relative ordinariness in Heyting algebras. Preprint v0.4. Zenodo. doi:10.5281/zenodo.22715068. (Earlier v0.2 text inside the repository snapshot DOI 10.5281/zenodo.22016585.)
 - Brink, C. (2026e). Epistemic dependency as structural condition. Preprint, ibid., `papers/paper2-epistemic-dependency/`.
 - Citkin, A. (2024). An algebraic proof of the Nishimura theorem. *Logics*, 2(4), 148–157.
 - Cover, T. M. (1965). Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. *IEEE Transactions on Electronic Computers*, EC-14(3), 326–334.

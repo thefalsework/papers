@@ -28,6 +28,11 @@ Consequences:
 - Before sending: mint the three Zenodo DOIs (deposit steps in chat
   2026-09-09) so the reply can cite the perceptron-bridge note and
   the updated aperture paper by DOI rather than by repo path.
+  **Done 2026-09-11:** all three published — perceptron-bridge v1.0
+  doi:10.5281/zenodo.22715062, aperture v0.4 doi:10.5281/zenodo.22715068,
+  four-position-partition v1.1 doi:10.5281/zenodo.22715070. DOIs
+  written into the papers' citation blocks and the preprints README.
+  The reply to Levin is unblocked.
 
 # Status 2026-09-09 (citable homes): the recent results now have deposit-ready preprints
 

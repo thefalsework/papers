@@ -20,6 +20,9 @@ closed forms at every arity, exact multiplicativity on products, and
 kernel-checked independence from the aperture in both directions
 (`lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`). Former §§7–9 are
 renumbered §§8–10.
+**Cite as.** Brink, C. (2026). *The aperture of a distinction: observer-relative
+ordinariness in Heyting algebras.* Preprint v0.4, September 2026. Zenodo.
+doi:10.5281/zenodo.22715068.
 **Target.** arXiv cs.AI (endorsement channel open); math.LO cross-list candidate
 **Status discipline.** Every claim in this paper carries one of four grades: **[K]** kernel-checked in Lean 4 against Mathlib4; **[C]** classical mathematics, cited; **[computed]** exhaustive finite computation, verified by two independent implementations but not yet kernel-checked; **[A]** structural analogy, argued not proved; **[O]** open. The grades are load-bearing: nothing below claims more than its tag.
 
