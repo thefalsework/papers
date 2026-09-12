@@ -62,6 +62,26 @@ real, kernel-checkable graph invariant whose practical meaning is
 open; the criticality reading is not supported at scale. Lean of
 the characterization (C1–C2) is the remaining rigor step.
 
+**Same-day continuation (Lean of C1–C2/E5): the weld is
+kernel-checked.** `Lattice/ObserverClassification.lean`, compiled
+clean against the full project, first pass. C1 in full — `S ↦ j_S`
+is a bijection `Set P ≃ {nuclei on D(P)}` for every finite poset,
+with surjectivity proved directly (support-set recovery +
+well-founded induction), so the Simmons / Bezhanishvili–Harding
+classification is a corollary here rather than a citation. C2/E5 —
+`Opens (j_S) k ⟺ trace k ∩ S ordinary in D(S)` — via pointwise
+Kripke formulas for `⇨` on lower sets and trace-transfer lemmas.
+Capstone `aperture_eq_card_ordinary_traces`: aperture(k) =
+#{S ⊆ P : k ∩ S ordinary in D(S)} as a `Nat.card` equality through
+an explicit equivalence. Consequence: the chain
+four-cell theorem ↔ ordinariness ↔ trace characterization ↔
+subset-counting formula (what the depth-test scripts compute) is
+now kernel-checked at every link; the graph layer and the lattice
+spine are the same mathematics by theorem, not by verified
+coincidence. E6 (phantomMass = relative-down-set count) remains
+computational-only; it is the next Lean target if graph-side
+co-aperture is ever needed at theorem strength.
+
 # Status 2026-09-11 (correspondence): Levin replied — substantive, collaborative
 
 Reply received ~3 days after the Sept 8 letter. Contents:

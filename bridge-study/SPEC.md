@@ -468,3 +468,40 @@ real; meaning unsettled. The mathematics (C1–C3, Lean of the
 characterization) stands on its own; any applied claim about
 criticality would need a new registered hypothesis and does not
 inherit the xz-motif result.
+
+---
+
+## Lean postscript (2026-09-12, same day): C1–C2/E5 kernel-checked
+
+`lean/FalseWorkPapers/Lattice/ObserverClassification.lean`,
+compiled clean against the full project. The Phase-2 conjectures
+are now theorems, for **every** finite poset, not just the 92
+tested algebras:
+
+- **C1, both halves (`subNucleusEquiv`).** `S ↦ j_S` is a
+  bijection `Set P ≃ {j // IsNucleus j}` on `LowerSet P`.
+  Injectivity is the strict-cone probe (`x` survives in
+  `j_S(↓x ∖ {x})` iff `x ∉ S`). Surjectivity did not need the
+  cited counting argument: any nucleus equals `j_S` for
+  `S = {x : x ∉ j(↓x ∖ {x})}`, one inclusion by meet-preservation
+  on `↓s ⊓ U ≤ ↓s ∖ {s}`, the other by well-founded induction on
+  the finite order using idempotence. Self-contained; the Simmons /
+  Bezhanishvili–Harding classification is now a corollary here, not
+  a citation.
+- **C2/E5 (`opens_subNucleus_iff`).** `Opens (j_S) k` ⟺ the trace
+  `k ∩ S` is ordinary in `D(S)`, via pointwise Kripke formulas for
+  `⇨` on lower sets and three transfer lemmas (trace kills `j_S`,
+  trace of bottom, trace intertwines `⇨` when the consequent is
+  fixed).
+- **Characterization theorem
+  (`aperture_eq_card_ordinary_traces`).**
+  `aperture(k) = #{ S ⊆ P : k ∩ S ordinary in D(S) }` as a
+  `Nat.card` equality via the explicit equivalence
+  `apertureWitnessEquiv`. The quantity the depth-test scripts
+  compute is now *definitionally* the aperture of
+  `CoApertureClosedForm` — the weld between the graph layer and
+  the lattice spine is kernel-checked end to end.
+
+E6 (phantomMass = relative-down-set count) remains
+computationally verified only; it is the natural next Lean target
+if co-aperture on graphs is ever needed at theorem strength.
