@@ -155,3 +155,67 @@ Brute force in Python (numpy-free, bitmask down-sets), one script
   motif, and the last edge of the program's graph is bone. Next step
   would then be the Lean statement (H1 is already one line), not
   more computation.
+
+---
+
+## Postscript (2026-09-12, same day, after the run)
+
+Engine: `01-downset-pilot.py`, output in `out/pilot-results.json`.
+
+**E0 passed exactly.** The brute-force engine reproduces the
+kernel-checked 4-chain facts (8 nuclei; coaperture 15, 14, 12, 8 =
+2^4 − 2^e) and the fix-set enumeration agrees with exhaustive
+enumeration of all self-maps on every algebra small enough to allow
+it. H1, H2, H3 all confirmed computationally, including the H3 hand
+values digit for digit.
+
+**No kill fired. E2 passed with margin.** Ensemble (40 graphs, 480
+principal cones, zero skips): pooled Spearman between coaperture and
+cone size is −0.67, nowhere near the 0.95 redundancy threshold, and
+77% of equal-size cone pairs are separated by at least one invariant
+— against a registered floor of 10%. 175 of 480 cones are ordinary,
+so K2 (degeneracy) fails too. The invariants are not cone size in
+disguise. (The *negative* sign of the correlation has a mechanical
+reason worth recording: coaperture sums the room above k that
+observers can inflate into, and large cones sit near ⊤ where that
+room shrinks; ⊤ itself always has coaperture = #nuclei, the
+minimum.)
+
+**E3 confirmed in the registered direction, and more sharply than
+registered.** On the xz motif, dependency side, the universal base
+(glibc) makes every cone dense per H1 — and yet the *aperture* still
+separates the positions: liblzma 21, libsystemd 21, libssl 15,
+and glibc, sshd, app2, app3 all exactly 0. The three quiet middle
+libraries — the xz-position class — are the only nodes some
+observers' worlds render ordinary; the base and every leaf app are
+classical from every viewpoint. This is the Div36 phenomenon
+(distinctions existing only at a blur) appearing unprompted in a
+dependency graph. At equal cone size (2), liblzma vs. app3:
+coaperture 588 vs. 420, aperture 21 vs. 0. Both invariants separate
+the infrastructure node from the fame node, in the registered
+direction.
+
+**One asymmetry, recorded without interpretation.** Ordinariness of
+the *global* element selects different positions per side: on the
+dependency side (H3, and xz aperture) it tracks quiet depended-upon
+nodes; on the dependents side of the xz motif the ordinary cones are
+libsystemd, sshd, app2 while liblzma is regular. Which side is the
+right criticality lens — or whether the pair is the point, as with
+aperture/co-aperture independence — is not settled by this pilot and
+is not claimed.
+
+**Honest limits.** Graphs of 6–7 nodes; nuclei enumeration is
+exponential and dies far below ecosystem scale (a real registry has
+10^5 nodes). The distance from "true on motifs" to "usable as an
+instrument" is the distance the Debian claim died crossing, and no
+instrument claim is made. What this pilot establishes is the
+theorem-scale statement: principal dependency cones are elements of
+a canonical Heyting algebra on which the program's invariants are
+non-trivial, non-redundant with cone size, and select the
+infrastructure position in the motifs where "infrastructure" has an
+unambiguous meaning.
+
+**Status of the bridge: bone at motif scale.** Next step, per the
+spec, is Lean, not more computation — H1 first (one line), then the
+H3 motif as a `decide`-checked example, then, if wanted, the general
+graph reading of cone-ordinariness as a theorem.
