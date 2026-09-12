@@ -353,3 +353,72 @@ proof (C1 injectivity + j_S nucleus axioms are short; surjectivity
 via the counting argument; C2 via the fix-set isomorphism). Then
 the depth test against standard centralities, now unblocked at
 realistic motif scale.
+
+---
+
+## Phase 3 (registered 2026-09-12, before any Phase-3 computation): the depth test
+
+Question: is the aperture of a dependency cone a known centrality
+measure in disguise? This is the hostile reviewer's question and it
+decides whether the bridge is a discovery or a translation.
+
+**Instrument.** aperture(↓p) computed by the Phase-2 characterization:
+count subsets S ⊆ P whose trace ↓p ∩ S is ordinary in D(S), with the
+polynomial ordinariness predicate (dense: some x ∈ S with
+↓x ∩ S ∩ T = ∅; regular: double-negation within S returns T).
+Dependency side (the side where the Phase-1 xz phenomenon lives).
+
+**E0''-sanity (cross-engine validation).** The subset formula must
+reproduce the Phase-1 nuclei-enumeration apertures on the motifs
+exactly — in particular the xz motif's {liblzma 21, libsystemd 21,
+libssl 15, all others 0} — and 0 for every node of a chain (hand
+proof: every subposet of a chain is a chain; chains have no ordinary
+elements; so no trace ever qualifies).
+
+**Comparison set** (all computed exactly on the same graphs):
+in-degree, out-degree, dependency-cone size |↓p|, dependents-cone
+size |↑p| (the conemass quantity), directed betweenness, harmonic
+closeness (dependents direction), Katz (dependents direction,
+α = 0.1), PageRank (dependents direction, d = 0.85), and the
+structural covariate #incomparables(p) = n − |↓p| − |↑p| + 1, which
+a hostile reviewer would try first given the H3 reading.
+
+**Graphs.** (a) 30 random layered DAGs, n = 12, edge p = 0.25, seed
+20260912. (b) 10 base-rooted variants (same generator plus a
+universal base node) — the H1 regime. (c) 5 scaled xz-family
+instances, n = 12–14: a base, a chain of 2–3 quiet middle libraries
+under a fan of leaf apps, plus independent app/lib clusters —
+each instance's "middle-library class" and "leaf-app class" recorded
+at generation time, before apertures are computed.
+
+**E7 (non-redundancy).** No comparison measure achieves median
+|Spearman| ≥ 0.95 with the aperture ranking across ensemble (a)+(b).
+
+**E8 (two-sided separation witnesses).** There exist node pairs
+(u, v) within single graphs where *every* comparison measure ranks
+u ≥ v while aperture ranks v > u strictly — and pairs the other way
+— somewhere in the ensemble. (Aperture is not a monotone
+relabeling of any tested measure.)
+
+**E9 (load tracking at scale).** In every xz-family instance, the
+middle-library class's mean aperture rank exceeds the leaf-app
+class's mean aperture rank.
+
+**Kills.**
+- **K7 (translation kill):** some comparison measure has median
+  |Spearman| ≥ 0.95 on (a)+(b) *and* correctly orders the
+  middle-vs-leaf classes in all of (c). Then the aperture is that
+  measure in disguise; the depth claim dies and the honest statement
+  becomes "a lattice-theoretic derivation of a known centrality."
+- **K8 (degeneracy kill):** aperture is constant (or zero) on ≥ half
+  the nodes of ≥ half the graphs in (a) — the invariant doesn't
+  discriminate at realistic scale and the depth question is moot.
+- E9 failing does not kill novelty but is recorded as the load-half
+  of the depth claim failing.
+
+**Outcome meanings.** K7: cite the winning centrality, fold the
+bridge into "known measure, new derivation," stop. K8: the aperture
+is a motif-scale curiosity; record and stop. E7+E8+E9 all pass: the
+aperture is a new centrality-class invariant that tracks load — the
+depth claim stands with receipts, and the Lean formalization of
+C1–C2 becomes the priority.
