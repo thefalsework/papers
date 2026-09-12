@@ -1,3 +1,46 @@
+# Status 2026-09-12 (bridge study): dependency cones joined to the lattice spine
+
+Question tested: do the kernel-checked invariants (ordinariness,
+aperture, co-aperture) say anything about dependency cones that cone
+size doesn't — i.e. is conemass connected to the spine by theorem or
+only by theme. Registered spec `bridge-study/SPEC.md` (committed
+before the run), pilot `bridge-study/01-downset-pilot.py`.
+
+- Setup: a dependency graph induces a poset (dependencies below);
+  down-sets form a canonical Heyting algebra; a package's dependency
+  cone is a principal down-set, so the invariants apply verbatim.
+- **No kill fired.** Ensemble (40 graphs, 480 cones): 77% of
+  equal-size cone pairs separated by some invariant (floor 10%);
+  Spearman(coaperture, size) = −0.67 (redundancy threshold 0.95);
+  175/480 cones ordinary.
+- **xz motif:** universal base makes every dependency cone dense
+  (H1), yet aperture still separates positions — liblzma 21,
+  libsystemd 21, libssl 15, base and all leaf apps 0. The only
+  nonzero-aperture nodes are the quiet middle libraries. At equal
+  cone size, liblzma vs. leaf app: coaperture 588 vs. 420, aperture
+  21 vs. 0.
+- **Lean (`Lattice/BridgeDownSets.lean`), kernel-checked:** H1 as a
+  theorem on Mathlib's `LowerSet` (global lower bound ⇒ every lower
+  set regular or dense; abstract half in any Heyting algebra), and
+  all seven minimal-motif numbers by `decide` through the Div12
+  exponent-lattice presentation — ↓p ordinary, aperture 1,
+  coaperture 18; ↓b, ↓q regular, apertures 0, coapertures 12, 14.
+  Pilot and kernel agree digit for digit across independent
+  presentations.
+- Recorded without interpretation: dependency-side invariants track
+  quiet depended-upon nodes; dependents-side ordinariness selects
+  different positions; which lens (or the pair) is the criticality
+  lens is open.
+- Honest limits: 6–7 node graphs; nuclei enumeration is exponential;
+  no instrument claim at registry scale. Theorem-scale statement
+  only.
+
+Open next steps if pursued: general graph reading of
+cone-ordinariness as a theorem (the two-condition characterization in
+the spec's H3 note); whether aperture-at-a-blur survives on larger
+motifs; any scalable surrogate for the invariants (closed forms exist
+for chain products — real dependency posets are not chain products).
+
 # Status 2026-09-11 (correspondence): Levin replied — substantive, collaborative
 
 Reply received ~3 days after the Sept 8 letter. Contents:

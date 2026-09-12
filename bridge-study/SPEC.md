@@ -219,3 +219,20 @@ unambiguous meaning.
 spec, is Lean, not more computation — H1 first (one line), then the
 H3 motif as a `decide`-checked example, then, if wanted, the general
 graph reading of cone-ordinariness as a theorem.
+
+## Postscript 2 (same day, after Lean)
+
+`lean/FalseWorkPapers/Lattice/BridgeDownSets.lean`, kernel-checked:
+
+- **H1 is now a theorem** (`LowerSet.regular_or_dense_of_min`): on
+  Mathlib's `LowerSet P` with a global lower bound, every lower set
+  is regular or dense. The abstract half
+  (`compl_eq_bot_of_meets_all`) holds in any Heyting algebra.
+- **All seven H3 numbers are kernel-checked** through the second
+  presentation (D(P) = 3-chain × 2-chain = Div12's exponent
+  lattice, via the existing closed forms): ↓p ordinary with
+  aperture 1 and coaperture 18; ↓b, ↓q regular with aperture 0 and
+  coapertures 12, 14. The pilot's brute-force enumeration and the
+  kernel agree digit for digit across independent presentations —
+  which also functions as an E0-grade validation of the pilot
+  engine after the fact.

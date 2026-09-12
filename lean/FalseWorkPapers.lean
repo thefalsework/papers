@@ -31,3 +31,4 @@ import FalseWorkPapers.Lattice.ApertureClosedFormPi
 import FalseWorkPapers.Examples.ApertureAnchors
 import FalseWorkPapers.Examples.PerceptronRegular
 import FalseWorkPapers.Lattice.CoApertureClosedForm
+import FalseWorkPapers.Lattice.BridgeDownSets
