@@ -422,3 +422,49 @@ is a motif-scale curiosity; record and stop. E7+E8+E9 all pass: the
 aperture is a new centrality-class invariant that tracks load — the
 depth claim stands with receipts, and the Lean formalization of
 C1–C2 becomes the priority.
+
+## Phase 3 postscript (2026-09-12, same day, after the run)
+
+Engine: `03-depth-test.py`, output in `out/depth-test.json`.
+**Split verdict: novelty established, load-tracking failed.**
+
+**E0'' passed exactly.** The subset formula reproduces the Phase-1
+nuclei-enumeration apertures on every motif, including the xz
+motif's {21, 21, 15, rest 0}, via a completely independent engine.
+
+**E7 passed with an enormous margin.** No comparison measure comes
+near the 0.95 translation threshold; the best is betweenness at
+median |ρ| = 0.51, then out-degree 0.44, dependency-cone size 0.42,
+incomparables 0.31, PageRank 0.38; dependents-cone size — the
+conemass quantity — is 0.20. The aperture is emphatically not a
+known centrality in disguise, and it is close to orthogonal to the
+reach measure conemass uses. E8 passed two-sidedly (12 witnesses
+each direction). K8: zero degenerate graphs — apertures were
+distinct on essentially all nodes (typically 12/12). K7 does not
+fire.
+
+**E9 failed in all five xz-family instances, and the failure has
+structure.** In every instance the chain-top middle library (the
+libsystemd position — the one the app fan depends on directly)
+outranks all leaf apps, but deeper chain members (the liblzma
+position) fall *below* the apps, dragging the class mean down.
+Aperture decays with depth below the interface. The Phase-1 xz
+motif (n = 7), where liblzma tied libsystemd at the top, does not
+survive scaling: at n = 12–14 the deep-quiet position is not
+selected. Recorded as registered: the load-half of the depth claim
+failed. No post-hoc re-cutting of the classes; the observed
+gradient (interface > apps > deep chain) is noted as description,
+not as a saved hypothesis.
+
+**Honest status of the depth question.** The aperture of a
+dependency cone is a genuinely new graph invariant — not reducible
+to any tested centrality, discriminating at realistic scale,
+kernel-checkable, with a clean observer semantics (the number of
+sub-ecosystems in which the node's dependency shadow is
+non-classical). What it *measures*, in graph terms a practitioner
+would care about, is now an open question: the criticality reading
+that motivated the bridge is not supported at scale. Novel and
+real; meaning unsettled. The mathematics (C1–C3, Lean of the
+characterization) stands on its own; any applied claim about
+criticality would need a new registered hypothesis and does not
+inherit the xz-motif result.

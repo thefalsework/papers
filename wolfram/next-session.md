@@ -41,6 +41,27 @@ the spec's H3 note); whether aperture-at-a-blur survives on larger
 motifs; any scalable surrogate for the invariants (closed forms exist
 for chain products — real dependency posets are not chain products).
 
+**Same-day continuation (Phases 2–3, both registered before
+running).** Phase 2: every nucleus on a finite down-set algebra is a
+sub-ecosystem observer j_S (classification is cited mathematics —
+Simmons, Bezhanishvili–Harding; the explicit form and its
+consequences verified exhaustively on all Phase-1 algebras). The
+characterization theorem: aperture(↓p) = #{S ⊆ P : trace ↓p ∩ S
+ordinary in D(S)} — purely graph-theoretic, with a polynomial
+per-subset predicate (feasible to |P| ≈ 20–25, up from 7). Phase 3
+(the depth test): split verdict. Novelty half passed decisively —
+no standard centrality (betweenness, degree, cones, Katz, PageRank,
+closeness, incomparables) reaches median |ρ| 0.51 against the
+aperture ranking, two-sided separation witnesses exist, no
+degeneracy; translation kill K7 missed. Load half **failed** as
+registered: in scaled xz families (n = 12–14) aperture selects the
+interface library over leaf apps but ranks deep-chain (liblzma
+position) *below* apps — the n = 7 motif result does not survive
+scaling. Honest status: the aperture of a dependency cone is a new,
+real, kernel-checkable graph invariant whose practical meaning is
+open; the criticality reading is not supported at scale. Lean of
+the characterization (C1–C2) is the remaining rigor step.
+
 # Status 2026-09-11 (correspondence): Levin replied — substantive, collaborative
 
 Reply received ~3 days after the Sept 8 letter. Contents:
