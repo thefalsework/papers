@@ -314,3 +314,42 @@ by direct argument; C2 by the fix-set isomorphism), and then the
 depth test: compare the aperture ranking, now computable
 combinatorially, against standard centralities on separating
 families.
+
+## Phase 2 postscript (2026-09-12, same day, after the run)
+
+Engine: `02-classification-check.py`. **All three conjectures
+verified exhaustively; no kill fired.** On all 46 graphs (six
+motifs + 40 ensemble graphs, both sides each, 92 algebras):
+
+- **E4 pass:** the exhaustively enumerated nuclei coincide
+  bijectively with { j_S : S ⊆ P } on every algebra — every
+  observer of a dependency ecosystem *is* a sub-ecosystem, no
+  exceptions, no collisions.
+- **E5 pass:** Opens j_S k ⟺ the trace k ∩ S is ordinary in D(S),
+  for every principal cone and every subset. The characterization
+  theorem holds on everything tested:
+  aperture(↓p) = #{ S : ↓p ∩ S ordinary in D(S) }.
+- **E6 pass:** phantomMass(j_S, k) = #D(j_S(k) ∖ k) everywhere —
+  each observer's confusion at k is the count of relative down-sets
+  of the zone it conflates.
+
+**A consequence not registered but worth recording (found while
+implementing E5):** ordinariness of the trace needs no algebra
+construction at all. Dense: some x ∈ S with ↓x ∩ S ∩ T = ∅.
+Regular: ¬¬T = T with ¬T = {x ∈ S : ↓x ∩ S ∩ T = ∅} computed
+twice. Both are O(|S|²) set operations on the graph. So the
+aperture of a dependency cone is a *sum of 2^|P| polynomial
+predicates* — no nuclei, no down-set lattices, no exponential
+algebra. That moves feasible exact computation from |P| ≈ 7
+(Phase 1's brute force) to |P| ≈ 20–25, enough for the depth test
+on real subgraphs. Co-aperture stays harder (counting down-sets of
+the conflated zone is #P-flavored); the aperture is the scalable
+one.
+
+**Status.** C1 is cited mathematics with a verified explicit form;
+C2–C3 are new, exhaustively verified, and stated in purely
+graph-theoretic terms. Remaining for theorem status: the Lean
+proof (C1 injectivity + j_S nucleus axioms are short; surjectivity
+via the counting argument; C2 via the fix-set isomorphism). Then
+the depth test against standard centralities, now unblocked at
+realistic motif scale.
