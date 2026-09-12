@@ -236,3 +236,81 @@ graph reading of cone-ordinariness as a theorem.
   kernel agree digit for digit across independent presentations —
   which also functions as an E0-grade validation of the pilot
   engine after the fact.
+
+## Phase 2 (registered 2026-09-12, after Postscript 2, before any
+## Phase-2 computation): the observer classification and the
+## characterization theorem
+
+Trigger: every algebra measured in Phase 1 — all six motifs and all
+80 ensemble sides, 86 algebras — has exactly 2^|P| nuclei. The
+observer count ignores the edges entirely.
+
+**Literature (checked before registration, honest split).** This is
+a known theorem, not ours: for a finite poset the assembly N(D(P))
+is Boolean (Simmons: N(OS) Boolean iff S scattered; finite posets
+are noetherian, hence scattered) and spatial (Bezhanishvili–Harding,
+"The Frame of Nuclei of an Alexandroff Space", arXiv:1906.03640:
+spatial iff the infinite binary tree does not embed), so
+N(D(P)) ≅ 2^P with the points of the assembly corresponding to the
+points of P. What is *not* in the literature is what this does to
+the aperture and co-aperture of dependency cones — those invariants
+are this program's. The classification is cited; the
+characterization below is claimed.
+
+**C1 (explicit form of every observer).** For S ⊆ P define
+
+    j_S(U) = { x : ↓x ∩ S ⊆ U }.
+
+Claim: each j_S is a nucleus, S ↦ j_S is injective, and *every*
+nucleus on D(P) is j_S for exactly one S. Injectivity, hand proof:
+for x ∈ S △ S', take U = ↓x ∖ {x} (a down-set, by antisymmetry);
+then x ∈ j_S(U) iff x ∉ S, so j_S ≠ j_{S'}. Surjectivity then
+follows from injectivity plus the cited count 2^|P| — or, per
+instance, from the pilot's exhaustive enumeration. Reading: an
+observer of a dependency ecosystem is exactly a *sub-ecosystem* — a
+set S of packages through which everything is seen; j_S(U) asks
+"which packages' dependencies, insofar as they run through S, are
+already accounted for by U."
+
+**C2 (the characterization — the new content).** j_S(U) depends
+only on U ∩ S, and Fix(j_S) ≅ D(S) (down-sets of the induced
+subposet) via U ↦ U ∩ S, inverse T ↦ {x : ↓x ∩ S ⊆ T}, with world
+bottom j_S(⊥) ↦ ∅. Claim: Opens j_S k ⟺ the trace k ∩ S is
+ordinary in D(S). Hence
+
+    aperture(↓p) = #{ S ⊆ P : ↓p ∩ S is ordinary in D(S) }
+
+— *the number of sub-ecosystems in which p's dependency shadow is
+non-classical*. A purely graph-theoretic statement; no lattice
+theory left in it.
+
+Hand check on the H3 motif (registered): ↓p = {p}. If p ∉ S the
+trace is ⊥ (regular). Non-dense forces q ∈ S; S = {p, q} gives a
+Boolean D(S) (regular); S = {p, q, b} = P is the Phase-1
+computation (ordinary). So exactly one qualifying S, matching
+aperture(↓p) = 1 from both the pilot and the kernel.
+
+**C3 (phantom structure).** For U ∈ D(P), the interval
+[U, j_S(U)] is isomorphic to the lattice of relative down-sets of
+the induced poset on j_S(U) ∖ U, so
+
+    phantomMass(j_S, U) = #D( j_S(U) ∖ U ),
+    coaperture(↓p) = Σ_{S ⊆ P} #D( j_S(↓p) ∖ ↓p ).
+
+**E-claims.** E4: on every Phase-1 algebra (all 86), the enumerated
+nuclei coincide exactly with { j_S : S ⊆ P }, bijectively. E5: on
+every principal cone and every S, Opens j_S k ⟺ trace-ordinariness
+in D(S). E6: on every principal cone and every S, phantomMass
+equals the relative-down-set count.
+
+**Kills.** K4: any nucleus not of the form j_S, or a collision in
+S ↦ j_S. K5: any Opens/trace-ordinariness mismatch. K6: any
+phantom-mass mismatch. Any kill stops the phase; the theorem as
+stated is then false and the failure mode gets recorded.
+
+**If all pass:** the Lean statement of C1–C2 (injectivity is
+elementary; surjectivity by Fintype card against the cited count or
+by direct argument; C2 by the fix-set isomorphism), and then the
+depth test: compare the aperture ranking, now computable
+combinatorially, against standard centralities on separating
+families.
