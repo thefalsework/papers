@@ -179,3 +179,69 @@ the H3 condition requires; on the xz motif, v2 recovers the full
 motif from the liblzma position (aperture 21). Phase-1 thresholds
 (E-P1 ρ ≥ 0.7, E-P2 max-share ≤ 0.9) apply to v2 unchanged. If v2
 also fails Phase 1, the study ends — no v3.
+
+---
+
+## Phase 1 postscript, v2 (2026-09-13, same day)
+
+Engine: `02-phase1-instrument.py`, sanity-anchored to the
+kernel-checked motif values (minimal motif 1/0/0, xz 21/21/15).
+Population: 52,099 crates with ≥1 dependent at T0. **Both checks
+pass:** E-P1 Spearman(cap16, cap12) = 0.761 ≥ 0.7, and
+Spearman(cap16, cap20) = 0.841 on the n=50 subsample (stability
+improves with cap, as it should if the cap is a truncation of a real
+quantity rather than its source). E-P2: modal value 0 covers 26.5%,
+112 distinct values, median 12,285, max 41,997. The v2 instrument
+measures something stable and non-degenerate. Proceed to Phase 2.
+
+## Phase 2 postscript (2026-09-13, same day, after the run)
+
+Engine: `03-phase2-prediction.py`, output `out/phase2.json`.
+Sample: 514 cases (population crates with ≥1 OSV advisory published
+in the window), 10,000 controls, seed as registered.
+
+**K3 fired. The primary claim is dead as registered.** Mean held-out
+ΔAUC = +0.0034 (folds: −0.0005, +0.0053, +0.0056, +0.0042, +0.0023),
+below the 0.005 kill line, nowhere near the 0.01 pass line. Baseline
+AUC 0.83–0.88 — the popularity proxies do the heavy lifting exactly
+as the registered prior (KTH 2021) predicted. As a *classifier
+improvement*, the ego-aperture adds nothing a practitioner could
+deploy. That was the primary registered claim; it dies with its data
+published.
+
+**Two registered secondaries came apart from the kill, in the same
+direction, and are reported separately without rescuing it:**
+
+- The LR test (part of E-P3, registered) is decisive that the
+  aperture term is *real*: LR = 24.2, p = 8.7×10⁻⁷, standardized
+  coefficient **−0.32**. Negative: conditional on the baselines,
+  *lower* aperture means *higher* advisory odds. The information is
+  genuine; it is simply too correlated with the baseline features to
+  move held-out rank performance by the registered floor.
+- **E-P4 (secondary, direction registered in advance from
+  `notes/aperture-is-generativity.md`): the quiet-criticality odds
+  ratio is 2.85, 95% CI [2.06, 3.93].** Within the top conemass
+  quartile (n = 2,692), bottom-aperture-quartile packages had 250
+  cases in 1,384 vs. 48 in 673 for the top-aperture quartile. Heavy
+  load + low distinction-visibility is the dangerous cell, direction
+  as registered, CI well clear of 1.
+
+**Honest reading.** This is the phantom-study E2 pattern again: the
+mechanism's direction is confirmed while the deployable magnitude is
+not, and those are separate claims that came apart. The registered
+primary (incremental AUC) is dead. The quiet-criticality direction
+(high-reach/low-aperture packages carry elevated advisory risk,
+conditional on popularity) survives as a *registered secondary with
+a clean CI* — a hypothesis with supporting evidence, not an
+established claim. If it is ever to be a claim, it needs its own
+preregistered primary on data this study has not touched: a
+different ecosystem (npm/PyPI) or a later T0, with the E-P4
+contrast as the primary endpoint and its own kill line. No such
+claim is made here.
+
+**Limits as registered, plus one observed:** one ecosystem, one T0;
+advisories ≠ exploitation; cap-16 ego-aperture ≠ global aperture;
+and the case-control OR conditions only on conemass stratification,
+not the full baseline vector (the LR coefficient, which does
+condition on everything, agrees in direction — but the OR magnitude
+should not be quoted as if fully adjusted).

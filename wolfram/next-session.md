@@ -1,3 +1,42 @@
+# Status 2026-09-13 (prediction study): K3 kill on incremental validity; quiet-criticality direction survives as registered secondary
+
+Question: does the ego-aperture add predictive information about
+future security advisories beyond cheap centralities (incremental
+validity)? Registered `prediction-study/SPEC.md` (spec frozen before
+any computation; crates.io at T0 = 2024-09-01, outcomes = OSV
+advisories published after T0; case-control 514 cases / 10,000
+controls; kills K1–K3).
+
+- **Instrument v1 died by theorem before touching outcomes:** the
+  registered fill order collected only nodes comparable to p, and
+  the H3 necessary condition (ordinariness needs an incomparable
+  witness) makes such ego-apertures identically zero. Recorded as
+  Amendment 1; v2 adds sibling layers (co-users of p's dependencies,
+  co-dependencies of p's dependents). A kill by proof, not data —
+  outcomes were never loaded.
+- **Phase 1 (v2) passed:** stability Spearman 0.761 (cap16 vs 12),
+  0.841 (vs 20); non-degenerate (26.5% zeros, 112 distinct values on
+  200 samples).
+- **Phase 2: K3 fired as registered.** Mean held-out ΔAUC +0.0034 <
+  0.005 kill line (baseline AUC 0.83–0.88; popularity proxies
+  dominate, as the registered KTH prior predicted). The deployable
+  claim — aperture improves advisory prediction — is dead.
+- **Separable survivors, both registered in advance:** the LR test
+  says the aperture term is real (p = 8.7×10⁻⁷) and *negative* —
+  lower aperture, higher advisory odds, conditional on baselines.
+  And E-P4, the quiet-criticality secondary (direction registered in
+  `notes/aperture-is-generativity.md`): within the top conemass
+  quartile, low-aperture packages carry OR = 2.85 [2.06, 3.93] for
+  advisories vs. high-aperture ones. Heavy load + low
+  distinction-visibility is the dangerous cell — the inverted
+  hypothesis, now with a clean CI behind it.
+- Honest status: same shape as phantom-study E2 — direction
+  confirmed, deployable magnitude not, reported as separate claims.
+  The quiet-criticality reading is now a hypothesis with evidence,
+  not a claim. To become a claim it needs its own preregistered
+  primary on untouched data (npm/PyPI, or later T0), with E-P4 as
+  the primary endpoint. This study makes no such claim.
+
 # Status 2026-09-12 (bridge study): dependency cones joined to the lattice spine
 
 Question tested: do the kernel-checked invariants (ordinariness,
