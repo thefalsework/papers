@@ -1,0 +1,1212 @@
+{
+ "seed": 20260913,
+ "population": 52099,
+ "rho_16_12": 0.7605626038248482,
+ "rho_16_20": 0.840908270462643,
+ "top_value": 0,
+ "top_share": 0.265,
+ "E_P1_pass": true,
+ "E_P2_pass": true,
+ "rows": [
+  {
+   "crate": "monoio-rustls-fork-shadow-tls",
+   "cap16": 20033,
+   "cap12": 945,
+   "cap20": 607169
+  },
+  {
+   "crate": "requiem-tls",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "eb90",
+   "cap16": 23025,
+   "cap12": 961,
+   "cap20": 417041
+  },
+  {
+   "crate": "native_api_1c_core",
+   "cap16": 33901,
+   "cap12": 1685,
+   "cap20": 558541
+  },
+  {
+   "crate": "reqwest-env-proxy",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": 196605
+  },
+  {
+   "crate": "ascom-alpaca",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "typsy-macros",
+   "cap16": 2047,
+   "cap12": 127,
+   "cap20": 32767
+  },
+  {
+   "crate": "okizeme_offense",
+   "cap16": 16513,
+   "cap12": 889,
+   "cap20": 271361
+  },
+  {
+   "crate": "statefun-proto",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": 196605
+  },
+  {
+   "crate": "plotters-bitmap",
+   "cap16": 11475,
+   "cap12": 0,
+   "cap20": 326143
+  },
+  {
+   "crate": "air-interpreter-interface",
+   "cap16": 7905,
+   "cap12": 0,
+   "cap20": 241471
+  },
+  {
+   "crate": "trackme-backends",
+   "cap16": 13305,
+   "cap12": 0,
+   "cap20": 364225
+  },
+  {
+   "crate": "cool-id-generator",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": 131071
+  },
+  {
+   "crate": "karyon_core",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 3069
+  },
+  {
+   "crate": "kismesis",
+   "cap16": 16609,
+   "cap12": 889,
+   "cap20": 229369
+  },
+  {
+   "crate": "ssr_rs",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": 131071
+  },
+  {
+   "crate": "capsicum",
+   "cap16": 17763,
+   "cap12": 1147,
+   "cap20": 285603
+  },
+  {
+   "crate": "unm_selector",
+   "cap16": 6525,
+   "cap12": 381,
+   "cap20": 129397
+  },
+  {
+   "crate": "symbolic-common",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "typesense_codegen",
+   "cap16": 22753,
+   "cap12": 1137,
+   "cap20": 456161
+  },
+  {
+   "crate": "wick-interface-cli",
+   "cap16": 15203,
+   "cap12": 1347,
+   "cap20": 99347
+  },
+  {
+   "crate": "symbolic-il2cpp",
+   "cap16": 22995,
+   "cap12": 1395,
+   "cap20": 380835
+  },
+  {
+   "crate": "autodiff_injector_core_derive",
+   "cap16": 6141,
+   "cap12": 381,
+   "cap20": 98301
+  },
+  {
+   "crate": "bevy_serialization_core",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "graphql-lint",
+   "cap16": 27613,
+   "cap12": 1645,
+   "cap20": 442333
+  },
+  {
+   "crate": "azure_storage_queues",
+   "cap16": 8191,
+   "cap12": 0,
+   "cap20": 229369
+  },
+  {
+   "crate": "pdb-addr2line",
+   "cap16": 36927,
+   "cap12": 945,
+   "cap20": 727663
+  },
+  {
+   "crate": "fossil-delta",
+   "cap16": 32,
+   "cap12": 32,
+   "cap20": 32
+  },
+  {
+   "crate": "fire-stream-api",
+   "cap16": 14583,
+   "cap12": 0,
+   "cap20": 409507
+  },
+  {
+   "crate": "clipboard_x11",
+   "cap16": 24567,
+   "cap12": 1527,
+   "cap20": 393207
+  },
+  {
+   "crate": "risc0-circuit-rv32im-sys",
+   "cap16": 32959,
+   "cap12": 1459,
+   "cap20": 744379
+  },
+  {
+   "crate": "heim-cpu",
+   "cap16": 18423,
+   "cap12": 0,
+   "cap20": 706883
+  },
+  {
+   "crate": "bobbin-bits",
+   "cap16": 380,
+   "cap12": 92,
+   "cap20": 2300
+  },
+  {
+   "crate": "currying",
+   "cap16": 27771,
+   "cap12": 777,
+   "cap20": 446841
+  },
+  {
+   "crate": "iana-time-zone",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "ctjs_macros",
+   "cap16": 23617,
+   "cap12": 255,
+   "cap20": 71457
+  },
+  {
+   "crate": "linear_model_allen",
+   "cap16": 20097,
+   "cap12": 1137,
+   "cap20": 593409
+  },
+  {
+   "crate": "fawkes-crypto-zkbob-keccak256",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": 196605
+  },
+  {
+   "crate": "ansi-escape-codes",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "uniffi_macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 376648
+  },
+  {
+   "crate": "tower-test",
+   "cap16": 6651,
+   "cap12": 90,
+   "cap20": 180135
+  },
+  {
+   "crate": "asciicolor",
+   "cap16": 1028,
+   "cap12": 256,
+   "cap20": 1028
+  },
+  {
+   "crate": "tdlib-sys",
+   "cap16": 31287,
+   "cap12": 1581,
+   "cap20": 570099
+  },
+  {
+   "crate": "standardform",
+   "cap16": 37777,
+   "cap12": 1905,
+   "cap20": 734553
+  },
+  {
+   "crate": "flagsmith-flag-engine",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 271595
+  },
+  {
+   "crate": "hadoop-common",
+   "cap16": 31955,
+   "cap12": 765,
+   "cap20": 669315
+  },
+  {
+   "crate": "map_err",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "chik-client",
+   "cap16": 8001,
+   "cap12": 189,
+   "cap20": 288081
+  },
+  {
+   "crate": "databuf_derive_impl",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": 196605
+  },
+  {
+   "crate": "flagrant-macros",
+   "cap16": 31159,
+   "cap12": 1267,
+   "cap20": 499639
+  },
+  {
+   "crate": "codemap",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "contract-transcode",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "unsegen_signals",
+   "cap16": 7665,
+   "cap12": 465,
+   "cap20": null
+  },
+  {
+   "crate": "ades",
+   "cap16": 41997,
+   "cap12": 2025,
+   "cap20": null
+  },
+  {
+   "crate": "moonboot",
+   "cap16": 17393,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rubble-templates-evaluators",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "atsamd-hal",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bly-ac",
+   "cap16": 170,
+   "cap12": 170,
+   "cap20": null
+  },
+  {
+   "crate": "trayicon",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "ed25519-dalek",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "eyeball-im",
+   "cap16": 29929,
+   "cap12": 504,
+   "cap20": null
+  },
+  {
+   "crate": "pidfile-rs",
+   "cap16": 32293,
+   "cap12": 1065,
+   "cap20": null
+  },
+  {
+   "crate": "bitcoin-tx",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "checkpwn_lib",
+   "cap16": 35329,
+   "cap12": 1617,
+   "cap20": null
+  },
+  {
+   "crate": "mcdata",
+   "cap16": 14081,
+   "cap12": 441,
+   "cap20": null
+  },
+  {
+   "crate": "embassy-time",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "oxc_regular_expression",
+   "cap16": 36897,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "lazy_rc",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bytelinebuf",
+   "cap16": 4483,
+   "cap12": 291,
+   "cap20": null
+  },
+  {
+   "crate": "re_chunk",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ball",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "rs_merkle",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ayaka-primitive",
+   "cap16": 21695,
+   "cap12": 930,
+   "cap20": null
+  },
+  {
+   "crate": "arbitrary-json",
+   "cap16": 20461,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "nt-packet",
+   "cap16": 14329,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "spirv-tools-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mc-sgx-dcap-ql-sys",
+   "cap16": 14029,
+   "cap12": 533,
+   "cap20": null
+  },
+  {
+   "crate": "charset",
+   "cap16": 21378,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bitcoin-internals",
+   "cap16": 16065,
+   "cap12": 885,
+   "cap20": null
+  },
+  {
+   "crate": "utrace_macros",
+   "cap16": 5355,
+   "cap12": 315,
+   "cap20": null
+  },
+  {
+   "crate": "tigerbeetle-unofficial-sys",
+   "cap16": 19409,
+   "cap12": 1129,
+   "cap20": null
+  },
+  {
+   "crate": "email-address-parser",
+   "cap16": 13440,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "glib",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pushover",
+   "cap16": 18417,
+   "cap12": 255,
+   "cap20": null
+  },
+  {
+   "crate": "wpaperd-ipc",
+   "cap16": 6519,
+   "cap12": 423,
+   "cap20": null
+  },
+  {
+   "crate": "now",
+   "cap16": 15345,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "n18catalogue",
+   "cap16": 36744,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "libstrophe-sys-bindgen",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "wasm-bus-types",
+   "cap16": 19795,
+   "cap12": 381,
+   "cap20": null
+  },
+  {
+   "crate": "tower-util",
+   "cap16": 1530,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "galvanic-mock",
+   "cap16": 32473,
+   "cap12": 1689,
+   "cap20": null
+  },
+  {
+   "crate": "rug-fft",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "unix-named-pipe",
+   "cap16": 22251,
+   "cap12": 720,
+   "cap20": null
+  },
+  {
+   "crate": "tokio_schedule",
+   "cap16": 28947,
+   "cap12": 1304,
+   "cap20": null
+  },
+  {
+   "crate": "faster-pest",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "permissions",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "google-servicebroker1",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "callysto",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "plt-draw",
+   "cap16": 28653,
+   "cap12": 1773,
+   "cap20": null
+  },
+  {
+   "crate": "bdk_wallet",
+   "cap16": 15345,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "imagefmt",
+   "cap16": 14833,
+   "cap12": 913,
+   "cap20": null
+  },
+  {
+   "crate": "serde-reflection",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "fb_procfs",
+   "cap16": 14280,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "gluerunner",
+   "cap16": 29267,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "inline_colorization",
+   "cap16": 14838,
+   "cap12": 1452,
+   "cap20": null
+  },
+  {
+   "crate": "eta",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "protokit_grpc",
+   "cap16": 1149,
+   "cap12": 63,
+   "cap20": null
+  },
+  {
+   "crate": "zbus",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "iset",
+   "cap16": 7699,
+   "cap12": 252,
+   "cap20": null
+  },
+  {
+   "crate": "cerk",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "near-client-primitives",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "prefixmap",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mod3d-base",
+   "cap16": 20839,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "rsx-rosetta",
+   "cap16": 4977,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "osm_boundaries_utils",
+   "cap16": 19155,
+   "cap12": 1155,
+   "cap20": null
+  },
+  {
+   "crate": "gix-odb",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "redox_installer",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rustpython-parser",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "windows-permissions",
+   "cap16": 33337,
+   "cap12": 1993,
+   "cap20": null
+  },
+  {
+   "crate": "chemistry_consts",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "calm_io",
+   "cap16": 36432,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "clutter-sys-rs",
+   "cap16": 23715,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "htb",
+   "cap16": 17209,
+   "cap12": 961,
+   "cap20": null
+  },
+  {
+   "crate": "path-matchers",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "prefixtree",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "deepbiop-utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tailwind-parse-macro",
+   "cap16": 3577,
+   "cap12": 217,
+   "cap20": null
+  },
+  {
+   "crate": "jsi-sys",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "rounded-div",
+   "cap16": 5388,
+   "cap12": 470,
+   "cap20": null
+  },
+  {
+   "crate": "ordered-permutation",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "webtonic-proto",
+   "cap16": 22227,
+   "cap12": 399,
+   "cap20": null
+  },
+  {
+   "crate": "hr-id",
+   "cap16": 15345,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "string_format",
+   "cap16": 510,
+   "cap12": 510,
+   "cap20": null
+  },
+  {
+   "crate": "handbar",
+   "cap16": 19681,
+   "cap12": 255,
+   "cap20": null
+  },
+  {
+   "crate": "r2d2-mongodb",
+   "cap16": 7665,
+   "cap12": 465,
+   "cap20": null
+  },
+  {
+   "crate": "talk-loco-client",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tower-ready-cache",
+   "cap16": 16877,
+   "cap12": 507,
+   "cap20": null
+  },
+  {
+   "crate": "ordinal",
+   "cap16": 15969,
+   "cap12": 759,
+   "cap20": null
+  },
+  {
+   "crate": "swiftness_stark",
+   "cap16": 12285,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "user32-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "willow-encoding",
+   "cap16": 21483,
+   "cap12": 1323,
+   "cap20": null
+  },
+  {
+   "crate": "townhopper",
+   "cap16": 7665,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "imgurs",
+   "cap16": 12793,
+   "cap12": 383,
+   "cap20": null
+  },
+  {
+   "crate": "solana-client-helpers",
+   "cap16": 29295,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "triple_arena",
+   "cap16": 18423,
+   "cap12": 1143,
+   "cap20": null
+  },
+  {
+   "crate": "smdiff-common",
+   "cap16": 1642,
+   "cap12": 1642,
+   "cap20": null
+  },
+  {
+   "crate": "rt-xenomai",
+   "cap16": 33929,
+   "cap12": 1057,
+   "cap20": null
+  },
+  {
+   "crate": "lingua-tsonga-language-model",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "three-style-lib",
+   "cap16": 8191,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "bevy_yarnspinner_example_dialogue_view",
+   "cap16": 16369,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "openssl-src",
+   "cap16": 15345,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "pdf_composer_definitions",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "twilly",
+   "cap16": 12285,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "dojang",
+   "cap16": 3069,
+   "cap12": 381,
+   "cap20": null
+  },
+  {
+   "crate": "async-stream-impl",
+   "cap16": 2047,
+   "cap12": 127,
+   "cap20": null
+  },
+  {
+   "crate": "pthash",
+   "cap16": 35265,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "az",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mod3d-shapes",
+   "cap16": 16609,
+   "cap12": 511,
+   "cap20": null
+  },
+  {
+   "crate": "tia",
+   "cap16": 33489,
+   "cap12": 1749,
+   "cap20": null
+  },
+  {
+   "crate": "encryption-macros-key-generation",
+   "cap16": 40523,
+   "cap12": 2235,
+   "cap20": null
+  },
+  {
+   "crate": "assert_let_bind",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rstk",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "ng-repo",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "sgx_urts",
+   "cap16": 6141,
+   "cap12": 381,
+   "cap20": null
+  },
+  {
+   "crate": "xxhash2",
+   "cap16": 6141,
+   "cap12": 381,
+   "cap20": null
+  },
+  {
+   "crate": "relm4-components",
+   "cap16": 29295,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "result",
+   "cap16": 10460,
+   "cap12": 1338,
+   "cap20": null
+  },
+  {
+   "crate": "inexor-rgf-core-config",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "maybe-owned",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rustdns",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "riscv-rt",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "sesdiff",
+   "cap16": 12285,
+   "cap12": 765,
+   "cap20": null
+  },
+  {
+   "crate": "atsam3s2a",
+   "cap16": 32961,
+   "cap12": 1345,
+   "cap20": null
+  },
+  {
+   "crate": "geng-obj",
+   "cap16": 16348,
+   "cap12": 700,
+   "cap20": null
+  },
+  {
+   "crate": "exon-bcf",
+   "cap16": 7161,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pace_time",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "shippai_derive",
+   "cap16": 8185,
+   "cap12": 381,
+   "cap20": null
+  },
+  {
+   "crate": "jsondata-derive",
+   "cap16": 19397,
+   "cap12": 273,
+   "cap20": null
+  },
+  {
+   "crate": "usize_cast",
+   "cap16": 16382,
+   "cap12": 1022,
+   "cap20": null
+  },
+  {
+   "crate": "lottieconv",
+   "cap16": 24003,
+   "cap12": 1323,
+   "cap20": null
+  },
+  {
+   "crate": "alpm-utils",
+   "cap16": 30513,
+   "cap12": 1203,
+   "cap20": null
+  },
+  {
+   "crate": "linebreak",
+   "cap16": 14329,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "fuguex-machine",
+   "cap16": 20643,
+   "cap12": 1003,
+   "cap20": null
+  },
+  {
+   "crate": "driver-pal",
+   "cap16": 26091,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "dbusmenu-glib",
+   "cap16": 14329,
+   "cap12": 889,
+   "cap20": null
+  },
+  {
+   "crate": "rsvd",
+   "cap16": 11409,
+   "cap12": 561,
+   "cap20": null
+  },
+  {
+   "crate": "opencl-sys",
+   "cap16": 16065,
+   "cap12": 945,
+   "cap20": null
+  },
+  {
+   "crate": "path-utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "xtra-macros",
+   "cap16": 2047,
+   "cap12": 127,
+   "cap20": null
+  },
+  {
+   "crate": "xio_webapi",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "serde_view_macros",
+   "cap16": 4081,
+   "cap12": 241,
+   "cap20": null
+  },
+  {
+   "crate": "inout",
+   "cap16": 22197,
+   "cap12": 1134,
+   "cap20": null
+  },
+  {
+   "crate": "ftdi-mpsse",
+   "cap16": 15841,
+   "cap12": 961,
+   "cap20": null
+  },
+  {
+   "crate": "one_two_eight",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "slog-atomic",
+   "cap16": 31403,
+   "cap12": 1339,
+   "cap20": null
+  },
+  {
+   "crate": "piston2d-opengl_graphics",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "fluence-fork-libp2p-mplex",
+   "cap16": 15345,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "egui_dock",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "named_pipe",
+   "cap16": 14329,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "map-macro",
+   "cap16": 15825,
+   "cap12": 510,
+   "cap20": null
+  }
+ ]
+}

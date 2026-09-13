@@ -1,0 +1,1212 @@
+{
+ "seed": 20260913,
+ "population": 52099,
+ "rho_16_12": NaN,
+ "rho_16_20": NaN,
+ "top_value": 0,
+ "top_share": 1.0,
+ "E_P1_pass": false,
+ "E_P2_pass": false,
+ "rows": [
+  {
+   "crate": "monoio-rustls-fork-shadow-tls",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "requiem-tls",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "eb90",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "native_api_1c_core",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "reqwest-env-proxy",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "ascom-alpaca",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "typsy-macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "okizeme_offense",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "statefun-proto",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "plotters-bitmap",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "air-interpreter-interface",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "trackme-backends",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "cool-id-generator",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "karyon_core",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "kismesis",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "ssr_rs",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "capsicum",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "unm_selector",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "symbolic-common",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "typesense_codegen",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "wick-interface-cli",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "symbolic-il2cpp",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "autodiff_injector_core_derive",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "bevy_serialization_core",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "graphql-lint",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "azure_storage_queues",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "pdb-addr2line",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "fossil-delta",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "fire-stream-api",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "clipboard_x11",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "risc0-circuit-rv32im-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "heim-cpu",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "bobbin-bits",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "currying",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "iana-time-zone",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "ctjs_macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "linear_model_allen",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "fawkes-crypto-zkbob-keccak256",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "ansi-escape-codes",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "uniffi_macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "tower-test",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "asciicolor",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "tdlib-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "standardform",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "flagsmith-flag-engine",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "hadoop-common",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "map_err",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "chik-client",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "databuf_derive_impl",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "flagrant-macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": 0
+  },
+  {
+   "crate": "codemap",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "contract-transcode",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "unsegen_signals",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ades",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "moonboot",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rubble-templates-evaluators",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "atsamd-hal",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bly-ac",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "trayicon",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ed25519-dalek",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "eyeball-im",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pidfile-rs",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bitcoin-tx",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "checkpwn_lib",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mcdata",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "embassy-time",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "oxc_regular_expression",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "lazy_rc",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bytelinebuf",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "re_chunk",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ball",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rs_merkle",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ayaka-primitive",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "arbitrary-json",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "nt-packet",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "spirv-tools-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mc-sgx-dcap-ql-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "charset",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bitcoin-internals",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "utrace_macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tigerbeetle-unofficial-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "email-address-parser",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "glib",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pushover",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "wpaperd-ipc",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "now",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "n18catalogue",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "libstrophe-sys-bindgen",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "wasm-bus-types",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tower-util",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "galvanic-mock",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rug-fft",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "unix-named-pipe",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tokio_schedule",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "faster-pest",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "permissions",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "google-servicebroker1",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "callysto",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "plt-draw",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bdk_wallet",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "imagefmt",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "serde-reflection",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "fb_procfs",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "gluerunner",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "inline_colorization",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "eta",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "protokit_grpc",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "zbus",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "iset",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "cerk",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "near-client-primitives",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "prefixmap",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mod3d-base",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rsx-rosetta",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "osm_boundaries_utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "gix-odb",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "redox_installer",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rustpython-parser",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "windows-permissions",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "chemistry_consts",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "calm_io",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "clutter-sys-rs",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "htb",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "path-matchers",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "prefixtree",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "deepbiop-utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tailwind-parse-macro",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "jsi-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rounded-div",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ordered-permutation",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "webtonic-proto",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "hr-id",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "string_format",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "handbar",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "r2d2-mongodb",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "talk-loco-client",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tower-ready-cache",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ordinal",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "swiftness_stark",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "user32-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "willow-encoding",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "townhopper",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "imgurs",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "solana-client-helpers",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "triple_arena",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "smdiff-common",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rt-xenomai",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "lingua-tsonga-language-model",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "three-style-lib",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "bevy_yarnspinner_example_dialogue_view",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "openssl-src",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pdf_composer_definitions",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "twilly",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "dojang",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "async-stream-impl",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pthash",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "az",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "mod3d-shapes",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "tia",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "encryption-macros-key-generation",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "assert_let_bind",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rstk",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ng-repo",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "sgx_urts",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "xxhash2",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "relm4-components",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "result",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "inexor-rgf-core-config",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "maybe-owned",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rustdns",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "riscv-rt",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "sesdiff",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "atsam3s2a",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "geng-obj",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "exon-bcf",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "pace_time",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "shippai_derive",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "jsondata-derive",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "usize_cast",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "lottieconv",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "alpm-utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "linebreak",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "fuguex-machine",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "driver-pal",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "dbusmenu-glib",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "rsvd",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "opencl-sys",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "path-utils",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "xtra-macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "xio_webapi",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "serde_view_macros",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "inout",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "ftdi-mpsse",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "one_two_eight",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "slog-atomic",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "piston2d-opengl_graphics",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "fluence-fork-libp2p-mplex",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "egui_dock",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "named_pipe",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  },
+  {
+   "crate": "map-macro",
+   "cap16": 0,
+   "cap12": 0,
+   "cap20": null
+  }
+ ]
+}

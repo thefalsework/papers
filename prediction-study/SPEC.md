@@ -149,3 +149,33 @@ failed instrument is a result.
 - The E9 lesson from bridge-study Phase 3 stands: no post-hoc
   re-cutting. Whatever passes, passes as registered; whatever dies,
   dies with its data published.
+
+## Amendment 1 (2026-09-13, after Phase 1 on instrument v1, before
+any outcome data was loaded)
+
+**Instrument v1 is dead by theorem, and the death is recorded:** all
+200 sampled ego-apertures were 0 (K1 and K2 both fired,
+`out/phase1.json`, instrument v1). Diagnosis is mathematical, not
+empirical. The v1 fill order (p, dep-layers, dependent-layers)
+collects only nodes comparable to p. If every element of S is
+comparable to p, the trace ↓p ∩ S is ⊥ (below-p elements absent) or
+dense (any x ≤ p in S lies in the trace; any x ≥ p in S has
+↓x ∩ S ⊇ trace), so it is never ordinary — this is the H3 necessary
+condition (`BridgeDownSets.lean`: ordinariness needs a
+dependency-disjoint witness) applied to the ego-net. v1 ego-aperture
+is identically zero for every package in every graph. The kill
+carries no information about outcomes (none were loaded); amending
+the instrument now is a correction of a provable construction error,
+not tuning.
+
+**Instrument v2 (frozen now):** fill order p; dependency layer 1;
+dependent layer 1; **sibling-up** (dependents of dependency-layer-1
+nodes, i.e. co-users of p's dependencies); **sibling-down**
+(dependencies of dependent-layer-1 nodes, i.e. what p's dependents
+also use); dependency layer 2; dependent layer 2. Within-layer order
+and cap unchanged (direct dependents desc, name asc; cap 16, checks
+at 12 and 20). Sibling layers supply the incomparable elements that
+the H3 condition requires; on the xz motif, v2 recovers the full
+motif from the liblzma position (aperture 21). Phase-1 thresholds
+(E-P1 ρ ≥ 0.7, E-P2 max-share ≤ 0.9) apply to v2 unchanged. If v2
+also fails Phase 1, the study ends — no v3.

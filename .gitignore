@@ -28,6 +28,9 @@ lean/lake-packages/
 
 # Untracked corpus checkouts (software-study, afp-study)
 .scratch_*/
+
+# Prediction-study raw data (crates.io dump, OSV archive) - too large for git
+prediction-study/data/
 .scratch_*.mjs
 
 # Large regenerable checkpoint extracts (rerun software-study/01-census.mjs
