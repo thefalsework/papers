@@ -245,3 +245,62 @@ and the case-control OR conditions only on conemass stratification,
 not the full baseline vector (the LR coefficient, which does
 condition on everything, agrees in direction — but the OR magnitude
 should not be quoted as if fully adjusted).
+
+---
+
+## Replication (registered 2026-09-13, before any RubyGems data was
+parsed): quiet-criticality as primary, on untouched data
+
+The Phase-2 postscript names the requirement: for quiet-criticality
+to become a claim, the E-P4 contrast must be the *primary* endpoint
+of a preregistered test on data this study has not touched. That
+test is registered here, in full, before the RubyGems dump is
+opened. Hypotheses are frozen; nothing in this section may be
+adjusted after the first RubyGems number is computed.
+
+**Ecosystem: RubyGems.** Weekly sanitized PostgreSQL dump
+(rubygems-dumps S3 bucket, snapshot 2026-09-07, a plain-SQL dump
+parseable directly); outcomes from OSV's RubyGems export. RubyGems
+shares no packages with crates.io; the crates study never touched
+this data.
+
+**Reconstruction rules (transposed verbatim from the primary
+study):** T0 = 2024-09-01. A gem exists at T0 if it has ≥1 version
+with created_at < T0; its edges are those of its latest version by
+created_at < T0 (all platforms, ties by created_at); dependency rows
+with scope = runtime only (the kind = 0 analog), all targets; edges
+to gems not existing at T0 dropped; SCC condensation. Population:
+gems existing at T0 with ≥1 direct dependent. Outcomes: ≥1
+non-withdrawn OSV advisory with published in (T0, snapshot].
+Case-control: all cases + 10,000 controls, seed 20260913.
+Instrument: v2 (Amendment 1), cap 16.
+
+**Gates (same thresholds as Phase 1, applied to 200 population
+samples before outcomes are joined):** E-R0a stability
+Spearman(cap16, cap12) ≥ 0.7; E-R0b max value share ≤ 0.9. Either
+failure ends the replication (recorded; no v3, no re-tuning).
+
+**Primary endpoint (E-R1).** Within the top conemass quartile of
+the case-control sample (conemass = log1p transitive dependents,
+quartile within sample, as in E-P4): odds ratio of outcome for
+bottom-aperture-quartile vs. top-aperture-quartile (quartiles within
+the stratum, Haldane–Anscombe correction, Woolf CI — the Phase-2
+construction verbatim). **Pass: 95% CI lower bound > 1. Kill (K-R1):
+CI includes 1 or the direction reverses.** No other outcome of this
+test rescues or replaces the primary.
+
+**Supporting (reported, non-gating):** standardized aperture
+coefficient in the full logistic model (sign and LR p), and held-out
+ΔAUC (no threshold — that claim is already dead and stays dead
+regardless of what this number shows).
+
+**What a pass would and would not mean, registered now:** a pass
+makes quiet-criticality (heavy load + low aperture ⇒ elevated
+advisory risk, conditional on popularity) a *replicated registered
+finding* across two ecosystems — strong enough to state publicly
+with its numbers, still short of a causal or mechanistic claim, and
+still subject to the surveillance-bias caveat (advisories measure
+discovery, not existence). A kill leaves the crates result as an
+unreplicated secondary, and the honest summary becomes "one
+ecosystem showed a direction; the replication failed" — which will
+be written if it happens.
