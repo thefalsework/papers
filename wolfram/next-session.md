@@ -37,6 +37,26 @@ controls; kills K1–K3).
   primary on untouched data (npm/PyPI, or later T0), with E-P4 as
   the primary endpoint. This study makes no such claim.
 
+**Same-day continuation: the replication ran, and it killed.**
+Registered before parsing (SPEC Replication section): RubyGems
+(weekly dump, 209,605 gems, 3.2M runtime edges at the same T0; OSV
+outcomes; 90 cases), quiet-criticality OR as the sole primary, pass
+iff CI lower bound > 1. **K-R1 fired: OR = 1.11 [0.79, 1.56];**
+supporting stats null without any cutting (aperture coefficient
+−0.14, p = 0.455; ΔAUC −0.0003). Post-hoc diagnostic (labeled):
+85.3% of high-reach gems have ego-aperture exactly 0 — the H1
+theorem in the wild; RubyGems' quasi-universal base gems
+(activesupport family) enter every heavy gem's ego-net as a
+near-global minimum, forcing density, so the quantity the hypothesis
+needed is structurally absent in this ecosystem. Honest summary, as
+pre-written in the spec: **one ecosystem showed a direction; the
+replication failed.** Quiet-criticality is an unreplicated
+single-ecosystem secondary — crates OR 2.85 stands as recorded, the
+RubyGems null stands beside it, and no public claim beyond that pair
+of sentences is supportable. A possible successor hypothesis
+(universal-base ecosystems are structurally invisible to cone-side
+aperture, as H1 predicts) is noted, unregistered, unclaimed.
+
 # Status 2026-09-12 (bridge study): dependency cones joined to the lattice spine
 
 Question tested: do the kernel-checked invariants (ordinariness,

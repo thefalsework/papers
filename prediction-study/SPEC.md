@@ -304,3 +304,45 @@ discovery, not existence). A kill leaves the crates result as an
 unreplicated secondary, and the honest summary becomes "one
 ecosystem showed a direction; the replication failed" — which will
 be written if it happens.
+
+## Replication postscript (2026-09-13, same day, after the run)
+
+Engine: `04-build-graph-rubygems.py` + `05-replication.py`, output
+`out/replication.json`. Graph: 209,605 gems, 3,220,239 runtime edges
+at T0 (spot-checked against known gems: rails' 13 framework deps,
+rack's 0, exact). Population 58,884; gates passed cleanly (stability
+ρ = 0.952, modal zero share 46.5%). Cases: 90.
+
+**K-R1 fired. The replication failed, and the registered sentence
+now applies: one ecosystem showed a direction; the replication
+failed.** Primary OR = 1.11, 95% CI [0.79, 1.56] — includes 1.
+Supporting stats agree with the null with no cutting involved:
+full-model aperture coefficient −0.14 (LR p = 0.455), mean held-out
+ΔAUC −0.0003. In RubyGems the ego-aperture carries no detectable
+advisory signal at all.
+
+**Diagnosis, descriptive and post-hoc (labeled as such):** the
+primary's quartile contrast was additionally degenerate — the
+"high-aperture" quartile equals the entire stratum because aperture
+ties collapse the cuts. A 300-gem diagnostic on high-reach gems
+shows **85.3% have ego-aperture exactly 0** (median 0), versus a
+spread distribution in the crates stratum. This is the H1 theorem
+(`BridgeDownSets.lean`: a global lower bound forces every cone
+regular-or-dense) operating in the wild: RubyGems has quasi-universal
+base gems (the activesupport family) that enter every heavy gem's
+ego-net as a near-global minimum, forcing density and zero aperture.
+The instrument passed its gates on the general population but the
+quantity it measures is structurally absent exactly where the
+hypothesis needed it in this ecosystem. Power was also limited
+(90 cases vs. 514 in crates) — but the point estimate is near 1
+with a null coefficient, not an underpowered echo of the crates
+effect.
+
+**Honest status of quiet-criticality after the replication:** an
+unreplicated single-ecosystem secondary. The crates OR of 2.85
+stands as recorded; the RubyGems null stands beside it; no public
+claim beyond that pair of sentences is supportable. If the
+H1-degeneracy diagnosis suggests anything further, it is a
+*different* hypothesis (ecosystems with universal bases may be
+structurally invisible to cone-side aperture, as H1 predicts) —
+which would need its own registration and is not claimed here.
