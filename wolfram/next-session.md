@@ -261,6 +261,23 @@ Full email thread (Mar 29 → present) reviewed in session. State:
    don't repeat conemass; no new requests; hold the reopeners
    (non-piecewise-linear activations, segmentation) to one sentence,
    marked askable-not-answered, mirroring the sent letter's close.
+9. **(Added 2026-09-13) The Citkin anchor for the Booleanness
+   sentence**: Citkin, arXiv:2512.05633 (Dec 2025), Cor. 3.9 — a
+   finitely generated *nodeless* Heyting algebra is Boolean iff it
+   contains no ordinary elements. This is live, independent
+   mathematics stating that the ordinary elements *are* the
+   non-Booleanness (in the f.g. nodeless case): exactly the algebraic
+   ground under "what ends at the threshold may be Booleanness rather
+   than logic," which Levin singled out as the load-bearing claim.
+   One sentence, one citation; note that ordinariness is also
+   load-bearing in Citkin's own proof of the primitive-varieties
+   criterion (ordinary element ⇒ cyclic subalgebra Z_n, n ≥ 6 — the
+   six-element threshold the repo has kernel-checked). Complementary
+   observation worth one clause: his nodeless hypothesis and our H1
+   tile the space — a universal base makes the atom a nontrivial
+   node (H1's route to classicality); nodeless worlds are classical
+   iff ordinary-free (his route). Nuclei/aperture do not appear in
+   his paper; the observer-counting layer remains ours.
 
 ---
 
