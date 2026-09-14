@@ -1,3 +1,40 @@
+# Status 2026-09-13 (correspondence): reply to Levin sent
+
+The reply to Levin's Sept 10 email went out 2026-09-13 evening. It
+followed the registered contents checklist (see 2026-09-09 entry,
+items 1–9) in full:
+
+- Opens on his Apr "complementary halves" frame; reports the phantom
+  pilot as the first measurement at the seam.
+- The co-aperture ledger: phantom mass |[k, j k]| as what an observer
+  manufactures, closed forms, independence from aperture both
+  directions, kernel-checked; cited by DOI (aperture v0.4,
+  10.5281/zenodo.22715068, §7).
+- The instrument honesty note (closing = one one-parameter family of
+  nuclei, not the full ledger) and the K1 answer: 80 nets, mass
+  ≤ ~0.1% at data scale, α ≈ 2 codimension-2 readout with the
+  3-resolution caveat. One-liner used: real in the algebra, vanishing
+  in the geometry.
+- Both survivors as separate claims (E2 depth trend vs Hanin–Rolnick;
+  E3 enrichment consistent-but-underpowered), pilot cited by DOI
+  (10.5281/zenodo.22715062).
+- The Citkin anchor (arXiv:2512.05633 Cor. 3.9) under the sentence he
+  singled out, with the Z_n ≥ 6 clause and the nodeless/H1
+  complementarity clause.
+- The student overture answered with three scoped problems, each with
+  deliverable and failure condition: (1) corridor conjecture across
+  the Cover transition; (2) phantom mass under smooth activations;
+  (3) error-enrichment in segmentation (the powered setting). A
+  closing paragraph states the three are independent, run
+  theory → generality → application, and are framed so a negative
+  answer is reportable. No new requests; no repeated conemass.
+
+Now waiting on his response. Past pattern: acknowledgment in 1–3
+days, substantive engagement ~3 weeks. If a student takes a problem,
+the deliverable/failure-condition framing above is the working spec
+seed; each problem would get its own registered SPEC before any code
+runs, same discipline as the pilots.
+
 # Status 2026-09-13 (prediction study): K3 kill on incremental validity; quiet-criticality direction survives as registered secondary
 
 Question: does the ego-aperture add predictive information about
