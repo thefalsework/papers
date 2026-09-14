@@ -32,5 +32,6 @@ import FalseWorkPapers.Examples.ApertureAnchors
 import FalseWorkPapers.Examples.PerceptronRegular
 import FalseWorkPapers.Lattice.CoApertureClosedForm
 import FalseWorkPapers.Lattice.SecondLaw
+import FalseWorkPapers.Lattice.CapacityThreshold
 import FalseWorkPapers.Lattice.BridgeDownSets
 import FalseWorkPapers.Lattice.ObserverClassification

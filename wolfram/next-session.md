@@ -1,3 +1,35 @@
+# Status 2026-09-13 (work theorem): the capacity threshold, kernel-checked; the mathematics is Citkin's
+
+Registered `preprints/aperture/work-theorem-spec.md` (after the
+Phase 0 literature check, before any code). The question: what does
+ordinariness buy? Candidate answer: capacity — the size of the
+subalgebra one element generates.
+
+- **Phase 0 fired a novelty kill first, recorded in the spec before
+  any claim was made:** the classification is already in Citkin
+  (Logics 2024). Prop. 3: dense generator → Z₂/Z₃. Props. 2 +
+  Thm. 6: regular caps at Z₅. Prop. 4(c): ordinary forces > 5. The
+  general capacity threshold follows since ⟨k⟩ is one-generated and
+  ordinariness transfers to subalgebras. What survived registration:
+  a formalization claim, not a mathematics claim.
+- **Oracle passed:** all 87 posets on ≤ 5 elements, 938 elements —
+  dense caps at 3, regular at 5, ordinary min 6, no kill.
+- **Lean (`Lattice/CapacityThreshold.lean`), kernel-checked:** W1
+  dense closure `{⊥, k, ⊤}`; W2 regular closure
+  `{⊥, k, kᶜ, k ⊔ kᶜ, ⊤}`; W3 six pairwise-distinct witnesses for
+  ordinary `k` (direct argument, no dense-filter quotient); **W4 the
+  threshold iff** — `k` ordinary ⟺ every operation-closed set
+  containing `k` has ≥ 6 elements.
+- **This discharges the oldest [C] on the thread**: the six-element
+  threshold `NishimuraKernelLaw.lean` has cited since August is now
+  [K], two-sided, and abstract.
+- Honest ledger for the thermodynamic reading after today: one
+  *generated* theorem (the second-law package, below), one *located*
+  theorem (this — the frame predicted a work law and found it already
+  existing in the literature, which is consistency, not priority).
+  No temperature analogue, no work-extraction dynamics. The
+  capacity-as-work reading stays grade [O].
+
 # Status 2026-09-13 (second law): phantom mass behaves as entropy production, kernel-checked
 
 Registered `preprints/aperture/second-law-spec.md` (committed before

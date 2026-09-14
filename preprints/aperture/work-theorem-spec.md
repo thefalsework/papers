@@ -100,3 +100,36 @@ is a *formalization* claim and a *reading*, not a mathematics claim.
 `work-theorem/01-capacity-oracle.py` (exhaustive check), then
 `lean/FalseWorkPapers/Lattice/CapacityThreshold.lean` (W1–W4), or the
 failure documented in a dated postscript here.
+
+## Postscript (2026-09-13, same day): oracle passed, all four clauses kernel-checked
+
+**Oracle** (`work-theorem/01-capacity-oracle.py`): all 87 posets on
+≤ 5 elements (up to isomorphism), 938 elements classified and closed.
+Dense capacity min 2 / max 3; regular min 2 / max 5; ordinary min 6 /
+max 10. **No kill fired** — W-K1 clean.
+
+**Lean** (`lean/FalseWorkPapers/Lattice/CapacityThreshold.lean`),
+builds clean:
+
+- **W1** `IsSubalgebraSet.dense_closed` — `{⊥, k, ⊤}` closed for
+  dense `k`.
+- **W2** `IsSubalgebraSet.regular_closed` — `{⊥, k, kᶜ, k ⊔ kᶜ, ⊤}`
+  closed for regular `k` (regularity used exactly twice:
+  `kᶜ ⇨ ⊥ = k`, `kᶜ ⇨ k = k`).
+- **W3** `IsOrdinary.six_distinct` — the six witnesses pairwise
+  distinct, by a direct argument (no quotient through the dense
+  filter; distinctness of `k ⊔ kᶜ` from `⊤` is the one place
+  distributivity enters).
+- **W4** `isOrdinary_iff_six_le_capacity` — ordinary iff every
+  operation-closed set containing `k` holds ≥ 6 elements.
+
+Verdict as registered: this is the [C] → [K] discharge of the
+threshold that `NishimuraKernelLaw.lean` has cited since August
+(Citkin 2024 Prop. 4(c)), now two-sided and packaged as an iff, in
+fully abstract form. The mathematics is Citkin's and Nishimura's; the
+kernel-check and the packaging are the contribution; the work-theorem
+*reading* (what ordinariness buys is generated structure, threshold
+at six) is grade-[O] interpretation, per honesty note 3. The
+thermodynamic frame's ledger after today: one generated theorem (the
+second-law package), one located theorem (this), zero temperature,
+zero dynamics.
