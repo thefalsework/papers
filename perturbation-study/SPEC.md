@@ -96,8 +96,16 @@ compute before/after class of ↓p, aperture(↓p), and total phantom
 mass Σ_S phantomMass(j_S, ↓p) (co-aperture restricted to the cone).
 
 **E0 (engine validation).** The engine must reproduce the H3 motif
-numbers from bridge-study (aperture of ↓p = 3 of 8, etc.) and the
-L0–L3 hand witnesses exactly. Any mismatch stops the study.
+numbers as recorded in bridge-study/out/pilot-results.json — dep
+side: ↓p aperture 1 (of 8), coaperture 18, ordinary; ↓b aperture 0,
+coaperture 12, regular; ↓q aperture 0, coaperture 14, regular — and
+the L0–L3 hand witnesses exactly. Any mismatch stops the study.
+
+*Correction, 2026-09-14, before any code: the first commit of this
+spec cited the H3 aperture as "3 of 8" from memory. The recorded
+bridge-study value is 1 of 8 (hand recomputation via the trace
+characterization agrees). Corrected here, registered as an
+amendment; no oracle had run.*
 
 **Q1 (signs).** Tabulate the sign distribution of Δaperture and
 ΔphantomTotal over all (poset, edge, p) triples. Registered
