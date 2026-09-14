@@ -1,0 +1,513 @@
+{
+ "hand": {
+  "L0": true,
+  "L2": [
+   "regular",
+   "ordinary"
+  ],
+  "L3": [
+   "dense",
+   "dense",
+   "dense"
+  ]
+ },
+ "exhaustive": {
+  "triples": 20950,
+  "edges": 4252,
+  "l1_violations": 0,
+  "dap_pos": 3647,
+  "dap_neg": 7433,
+  "dap_zero": 9870,
+  "dco_pos": 343,
+  "dco_neg": 13705,
+  "dco_zero": 6902,
+  "ratchet_violations": [],
+  "class_changes": {
+   "regular->dense": 2221,
+   "regular->ordinary": 2118,
+   "regular->regular": 6373,
+   "ordinary->dense": 2437,
+   "ordinary->regular": 1212,
+   "dense->dense": 3004,
+   "ordinary->ordinary": 3585
+  },
+  "q2": {
+   "a": {
+    "total": 2156,
+    "changed": 121
+   },
+   "b": {
+    "total": 14792,
+    "changed": 7407
+   },
+   "c": {
+    "total": 4002,
+    "changed": 460
+   }
+  },
+  "q2_c_witnesses": [
+   {
+    "n": 4,
+    "down": [
+     1,
+     3,
+     5,
+     8
+    ],
+    "edge": [
+     1,
+     3
+    ],
+    "p": 2,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 4,
+    "down": [
+     1,
+     3,
+     5,
+     8
+    ],
+    "edge": [
+     2,
+     3
+    ],
+    "p": 1,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 4,
+    "down": [
+     1,
+     3,
+     5,
+     8
+    ],
+    "edge": [
+     3,
+     1
+    ],
+    "p": 2,
+    "before": "ordinary",
+    "after": "regular"
+   },
+   {
+    "n": 4,
+    "down": [
+     1,
+     3,
+     5,
+     8
+    ],
+    "edge": [
+     3,
+     2
+    ],
+    "p": 1,
+    "before": "ordinary",
+    "after": "regular"
+   },
+   {
+    "n": 4,
+    "down": [
+     1,
+     3,
+     4,
+     9
+    ],
+    "edge": [
+     1,
+     2
+    ],
+    "p": 3,
+    "before": "ordinary",
+    "after": "dense"
+   }
+  ],
+  "max_rel_jump": 0.28125,
+  "max_jump_witness": {
+   "n": 5,
+   "down": [
+    1,
+    3,
+    4,
+    8,
+    16
+   ],
+   "edge": [
+    1,
+    2
+   ],
+   "p": 1,
+   "ap_before": 0,
+   "ap_after": 9
+  },
+  "collapse_witnesses": [
+   {
+    "n": 3,
+    "down": [
+     1,
+     3,
+     4
+    ],
+    "edge": [
+     0,
+     2
+    ],
+    "p": 0,
+    "ap_before": 1,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 3,
+    "down": [
+     1,
+     3,
+     4
+    ],
+    "edge": [
+     1,
+     2
+    ],
+    "p": 0,
+    "ap_before": 1,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 3,
+    "down": [
+     1,
+     3,
+     4
+    ],
+    "edge": [
+     2,
+     0
+    ],
+    "p": 0,
+    "ap_before": 1,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 3,
+    "down": [
+     1,
+     3,
+     4
+    ],
+    "edge": [
+     2,
+     1
+    ],
+    "p": 0,
+    "ap_before": 1,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "regular"
+   },
+   {
+    "n": 3,
+    "down": [
+     1,
+     2,
+     5
+    ],
+    "edge": [
+     0,
+     1
+    ],
+    "p": 0,
+    "ap_before": 1,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   }
+  ],
+  "imp_closed": 0,
+  "imp_total": 284
+ },
+ "sampled": {
+  "triples": 8696,
+  "edges": 1370,
+  "l1_violations": 0,
+  "dap_pos": 1584,
+  "dap_neg": 3064,
+  "dap_zero": 4048,
+  "dco_pos": 0,
+  "dco_neg": 0,
+  "dco_zero": 0,
+  "ratchet_violations": [],
+  "class_changes": {
+   "regular->dense": 496,
+   "ordinary->dense": 737,
+   "regular->regular": 2537,
+   "ordinary->ordinary": 1963,
+   "ordinary->regular": 376,
+   "regular->ordinary": 691,
+   "dense->dense": 1896
+  },
+  "q2": {
+   "a": {
+    "total": 1275,
+    "changed": 33
+   },
+   "b": {
+    "total": 5438,
+    "changed": 2149
+   },
+   "c": {
+    "total": 1983,
+    "changed": 118
+   }
+  },
+  "q2_c_witnesses": [
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     3,
+     0
+    ],
+    "p": 4,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     3,
+     0
+    ],
+    "p": 5,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     2,
+     0
+    ],
+    "p": 4,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     2,
+     0
+    ],
+    "p": 5,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     4,
+     0
+    ],
+    "p": 2,
+    "before": "ordinary",
+    "after": "dense"
+   }
+  ],
+  "max_rel_jump": 0.4921875,
+  "max_jump_witness": {
+   "n": 7,
+   "down": [
+    1,
+    2,
+    4,
+    12,
+    17,
+    44,
+    66
+   ],
+   "edge": [
+    4,
+    2
+   ],
+   "p": 4,
+   "ap_before": 0,
+   "ap_after": 63
+  },
+  "collapse_witnesses": [
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     0,
+     1
+    ],
+    "p": 1,
+    "ap_before": 15,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     0,
+     1
+    ],
+    "p": 3,
+    "ap_before": 12,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     0,
+     1
+    ],
+    "p": 5,
+    "ap_before": 12,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     3,
+     0
+    ],
+    "p": 1,
+    "ap_before": 15,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   },
+   {
+    "n": 6,
+    "down": [
+     1,
+     2,
+     6,
+     14,
+     18,
+     50
+    ],
+    "edge": [
+     3,
+     0
+    ],
+    "p": 5,
+    "ap_before": 12,
+    "ap_after": 0,
+    "before": "ordinary",
+    "after": "dense"
+   }
+  ],
+  "imp_closed": 0,
+  "imp_total": 0
+ },
+ "verdicts": {
+  "K0": "pass (E0 matched recorded values)",
+  "K1_ratchet": "does not fire (L4 holds on the full survey)",
+  "K2_reduction": "does not fire (D(P') closed under => in 0.0% of cases)",
+  "K3_monotone": "does not fire (both signs occur)",
+  "Q1": {
+   "dap": [
+    5231,
+    10497,
+    13918
+   ],
+   "dco": [
+    343,
+    13705,
+    6902
+   ]
+  },
+  "Q2": "NON-LOCAL: distant edges (type c) change class 578 times",
+  "Q3": {
+   "max_rel_jump": 0.4921875,
+   "collapse_witnesses": 10
+  },
+  "L1": "holds (strict decrease everywhere)"
+ }
+}

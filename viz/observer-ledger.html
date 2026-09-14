@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The observer ledger, drawn</title>
+<style>
+  :root {
+    --bg: #181818; --panel: #1f1f1f; --stroke: #3a3a3a;
+    --text: #e4e4e4; --text2: #a8a8a8; --text3: #7a7a7a;
+    --accent: #599CE7; --red: #FC6B83; --green: #3FA266; --gray: #555;
+  }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif;
+         max-width: 1020px; margin: 0 auto; padding: 24px; line-height: 1.45; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 0; font-weight: 600; }
+  .sub { color: var(--text2); font-size: 14px; margin-bottom: 18px; }
+  .panel { background: var(--panel); border: 1px solid var(--stroke); border-radius: 8px;
+           padding: 16px; margin-bottom: 16px; }
+  .stats { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 16px; }
+  .stat .v { font-size: 22px; font-weight: 600; }
+  .stat .l { font-size: 12px; color: var(--text2); max-width: 190px; }
+  .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 10px 0 14px; }
+  .controls label { font-size: 12px; color: var(--text2); }
+  select { background: #262626; color: var(--text); border: 1px solid var(--stroke);
+           border-radius: 5px; padding: 4px 8px; font-size: 13px; }
+  button.h { background: #262626; color: var(--text2); border: 1px solid var(--stroke);
+             border-radius: 999px; padding: 4px 12px; font-size: 12px; cursor: pointer; }
+  button.h.on { background: var(--accent); color: #10151c; border-color: var(--accent); font-weight: 600; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--text2); margin-top: 10px; }
+  .legend .sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px;
+                vertical-align: -1px; margin-right: 5px; }
+  .readout { display: flex; gap: 28px; flex-wrap: wrap; border-top: 1px solid var(--stroke);
+             margin-top: 14px; padding-top: 12px; }
+  .note { font-size: 12.5px; color: var(--text2); margin-top: 10px; }
+  .pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px;
+          border: 1px solid var(--stroke); }
+  .pill.ok { color: #6fcf97; border-color: #2c5e42; background: #1d2b23; }
+  .pill.bad { color: #f2a2b0; border-color: #6e3340; background: #2b1d21; }
+  svg text { user-select: none; }
+  .cap { font-size: 12px; color: var(--text3); margin-top: 8px; }
+  b { color: var(--text); }
+</style>
+</head>
+<body>
+<h1>The observer ledger, drawn</h1>
+<div class="sub">A multiway system (rules A&rarr;AB, B&rarr;BA, seed AB, 4 steps), its down-set
+Heyting algebra, and all 16,384 observers on it. Pick a kernel state, lower the observer's
+horizon, and watch confusion get manufactured.</div>
+
+<div class="stats" id="stats"></div>
+
+<div class="panel">
+  <h2 id="dagTitle"></h2>
+  <div class="controls">
+    <label>kernel</label> <select id="kernelSel"></select>
+    <label style="margin-left:14px">observer horizon</label>
+    <span id="horizonBtns"></span>
+    <span id="pocketPill" style="margin-left:auto"></span>
+  </div>
+  <div id="dag"></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--accent)"></span><b>Infrastructure</b> &mdash; inside the kernel's cone</span>
+    <span><span class="sw" style="background:var(--red)"></span><b>Exploitation</b> &mdash; double-negation remainder: claimed, not real</span>
+    <span><span class="sw" style="background:var(--green)"></span><b>Refusal</b> &mdash; past provably independent</span>
+    <span><span class="sw" style="background:var(--gray)"></span><b>Distribution</b> &mdash; touches both sides</span>
+    <span><span class="sw" style="border:2px dashed var(--red)"></span><b>phantom</b> &mdash; glued into the kernel's confusion interval</span>
+  </div>
+  <div class="readout" id="readout"></div>
+  <div class="note" id="phantomNote"></div>
+</div>
+
+<div class="panel">
+  <h2 id="scatterTitle"></h2>
+  <div id="scatter"></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--accent); border-radius:9px"></span>
+      pocket of reducibility &mdash; trace stays ordinary; the kernel still does generative work</span>
+    <span><span class="sw" style="background:var(--gray); border-radius:9px"></span>
+      collapsed &mdash; the four-fold is gone at this coarse-graining</span>
+    <span><span class="sw" style="border:2px solid var(--text); border-radius:9px"></span>
+      the four horizon observers from the panel above</span>
+  </div>
+  <div class="cap">Source: exhaustive nucleus enumeration (aperture, horizons) plus a 1,400-observer
+  sample (scatter) on the 14-state window; same construction kernel-checked in
+  ObserverClassification.lean. Right edge = blind observer; left edge = identity (phantom 1, theorem S2).
+  Computational irreducibility, in ledger form: how fast the floor of this cloud rises as you move right.
+  Pockets of reducibility are the blue points sitting low and far right &mdash; big compression, small
+  confusion, distinction still alive.</div>
+</div>
+
+<div class="panel" style="background:transparent">
+  <h2>How to read it</h2>
+  <div class="note">A <b>nucleus</b> (observer) here is any subset of states it can resolve;
+  coarser observer = smaller subset. <b>Phantom mass</b> counts the worlds it files under the
+  kernel's name &mdash; confusion manufactured, not detail deleted. <b>Aperture</b> counts the
+  observers for which the kernel still splits the world four ways. The seed state was dropped
+  from the window deliberately: with a single origin included, theorem H1 makes every cone dense
+  and the whole picture sterile &mdash; one more way the math says no observer gets to stand at
+  the beginning and see everything. The phantom counter demonstrates the second law (S1) live:
+  it never decreases as you coarsen, and equals exactly 1 at the identity observer (S2).</div>
+</div>
+
+<script>
+"use strict";
+/* ---------- the system ---------- */
+const STATES = ["ABA","ABB","ABAA","ABAB","ABBA","ABBB",
+  "ABAAA","ABAAB","ABABA","ABABB","ABBAA","ABBAB","ABBBA","ABBBB"];
+const DEPTH  = [1,1,2,2,2,2,3,3,3,3,3,3,3,3];
+const EDGES  = [[0,2],[0,3],[0,4],[1,3],[1,4],[1,5],
+  [2,6],[2,7],[2,8],[2,10],[3,7],[3,8],[3,9],[3,11],
+  [4,8],[4,10],[4,11],[4,12],[5,9],[5,11],[5,12],[5,13]];
+const N = STATES.length, FULL = (1 << N) - 1;
+
+const dn = new Array(N).fill(0).map((_, i) => 1 << i);
+for (const [a, b] of EDGES) dn[b] |= dn[a];
+// propagate (edges sorted topologically, but do a second pass to be safe)
+for (let pass = 0; pass < 3; pass++) for (const [a, b] of EDGES) dn[b] |= dn[a];
+
+function popcount(x){ let c=0; while(x){ x&=x-1; c++; } return c; }
+function neg(t, S){
+  let r = 0;
+  for (let x = 0; x < N; x++) if ((S>>x)&1 && (dn[x]&S&t)===0) r |= 1<<x;
+  return r;
+}
+function applyNucleus(S, k){
+  let jk = 0;
+  for (let x = 0; x < N; x++) if ((dn[x]&S&~k)===0) jk |= 1<<x;
+  return jk;
+}
+function countRelDownsets(F){
+  let cnt = 0, X = F;
+  for (;;) {
+    let ok = true, m = X;
+    while (m) {
+      const b = m & -m, x = 31 - Math.clz32(b);
+      m ^= b;
+      if ((dn[x] & F & ~X) !== 0) { ok = false; break; }
+    }
+    if (ok) cnt++;
+    if (X === 0) break;
+    X = (X - 1) & F;
+  }
+  return cnt;
+}
+function traceOrdinary(k, S){
+  const t = k & S, nt = neg(t, S);
+  if (nt === 0) return false;
+  return neg(nt, S) !== t;
+}
+function fullClass(k){
+  const nk = neg(k, FULL);
+  if (nk === 0) return "dense";
+  return neg(nk, FULL) === k ? "regular" : "ordinary";
+}
+const HORIZONS = [0,1,2,3].map(d => {
+  let m = 0;
+  for (let i = 0; i < N; i++) if (DEPTH[i] <= d) m |= 1 << i;
+  return m;
+});
+const TOTAL_DOWNSETS = countRelDownsets(FULL);
+
+const cache = {};
+function analyze(kIdx){
+  if (cache[kIdx]) return cache[kIdx];
+  const k = dn[kIdx];
+  let aperture = 0;
+  for (let S = 0; S <= FULL; S++) if (traceOrdinary(k, S)) aperture++;
+  const horizonPm  = HORIZONS.map(S => countRelDownsets(applyNucleus(S,k) & ~k));
+  const horizonOrd = HORIZONS.map(S => traceOrdinary(k, S));
+  let seed = (0x2f6e2b1 ^ kIdx) >>> 0;
+  const rnd = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296; };
+  const seen = new Set(HORIZONS);
+  while (seen.size < 1400) seen.add(Math.floor(rnd() * (FULL + 1)));
+  const scatter = [];
+  for (const S of seen) {
+    const pm = countRelDownsets(applyNucleus(S,k) & ~k);
+    scatter.push({ hidden: N - popcount(S), logPm: Math.log2(pm),
+      pocket: traceOrdinary(k,S), isHorizon: HORIZONS.includes(S) });
+  }
+  return cache[kIdx] = { aperture, scatter, horizonPm, horizonOrd };
+}
+
+/* ---------- layout ---------- */
+const RANKS = [[],[],[]];
+for (let i = 0; i < N; i++) RANKS[DEPTH[i]-1].push(i);
+const NW = 62, NH = 26, W = 940, RGAP = 66, PAD = 18;
+const pos = {};
+RANKS.forEach((rank, r) => {
+  const total = rank.length * NW + (rank.length - 1) * 18;
+  const x0 = (W - total) / 2;
+  rank.forEach((i, j) => { pos[i] = { x: x0 + j * (NW + 18), y: PAD + r * RGAP }; });
+});
+const DAG_H = PAD * 2 + 2 * RGAP + NH;
+
+/* ---------- state ---------- */
+let kernel = 2, horizon = 1;
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+function renderDag(){
+  const k = dn[kernel], S = HORIZONS[horizon];
+  const t = k & S, nt = neg(t, S), nnt = neg(nt, S);
+  const phantom = applyNucleus(S, k) & ~k;
+  let svg = `<svg width="${W}" height="${DAG_H}" viewBox="0 0 ${W} ${DAG_H}" style="max-width:100%">`;
+  for (const [a, b] of EDGES) {
+    const dim = !((S>>a)&1) || !((S>>b)&1);
+    svg += `<line x1="${pos[a].x+NW/2}" y1="${pos[a].y+NH}" x2="${pos[b].x+NW/2}" y2="${pos[b].y}"
+      stroke="#3a3a3a" stroke-width="1" opacity="${dim?0.25:1}"/>`;
+  }
+  for (let i = 0; i < N; i++) {
+    const obs = ((S>>i)&1) === 1, isK = i === kernel, isPh = ((phantom>>i)&1) === 1;
+    let fill = "#2a2a2a", tcol = "#666";
+    if (obs) {
+      if ((t>>i)&1)        { fill = "var(--accent)"; tcol = "#10151c"; }
+      else if ((nt>>i)&1)  { fill = "var(--green)";  tcol = "#e8e8e8"; }
+      else if ((nnt>>i)&1) { fill = "var(--red)";    tcol = "#2b1218"; }
+      else                 { fill = "var(--gray)";   tcol = "#e0e0e0"; }
+    }
+    const stroke = isK ? "var(--accent)" : (isPh ? "var(--red)" : "#3a3a3a");
+    const sw = isK ? 2.5 : (isPh ? 1.8 : 1);
+    const dash = isPh ? `stroke-dasharray="4 3"` : "";
+    const op = (obs || isPh) ? 1 : 0.3;
+    svg += `<g opacity="${op}">
+      <rect x="${pos[i].x}" y="${pos[i].y}" width="${NW}" height="${NH}" rx="5"
+        fill="${fill}" stroke="${stroke}" stroke-width="${sw}" ${dash}/>
+      <text x="${pos[i].x+NW/2}" y="${pos[i].y+17}" text-anchor="middle"
+        font-size="10.5" font-family="ui-monospace,monospace" fill="${tcol}">${esc(STATES[i])}</text></g>`;
+  }
+  svg += "</svg>";
+  document.getElementById("dag").innerHTML = svg;
+
+  const a = analyze(kernel);
+  const pm = a.horizonPm[horizon], pocket = a.horizonOrd[horizon];
+  document.getElementById("dagTitle").textContent =
+    `The system through one observer's eyes — kernel ${STATES[kernel]}`;
+  document.getElementById("pocketPill").innerHTML = pocket
+    ? `<span class="pill ok">four-fold alive (pocket)</span>`
+    : `<span class="pill bad">four-fold collapsed</span>`;
+  document.getElementById("readout").innerHTML = `
+    <div class="stat"><div class="v">${popcount(S)} / ${N}</div><div class="l">states this observer sees</div></div>
+    <div class="stat"><div class="v" style="color:${pm>1?'var(--red)':'var(--green)'}">${pm}</div>
+      <div class="l">phantom mass at kernel (1 = lossless)</div></div>
+    <div class="stat"><div class="v">${a.horizonPm.join(" \u2265 ")}</div>
+      <div class="l">phantom across horizons blind &rarr; full (second law S1: never increases as resolution rises)</div></div>`;
+  const F = applyNucleus(S,k) & ~k;
+  const names = STATES.filter((_, i) => (F>>i)&1);
+  document.getElementById("phantomNote").innerHTML = names.length
+    ? `Worlds this observer cannot tell apart from the kernel's: intervals built from
+       <b>${names.join(", ")}</b> — it confidently files them all under &ldquo;${STATES[kernel]} happened.&rdquo;`
+    : `This observer is lossless at the kernel: phantom mass 1, no manufactured confusion.`;
+}
+
+function renderScatter(){
+  const a = analyze(kernel);
+  const SW2 = 940, SH = 320, padL = 56, padR = 18, padT = 14, padB = 46;
+  const maxY = Math.max(1, ...a.scatter.map(p => p.logPm));
+  const xOf = (h, j) => padL + ((h + j) / N) * (SW2 - padL - padR);
+  const yOf = v => padT + (1 - v / maxY) * (SH - padT - padB);
+  let seed = (12345 + kernel) >>> 0;
+  const jit = () => { seed = (Math.imul(seed,1664525)+1013904223)>>>0; return (seed/4294967296-0.5)*0.72; };
+  let svg = `<svg width="${SW2}" height="${SH}" viewBox="0 0 ${SW2} ${SH}" style="max-width:100%">`;
+  for (let v = 0; v <= maxY; v += 2) {
+    svg += `<line x1="${padL}" x2="${SW2-padR}" y1="${yOf(v)}" y2="${yOf(v)}" stroke="#2c2c2c"/>
+      <text x="${padL-8}" y="${yOf(v)+3.5}" text-anchor="end" font-size="10" fill="#7a7a7a">${v}</text>`;
+  }
+  for (const h of [0,2,4,6,8,10,12,14])
+    svg += `<text x="${xOf(h,0)}" y="${SH-padB+16}" text-anchor="middle" font-size="10" fill="#7a7a7a">${h}</text>`;
+  svg += `<text x="${(padL+SW2-padR)/2}" y="${SH-8}" text-anchor="middle" font-size="11.5" fill="#a8a8a8">
+    states hidden from the observer (of ${N})</text>`;
+  svg += `<text x="15" y="${(padT+SH-padB)/2}" text-anchor="middle" font-size="11.5" fill="#a8a8a8"
+    transform="rotate(-90 15 ${(padT+SH-padB)/2})">log&#8322; phantom mass</text>`;
+  for (const p of a.scatter) if (!p.isHorizon)
+    svg += `<circle cx="${xOf(p.hidden, jit())}" cy="${yOf(p.logPm)}" r="2.4"
+      fill="${p.pocket ? "var(--accent)" : "#555"}" opacity="${p.pocket ? 0.85 : 0.45}"/>`;
+  for (const p of a.scatter) if (p.isHorizon)
+    svg += `<circle cx="${xOf(p.hidden,0)}" cy="${yOf(p.logPm)}" r="5.5" fill="none"
+      stroke="#e4e4e4" stroke-width="1.8"/>`;
+  svg += "</svg>";
+  document.getElementById("scatter").innerHTML = svg;
+  document.getElementById("scatterTitle").textContent =
+    `Compression vs. confusion — every observer, kernel ${STATES[kernel]}`;
+}
+
+function renderStats(){
+  const a = analyze(kernel), cls = fullClass(dn[kernel]);
+  const clsCol = cls === "ordinary" ? "#6fcf97" : (cls === "regular" ? "var(--accent)" : "#e8c030");
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="v">${N}</div><div class="l">states in the window</div></div>
+    <div class="stat"><div class="v">${TOTAL_DOWNSETS}</div><div class="l">worlds (down-sets of the window)</div></div>
+    <div class="stat"><div class="v" style="color:var(--accent)">${a.aperture.toLocaleString()}</div>
+      <div class="l">aperture of ${STATES[kernel]} (of 16,384 observers)</div></div>
+    <div class="stat"><div class="v" style="color:${clsCol}">${cls}</div>
+      <div class="l">kernel class at full resolution</div></div>`;
+}
+
+function renderControls(){
+  const sel = document.getElementById("kernelSel");
+  sel.innerHTML = STATES.map((s, i) =>
+    `<option value="${i}" ${i===kernel?"selected":""}>${s} (${fullClass(dn[i])})</option>`).join("");
+  sel.onchange = () => { kernel = parseInt(sel.value, 10); renderAll(); };
+  const hb = document.getElementById("horizonBtns");
+  hb.innerHTML = [0,1,2,3].map(d =>
+    `<button class="h ${horizon===d?"on":""}" data-d="${d}">
+      ${d===0?"blind":d===3?"full (identity)":d+" step"+(d>1?"s":"")}</button>`).join(" ");
+  hb.querySelectorAll("button").forEach(b =>
+    b.onclick = () => { horizon = parseInt(b.dataset.d, 10); renderAll(); });
+}
+
+function renderAll(){ renderStats(); renderControls(); renderDag(); renderScatter(); }
+renderAll();
+</script>
+</body>
+</html>

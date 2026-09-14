@@ -154,3 +154,62 @@ p) with ↓p dense before and ↓′p non-dense after kills L4.
 No Phase 3 is registered. In particular, no longitudinal ecosystem
 claim is registered here; if the ratchet survives, that claim gets
 its own spec with its own kill.
+
+---
+
+## Postscript (2026-09-14, same day): Phase 1 and Phase 2 complete
+
+Oracle: `01-edge-oracle.py`, one run, no code changes after first
+execution. E0 matched the recorded bridge-study values exactly; all
+hand witnesses (L0, L2, L3) confirmed. Survey: 406 exhaustive posets
+(n ≤ 5) + 180 sampled (n = 6, 7); 5,622 edge-additions; 29,646 cone
+perturbations.
+
+**Verdicts.**
+
+- **K0, K1, K2, K3: none fired.**
+- **L4 (the ratchet) holds with zero exceptions** in 29,646 trials.
+  The transition table contains `dense→dense` and *no other
+  transition out of dense*, while ordinariness moved both ways
+  (regular→ordinary 2,809; ordinary→regular 1,588). Density is the
+  unique absorbing class.
+- **L0, stronger than registered:** D(P′) was closed under ⇨ in
+  **0 of 284** tested edge-additions — not rare, never. A time step
+  is not an observer, empirically without exception here.
+- **L1 held everywhere** (down-set count strictly decreases).
+- **Q1 (signs):** Δaperture +5,231 / −10,497 / 0: 13,918 — both
+  signs, non-monotone as registered. Δcoaperture is the surprise:
+  +343 / −13,705 / 0: 6,902. Co-aperture is *nearly* monotone
+  decreasing (increases in 1.6% of triples). The 343 increase
+  witnesses are recorded in out/ and unexplained; characterizing
+  them is unregistered future work.
+- **Q2 (locality): NON-LOCAL**, as expected with low confidence.
+  Edges with both endpoints incomparable to p changed p's class 578
+  times (rate ~1/10th that of adjacent edges, but nonzero). No
+  invariance theorem is available; aperture joins betweenness in the
+  non-local, unstable camp of the network-index taxonomy.
+- **Q3 (stability): unstable.** Max relative aperture jump 0.49 —
+  a single edge took a cone from aperture 0 to 63 of 128 (n = 7).
+  Ten collapse witnesses (ordinary, positive aperture → 0) recorded.
+
+**Phase 2 (Lean), same day.** `lean/FalseWorkPapers/Lattice/
+EdgePerturbation.lean`, builds clean against Mathlib:
+
+- `LowerSet.compl_Iic_eq_bot_iff` — density criterion: ↓p is dense
+  iff every element shares a lower bound with p.
+- `dense_cone_ratchet` — **L4 as a theorem**, stronger than the
+  survey: density of a principal cone survives *any* extension of
+  *any* preorder (finite or infinite, one edge or many).
+- `IsNucleus.himp_fixed` — fix-sets of nuclei are exponential
+  ideals (the general gap behind L0).
+- `timeStep_not_observer` — **L0 as a theorem** on the minimal
+  witness: no nucleus on D(2-antichain) fixes exactly the extended
+  order's down-sets.
+
+**One-line summary.** The program's first dynamical theorem: time
+(edge accumulation) and observation (nuclei) are provably different
+operations on the same algebra, and time has a one-way door — dense
+forever, ordinary at risk in both directions. The RubyGems
+instrument starvation is now a corollary-shaped fact, not an
+accident; the registered longitudinal claim remains unregistered
+and would need its own spec.

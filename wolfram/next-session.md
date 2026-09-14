@@ -1,3 +1,43 @@
+# Status 2026-09-14 (perturbation study): the first dynamical theorems — density is a ratchet, and a time step is not an observer
+
+Registered `perturbation-study/SPEC.md` before any code (one honest
+pre-code amendment: an E0 value cited from memory was corrected to
+the recorded bridge-study number). Motivation, from the day's
+diagnosis: every completed theorem is equilibrium math — one poset,
+one observer, one moment — while every dead empirical claim was
+future-tense. This study takes exactly one step of dynamics: add a
+single relation to a poset, watch the invariants.
+
+- **Phase 0**: the lattice-level move is known (Bordalo–Monjardet:
+  D(P′) is a sublattice of D(P)); the "stability of network indices"
+  genre exists (Segarra–Ribeiro; Pozza–Tudisco) with no
+  order-theoretic invariant placed in it. Hand lemma L0 found during
+  spec-writing: D(P′) is not ⇨-closed, so edge addition is not a
+  nucleus.
+- **Oracle passed clean, one run** (`01-edge-oracle.py`): 586 posets,
+  29,646 cone perturbations. No kill fired.
+- **L4, the ratchet, zero exceptions**: a dense cone never leaves
+  density under edge addition, while ordinariness moved both ways
+  (regular→ordinary 2,809 times, ordinary→regular 1,588). Density is
+  the unique absorbing class.
+- **L0, stronger than registered**: D(P′) was ⇨-closed in 0 of 284
+  edge-additions. Time and observation are different operations.
+- Aperture is **non-monotone, non-local, and unstable** (a single
+  edge moved a cone from aperture 0 to 63 of 128); co-aperture is
+  *nearly* monotone decreasing (increases in only 1.6% of triples —
+  the 343 witnesses are recorded, unexplained, unregistered).
+- **Lean, same day** (`Lattice/EdgePerturbation.lean`, builds clean):
+  `dense_cone_ratchet` proves L4 for *arbitrary* extensions of
+  *arbitrary* preorders (stronger than the survey);
+  `IsNucleus.himp_fixed` (fix-sets are exponential ideals) plus
+  `timeStep_not_observer` prove L0 on the minimal witness.
+- **Consequence for the ledger**: the RubyGems instrument starvation
+  (K-R1, 85.3% dense at high reach) is now corollary-shaped — mature
+  ecosystems accumulate edges, and edges are a one-way door into
+  density. The longitudinal claim ("the fraction of dense cones is
+  non-decreasing along real ecosystem history") remains unregistered
+  and would need its own spec with its own kill.
+
 # Status 2026-09-13 (work theorem): the capacity threshold, kernel-checked; the mathematics is Citkin's
 
 Registered `preprints/aperture/work-theorem-spec.md` (after the
