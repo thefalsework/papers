@@ -1,3 +1,31 @@
+# Status 2026-09-13 (second law): phantom mass behaves as entropy production, kernel-checked
+
+Registered `preprints/aperture/second-law-spec.md` (committed before
+any Lean), then `lean/FalseWorkPapers/Lattice/SecondLaw.lean`, all
+four clauses kernel-checked same day:
+
+- **S1** coarser observers never manufacture less phantom (monotone
+  in the pointwise nucleus order; holds with no nucleus hypotheses).
+- **S2** the identity is a nucleus with mass exactly 1 everywhere
+  (the zero-production floor); every nucleus dominates it; every
+  mass ≥ 1.
+- **S3** no free coarsening: strictly coarser observers manufacture
+  strictly more phantom somewhere (witness: any point of difference).
+- **S4** zero production characterizes equilibrium:
+  `phantomMass j k = 1 ↔ j k = k` — production vanishes exactly at
+  the observer's fixed points.
+
+Context: this was registered as the cheapest falsifiable test of the
+thermodynamic reading of the ledger (ordinariness as capacity,
+log co-aperture as entropy via the multiplicativity theorem,
+Booleanness as the dead state). The reading now has one law that is a
+theorem rather than a description. Registered limits: no temperature
+analogue (the ε/α readout in the phantom pilot stays empirical), no
+work theorem, no dynamics. Honest note: S1 is order-trivial; the
+content of the package is that all four clauses of the second-law
+shape hold together with nothing weakened — and two hypotheses were
+droppable, which is recorded in the spec postscript.
+
 # Status 2026-09-13 (correspondence): reply to Levin sent
 
 The reply to Levin's Sept 10 email went out 2026-09-13 evening. It

@@ -81,3 +81,31 @@ means mass exactly 1.
 `lean/FalseWorkPapers/Lattice/SecondLaw.lean`, building against the
 existing `CoApertureClosedForm.lean` definitions, all four statements
 kernel-checked or the failure documented in a dated postscript here.
+
+## Postscript (2026-09-13, same day): all four clauses kernel-checked
+
+`lean/FalseWorkPapers/Lattice/SecondLaw.lean` builds clean. No clause
+needed weakening; two hypotheses turned out to be *droppable*, which
+is reported per honesty note 1:
+
+- **S1** (`phantomMass_mono` + `IsNucleus.phantomMass_mono`): holds
+  with no nucleus hypotheses at all — pointwise dominance alone grows
+  the interval. Two lines, as predicted.
+- **S2** (`isNucleus_id`, `phantomMass_id`, `IsNucleus.id_le`,
+  `IsNucleus.one_le_phantomMass`): identity is a nucleus, mass
+  exactly 1 everywhere, every nucleus dominates it, every mass ≥ 1.
+- **S3** (`exists_phantomMass_lt`): holds; only `j'`'s inflationarity
+  is used (the finer observer's nucleus structure is not needed).
+  `LocallyFiniteOrder` sufficed — no `Fintype`, so honesty note 3's
+  contingency did not fire.
+- **S4** (`IsNucleus.phantomMass_eq_one_iff`): zero production iff
+  fixed point, exactly as registered.
+
+Verdict on the registered question: the second-law shape (monotone,
+strict off-diagonal, unique zero at the reversible observer,
+production vanishing exactly at equilibrium states) holds as theorem.
+The thermodynamic reading now has one law that is a law, not a
+description. Per honesty note 2, that is all it has: no temperature,
+no work theorem, no dynamics. The next falsifiable step in this
+direction, if taken, is a work theorem — a statement of what
+ordinariness buys — and it is not registered here.
