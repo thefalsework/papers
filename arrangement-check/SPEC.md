@@ -112,3 +112,57 @@ regions are classical, every composed region carries its seam as
 ordinary structure, and the non-classical part is not a fringe —
 it is 65% of the algebra. The bridge to the threshold/Cover
 material has a floor.
+
+---
+
+## Amendment (2026-09-15, evening): independent reproduction,
+## convention pinned, scaling phase registered
+
+**Independent reproduction.** An external recount from a separate
+construction (LP feasibility for faces, brute force over all 2^19
+subsets, no shared code) reproduced every structural claim exactly:
+19 faces, 2,171 opens, six half-planes regular, seven cells regular,
+nine phantom pairs ordinary with ¬¬ adding exactly the seam.
+
+**Convention, stated once.** ⊤ is the unique element that is both
+dense (¬⊤ = ⊥) and regular (¬¬⊤ = ⊤); in any Heyting algebra the
+overlap of the two classes is exactly {⊤} (dense ∧ regular ⟹
+U = ¬¬U = ¬⊥ = ⊤). The census classifier is **dense-first**, so ⊤
+is reported under dense: 621 dense / 127 regular / 1,423 ordinary.
+A regular-inclusive recount gets 128 regular; identical algebra,
+identical ordinary count.
+
+**Registered before script 02 runs:**
+
+- **E5 (enumerator validation).** For n = 4 and n = 5 generic lines,
+  the face construction must reproduce the closed-form counts:
+  C(n,2) vertices, n² edges, 1 + n + C(n,2) cells (33 faces at
+  n = 4, 51 at n = 5). Any mismatch stops the scaling run — this is
+  the off-by-one insurance the external notes demanded.
+- **E6 (scaling census).** Census of the open-set algebra at n = 4
+  (exact enumeration if the algebra size permits; the script must
+  say which). At n = 5, exact total and dense counts via the
+  stratum decomposition; ordinary fraction derived only if E7
+  holds. The question a referee asks: is the 65% an n = 3 artifact
+  or stable in n? No expectation registered on the direction.
+- **E7 (the Glivenko bridge).** Conjecture, from 127 + 1 = 2^7:
+  the regular elements (regular-inclusive convention) are in
+  bijection with subsets of cells — i.e. the Booleanization of the
+  arrangement algebra is exactly the power set of Cover's regions.
+  Supporting hand argument, recorded now: ¬V depends only on
+  V ∩ cells (any face of ↑F ∩ V forces a cell of ↑F into V because
+  V is an up-set), so ¬¬U is determined by U's cells. To check:
+  count of regulars = 2^{#cells} and injectivity of U ↦ U ∩ cells
+  on regulars, at n = 3 and n = 4. If it holds, the regular count
+  at any n is 2^{#cells} and Cover's object *is* the classical
+  skeleton, by theorem-shaped identity rather than atmosphere.
+- **E3′ (seam exactness at scale).** All n² adjacent-cell pairs at
+  n = 4 and n = 5: ordinary, with ¬¬ adding exactly the seam.
+  Registered expectation: n²-for-n², continuing the 9-for-9.
+
+**Kill for the scaling phase: K2.** If the ordinary fraction at
+n = 4 drops below 1/3 (i.e. the mid-tone thins as n grows toward
+the regime Cover's theorem concerns), the "65% floor" language is
+retired and Problem 1 keeps only the seam result (E3/E3′) as its
+floor. The seam result is the load-bearing claim either way; the
+census is context.
