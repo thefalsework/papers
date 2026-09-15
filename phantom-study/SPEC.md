@@ -33,6 +33,22 @@ sweep is a one-parameter chain of nuclei out of an infinite lattice of
 observers, chosen for computability. The instrument does not measure
 the co-aperture; it samples a single family. A negative result
 therefore means *this family sees nothing*, not that no observer does.
+
+> **Erratum (2026-09-15).** The sentence above is wrong as stated:
+> morphological closing is extensive, monotone and idempotent but
+> **fails binary meet-preservation** (a U-shape whose mouth is
+> narrower than the structuring element, and a disjoint point inside
+> the mouth, have intersecting closings), so it is **not a nucleus**
+> — the same failure mode the repo kernel-checked for
+> `tritoneClosure_not_nucleus`. The correct statement: on the frame
+> of open sets, ¬¬ (interior of closure) *is* a genuine nucleus with
+> no ε; the quantity this study estimates is the regularization
+> residual [U, ¬¬U], and ε-closing is the **estimator**, not a
+> member of the observer lattice. The honesty note's content
+> survives in weakened form (one estimator family, not the full
+> ledger); every measured number is unaffected. Same correction
+> applied to `preprints/perceptron-bridge/paper.md` §7 and owed to
+> the Sept 13 letter (erratum drafted same day).
 The eventual writeup, if any, is bound to this framing.
 
 ## Registered priors (the case against, written first)

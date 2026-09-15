@@ -219,3 +219,38 @@ adjoint) preserves joins, not meets — the meet is exactly where
 the easy route breaks. No trivial proof was found for either half;
 the 5,984-for-5,984 empirical closure stands as evidence for a
 conjecture that has no cheap proof and no counterexample.
+
+---
+
+## Amendment 3 (2026-09-15, night): the lattice interrogation
+
+Follow-up demanded by the same review, corrected picture in hand:
+nuclei on a frame form a frame with pointwise meets, so the
+difficulty was never whether j ∧ j′ is a nucleus — it is whether
+compatibility survives the meet, and that reduces to whether the
+step preserves binary meets on the relevant elements. Oracle:
+`04-lattice-interrogation.py`, one run (one print-encoding fix
+after first execution, no logic change). Three verdicts:
+
+- **V1: cl′ fails binary meet-preservation on every step, by the
+  universal witness.** U = ↓a, V = ↓b: cl′U ∩ cl′V owns a,
+  cl′(U ∩ V) does not. Fired on 4,252 of 4,252 steps. The
+  three-line route to meet-closure is dead, permanently.
+- **V2: image meet-preservation is exceptionless on compatible
+  pairs** (792,595 pairs, zero violations): for compatible S, T,
+  cl′(j_S U ∩ j_T U) = cl′(j_S U) ∩ cl′(j_T U) for every U.
+  **Honesty note, before anyone cites this as evidence:** since
+  j_{S∪T}U = j_S U ∩ j_T U pointwise, V2 is *logically equivalent*
+  to the meet-closure the survey already observed — it is the same
+  fact rewritten, not independent confirmation. Its value is that
+  it isolates the Lean target: prove that joint compatibility
+  forces cl′ to preserve the meet of the two images. Recorded [O].
+- **V3: the closure is not the singleton artifact wearing a third
+  hat.** Among excess-compatible pairs (non-singleton,
+  nontrivial): 76.0% of meets (support unions) and 58.2% of joins
+  (support intersections) land back in the *excess*, not the
+  forced set (405,076 pairs). The lattice has genuine non-forced
+  structure closing on itself.
+
+The join half stays hard for its own reason (joins of nuclei are
+not pointwise); no claim is made about it beyond the survey.

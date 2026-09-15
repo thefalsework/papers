@@ -1,3 +1,62 @@
+# Status 2026-09-15 (night): lattice interrogation, and the two open loops closed — erratum to Levin drafted, four Lean lines answered
+
+**Lattice interrogation** (`pocket-study/04-lattice-interrogation.py`,
+Amendment 3 in the spec): the review's corrected picture reduces
+meet-closure of compatible observers to whether the step preserves
+binary meets. Verdicts:
+
+- cl′ fails binary meet-preservation on **every** step (universal
+  witness ↓a, ↓b; 4,252/4,252). The three-line route is dead.
+- Image meet-preservation on compatible pairs is exceptionless
+  (792,595 pairs) — but this is **logically equivalent** to the
+  observed meet-closure (j_{S∪T}U = j_S U ∩ j_T U pointwise), so it
+  is the same fact rewritten, not new evidence. Its value: it
+  isolates the Lean target (joint compatibility forces cl′ to
+  preserve the meet of the images). [O].
+- The closure is **not** the singleton artifact in a third hat:
+  76.0% of excess-pair meets and 58.2% of joins land back in the
+  excess (405,076 pairs).
+
+**The four Lean lines, answered** (the check that settles whether
+the erratum was needed):
+
+1. ⊓ on the carrier: `IsNucleus` is defined over any
+   `SemilatticeInf H`; the meet is the algebra's.
+2. `Closing`: **never formalized.** No morphological-closing object
+   exists anywhere in the Lean tree.
+3. The Nucleus instance type: none — the letter's claim was never
+   kernel-checked over any type.
+4. `map_inf`: a **required field** of `IsNucleus`
+   (`∀ a b, j (a ⊓ b) = j a ⊓ j b`), not a hypothesis. And the repo
+   already kernel-checked exactly this failure mode for a twin
+   operator: `tritoneClosure_not_nucleus` (closure operator,
+   extensive + monotone + idempotent, fails meet-preservation).
+   The letter asserted for ε-closing what the kernel had disproved
+   for its structural twin. **Erratum needed; drafted same night.**
+
+**Erratum contents** (two items, both applied to the repo same
+night — `phantom-study/SPEC.md` erratum block,
+`preprints/perceptron-bridge/paper.md` §7 erratum note):
+
+- ε-closing is not a nucleus (U-shape + interior point: disjoint
+  sets, intersecting closings). Repair: ¬¬ = interior-of-closure on
+  Opens X is the genuine, parameter-free nucleus; the measured
+  quantity is the regularization residual [U, ¬¬U]; ε-closing is
+  the estimator. No measured number changes; K1 and the α ≈ 2
+  readout stand.
+- The [k, jk] sentence in the letter dropped "from above"; the
+  kernel lemma (`IsNucleus.le_apply_iff`) and the paper's Lemma 6.2
+  state it correctly — the interval is the states above k that j
+  cannot distinguish from k.
+- Checked and **not** in the erratum: Citkin Cor. 3.9 verified
+  against arXiv:2512.05633v1 — the statement and the numbering are
+  both correct as cited (definitions are in §2; the corollary is
+  genuinely 3.9 in §3).
+
+Queued: Zenodo v2 of the perceptron-bridge deposit carrying the §7
+erratum; the letter itself (paste-ready draft in chat, to send at
+the user's discretion).
+
 # Status 2026-09-15 (arrangement correction): the census was forced by a two-line formula — Glivenko bridge retracted as arrangement content
 
 External review, having independently confirmed every number
