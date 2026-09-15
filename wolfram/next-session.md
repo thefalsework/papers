@@ -1,3 +1,34 @@
+# Status 2026-09-15 (arrangement scaling): the mid-tone thickens with n, and Cover's object is the Boolean skeleton — exactly
+
+Follow-up to the morning's arrangement check, prompted by an
+independent external reproduction (separate construction, no shared
+code) that matched every structural claim and correctly flagged one
+convention: ⊤ is both dense and regular; the census is dense-first
+(127 regular) where a regular-inclusive recount gets 128. Pinned in
+the spec. The recount also exposed 127 + 1 = 2^7, which became E7.
+
+Registered E5–E7/E3′/K2 as a spec amendment before code, then ran
+`02-scaling-census.py` (one run, exact rational arithmetic):
+
+- **E5**: enumerator validated against the closed-form face counts
+  at n = 3, 4, 5 before any census was trusted.
+- **E3′: 50 for 50.** Every adjacent-cell pair at every n (9 + 16 +
+  25) is ordinary with ¬¬ recovering exactly the seam. The
+  composition result is scale-stable and exact.
+- **E6**: ordinary fraction **rises** — 65.5% → 78.8% → 86.2%
+  (n = 5 derived via E7; opens number 475M there). K2 did not
+  fire. The classical part collapses: 5.9% → 0.44% → 0.014%.
+- **E7 holds exactly at n = 3 and n = 4**: regulars (incl. ⊤) =
+  2^{#cells}, cell-set map injective. **The Booleanization of the
+  arrangement algebra is the power set of Cover's regions** — the
+  threshold-counting object is identically the classical skeleton
+  of the open-set algebra. Natural Lean target; the one-line hand
+  argument (¬V depends only on V ∩ cells) is recorded in the spec.
+- For the Levin thread, unhurried: the citable sentence is the seam
+  one (50/50 exact recovery), the identity is E7, and the census
+  trend is context. Nothing sent; the current exchange resolves
+  first.
+
 # Status 2026-09-15 (pocket study): dynamical pockets exist, are abundant, and appear to form a lattice per step
 
 Registered `pocket-study/SPEC.md` before code. The question, direct

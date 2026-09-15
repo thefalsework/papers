@@ -1,0 +1,60 @@
+[
+ {
+  "n": 3,
+  "faces": 19,
+  "opens": 2171,
+  "dense": 621,
+  "census": {
+   "dense": 621,
+   "regular": 127,
+   "ordinary": 1423
+  },
+  "e3p": [
+   9,
+   9
+  ],
+  "hp_ok": true,
+  "cell_ok": true,
+  "e7": true,
+  "n_cells": 7
+ },
+ {
+  "n": 4,
+  "faces": 33,
+  "opens": 469535,
+  "dense": 97282,
+  "census": {
+   "dense": 97282,
+   "regular": 2047,
+   "ordinary": 370206
+  },
+  "e3p": [
+   16,
+   16
+  ],
+  "hp_ok": true,
+  "cell_ok": true,
+  "e7": true,
+  "n_cells": 11
+ },
+ {
+  "n": 5,
+  "faces": 51,
+  "opens": 475331561,
+  "dense": 65328825,
+  "census": {
+   "dense": 65328825,
+   "regular": 65535,
+   "ordinary": 409937201,
+   "derived": true
+  },
+  "e3p": [
+   25,
+   25
+  ],
+  "hp_ok": true,
+  "cell_ok": true,
+  "e7": null,
+  "n_cells": 16
+ }
+]

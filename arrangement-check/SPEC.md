@@ -166,3 +166,45 @@ the regime Cover's theorem concerns), the "65% floor" language is
 retired and Problem 1 keeps only the seam result (E3/E3′) as its
 floor. The seam result is the load-bearing claim either way; the
 census is context.
+
+---
+
+## Postscript (2026-09-15, evening): scaling run complete
+
+`02-scaling-census.py`, one run, no code changes after first
+execution. Exact rational arithmetic throughout; n = 3 recomputed
+from scratch as a control and matched script 01 digit for digit.
+
+- **E5 PASS at n = 3, 4, 5.** Face construction reproduces the
+  closed forms exactly (19 = 3+9+7, 33 = 6+16+11, 51 = 10+25+16).
+  The enumerator is validated before any census it produced was
+  trusted.
+- **E3′ PASS, 50 for 50.** Every adjacent-cell pair at every n is
+  ordinary with ¬¬ adding exactly the seam: 9/9, 16/16, 25/25.
+  Seam recovery is exact at every scale tested, not a small-n
+  accident. All half-planes and all single cells regular at every
+  n (E1/E2 analogues).
+- **E6: the mid-tone thickens.** Ordinary fraction 65.5% (n = 3,
+  exact, 2,171 opens) → **78.8%** (n = 4, exact, 469,535 opens) →
+  **86.2%** (n = 5, derived, 475,331,561 opens). **K2 does not
+  fire**; the direction is the opposite of the artifact worry. The
+  classical (regular) part collapses proportionally: 5.9% → 0.44%
+  → 0.014% of the algebra.
+- **E7 HOLDS exactly at n = 3 and n = 4** (the two sizes where full
+  enumeration was affordable): regulars including ⊤ number exactly
+  2^{#cells} (128, 2048) and the map U ↦ U ∩ cells is injective on
+  them. **The Booleanization of the arrangement algebra is the
+  power set of Cover's regions** — his counting object is
+  identically the classical skeleton of this algebra, Glivenko
+  landing on the seam. The n = 5 census line is derived through E7
+  and labeled as such; E7 itself is verified only at n ≤ 4 and is
+  the natural Lean target (the hand argument — ¬V depends only on
+  V ∩ cells because up-sets propagate any witness to a cell — is
+  recorded in the amendment above).
+
+**One-line summary.** Validated enumerator, seam exact at every
+scale (50/50), Cover's object identified as the Boolean skeleton by
+exact count at two sizes, and the ordinary mid-tone *growing*
+toward dominance with n. Problem 1's floor is no longer one census
+at one size; it is a trend, an identity, and an exact recovery
+statement.
