@@ -53,9 +53,14 @@ night — `phantom-study/SPEC.md` erratum block,
   both correct as cited (definitions are in §2; the corollary is
   genuinely 3.9 in §3).
 
-Queued: Zenodo v2 of the perceptron-bridge deposit carrying the §7
-erratum; the letter itself (paste-ready draft in chat, to send at
-the user's discretion).
+Queued: the letter itself (paste-ready draft in chat, to send at
+the user's discretion — decision same night: fold into the next
+natural reply rather than a standalone correction email).
+
+**Done same night:** perceptron-bridge v1.1 published on Zenodo
+with the §7 erratum — DOI 10.5281/zenodo.22779865 (v1.0 remains
+10.5281/zenodo.22715062; concept DOI 10.5281/zenodo.22715061).
+Paper header, cite block, and preprints README updated.
 
 # Status 2026-09-15 (arrangement correction): the census was forced by a two-line formula — Glivenko bridge retracted as arrangement content
 

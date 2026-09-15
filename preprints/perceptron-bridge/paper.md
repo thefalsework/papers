@@ -2,7 +2,7 @@
 
 **Chris Brink**
 falsework.dev
-**Version.** Preprint v1.0, September 2026 — not yet submitted.
+**Version.** Preprint v1.1, September 2026 — not yet submitted. (v1.1 corrects §7's instrument note: ε-closing is the estimator of the ¬¬-residual, not itself a nucleus; dated erratum in place. No result changes.)
 **Status discipline.** Every claim carries one of five grades: **[K]** kernel-checked in Lean 4 against Mathlib4 (no `sorry`, no `native_decide`, axiom audits at most `propext`, `Classical.choice`, `Quot.sound`); **[C]** classical mathematics, cited; **[R]** empirical result from a pre-registered protocol (spec and kill conditions committed before code, dated postscripts binding); **[A]** structural analogy, argued not proved; **[O]** open. The grades are load-bearing: nothing below claims more than its tag.
 
 ---
@@ -149,7 +149,7 @@ Empirical artifacts: `phantom-study/SPEC.md` (registered spec, Phase 0 and Phase
 
 ## How to cite
 
-> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.0, September 2026. Zenodo. doi:10.5281/zenodo.22715062.
+> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.1, September 2026. Zenodo. doi:10.5281/zenodo.22779865. (v1.0: 10.5281/zenodo.22715062; all versions: 10.5281/zenodo.22715061.)
 
 The Lean formalization and the registered empirical artifacts are part of the citable object: `lean/FalseWorkPapers/Examples/PerceptronRegular.lean`, `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`, and `phantom-study/` at github.com/thefalsework/papers.
 
