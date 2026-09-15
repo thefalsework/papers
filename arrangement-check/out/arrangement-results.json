@@ -1,0 +1,101 @@
+{
+ "n_faces": 19,
+ "n_opens": 2171,
+ "census": {
+  "dense": 621,
+  "regular": 127,
+  "ordinary": 1423
+ },
+ "e1": true,
+ "e2": true,
+ "e3": true,
+ "k1": false,
+ "phantom_pairs": [
+  {
+   "edge": "(-1, 0, -1)",
+   "cells": [
+    "(-1, -1, -1)",
+    "(-1, 1, -1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(-1, 1, 0)",
+   "cells": [
+    "(-1, 1, -1)",
+    "(-1, 1, 1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(0, -1, -1)",
+   "cells": [
+    "(-1, -1, -1)",
+    "(1, -1, -1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(0, 1, -1)",
+   "cells": [
+    "(-1, 1, -1)",
+    "(1, 1, -1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(0, 1, 1)",
+   "cells": [
+    "(-1, 1, 1)",
+    "(1, 1, 1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(1, -1, 0)",
+   "cells": [
+    "(1, -1, -1)",
+    "(1, -1, 1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(1, 0, -1)",
+   "cells": [
+    "(1, -1, -1)",
+    "(1, 1, -1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(1, 0, 1)",
+   "cells": [
+    "(1, -1, 1)",
+    "(1, 1, 1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  },
+  {
+   "edge": "(1, 1, 0)",
+   "cells": [
+    "(1, 1, -1)",
+    "(1, 1, 1)"
+   ],
+   "cls": "ordinary",
+   "seam_exact": true
+  }
+ ],
+ "spot_apertures": {
+  "half-plane(0,+)": 179168,
+  "cell (-1, -1, -1)": 115705,
+  "phantom pair (first)": 282427
+ }
+}

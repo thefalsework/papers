@@ -73,3 +73,42 @@ values for the named elements, reported descriptively). No claim
 about n lines, higher dimensions, or trained networks. No letter
 content — if the seam is open this informs a *future* exchange,
 after the current one resolves.
+
+---
+
+## Postscript (2026-09-15, same day): the seam is open
+
+Oracle: `01-arrangement-oracle.py`, one run, no code changes after
+first execution. Exact rational arithmetic; 19 faces recovered as
+expected (3 + 9 + 7).
+
+- **E1 PASS.** All six half-planes regular, and ¬(half-plane) is
+  exactly the opposite open half-plane, all six times. The
+  kernel-checked perceptron result reappears inside the arrangement
+  algebra untouched.
+- **E2 PASS.** All seven cells regular. Cover's objects, taken one
+  at a time, are classical.
+- **E3 PASS, 9 of 9.** Every phantom pair is ordinary, and ¬¬ adds
+  *exactly* the shared edge — the double-negation remainder is the
+  seam, nothing more, in every case.
+- **E4 census.** 2,171 opens: 621 dense, **1,423 ordinary (65.5%)**,
+  127 regular. The classical skeleton of the arrangement algebra is
+  thin; the bulk of the algebra is exactly the mid-tone the program
+  studies. Unregistered observation, recorded as data: the regular
+  elements are a 127-element minority containing the objects
+  classical treatments (Cover counting included) can see.
+- **K1 does not fire.** The seam is open. Problem 1 in the Levin
+  letter (the corridor conjecture) does **not** need restating: the
+  caution about complemented face lattices was correct but applies
+  to an object this program never uses; the finite-space open-set
+  algebra has abundant ordinary structure.
+- Descriptive spot apertures (unregistered): half-plane 179,168 of
+  2^19; single cell 115,705; phantom pair 282,427. Nonzero and
+  large; the four-fold survives most observers here.
+
+**One-line summary.** In the one object where Cover's counting and
+this program's algebra meet, single threshold units and single
+regions are classical, every composed region carries its seam as
+ordinary structure, and the non-classical part is not a fringe —
+it is 65% of the algebra. The bridge to the threshold/Cover
+material has a floor.

@@ -1,3 +1,32 @@
+# Status 2026-09-15 (arrangement check): the Cover seam is open — 65% of the three-line arrangement algebra is ordinary
+
+Registered `arrangement-check/SPEC.md` before code. The question,
+from external notes worth crediting: the face lattice of a hyperplane
+arrangement is geometric, hence complemented, hence nothing is
+ordinary — if that were the object, the bridge to Levin's
+threshold/Cover material would be closed and Problem 1 of the Sept 13
+letter would need restating. The check: build the object the program
+actually uses (opens of the stratified plane = up-sets of the face
+poset) for three lines in general position, and classify everything.
+
+- **All expectations passed, one run, no kill.** E1: all six
+  half-planes regular with ¬ = the opposite half-plane (the
+  kernel-checked perceptron result, reappearing inside the
+  arrangement algebra). E2: all seven cells regular. E3: all nine
+  phantom pairs (adjacent cells minus their shared edge) ordinary,
+  with ¬¬ adding exactly the seam, nine for nine.
+- **Census (E4): 2,171 opens — 621 dense, 127 regular, 1,423
+  ordinary (65.5%).** The classical skeleton is thin; the bulk of
+  the arrangement algebra is mid-tone.
+- **K1 (seam closed) did not fire. Problem 1 stands as written.**
+  The complemented-lattice caution was right about the face lattice
+  and irrelevant to the open-set algebra.
+- Not done, deliberately: no n-line scaling claim, no trained-network
+  claim, no new letter content. The corridor conjecture (Problem 1)
+  now has a verified floor object; whether ordinariness tracks the
+  Cover transition as capacity grows is exactly the student problem
+  and stays theirs.
+
 # Status 2026-09-14 (perturbation study): the first dynamical theorems — density is a ratchet, and a time step is not an observer
 
 Registered `perturbation-study/SPEC.md` before any code (one honest
