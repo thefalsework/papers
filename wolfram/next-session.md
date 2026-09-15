@@ -1,3 +1,38 @@
+# Status 2026-09-15 (arrangement correction): the census was forced by a two-line formula — Glivenko bridge retracted as arrangement content
+
+External review, having independently confirmed every number
+(469,535 opens and 2^11 regulars at n = 4 included), supplied the
+generator: in any finite poset with up-set opens, ¬¬U = {x : every
+maximal above x lies in U}. Two lines, and everything the scaling
+run surveyed drops out of it. Recorded in Amendment 2 of
+`arrangement-check/SPEC.md`:
+
+- **Regulars = 2^{#Max} always** — E7 was a paragraph about
+  Alexandrov algebras, not a conjecture needing two sizes.
+  Booleanization of any finite Alexandrov algebra is the power set
+  of its maximal elements.
+- **Dense ⟺ U ⊇ Max**, so the whole four-class census reduces to
+  two up-set counts: |U(P)| and |U(P∖Max)|. Verified: 621 dense at
+  n = 3 is exactly the boundary count.
+- **Seam exactness (50/50) was forced** — it could not have come
+  out 49/50. K2 could not realistically fire; conceded as not a
+  genuine kill.
+- **Retracted:** "Cover's object is the Boolean skeleton" in its
+  bridge form. It is a general Alexandrov fact wearing arrangement
+  clothes and must not go to Levin as a bridge. What survives as
+  arrangement-specific: the up-set counts themselves and their
+  growth (oriented matroid combinatorics) — that is where any
+  Levin-relevant content lives.
+- **Process rule adopted (fourth instance of the pattern):** derive
+  the closed form for ¬¬ in the ambient algebra *before*
+  registering census expectations. Lean target shifts to the
+  general theorem, queued.
+
+One caveat logged against over-deflation: ordinary-dominance is not
+forced by the formula alone (antichains are all-regular); it needs
+the boundary layer to outgrow the cells, which is genuinely
+face-poset combinatorics.
+
 # Status 2026-09-15 (pocket deflation): the 100% was forced, the whisper was selection, the lattice stays open
 
 External review of the pocket-study postscript demanded three
@@ -26,7 +61,7 @@ itself flagged as suspicious; the deflation confirms one of the
 three was partially free. The other two (ratchet, time ≠
 observation) are theorems and unaffected.
 
-# Status 2026-09-15 (arrangement scaling): the mid-tone thickens with n, and Cover's object is the Boolean skeleton — exactly
+# Status 2026-09-15 (arrangement scaling): the mid-tone thickens with n, and Cover's object is the Boolean skeleton — exactly [superseded in part: see the correction entry above]
 
 Follow-up to the morning's arrangement check, prompted by an
 independent external reproduction (separate construction, no shared

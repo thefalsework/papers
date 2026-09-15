@@ -208,3 +208,78 @@ exact count at two sizes, and the ordinary mid-tone *growing*
 toward dominance with n. Problem 1's floor is no longer one census
 at one size; it is a trend, an identity, and an exact recovery
 statement.
+
+*(Superseded in part by Amendment 2 below: the identity and the
+seam exactness are corollaries of a two-line general fact, not
+arrangement discoveries.)*
+
+---
+
+## Amendment 2 (2026-09-15, evening): the census was forced — retraction and reduction
+
+External review (independent recount confirming every number,
+including 469,535 opens and 2048 = 2^11 regulars at n = 4) supplied
+the fact that generates the whole survey. Recorded here as the
+governing result, with proof, because it retracts one claim and
+reclassifies three others.
+
+**The theorem (any finite poset, opens = up-sets; two lines).**
+Every element sits below a maximal one, and U is an up-set, so
+↑x meets U iff some maximal element above x lies in U. Hence
+¬U = {x : no maximal above x is in U} depends only on U ∩ Max, and
+
+> ¬¬U = {x : every maximal face above x lies in U}.
+
+For maximal m: m ∈ ¬¬U ⟺ m ∈ U. Consequences, all general:
+
+1. **Regulars = 2^{#Max}, exactly, at every size.** T ⊆ Max ↦
+   {x : all maximals above x in T} is a bijection onto the regular
+   elements, inverse U ↦ U ∩ Max. E7 was never a conjecture needing
+   verification at two sizes; it is a paragraph about Alexandrov
+   algebras. The Booleanization of *any* finite Alexandrov algebra
+   is the power set of its maximal elements.
+2. **Dense ⟺ U ⊇ Max.** So the dense count is exactly the number
+   of up-sets of the boundary poset P∖Max (621 at n = 3 — matches
+   script 01). The entire four-class census of any such algebra
+   reduces to **two numbers: |U(P)| and |U(P∖Max)|**; ordinary is
+   the remainder.
+3. **E3/E3′ (seam exactness, 50 for 50) is forced.** For two cells
+   sharing exactly one edge, ¬¬{c₁, c₂} = faces all of whose upper
+   cells lie in {c₁, c₂} = the two cells plus that edge. It could
+   not have come out 49/50.
+4. **K2 was not a genuine kill.** Regulars were pinned at 2^{#cells}
+   in advance, and the mid-tone could thin only if boundary up-sets
+   came to dominate total up-sets — which the growth of face posets
+   rules out in practice. A kill that cannot fire is conceded as
+   not having been one. (One precision against over-deflation:
+   "ordinary → 1" is *not* forced by the formula alone — an
+   antichain has everything regular and nothing ordinary — it needs
+   the boundary layer to outgrow the cells, which is face-poset
+   combinatorics. Caveat on the mechanism, not a rescue of K2.)
+
+**Retraction.** The sentence "Cover's object is the Boolean
+skeleton of the arrangement algebra" is withdrawn in its bridge
+form. It reduces to: regions are the maximal faces, and
+Booleanization is always the power set of maximal elements — a
+fact about Alexandrov algebras with no arrangement content. It
+must not be sent to Levin as a bridge between his counting theorem
+and this machinery; a locale theorist dismisses it in one
+sentence.
+
+**What survives as arrangement-specific.** Exactly the two numbers
+the theorem does not determine: |U(P)| = 2,171 / 469,535 /
+475,331,561 and |U(P∖Max)| = 621 / …, i.e. the up-set counts of
+the face poset and its boundary, and their growth rate. Those are
+real combinatorics of the arrangement (oriented matroid territory,
+partially known) and are where any Levin-relevant content lives.
+E1/E2 (half-planes and cells regular) also survive but are likewise
+derivable from the formula.
+
+**Process note, fourth instance.** Expensive empirical machinery
+confirming what a short proof settles (Citkin's capacity threshold;
+the pocket study's forced future-watcher; now E7 and E3′). Rule
+adopted going forward: **derive the closed form for ¬¬ in the
+ambient algebra before registering any census expectation on it**;
+the formula tells you which surveys are worth running. The Lean
+target shifts from E7-at-n to the general theorem above (queued,
+low urgency — it needs a paragraph before it needs a kernel).
