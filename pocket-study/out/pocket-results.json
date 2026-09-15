@@ -1,0 +1,68 @@
+{
+ "exhaustive": {
+  "steps": 4252,
+  "endpoints_ok": 4252,
+  "middle_nonempty": 4252,
+  "nontrivial_total": 73884,
+  "lattice_ok": 4252,
+  "lattice_fail": 0,
+  "lattice_fail_witness": null,
+  "q4_pockets": 13588,
+  "q4_step_kernels": 20950,
+  "q4_witness": {
+   "n": 4,
+   "down": [
+    1,
+    3,
+    4,
+    8
+   ],
+   "edge": [
+    2,
+    0
+   ],
+   "p": 0,
+   "S": 11
+  }
+ },
+ "q3": {
+  "comp_mean": -2.612771277370491,
+  "incomp_mean": -1.6119717158505682,
+  "comp_n": 82388,
+  "incomp_n": 48932
+ },
+ "sampled": {
+  "steps": 1732,
+  "endpoints_ok": 1732,
+  "middle_nonempty": 1732,
+  "nontrivial_total": 65942,
+  "lattice_ok": 1732,
+  "lattice_fail": 0,
+  "lattice_fail_witness": null,
+  "q4_pockets": 27177,
+  "q4_step_kernels": 10392,
+  "q4_witness": {
+   "n": 6,
+   "down": [
+    1,
+    2,
+    7,
+    8,
+    23,
+    55
+   ],
+   "edge": [
+    0,
+    1
+   ],
+   "p": 1,
+   "S": 14
+  }
+ },
+ "verdicts": {
+  "K0": "pass (E0 matched hand lemmas)",
+  "K2_vacuity": "does not fire (middle non-empty in 100.0% of steps)",
+  "K1_lattice": "does not fire (closure held on every step)",
+  "K3_pockets": "does not fire (40765 found)"
+ }
+}

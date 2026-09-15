@@ -117,3 +117,56 @@ trace on a singleton is never ordinary — so this needs n ≥ 3).
    otherwise as decide on the same model.
 3. Whatever general law Q2 suggests, only if it holds without
    exception in the survey.
+
+---
+
+## Postscript (2026-09-15, same day): Phases 1 and 2 complete
+
+Oracle: `01-commutation-oracle.py`, one run, no code changes after
+first execution. E0 reproduced P0–P2 exactly. Survey: 406 exhaustive
+posets (n ≤ 5) + 100 sampled (n = 6); 5,984 steps.
+
+**Verdicts. No kill fired; two results far exceed registration.**
+
+- **Q1: the middle is non-empty in 100.0% of steps** (registered
+  expectation was "usually"). Every surveyed time step admits a
+  nontrivial compatible observer — 139,826 nontrivial compatible
+  (step, S) pairs in total. At these scales, *edge dynamics always
+  has pockets.*
+- **Q2: lattice closure held on every one of 5,984 steps** (K1 did
+  not fire). The compatible supports are closed under ∪ and ∩
+  universally in the survey. **Conjecture, promoted to the Lean
+  queue: the dynamically compatible observers of a single-edge step
+  form a sublattice of the observer lattice.** This is the notes'
+  "lattice of dynamics-compatible sublocales," with survey-grade
+  evidence but no proof.
+- **Q3 (descriptive):** compatible observers ride the ratchet
+  harder — mean total phantom change −2.61 across the step, versus
+  −1.61 for incompatible ones. Recorded, uninterpreted.
+- **Q4: dynamical pockets are abundant, not marginal** (K3 did not
+  fire): 40,765 (step, kernel, S) triples where a nontrivial
+  compatible observer also keeps the kernel's trace ordinary on
+  both sides of the step.
+
+**Failed post-hoc candidate, recorded.** After the run, a
+closed-form characterization was guessed from the minimal witness
+("S compatible iff b ∈ S or S ∩ ↓a = ∅") and tested
+(`02-characterization-check.py`): **fails**, 13,863 mismatches of
+131,320, in both directions (b ∈ S is not sufficient; blindness to
+↓a is not necessary). The true characterization is non-local and
+open. The lattice-closure conjecture survives independently of it.
+
+**Phase 2 (Lean), same day.** `lean/FalseWorkPapers/Lattice/
+PocketWitness.lean`, builds clean: `futureWatcher_commutes` (P1 —
+a genuine nucleus, support {b}, commuting with a genuine step;
+nontrivial dynamical compatibility exists) and
+`pastWatcher_not_commutes` (P2 — compatibility is a proper
+subclass), plus nucleus certificates for both observers and the
+sanity theorem that the step map lands in and fixes the extended
+order's down-sets.
+
+**One-line summary.** Pockets of reducibility, in the program's
+sense, exist, are abundant at small scale, are kernel-checked to be
+nontrivial, and appear to form a lattice per step — with the
+characterization of *which* observers commute with time recorded as
+the open problem, one failed guess already on the books.

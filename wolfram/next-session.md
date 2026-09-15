@@ -1,3 +1,42 @@
+# Status 2026-09-15 (pocket study): dynamical pockets exist, are abundant, and appear to form a lattice per step
+
+Registered `pocket-study/SPEC.md` before code. The question, direct
+from the Wolfram thread: static pockets of reducibility were already
+enumerable (the observer-ledger frontier); Wolfram's notion also
+requires the coarse-graining to *commute with evolution*. Definition
+registered: S is dynamically compatible with a single-edge step iff
+cl′ ∘ j_S = j′_S ∘ cl′ on all worlds (cl′ = forward closure, the
+same cone-update map as the perturbation study).
+
+- **Hand lemmas first**: endpoints always commute (P0); on the
+  2-antichain step the future-watcher {b} commutes and the
+  past-watcher {a} does not (P1/P2) — the middle is non-empty and
+  proper at minimal scale. Node-addition steps have a no-go under
+  the same-support convention (P3), so edge steps are primary.
+- **Oracle clean, one run, 5,984 steps, no kill**: the middle is
+  non-empty in **100.0%** of steps (registered: "usually");
+  **lattice closure of the compatible set held on every step** —
+  promoted to conjecture; dynamical pockets (compatible AND
+  trace-ordinary through the step) number 40,765 — abundant, not
+  marginal. Descriptive: compatible observers show steeper phantom
+  decrease across the step (−2.61 vs −1.61).
+- **A post-hoc closed-form guess for the characterization failed**
+  (13,863/131,320 mismatches, both directions) and is recorded in
+  `02-characterization-check.py`. The characterization of which
+  observers commute with time is the open problem this study leaves.
+- **Lean same day** (`Lattice/PocketWitness.lean`, builds clean):
+  P1 and P2 kernel-checked with honest nucleus certificates — the
+  minimal commuting/non-commuting observer pair on a genuine step.
+- Position in the program: with `timeStep_not_observer` (time ≠
+  observation) and `dense_cone_ratchet` (time's one-way door), this
+  is the third dynamical result in two days, and the first that
+  makes "computational reducibility" a definition inside the
+  program rather than an analogy: a pocket is a nucleus that
+  commutes with the step and keeps the four-fold alive. Open next
+  moves, unregistered: prove the lattice conjecture; find the true
+  compatibility characterization; iterate steps (does compatibility
+  compose along evolution paths?).
+
 # Status 2026-09-15 (arrangement check): the Cover seam is open — 65% of the three-line arrangement algebra is ordinary
 
 Registered `arrangement-check/SPEC.md` before code. The question,

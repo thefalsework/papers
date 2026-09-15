@@ -34,5 +34,6 @@ import FalseWorkPapers.Lattice.CoApertureClosedForm
 import FalseWorkPapers.Lattice.SecondLaw
 import FalseWorkPapers.Lattice.CapacityThreshold
 import FalseWorkPapers.Lattice.EdgePerturbation
+import FalseWorkPapers.Lattice.PocketWitness
 import FalseWorkPapers.Lattice.BridgeDownSets
 import FalseWorkPapers.Lattice.ObserverClassification
