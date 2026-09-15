@@ -170,3 +170,52 @@ sense, exist, are abundant at small scale, are kernel-checked to be
 nontrivial, and appear to form a lattice per step — with the
 characterization of *which* observers commute with time recorded as
 the open problem, one failed guess already on the books.
+
+---
+
+## Amendment 2 (2026-09-15, evening): the deflation check
+
+External review of the Phase-1 postscript raised three deflationary
+readings; all were run to ground (`03-deflation-check.py`) before
+any use of the results. Verdicts:
+
+**Q1's 100% was forced — the reviewer was right.** Hand theorem,
+proved during the check and confirmed on all 4,252 steps with zero
+exceptions: **the future-watcher S = {b} commutes with every step
+(a, b) on every poset.** Proof: b ≰ a, so nothing at or above b
+changes (↑′b = ↑b, b ∉ ↓a); j_{b} therefore has the same closed
+form (⊤ if b ∈ U, else P∖↑b) on both sides, and cl′ fixes P∖↑b
+since it misses ↑b. Stronger forced family, also exceptionless:
+**every singleton {x} with x ≰ a commutes** (↑′x = ↑x and
+↓a ∩ ↑x = ∅, so cl′ absorbs ↓a into P∖↑x harmlessly). The
+sufficient condition is not necessary (1,078 compatible singletons
+with x ≤ a). Q1 as registered is hereby reinterpreted: the middle
+is never empty *because membership is partially free*, not because
+the dynamics is everywhere reducible.
+
+**What survives Q1: weak discrimination at small scale.** Counting
+only compatibles beyond the forced supply (non-singleton,
+nontrivial): min 0, median 14, max 18 per step; exactly 2 of 4,252
+steps have zero excess. So the definition does discriminate — but
+barely, and at n ≤ 5 most observers commute with most steps.
+Whether compatibility becomes *rare* on large or adversarial
+structures is the real question and is **outside this survey's
+reach**; nothing here licenses "pockets are abundant" beyond n ≤ 5,
+and the registered summary line above is weakened accordingly.
+
+**Q3's whisper is retracted as a selection artifact.** Stratified
+by support size |S|, the compatible-vs-incompatible gap in phantom
+change shrinks within every stratum and flips sign at |S| = 4
+(−0.42 vs −0.44). The unconditioned gap (−2.61 vs −1.61) was
+carried by compatible observers being disproportionately coarse,
+and coarser observers having more phantom to lose. Q3 is
+downgraded from whisper to artifact; recorded, closed.
+
+**The lattice conjecture is genuinely open in both halves.** The
+reviewer's guess that meet-closure might be a two-line argument
+does not go through: support-union closure requires cl′ to
+preserve the pointwise meet j_S U ∩ j_T U, and cl′ (a left
+adjoint) preserves joins, not meets — the meet is exactly where
+the easy route breaks. No trivial proof was found for either half;
+the 5,984-for-5,984 empirical closure stands as evidence for a
+conjecture that has no cheap proof and no counterexample.

@@ -1,3 +1,31 @@
+# Status 2026-09-15 (pocket deflation): the 100% was forced, the whisper was selection, the lattice stays open
+
+External review of the pocket-study postscript demanded three
+interrogations; all run same evening (`03-deflation-check.py`),
+recorded in Amendment 2 of the spec:
+
+- **Q1 deflated by theorem**: the future-watcher {b} commutes with
+  every step on every poset (hand proof recorded; 0 exceptions in
+  4,252 steps), and so does every singleton {x} with x ≰ a. The
+  middle is never empty because membership is partially *free*.
+  What survives: excess beyond the forced supply has spread
+  (min 0 — two steps have none — median 14), so the definition
+  discriminates, weakly, at n ≤ 5. No abundance claim beyond that
+  scale survives.
+- **Q3 retracted**: the phantom-drop gap for compatible observers
+  is a coarseness-selection artifact — it shrinks within every
+  |S|-stratum and flips sign at |S| = 4.
+- **Lattice conjecture**: the cheap-proof route fails honestly
+  (cl′ preserves joins, not the meets the argument needs); open in
+  both halves, 5,984/5,984 empirical, no counterexample.
+
+The methodological note worth keeping: the failed characterization
+guess and this deflation pass are what make the surviving claims
+citable. Three dynamical results in two days from one door was
+itself flagged as suspicious; the deflation confirms one of the
+three was partially free. The other two (ratchet, time ≠
+observation) are theorems and unaffected.
+
 # Status 2026-09-15 (arrangement scaling): the mid-tone thickens with n, and Cover's object is the Boolean skeleton — exactly
 
 Follow-up to the morning's arrangement check, prompted by an
