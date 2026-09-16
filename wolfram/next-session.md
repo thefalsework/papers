@@ -1,4 +1,17 @@
-# Status 2026-09-16 (night, latest): phantom-predictor v0.3 — literature positioning after external review
+# Status 2026-09-16 (night, latest): phantom-predictor v0.3 DEPOSITED — doi 10.5281/zenodo.22802676
+
+Published to Zenodo 2026-09-16 immediately after the v0.3
+positioning revision: title unchanged, version v0.3, CC-BY-4.0,
+one PDF (387 KB), related-identifier links to the repo and the
+aperture and perceptron-bridge deposits. Record:
+https://zenodo.org/record/22802676. The deposit decision was made
+same-day because MCAI (June 2026) shows the adjacent territory is
+active; the intrinsic/prior direction is now timestamped. The
+Phase 3 wild pilot is *not* in the deposited text (it lives in
+`absint-dictionary/PHASE3-SPEC.md` with its postscript); if it is
+folded in later that is a v0.4 with its own Zenodo version.
+
+# Status 2026-09-16 (night, earlier): phantom-predictor v0.3 — literature positioning after external review
 
 An external literature review rated the novelty claim credible but
 narrow, and named two papers. Both verified real before citing:
