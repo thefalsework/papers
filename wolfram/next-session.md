@@ -1,3 +1,20 @@
+# Status 2026-09-16 (night, later): phantom-predictor note drafted
+
+The three-phase arc written up as a preprint draft for the
+abstract-interpretation audience:
+`preprints/phantom-predictor/paper.md`, v0.1, indexed in
+`preprints/README.md`. Contents: the instrument at closure-operator
+generality with the confusion-class lemma [K]; the exact
+s = δ(U, ρU) bridge to CDG partial completeness [C]; the three
+registered results — gap-filling pass with three-world robustness,
+partition null with mechanism and fired K-P closure, widening
+attenuation at its honest 0.006 margin with the D-W autopsy [R];
+the meet-half theorem as the one surviving theoretical claim [K];
+both logged amendments reported in §7 as method, not buried. Not
+deposited, not submitted; Zenodo DOI on deposit when authorized.
+Non-claims section carries the toy-to-practice distance at full
+strength.
+
 # Status 2026-09-16 (night): Phase 2 — loops and widening; survives attenuated by 0.006, mechanism exposed
 
 The reviewer's question asked first (`absint-dictionary/PHASE2-SPEC.md`,
