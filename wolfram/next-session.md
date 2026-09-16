@@ -1,3 +1,36 @@
+# Status 2026-09-16 (evening, later): Phase 1b — the Interval pass is robust, wrap makes it stronger, and the partition side closes
+
+Both queued follow-ups registered (`absint-dictionary/PHASE1B-SPEC.md`,
+committed before code) and run (`02-phase1b.py`, first run, no
+repairs).
+
+- **R1a PASS:** fresh world (Σ = {−12..12}, new seed, new programs
+  and inputs), Interval pooled Spearman +0.538, stratified median
+  +0.522 — clears the unchanged H1 thresholds. The Phase 1 pass was
+  not world/seed luck; the K-R kill does not fire.
+- **R1b (exploratory): shape-robust.** Wrap-around arithmetic — the
+  world registered as adversarial for intervals — gives pooled
+  +0.629, *stronger* than saturation. The pass is a property of the
+  domain shape, not op–hull alignment. (Unregistered observation
+  logged without weight: wrap makes more error and more spread,
+  which mechanically helps rank correlations.)
+- **R2 fail 0/4, K-P FIRES:** the corrected partition predictor
+  (count of partially-met classes) does no better than cardinality
+  (all four pooled below +0.06). Partition side **closed** as
+  registered: prediction there requires op-awareness, which is not
+  an intrinsic property of elements. Functional-shopping stopped at
+  two.
+- **Layer-1 final form:** phantom mass is a robust predictor of
+  accumulated analysis error for gap-filling closures (survives
+  world, seed, and boundary-convention changes) and intrinsically
+  not one for partition closures (the run forgets multiplicity).
+  The instrument has a boundary and the boundary has a mechanism;
+  both ends rest on registered outcomes. T0 held in every world
+  (2,774 further exact-trajectory runs, zero violations).
+- Nothing further queued in absint-dictionary. Layer 2 (four
+  positions / Heyting completion) remains queued behind the
+  Giacobazzi–Scozzari 1998 read. No tool authorized.
+
 # Status 2026-09-16 (evening): Phase 1 worked example — H1 fails as registered, the kill does not fire, and the split is the finding
 
 The registered crux experiment ran (`absint-dictionary/PHASE1-SPEC.md`,

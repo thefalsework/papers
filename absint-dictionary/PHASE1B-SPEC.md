@@ -75,3 +75,46 @@ original programs and inputs), four partition domains.
 No tool. No new domains. No claim about real analyzers. World C's
 outcome refines wording only; it cannot rescue R1a if K-R fires.
 Repairs, if any, logged with their nature per house rules.
+
+---
+
+## Postscript (2026-09-16, same day): R1a passes, wrap makes it stronger, K-P fires and closes the partition side
+
+`02-phase1b.py`, first run, no repairs. T0 held in both new worlds
+(1,388 and 1,386 exact-trajectory runs, zero violations); error
+exists in every cell.
+
+**R1a: PASS.** World B (Σ = {−12..12}, saturation, fresh seed,
+fresh programs and inputs): Interval pooled +0.538, stratified
+median +0.522 — clears the unchanged H1 thresholds. The original
+pass was not world/seed luck. K-R does not fire.
+
+**R1b: shape-robust, and the surprise runs the wrong way for the
+worry.** World C (wrap-around): pooled +0.629, stratified median
++0.618 — *stronger* than saturation, in the world registered as
+adversarial. The pre-registered reading applies: the pass is a
+property of the domain shape, not of op–hull alignment. One
+unregistered observation recorded without weight: wrap produces
+more nonzero-error runs (26.2% vs 22.1%) and more spread, which may
+mechanically help a rank correlation; the registered conclusion
+does not depend on the +0.629 exceeding the +0.538.
+
+**R2: fail, 0 of 4. K-P FIRES.** The corrected functional (count of
+partially-met classes) does no better than cardinality — pooled
+−0.069 (Parity), −0.099 (Mod3), +0.055 (Sign), +0.008
+(Sign×Parity), all below the 0.2 floor, with Parity and Mod3 again
+mildly anti-predictive under length stratification. Per the
+registration: **the partition side is closed.** No cheap intrinsic
+per-element functional predicts partition-domain error on this toy;
+prediction there requires op-awareness (class–op alignment), which
+is a property of the dynamics, not of the elements.
+Functional-shopping stops at two, as registered.
+
+**Layer-1 statement after Phase 1b, final form:** phantom mass is a
+robust predictor of accumulated analysis error for gap-filling
+(convexity-style) closures — surviving a world change, a seed
+change, and a boundary-convention change — and is intrinsically not
+a predictor for partition-style closures, where the run forgets
+multiplicity. The instrument has a boundary, the boundary has a
+mechanism, and both ends are now supported by registered outcomes
+rather than one lucky pass.
