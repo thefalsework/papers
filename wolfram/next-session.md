@@ -1,3 +1,29 @@
+# Status 2026-09-16 (night, latest): phantom-predictor v0.2 after referee-style review — two new kernel facts
+
+Five-point review of the draft, all accepted; two required Lean
+before the prose could change:
+
+- **`ClosureOperator.le_apply_iff`** (CoApertureClosedForm.lean):
+  the confusion-class lemma restated and kernel-checked over
+  Mathlib's `ClosureOperator` on any partial order. Closes the
+  prose-weld where §2 claimed uco generality while citing the
+  nucleus lemma — the closing-failure pattern again, caught by
+  review this time. The nucleus form stays as the special case.
+- **`step_not_meet_preserving`** (PocketMeetHalf.lean): kernel form
+  of the Amendment 3 universal witness — for incomparable a, b the
+  step fails binary meet-preservation at U = ↓a, V = ↓b. This
+  answers the "is 6.1 forced?" question at kernel grade: the
+  general route (meet-preserving step ⟹ meet-closure) is provably
+  unavailable, so `compatible_union` must and does go through
+  Lemma A. Both files build clean in the full project.
+- Paper fixes (v0.2, logged in the version line): Proposition 4.1
+  stated with inline proof (abstract-side blindness proved;
+  concrete-side null kept [R] — the "provably cannot" overreach
+  removed); all headline numbers to three decimals with the Phase 1
+  margin (0.503 vs 0.500, i.e. 0.003) flagged as prominently as
+  the Phase 2 margin (0.006); [K-adjacent] eliminated; abstract cut
+  to ~300 words with the map in the first three sentences.
+
 # Status 2026-09-16 (night, later): phantom-predictor note drafted
 
 The three-phase arc written up as a preprint draft for the

@@ -50,6 +50,7 @@ Results, matching the registered expectations:
 -/
 import FalseWorkPapers.Lattice.ApertureClosedFormPi
 import Mathlib.Data.Pi.Interval
+import Mathlib.Order.Closure
 
 set_option linter.unusedSectionVars false
 
@@ -74,6 +75,20 @@ theorem IsNucleus.le_apply_iff (hj : IsNucleus j) {k x : H} (hkx : k ≤ x) :
     x ≤ j k ↔ j x = j k :=
   ⟨fun h => hj.apply_eq_of_le_of_le_apply hkx h,
    fun h => (hj.1 x).trans (le_of_eq h)⟩
+
+/-- **The confusion-class lemma at closure-operator generality
+(2026-09-16).**  The nucleus axiom (meet-preservation) is not used:
+any monotone, inflationary, idempotent operator conflates exactly the
+interval `[k, c k]` with `k`, on any partial order.  This is the
+statement that licenses applying phantom mass to arbitrary upper
+closure operators (standard abstract domains), not only to nuclei.
+Kernel twin of `IsNucleus.le_apply_iff` above. -/
+theorem ClosureOperator.le_apply_iff {α : Type*} [PartialOrder α]
+    (c : ClosureOperator α) {k x : α} (hkx : k ≤ x) :
+    x ≤ c k ↔ c x = c k :=
+  ⟨fun h => le_antisymm ((c.monotone h).trans (c.idempotent k).le)
+      (c.monotone hkx),
+   fun h => (c.le_closure x).trans h.le⟩
 
 end ConfusionClass
 

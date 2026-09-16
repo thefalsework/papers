@@ -276,6 +276,26 @@ theorem compatible_union {a b : α} (hba : ¬ b ≤ a) {S T : Set α}
         exact Or.inl ⟨mem_obs_of_le_a hba hS hU hbA hbU hxa, hB⟩
     · exact Or.inr ⟨hxa, hbA, hbB⟩
 
+/-- **The step is not meet-preserving** — so the meet half is not
+forced.  With `a, b` incomparable, `U = ↓a`, `V = ↓b`: the element
+`a` lies in `step U ∩ step V` (the step adds `↓a` to `V` because `V`
+reaches `b`) but not in `step (U ∩ V)` (which never reaches `b`).
+Hence `compatible_union` is not an instance of the general fact
+"compatibles are meet-closed under a meet-preserving step": that
+sufficient condition is provably unavailable here, and the proof
+above must (and does) run through Lemma A instead.  This is the
+kernel form of the universal witness recorded in
+`pocket-study/SPEC.md` Amendment 3 (V1). -/
+theorem step_not_meet_preserving {a b : α} (hab : ¬ a ≤ b)
+    (hba : ¬ b ≤ a) :
+    a ∈ step a b {x | x ≤ a} ∩ step a b {x | x ≤ b} ∧
+    a ∉ step a b ({x | x ≤ a} ∩ {x | x ≤ b}) := by
+  constructor
+  · exact ⟨Or.inl le_rfl, Or.inr ⟨le_rfl, le_rfl⟩⟩
+  · rintro (⟨-, hb⟩ | ⟨-, hb, -⟩)
+    · exact hab hb
+    · exact hba hb
+
 /-! ## Trajectory Phase 0: survival composes, the free supply thins -/
 
 /-- **Survival composes** (pasting squares).  If an observer commutes
