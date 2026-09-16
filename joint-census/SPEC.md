@@ -113,3 +113,57 @@ the postscript.
 
 No dynamics (no edge steps), no application, no Levin-facing content.
 One run; deviations logged in a dated postscript, per house rules.
+
+---
+
+## Postscript (2026-09-16, same day): results
+
+Oracle: `01-joint-census.py`. One formatting repair after first
+execution (Spearman is undefined at n = 2 where aperture is
+identically zero; the print crashed — no logic change). J0 passed on
+all seven recorded values; the E6 cross-check (direct |Icc| against
+relative down-set counts) matched on all 404 kernels at n ≤ 4. Survey:
+406 exhaustive posets (n ≤ 5) + 100 sampled (n = 6); 7,485 kernels.
+F1/F4 sanity assertions held. **No kill fired. One registered
+expectation missed; logged below.**
+
+**J1 — the miss.** Both fiber directions together appear in 28.6% of
+n = 5 posets, not the registered majority. The registered expectation
+was wrong at n = 5; the quantity is strongly size-dependent (0% at
+n ≤ 4, 28.6% at n = 5, 51.0% at n = 6) and the majority arrives one
+size later than guessed. K2 (< 5%, witness exoticism) did not fire —
+E4-in-the-wild is not exotic, but at these scales it is *emerging*,
+not generic. A direction asymmetry the spec did not anticipate:
+same-aperture-different-co-aperture appears earlier and more often
+than the converse (9 posets at n = 4 already have it; the converse
+first appears at n = 5). At small scale the co-aperture is the finer
+coordinate — it separates kernels the aperture cannot.
+
+**J2 — held.** Spearman by stratum: +0.29 (n=3), +0.43 (n=4),
++0.52 (n=5), +0.47 (n=6) — all under the registered 0.7. Within-poset:
+median +0.56, range [+0.25, +0.76] over 427 posets, and **zero** posets
+at |ρ| ≥ 0.95. K1 (statistical redundancy) does not fire. The two
+invariants are moderately positively associated in bulk and nowhere
+near redundant.
+
+**J3 — the open half of F4, answered.** Positive aperture is not an
+ordinary-only phenomenon: 22.7% of dense and 23.3% of regular kernels
+carry aperture > 0 (kernels classically invisible in D(P) that some
+sub-ecosystem still sees as generative). Ordinary kernels: 100%
+(forced, F4), mean aperture 9.18 versus ≈ 0.8 for the other classes.
+Mean co-aperture orders the classes ordinary (135.9) > regular
+(114.8) > dense (70.0).
+
+**J4 — descriptive.** Max-aperture kernels are principal cones at
+58.0% against a 34.3% base rate (×1.7 enrichment); the
+minimum-co-aperture positive-aperture kernels are principal at only
+25.9% (below base). Read plainly: survival concentrates at positions
+(cones); low destruction concentrates at non-positions. Recorded,
+uninterpreted beyond this sentence.
+
+**One-line summary.** The survival count and the destruction ledger
+are confirmed as genuinely independent coordinates in the wild
+(no redundancy anywhere, fibers in both directions), with the
+independence *growing* with scale rather than present from the start —
+and the census's registered guess about how fast was wrong by one
+size, which is recorded.

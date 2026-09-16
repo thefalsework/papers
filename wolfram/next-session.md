@@ -43,12 +43,34 @@ order-dual to the arrangement's up-sets):
   poset at once. The retraction's paragraph now has a kernel;
   postscript added to `arrangement-check/SPEC.md` Amendment 2.
 
-NEXT: register and run the joint aperture/co-aperture census (first
-systematic table treating the two invariants as independent
-coordinates; the four independence witnesses are already [K] in
-`CoApertureClosedForm.lean`, the census asks what the joint
-distribution looks like in the wild), then Phase 0 of the
-abstract-interpretation dictionary.
+**Joint census, same day** (`joint-census/SPEC.md` registered and
+committed before code; `01-joint-census.py`, one run, one
+print-formatting repair): J0 gate passed on all seven recorded
+values, E6 cross-check exact on 404 kernels, 7,485 kernels surveyed.
+No kill fired; one registered expectation missed and logged:
+
+- **J1**: both fiber directions in 28.6% of n = 5 posets — the
+  registered "majority at n = 5" was wrong; the phenomenon is
+  size-dependent (0% at n ≤ 4 → 51% at n = 6) and the majority
+  arrives one size later. Unanticipated asymmetry: co-aperture is
+  the finer coordinate at small scale (same-ap-diff-co appears at
+  n = 4; the converse only at n = 5, matching where the two [K]
+  witness pairs actually live).
+- **J2**: Spearman +0.29..+0.52 by stratum, within-poset median
+  +0.56, zero posets at |ρ| ≥ 0.95. K1 (redundancy) nowhere close.
+- **J3**: ~23% of dense and regular kernels carry positive aperture
+  — classically invisible kernels that some sub-ecosystem still
+  sees as generative. Mean co-aperture orders classes ordinary >
+  regular > dense.
+- **J4** (descriptive): max-aperture kernels are principal at 58%
+  vs 34% base; min-co-aperture kernels principal at 26%, below
+  base. Survival concentrates at positions; low destruction at
+  non-positions.
+
+NEXT: Phase 0 of the abstract-interpretation dictionary (spec only:
+which concrete domains, which widenings/closures are nuclei, kill
+written as "if the coarsenings aren't nuclei-representable, record
+it and stop").
 
 # Status 2026-09-15 (night): lattice interrogation, and the two open loops closed — erratum to Levin drafted, four Lean lines answered
 
