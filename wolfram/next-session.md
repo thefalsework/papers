@@ -1,3 +1,41 @@
+# Status 2026-09-16 (night): Phase 2 — loops and widening; survives attenuated by 0.006, mechanism exposed
+
+The reviewer's question asked first (`absint-dictionary/PHASE2-SPEC.md`,
+committed before code; `03-phase2-loops.py`): does the Interval
+predictor survive widening?
+
+- **A-W hand anchor registered and reproduced:** widening
+  manufactures error at zero intrinsic phantom (`while (x<3) inc` on
+  {0}: P = 0, ε = 5), so T0 is provably false on loops. At scale the
+  mechanism is common: 286 of 2,400 loop runs (a quarter of all
+  error runs) have ε > 0 with P = 0.
+- **Amendment 1, logged before any loop number was read:** the
+  continuity gate fired on the control corpus (+0.470 vs registered
+  0.5). Exact cross-engine check against the Phase 1 engine: 1,440
+  runs, zero mismatches — sampling variation, not a bug. Gate
+  replaced by the strictly stronger equality check; H-L1 thresholds
+  untouched.
+- **H-L1: ATTENUATED, barely.** Pooled Spearman +0.306 against a
+  kill line of 0.3; strata median +0.292 (below the full-pass
+  floor). A different seed could plausibly have fired K-W; recorded
+  at that strength.
+- **D-W autopsy (registered as run):** widening mass W predicts
+  error at +0.491, better than the intrinsic count. Within the
+  low-widening tercile P retains +0.457 (near straight-line
+  strength); within the high-widening tercile +0.102 (swamped). The
+  pooled number is just the mixture.
+- **Layer-1 current form:** intrinsic phantom predicts interval
+  analysis error on straight-line code and on loop code where
+  widening is quiet; where widening fires, the analysis-made
+  imprecision dominates — and its meter W requires running the
+  analysis, which is what the intrinsic instrument was meant to
+  avoid. Qualifier is permanent absent a narrowing study (not
+  registered, not planned).
+- **Disposition:** the three-phase arc is complete and
+  self-contained; the natural next artifact is the write-up (short
+  note for the abstract-interpretation audience), not a fourth
+  phase.
+
 # Status 2026-09-16 (evening, later): Phase 1b — the Interval pass is robust, wrap makes it stronger, and the partition side closes
 
 Both queued follow-ups registered (`absint-dictionary/PHASE1B-SPEC.md`,

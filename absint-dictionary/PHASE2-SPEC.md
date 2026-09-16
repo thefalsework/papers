@@ -91,8 +91,86 @@ the world's, not a bug).
   carried almost entirely by W, that is the A-W mechanism at scale
   and gets said plainly.
 
+## Amendment 1 (2026-09-16, same day, before any loop-corpus result was read): H-L0 fired, diagnosed as a mis-registered gate, replaced by a stronger one
+
+First execution stopped at the continuity gate, as designed: the
+loop-free control corpus came in at pooled +0.470, under the
+registered 0.5. Diagnosis before proceeding, per the gate's own
+instruction: an exact cross-engine check ran the identical 30
+programs × 48 inputs through the Phase 1 engine and this harness —
+**1,440 runs, zero mismatches in both ε and P.** The harness is
+computationally identical to the validated Phase 1 engine on
+loop-free code; T0 held; A-W reproduced by hand values (P = 0,
+ε = 5).
+
+So the gate fired on sampling variation, not a bug: the pooled
+statistic sits near 0.5 across corpora (+0.503 Phase 1, +0.538
+World B, +0.470 here on a smaller 30-program corpus), and the
+registration mistook "harness correct" for "noisy statistic clears
+an arbitrary line on a fresh seed." The gate is **replaced by the
+strictly stronger check**: exact cross-engine equality on the full
+control corpus, asserted in the script. The control correlation is
+recorded descriptively. **H-L1 thresholds, the attenuated band, and
+K-W are unchanged.** No loop-corpus number had been computed or read
+at the time of this amendment (the script asserts the gate before
+the loop sweep runs).
+
 ## Non-claims
 
 No tool, no real analyzer, no narrowing study, no relational
 domains, no claim beyond the toy language. One run; repairs logged
 with their nature per house rules.
+
+---
+
+## Postscript (2026-09-16, same day): survives attenuated — by 0.006 — and the autopsy says exactly where it lives and dies
+
+`03-phase2-loops.py`, first complete run after Amendment 1 (no
+loop-corpus number was read before the amendment). A-W reproduced
+exactly (P = 0, ε = 5, W = 7). H-L0 gate passed in its amended
+form: zero cross-engine mismatches on 1,440 loop-free runs, T0
+holds there; control correlation +0.470 recorded descriptively.
+
+**H-L1: ATTENUATED, and barely.** Loop corpus (50 programs, 2,400
+runs, ε > 0 in 49.5% — loops generate error at more than twice the
+straight-line rate): pooled Spearman(P, ε) = **+0.306**, item-count
+strata median +0.292. The registered bands put this in "survives
+attenuated" (pooled in [0.3, 0.5)); the full H-L1 pass needed
+strata median ≥ 0.3 and did not get it. **The kill line was 0.3;
+the result is 0.306. A different seed could plausibly have fired
+K-W.** Stated so nobody reads "survives" without the margin.
+
+**The A-W mechanism is common at scale:** 286 runs (11.9% of the
+corpus, roughly a quarter of all nonzero-error runs) have ε > 0 at
+P = 0 — error with no intrinsic phantom anywhere on the trajectory,
+manufactured entirely by widening.
+
+**D-W autopsy (registered as run): the split is the finding.**
+
+- Widening mass W predicts error at +0.491 — better than the
+  intrinsic count on this corpus.
+- Within the low-W tercile (n = 1,558, mostly runs where widening
+  never jumped): Spearman(P, ε) = **+0.457** — near straight-line
+  strength. The instrument works where widening is quiet.
+- Within the high-W tercile (n = 769): **+0.102** — where widening
+  acts, the intrinsic signal is swamped.
+- The pooled +0.306 is just this mixture.
+
+**Layer-1 statement after Phase 2, current form:** phantom mass
+predicts accumulated interval-analysis error on straight-line code
+(robust across worlds, seeds, boundary conventions) and on
+loop code *where widening does not fire*; where widening fires, the
+manufactured imprecision dominates and the intrinsic count is
+nearly uninformative. The analysis-side quantity W is the better
+predictor there — but W requires running the analysis, which is
+precisely what the intrinsic instrument was supposed to avoid. The
+export sentence carries this qualifier permanently unless a
+narrowing study (not registered, not planned) changes the widening
+regime itself.
+
+**Disposition.** The three-phase arc (straight-line pass,
+robustness, partition closure, loops attenuation with mechanism) is
+a complete, honest, self-contained result. The natural next
+artifact is the write-up, not a fourth phase; a narrowing follow-up
+would only be worth registering if a reader of the note asks for
+it.
