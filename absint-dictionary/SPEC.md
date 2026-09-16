@@ -169,3 +169,83 @@ per-domain table, the D2 ground-truth mapping with its absorption
 search, the D3 name table, and a real read of GRS §5 and
 Giacobazzi–Scozzari 1998 for KD2. Phase 0 continues; nothing here
 authorizes a tool.
+
+---
+
+## Postscript 2 (2026-09-16, same day): the GRS read — KD2 resolved into "framework absorbed, theorem apparently not"
+
+The real read happened same day (GRS JACM 2000 §§3–5; Ranzato–Tapparo,
+arXiv cs/0612120 and JLC 2007, for the forward notion). Three findings,
+the hand proofs recorded inline as [H] (oracle re-check against the
+pocket survey queued; the proofs are two lines each and use nothing
+beyond idempotence).
+
+**1. The decomposition theorem [H]: dynamical compatibility is exactly
+backward completeness plus forward completeness of the tied pair.**
+GRS Definition 3.2(i): ⟨ρ, η⟩ is (backward-)complete for f iff
+η∘f = η∘f∘ρ. Ranzato–Tapparo: ρ is forward complete iff
+f∘ρ = η∘f∘ρ (the image of ρ-fixed elements is η-fixed). Claim: with
+ρ = j_S, η = j′_S, f = cl′,
+
+    compatibility (cl′∘j_S = j′_S∘cl′) ⟺ backward ∧ forward.
+
+*Proof.* (⟹) η f ρ = η (f ρ) = η (η f) = η f (idempotence): backward.
+Then f ρ = η f = η f ρ: forward. (⟸) f ρ = η f ρ = η f. ∎
+So the pocket study's central definition is a conjunction of two
+notions this field has owned since 1979/2000 (backward) and 2001/2004
+(forward: Giacobazzi–Quintarelli; Ranzato–Tapparo "strong
+preservation"). **Absorbed.** Every public statement of the pocket
+results must henceforth use this vocabulary and cite these papers.
+
+**2. What else is absorbed: the cheap closure direction.** GRS
+Theorem 4.3 decouples backward completeness: ⟨ρ, η⟩ complete iff a
+generator set determined by η alone lands in Fix(ρ) (their
+max(f⁻¹(↓y)) sets; cl′ is additive — it is a left adjoint — so their
+continuity hypothesis holds with room to spare). Corollary [H]:
+compatible pairs are closed under coordinatewise **uco-lub** (going
+more abstract): Fix of the lub is the intersection of the Fix sets,
+the generator set only shrinks, and the forward half is closed under
+intersection of Fix-families by pure logic. Three lines, essentially
+theirs. Caution recorded: this does **not** settle the survey's open
+join half, because the support-intersection observer j_{S∩T} is
+strictly more abstract than the uco-lub of j_S and j_T in general
+(Fix(j_{S∩T}) ⊊ Fix(j_S) ∩ Fix(j_T)); the join half of the lattice
+conjecture is a statement about a *different, stronger* operation and
+stays open.
+
+**3. What is not absorbed on this read: the meet half.** Union of
+supports is the **reduced product** (the glb, going more concrete):
+Fix(j_{S∪T}) = {A ∩ B : A ∈ Fix(j_S), B ∈ Fix(j_T)} [H — one line
+each way, using j_{S∪T}U = j_S U ∩ j_T U]. And reduced-product
+closure is exactly the direction the known theory does *not* give:
+backward-complete domains are not closed under reduced product in
+general (that failure is why GRS complete shells need the R_F
+iteration rather than being trivial), and neither are
+forward-complete domains (why Ranzato–Tapparo shells need a gfp).
+The obstruction in both cases is mixed meets A ∩ B — precisely where
+cl′'s meet-preservation failure (pocket Amendment 3, V1) lives. The
+meet-half theorem (`compatible_union`) asserts reduced-product
+closure *anyway*, for the tied support family on down-set algebras,
+and Lemma A is the tie-specific mechanism that rescues it. **On this
+read, that theorem is not in their corpus.** This is a
+structure-match performed in one day, not a proof of absence; a
+specialist could still produce the special case, and the standing
+rule (no public novelty claim) stays until a specialist or a deeper
+search has been given the chance.
+
+**Bonus D3 entries found in passing** (SAS 2008 invited, Giacobazzi–
+Ranzato): disjunctive completion = forward completeness w.r.t. ∨;
+complementation = backward completeness w.r.t. ∧; Heyting completion
+= the implication layer. The D3 table has begun filling itself from
+the literature, as hoped.
+
+**KD2 verdict update:** downgraded from "live and undecided" to
+**"framework absorbed; meet-half theorem retains apparent novelty in
+the reduced-product direction."** Consequences: (i) the pocket
+study's definitions get a vocabulary erratum (compatibility =
+backward + forward completeness of the tied pair — an upgrade, not a
+correction: the results now sit inside a mature field instead of
+beside it); (ii) the honest sentence for any future write-up is
+"kernel-checked reduced-product closure for a family where the
+general theory predicts failure," which is a smaller and better
+claim than "a new lattice of observers."

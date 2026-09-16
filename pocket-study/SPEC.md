@@ -316,3 +316,21 @@ an incomparable pair (a, b):
 
 The join half remains open, empirical support unchanged
 (5,984/5,984, no proof, no counterexample).
+
+**Vocabulary postscript (2026-09-16, later same day; details and
+citations in `absint-dictionary/SPEC.md`, Postscript 2).** The
+literature read for the abstract-interpretation dictionary found
+that dynamical compatibility decomposes exactly as **backward
+completeness plus forward completeness** of the tied domain pair
+(j_S, j′_S) for cl′, in the standard sense of abstract
+interpretation (Giacobazzi–Ranzato–Scozzari JACM 2000;
+Giacobazzi–Quintarelli 2001 / Ranzato–Tapparo for the forward
+notion). The definition is therefore a conjunction of two known
+notions, and public statements must use that vocabulary. The meet
+half survives the read with apparent novelty: support union is the
+reduced product of the observers, reduced-product closure fails for
+both completeness notions in general (that failure is why complete
+shells need fixpoint iterations), and Lemma A is the tie-specific
+mechanism that forces it here anyway. The join half concerns an
+operation strictly stronger than the uco-lub (which *is* cheaply
+closed, via GRS Theorem 4.3) and stays open.

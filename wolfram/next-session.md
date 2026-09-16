@@ -95,7 +95,31 @@ the compatibility–completeness suspicion. First-pass results:
 
 Go/no-go not issued; no tool authorized. Remaining: D1 domain
 table, D2 ground-truth + imprecision-measures absorption search,
-D3 names, real read of GRS §5.
+D3 names.
+
+**KD2 resolved same day (the GRS §5 read + Ranzato–Tapparo):
+framework absorbed, meet-half theorem apparently not.** Three
+findings (proofs [H] inline in `absint-dictionary/SPEC.md`
+Postscript 2, oracle re-check queued):
+
+1. **Dynamical compatibility = backward + forward completeness of
+   the tied pair (j_S, j′_S) for cl′** — two lines from
+   idempotence. The pocket study's central definition is a
+   conjunction of notions the field has owned since 1979/2000 and
+   2001/2004. All public statements must use this vocabulary.
+2. The cheap closure direction (coordinatewise uco-lub) follows in
+   three lines from GRS Theorem 4.3 — but does NOT settle the
+   survey's join half, since j_{S∩T} is strictly more abstract than
+   the uco-lub. Join half stays open.
+3. **The meet half is the direction the known theory refuses:**
+   support union = reduced product, and reduced-product closure
+   fails in general for both completeness notions (that failure is
+   why complete shells need fixpoint iteration). `compatible_union`
+   asserts it anyway for the tied support family, via Lemma A.
+   Not in their corpus on this read; standing rule (no public
+   novelty claim) holds until a deeper check. Honest future
+   sentence: "kernel-checked reduced-product closure for a family
+   where the general theory predicts failure."
 
 NEXT (queued per the five-item plan): trajectory oracle and the
 characterization problem, each as its own spec, when the dynamical
