@@ -105,9 +105,88 @@ For a program p = f_n ∘ … ∘ f_1, input U, domain ρ:
   per-domain with no aggregate spin; H1 as registered then fails
   and the postscript says which shapes of domain carry signal.
 
+## Amendment 1 (2026-09-16, same day, before any survey results): KP0 fired on A1 as registered
+
+First execution stopped at KP0, exactly as designed: **the A1 hand
+anchor was wrong as registered.** "inc maps parity classes to parity
+classes" is false in the saturating world — inc(8) = 8 stays even, so
+Parity/inc has ε = 9 on U = {−8} (the abstract run blurs to ⊤). The
+oracle machinery was right; the hand derivation ignored the world's
+own boundary convention. Corrected anchors, checked by hand against
+saturation this time: **Parity/neg and Parity/abs** (parity-respecting
+including at ±8) and **Sign/neg** (sign-respecting, saturation-safe).
+A2 unchanged. One incidental lesson recorded, not claimed as a
+finding: boundary saturation is itself a phantom-splitting mechanism —
+the kind of operation that converts phantom into error.
+
+Also logged: one pre-execution repair before any run produced output —
+the random-input generation loop had a non-terminating condition
+(both counters incremented together); fixed to a fixed target count.
+No results existed at the time of either repair; the survey below is
+from the first complete run.
+
 ## Non-claims
 
 No tool, no real analyzer, no benchmark suite, no claim about
 octagons or relational domains, no layer-2 (four-position) content.
 One run; repairs, if any, logged with their nature (formatting vs
 logic) per house rules.
+
+---
+
+## Postscript (2026-09-16, same day): results — H1 fails as registered, the kill does not fire, and the split is the finding
+
+`01-worked-example.py`, first complete run (the two pre-run repairs
+are in Amendment 1). KP0 passed with the corrected anchors; T0 held
+on all 1,479 exact-trajectory runs (0 violations). 12,000 runs total
+(5 domains × 50 programs × 48 inputs).
+
+**Verdicts, per domain (pooled Spearman(P, ε) / length-stratified
+median):**
+
+| domain | pooled | strat median | H1 |
+|---|---|---|---|
+| Parity | +0.029 | −0.231 | fail |
+| Mod3 | −0.003 | −0.273 | fail |
+| Sign | +0.117 | +0.043 | fail |
+| Sign×Parity | +0.050 | +0.107 | fail |
+| Interval | **+0.503** | **+0.508** | **PASS** |
+
+- **H1 as registered (every domain) is dead.** Four of five domains
+  show no within-domain signal; Parity and Mod3 are mildly
+  *anti*-predictive within length strata.
+- **KP1 does not fire**: Interval clears the 0.3 floor with room
+  (and passes the full H1 thresholds, including H1b input-only at
+  +0.463 — the no-trajectory variant works there too).
+- **H1b fails everywhere else.** H2 is weak (Kendall +0.40) and its
+  pre-registered deflationary reading did not even apply — the
+  domain with the most phantom (Parity, 8.54) is not the domain
+  with the most error (Mod3, 4.64). Cross-domain phantom mass does
+  not track cross-domain error. Recorded, closed.
+
+**The shape lesson (the actual finding, stated without spin).**
+Phantom *cardinality* predicts run-level completeness error where
+the closure is geometric and fails where it is partition-like:
+
+- For Interval, s(V) is the convexity deficit — how many gaps the
+  hull fills — and downstream operations propagate gap-mass into
+  error roughly monotonically. Cardinality is the right functional
+  of the phantom there.
+- For partition domains, error is governed by *op–class alignment*
+  (A1's mechanism: class-respecting ops make ε = 0 at any phantom),
+  and the run only remembers *which* classes are met, never how
+  much of each class is missing. The cardinality s(V) is provably
+  the wrong functional of the phantom for these domains; the right
+  one would be the boolean profile of partially-met classes. That
+  is a new registerable target, not a claim.
+
+**Layer-1 status after Phase 1:** on this toy, phantom mass is a
+predictor for convexity-style coarsenings and a definition for
+partition-style ones. The honest export sentence shrinks again, to:
+"the intrinsic conflation count predicts accumulated analysis error
+in domains whose closure fills gaps, and provably cannot in domains
+whose closure forgets multiplicity." Queued next steps, each its own
+registration if pursued: (i) the partition-side functional
+(partially-met-class profile) as a corrected predictor; (ii) a
+robustness world (different Σ, wrap instead of saturation) for the
+Interval pass; (iii) nothing else — no tool.

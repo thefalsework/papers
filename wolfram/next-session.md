@@ -1,3 +1,46 @@
+# Status 2026-09-16 (evening): Phase 1 worked example — H1 fails as registered, the kill does not fire, and the split is the finding
+
+The registered crux experiment ran (`absint-dictionary/PHASE1-SPEC.md`,
+`01-worked-example.py`; spec committed before code). Question: does
+the intrinsic phantom count predict run-level completeness error?
+Answer: **in one domain shape yes, in the other provably no.**
+
+- **Setup:** Σ = {−8..8}, five ucos (Parity, Mod3, Sign,
+  Sign×Parity, Interval), 50 programs (10 ops + 40 seeded
+  compositions, saturating arithmetic), 48 inputs, 12,000 runs.
+  Predictor P = Σ s_ρ(V_k) along the concrete trajectory; target
+  ε = counting-measure completeness error of stepwise bca analysis
+  (the CDG-style run-level quantity).
+- **KP0 fired as designed and caught a wrong hand anchor:** the
+  registered A1 ("inc is parity-respecting") is false under
+  saturation — inc(8) = 8 stays even and Parity/inc has ε = 9 on
+  {−8}. Amendment 1 logs the correction (neg/abs anchors) plus one
+  pre-run repair (non-terminating input loop). Incidental lesson:
+  boundary saturation is a phantom-splitting mechanism.
+- **T0 held:** 1,479 exact-trajectory runs, zero completeness
+  errors (the free direction, asserted not claimed).
+- **H1 as registered is dead:** Parity +0.03, Mod3 −0.00, Sign
+  +0.12, Sign×Parity +0.05 pooled Spearman; Parity/Mod3 mildly
+  anti-predictive within length strata. **Interval passes in full:**
+  pooled +0.503, stratified median +0.508, and even the input-only
+  H1b variant holds at +0.463. **KP1 (definition-not-predictor
+  kill) does not fire.** H2 weak (Kendall +0.40); its deflationary
+  reading didn't even apply (most-phantom domain ≠ most-error
+  domain). Recorded, closed.
+- **The shape lesson:** phantom *cardinality* is the right
+  functional for geometric closures (Interval: s(V) = convexity
+  deficit, gap-mass propagates into error) and provably the wrong
+  one for partition closures (the run remembers which classes are
+  met, never how much is missing; error is op–class alignment —
+  A1's mechanism). Export sentence after Phase 1: *the intrinsic
+  conflation count predicts accumulated analysis error in domains
+  whose closure fills gaps, and cannot in domains whose closure
+  forgets multiplicity.*
+- **Queued, each needing its own registration:** (i) the
+  partition-side corrected predictor (boolean profile of
+  partially-met classes); (ii) a robustness world (wrap instead of
+  saturation, different Σ) for the Interval pass; no tool.
+
 # Status 2026-09-16 (later): Phase 0 verdict — conditional GO for the phantom ledger, one retraction, both hand proofs oracle-confirmed
 
 Continuation of the morning's work (`absint-dictionary/SPEC.md`
