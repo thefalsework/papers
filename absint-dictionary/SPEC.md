@@ -249,3 +249,94 @@ beside it); (ii) the honest sentence for any future write-up is
 "kernel-checked reduced-product closure for a family where the
 general theory predicts failure," which is a smaller and better
 claim than "a new lattice of observers."
+
+---
+
+## Postscript 3 (2026-09-16, same day): D2 absorption search run — the quantitative layer is *not* virgin territory, and the dictionary survives in a sharper form
+
+**Oracle re-check first (house rule).** The two [H] proofs of
+Postscript 2 were re-checked against the pocket survey
+(`pocket-study/06-decomposition-check.py`): decomposition confirmed
+on 131,320 (step, S) pairs with 0 mismatches (and both completeness
+notions are independently violable, so the conjunction is genuinely
+stronger than either); the reduced-product reading confirmed on
+~10⁶ checks with 0 failures. Both upgraded from [H] to
+oracle-confirmed.
+
+**D2 absorption verdict: partial hit, favorable geometry.** The
+hostile-reviewer search found the absorber candidate on the first
+pass: Campion–Dalla Preda–Giacobazzi, *Partial (In)Completeness in
+Abstract Interpretation: Limiting the Imprecision in Program
+Analysis*, POPL 2022 (building on Bruni–Giacobazzi–Gori–Ranzato's
+local completeness, LICS 2021). They enrich abstract domains with
+order-compatible quasi-metrics and define ε-partial completeness:
+the distance between the abstraction of the concrete result and the
+abstract result is at most ε, with a proof system for error bounds.
+**Correction to this morning's status, on the record: the sentence
+"the field only has a yes/no" is retracted.** Graded incompleteness
+has existed there since 2021–2022.
+
+What their apparatus measures and ours does not, and conversely —
+this is the dictionary's actual content now:
+
+- *Theirs:* imprecision of an **analysis run** — per program, per
+  input, per domain, along an externally supplied quasi-metric on
+  the **abstract** lattice. Their canonical interval metric even
+  uses the same intuition as phantom mass ("counts the number of
+  spurious elements added").
+- *Ours:* the **intrinsic conflation of the domain at an element** —
+  phantom mass |[U, ρU]| needs no supplied metric, no program, and
+  no input; it is the order-theoretic count of what the coarsening
+  manufactures at U, with the confusion-class lemma giving it exact
+  semantics (the states conflated with U from above). And the
+  ledger sums — co-aperture (one element, all observers) and
+  aperture (the survival count) — have no analogue in their theory
+  at all: they grade programs against one domain; the ledger grades
+  elements against the whole lattice of domains, with closed forms
+  and (per today's census) genuinely independent coordinates.
+
+The honest positioning sentence: **phantom mass is the metric-free,
+per-element, per-observer primitive that their per-run,
+metric-supplied theory does not have; their partial-completeness
+classes are the ground-truth-bearing framework the ledger can be
+priced against.** Complementary, not identical — but the reviewer
+who says "phantom mass is the path-length quasi-metric applied to
+(U, ρU)" is nearly right on one axis and must be answered in any
+write-up by the ledger axis (aperture/co-aperture), which is the
+part with no counterpart.
+
+**D1, resolved by the layer split.** On the concrete carrier, no
+standard domain is a nucleus (P0-A settles the column wholesale);
+every standard domain is a uco, so **layer 1 applies to all of them
+as-is** — intervals, signs, parity, octagons enter the table with
+"uco: yes, nucleus: no, phantom: well-defined." Layer 2's carrier
+question is exactly the Heyting-completion literature and stays
+open (read owed before any claim).
+
+**D3, filling from the literature:** disjunctive completion =
+forward completeness w.r.t. ∨; complementation = backward
+completeness w.r.t. ∧; Heyting completion = the implication layer;
+"condensing" (Giacobazzi–Scozzari 1998) still owed a precise match
+against regular/dense.
+
+**Phase 0 verdict, per the registered kills:**
+
+- **KD1 does not fire** — under the layer split, layer 1 is
+  nuclei-independent and applies everywhere; layer 2 is blocked on
+  the Heyting-completion read, not killed.
+- **KD2: framework absorbed, meet-half apparently retained**
+  (Postscript 2, now oracle-backed).
+- **KD3 does not fire** — ground truth exists twice over: measured
+  false-alarm data in the tooling world, and the ε-partial
+  completeness classes as the theory-side target.
+
+**Go/no-go: conditional GO for layer 1, QUEUED for layer 2.** The
+authorized next step is a *registered Phase 1 spec* — not a tool:
+pick one worked toy analysis (finite carrier, e.g. sign or parity
+on a small integer world), compute phantom mass and the ledger sums
+exactly, and test the registered claim that phantom mass at the
+analyzed properties predicts the false-alarm behavior that
+ε-partial completeness bounds — with the kill written as "if the
+intrinsic count and the run-level error decouple on the worked
+example, the instrument is a definition, not a predictor, and the
+bet ends there." Layer 2 waits for the Giacobazzi–Scozzari read.

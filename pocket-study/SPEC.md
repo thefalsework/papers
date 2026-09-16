@@ -334,3 +334,22 @@ shells need fixpoint iterations), and Lemma A is the tie-specific
 mechanism that forces it here anyway. The join half concerns an
 operation strictly stronger than the uco-lub (which *is* cheaply
 closed, via GRS Theorem 4.3) and stays open.
+
+**Oracle re-check of the [H] proofs (2026-09-16, same day;
+`06-decomposition-check.py`, one run, no repairs).** Both confirmed
+with zero failures:
+
+- Decomposition (compatibility ⟺ backward ∧ forward): 131,320
+  (step, S) pairs, 0 mismatches. Both notions are independently
+  violable (backward-fails-only: 27,684; forward-fails-only:
+  10,624; both fail: 10,624), so the conjunction is genuinely
+  stronger than either half. One unexplained exact coincidence
+  recorded, uninterpreted: forward-fails-only and both-fail counts
+  are identical (10,624 = 10,624) — among forward-violators,
+  backward fails exactly half the time in this survey.
+- Reduced-product reading: pointwise j_{S∪T}U = j_S U ∩ j_T U on
+  339,502 checks, 0 failures; products A ∩ B of fixed points land
+  in Fix(j_{S∪T}) on 655,388 checks, 0 failures. The [H] marks are
+  hereby upgraded to oracle-confirmed; Lean status unchanged
+  (`compatible_union` already kernel-checks the consequence that
+  matters).

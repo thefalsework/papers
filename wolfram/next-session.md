@@ -1,3 +1,34 @@
+# Status 2026-09-16 (later): Phase 0 verdict — conditional GO for the phantom ledger, one retraction, both hand proofs oracle-confirmed
+
+Continuation of the morning's work (`absint-dictionary/SPEC.md`
+Postscript 3; `pocket-study/06-decomposition-check.py`):
+
+- **Oracle re-check:** compatibility ⟺ backward ∧ forward confirmed
+  (131,320 pairs, 0 mismatches; both notions independently
+  violable); reduced-product reading confirmed (~10⁶ checks, 0
+  failures). [H] → oracle-confirmed. One unexplained coincidence
+  recorded: forward-fails-only = both-fail = 10,624 exactly.
+- **D2 absorption search: partial hit.** Campion–Dalla Preda–
+  Giacobazzi POPL 2022 (ε-partial completeness, quasi-metrics on
+  abstract lattices, proof system for error bounds; on top of
+  Bruni et al. LICS 2021 local completeness). **Retraction on the
+  record: "the field only has a yes/no" was false** — graded
+  incompleteness exists since 2021–22. What survives as ours: their
+  quantity is per-run (program, input, supplied metric, one
+  domain); phantom mass is the intrinsic per-element count with
+  exact confusion-class semantics, and the ledger sums (aperture /
+  co-aperture, independent coordinates per today's census) have no
+  analogue in their theory.
+- **Phase 0 verdict:** KD1 does not fire (layer split: phantom
+  ledger is uco-level, applies to every standard domain as-is;
+  four-position layer queued behind the Heyting-completion read).
+  KD3 does not fire (ground truth exists: false-alarm data +
+  ε-partial completeness classes). **Conditional GO for layer 1:**
+  authorized next step is a registered Phase 1 spec (one worked toy
+  analysis, exact phantom/ledger computation, kill = "intrinsic
+  count and run-level error decouple ⟹ the instrument is a
+  definition, not a predictor"). No tool authorized.
+
 # Status 2026-09-16: loop-closing Lean sprint — meet half of the lattice conjecture and the Alexandrov Booleanization are kernel-grade
 
 Executing the five-item course set this morning (loop-closing Lean
