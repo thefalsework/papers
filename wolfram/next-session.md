@@ -1,4 +1,29 @@
-# Status 2026-09-16 (night, latest): Phase 3 wild pilot — no verdict by its own rules, and a granularity lesson
+# Status 2026-09-16 (night, latest): phantom-predictor v0.3 — literature positioning after external review
+
+An external literature review rated the novelty claim credible but
+narrow, and named two papers. Both verified real before citing:
+
+- **Campion–Urban–Dalla Preda–Giacobazzi, SAS 2023** (pre-metrics
+  generalizing the POPL 2022 quasi-metrics) — now cited in §1's new
+  positioning paragraph as the second measurement family.
+- **Zheng–Yao, arXiv:2606.21992 (June 2026), "Analyzing the
+  Analyzers: Model Counting Meets Abstract Interpretation"** — their
+  false-positive count |γ(α(φ)) ∖ φ| is *literally s(φ)* at
+  ρ = γ∘α. The paper now states this coincidence bluntly rather
+  than letting a referee find it: the count is not new twice over
+  (CDG quasi-metric at (U, ρU); MCAI's measure), and the claim is
+  reserved to the direction of use — intrinsic and prior,
+  predicting accumulated error, with Proposition 4.1 as an
+  information-channel impossibility that predicted its null in
+  advance. §6 adds an explicit disclaimer: a new theorem in a
+  specific algebraic setting, not a new reduced-product principle.
+  §7's not-claimed list now leads with the count itself.
+
+v0.3 committed; still not deposited. MCAI being three months old is
+evidence the problem is active, not evidence against novelty — but
+it means depositing sooner matters more than it did yesterday.
+
+# Status 2026-09-16 (night, earlier): Phase 3 wild pilot — no verdict by its own rules, and a granularity lesson
 
 The wild pilot ran: real integer functions from two algorithm repos
 nobody wrote for this experiment (TheAlgorithms/Python @ `351805cd`,
