@@ -106,3 +106,66 @@ One document (this file's postscript): the dictionary table
 (domain / carrier / nucleus? / phantom meaning / ground-truth
 dataset), the P0-B verdict with citations, and a go/no-go. **No tool
 until this survives**, per the registered plan.
+
+---
+
+## Postscript (2026-09-16, same day): Phase 0 first pass — P0-B run to ground at search depth, one finding that redraws the kill map
+
+**P0-B, first pass.** The suspicion is confirmed as a real absorption
+risk and is not yet resolved either way:
+
+- Giacobazzi–Ranzato–Scozzari, *Making abstract interpretations
+  complete*, JACM 47(2), 2000: completeness (ρ∘f = ρ∘f∘ρ, plus the
+  paired form for f : C → D with a domain on each side) is a property
+  of the domain alone; complete shells and cores exist constructively
+  for continuous f; **the relative complete shell is the reduced
+  product of A and R_f(B), and absolute complete shells are computed
+  modularly by reduced product.** The pocket study's dynamical
+  compatibility is exactly a *tied* domain-pair completeness (same
+  support S interpreted on both sides of cl′), so the framework is
+  theirs, and the meet-half theorem's shape — complete domains closed
+  under reduced product — is present in their *untied* setting.
+  Whether the tied-support version (Lemma A's content: the tie is
+  what forces ↓a into the image) is an instance of their shell
+  results or genuinely outside them requires reading §5 of the paper,
+  not searching it. **KD2 is live and undecided.** Standing rule
+  until decided: no novelty claim about the dynamical results leaves
+  the repo.
+- Giacobazzi–Scozzari, *Intuitionistic implication in abstract
+  interpretation* (PLILP 1997) / *A logical model for relational
+  abstract domains* (ACM TOPLAS 20(5), 1998): **Heyting completion is
+  established prior art** — a domain refinement modeling Cousot's
+  reduced cardinal power, with abstract domains specified by
+  intuitionistic implication formulas. The D1b carrier exists in the
+  literature, built by specialists, twenty-eight years ago. Their
+  abstracts also use "condensing" as a domain property — D3's guess
+  that the program's classes have existing names is supported and
+  must be tabled properly.
+
+**The finding that redraws the kill map.** Re-reading the E0 proof
+(`IsNucleus.le_apply_iff`, `CoApertureClosedForm.lean`): it uses
+inflationary + monotone + idempotent only — `map_inf` is never
+invoked. The confusion-class lemma, and with it phantom mass, is a
+**closure-operator-level instrument**, not a nucleus-level one.
+Consequences, recorded before any use:
+
+1. KD1's scope narrows. The Boolean-carrier no-go (P0-A) kills the
+   *four-position/ordinariness* layer on ℘(Σ); it does not touch the
+   *phantom-mass* layer, which is well-defined for every abstract
+   domain as-is (the interval [U, ρU] under an upper closure ρ).
+2. The dictionary therefore splits into two layers with separate
+   survival conditions: **(i)** phantom mass ↔ measured imprecision
+   of a uco (survives P0-A trivially; lives or dies on D2's ground
+   truth); **(ii)** the four positions ↔ requires a non-Boolean
+   carrier (Heyting completion or an Alexandrov carrier; lives or
+   dies on D1).
+3. The corresponding absorption check for layer (i) moves to the
+   "measuring incompleteness/imprecision" literature and is **not yet
+   run** — it is the same hostile-reviewer search the phantom study
+   ran for morphological closing, and D2 cannot be graded before it.
+
+**Go/no-go: not issued.** Remaining before a verdict: the D1
+per-domain table, the D2 ground-truth mapping with its absorption
+search, the D3 name table, and a real read of GRS §5 and
+Giacobazzi–Scozzari 1998 for KD2. Phase 0 continues; nothing here
+authorizes a tool.

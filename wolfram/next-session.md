@@ -67,10 +67,40 @@ No kill fired; one registered expectation missed and logged:
   base. Survival concentrates at positions; low destruction at
   non-positions.
 
-NEXT: Phase 0 of the abstract-interpretation dictionary (spec only:
-which concrete domains, which widenings/closures are nuclei, kill
-written as "if the coarsenings aren't nuclei-representable, record
-it and stop").
+**Abstract-interpretation dictionary Phase 0, same day**
+(`absint-dictionary/SPEC.md`, registered before the literature
+check ran). Two hand facts written down first: the Boolean-carrier
+no-go (℘(Σ) is a Boolean frame, its only nuclei are closed ones —
+the naive dictionary is DOA, ε-closing's failure mode again) and
+the compatibility–completeness suspicion. First-pass results:
+
+- **KD2 (absorption) is live and undecided.** Giacobazzi–Ranzato–
+  Scozzari (JACM 2000) is the framework: dynamical compatibility is
+  a tied domain-pair completeness for cl′, and their complete
+  shells are computed by reduced product — the meet-half theorem's
+  shape, in the untied setting. Whether the tied version (Lemma A)
+  is theirs requires reading §5, not searching it. Standing rule:
+  no novelty claim about the dynamical results leaves the repo
+  until decided.
+- **Heyting completion is prior art** (Giacobazzi–Scozzari 1997/
+  1998): the non-Boolean carrier the four-position layer needs was
+  built by specialists in 1998, and their abstracts use
+  "condensing" as a domain property — the program's classes likely
+  have existing names (D3 table owed).
+- **Finding that redraws the kill map:** E0 (`le_apply_iff`) never
+  uses `map_inf` — phantom mass is a *closure-operator-level*
+  instrument. It applies to every abstract domain on ℘(Σ) as-is;
+  only the four-position layer needs a non-Boolean carrier. The
+  dictionary splits into two layers with separate kills.
+
+Go/no-go not issued; no tool authorized. Remaining: D1 domain
+table, D2 ground-truth + imprecision-measures absorption search,
+D3 names, real read of GRS §5.
+
+NEXT (queued per the five-item plan): trajectory oracle and the
+characterization problem, each as its own spec, when the dynamical
+question earns its turn back; the epistemic paper last, once the
+invariants stop moving.
 
 # Status 2026-09-15 (night): lattice interrogation, and the two open loops closed — erratum to Levin drafted, four Lean lines answered
 
