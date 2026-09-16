@@ -283,3 +283,26 @@ ambient algebra before registering any census expectation on it**;
 the formula tells you which surveys are worth running. The Lean
 target shifts from E7-at-n to the general theorem above (queued,
 low urgency — it needs a paragraph before it needs a kernel).
+
+---
+
+## Postscript to Amendment 2 (2026-09-16): the general theorem is kernel-checked
+
+`lean/FalseWorkPapers/Lattice/AlexandrovBoolean.lean`, builds clean,
+stated in the repository's down-set convention (minimal elements play
+the cells' role; order-dual to the up-set presentation above), and
+proved for any `WellFoundedLT` order — strictly more general than the
+finite case this amendment rests on:
+
+- `LowerSet.mem_compl_compl_iff` — the forced formula (¬¬U = points
+  all of whose minimal predecessors lie in U).
+- `LowerSet.compl_eq_bot_iff_min` — dense ⟺ contains the whole
+  minimal layer (consequence 2).
+- `regularEquivMinSets` — the Booleanization bijection
+  (consequence 1), with `minReg_regular` certifying the inverse.
+- `card_regular_eq_two_pow` — regulars = 2^{#minimals} for every
+  finite poset at once (the 128 = 2⁷ and 2048 = 2¹¹ of script 02,
+  as one theorem).
+
+The paragraph now has a kernel. Nothing in the retraction changes;
+this closes the loop the process note left open.

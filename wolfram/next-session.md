@@ -1,3 +1,55 @@
+# Status 2026-09-16: loop-closing Lean sprint — meet half of the lattice conjecture and the Alexandrov Booleanization are kernel-grade
+
+Executing the five-item course set this morning (loop-closing Lean
+sprint → joint aperture/co-aperture census → abstract-interpretation
+dictionary Phase 0 → trajectory work queued → epistemic paper last).
+Sprint complete; both new files build clean in the full project.
+
+**Real news found while scoping the first target: the meet half of
+the lattice conjecture is a theorem, not a conjecture.** Hand proof
+via a new lemma that compatibility itself forces (Lemma A: S
+compatible, b ∈ j_S U, b ∉ U ⟹ ↓a ⊆ j_S U), verified against the
+full survey before formalization (`pocket-study/05-lemma-a-check.py`:
+169,889 Lemma-A instances, 792,595 meet-half pairs, zero failures),
+recorded as Amendment 4 in the pocket spec, then kernel-checked.
+
+`lean/FalseWorkPapers/Lattice/PocketMeetHalf.lean` (builds clean):
+
+- `compatible_union` — compatible supports closed under union =
+  compatible nuclei closed under pointwise meet. **The lattice
+  conjecture splits: meet half proved, join half open**
+  (5,984/5,984 empirical, no proof, no counterexample).
+- `mem_obs_of_le_a` — Lemma A. Also explains Amendment 3's V2
+  structurally.
+- `futureWatcher_compatible`, `singleton_compatible` — the forced
+  supply (D1, D1b) from the deflation check, now kernel-grade.
+- `survival_composes`, `freeSupply_antitone` — the two trajectory
+  pre-derivations banked ahead of any trajectory spec: survival
+  composes along trajectories, and the free supply {x : x ≰ a} only
+  thins as the order grows. Any future trajectory claim must be
+  about the excess.
+
+`lean/FalseWorkPapers/Lattice/AlexandrovBoolean.lean` (builds clean):
+the arrangement retraction's two-line formula, kernel-checked at
+full generality (any `WellFoundedLT` order, down-set convention,
+order-dual to the arrangement's up-sets):
+
+- `LowerSet.mem_compl_compl_iff` — the forced formula for ¬¬.
+- `LowerSet.compl_eq_bot_iff_min` — dense ⟺ contains the minimal
+  layer (the whole four-class census reduces to two up-set counts).
+- `regularEquivMinSets`, `minReg_regular` — the Booleanization is
+  the power set of the extremal layer, as a bijection.
+- `card_regular_eq_two_pow` — regulars = 2^{#minimals}, every finite
+  poset at once. The retraction's paragraph now has a kernel;
+  postscript added to `arrangement-check/SPEC.md` Amendment 2.
+
+NEXT: register and run the joint aperture/co-aperture census (first
+systematic table treating the two invariants as independent
+coordinates; the four independence witnesses are already [K] in
+`CoApertureClosedForm.lean`, the census asks what the joint
+distribution looks like in the wild), then Phase 0 of the
+abstract-interpretation dictionary.
+
 # Status 2026-09-15 (night): lattice interrogation, and the two open loops closed — erratum to Levin drafted, four Lean lines answered
 
 **Lattice interrogation** (`pocket-study/04-lattice-interrogation.py`,

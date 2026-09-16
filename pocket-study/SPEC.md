@@ -254,3 +254,65 @@ after first execution, no logic change). Three verdicts:
 
 The join half stays hard for its own reason (joins of nuclei are
 not pointwise); no claim is made about it beyond the survey.
+
+---
+
+## Amendment 4 (2026-09-16): the meet half is a theorem
+
+Found by hand while scoping the Lean target that Amendment 3
+isolated; verified against the full survey before recording
+(`05-lemma-a-check.py`: Lemma A on 169,889 instances, meet half on
+792,595 pairs, zero failures of either).
+
+**Lemma A.** Let S be compatible with the step (a, b), U a
+down-set with b ∈ j_S U and b ∉ U. Then ↓a ⊆ j_S U.
+
+*Proof.* Since b ∉ U, cl′U = U. Compatibility of S at U reads
+cl′(j_S U) = j′_S U, and since b ∈ j_S U the left side is
+j_S U ∪ ↓a. For any x ≤ a we have ↓′x = ↓x (nothing gains b below
+it without gaining b ≤ a, contradicting incomparability), so
+x ∈ j′_S U iff ↓x ∩ S ⊆ U iff x ∈ j_S U. Every x ≤ a lies in the
+left side, hence in j′_S U, hence in j_S U. ∎
+
+**Theorem (meet half).** If S and T are compatible with (a, b),
+so is S ∪ T (the pointwise meet of the two nuclei).
+
+*Proof.* j_{S∪T}V = j_S V ∩ j_T V pointwise. Fix U and set
+A = j_S U, B = j_T U; by compatibility of each it suffices to show
+cl′(A ∩ B) = cl′A ∩ cl′B. If b ∈ A ∩ B both sides are
+(A ∩ B) ∪ ↓a by distributivity. If b ∉ A and b ∉ B both sides are
+A ∩ B. In the mixed case b ∈ A, b ∉ B: inflation gives b ∉ U, so
+Lemma A yields ↓a ⊆ A, hence
+cl′A ∩ cl′B = (A ∪ ↓a) ∩ B = (A ∩ B) ∪ (↓a ∩ B) = A ∩ B =
+cl′(A ∩ B). ∎
+
+**Status change.** The lattice conjecture splits: the **meet half
+is proved** (compatible supports are closed under union); the
+**join half** (closure under intersection) remains open with
+5,984/5,984 empirical support and no proof. Lemma A also explains
+Amendment 3's V2 structurally: image meet-preservation was
+exceptionless because compatibility forces ↓a inside any image
+that contains b without its ground truth. Lean formalization same
+day (`Lattice/PocketMeetHalf.lean`).
+
+**Postscript (2026-09-16): the Lean file builds clean.** Contents,
+all kernel-checked over any finite `DecidableEq` partial order with
+an incomparable pair (a, b):
+
+- `futureWatcher_compatible` (Amendment 2's forced future-watcher,
+  D1) and `singleton_compatible` (the stronger forced family
+  {x : x ≰ a}, D1b).
+- `mem_obs_of_le_a` — Lemma A, exactly as stated above.
+- `compatible_union` — **the meet half of the lattice conjecture is
+  now kernel-grade.** Compatible supports are closed under union;
+  equivalently, compatible nuclei are closed under pointwise meet.
+- Two trajectory pre-derivations banked cheaply per the 2026-09-16
+  plan, ahead of any trajectory spec: `survival_composes`
+  (compatibility with each step in a sequence composes to
+  compatibility with the whole trajectory) and `freeSupply_antitone`
+  (the forced-singleton family {x : ¬ x ≤ a} only shrinks as the
+  order grows — the half of the scarcity hunch that is free; any
+  registered trajectory claim must therefore be about the excess).
+
+The join half remains open, empirical support unchanged
+(5,984/5,984, no proof, no counterexample).
