@@ -10,6 +10,37 @@ closures provably cannot), the degradation mode is measured and
 named (widening, with its own meter), and the protocol has survived
 three registered phases. Still no tool.*
 
+## Amendment 1 (logged before second run)
+
+First run: the thin-corpus gate fired — 6 functions passed the
+whitelist, because the whitelist omitted **docstrings**
+(`Expr(Constant(str))` as a statement), which nearly every function
+in this repo carries. A docstring is semantically inert for integer
+execution; the whitelist is amended to allow it as a no-op
+statement. No other relaxation: `raise`, annotated assignment,
+f-strings, and everything else stay excluded. This is a mechanical
+repair to a registration oversight, made before any correlation was
+computed (the gate stopped the run before statistics).
+
+## Amendment 2 (logged before the quiet-stratum correlation was ever computed)
+
+Second run: viability gates passed (23 included, 16 with ε > 0),
+but the widening-quiet stratum landed at **n = 14, one short of the
+registered 15**. Per registration: no H-W1 verdict. The harness
+never computed the quiet-stratum Spearman, and it has not been
+looked at — computing it first and then deciding whether to extend
+the corpus would be the forking path this protocol exists to
+prevent.
+
+Extension, registered now: a **second corpus source**,
+github.com/keon/algorithms, shallow-cloned at whatever commit is
+HEAD at execution, same extraction, same whitelist (with Amendment
+1), same execution bounds, deduplication across both sources. All
+claims, thresholds, and kills are unchanged and are evaluated once,
+on the union. If the union stratum still has n < 15, that is the
+recorded end of Phase 3: no verdict, no third source, no threshold
+lowering.
+
 ## Question
 
 On real integer functions written by strangers for their own
