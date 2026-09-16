@@ -1,4 +1,42 @@
-# Status 2026-09-16 (night, latest): phantom-predictor v0.2 after referee-style review — two new kernel facts
+# Status 2026-09-16 (night, latest): Phase 3 wild pilot — no verdict by its own rules, and a granularity lesson
+
+The wild pilot ran: real integer functions from two algorithm repos
+nobody wrote for this experiment (TheAlgorithms/Python @ `351805cd`,
+keon/algorithms @ `7f71a911`), exhaustive concrete collecting
+semantics as ground truth, a realistic interval analyzer
+(closed-form transfer, widening, var-vs-const refinement) as the
+object under test. Spec and kill registered before cloning
+(`absint-dictionary/PHASE3-SPEC.md`, harness `04-wild-pilot.py`).
+
+- **Outcome: no verdict on H-W1.** 23 functions included, both
+  viability gates passed, but the widening-quiet stratum landed at
+  n = 14 against the registered minimum of 15 — on both the
+  single-source and union corpora. Amendment 2 (registered before
+  the statistic was ever computed) says that ends the phase: no
+  third source, no threshold lowering. **The quiet-stratum Spearman
+  was never computed** — at n = 14 it could only be an unregistered
+  verdict in a descriptive costume.
+- Descriptives, no claims: pooled Spearman(P, ε) = +0.710 over all
+  23; Spearman(W, ε) = +0.489 in the widening-active stratum
+  (n = 9), oddly close to Phase 2's +0.491 on toys; ε > 0 in 70% of
+  wild functions at box [−8, 8].
+- **The real finding is a granularity lesson.** Six wild functions
+  carry ε > 0 with P identically 0 — all polynomial-shaped
+  expressions (`x*x`, `x*(1−x)`). Closed-form transfer's blindness
+  to correlated subexpression occurrences manufactures error
+  *inside* expression evaluation, where statement-level collecting
+  sets are exactly box-representable and phantom mass is
+  structurally zero. Same lesson as the partition null, one level
+  down: the instrument sees conflation at its own granularity and
+  nothing finer. An expression-level phantom (per-node bca-vs-
+  transfer residual) would be a different instrument; not claimed,
+  not registered.
+- Two amendments logged in the spec: docstrings admitted to the AST
+  whitelist as no-ops (registration oversight, caught by the
+  thin-corpus gate before any statistic existed); second corpus
+  source added with all thresholds frozen.
+
+# Status 2026-09-16 (night, earlier): phantom-predictor v0.2 after referee-style review — two new kernel facts
 
 Five-point review of the draft, all accepted; two required Lean
 before the prose could change:

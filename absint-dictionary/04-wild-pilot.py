@@ -20,8 +20,13 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
-CORPUS = os.path.join(HERE, "wild-corpus")
-REPO = "https://github.com/TheAlgorithms/Python"
+# Amendment 2: second source, union corpus, cross-source dedupe
+SOURCES = [
+    ("https://github.com/TheAlgorithms/Python",
+     os.path.join(HERE, "wild-corpus")),
+    ("https://github.com/keon/algorithms",
+     os.path.join(HERE, "wild-corpus-2")),
+]
 
 spec = importlib.util.spec_from_file_location(
     "worked", os.path.join(HERE, "01-worked-example.py"))
@@ -569,45 +574,53 @@ def kp0():
 # ---------------------------------------------------------------
 
 def get_corpus():
-    if not os.path.isdir(CORPUS):
-        subprocess.run(["git", "clone", "--depth", "1", REPO, CORPUS],
-                       check=True)
-    h = subprocess.run(["git", "-C", CORPUS, "rev-parse", "HEAD"],
-                       capture_output=True, text=True).stdout.strip()
+    hashes = {}
     fns = []
     seen = set()
-    for root, _dirs, files in os.walk(CORPUS):
-        if ".git" in root:
-            continue
-        for f in sorted(files):
-            if not f.endswith(".py"):
+    for repo, corpus in SOURCES:
+        if not os.path.isdir(corpus):
+            subprocess.run(["git", "clone", "--depth", "1", repo, corpus],
+                           check=True)
+        h = subprocess.run(["git", "-C", corpus, "rev-parse", "HEAD"],
+                           capture_output=True, text=True).stdout.strip()
+        hashes[repo] = h
+        for root, _dirs, files in os.walk(corpus):
+            if ".git" in root:
                 continue
-            path = os.path.join(root, f)
-            try:
-                with open(path, encoding="utf-8", errors="replace") as fh:
-                    tree = ast.parse(fh.read())
-            except SyntaxError:
-                continue
-            for node in tree.body:
-                if not isinstance(node, ast.FunctionDef):
+            for f in sorted(files):
+                if not f.endswith(".py"):
                     continue
-                if not passes_filter(node):
+                path = os.path.join(root, f)
+                try:
+                    with open(path, encoding="utf-8",
+                              errors="replace") as fh:
+                        tree = ast.parse(fh.read())
+                except SyntaxError:
                     continue
-                key = ast.dump(ast.Module(node.body, [])) + \
-                    str(len(node.args.args))
-                if key in seen:
-                    continue
-                seen.add(key)
-                rel = os.path.relpath(path, CORPUS)
-                fns.append((rel, node.name, node))
-    return h, fns
+                for node in tree.body:
+                    if not isinstance(node, ast.FunctionDef):
+                        continue
+                    if not passes_filter(node):
+                        continue
+                    key = ast.dump(ast.Module(node.body, [])) + \
+                        str(len(node.args.args))
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    rel = os.path.join(os.path.basename(corpus),
+                                       os.path.relpath(path, corpus))
+                    fns.append((rel, node.name, node))
+    return hashes, fns
 
 def main():
     os.makedirs(OUT, exist_ok=True)
     kp0()
-    commit, fns = get_corpus()
-    print(f"\ncorpus: TheAlgorithms/Python @ {commit}")
+    hashes, fns = get_corpus()
+    print()
+    for repo, h in hashes.items():
+        print(f"corpus: {repo} @ {h}")
     print(f"functions passing the AST whitelist (deduped): {len(fns)}")
+    commit = hashes
 
     rows, excluded = [], []
     for rel, name, node in fns:

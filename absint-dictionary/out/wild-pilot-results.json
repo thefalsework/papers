@@ -1,0 +1,352 @@
+{
+ "commit": {
+  "https://github.com/TheAlgorithms/Python": "351805cd69a90486bf935e95cb675814609029b6",
+  "https://github.com/keon/algorithms": "7f71a911232b2ef4f5396f16f5ea704d4315ce0c"
+ },
+ "included": 23,
+ "excluded": [
+  {
+   "file": "wild-corpus\\maths\\modular_division.py",
+   "name": "greatest_common_divisor",
+   "reason": "raises"
+  },
+  {
+   "file": "wild-corpus\\maths\\numerical_analysis\\newton_forward_interpolation.py",
+   "name": "ucal",
+   "reason": "magnitude"
+  },
+  {
+   "file": "wild-corpus-2\\algorithms\\math\\krishnamurthy_number.py",
+   "name": "_find_factorial",
+   "reason": "magnitude"
+  }
+ ],
+ "rows": [
+  {
+   "eps": 0,
+   "P": 256,
+   "W": 0,
+   "exit_size": 17,
+   "hullsum": 834,
+   "file": "wild-corpus\\data_structures\\binary_tree\\avl_tree.py",
+   "name": "my_max",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 1999931,
+   "P": 45464,
+   "W": 21250031874649375,
+   "exit_size": 2000001,
+   "hullsum": 46761,
+   "file": "wild-corpus\\data_structures\\binary_tree\\number_of_possible_binary_trees.py",
+   "name": "binomial_coefficient",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 145,
+   "hullsum": 578,
+   "file": "wild-corpus\\financial\\price_plus_tax.py",
+   "name": "price_plus_tax",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 64,
+   "P": 0,
+   "W": 0,
+   "exit_size": 145,
+   "hullsum": 578,
+   "file": "wild-corpus\\fractals\\julia_sets.py",
+   "name": "eval_quadratic_polynomial",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 16,
+   "P": 0,
+   "W": 0,
+   "exit_size": 161,
+   "hullsum": 578,
+   "file": "wild-corpus\\fuzzy_logic\\fuzzy_set_operations.py",
+   "name": "algebraic_sum",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 129,
+   "hullsum": 578,
+   "file": "wild-corpus\\fuzzy_logic\\fuzzy_set_operations.py",
+   "name": "algebraic_product",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 2
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 9,
+   "hullsum": 34,
+   "file": "wild-corpus\\graphs\\minimum_spanning_tree_prims2.py",
+   "name": "get_parent_position",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 33,
+   "hullsum": 34,
+   "file": "wild-corpus\\graphs\\minimum_spanning_tree_prims2.py",
+   "name": "get_child_left_position",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 33,
+   "hullsum": 34,
+   "file": "wild-corpus\\graphs\\minimum_spanning_tree_prims2.py",
+   "name": "get_child_right_position",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 1999664,
+   "P": 1351694,
+   "W": 577990752,
+   "exit_size": 2000001,
+   "hullsum": 1384270,
+   "file": "wild-corpus\\maths\\matrix_exponentiation.py",
+   "name": "simple_fibonacci",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 3
+  },
+  {
+   "eps": 999992,
+   "P": 56,
+   "W": 8999919,
+   "exit_size": 1000001,
+   "hullsum": 133,
+   "file": "wild-corpus\\maths\\sum_of_digits.py",
+   "name": "sum_of_digits",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 64,
+   "P": 0,
+   "W": 0,
+   "exit_size": 129,
+   "hullsum": 34,
+   "file": "wild-corpus\\maths\\numerical_analysis\\bisection_2.py",
+   "name": "equation",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 64,
+   "P": 0,
+   "W": 0,
+   "exit_size": 129,
+   "hullsum": 17,
+   "file": "wild-corpus\\maths\\numerical_analysis\\integration_by_simpson_approx.py",
+   "name": "f",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 64,
+   "P": 1088,
+   "W": 0,
+   "exit_size": 129,
+   "hullsum": 1122,
+   "file": "wild-corpus\\maths\\numerical_analysis\\simpson_rule.py",
+   "name": "f",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 0,
+   "P": 0,
+   "W": 0,
+   "exit_size": 33,
+   "hullsum": 17,
+   "file": "wild-corpus\\maths\\numerical_analysis\\square_root.py",
+   "name": "fx_derivative",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 999979,
+   "P": 19075,
+   "W": 48999999999755,
+   "exit_size": 1000009,
+   "hullsum": 19175,
+   "file": "wild-corpus\\matrix\\nth_fibonacci_using_matrix_exponentiation.py",
+   "name": "nth_fibonacci_bruteforce",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 72,
+   "P": 0,
+   "W": 0,
+   "exit_size": 145,
+   "hullsum": 34,
+   "file": "wild-corpus\\neural_network\\two_hidden_layers_neural_network.py",
+   "name": "sigmoid_derivative",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 999996,
+   "P": 366,
+   "W": 16999982999982999983,
+   "exit_size": 1000000,
+   "hullsum": 488,
+   "file": "wild-corpus\\project_euler\\problem_012\\sol1.py",
+   "name": "count_divisors",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 999996,
+   "P": 366,
+   "W": 16999982999982999983,
+   "exit_size": 1000000,
+   "hullsum": 488,
+   "file": "wild-corpus\\project_euler\\problem_012\\sol2.py",
+   "name": "count_divisors",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 959680,
+   "P": 2902996,
+   "W": 288999422,
+   "exit_size": 1000000,
+   "hullsum": 2903100,
+   "file": "wild-corpus\\project_euler\\problem_020\\sol1.py",
+   "name": "factorial",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 999992,
+   "P": 616,
+   "W": 16999847,
+   "exit_size": 1000001,
+   "hullsum": 708,
+   "file": "wild-corpus\\project_euler\\problem_020\\sol1.py",
+   "name": "split_and_add",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 136,
+   "P": 0,
+   "W": 0,
+   "exit_size": 273,
+   "hullsum": 34,
+   "file": "wild-corpus\\project_euler\\problem_045\\sol1.py",
+   "name": "hexagonal_num",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  },
+  {
+   "eps": 999992,
+   "P": 120,
+   "W": 16999847,
+   "exit_size": 1000001,
+   "hullsum": 204,
+   "file": "wild-corpus\\project_euler\\problem_065\\sol1.py",
+   "name": "sum_digits",
+   "box": [
+    -8,
+    8
+   ],
+   "arity": 1
+  }
+ ],
+ "quiet_n": 14,
+ "verdict": "quiet stratum too thin - no verdict",
+ "D_pooled": 0.7104322960263755,
+ "D_W_eps_active": 0.4893109467944804
+}

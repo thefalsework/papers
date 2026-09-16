@@ -52,3 +52,7 @@ package-lock.json
 # Python build artifacts
 __pycache__/
 *.pyc
+
+# Phase 3 wild-pilot corpus clones (pinned by hash in the spec postscript)
+absint-dictionary/wild-corpus/
+absint-dictionary/wild-corpus-2/
