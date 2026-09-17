@@ -4,7 +4,7 @@
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Draft addendum / companion seed to Paper 2, "Epistemic Dependency as Structural Condition" (Brink 2026). Status: draft, not yet submitted; may be developed as a standalone methodology paper. AI disclosure: produced with AI assistance (Anthropic Claude) under the correction architecture the parent paper specifies — [K]/[C]/[A]/[O] status tags, external anchoring preferred over recall, and contemporaneous ledgers. The two worked near-misses of §3 are drawn from the FalseWork Rieger–Nishimura formalization (June 2026) and point at artefacts in the public record (see §3, "Provenance").*
 

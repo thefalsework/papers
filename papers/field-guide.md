@@ -2,7 +2,7 @@
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 0.1 (July 2026). Speculative companion / field guide. Register note: this document is **[A] by default** — a tour of the programme written so a careful non-specialist can hold the whole shape. It rides on kernel-checked facts ([K], cited with Lean names) and classical mathematics ([C]) the way an essay rides on a map: the map is checked; the itinerary is not. Nothing here adds to the formal record. Nothing in the formal record depends on anything here. Where a claim is open ([O]) or only analogical, it is marked. The discipline of the series is that [A] and [O] are never silently promoted to [K].*
 
@@ -111,7 +111,7 @@ Paper 1 proposes working kernels in several domains. All non-music rows are **[A
 | Physics | **Measurement** / interpretation | Formalism vs what the formalism leaves open | Working kernel **[A]** |
 | GenAI (candidate) | **The Threshold** (Levin) | Manifold-membership undecidability | Candidate **[O]** / under review |
 
-The corpus on [falsework.dev/works](https://falsework.dev/works) classifies concrete works into the four positions (plus commitment gate). Those pages now also name each position's opened-square landmark — display vocabulary from the skeleton theorem, not a second classifier.
+The corpus (classified works across the four positions, plus commitment gate) also names each position's opened-square landmark — display vocabulary from the skeleton theorem, not a second classifier.
 
 Illustrative placements (all **[A]**; see also `position-taking-from-the-kernel-up.md`):
 
@@ -192,8 +192,6 @@ A reader who rejects every [A] gloss keeps every [K] theorem. That is the point 
 | Pythagorean / √2 shared floor | Paper 5 — [`pythagorean-shared-floor/pythagorean.md`](pythagorean-shared-floor/pythagorean.md) |
 | Canon as confrontation (exploratory) | Paper 6 — [`paper6-canonical-confrontation/paper6.md`](paper6-canonical-confrontation/paper6.md) |
 | Lean library | [`../lean/README.md`](../lean/README.md) |
-| Classified works on the web | [falsework.dev/works](https://falsework.dev/works) |
-| Learning trajectories | [falsework.dev/guides](https://falsework.dev/guides) |
 | Printable humanities bundle (PDF) | [`printables/humanities-bundle/`](printables/humanities-bundle/) — Start Here, this guide, Bach, Position-Taking |
 | Master index | [`INDEX.md`](INDEX.md) |
 

@@ -4,7 +4,7 @@ Chris Brink
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 11.8. Revisions from version 11.7: architectural refinement of the dictionary's structure, from formalization testing. The five-position framing is refined to **four-position partition (Infrastructure, Distribution, Exploitation, Refusal) plus a Commitment gate**. The four cells are pairwise disjoint Heyting conditions on the kernel image; the gate is a binary fixedness condition within each cell rather than a fifth lattice cell of its own. Two formal events drove the refinement: (i) on 2026-05-10 the framework reframed Commitment as a binary gate that applies within each of the four cells, on the basis that the previously-named "five positions" structure produced an irresolvable disjointness problem between Commitment and Exploitation within `(Im(η))ᶜᶜ` whose dissolution was cleaner than its solution; (ii) on the same date, a Lean exploration ([`../../lean/FalseWorkPapers/Positions/MomentRelative.lean`](../../lean/FalseWorkPapers/Positions/MomentRelative.lean)) tested whether the four cell-restricted iterations derive from a single uniform construction and produced a negative result on theorem-grade unification with a positive result on schema-level uniformity. The verbal derivation in § 3.4 still motivates the same structure (an encounter/non-encounter distinction, a three-way partition of the encounter branch into field / geometry / limit, and a directional refinement of the limit branch); what the verbal apparatus produces is now read as four lattice cells plus a gate, not five lattice cells. Section-level rewriting of § 3.4, § 4, and the empirical demonstrations to reflect the gate framing is deferred to v11.9, pending the trajectory-reclassification empirical work in the FalseWork application. Until v11.9 lands, [`../comma-formal-structure-note.md`](../comma-formal-structure-note.md) is the canonical statement of the refined architecture, with [`../../validation/claims/five-position-derivation-formalization.md`](../../validation/claims/five-position-derivation-formalization.md) v0.4 carrying the version-tracked claim status. Readers should hold the body of this paper as the v11.7 substrate of the empirical work, with the architectural commitment updated as recorded here. No substantive revisions to § 2 (Incompleteness Condition), § 5 (scholarly precedent), or any validation hooks tracked since v11.4.*
 
@@ -304,7 +304,7 @@ The framework is implemented as a computational classification instrument at Fal
 
 ## References
 
-Brink, C. (2026). FalseWork: A computational instrument for structural analysis of creative and scientific works \[Software/Platform\]. https://falsework.dev
+Brink, C. (2026). FalseWork: A computational instrument for structural analysis of creative and scientific works \[Software/Platform\]. Private platform; outputs used by these papers are archived in the papers repository.
 
 Brink, C. (2026b). Epistemic dependency as structural condition: A live case study in AI-assisted theoretical framework development. Manuscript.
 

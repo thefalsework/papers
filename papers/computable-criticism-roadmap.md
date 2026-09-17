@@ -2,7 +2,7 @@
 
 **From machine-assisted structural analysis to a computational structuralism**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 0.3 (August 2026; v0.2 added §5.0 — the computational layer is not greenfield, two prototypes exist; v0.3 adds §7.1 on where the layers merge, disambiguates Core v2 from the algebra's deferred V2, and promotes two findings from the algebra review into spec requirements). Register note: this is a programme document — part argument, part engineering specification. Everything argumentative is **[A]**; everything speculative is marked **[O]**; the engineering sections are a spec, graded by acceptance criteria rather than epistemic tags. Nothing here is kernel-checked. This document is written to be handed to a collaborator or engineer who has not read the surrounding corpus: §1–§3 say why, §4 says what changes in the theory, §5–§7 say what to build (§5.0 says what already exists), §8 says in what order, §9 says what is not being claimed.*
 

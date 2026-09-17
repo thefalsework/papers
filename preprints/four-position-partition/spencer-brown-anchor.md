@@ -3,7 +3,7 @@
 ## Reading the Four-Position Partition Through *Laws of Form*
 
 **Chris Brink**
-falsework.dev
+github.com/thefalsework/papers
 May 2026 — companion to [`paper.md`](paper.md).
 
 ---

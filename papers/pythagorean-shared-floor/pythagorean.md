@@ -1,6 +1,6 @@
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 1.5. Revisions from version 1.4: § 2.2 gains a boxed theorem stating the continued-fraction characterization of the Pythagorean-comma-optimal temperaments precisely (best approximation of the second kind), now that the companion Lean formalization has kernel-checked it. The mathematical content is classical (Khinchin 1964, Thm. 16; Hardy & Wright § 10.15); the contributions recorded are the formalization — the second-kind theorem appears absent from current Mathlib, which carries only Legendre's converse — and its application to α = log₂(3/2). The narration of §§ 2.2, 4.2, 7.1 is otherwise unchanged. Tracked at [`validation/claims/optimal-ntet-continued-fraction.md`](https://github.com/thefalsework/papers/blob/main/validation/claims/optimal-ntet-continued-fraction.md) (GitHub issue #11).*
 

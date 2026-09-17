@@ -17,7 +17,7 @@ This repository holds the papers themselves, the open validation items they cont
 | **Four-cell partition** | **[K]** kernel-checked (Lean) | [`lean/FalseWorkPapers/Positions/Partition.lean`](lean/FalseWorkPapers/Positions/Partition.lean), [`preprints/four-position-partition/paper.md`](preprints/four-position-partition/paper.md) |
 | **Music anchor** (`Div12`, tritone kernel) | **[K]** witness | [`lean/FalseWorkPapers/Examples/DivisorLattice12.lean`](lean/FalseWorkPapers/Examples/DivisorLattice12.lean), Wolfram [`wolfram/music-anchor/`](wolfram/music-anchor/) |
 | **Epistemic dependency / correction architecture** | Paper 2 → arXiv v1 (June 2026); Stage 4 (T&N convergence) open | [`papers/paper2-epistemic-dependency/`](papers/paper2-epistemic-dependency/) |
-| **Practice domains (cinema, literature, …)** | **[A]** classifier + expert correspondence | [falsework.dev/kernels](https://falsework.dev/kernels) |
+| **Practice domains (cinema, literature, …)** | **[A]** classifier + expert correspondence | [`papers/field-guide.md`](papers/field-guide.md) |
 | **Cross-domain derivation theorem** | **[O]** schema + open validation | [`validation/claims/five-position-derivation-formalization.md`](validation/claims/five-position-derivation-formalization.md) |
 
 The critical path: close **music + Paper 2** before expanding domain or metaphysics claims.
@@ -58,11 +58,11 @@ Depending on what brought you here — sorted by **the question you're asking**,
 - **"Just tell me what this is, plainly"** → [**`START-HERE.md`**](START-HERE.md) (five minutes, no jargon, starts from music) and then [Discussions](https://github.com/thefalsework/papers/discussions) if you want to react or ask anything.
 - **"I want the whole programme in one approachable walk"** → [`papers/field-guide.md`](papers/field-guide.md) (*The Distinction That Does Not Cancel*) — ontology → four-fold → why-twelve → domains → method → corpus map. Then [`papers/bach-at-the-kernel.md`](papers/bach-at-the-kernel.md) for the deep music specimen.
 - **"Why are there twelve notes in Western music? What does this have to do with Bach, Coltrane, Schoenberg?"** → [`START-HERE.md`](START-HERE.md) covers it, then [`validation/claims/why-twelve-tet.md`](validation/claims/why-twelve-tet.md) for the proof.
-- **Curious, want the narrative gist** → [**falsework.dev/thesis**](https://falsework.dev/thesis) (the narrative argument, ≈10-minute read) or [**falsework.dev/theory**](https://falsework.dev/theory) (the full technical exposition; includes a 3-minute summary at the top).
+- **Curious, want the narrative gist** → [`papers/plain-brief.md`](papers/plain-brief.md) (the argument in plain language) or [`papers/philosophers-brief.md`](papers/philosophers-brief.md) (the same, for a philosophical reader).
 - **Mathematician / category theorist / logician** → [Paper 1 § 2 and § 2.1](papers/paper1-kernels-and-commas/paper1.md) (the Lawvere fixed-point unification of the Cantor and Gödel groundings, and the G ∧ R ∧ C ↔ Lawvere's-hypothesis correspondence reframing the extension-to-practice problem; tracked at [`validation/claims/lawvere-unification-of-formal-groundings.md`](validation/claims/lawvere-unification-of-formal-groundings.md)), [Paper 3 § 4](papers/paper3-distinction-operation/paper3.md) (the six-point music-kernel categorical claim needing verification), and [Paper 5](papers/pythagorean-shared-floor/pythagorean.md) (Baker's theorem applied to the Pythagorean comma and the irrationality of √2). Concrete open items: [Issue #1](https://github.com/thefalsework/papers/issues/1), [Issue #2](https://github.com/thefalsework/papers/issues/2), [Issue #4](https://github.com/thefalsework/papers/issues/4).
 - **Philosopher / humanist / reception studies** → [Paper 2](papers/paper2-epistemic-dependency/paper2.md) (epistemic dependency as structural condition in AI-assisted scholarship) and [Paper 6](papers/paper6-canonical-confrontation/paper6.md) (canonical status as the structural trace of kernel-level confrontation — exploratory companion). Open item with a testable empirical prediction: [Issue #8](https://github.com/thefalsework/papers/issues/8).
 - **Philosopher of science (emergence, multi-level ontology, philosophy of physics)** → [Paper 1 § 5.4](papers/paper1-kernels-and-commas/paper1.md) and [Paper 3 § 7.3](papers/paper3-distinction-operation/paper3.md) cite Ellis (2016) and Cartwright (1999) as adjacent scholarly precedent for the paper's domain-dependent-formalism posture. Whether the citations are correctly scoped is an open validation claim: [Issue #10](https://github.com/thefalsework/papers/issues/10).
-- **Practitioner** (composer, architect, filmmaker, software engineer) → [**falsework.dev/kernels**](https://falsework.dev/kernels) (the registered kernels as a working navigational instrument) and [**falsework.dev/structural-profile**](https://falsework.dev/structural-profile) (the analysis pipeline that generates structural profiles of specific works).
+- **Practitioner** (composer, architect, filmmaker, software engineer) → [`papers/field-guide.md`](papers/field-guide.md) (the four positions as a working navigational lens, with classified works) and [`papers/position-taking-from-the-kernel-up.md`](papers/position-taking-from-the-kernel-up.md).
 - **Lean 4 / formalization contributor** → [`lean/README.md`](lean/README.md) — formalization targets, including (i) the music-kernel endofunctor formalization (Paper 3 § 4, Tier 1–3 entries), and (ii) the four-position-partition + Commitment-gate formalization under [`lean/FalseWorkPapers/Positions/`](lean/FalseWorkPapers/) (partition theorem and asymptotic-residue theorem both kernel-checked; full tree sorry-free; Commitment gate at schema level) with the [`papers/comma-formal-structure-note.md`](papers/comma-formal-structure-note.md) expository companion. A single-page proof-dependency-and-status diagram lives at [`lean/ARCHITECTURE.md`](lean/ARCHITECTURE.md). A first Mathlib contribution drawn from this work is open as PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618).
 
 ---
@@ -83,14 +83,13 @@ Concretely:
 
 ## See it applied
 
-The papers describe a framework; the framework runs live as an instrument:
+The papers describe a framework; the applied side lives in this repository:
 
-- **[falsework.dev/kernels](https://falsework.dev/kernels)** — the registered-kernels instrument. Each kernel from the papers (the Fifth, the Cut, the Mark, Gravity, the Conditional Branch, the Wave Function, Syntax) appears here with its four-criteria evidence, field topology, and the works empirically classified against its territories. This is where the abstract categorical sketch becomes a working navigational object.
-- **[falsework.dev/thesis](https://falsework.dev/thesis)** — the narrative argument with historical and scholarly precedents cited inline (Spencer-Brown, Bruner, Meyer & Land, Feynman, Hurwitz/Frobenius, Baker, Lakatos, and the domain-specific precursors each kernel inherits).
-- **[falsework.dev/theory](https://falsework.dev/theory)** — the full technical exposition. Dual-register: a 3-minute summary and a complete reading. Links back to each paper in this repository at the relevant citation.
-- **[falsework.dev/structural-profile](https://falsework.dev/structural-profile)** — the seven-stage analysis pipeline that generates structural profiles of specific works. This is where the framework becomes a testable instrument: profiles are hypotheses the papers predict, and their empirical behavior is part of the framework's validation record.
+- **[`papers/field-guide.md`](papers/field-guide.md)** — the practitioner-facing guide to the four positions and the commitment gate, with classified works.
+- **[`papers/plain-brief.md`](papers/plain-brief.md)** — the narrative argument in plain language, no math.
+- **[`wolfram/`](wolfram/)** — the computational corpus work: machine-transduced structural cores, the dependency-graph algebra, and the registered study results.
 
-The site is a separate codebase (proprietary). The papers in this repository are the formal record; the site is the applied instrument. Links are one-way: papers point at live URLs, the site points at paper markdown files in this repository.
+(An earlier interactive platform generated machine structural profiles used as raw material in some of the applied studies; where a document draws on that provenance it says so inline. The platform is not part of the validation path and is not maintained as a reference.)
 
 ---
 
@@ -188,7 +187,6 @@ BibTeX, RIS, and EndNote entries for any version can be exported directly from t
 
 - **Author:** Chris Brink — Independent researcher
 - **Email:** `chris@falsework.dev`
-- **Site:** [falsework.dev](https://falsework.dev)
 - **Preferred channel for validation and correction:** [GitHub Issues](https://github.com/thefalsework/papers/issues)
 - **Email is fine for pre-submission discussion or any interaction you would prefer to start privately.** Anything that becomes part of the project's validation record will be moved to a public issue with your consent.
 

@@ -40,7 +40,7 @@ The project maintainer (Chris Brink, `chris@falsework.dev`) is responsible for c
 
 ## Scope
 
-This Code of Conduct applies within all community spaces — GitHub Issues, PRs, Discussions, the `falsework.dev` site's public comments, outreach channels named in [`docs/outreach/`](docs/outreach/), and direct correspondence with the maintainer — and applies when an individual is officially representing the project in public spaces.
+This Code of Conduct applies within all community spaces — GitHub Issues, PRs, Discussions, outreach channels named in [`docs/outreach/`](docs/outreach/), and direct correspondence with the maintainer — and applies when an individual is officially representing the project in public spaces.
 
 ## Enforcement
 

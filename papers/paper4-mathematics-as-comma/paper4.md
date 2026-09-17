@@ -1,6 +1,6 @@
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 5.4. Revisions from version 5.3: three formalization-status additions tied to the 2026-06 Lean results, each scoped as a datum for an open question this paper had already posed rather than as a new claim. § 3.1 adds a closing paragraph: the open question at the end of § 3.1 (whether the comma-as-mathematics hypothesis requires rejecting classical logic) acquires a sharp formal datum — kernel-checked, the framework's four-position partition is non-degenerate at a kernel iff the kernel is an ordinary element of a Heyting algebra, so the fourth position exists only where double negation fails to close; in Boolean (classical) algebras the partition provably collapses. § 3.3 adds a formalization-status note: the Cantor floor is kernel-checked (`diagonal_escapes`, `cantor_no_surjection`, `lawvere_fixedPoint`; Cantor instance only, Tarski/Gödel open). § 3.5 adds a closing paragraph: the formal closure of "one mark, iterated" — the free Heyting algebra on one generator — first supports the full four-position structure at its six-element truncation, which is isomorphic to the music lattice Div12 with the free generator as unique kernel (isomorphism and uniqueness kernel-checked; the shared-underlying-logic reading remains a structural identification). No other changes.*
 

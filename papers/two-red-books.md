@@ -2,7 +2,7 @@
 
 **A unified reading of three machine-generated structural analyses**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 0.1 (August 2026). Register note: this paper is **[A] throughout** — an interpretive synthesis of three documents produced by the falsework.dev analysis pipelines (Claude Fable 5, August 2026): a Structural Profile of Tolkien's Red Book of Westmarch, a Structural Profile of Jung's Red Book (Liber Novus), and a Deep Synthesis comparing the two. The three source documents are themselves machine criticism: structured mappings, removal tests, and generative principles, with derived prose. This paper unifies them for a human reader. Nothing here is kernel-checked; where this paper adds an observation not present in the source documents, it says so.*
 

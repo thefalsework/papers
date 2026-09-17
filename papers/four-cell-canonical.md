@@ -1,6 +1,6 @@
 # Four Cells, Not Five: Canonical Decision on the Position Partition
 
-**Chris Brink** · FalseWork (falsework.dev) · June 2026
+**Chris Brink** · FalseWork · June 2026
 
 *Status: project decision record. This note resolves the five-vs-four coherence debt logged against Paper 1 (INDEX v11.9). It does not introduce new mathematics; it records which of two existing descriptions is canonical, why, and what must be brought into line. The formal basis is **[K]** (kernel-checked); the decision and its propagation are governance.*
 

@@ -39,11 +39,6 @@
   "access_right": "open",
   "related_identifiers": [
     {
-      "identifier": "https://falsework.dev",
-      "relation": "isSupplementedBy",
-      "resource_type": "other"
-    },
-    {
       "identifier": "https://github.com/thefalsework/papers",
       "relation": "isSupplementTo",
       "resource_type": "software"

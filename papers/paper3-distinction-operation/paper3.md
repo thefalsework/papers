@@ -1,6 +1,6 @@
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 9.5. Revisions from version 9.4: formalization-status paragraph added at the end of § 5.1. The Level-1 root now has a kernel-checked floor in the repository's Lean formalization: Cantor's diagonal (`diagonal_escapes`, axiom-free) and Lawvere's fixed-point theorem (`lawvere_fixedPoint`) as the formal unifier of the diagonal lineage § 5.1 describes — Cantor instance checked, Tarski/Gödel instances open. The identification of the diagonal escape with the comma remains a structural identification, exactly as before: the theorems carry the [K], the reading does not. The version note also registers, without engaging them in the body, two 2026-06 lattice-level results bearing directly on § 4's categorical object: the kernel trichotomy (the four-position partition is non-degenerate at a kernel iff the kernel is an **ordinary** element of a Heyting algebra — neither regular nor dense — which forces a minimum algebra size of six elements) and the all-n kernel law for one-generated Heyting algebras (the free generator is the unique such element). Both are documented in [`../connecting-the-spine.md`](../connecting-the-spine.md) § 3.4 and ledger rows 20–21, and will be engaged in the § 4 rewrite already deferred to v10.0. No other changes.*
 

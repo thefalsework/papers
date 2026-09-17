@@ -2,7 +2,7 @@
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 8.19 (June 2026). arXiv v2 prep. AI disclosure: this paper and the FalseWork development it documents were produced with AI assistance (Anthropic Claude), under the correction architecture the paper specifies — expert correspondence, [K]/[C]/[A]/[O] status tags, pre-registration, and contemporaneous ledgers (Section 6.3); formal contributions disclosed AI use per venue policy (Mathlib PR #39618). v8.18–8.19: Citkin correspondence closure (Section 4.6). Methodology at a glance: Section 1.1. Prior revision record in appendix.*
 

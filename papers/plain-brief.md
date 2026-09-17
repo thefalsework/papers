@@ -26,7 +26,7 @@ To be clear about what the green light means: the *mathematics* is machine-check
 
 ## The machine that reads
 
-The project also built an instrument: a website (falsework.dev) where an AI reads a cultural work — a novel, an album, a film — and produces something unusual. Not a review, not a summary, but a *structure diagram*: here are the load-bearing parts, here is what depends on what, and — the signature move — here is what would collapse if you removed each piece. Like analyzing a Jenga tower: which blocks are decorative, and which bring everything down?
+The project also built an instrument: a web application where an AI reads a cultural work — a novel, an album, a film — and produces something unusual. Not a review, not a summary, but a *structure diagram*: here are the load-bearing parts, here is what depends on what, and — the signature move — here is what would collapse if you removed each piece. Like analyzing a Jenga tower: which blocks are decorative, and which bring everything down?
 
 One rule governs the whole machine, and it's the project's most important sentence: **the AI proposes; it never confirms.** Treat the AI like a metal detector. It's genuinely good at beeping over buried structure — and completely untrustworthy about *what's* buried. You still have to dig. Every claim it produces is labeled by how it could be checked, and the labels are never quietly upgraded.
 

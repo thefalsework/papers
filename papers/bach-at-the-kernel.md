@@ -2,7 +2,7 @@
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 0.3 (August 2026). Speculative companion piece. Register note: this document is **[A] throughout** — a structural reading, not a result. It rides on kernel-checked facts ([K], cited precisely with their Lean artifacts as they appear) the way an essay rides on a map: the map is checked, the itinerary is not. Nothing here adds to the formal record, and nothing in the formal record depends on anything here. The placement of works and practices in the partition's cells is interpretive, resolution-dependent (see § 4 for why that hedge is load-bearing, not decorative), and offered in the spirit of the framework's own discipline: the kernel decides what the cells are; it does not decide where Bach sits in them. Version 0.2 folds in the opened-square reading (Aristotle under Heyting negation) and a one-sentence ontological gloss of the stack — both as expository scaffolding for the same music walk, not as new claims about Bach. Version 0.3 folds in the aperture layer (August 2026): resolution is now itself a formal object (a nucleus), and the resolution hedge is theorem-backed — the four-position reading of this essay survives coarse-graining at exactly one of the twelve-tone lattice's eight observers, a kernel-checked fact (§ 4) — together with the hearing hypothesis that stakes what an "analytical resolution" is (`preprints/hearing/`). As throughout: new [K] beneath the same [A].*
 

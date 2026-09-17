@@ -1,7 +1,7 @@
 # A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure
 
 **Chris Brink**
-falsework.dev
+github.com/thefalsework/papers
 **Version.** v1.1, September 2026 (first archived deposit) — preprint, not yet submitted to a venue. v1.0 was the May 2026 draft; v1.1 changes no mathematical content and adds the deposit metadata, the citation block, and the companion-results postscript recording lattice-level developments (the non-degeneracy criterion, the perceptron bridge) that postdate the May draft.
 
 ---

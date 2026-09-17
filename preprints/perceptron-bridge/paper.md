@@ -1,7 +1,7 @@
 # The Perceptron Is a Classical Element: Threshold Decision Regions in the Heyting Algebra of Open Sets, with a Registered Negative Result on Phantom Mass in Trained Networks
 
 **Chris Brink**
-falsework.dev
+github.com/thefalsework/papers
 **Version.** Preprint v1.1, September 2026 — not yet submitted. (v1.1 corrects §7's instrument note: ε-closing is the estimator of the ¬¬-residual, not itself a nucleus; dated erratum in place. No result changes.)
 **Status discipline.** Every claim carries one of five grades: **[K]** kernel-checked in Lean 4 against Mathlib4 (no `sorry`, no `native_decide`, axiom audits at most `propext`, `Classical.choice`, `Quot.sound`); **[C]** classical mathematics, cited; **[R]** empirical result from a pre-registered protocol (spec and kill conditions committed before code, dated postscripts binding); **[A]** structural analogy, argued not proved; **[O]** open. The grades are load-bearing: nothing below claims more than its tag.
 

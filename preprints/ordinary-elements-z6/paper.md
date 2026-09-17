@@ -1,7 +1,7 @@
 # The Unique Ordinary Element of a One-Generated Heyting Algebra, the Subgroup Lattice of ℤ/12ℤ, and a Characterization of n = p²q
 
 **Chris Brink**
-falsework.dev
+github.com/thefalsework/papers
 July 2026 — preprint, not yet submitted.
 
 ---

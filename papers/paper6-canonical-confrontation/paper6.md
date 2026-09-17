@@ -4,7 +4,7 @@ Chris Brink
 
 **Chris Brink**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *Version 2.1. Revisions from version 2.0: refinement to § 4 absorbing the Korsyn 1991 / Straus 1990 programme of Bloomian musicology as corroborative rather than counter-evidence of the structural relocation --- the Bloomian-music literature's recurrent strain toward structural (rather than interpersonal) accounts of musical influence is now treated as supporting the paper's thesis rather than as a domain the interpersonal agon model simply fails to reach. Korsyn (1991) and Straus (1990) added to References. No other substantive changes. Companion paper to Brink 2026a--d (Papers 1--4) and the Pythagorean companion (Brink 2026e).*
 

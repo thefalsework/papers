@@ -3,7 +3,7 @@
 ## A Closure Framework for the Structural Effects of Commitment-Yes
 
 **Chris Brink**
-falsework.dev
+github.com/thefalsework/papers
 May 2026 — companion to [`paper.md`](paper.md), drafted as a sketch and not yet a complete development.
 
 ---

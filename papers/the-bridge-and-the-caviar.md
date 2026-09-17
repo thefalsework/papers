@@ -2,7 +2,7 @@
 
 **Notes on audience, machine readers, and the human niche**
 
-FalseWork (falsework.dev)
+FalseWork
 
 *August 2026. Register note: this is a distillation of a working dialogue (August 6, 2026) between the author and a model — a provenance worth stating, since the note's subject is partly that division of labor. Everything here is **[A]** interpretive claim or **[O]** forecast; one claim connects to a [K] theorem and says so. Nothing is checked. The note earns its place in the corpus by making several load-bearing reframes explicit before they evaporated: the specimen engine, checkability as the coming filter regime, influence as dependency, ordinariness as the human niche, and the instrument as provenance analyzer.*
 

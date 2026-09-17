@@ -35,7 +35,7 @@ assert s.count(anchor) == 1
 s = s.replace(anchor, anchor + "\n" + preamble, 1)
 ta_old = "\\author{}\n\\date{}\n"
 assert s.count(ta_old) == 1
-s = s.replace(ta_old, title + "\n\\author{Chris Brink\\\\FalseWork (falsework.dev)}\n\\date{}\n", 1)
+s = s.replace(ta_old, title + "\n\\author{Chris Brink\\\\FalseWork}\n\\date{}\n", 1)
 bd_old = "\\begin{document}\n"
 assert s.count(bd_old) == 1
 s = s.replace(bd_old, bd_old + "\\maketitle\n", 1)
@@ -43,7 +43,7 @@ sec_old = (
     "\n\\section{Epistemic Dependency as Structural Condition: A Documented Case\n"
     "Study of AI-Assisted Scholarship and the Maturity of Correction\n"
     "Mechanisms}\\label{epistemic-dependency-as-structural-condition-a-documented-case-study-of-ai-assisted-scholarship-and-the-maturity-of-correction-mechanisms}\n"
-    "\n\\textbf{Chris Brink}\n\nFalseWork (falsework.dev)\n"
+    "\n\\textbf{Chris Brink}\n\nFalseWork\n"
 )
 assert s.count(sec_old) == 1
 s = s.replace(sec_old, "", 1)

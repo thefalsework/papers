@@ -2,7 +2,7 @@
 
 If you've landed in this repository and the front page reads like a wall of jargon, this page is for you. No background needed. About a five-minute read.
 
-> **Prefer a designed, narrative read over a code repository?** The same ideas, told as a story with no math, live at **[falsework.dev/thesis](https://falsework.dev/thesis)** — that's the friendliest way in. This page is the quick version for people who arrived here on GitHub.
+> **Prefer a narrative read?** The same ideas, told plainly with no math, live in [`papers/plain-brief.md`](papers/plain-brief.md). This page is the quick version for people who arrived here on GitHub.
 
 ---
 
@@ -56,7 +56,7 @@ Most of this repo is built for mathematicians and logicians. You are not obligat
 
 - **Just want to talk about it?** Jump straight into [**"Where does this lens fail in your field?"**](https://github.com/thefalsework/papers/discussions/12) — the most direct way in — or browse [all Discussions](https://github.com/thefalsework/papers/discussions) (no code, no formal claim required — plain questions and pushback welcome).
 - **Prefer email?** `chris@falsework.dev`. Say where the lens rings true or false in whatever you know best.
-- **Want the narrative version?** [falsework.dev/thesis](https://falsework.dev/thesis) tells the story end to end, no math.
+- **Want the narrative version?** [`papers/plain-brief.md`](papers/plain-brief.md) tells the story end to end, no math.
 
 The whole project runs on the bet that an honest framework should be *legible to anyone who's curious* and *testable by anyone who knows a field it touches*. You qualify on at least one of those just by being here.
 
