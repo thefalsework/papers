@@ -1,3 +1,43 @@
+# Status 2026-09-19: conemass on Prove2Me — third graph type, report sent to platform authors
+
+conemass ran unmodified on the Prove2Me formal-mathematics dependency
+graph (Chen–Marwaha–Lu–Yuen–Peng, arXiv:2608.28433): 280 missions
+walked via the public API, 4,077 nodes, 8,333 edges, snapshot
+2026-09-19 on platform v0.10.6. Two deliverables, both in their units:
+definitions ranked by audit priority (their stated scaling problem is
+that human audit concentrates on definitions and goal statements) and
+open theorems ranked by downstream unlock mass (complementary to their
+closability heuristic: theirs estimates easy to close, this estimates
+worth closing; exact by their Property 1 — parents auto-resolve).
+
+Headline rows: `StochasticBandit`, 3 direct dependents, #2
+audit-priority score, carrying the 151K-line Bandit Algorithms mission
+— the liblzma profile transposed. `zeta_ne_zero_of_strip_of_six_lt_im`,
+conemass rank 15 vs transitive-count rank 63, anchoring an induction
+chain of strip-widening lemmas.
+
+Null checks registered and run before interpretation, over the
+504-lemma open stratum only: vs transitive-dependent count Spearman
+0.80 with 16/40 top-40 overlap; vs chain depth 0.81, 16/40. Agreement
+in the bulk, disagreement at the top — the metric is not re-expressing
+mission shape. Sketch-union vs guaranteed-intersection bracket moves
+almost nothing (0.87, 34/40). One artifact class found and disclosed
+rather than patched: wrapper restatements (mass 1.0, one dependent
+that depends on nothing else — `green_tao_theorem`). One real bug
+caught by an external arithmetic check: `new Map()` last-wins on
+duplicate names silently counted 4 status-ambiguous theorems
+(Proved in one environment, Open in another) as Open; fixed by
+excluding conflicting-status names from both strata, 508 -> 504,
+rankings unchanged.
+
+Shipped: `examples/prove2me/` in github.com/thefalsework/conemass
+(scripts, both edge variants, ranking CSVs, nulls.json, REPORT.md),
+release v1.1.0 (Zenodo version DOI auto-minted via existing sync,
+concept DOI 10.5281/zenodo.22261985). Report PDF emailed to Shuze
+Chen (corresponding author) 2026-09-19: concrete finding first,
+credential in a subordinate clause, no framework language, no ask
+beyond reading. Local working copy: C:\dev\conemass-prove2me\.
+
 # Status 2026-09-16 (night, latest): phantom-predictor v0.3 DEPOSITED — doi 10.5281/zenodo.22802676
 
 Published to Zenodo 2026-09-16 immediately after the v0.3
