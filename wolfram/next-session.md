@@ -1,3 +1,33 @@
+# Status 2026-09-22: paper v0.8 (Pfeiffer prior art + gameability) and Socket outreach sent
+
+Two additions to `paper/quiet-criticality.md`, prompted by pre-outreach
+diligence, committed and pushed with a regenerated PDF (v0.8,
+2026-09-22): a closest-prior-work paragraph positioning conemass against
+Pfeiffer (MSR 2021, PageRank + truck factor on the reversed dependency
+graph — same diagnosis of the incumbent, different functional; empirical
+separation already in Result 1, liblzma5 PageRank 36 vs conemass 8), and
+a new limitation naming the shell-dependent gaming attack with its
+detectable signature (mass arriving from tiny cones; same profile occurs
+naturally as wrapper restatements in the Prove2Me example). No
+computation or ranking changed.
+
+Email sent to Feross Aboukhadijeh (Socket) 2026-09-22, prompted by his
+podcast conversation with Dylan Ayrey and Joel De La Garza on AI agents
+attacking supply chains via path-of-least-resistance targets. Structure:
+podcast opener (honest — the conversation is how the fit was noticed),
+Debian retrodiction in the subject line, unicode-ident crates.io row
+first in Socket's own ecosystem, metric named only after the claim, the
+drift framing (dated-snapshot rank climb as the xz insertion pattern),
+and both limitations stated up front (RustSec pooled-cell loss;
+gameability, now citable in the paper). No ask; repo link is the ask.
+Socket-gap diligence beforehand confirmed their published score treats
+dependency counts as consumer-side penalties with an activity-softening
+exponent — the upstream concentration question is genuinely unoccupied.
+Truffle Security (Ayrey) deliberately held: warmer path is through
+Feross if he bites. a16z not contacted. Awaiting replies from both Chen
+(Prove2Me, sent 09-19) and Feross; silence from either is not evidence
+of non-reading.
+
 # Status 2026-09-19: conemass on Prove2Me — third graph type, report sent to platform authors
 
 conemass ran unmodified on the Prove2Me formal-mathematics dependency
