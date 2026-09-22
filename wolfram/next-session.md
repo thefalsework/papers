@@ -28,6 +28,20 @@ Feross if he bites. a16z not contacted. Awaiting replies from both Chen
 (Prove2Me, sent 09-19) and Feross; silence from either is not evidence
 of non-reading.
 
+Same day, a fourth-graph-type candidate was killed at feasibility and
+recorded: unlock-mass ranking of GitHub issues by blocking
+relationships (the Prove2Me Ranking 2 reading transposed to task
+graphs). Eight large repos probed at 2,000 open issues each: native
+issue dependencies (GA Aug 2025) at 0-1.1% adoption, task-list
+tracking at 0-4.7% and purely star-shaped (Godot: 619 edges in 14
+meta-issues, zero issues both tracking and tracked, depth exactly 1),
+text conventions in the tens per repo. No cones, no study, no
+retrodiction. Probe script, raw samples, and REPORT.md in
+`examples/github-issues/` in the conemass repo, linked from the README
+so the idea is not retried. Noted without claim: the terrain may exist
+in enterprise Jira and GitLab, which record blocking links
+first-class but are mostly private.
+
 # Status 2026-09-19: conemass on Prove2Me — third graph type, report sent to platform authors
 
 conemass ran unmodified on the Prove2Me formal-mathematics dependency
