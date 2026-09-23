@@ -115,6 +115,25 @@ are achievable as perceived fields of some observer); write the
 falsework note (short paper: statement, proof, Lean artifact, one
 empirical table).
 
+FOLLOW-UP same evening: an external verification dump of the proof
+was triaged. Its arithmetic re-confirmed the per-cone computation,
+but its mass-conservation claim (total = |V| unconditionally, for
+both fields) is WRONG twice over — empty cones contribute nothing,
+and a blur CAN create mass by inflating an empty cone to a nonempty
+one (the empty case of sum_abs_err_le prices the invention at exactly
+one unit). The error exposed the sharper theorem: conservation holds
+iff the observer preserves empty cones — DENSITY, j(bot) = bot in
+nucleus language. Two theorems added and kernel-checked
+(mass_conserved_of_dense: dense observers move mass, never mint it;
+falsework_inequality_observer: the bound for a single inflationary
+operator on Finset V, the literal Heyting-observer shape). Also
+recorded from the dump, as a remark not a theorem: per cone the
+blurred credit distribution is majorized by the true one — observers
+flatten, never sharpen; a Schur-flattening statement for the full
+field is a candidate second theorem. My own prose summary ("blur
+cannot create or destroy load") had the dump's same overstatement and
+is corrected by the density theorem.
+
 SCHEDULER SPEC (same evening). Prompted by the question "could
 Prove2Me eliminate the human in the loop and let agents automate on
 proof priority?" — answer written as a spec rather than waiting for
