@@ -1,3 +1,32 @@
+# Status 2026-09-23 (evening 2): arrival-filter follow-up — monitorable, verdict closed
+
+The registered succession-filter cell from study 07 was run same day
+(oracle-scanner/08-arrival-filter.mjs, filter fixed before running:
+strip digits/dots/t64 from names; entrant whose stem was in the prior
+top-100 = succession, else genuine arrival). Result: median 13
+genuine arrivals per release (range 8-19), under the carried-over
+<=15 threshold — ARRIVAL ALERTING IS MONITORABLE, verdict closed
+affirmatively. All known cases confirmed at their dates (liblzma2
+2011, liblz4-1 2017, libzstd1 2019, libkeyutils1 2009, krb5 stack
+2011); liblzma5 correctly absorbed as 2013 succession of liblzma2;
+the filter catches the libkrb53 -> libkrb5-3 rename. Soft notes:
+re-entries re-alert (defensible); doc/font payload-implausible rows
+remain (product filter, not metric). Paper updated to v0.12 with the
+measured verdict (commit 3a7fd70); Zenodo release deliberately NOT
+cut for this — v1.4.0 was minted an hour earlier for Result 4, and
+the next release can carry v0.12. The arrival-alert product story is
+now complete and measured end to end: load arrives at the head (#8
+day one), sits for 14 years, the alert volume after succession
+filtering is ~7 rows/year for a whole OS distro, and the alert fires
+on the entire xz class with years of lead.
+
+Queued next per the build-on-it map: crates.io index git-history
+arrival retrodiction (unicode-ident's arrival date; second substrate
+for Result 4); graph-anatomy study (why Debian separates from
+PageRank and crates doesn't — shape statistic to predict conemass
+value in advance); Prove2Me priority-menu spec (write when their
+database repo goes public; Peng thread warm).
+
 # Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
 
 Registered drift study run on the ten dated Debian snapshots

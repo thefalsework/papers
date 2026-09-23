@@ -1,0 +1,279 @@
+{
+ "steps": [
+  {
+   "step": "2007->2009",
+   "entrants": 19,
+   "successions": 6,
+   "genuine": 13,
+   "genuineList": [
+    "lzma(13292)",
+    "libxcb1(new)",
+    "libxcb-xlib0(new)",
+    "libsqlite3-0(132)",
+    "libkeyutils1(994)",
+    "linux-libc-dev(new)",
+    "libgmp3c2(111)",
+    "ttf-dejavu-core(new)",
+    "ttf-dejavu-extra(new)",
+    "libsysfs2(114)",
+    "libts-0.0-0(new)",
+    "libdirectfb-1.0-0(new)",
+    "libxdamage1(1072)"
+   ],
+   "successionSample": [
+    "gcc-4.3-base",
+    "libdb4.6",
+    "libgnutls26",
+    "libdb4.5",
+    "python2.5-minimal",
+    "python2.5"
+   ]
+  },
+  {
+   "step": "2009->2011",
+   "entrants": 23,
+   "successions": 7,
+   "genuine": 16,
+   "genuineList": [
+    "libc-bin(new)",
+    "liblzma2(new)",
+    "xz-utils(new)",
+    "sensible-utils(new)",
+    "libuuid1(175)",
+    "libdbus-1-3(107)",
+    "libk5crypto3(new)",
+    "libkrb5support0(new)",
+    "libgssapi-krb5-2(new)",
+    "libffi5(211)",
+    "libc-dev-bin(new)",
+    "libavahi-common3(151)",
+    "libavahi-common-data(148)",
+    "libavahi-client3(159)",
+    "adduser(102)",
+    "libcups2(101)"
+   ],
+   "successionSample": [
+    "gcc-4.4-base",
+    "libdb4.7",
+    "libdb4.8",
+    "libreadline6",
+    "libkrb5-3",
+    "python2.6",
+    "python2.6-minimal"
+   ]
+  },
+  {
+   "step": "2011->2013",
+   "entrants": 26,
+   "successions": 7,
+   "genuine": 19,
+   "genuineList": [
+    "multiarch-support(new)",
+    "tar(2887)",
+    "libtinfo5(new)",
+    "libgmp10(new)",
+    "libswitch-perl(new)",
+    "libclass-isa-perl(new)",
+    "libjs-jquery(123)",
+    "libsepol1(124)",
+    "libpam-modules-bin(new)",
+    "libsemanage1(2441)",
+    "libustr-1.0-1(1292)",
+    "libsemanage-common(1986)",
+    "libp11-kit0(new)",
+    "libjbig0(new)",
+    "libquadmath0(new)",
+    "libpixman-1-0(107)",
+    "libjasper1(104)",
+    "libxcb-render0(109)",
+    "libldap-2.4-2(102)"
+   ],
+   "successionSample": [
+    "gcc-4.7-base",
+    "liblzma5",
+    "libdb5.1",
+    "libssl1.0.0",
+    "libjpeg8",
+    "python2.7",
+    "python2.7-minimal"
+   ]
+  },
+  {
+   "step": "2013->2015",
+   "entrants": 21,
+   "successions": 6,
+   "genuine": 15,
+   "genuineList": [
+    "libaudit1(new)",
+    "libaudit-common(new)",
+    "libjpeg62-turbo(new)",
+    "libnettle4(700)",
+    "libgnutls-deb0-28(new)",
+    "libhogweed2(3051)",
+    "fonts-dejavu-core(new)",
+    "libpython2.7-stdlib(new)",
+    "libpython2.7-minimal(new)",
+    "libpython-stdlib(new)",
+    "libjs-underscore(140)",
+    "libudev1(new)",
+    "libjs-sphinxdoc(207)",
+    "openjdk-7-doc(29954)",
+    "default-jdk-doc(107)"
+   ],
+   "successionSample": [
+    "gcc-4.9-base",
+    "libdb5.3",
+    "libffi6",
+    "libtasn1-6",
+    "libtiff5",
+    "libgcrypt20"
+   ]
+  },
+  {
+   "step": "2015->2017",
+   "entrants": 21,
+   "successions": 9,
+   "genuine": 12,
+   "genuineList": [
+    "libperl5.24(new)",
+    "libcap-ng0(449)",
+    "libicu57(new)",
+    "libbsd0(150)",
+    "libmount1(214)",
+    "libblkid1(193)",
+    "liblz4-1(1482)",
+    "libidn11(149)",
+    "libgnutls30(new)",
+    "libsystemd0(165)",
+    "init-system-helpers(222)",
+    "libgomp1(104)"
+   ],
+   "successionSample": [
+    "gcc-6-base",
+    "libssl1.1",
+    "libreadline7",
+    "perl-modules-5.24",
+    "libpng16-16",
+    "libssl1.0.2",
+    "libnettle6",
+    "libhogweed4"
+   ]
+  },
+  {
+   "step": "2017->2019",
+   "entrants": 28,
+   "successions": 19,
+   "genuine": 9,
+   "genuineList": [
+    "libatomic1(248)",
+    "libgdbm-compat4(new)",
+    "emacsen-common(126)",
+    "libunistring2(new)",
+    "sensible-utils(304)",
+    "libcom-err2(new)",
+    "libmpdec2(112)",
+    "gcc-8-cross-base(new)",
+    "libzstd1(1243)"
+   ],
+   "successionSample": [
+    "gcc-8-base",
+    "libtinfo6",
+    "libgdbm6",
+    "libncursesw6",
+    "perl-modules-5.28",
+    "libperl5.28",
+    "libicu63",
+    "libidn2-0"
+   ]
+  },
+  {
+   "step": "2019->2021",
+   "entrants": 31,
+   "successions": 15,
+   "genuine": 16,
+   "genuineList": [
+    "libcrypt1(new)",
+    "libgcc-s1(new)",
+    "libmd0(2503)",
+    "libtirpc3(3364)",
+    "libnsl2(new)",
+    "libtirpc-common(3243)",
+    "libbrotli1(117)",
+    "tzdata(141)",
+    "dh-elpa-helper(new)",
+    "media-types(new)",
+    "gcc-10-cross-base-mipsen(new)",
+    "gcc-10-cross-base-ports(new)",
+    "libnghttp2-14(179)",
+    "libedit2(158)",
+    "openssl(101)",
+    "libgomp1(104)"
+   ],
+   "successionSample": [
+    "gcc-10-base",
+    "libpcre2-8-0",
+    "libffi7",
+    "perl-modules-5.32",
+    "libperl5.32",
+    "libicu67",
+    "libreadline8",
+    "libnettle8"
+   ]
+  },
+  {
+   "step": "2021->2023",
+   "entrants": 20,
+   "successions": 12,
+   "genuine": 8,
+   "genuineList": [
+    "libcap2(224)",
+    "sysvinit-utils(3767)",
+    "golang-golang-x-sys-dev(112)",
+    "ca-certificates(101)",
+    "libncurses6(144)",
+    "sgml-base(699)",
+    "libfontconfig1(102)",
+    "fontconfig-config(104)"
+   ],
+   "successionSample": [
+    "gcc-12-base",
+    "libssl3",
+    "libffi8",
+    "perl-modules-5.36",
+    "libperl5.36",
+    "libicu72",
+    "libpython3.11-stdlib",
+    "gcc-12-cross-base-mipsen"
+   ]
+  },
+  {
+   "step": "2023->2025",
+   "entrants": 31,
+   "successions": 21,
+   "genuine": 10,
+   "genuineList": [
+    "openssl-provider-legacy(new)",
+    "tzdata(123)",
+    "netbase(262)",
+    "libatomic1(278)",
+    "init-system-helpers(140)",
+    "gcc-14-cross-base-ports(new)",
+    "fonts-dejavu-mono(new)",
+    "libsasl2-2(111)",
+    "libxrender1(102)",
+    "libcap-ng0(103)"
+   ],
+   "successionSample": [
+    "gcc-14-base",
+    "libdb5.3t64",
+    "libssl3t64",
+    "libgdbm6t64",
+    "perl-modules-5.40",
+    "libperl5.40",
+    "libgdbm-compat4t64",
+    "libreadline8t64"
+   ]
+  }
+ ],
+ "medianGenuine": 13
+}
