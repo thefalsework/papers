@@ -1,3 +1,55 @@
+# Status 2026-09-23 (later): Mathlib run — registered no-finding; PageRank boundary mapped and disclosed
+
+Fourth graph type run and reported. conemass on the Mathlib declaration
+graph (MathNetwork/MathlibGraph, commit 534cf0b of 2026-02-02: 308,060
+noded / 8,436,366 elaborated-closure edges), registered before the run
+in C:/dev/conemass-mathlib/REGISTRATION.md with nulls, kill conditions,
+and a finding criterion fixed in advance. Verification gate passed:
+edge direction confirmed, cross-pipeline Jaccard 0.81-0.83 vs the
+independent lean_scout extraction with every disagreement attributable
+(commit drift, aux-constant policy), and @[to_additive] mirrors shown
+to be condensed onto multiplicative primaries before anything ran.
+
+**Result: no finding, correctly called by the registration.** Spearman
+0.960 with PageRank over all 308K declarations — the closest any null
+has come to conemass on any graph. Top-40 overlap 21/40 (finding
+criterion required <=20 AND maintainer-recognizable discoveries; failed
+both arms — the divergent rows are .mk constructors and Eq/Iff proof
+plumbing). One registration error disclosed in the report rather than
+patched: the F2 foundational-saturation threshold was operationalized
+backwards (dag_layer counts from the leaves in this dataset), so its
+letter never fired while its spirit describes the head exactly.
+Descriptive observations left unclaimed: the theorem stratum's head is
+structure axioms (AddMonoid.add_zero, in-degree 12); the Nat.ble
+kernel-reduction chain (in-degree 1, PageRank rank 32,815, conemass
+rank 657) is the most liblzma-shaped row and also the least newsworthy
+to a Lean developer. Cap sensitivity weaker here (top-1000 corr 0.79
+between cap 200/800) — disclosed. All local in C:/dev/conemass-mathlib
+(REGISTRATION.md, REPORT.md, scripts, both rankings); not published.
+
+**The consequence that mattered: the PageRank check was run on Prove2Me
+too, post-hoc,** since the original nulls there were transitive count
+and depth only. Result: Spearman 0.81, 33/40 top-40 overlap, and
+StochasticBandit is PageRank #2 — the practical head of the Prove2Me
+rankings is not unique to conemass. What survives untouched: the
+divergence from the incumbents the platform actually uses (dependent
+count, closability), and the unlock-mass exactness under Property 1,
+which has no PageRank analog. Disclosed the same day in
+examples/prove2me/REPORT.md (post-hoc, dated, script pagerank-null.mjs
+shipped alongside) and pushed (commit ff95d8a).
+
+Standing map across five graphs: conemass separates from PageRank on
+shallow many-rooted ecosystem graphs (Debian liblzma5: PR 36 vs cm 8)
+and coincides with it on deep uniform proof graphs (Prove2Me 0.81/33,
+Mathlib 0.96/21-but-plumbing). The instrument's edge lives on package
+ecosystems — where the supply-chain case lives anyway. Extension
+verdict after github-issues kill + this: go deeper on ecosystems
+(drift, more registries, Socket thread), not wider onto graph types.
+Exception: Mathlib test 3 (refactor-cost retrodiction vs git history,
+nulls: transitive-dependent count + file age) is untouched — it is
+ground-truth retrodiction, not a ranking-novelty claim, and the graph
+infrastructure for it is now downloaded and verified.
+
 # Status 2026-09-23: Prove2Me founder engaged; full-import-graph run queued on repo publication
 
 Tianyi Peng (Prove2Me co-founder) replied warmly on Slack to the
