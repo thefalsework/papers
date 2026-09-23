@@ -42,11 +42,17 @@ Results:
   single inflationary operator `Finset V → Finset V` applied to every
   cone, the literal shape of a Heyting observer acting on cones.
 
-Remark (not formalized here): per cone, the blurred credit
-distribution — uniform on `J (C u)` — is majorized by the true one —
-uniform on `C u`. Observers can only flatten a cone's contribution to
-the load field, never sharpen it. A Schur-flattening statement for the
-full field is a candidate follow-up.
+* `total_mass_mono` — under any inflationary blur, total load can only
+  grow: observers may mint mass (from empty cones) but never destroy
+  it. Together with `mass_conserved_iff_dense` this closes the budget
+  arithmetic, and it is the first necessary condition on the converse
+  question (which fields are achievable as some observer's perception).
+* `schur_flattening` — per cone, for every convex `φ` with `φ 0 = 0`,
+  the `φ`-sum of the blurred credit distribution is at most that of
+  the true one. This is the majorization remark made exact: observers
+  can only flatten a cone's contribution to the load field, never
+  sharpen it (instance `φ x = x²`: blur never increases a cone's
+  collision energy).
 -/
 import Mathlib.Tactic
 
@@ -229,6 +235,70 @@ theorem mass_conserved_iff_dense (C J : V → Finset V) (h : ∀ u, C u ⊆ J u)
         obtain ⟨a, ha⟩ := hC
         exact ⟨a, h u ha⟩
     rw [hset]
+
+/-- **Total load is monotone under blur.** An inflationary observer can
+mint mass (one unit per inflated empty cone) but never destroy it.
+This is the first necessary condition on which load fields are
+achievable as an observer's perception of a given structure. -/
+theorem total_mass_mono (C J : V → Finset V) (h : ∀ u, C u ⊆ J u) :
+    ∑ x, mass C x ≤ ∑ x, mass J x := by
+  rw [mass_conserved, mass_conserved, Nat.cast_le]
+  apply card_le_card
+  intro v hv
+  rw [mem_filter] at hv ⊢
+  obtain ⟨a, ha⟩ := hv.2
+  exact ⟨hv.1, a, h v ha⟩
+
+/-- **Schur flattening, per cone.** For every convex `φ` vanishing at
+`0`, the `φ`-sum of the blurred credit distribution (uniform on
+`J u`) is at most the `φ`-sum of the true one (uniform on `C u`):
+observers can only flatten a cone's contribution to the load field,
+never sharpen it. -/
+theorem schur_flattening (C J : V → Finset V) (h : ∀ u, C u ⊆ J u) (u : V)
+    (hC : (C u).Nonempty) (φ : ℚ → ℚ) (hφ : ConvexOn ℚ Set.univ φ)
+    (hφ0 : φ 0 = 0) :
+    ∑ x, φ (if x ∈ J u then ((J u).card : ℚ)⁻¹ else 0) ≤
+      ∑ x, φ (if x ∈ C u then ((C u).card : ℚ)⁻¹ else 0) := by
+  have hsub : C u ⊆ J u := h u
+  have hcpos : 0 < (C u).card := card_pos.mpr hC
+  have hjpos : 0 < (J u).card := lt_of_lt_of_le hcpos (card_le_card hsub)
+  have hcq : (0 : ℚ) < ((C u).card : ℚ) := by exact_mod_cast hcpos
+  have hjq : (0 : ℚ) < ((J u).card : ℚ) := by exact_mod_cast hjpos
+  have hcj : ((C u).card : ℚ) ≤ ((J u).card : ℚ) := by
+    exact_mod_cast card_le_card hsub
+  -- both sides collapse to card • φ(card⁻¹)
+  have hsum : ∀ S : Finset V,
+      ∑ x, φ (if x ∈ S then ((S.card : ℚ))⁻¹ else 0) =
+        (S.card : ℚ) * φ ((S.card : ℚ))⁻¹ := by
+    intro S
+    have : ∀ x, φ (if x ∈ S then ((S.card : ℚ))⁻¹ else 0) =
+        if x ∈ S then φ ((S.card : ℚ))⁻¹ else 0 := by
+      intro x
+      by_cases hx : x ∈ S <;> simp [hx, hφ0]
+    rw [sum_congr rfl fun x _ => this x, sum_ite_mem, univ_inter,
+      sum_const, nsmul_eq_mul]
+  rw [hsum (J u), hsum (C u)]
+  -- key: φ(1/j) ≤ (c/j) · φ(1/c), by convexity through 0
+  set c : ℚ := ((C u).card : ℚ) with hc
+  set j : ℚ := ((J u).card : ℚ) with hj
+  have hkey : φ j⁻¹ ≤ (c / j) * φ c⁻¹ := by
+    have ha : (0 : ℚ) ≤ c / j := div_nonneg (le_of_lt hcq) (le_of_lt hjq)
+    have hb : (0 : ℚ) ≤ 1 - c / j := by
+      have : c / j ≤ 1 := (div_le_one hjq).mpr hcj
+      linarith
+    have hab : c / j + (1 - c / j) = 1 := by ring
+    have hstep := hφ.2 (Set.mem_univ c⁻¹) (Set.mem_univ (0 : ℚ)) ha hb hab
+    have harg : (c / j) • c⁻¹ + (1 - c / j) • (0 : ℚ) = j⁻¹ := by
+      rw [smul_eq_mul, smul_eq_mul, mul_zero, add_zero, div_mul_eq_mul_div,
+        mul_inv_cancel₀ (ne_of_gt hcq)]
+      exact one_div j
+    rw [harg] at hstep
+    calc φ j⁻¹ ≤ (c / j) • φ c⁻¹ + (1 - c / j) • φ 0 := hstep
+      _ = (c / j) * φ c⁻¹ := by rw [hφ0, smul_eq_mul, smul_eq_mul, mul_zero, add_zero]
+  calc j * φ j⁻¹ ≤ j * ((c / j) * φ c⁻¹) := by
+        exact mul_le_mul_of_nonneg_left hkey (le_of_lt hjq)
+    _ = c * φ c⁻¹ := by
+        field_simp
 
 /-- The falsework inequality in observer form: a single inflationary
 operator on `Finset V` (the shape of a Heyting observer acting on

@@ -148,6 +148,35 @@ density is not merely sufficient but necessary — each non-dense
 inflation mints exactly one unit, so the mass budget audits the
 observer.
 
+ALL FOUR CONTINUATIONS EXECUTED (same evening). (1) SCHUR FLATTENING
+kernel-checked: per cone, for every convex phi with phi(0)=0, the
+phi-sum of blurred credit <= that of true credit (proof: convexity
+through 0 gives phi(1/j) <= (c/j) phi(1/c)). Observers flatten, never
+sharpen — now a theorem, not a remark. (2) TOTAL_MASS_MONO
+kernel-checked: total load never decreases under blur — first
+necessary condition on the converse question. Lean file now NINE
+checked declarations. (3) EMPIRICAL TIGHTNESS, registered study
+oracle-scanner/11-falsework-tightness.mjs on Debian bookworm, two
+partition-closure observers (stems fine / sections coarse; partition
+closures are inflationary+dense but NOT nuclei — first exercise of
+the theorem's generality): bound/actual ratio **1.05x and 1.16x** —
+registered guess of 2-20x slack was wrong in the favorable direction;
+the bound is near-identity in aggregate, cross-cone cancellation
+almost absent. Conservation to 1e-9 as the density theorem demands.
+Operational reading: stem-blind observer keeps 29/40 of the true
+head, section-level observer keeps 0/40 — the bound prices a
+coarse-graining's cost to triage BEFORE any ranking runs, from cone
+and class sizes alone. The theorem is an instrument. (4) FALSEWORK
+NOTE written: falsework-note/falsework-inequality.md v0.1 —
+statement, proof, four corollaries, Lean artifact list, the measured
+table, the converse question stated formally with its two proven
+necessary conditions, honest positioning (elementary math,
+architectural value). Remaining open: the converse characterization
+(candidate second theorem: achievable fields under majorization-like
+dominance); Schur flattening for the FULL field rather than per cone;
+arXiv/Zenodo packaging of the note once the Prove2Me paper decision
+resolves.
+
 SCHEDULER SPEC (same evening). Prompted by the question "could
 Prove2Me eliminate the human in the loop and let agents automate on
 proof priority?" — answer written as a spec rather than waiting for

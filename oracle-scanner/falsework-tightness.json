@@ -1,0 +1,27 @@
+{
+ "corpus": "debian bookworm 2023",
+ "nComp": 63353,
+ "cap": 200,
+ "o1": {
+  "observer": "O1 name-stem partition closure",
+  "classes": 60304,
+  "l1Actual": 24500.75356104996,
+  "l1Bound": 25819.915949872913,
+  "ratio": 1.0538417067677497,
+  "totalTrue": 54188.99999999699,
+  "totalBlurred": 54188.99999999849,
+  "conservationGap": 1.4988472685217857e-9,
+  "headOverlap40": 29
+ },
+ "o2": {
+  "observer": "O2 section partition closure",
+  "classes": 58,
+  "l1Actual": 92861.85147782025,
+  "l1Bound": 108000.98415843822,
+  "ratio": 1.1630285465957342,
+  "totalTrue": 54188.99999999699,
+  "totalBlurred": 54188.999999998094,
+  "conservationGap": 1.1059455573558807e-9,
+  "headOverlap40": 0
+ }
+}
