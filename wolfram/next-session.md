@@ -177,6 +177,46 @@ dominance); Schur flattening for the FULL field rather than per cone;
 arXiv/Zenodo packaging of the note once the Prove2Me paper decision
 resolves.
 
+NEXT LEVIN REPLY (queued 2026-09-23; do NOT send early). Ilya (Ilia
+Levin, HIT) is currently studying aperture v0.4, the perceptron pilot,
+and Citkin with his doctoral student; his last letter (Sept 17) asked
+for time and Chris's reply granted it. The falsework inequality is the
+centerpiece of the NEXT substantive letter, delivered only when he
+returns. Placement and shape, decided now so the moment isn't
+improvised:
+
+- OPEN with it as the report-from-the-seam, the exact structure that
+  worked on Sept 14 ("since my last letter, a report, because it
+  answers a question that letter held open"). The question it answers:
+  the Sept 14 letter defined phantom mass as what the observer
+  MANUFACTURES but stopped at counting confusion — the inequality now
+  prices it. State it in his terms: conemass is the positional load
+  field (his symbol→position migration, instrumented — he already has
+  the xz example from Sept 8); the theorem says an observer's total
+  misperception of positional load is ≤ 2× relative phantom mass per
+  cone, tight, kernel-checked (nine declarations, no sorry), with
+  conservation holding IFF the observer is dense (j⊥=⊥ — non-dense
+  observers mint exactly one phantom unit per inflated empty cone).
+  "The remainder is real in the algebra, vanishing in the geometry of
+  trained nets" now has a sequel: where the remainder IS real, this is
+  what it costs in misjudged load.
+- THEN the measurement (same discipline as the pilot: registered
+  first): Debian bookworm, two real coarse-grainings, bound within
+  5–16% of actual distortion, conservation to 1e-9, head survival
+  29/40 fine vs 0/40 coarse.
+- TIE to the student: the inequality is the interpretation layer for
+  problem 2 (phantom mass under smooth activations) — if smooth
+  geometry revives phantom mass, the inequality says what the revival
+  costs, so the student's result would acquire a quantitative
+  consequence, not just an existence answer.
+- RULES: aperture v0.4 stays frozen on Zenodo while he reads it (the
+  falsework note is a separate artifact — cite the repo paths /
+  falsework-note/falsework-inequality.md and the Lean file; give it
+  its own DOI only if packaging happens before he replies). Do not
+  quote his letters back at him. One theorem per letter — the
+  Schur-flattening and monotonicity corollaries go in as one sentence
+  each, not sections.
+
 ACCESSIBILITY PASS (same evening). Two discoverability gaps found and
 closed. (1) The Mathlib study was local-only while paper v0.14 cited
 its numbers under an "all computations committed" promise — published
