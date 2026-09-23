@@ -1,3 +1,33 @@
+# Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
+
+Registered drift study run on the ten dated Debian snapshots
+(oracle-scanner/07-drift.mjs, expectations fixed before running).
+The registered guess confirmed, more strongly than guessed: liblzma
+entered the archive at conemass #8 ON ARRIVAL (liblzma2, squeeze
+2011, dpkg's xz adoption) and sat pinned at 6-10 for fourteen years;
+no takeover-window climb whatsoever (8 -> 10 -> 8 across 2019-2023).
+Drift-as-climbing is NOT a leading indicator for the xz case; static
+concentration was, visible thirteen years before the backdoor. The
+Socket email's drift framing ("the xz insertion pattern as a
+monitorable signal") is wrong as stated — the xz-shaped alert is
+"new package arrives directly into the top ranks," which the churn
+data does capture (liblzma2 is in the 2009->2011 fast-climber list).
+Correct the framing if Feross replies; do not re-pitch drift as
+takeover detection.
+
+Two bonus findings. (1) The metric sees the remediation: liblzma5
+drops 8 -> 19 in trixie 2025, the ecosystem's post-backdoor
+de-concentration, the only large watchlist move in the table. (2)
+Every compression library walked into the head on arrival — liblzma2
+2011, liblz4-1 2017 (from 1482), libzstd1 2019 (from 1243) — and
+libkeyutils1 (study 06's sharpest PageRank-miss) entered the top-100
+from 989 in 2009. The arrival alert fires on the whole xz class with
+years of lead time. Churn volume: median 23 top-100 entrants per
+release — grey zone as registered (<=15 monitorable, >=30 dead);
+entrant lists are dominated by mechanical version successions, so a
+succession-filtered rerun is the registered next cell if drift is
+productized. All in oracle-scanner/drift.json.
+
 # Status 2026-09-23 (later): Mathlib run — registered no-finding; PageRank boundary mapped and disclosed
 
 Fourth graph type run and reported. conemass on the Mathlib declaration
