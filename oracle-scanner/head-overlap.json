@@ -1,0 +1,160 @@
+{
+ "debian2023": {
+  "corpus": "Debian bookworm 2023",
+  "n": 63436,
+  "top40_pr": 22,
+  "top100_pr": 63,
+  "top40_in": 12,
+  "top100_in": 35,
+  "divergent": [
+   {
+    "name": "libmd0",
+    "cm": 9,
+    "pr": 47,
+    "inDeg": 1718
+   },
+   {
+    "name": "libacl1",
+    "cm": 13,
+    "pr": 104,
+    "inDeg": 365
+   },
+   {
+    "name": "tar",
+    "cm": 16,
+    "pr": 52,
+    "inDeg": 3255
+   },
+   {
+    "name": "libdb5.3",
+    "cm": 19,
+    "pr": 66,
+    "inDeg": 250
+   },
+   {
+    "name": "libffi8",
+    "cm": 20,
+    "pr": 43,
+    "inDeg": 159
+   },
+   {
+    "name": "libcom-err2",
+    "cm": 24,
+    "pr": 251,
+    "inDeg": 347
+   },
+   {
+    "name": "libjs-underscore",
+    "cm": 25,
+    "pr": 48,
+    "inDeg": 249
+   },
+   {
+    "name": "libgssapi-krb5-2",
+    "cm": 26,
+    "pr": 112,
+    "inDeg": 260
+   },
+   {
+    "name": "libkrb5support0",
+    "cm": 27,
+    "pr": 263,
+    "inDeg": 1992
+   },
+   {
+    "name": "libk5crypto3",
+    "cm": 28,
+    "pr": 345,
+    "inDeg": 977
+   },
+   {
+    "name": "libkrb5-3",
+    "cm": 29,
+    "pr": 296,
+    "inDeg": 312
+   },
+   {
+    "name": "libkeyutils1",
+    "cm": 30,
+    "pr": 981,
+    "inDeg": 1619
+   },
+   {
+    "name": "libgdbm6",
+    "cm": 31,
+    "pr": 97,
+    "inDeg": 615
+   },
+   {
+    "name": "libgdbm-compat4",
+    "cm": 36,
+    "pr": 143,
+    "inDeg": 3836
+   },
+   {
+    "name": "libbsd0",
+    "cm": 37,
+    "pr": 100,
+    "inDeg": 76
+   },
+   {
+    "name": "libexpat1",
+    "cm": 38,
+    "pr": 56,
+    "inDeg": 101
+   },
+   {
+    "name": "libicu72",
+    "cm": 39,
+    "pr": 64,
+    "inDeg": 121
+   },
+   {
+    "name": "libuuid1",
+    "cm": 40,
+    "pr": 87,
+    "inDeg": 144
+   }
+  ]
+ },
+ "crates2022": {
+  "corpus": "crates.io 2022",
+  "n": 84439,
+  "top40_pr": 35,
+  "top100_pr": 75,
+  "top40_in": 19,
+  "top100_in": 47,
+  "divergent": [
+   {
+    "name": "textwrap",
+    "cm": 33,
+    "pr": 54,
+    "inDeg": 282
+   },
+   {
+    "name": "os_str_bytes",
+    "cm": 35,
+    "pr": 65,
+    "inDeg": 1120
+   },
+   {
+    "name": "clap_lex",
+    "cm": 37,
+    "pr": 59,
+    "inDeg": 8258
+   },
+   {
+    "name": "fnv",
+    "cm": 38,
+    "pr": 76,
+    "inDeg": 97
+   },
+   {
+    "name": "nb",
+    "cm": 39,
+    "pr": 46,
+    "inDeg": 145
+   }
+  ]
+ }
+}

@@ -38,17 +38,33 @@ which has no PageRank analog. Disclosed the same day in
 examples/prove2me/REPORT.md (post-hoc, dated, script pagerank-null.mjs
 shipped alongside) and pushed (commit ff95d8a).
 
-Standing map across five graphs: conemass separates from PageRank on
-shallow many-rooted ecosystem graphs (Debian liblzma5: PR 36 vs cm 8)
-and coincides with it on deep uniform proof graphs (Prove2Me 0.81/33,
-Mathlib 0.96/21-but-plumbing). The instrument's edge lives on package
-ecosystems — where the supply-chain case lives anyway. Extension
-verdict after github-issues kill + this: go deeper on ecosystems
-(drift, more registries, Socket thread), not wider onto graph types.
-Exception: Mathlib test 3 (refactor-cost retrodiction vs git history,
-nulls: transitive-dependent count + file age) is untouched — it is
-ground-truth retrodiction, not a ranking-novelty claim, and the graph
-infrastructure for it is now downloaded and verified.
+Standing map across five graphs — CORRECTED SAME DAY: the first
+version of this entry claimed conemass separates from PageRank on
+ecosystem graphs and coincides on proof graphs. `06-head-overlap.mjs`
+(registered expectations, run same afternoon on the paper's own
+corpora) falsified the clean boundary: top-40 conemass/PageRank
+overlap is Debian 22/40 but crates.io **35/40** — an ecosystem graph
+where PageRank nearly matches the head, with unicode-ident at
+PageRank **#1** (more prominent than conemass's #2), and liblzma5 at
+PageRank 36 on pre-disclosure Debian (inside a top-40 watchlist).
+Prove2Me 33/40, Mathlib ~coincident (0.96). Debian is the outlier,
+not the rule: its unique-find class is deep gateway chains (Kerberos:
+libkeyutils1 at PageRank 981 vs conemass 30). Against dependent count
+the head separation is strong on both package corpora (12/40, 19/40).
+Consequence shipped the same day, paper v0.10: new head-versus-bulk
+section with the full overlap table including the facts that favor
+PageRank; new limitations bullet ("PageRank catches the headline rows
+too"); README PageRank paragraph; prove2me REPORT boundary paragraph
+corrected. Differentiation vs PageRank as now stated: Debian's
+gateway-chain class, zero parameters/determinism/enumerable scores,
+and AND-graph exactness — not unique discovery of the headline rows.
+Differentiation vs dependent count and the incumbent: unchanged and
+strong. Extension verdict after github-issues kill + Mathlib: go
+deeper on ecosystems (drift, more registries, Socket thread), not
+wider onto graph types. Exception: Mathlib test 3 (refactor-cost
+retrodiction vs git history, nulls: transitive-dependent count + file
+age) is untouched — ground-truth retrodiction, not a ranking-novelty
+claim, and the graph infrastructure for it is downloaded and verified.
 
 # Status 2026-09-23: Prove2Me founder engaged; full-import-graph run queued on repo publication
 
