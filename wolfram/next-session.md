@@ -82,6 +82,30 @@ archive depth. Remaining queued: Prove2Me priority-menu spec
 lead-time in months is needed; registered test of the cone-size
 second factor on whatever new graph arrives next.
 
+SCHEDULER SPEC (same evening). Prompted by the question "could
+Prove2Me eliminate the human in the loop and let agents automate on
+proof priority?" — answer written as a spec rather than waiting for
+their repo: conemass/examples/prove2me/SCHEDULER-SPEC.md (commit
+5769240). Two stages: priority menu (guaranteed-bracket unlock mass +
+closability join, buildable today), then closed loop (dispatch on
+E[unlock per compute-hour] = unlock_mass x P(success) / cost, with
+P(success) a bandit updated from agent attempt history seeded by
+closability). Human removed from the inner loop, kept on the
+boundary, with the reasons stated as design rules, not caveats:
+(1) unlock mass is one of three dispatch terms — value, not
+tractability; (2) the Goodhart rule is ARCHITECTURAL — agents close
+nodes, never create edges; dependency structure enters only through
+mission creation and sketch acceptance, because every graph conemass
+was validated on was grown by uncoordinated need, and a metric that
+drives reward corrupts a graph that responds to it; (3) the loop runs
+on the guaranteed bracket so unattended dispatch never acts on
+over-promised unlock. Honest note carried into the spec: PageRank
+gets 33/40 of the same head here — the case for unlock mass in an
+unattended loop is exactness/enumerability (auditable dispatch), not
+superior discovery. This supersedes the queued "priority-menu spec"
+item; what remains for the Peng thread is sending it when their
+database repo ships.
+
 # Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
 
 Registered drift study run on the ten dated Debian snapshots
