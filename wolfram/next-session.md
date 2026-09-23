@@ -50,6 +50,38 @@ anatomy study; Prove2Me priority-menu spec (trigger: their repo goes
 public); daily-granularity crates index study if lead-time in months
 is ever needed.
 
+GRAPH ANATOMY (same evening, study 10). Question: what shape
+statistic predicts, from the graph alone, whether conemass separates
+from PageRank? Fifteen graphs (ten Debian, four crates, Prove2Me;
+Go excluded as too small, Mathlib as external point), four registered
+predictors with directions fixed before twelve of fifteen outcomes
+were seen. RESULTS: the registered primary DIED — chain fraction,
+rho -0.14 (Prove2Me has the highest chain fraction and coincides;
+chains explain which rows diverge on Debian, not whether a graph
+diverges). Cone-size CV and leaf share came back WRONG-SIGNED. The
+survivor: mean truncated-cone depth, rho -0.73, family ordering
+correct (Debian ~5.2/separates; crates 3.8, Prove2Me 2.5/coincide).
+Mechanism: conemass credit travels chains undamped, PageRank decays
+0.85/hop and splits — divergence lives where cones are deep.
+Out-of-family check (conemass-mathlib/depth-stats.mjs, prediction
+stated first): Mathlib truncated depth 4.45 — below Debian median as
+predicted but inside the Debian range; debian-2025 (4.41) separates
+while Mathlib (4.45) coincides, so depth is not SUFFICIENT and 4-5
+is the disclosed unresolved band. Unregistered observation, no
+status: mean truncated cone size puts coinciders at both extremes
+(Prove2Me/crates-2016 at ~10, Mathlib saturated at 150/200) with
+Debian mid-range (37-54, thin-but-deep) — a candidate second factor
+for a future registered test. Paper v0.14 carries the honest version:
+one surviving predictor of four registered, candidate not law, with
+the falsifiable next-graph statement (depth >= 5 separates, <= 4
+coincides). Also notable in the run: Debian's own overlap drifted
+down as the archive grew (28/40 in 2007 -> 22/40 by 2019) — the
+separation Debian shows today is itself an emergent property of
+archive depth. Remaining queued: Prove2Me priority-menu spec
+(trigger: their repo goes public); daily-granularity crates study if
+lead-time in months is needed; registered test of the cone-size
+second factor on whatever new graph arrives next.
+
 # Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
 
 Registered drift study run on the ten dated Debian snapshots

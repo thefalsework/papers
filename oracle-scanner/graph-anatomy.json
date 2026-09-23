@@ -1,0 +1,183 @@
+{
+ "results": [
+  {
+   "label": "debian-2007",
+   "family": "debian",
+   "nComp": 17602,
+   "overlap": 28,
+   "S1_chainFrac": 0.24156345869787524,
+   "S2_meanConeDepth": 4.600214227206855,
+   "S3_coneSizeCV": 1.070911596260494,
+   "S4_leafShare": 0.6241336211794114
+  },
+  {
+   "label": "debian-2009",
+   "family": "debian",
+   "nComp": 21867,
+   "overlap": 27,
+   "S1_chainFrac": 0.24923400557918324,
+   "S2_meanConeDepth": 5.53656186612576,
+   "S3_coneSizeCV": 1.0746596946883409,
+   "S4_leafShare": 0.6133443087757808
+  },
+  {
+   "label": "debian-2011",
+   "family": "debian",
+   "nComp": 27974,
+   "overlap": 25,
+   "S1_chainFrac": 0.24780152999213556,
+   "S2_meanConeDepth": 5.270330201991695,
+   "S3_coneSizeCV": 1.0306174773308292,
+   "S4_leafShare": 0.5938013870022163
+  },
+  {
+   "label": "debian-2013",
+   "family": "debian",
+   "nComp": 35866,
+   "overlap": 28,
+   "S1_chainFrac": 0.27630625104555845,
+   "S2_meanConeDepth": 4.696312568648988,
+   "S3_coneSizeCV": 1.1123408744311296,
+   "S4_leafShare": 0.5768973400992583
+  },
+  {
+   "label": "debian-2015",
+   "family": "debian",
+   "nComp": 42386,
+   "overlap": 26,
+   "S1_chainFrac": 0.278912848582079,
+   "S2_meanConeDepth": 5.186709197235513,
+   "S3_coneSizeCV": 1.0894197868996023,
+   "S4_leafShare": 0.5715802387580805
+  },
+  {
+   "label": "debian-2017",
+   "family": "debian",
+   "nComp": 50721,
+   "overlap": 21,
+   "S1_chainFrac": 0.25427337789081444,
+   "S2_meanConeDepth": 5.491435807433408,
+   "S3_coneSizeCV": 1.078544028532132,
+   "S4_leafShare": 0.5420042980225154
+  },
+  {
+   "label": "debian-2019",
+   "family": "debian",
+   "nComp": 56842,
+   "overlap": 22,
+   "S1_chainFrac": 0.24423841525632456,
+   "S2_meanConeDepth": 5.138027942829613,
+   "S3_coneSizeCV": 1.109155552409617,
+   "S4_leafShare": 0.5306287604236304
+  },
+  {
+   "label": "debian-2021",
+   "family": "debian",
+   "nComp": 58588,
+   "overlap": 22,
+   "S1_chainFrac": 0.23177101112855875,
+   "S2_meanConeDepth": 5.240993813530664,
+   "S3_coneSizeCV": 1.1057604250931197,
+   "S4_leafShare": 0.5210964702669488
+  },
+  {
+   "label": "debian-2023",
+   "family": "debian",
+   "nComp": 63353,
+   "overlap": 22,
+   "S1_chainFrac": 0.23182801130175368,
+   "S2_meanConeDepth": 4.872981601432025,
+   "S3_coneSizeCV": 1.1234439635023163,
+   "S4_leafShare": 0.5214591258503938
+  },
+  {
+   "label": "debian-2025",
+   "family": "debian",
+   "nComp": 68638,
+   "overlap": 23,
+   "S1_chainFrac": 0.2085870800431248,
+   "S2_meanConeDepth": 4.410876079363109,
+   "S3_coneSizeCV": 1.1728589920291272,
+   "S4_leafShare": 0.53272239867129
+  },
+  {
+   "label": "crates-2016",
+   "family": "crates",
+   "nComp": 5240,
+   "overlap": 30,
+   "S1_chainFrac": 0.28549618320610687,
+   "S2_meanConeDepth": 2.255580357142857,
+   "S3_coneSizeCV": 1.3235063758735934,
+   "S4_leafShare": 0.7284351145038168
+  },
+  {
+   "label": "crates-2018",
+   "family": "crates",
+   "nComp": 16298,
+   "overlap": 33,
+   "S1_chainFrac": 0.20229476009326297,
+   "S2_meanConeDepth": 3.292471288813271,
+   "S3_coneSizeCV": 1.3642368523171102,
+   "S4_leafShare": 0.704012762302123
+  },
+  {
+   "label": "crates-2020",
+   "family": "crates",
+   "nComp": 41551,
+   "overlap": 33,
+   "S1_chainFrac": 0.15809487136290343,
+   "S2_meanConeDepth": 3.8234902235102095,
+   "S3_coneSizeCV": 1.2562973418960641,
+   "S4_leafShare": 0.7022454333229043
+  },
+  {
+   "label": "crates-2022",
+   "family": "crates",
+   "nComp": 84430,
+   "overlap": 35,
+   "S1_chainFrac": 0.1350230960559043,
+   "S2_meanConeDepth": 3.9476655278997885,
+   "S3_coneSizeCV": 1.179924458846271,
+   "S4_leafShare": 0.7055312092857989
+  },
+  {
+   "label": "prove2me",
+   "family": "prove2me",
+   "nComp": 4013,
+   "overlap": 33,
+   "S1_chainFrac": 0.28955893346623474,
+   "S2_meanConeDepth": 2.5187478500172,
+   "S3_coneSizeCV": 1.746395004492704,
+   "S4_leafShare": 0.1021679541490157
+  }
+ ],
+ "correlations": {
+  "S1_chainFrac": -0.13501793157204822,
+  "S2_meanConeDepth": -0.7290968304890604,
+  "S3_coneSizeCV": 0.5796769862159937,
+  "S4_leafShare": 0.6282834415819311
+ },
+ "familyMedians": {
+  "debian": {
+   "overlap": 25,
+   "S1": 0.24780152999213556,
+   "S2": 5.186709197235513,
+   "S3": 1.1057604250931197,
+   "S4": 0.5715802387580805
+  },
+  "crates": {
+   "overlap": 33,
+   "S1": 0.20229476009326297,
+   "S2": 3.8234902235102095,
+   "S3": 1.3235063758735934,
+   "S4": 0.7055312092857989
+  },
+  "prove2me": {
+   "overlap": 33,
+   "S1": 0.28955893346623474,
+   "S2": 2.5187478500172,
+   "S3": 1.746395004492704,
+   "S4": 0.1021679541490157
+  }
+ }
+}
