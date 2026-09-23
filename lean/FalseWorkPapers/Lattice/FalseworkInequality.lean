@@ -31,9 +31,11 @@ Results:
   blur automatic: an observer that inflates an empty cone to a
   nonempty one creates exactly one unit of mass (priced by the empty
   case of `sum_abs_err_le`).
-* `mass_conserved_of_dense` — conservation holds precisely when the
-  observer preserves empty cones, i.e. for *dense* observers
-  (`j ⊥ = ⊥` in nucleus language). For a dense observer, blur
+* `mass_conserved_iff_dense` — conservation holds *if and only if* the
+  observer preserves empty cones, i.e. is *dense* (`j ⊥ = ⊥` in
+  nucleus language). Density is not merely sufficient: each empty cone
+  inflated to a nonempty one adds exactly one unit of spurious load,
+  so equality of totals forces density. For a dense observer, blur
   redistributes load but cannot create or destroy it: misperception
   is strictly about *where* load sits, never *how much* there is.
 * `falsework_inequality_observer` — the main bound specialized to a
@@ -187,29 +189,46 @@ theorem mass_conserved (C : V → Finset V) :
     rw [sum_ite_mem, univ_inter, sum_const, nsmul_eq_mul,
       mul_inv_cancel₀ hcq, if_pos hC]
 
-/-- **Conservation characterized by density.** A blur that preserves
-empty cones — a *dense* observer, `j ⊥ = ⊥` in nucleus language —
-conserves total load exactly: it can only move mass, never mint it. -/
-theorem mass_conserved_of_dense (C J : V → Finset V) (h : ∀ u, C u ⊆ J u)
-    (hd : ∀ u, C u = ∅ → J u = ∅) :
-    ∑ x, mass J x = ∑ x, mass C x := by
-  rw [mass_conserved, mass_conserved]
-  have hiff : ∀ u, (J u).Nonempty ↔ (C u).Nonempty := by
-    intro u
-    constructor
-    · intro hJ
-      by_contra hC
-      rw [not_nonempty_iff_eq_empty] at hC
-      rw [hd u hC] at hJ
-      exact not_nonempty_empty hJ
-    · intro hC
-      obtain ⟨a, ha⟩ := hC
-      exact ⟨a, h u ha⟩
-  have hset : ((univ : Finset V).filter fun u => (J u).Nonempty) =
-      (univ : Finset V).filter fun u => (C u).Nonempty := by
-    ext u
-    simp [hiff u]
-  rw [hset]
+/-- **Conservation is characterized by density.** An inflationary blur
+conserves total load *if and only if* it preserves empty cones — a
+*dense* observer, `j ⊥ = ⊥` in nucleus language. Dense observers can
+only move mass; non-dense observers mint exactly one unit per inflated
+empty cone, so equality of totals forces density. -/
+theorem mass_conserved_iff_dense (C J : V → Finset V) (h : ∀ u, C u ⊆ J u) :
+    (∑ x, mass J x = ∑ x, mass C x) ↔ ∀ u, C u = ∅ → J u = ∅ := by
+  have hsubF : ((univ : Finset V).filter fun u => (C u).Nonempty) ⊆
+      (univ : Finset V).filter fun u => (J u).Nonempty := by
+    intro v hv
+    rw [mem_filter] at hv ⊢
+    obtain ⟨a, ha⟩ := hv.2
+    exact ⟨hv.1, a, h v ha⟩
+  constructor
+  · intro heq u hCu
+    rw [mass_conserved, mass_conserved, Nat.cast_inj] at heq
+    have hFeq := eq_of_subset_of_card_le hsubF (le_of_eq heq)
+    by_contra hJne
+    have hu : u ∈ (univ : Finset V).filter fun u => (C u).Nonempty := by
+      rw [hFeq, mem_filter]
+      exact ⟨mem_univ u, nonempty_iff_ne_empty.mpr hJne⟩
+    have := (mem_filter.mp hu).2
+    rw [hCu] at this
+    exact not_nonempty_empty this
+  · intro hd
+    rw [mass_conserved, mass_conserved, Nat.cast_inj]
+    have hset : ((univ : Finset V).filter fun u => (J u).Nonempty) =
+        (univ : Finset V).filter fun u => (C u).Nonempty := by
+      ext u
+      simp only [mem_filter, mem_univ, true_and]
+      constructor
+      · intro hJ
+        by_contra hC
+        rw [not_nonempty_iff_eq_empty] at hC
+        rw [hd u hC] at hJ
+        exact not_nonempty_empty hJ
+      · intro hC
+        obtain ⟨a, ha⟩ := hC
+        exact ⟨a, h u ha⟩
+    rw [hset]
 
 /-- The falsework inequality in observer form: a single inflationary
 operator on `Finset V` (the shape of a Heyting observer acting on

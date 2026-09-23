@@ -134,6 +134,20 @@ field is a candidate second theorem. My own prose summary ("blur
 cannot create or destroy load") had the dump's same overstatement and
 is corrected by the density theorem.
 
+SECOND DUMP TRIAGE (same evening): the follow-up dump claimed the full
+equivalence — conservation IFF density — and claimed the Lean lemma
+`mass_conserved_iff_dense` already existed (it did not; only the
+forward direction had been proved — the desired-state-as-current-state
+pattern again, flagged). The math checks: under inflationarity the
+nonempty-cone filter can only grow, so equal totals force equal
+filters (eq_of_subset_of_card_le), forcing density. Upgraded
+mass_conserved_of_dense to the biconditional
+mass_conserved_iff_dense; kernel-checked, first-try compile. The file
+now has seven checked results and the conservation story is closed:
+density is not merely sufficient but necessary — each non-dense
+inflation mints exactly one unit, so the mass budget audits the
+observer.
+
 SCHEDULER SPEC (same evening). Prompted by the question "could
 Prove2Me eliminate the human in the loop and let agents automate on
 proof priority?" — answer written as a spec rather than waiting for
