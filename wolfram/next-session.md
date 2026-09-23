@@ -2,7 +2,7 @@
 
 Fourth graph type run and reported. conemass on the Mathlib declaration
 graph (MathNetwork/MathlibGraph, commit 534cf0b of 2026-02-02: 308,060
-noded / 8,436,366 elaborated-closure edges), registered before the run
+nodes / 8,436,366 elaborated-closure edges), registered before the run
 in C:/dev/conemass-mathlib/REGISTRATION.md with nulls, kill conditions,
 and a finding criterion fixed in advance. Verification gate passed:
 edge direction confirmed, cross-pipeline Jaccard 0.81-0.83 vs the
