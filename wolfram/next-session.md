@@ -177,6 +177,21 @@ dominance); Schur flattening for the FULL field rather than per cone;
 arXiv/Zenodo packaging of the note once the Prove2Me paper decision
 resolves.
 
+ACCESSIBILITY PASS (same evening). Two discoverability gaps found and
+closed. (1) The Mathlib study was local-only while paper v0.14 cited
+its numbers under an "all computations committed" promise — published
+in full (registration, verification gate, null analysis, both
+rankings gzipped, depth check) at conemass examples/mathlib, commit
+5b2bec9; paper v0.15 corrects the artifact-location sentence and
+discloses the fix in the changelog; conemass README lists the fourth
+graph type with the no-finding verdict up front. (2) The falsework
+inequality was committed but invisible — papers-repo README now
+carries it as a spine row ([K], nine declarations, measured) and a
+publishable-artefacts entry (commit 7543a02). Also this pass: license
+headers added to the two Lean files missing them (0ff8344). The
+local conemass-mathlib and conemass-prove2me folders remain working
+copies only; everything citable is now public.
+
 SCHEDULER SPEC (same evening). Prompted by the question "could
 Prove2Me eliminate the human in the loop and let agents automate on
 proof priority?" — answer written as a spec rather than waiting for
