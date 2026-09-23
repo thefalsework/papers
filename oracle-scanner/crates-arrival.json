@@ -1,0 +1,210 @@
+{
+ "years": [
+  2016,
+  2018,
+  2020,
+  2022
+ ],
+ "watchlist": {
+  "unicode-ident": {
+   "2016": "-",
+   "2018": "-",
+   "2020": "-",
+   "2022": 2
+  },
+  "unicode-xid": {
+   "2016": 158,
+   "2018": 12,
+   "2020": 2,
+   "2022": 135
+  },
+  "proc-macro2": {
+   "2016": "-",
+   "2018": 13,
+   "2020": 3,
+   "2022": 3
+  },
+  "syn": {
+   "2016": "-",
+   "2018": 15,
+   "2020": 5,
+   "2022": 5
+  },
+  "quote": {
+   "2016": "-",
+   "2018": 16,
+   "2020": 4,
+   "2022": 4
+  },
+  "cfg-if": {
+   "2016": 36,
+   "2018": 8,
+   "2020": 6,
+   "2022": 6
+  },
+  "serde": {
+   "2016": 16,
+   "2018": 14,
+   "2020": 7,
+   "2022": 7
+  },
+  "libc": {
+   "2016": 1,
+   "2018": 1,
+   "2020": 1,
+   "2022": 1
+  },
+  "once_cell": {
+   "2016": "-",
+   "2018": "-",
+   "2020": 127,
+   "2022": 30
+  },
+  "autocfg": {
+   "2016": "-",
+   "2018": 4825,
+   "2020": 12373,
+   "2022": 4266
+  },
+  "version_check": {
+   "2016": "-",
+   "2018": 4825,
+   "2020": 3308,
+   "2022": 3755
+  }
+ },
+ "steps": [
+  {
+   "step": "2016->2018",
+   "entrants": 47,
+   "successions": 0,
+   "genuine": 47,
+   "genuineList": [
+    "winapi-i686-pc-windows-gnu(new)",
+    "winapi-x86_64-pc-windows-gnu(new)",
+    "rand_core(new)",
+    "unicode-xid(158)",
+    "proc-macro2(new)",
+    "syn(new)",
+    "quote(new)",
+    "redox_syscall(new)",
+    "futures(new)",
+    "error-chain(1193)",
+    "dtoa(1424)",
+    "serde_derive(new)",
+    "failure(new)",
+    "textwrap(new)",
+    "ucd-util(new)",
+    "either(1061)",
+    "fnv(106)",
+    "num-rational(137)",
+    "iovec(new)",
+    "slab(111)",
+    "percent-encoding(new)",
+    "arrayvec(246)",
+    "bytes(114)",
+    "generic-array(216)",
+    "scopeguard(462)",
+    "tokio-io(new)",
+    "siphasher(new)",
+    "indexmap(new)",
+    "socket2(new)",
+    "http(1424)",
+    "bare-metal(new)",
+    "vcell(new)",
+    "try-lock(new)",
+    "string(new)",
+    "h2(new)",
+    "want(new)",
+    "safemem(new)",
+    "crossbeam-utils(new)",
+    "memoffset(new)",
+    "crossbeam-epoch(new)",
+    "base64(408)",
+    "volatile-register(new)",
+    "miow(109)",
+    "lazycell(1424)",
+    "fuchsia-zircon-sys(new)",
+    "aligned(new)",
+    "fuchsia-zircon(new)"
+   ]
+  },
+  {
+   "step": "2018->2020",
+   "entrants": 35,
+   "successions": 0,
+   "genuine": 35,
+   "genuineList": [
+    "ppv-lite86(new)",
+    "rand_hc(new)",
+    "rand_chacha(new)",
+    "ryu(new)",
+    "proc-macro-hack(172)",
+    "futures-core(182)",
+    "pin-utils(new)",
+    "pin-project-internal(new)",
+    "pin-project(new)",
+    "futures-task(new)",
+    "futures-util(613)",
+    "futures-channel(396)",
+    "futures-sink(489)",
+    "scoped-tls(130)",
+    "generator(2214)",
+    "loom(new)",
+    "unicode-segmentation(118)",
+    "standback(new)",
+    "time-macros(new)",
+    "time-macros-impl(new)",
+    "hermit-abi(new)",
+    "tinyvec(new)",
+    "futures-io(249)",
+    "nb(113)",
+    "embedded-hal(119)",
+    "pin-project-lite(new)",
+    "tokio(128)",
+    "thiserror-impl(new)",
+    "thiserror(new)",
+    "maybe-uninit(new)",
+    "heck(392)",
+    "stable_deref_trait(180)",
+    "digest(131)",
+    "tokio-util(4825)",
+    "linked-hash-map(101)"
+   ]
+  },
+  {
+   "step": "2020->2022",
+   "entrants": 25,
+   "successions": 0,
+   "genuine": 25,
+   "genuineList": [
+    "unicode-ident(new)",
+    "hashbrown(155)",
+    "once_cell(127)",
+    "os_str_bytes(2242)",
+    "clap_lex(new)",
+    "anyhow(117)",
+    "windows_aarch64_msvc(new)",
+    "windows_i686_gnu(new)",
+    "windows_i686_msvc(new)",
+    "windows_x86_64_gnu(new)",
+    "windows_x86_64_msvc(new)",
+    "minimal-lexical(new)",
+    "tracing-core(304)",
+    "paste(187)",
+    "tracing(377)",
+    "form_urlencoded(12373)",
+    "crypto-common(new)",
+    "windows-sys(new)",
+    "wasi(141)",
+    "num_threads(new)",
+    "bumpalo(103)",
+    "proc-macro-error(115)",
+    "proc-macro-error-attr(114)",
+    "hex(110)",
+    "wasm-bindgen(106)"
+   ]
+  }
+ ],
+ "medianGenuine": 35
+}

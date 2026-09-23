@@ -27,6 +27,29 @@ PageRank and crates doesn't — shape statistic to predict conemass
 value in advance); Prove2Me priority-menu spec (write when their
 database repo goes public; Peng thread warm).
 
+UPDATE same evening: the crates arrival study ran without any git
+cloning — software-study already held four dated snapshots (2016/18/
+20/22). Study 09 (oracle-scanner/09-crates-arrival.mjs, registered):
+E1 REPLICATES SHARPER THAN DEBIAN — unicode-ident absent until it
+existed, then #2 of 84,439 on arrival (proc-macro2/syn adoption,
+2022); the macro toolchain itself arrived as a block in 2018
+(proc-macro2 absent->13, syn absent->15, quote absent->16). E2: the
+seat swap is literal — unicode-xid ran 158 -> 12 -> 2 -> 135, and
+unicode-ident inherited the #2 position; the succession filter
+correctly does NOT absorb swaps (different name), which is the right
+alert behavior and is now stated in the paper. E3: REGISTERED DEAD
+VERDICT FIRES for top-100 monitorability on crates — median 35
+genuine arrivals per step (47->35->25, declining as the registry
+matures), over the >=30 threshold; churn is genuine growth, not
+renames (succession filter removed zero rows). Paper v0.13 (commit
+566a640) carries both: Result 4 is now a two-substrate pattern
+("load arrives, it does not climb"), and the deployment claim is
+scoped honestly — alert volume proven manageable on a curated distro,
+not yet on a hypergrowth open registry. Remaining queued: graph-
+anatomy study; Prove2Me priority-menu spec (trigger: their repo goes
+public); daily-granularity crates index study if lead-time in months
+is ever needed.
+
 # Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
 
 Registered drift study run on the ten dated Debian snapshots
