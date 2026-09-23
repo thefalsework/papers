@@ -1,3 +1,26 @@
+# Status 2026-09-23: Prove2Me founder engaged; full-import-graph run queued on repo publication
+
+Tianyi Peng (Prove2Me co-founder) replied warmly on Slack to the
+conemass report ("This is awesome... thanks a lot for doing this!")
+with one substantive question: how do 280 missions square with a
+70K-theorem platform (FLT alone is ~30K theorems)? Answer sent with
+exact numbers: our Sep 19 snapshot listed 87,648 theorems (71,988
+Proved / 5,363 Open / 7,553 Definition / 2,744 Disproved); the
+rankings ran on the 4,077-node mission-tree decomposition skeleton
+(sketch + structural edges from the /graph endpoints) because the
+unlock-mass semantics ride on sketch edges via their Property 1 — the
+full import DAG is not exposed through those endpoints, so FLT's
+intermediate theorems are in the corpus but not the edge set.
+
+Key news in his reply: the theorem database repo goes public soon
+(license issue is the delay). Standing offer made: run conemass on the
+full import graph the day it is public — corpus-wide load-bearing
+theorem and audit-priority definition rankings, seconds at 70K nodes.
+Context: Prove2Me was the platform behind Anthropic's FLT
+formalization (13M lines of Lean in 11 days, announced Sep 21), so the
+platform's profile is rising fast. This is now the most engaged of the
+three outreach channels (Peng > Chen no-reply-yet > Feross sent 09-22).
+
 # Status 2026-09-22: paper v0.8 (Pfeiffer prior art + gameability) and Socket outreach sent
 
 Two additions to `paper/quiet-criticality.md`, prompted by pre-outreach
