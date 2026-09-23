@@ -3,14 +3,25 @@
 Tianyi Peng (Prove2Me co-founder) replied warmly on Slack to the
 conemass report ("This is awesome... thanks a lot for doing this!")
 with one substantive question: how do 280 missions square with a
-70K-theorem platform (FLT alone is ~30K theorems)? Answer sent with
-exact numbers: our Sep 19 snapshot listed 87,648 theorems (71,988
-Proved / 5,363 Open / 7,553 Definition / 2,744 Disproved); the
-rankings ran on the 4,077-node mission-tree decomposition skeleton
-(sketch + structural edges from the /graph endpoints) because the
-unlock-mass semantics ride on sketch edges via their Property 1 — the
-full import DAG is not exposed through those endpoints, so FLT's
-intermediate theorems are in the corpus but not the edge set.
+70K-theorem platform? Before answering, the scope-vs-bug question was
+verified rather than assumed: all 280 saved mission graphs are
+uniformly skeletal (largest 317 theorem nodes; FLT mission graph 23
+theorem nodes + 10 sketches), and a live API re-fetch of the FLT
+mission graph on 09-23 — after the FLT completion announcement —
+returned the identical object with no pagination. So the /graph
+endpoint serves the curated decomposition skeleton by design; the
+agent-generated intermediates are connected by Lean imports the API
+does not expose. Definitional scope difference, not truncation; the
+rankings hold for the object they claim to rank.
+
+Reply posted to the Slack thread (also sent to #all-prove2me) with the
+exact numbers: snapshot listing 87,648 theorems (71,988 Proved / 5,363
+Open / 7,553 Definition / 2,744 Disproved) vs the 4,077-node ranked
+skeleton, the FLT re-fetch as the verification, and one question back
+to Peng: when the database repo goes public, does the platform want
+the ranking on the goal-reachable decomposition structure or the full
+import graph? That question is the open thread. FLT confirmed Proved
+on the platform before congratulating.
 
 Key news in his reply: the theorem database repo goes public soon
 (license issue is the delay). Standing offer made: run conemass on the
@@ -20,6 +31,8 @@ Context: Prove2Me was the platform behind Anthropic's FLT
 formalization (13M lines of Lean in 11 days, announced Sep 21), so the
 platform's profile is rising fast. This is now the most engaged of the
 three outreach channels (Peng > Chen no-reply-yet > Feross sent 09-22).
+A Scope paragraph was added to examples/prove2me/REPORT.md the same
+day so future readers do not hit Peng's question unanswered.
 
 # Status 2026-09-22: paper v0.8 (Pfeiffer prior art + gameability) and Socket outreach sent
 
