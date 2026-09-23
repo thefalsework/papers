@@ -19,6 +19,7 @@ This repository holds the papers themselves, the open validation items they cont
 | **Epistemic dependency / correction architecture** | Paper 2 → arXiv v1 (June 2026); Stage 4 (T&N convergence) open | [`papers/paper2-epistemic-dependency/`](papers/paper2-epistemic-dependency/) |
 | **Practice domains (cinema, literature, …)** | **[A]** classifier + expert correspondence | [`papers/field-guide.md`](papers/field-guide.md) |
 | **Cross-domain derivation theorem** | **[O]** schema + open validation | [`validation/claims/five-position-derivation-formalization.md`](validation/claims/five-position-derivation-formalization.md) |
+| **Falsework inequality** (observer blur bounds load misperception) | **[K]** kernel-checked (9 declarations) + measured (Debian, bound within 5–16% of actual) | [`lean/FalseWorkPapers/Lattice/FalseworkInequality.lean`](lean/FalseWorkPapers/Lattice/FalseworkInequality.lean), [`falsework-note/falsework-inequality.md`](falsework-note/falsework-inequality.md), [`oracle-scanner/11-falsework-tightness.mjs`](oracle-scanner/11-falsework-tightness.mjs) |
 
 The critical path: close **music + Paper 2** before expanding domain or metaphysics claims.
 
@@ -48,6 +49,7 @@ A paper-by-paper overview with abstracts, current open validation items, and cro
 Focused, peer-review-targeted mathematical papers extracted from the framework live under [`preprints/`](preprints/). These are narrower in scope and mathematics-only in voice, distinct from the broader framework essays above. The current preprint:
 
 - **[A Four-Position Partition of Morphisms in Elementary Topoi with Distinction Structure](preprints/four-position-partition/paper.md)** — *Chris Brink, May 2026, preprint not yet submitted.* Formalizes the framework's central structural claim as a theorem about elementary topoi with non-trivial distinction structure. Kernel-checked in Lean 4 against Mathlib4; supporting `HeytingAlgebra (Subobject _)` instance upstreamed as Mathlib PR [#39618](https://github.com/leanprover-community/mathlib4/pull/39618). Self-contained and verifiable in an evening by a categorically literate reader. See [`preprints/README.md`](preprints/README.md) for the register and conventions.
+- **[The falsework inequality](falsework-note/falsework-inequality.md)** — *Chris Brink, September 2026, note v0.1.* The theorem connecting the programme's two halves: an observer's misperception of the conemass load field is bounded by twice its relative phantom mass per cone, with the constant tight, conservation characterized exactly by density (`j ⊥ = ⊥`), and per-cone Schur flattening. Nine declarations kernel-checked at [`lean/FalseWorkPapers/Lattice/FalseworkInequality.lean`](lean/FalseWorkPapers/Lattice/FalseworkInequality.lean); measured on Debian bookworm (registered study [`oracle-scanner/11-falsework-tightness.mjs`](oracle-scanner/11-falsework-tightness.mjs) — the bound is within 5–16% of actual distortion, and it prices a coarse-graining's cost to criticality triage before any ranking is run).
 
 ---
 
