@@ -103,8 +103,12 @@ over-promised unlock. Honest note carried into the spec: PageRank
 gets 33/40 of the same head here — the case for unlock mass in an
 unattended loop is exactness/enumerability (auditable dispatch), not
 superior discovery. This supersedes the queued "priority-menu spec"
-item; what remains for the Peng thread is sending it when their
-database repo ships.
+item. Decision reversed same hour: no reason to wait for their repo —
+the spec runs entirely on the public API, and the repo trigger
+belonged to the abandoned schema-dependent version. Slack message
+drafted and handed to Chris for the warm Peng thread (where Peng
+still owes the which-corpus answer); the spec send and that open
+question reinforce each other.
 
 # Status 2026-09-23 (evening): drift study — climbing is dead for xz, arrival-into-the-head is the live signal
 
