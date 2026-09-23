@@ -1,3 +1,9 @@
+/-
+Copyright (c) 2026 Chris Brink. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE-CODE.
+Authors: Chris Brink
+SPDX-License-Identifier: Apache-2.0
+-/
 -- `import Mathlib` FIRST and in full: comparator requires the challenge and
 -- solution statements to elaborate to identical terms, so this file must see
 -- exactly the instance set `Challenge.lean` sees (a selective import changes

@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Chris Brink. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE-CODE.
+Authors: Chris Brink
+SPDX-License-Identifier: Apache-2.0
+
 # The falsework inequality
 
 An observer's misperception of conemass is bounded, cone by cone, by
