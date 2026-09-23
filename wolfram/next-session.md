@@ -82,6 +82,39 @@ archive depth. Remaining queued: Prove2Me priority-menu spec
 lead-time in months is needed; registered test of the cone-size
 second factor on whatever new graph arrives next.
 
+THE FALSEWORK INEQUALITY — KERNEL-CHECKED (same evening, 2026-09-23).
+The unifying conjecture, stated in conversation as "what an observer
+can perceive of a structure's load is bounded by its blur," was
+formalized and proved within the hour:
+lean/FalseWorkPapers/Lattice/FalseworkInequality.lean, lake build
+clean. Statement: for cones C and any inflationary blur J (C u ⊆ J u —
+the nucleus axiom, so every Heyting observer applied to cones
+qualifies), the L1 distance between the true conemass field and the
+observer's perceived conemass field is at most
+sum_u 2 p_u / (|C u| + p_u), where p_u = |J C_u| - |C_u| is exactly
+the phantom-mass invariant of the aperture papers evaluated on u's
+cone. Four kernel-checked results: falsework_inequality (the bound),
+sum_abs_err_eq (per nonempty cone the bound is an IDENTITY — the
+constant 2 is tight, witnessed, not an estimate), perfect_observer
+(zero phantom mass on every cone => load perceived exactly — the
+pocket-of-reducibility statement in structural form), mass_conserved
+(total mass = number of nonempty cones for ANY cone assignment, so
+blur redistributes load and can never create or destroy it;
+misperception is about where, never how much). Proof is elementary
+(per-cone decomposition + triangle inequality + counting), which is a
+feature: the bridge between the two halves of the program — observer
+invariants (aperture/phantom mass) and load invariants (conemass) —
+is not deep machinery, it is the same lattice of down-sets carrying
+two functionals. This is the first theorem connecting the Levin/
+Heyting observer line to the conemass empirical line. Candidate next
+steps (not registered): evaluate the bound's tightness on real graphs
+(compute actual distortion vs bound for natural coarse-grainings of
+Debian, e.g. the observer that blurs packages to source-package or
+section granularity); state the converse question (which load fields
+are achievable as perceived fields of some observer); write the
+falsework note (short paper: statement, proof, Lean artifact, one
+empirical table).
+
 SCHEDULER SPEC (same evening). Prompted by the question "could
 Prove2Me eliminate the human in the loop and let agents automate on
 proof priority?" — answer written as a spec rather than waiting for
