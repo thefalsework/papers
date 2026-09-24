@@ -181,6 +181,38 @@ resolves.
 the same evening to a private local file; strategy for active private
 correspondence doesn't belong in the public log.)
 
+WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
+rounds of external review of chat drafts; nothing hot reached the
+record — verified by grep). The one genuinely Wolfram-substantive
+move on the table: a registered test of which coarse-grainings of
+their models (small hypergraph/multiway rules) commute with the
+evolution — via the Phase 0 decomposition, any pocket found is a
+certified backward-and-forward-completeness statement on THEIR
+objects. Letter wording agreed: "a registered test of which
+coarse-grainings of your models commute with their evolution, with a
+planned extension to a graded defect measure, related to approximate
+lumpability and bisimulation metrics." Three overclaims caught in
+chat before reaching any letter, recorded so they are not
+regenerated: (1) the falsework inequality does NOT price
+near-pockets — it is a static bound on blur distortion of cone
+credit; grading j∘T vs T∘j disagreement needs a commutation-defect
+definition and a NEW theorem that do not exist yet (the inequality
+may inspire it, it does not supply it); (2) graded near-equivalence
+is NOT novel — quasi-lumpability (Buchholz 1994; Franceschinis &
+Muntz) and bisimulation metrics (Desharnais–Gupta–Jagadeesan–
+Panangaden; van Breugel & Worrell) already grade it, and any future
+defect theorem must state what the lattice-theoretic version adds
+beyond them; (3) "only trivial coarse-grainings commute" would
+measure lumpable-partition scarcity, which is RELATED to
+computational irreducibility, not identical to it. CITATION DEBTS
+before notebook or letter ships: Kemeny–Snell lumpability (zero
+mentions in repo today), quasi-lumpability, bisimulation metrics —
+into phantom-predictor related work (a v0.4 edit) and the notebook.
+Study 13 candidate agreed: the G2 inversion as a registered
+software-security study — repository/project-level criticality
+tooling may systematically blur exactly the quiet critical packages.
+Nothing here starts before tomorrow.
+
 STUDY 12 RUN AND LICENSED (2026-09-24). The observer-cost survey —
 registered at ca23907 strictly before code, run the same day — asked
 the question note v0.2's softening left open: does the relative
