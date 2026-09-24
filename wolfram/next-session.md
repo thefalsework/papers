@@ -181,6 +181,39 @@ resolves.
 the same evening to a private local file; strategy for active private
 correspondence doesn't belong in the public log.)
 
+STUDY 13 DESIGN AGREED, NOT YET REGISTERED (2026-09-24 evening; per
+the sit rule, registration no earlier than tomorrow). Question: does
+project/repository-level aggregation bury quiet criticality (the G2
+inversion made real-world)? TWO ARMS, because real tools do two
+different things: ARM A, cone inflation — the study-12 observer
+(believe you depend on everything in your dependencies' project);
+models repo-level SBOM dependency resolution; a falsework observer in
+the strict sense, inequality applies, bound registered alongside.
+ARM B, target pooling — sum the finished per-package credit within
+each project, rank projects; models OpenSSF-style project scoring;
+NOT an observer in the theorem's formalism (a pushforward of the
+output field, no cones, no phantoms, mass conserved by construction)
+— the arm is purely positional and must not borrow the inequality's
+authority. Different failure mechanisms, named in advance: A spreads
+credit onto phantom siblings; B risks fame-by-aggregation (bulk
+projects outranking a quiet package's small project). ARM B OUTCOME
+(top-40 overlap does not apply): for each true top-40 package, its
+project's rank in the project ranking — full list, median, worst,
+and the registered summary statistic "buried count" = true-top-40
+packages whose project ranks outside the project top-40. xz/liblzma5
+is row one of the table, a test case, not an illustration. MAPPINGS:
+Debian binary→source from the archive itself (ground truth; primary
+corpus). Crates: repository field from a pinned crates.io DB dump
+(record dump date and distance from the 2022 snapshot; shared repo
+URL = same project, faithful to the tool model; missing URL =
+singleton, disclosed; coverage fraction reported with a registered
+minimum below which crates cells are descriptive only). SCOPING
+SENTENCE required in the header before code: the registered claim is
+about these corpora, these mappings, this granularity — the
+tool-facing generalization is marked as untested extrapolation.
+Attribution-resolution observations (project score does not say
+which package carries it) are descriptive only, no status.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
