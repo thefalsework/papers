@@ -216,8 +216,17 @@ guards theorems, but quantitative adjectives in prose ("exact," "upper
 bound," "coincides") had no checkpoint. The Slack posts survive: all
 posted numbers true, named examples stable under correction; the
 scheduler-spec message's "exact"/"lower bound" wording is what the
-dated corrections fix. Slack follow-up note pending (post after these
-commits are public).
+dated corrections fix. Closed the same evening: the scheduler post was
+edited (visible "(edited)" marker plus pointer line) and a correction
+note posted in-thread naming both overstatements, the corrected
+open-only computation, and the edge-set-labeled numbers (18/40 union,
+23/40 guaranteed vs PageRank). Thread record and git record now say
+the same thing. Second and third reviewer passes also absorbed: the
+paper's two "exactness theorems" repeats fixed (no such theorem
+existed; both spots now claim the enumerable released-set list,
+v0.16(e)), and the union/guaranteed edge-set choice measured and
+labeled everywhere it appears (orderings agree 37/40; named rows
+6/2/10 under guaranteed).
 
 ACCESSIBILITY PASS (same evening). Two discoverability gaps found and
 closed. (1) The Mathlib study was local-only while paper v0.14 cited
