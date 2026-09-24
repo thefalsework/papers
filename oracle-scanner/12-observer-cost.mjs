@@ -224,6 +224,37 @@
 // CONVERSE-PROBE LAYER: recorded per cell in observer-cost.json
 // (relative phantom count quantiles, blurred top-40 values, total
 // blurred mass). Descriptive only, no claims, per registration.
+//
+// DATED QUALIFIER (2026-09-24, same day, external review of this
+// postscript; numbers untouched). Three framings above run hotter
+// than the result licenses:
+// 1. SCOPE OF "INSTRUMENT": the registered PROMPT's operational
+//    reading ("the bound says which one destroys triage") carries an
+//    implication the study cannot support — the bound is never
+//    cheaper than direct measurement, since computing p_u requires
+//    the true cones, at which point both fields (and the damage
+//    itself) are equally cheap; this whole study ran in 15 seconds.
+//    What K12's survival licenses is EXPLANATORY: relative phantom
+//    count accounts for which observers damage the head, coherently
+//    across observer types (partitions, truncation, a non-dense
+//    nucleus). The theorem's quantity predicts the damage pattern;
+//    it does not shortcut measuring it.
+// 2. THE FIVE PAIRS: "the higher bound went with the lower head
+//    survival in all five pairs" was noticed after the run, not
+//    registered (G2 registered only natural-beats-random). Five
+//    agreements is ~1-in-32 under a null — and effectively four
+//    informative pairs plus a tie, since the debian-section pair
+//    ties 0/40-0/40 on survival. Suggestive, consistent with M4,
+//    not independent evidence; "cleanest single piece of evidence"
+//    above overstates its standing.
+// 3. V2 IS A GATE, NOT A FINDING: "mass_conserved_iff_dense is now
+//    measured at scale on BOTH branches" contradicts this header's
+//    own classification of V2 ("a violation is an implementation
+//    bug or a mis-transcribed corollary, not a finding"). Passing
+//    V2 verifies that the harness transcribes the kernel-checked
+//    corollary exactly — valuable as validation, but the corollary
+//    was proved, not measured, and a gate does not become a finding
+//    by passing.
 // ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";

@@ -206,6 +206,23 @@ succeeded. Deterministic reproduction verified across chats
 the Wolfram notebook and any Levin letter lead with study 12 numbers,
 and the converse-probe layer (collected, no status) is the raw
 material for the note's second theorem.
+SAME-DAY TEMPERING (external review of the postscript, hours after
+the run; dated qualifier now in the study header): three framings ran
+hot. (1) The licensed reading is EXPLANATORY, not operational — the
+bound needs the true cones, at which point measuring damage directly
+is equally cheap; phantom count ACCOUNTS FOR head damage across
+observer types, it does not shortcut anything. (2) "The bound called
+all five pair orderings" was post-hoc, ~1-in-32 under a null (and
+effectively 4 pairs + a tie); suggestive, not registered evidence.
+(3) The exact N2 minting is gate V2 passing — harness matches kernel
+— not the corollary being "measured"; a gate does not become a
+finding by passing. Letter-safe sentence, adopted: "Across 16
+observer cells on three corpora (pooled rho -0.91; effectively three
+independent graphs), relative phantom count rank-ordered how much
+each blur damaged the top of the ranking, which is what the
+inequality predicts." Letters sit until tomorrow; registration-to-run
+was 26 minutes today and the same-day pattern is where this program's
+errors have lived.
 
 EXTERNAL REVIEW ABSORBED (same evening, 2026-09-23). A reviewer read
 the conemass repo end to end, checked prose claims against published
