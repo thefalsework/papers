@@ -3,7 +3,14 @@
 **What an observer can perceive of a structure's load is bounded by its
 blur — stated, proved, kernel-checked, and measured.**
 
-Chris Brink · 2026-09-23 · v0.1
+Chris Brink · 2026-09-23 · v0.2 (v0.2, same day: "phantom mass" on
+cones renamed **phantom count** after an external review — the aperture
+papers' phantom mass is the *interval cardinality* |[k, jk]|, which on
+the subset lattice is 2^p, not p; the two are related by a logarithm,
+not identical, and the first version wrongly called them "the same
+invariant." The "prices the blur before any ranking is run" sentence
+also softened to what it can support. No theorem or measurement
+changed.)
 
 This note connects the two halves of the falsework program with a
 theorem. One half studies *observers*: nuclei on Heyting algebras,
@@ -27,11 +34,15 @@ exactly what the conemass tool computes. An **observer** is any blur
 \(J\) with \(C_u \subseteq JC_u\) — inflationarity, the axiom every
 nucleus satisfies, so every Heyting observer applied to cones
 qualifies (and so do inflationary non-nuclei, e.g. partition
-closures). Its **phantom mass** on cone \(u\) is
-\(p_u = |JC_u| - |C_u|\) — the count of elements it cannot separate
-from the cone, the same invariant as the aperture papers. The
-observer's perceived load is \(\mathrm{cm}_J\), the conemass field of
-the blurred cones.
+closures). Its **phantom count** on cone \(u\) is
+\(p_u = |JC_u| - |C_u|\) — the number of elements it cannot separate
+from the cone. (Relation to the aperture papers' **phantom mass**,
+which is the interval cardinality \(|[k, jk]|\): on the subset lattice
+the interval \([C_u, JC_u]\) has \(2^{p_u}\) elements, so
+\(p_u = \log_2\) of the phantom mass — the same phenomenon on two
+scales, not the same number. v0.1 wrongly called them the same
+invariant.) The observer's perceived load is \(\mathrm{cm}_J\), the
+conemass field of the blurred cones.
 
 **Theorem (falsework inequality).**
 
@@ -58,7 +69,7 @@ already measures on the lattice of down-sets.
 
 ## Corollaries (all kernel-checked)
 
-1. **Perfect observers.** Zero phantom mass on every cone ⟹ load
+1. **Perfect observers.** Zero phantom count on every cone ⟹ load
    perceived exactly. The pocket-of-reducibility statement in
    structural form.
 2. **Conservation ⟺ density.** Total mass equals the number of
@@ -103,11 +114,14 @@ admits, is almost absent on a real graph (the registered guess was
 registered). Conservation holds to float epsilon, as the density
 corollary demands of partition closures. And the operational reading:
 a version-blind observer still sees 29/40 of the true criticality
-head, while a section-level observer sees none of it — and the bound
-predicts this *before any ranking is run*, since it is computable
-from cone and class sizes alone. The theorem functions as an
-instrument: it prices a proposed coarse-graining's cost to triage in
-advance.
+head, while a section-level observer sees none of it. (v0.1 claimed
+the bound "prices the blur before any ranking is run"; softened —
+computing \(p_u\) requires the true cones, at which point the fields
+are cheap, so the bound saves no computation. Its value is analytic:
+it says *why* distortion is controlled, identifies which cones
+dominate the error, and bounds total distortion without comparing the
+two rankings — but head survival, the triage-relevant quantity, must
+still be measured, as the 29/40-vs-0/40 split shows.)
 
 ## Open: the converse question
 
@@ -123,10 +137,10 @@ here.
 ## Honest positioning
 
 The mathematics is elementary; a referee would call it an exercise.
-Its value is architectural: phantom mass was defined for logical
-reasons (what a nucleus cannot distinguish) and conemass for empirical
-ones (where dependency load concentrates), and this note proves the
-first is the price of misperceiving the second — with the constant
+Its value is architectural: the phantom invariants were defined for
+logical reasons (what a nucleus cannot distinguish) and conemass for
+empirical ones (where dependency load concentrates), and this note
+proves the first is the price of misperceiving the second — with the constant
 tight, the conservation boundary exactly the classical density
 condition of pointfree topology, and the bound within 16% of measured
 truth on a 63K-node production graph. One theorem, both halves of the

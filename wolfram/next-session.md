@@ -181,6 +181,44 @@ resolves.
 the same evening to a private local file; strategy for active private
 correspondence doesn't belong in the public log.)
 
+EXTERNAL REVIEW ABSORBED (same evening, 2026-09-23). A reviewer read
+the conemass repo end to end, checked prose claims against published
+CSVs, and found real errors. Every checkable claim verified before
+fixing; every confirmed one fixed the same evening with dated
+corrections, never silent edits. The two substantive ones, both in the
+Prove2Me example: (1) "union is an upper bound on unlock" — false for
+the harmonic mass (71/504 published rows score higher under the
+guaranteed bracket; dilution, the falsework mechanism itself, applied
+where we forgot to apply it); (2) "closing a theorem releases exactly
+its mass" — false, the score was computed on full-graph cones that
+still contain proved children; exactness belongs to the enumerated
+parent list only. Corrected score = unlock mass on the open-only
+subgraph (new unlock-open.mjs + ranking-unlock-open.csv): top-40
+overlap 22/40 vs the published frontier, named head rows stable
+(Richstein 1→4, space-groups 2→2, zeta 15→13), 145/504 open theorems
+carry zero remaining-work mass, and the PageRank null on the corrected
+object drops to 18/40 (from 33/40) — the corrected quantity is MORE
+distinct from centrality. Also confirmed and fixed: the paper's
+Mathlib "coincides" verdict mixed measures (registered outcome is
+top-40 overlap, on which Mathlib is 21/40 ≈ Debian's 22/40 — the
+out-of-family point FITS the depth candidate; band narrowed to ~4,
+paper v0.16); cycle condensation disclosed next to the CLI description
+(one unit per cycle, departure from printed formula); "two ecosystems,
+same law" demoted to replicated observation; stale header (v0.9),
+stale study count (six→eleven), DOI "this repository" mislabel,
+UTF-16 out-analysis.txt re-encoded. In the falsework note (v0.2):
+phantom MASS (interval cardinality, 2^p on the subset lattice) vs
+phantom COUNT (p) conflation fixed — log relation stated; "prices the
+blur before any ranking" softened to the analytic claim it can
+support. Root cause, recorded for the method: every error lived in
+connective prose — registration guards empirical claims and the kernel
+guards theorems, but quantitative adjectives in prose ("exact," "upper
+bound," "coincides") had no checkpoint. The Slack posts survive: all
+posted numbers true, named examples stable under correction; the
+scheduler-spec message's "exact"/"lower bound" wording is what the
+dated corrections fix. Slack follow-up note pending (post after these
+commits are public).
+
 ACCESSIBILITY PASS (same evening). Two discoverability gaps found and
 closed. (1) The Mathlib study was local-only while paper v0.14 cited
 its numbers under an "all computations committed" promise — published
