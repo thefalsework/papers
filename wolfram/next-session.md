@@ -181,6 +181,32 @@ resolves.
 the same evening to a private local file; strategy for active private
 correspondence doesn't belong in the public log.)
 
+STUDY 12 RUN AND LICENSED (2026-09-24). The observer-cost survey —
+registered at ca23907 strictly before code, run the same day — asked
+the question note v0.2's softening left open: does the relative
+falsework bound rank-order head survival across observers? K12 did
+not fire: pooled Spearman -0.908 over 16 cells (3 corpora x observer
+family), per-corpus -0.93/-0.93/-0.80, all gates passed including
+bit-exact study-11 continuity and mass_conserved_iff_dense measured
+on BOTH branches (the non-dense nucleus minted exactly one unit per
+inflated empty cone: 9,164/22,960/1,106). The inequality is now a
+licensed comparative instrument on a given graph (disclosed scope:
+effective n ~3 corpora, not a law). Both substantive guesses wrong,
+informatively: G1 — aggregate near-exactness is observer-type-
+specific (truncation blur runs 1.80x; empty-cone inflation costs 1
+against bound 2); G2, the study's best single finding — random
+size-matched partitions beat natural semantic ones on head survival
+in 4 of 5 pairs, because semantic classes are exactly the sets cones
+systematically touch, so a semantic blur buys MORE phantom count at
+equal granularity (prove2me inverts: namespaces are missions, cones
+stay inside missions). In all five pairs the bound called the
+survival ordering — the guess failed exactly where the instrument
+succeeded. Deterministic reproduction verified across chats
+(rerun byte-identical). Next artifacts can now say "measured":
+the Wolfram notebook and any Levin letter lead with study 12 numbers,
+and the converse-probe layer (collected, no status) is the raw
+material for the note's second theorem.
+
 EXTERNAL REVIEW ABSORBED (same evening, 2026-09-23). A reviewer read
 the conemass repo end to end, checked prose claims against published
 CSVs, and found real errors. Every checkable claim verified before
