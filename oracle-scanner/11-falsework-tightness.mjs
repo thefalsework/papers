@@ -85,6 +85,24 @@
 // coarse-graining destroys triage; the bound is within 5-16% of
 // truth on both natural observers tested.
 // ============================================================
+// DATED ADDENDUM (2026-09-24) — two readings above corrected by
+// falsework note v0.2 (2026-09-23, external review). The frozen
+// header and postscript are unchanged per program norms; every
+// NUMBER above stands.
+// 1. Terminology: "phantom mass" above is, in v0.2 terms, the
+//    phantom COUNT p_u = |JC_u| - |C_u|. The aperture papers'
+//    phantom mass is the interval cardinality |[C_u, JC_u]| = 2^p_u
+//    — a logarithm apart, not the same number.
+// 2. The M3 reading "says this BEFORE running any ranking" and the
+//    verdict's "compute the bound (cheap, no blurred ranking
+//    needed) to predict" overstate: computing p_u requires the true
+//    cones, at which point both fields are cheap, so the bound
+//    saves no computation. Its measured tightness stands; its value
+//    is analytic. Whether the relative bound rank-orders triage
+//    damage ACROSS observers — the instrument reading the verdict
+//    reached for — is the registered question of study 12, with a
+//    kill, not a settled fact.
+// ============================================================
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { buildSnap } from "../deflation-control/lib.mjs";
