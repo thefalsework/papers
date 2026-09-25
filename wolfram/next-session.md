@@ -197,7 +197,7 @@ scale; their human gate on spec edits (agents drift/reward-hack) =
 the scheduler spec's agents-close-nodes-never-create-edges rule.
 DISCIPLINE if ever engaged: conemass does not find spec gaps; it
 ranks where gaps would matter. Fourth graph type, pre-alpha corpus —
-scope accordingly. Not before study 13 ships.
+scope accordingly. Study 13 has now shipped; this remains noted, not queued.
 
 STUDY 13 DESIGN AGREED, NOT YET REGISTERED (2026-09-24 evening; per
 the sit rule, registration no earlier than tomorrow). Question: does
@@ -231,6 +231,11 @@ about these corpora, these mappings, this granularity — the
 tool-facing generalization is marked as untested extrapolation.
 Attribution-resolution observations (project score does not say
 which package carries it) are descriptive only, no status.
+
+STUDY 13 RUN (2026-09-25). Registered at e4f0b8d before mappings
+were extracted; results in oracle-scanner/aggregation-blur.json
+(ranAt 2026-09-25T20:43:07.226Z). Claim A fires. Claim B is dead
+(K13b). Postscript in oracle-scanner/13-aggregation-blur.mjs.
 
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the

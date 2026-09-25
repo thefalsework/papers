@@ -1,0 +1,1410 @@
+{
+ "registered": "e4f0b8d",
+ "ranAt": "2026-09-25T20:43:07.226Z",
+ "cap": 200,
+ "seed": 13,
+ "debian": {
+  "corpus": "debian-2023",
+  "armA": {
+   "project": {
+    "observer": "project partition",
+    "classes": 34149,
+    "l1Actual": 83470.77784751145,
+    "l1Bound": 89744.31189908866,
+    "ratio": 1.0751584472237459,
+    "conservationGap": 1.2943928595632315e-8,
+    "headSurvival40": 1
+   },
+   "randomNull": {
+    "observer": "random size-matched",
+    "classes": 34149,
+    "l1Actual": 98877.55841600892,
+    "l1Bound": 101808.55068893402,
+    "ratio": 1.029642644093147,
+    "conservationGap": 3.4924596548080444e-10,
+    "headSurvival40": 2
+   }
+  },
+  "armB": {
+   "project": {
+    "grouping": "project pooling",
+    "projects": 34149,
+    "conservationGap": 1.724401954561472e-9,
+    "buriedCount": 2,
+    "projectRankMedian": 13,
+    "projectRankWorst": 42,
+    "head": [
+     {
+      "package": "gcc-12-base",
+      "mass": 4197.18364888025,
+      "project": "gcc-12",
+      "projectRank": 1
+     },
+     {
+      "package": "libgcc-s1",
+      "mass": 4190.178648880259,
+      "project": "gcc-12",
+      "projectRank": 1
+     },
+     {
+      "package": "zlib1g",
+      "mass": 1108.4967735106877,
+      "project": "zlib",
+      "projectRank": 2
+     },
+     {
+      "package": "libstdc++6",
+      "mass": 923.1303112857573,
+      "project": "gcc-12",
+      "projectRank": 1
+     },
+     {
+      "package": "libgmp10",
+      "mass": 814.2935922794492,
+      "project": "gmp",
+      "projectRank": 5
+     },
+     {
+      "package": "libzstd1",
+      "mass": 708.6701804887198,
+      "project": "libzstd",
+      "projectRank": 8
+     },
+     {
+      "package": "liblzma5",
+      "mass": 706.9695839721379,
+      "project": "xz-utils",
+      "projectRank": 7
+     },
+     {
+      "package": "libmd0",
+      "mass": 692.0900126935915,
+      "project": "libmd",
+      "projectRank": 10
+     },
+     {
+      "package": "libpcre2-8-0",
+      "mass": 667.763285743771,
+      "project": "pcre2",
+      "projectRank": 6
+     },
+     {
+      "package": "libselinux1",
+      "mass": 653.5701406303549,
+      "project": "libselinux",
+      "projectRank": 11
+     },
+     {
+      "package": "libbz2-1.0",
+      "mass": 599.5930041251067,
+      "project": "bzip2",
+      "projectRank": 13
+     },
+     {
+      "package": "libacl1",
+      "mass": 529.8955246121636,
+      "project": "acl",
+      "projectRank": 17
+     },
+     {
+      "package": "libjs-jquery",
+      "mass": 519.4262423404803,
+      "project": "node-jquery",
+      "projectRank": 18
+     },
+     {
+      "package": "dpkg",
+      "mass": 517.3360938185145,
+      "project": "dpkg",
+      "projectRank": 19
+     },
+     {
+      "package": "tar",
+      "mass": 513.0136695760938,
+      "project": "tar",
+      "projectRank": 20
+     },
+     {
+      "package": "libcrypt1",
+      "mass": 506.97078301284716,
+      "project": "libxcrypt",
+      "projectRank": 16
+     },
+     {
+      "package": "libssl3",
+      "mass": 503.74753379527635,
+      "project": "openssl",
+      "projectRank": 12
+     },
+     {
+      "package": "libdb5.3",
+      "mass": 450.39466007585116,
+      "project": "db5.3",
+      "projectRank": 23
+     },
+     {
+      "package": "libffi8",
+      "mass": 436.89018278836267,
+      "project": "libffi",
+      "projectRank": 25
+     },
+     {
+      "package": "libtinfo6",
+      "mass": 431.4334490216787,
+      "project": "ncurses",
+      "projectRank": 9
+     },
+     {
+      "package": "debconf",
+      "mass": 352.7122925727511,
+      "project": "debconf",
+      "projectRank": 28
+     },
+     {
+      "package": "perl-base",
+      "mass": 275.84544022671855,
+      "project": "perl",
+      "projectRank": 4
+     },
+     {
+      "package": "libcom-err2",
+      "mass": 267.20488546070374,
+      "project": "e2fsprogs",
+      "projectRank": 33
+     },
+     {
+      "package": "libjs-underscore",
+      "mass": 267.186442025803,
+      "project": "underscore",
+      "projectRank": 35
+     },
+     {
+      "package": "libgssapi-krb5-2",
+      "mass": 264.7938540008169,
+      "project": "krb5",
+      "projectRank": 3
+     },
+     {
+      "package": "libkrb5support0",
+      "mass": 262.0151874860501,
+      "project": "krb5",
+      "projectRank": 3
+     },
+     {
+      "package": "libk5crypto3",
+      "mass": 261.97685415271656,
+      "project": "krb5",
+      "projectRank": 3
+     },
+     {
+      "package": "libkrb5-3",
+      "mass": 261.7339970098596,
+      "project": "krb5",
+      "projectRank": 3
+     },
+     {
+      "package": "libkeyutils1",
+      "mass": 258.8295743305015,
+      "project": "keyutils",
+      "projectRank": 37
+     },
+     {
+      "package": "libgdbm6",
+      "mass": 252.36024489661014,
+      "project": "gdbm",
+      "projectRank": 22
+     },
+     {
+      "package": "perl",
+      "mass": 248.82467387382934,
+      "project": "perl",
+      "projectRank": 4
+     },
+     {
+      "package": "libjs-sphinxdoc",
+      "mass": 247.71641606170488,
+      "project": "sphinx",
+      "projectRank": 39
+     },
+     {
+      "package": "perl-modules-5.36",
+      "mass": 247.6021634435211,
+      "project": "perl",
+      "projectRank": 4
+     },
+     {
+      "package": "libperl5.36",
+      "mass": 247.56160788796555,
+      "project": "perl",
+      "projectRank": 4
+     },
+     {
+      "package": "libgdbm-compat4",
+      "mass": 246.24320447230352,
+      "project": "gdbm",
+      "projectRank": 22
+     },
+     {
+      "package": "libbsd0",
+      "mass": 245.08407521615223,
+      "project": "libbsd",
+      "projectRank": 40
+     },
+     {
+      "package": "libexpat1",
+      "mass": 236.59891674387842,
+      "project": "expat",
+      "projectRank": 41
+     },
+     {
+      "package": "libicu72",
+      "mass": 224.73759140997058,
+      "project": "icu",
+      "projectRank": 42
+     },
+     {
+      "package": "libuuid1",
+      "mass": 211.2594687177442,
+      "project": "util-linux",
+      "projectRank": 14
+     },
+     {
+      "package": "libtirpc3",
+      "mass": 178.4883248735532,
+      "project": "libtirpc",
+      "projectRank": 26
+     }
+    ],
+    "attribution": [
+     {
+      "rank": 1,
+      "project": "gcc-12",
+      "pooledMass": 9765.194684415199,
+      "packages": 98,
+      "topPackage": "gcc-12-base",
+      "topPackageShare": 0.4298105449529605
+     },
+     {
+      "rank": 2,
+      "project": "zlib",
+      "pooledMass": 1128.7526258288012,
+      "packages": 4,
+      "topPackage": "zlib1g",
+      "topPackageShare": 0.9820546576330307
+     },
+     {
+      "rank": 3,
+      "project": "krb5",
+      "pooledMass": 1054.486226181421,
+      "packages": 24,
+      "topPackage": "libgssapi-krb5-2",
+      "topPackageShare": 0.2511117238199562
+     },
+     {
+      "rank": 4,
+      "project": "perl",
+      "pooledMass": 1020.0100203629206,
+      "packages": 7,
+      "topPackage": "perl-base",
+      "topPackageShare": 0.27043404939156623
+     },
+     {
+      "rank": 5,
+      "project": "gmp",
+      "pooledMass": 833.2235925932646,
+      "packages": 5,
+      "topPackage": "libgmp10",
+      "topPackageShare": 0.9772810077845983
+     },
+     {
+      "rank": 6,
+      "project": "pcre2",
+      "pooledMass": 731.5634995018493,
+      "packages": 6,
+      "topPackage": "libpcre2-8-0",
+      "topPackageShare": 0.9127892331950372
+     },
+     {
+      "rank": 7,
+      "project": "xz-utils",
+      "pooledMass": 718.3603915325214,
+      "packages": 5,
+      "topPackage": "liblzma5",
+      "topPackageShare": 0.9841433245838029
+     },
+     {
+      "rank": 8,
+      "project": "libzstd",
+      "pooledMass": 712.1729207615984,
+      "packages": 3,
+      "topPackage": "libzstd1",
+      "topPackageShare": 0.9950816154746057
+     },
+     {
+      "rank": 9,
+      "project": "ncurses",
+      "pooledMass": 697.5468831736207,
+      "packages": 19,
+      "topPackage": "libtinfo6",
+      "topPackageShare": 0.6185010060668483
+     },
+     {
+      "rank": 10,
+      "project": "libmd",
+      "pooledMass": 693.1129625601094,
+      "packages": 2,
+      "topPackage": "libmd0",
+      "topPackageShare": 0.9985241224421204
+     }
+    ]
+   },
+   "randomNull": {
+    "grouping": "random size-matched pooling",
+    "projects": 34149,
+    "conservationGap": 1.6443664208054543e-9,
+    "buriedCount": 1,
+    "projectRankMedian": 21,
+    "projectRankWorst": 41,
+    "head": [
+     {
+      "package": "gcc-12-base",
+      "mass": 4197.18364888025,
+      "project": "r9",
+      "projectRank": 2
+     },
+     {
+      "package": "libgcc-s1",
+      "mass": 4190.178648880259,
+      "project": "r0",
+      "projectRank": 1
+     },
+     {
+      "package": "zlib1g",
+      "mass": 1108.4967735106877,
+      "project": "r28172",
+      "projectRank": 3
+     },
+     {
+      "package": "libstdc++6",
+      "mass": 923.1303112857573,
+      "project": "r4",
+      "projectRank": 4
+     },
+     {
+      "package": "libgmp10",
+      "mass": 814.2935922794492,
+      "project": "r2486",
+      "projectRank": 5
+     },
+     {
+      "package": "libzstd1",
+      "mass": 708.6701804887198,
+      "project": "r15928",
+      "projectRank": 6
+     },
+     {
+      "package": "liblzma5",
+      "mass": 706.9695839721379,
+      "project": "r2200",
+      "projectRank": 7
+     },
+     {
+      "package": "libmd0",
+      "mass": 692.0900126935915,
+      "project": "r1937",
+      "projectRank": 8
+     },
+     {
+      "package": "libpcre2-8-0",
+      "mass": 667.763285743771,
+      "project": "r24644",
+      "projectRank": 9
+     },
+     {
+      "package": "libselinux1",
+      "mass": 653.5701406303549,
+      "project": "r12087",
+      "projectRank": 10
+     },
+     {
+      "package": "libbz2-1.0",
+      "mass": 599.5930041251067,
+      "project": "r3317",
+      "projectRank": 11
+     },
+     {
+      "package": "libacl1",
+      "mass": 529.8955246121636,
+      "project": "r763",
+      "projectRank": 13
+     },
+     {
+      "package": "libjs-jquery",
+      "mass": 519.4262423404803,
+      "project": "r5178",
+      "projectRank": 14
+     },
+     {
+      "package": "dpkg",
+      "mass": 517.3360938185145,
+      "project": "r6",
+      "projectRank": 12
+     },
+     {
+      "package": "tar",
+      "mass": 513.0136695760938,
+      "project": "r18569",
+      "projectRank": 15
+     },
+     {
+      "package": "libcrypt1",
+      "mass": 506.97078301284716,
+      "project": "r25222",
+      "projectRank": 16
+     },
+     {
+      "package": "libssl3",
+      "mass": 503.74753379527635,
+      "project": "r8100",
+      "projectRank": 17
+     },
+     {
+      "package": "libdb5.3",
+      "mass": 450.39466007585116,
+      "project": "r8525",
+      "projectRank": 19
+     },
+     {
+      "package": "libffi8",
+      "mass": 436.89018278836267,
+      "project": "r17",
+      "projectRank": 18
+     },
+     {
+      "package": "libtinfo6",
+      "mass": 431.4334490216787,
+      "project": "r367",
+      "projectRank": 20
+     },
+     {
+      "package": "debconf",
+      "mass": 352.7122925727511,
+      "project": "r5033",
+      "projectRank": 21
+     },
+     {
+      "package": "perl-base",
+      "mass": 275.84544022671855,
+      "project": "r3367",
+      "projectRank": 25
+     },
+     {
+      "package": "libcom-err2",
+      "mass": 267.20488546070374,
+      "project": "r6056",
+      "projectRank": 26
+     },
+     {
+      "package": "libjs-underscore",
+      "mass": 267.186442025803,
+      "project": "r334",
+      "projectRank": 23
+     },
+     {
+      "package": "libgssapi-krb5-2",
+      "mass": 264.7938540008169,
+      "project": "r11460",
+      "projectRank": 27
+     },
+     {
+      "package": "libkrb5support0",
+      "mass": 262.0151874860501,
+      "project": "r29",
+      "projectRank": 24
+     },
+     {
+      "package": "libk5crypto3",
+      "mass": 261.97685415271656,
+      "project": "r29248",
+      "projectRank": 28
+     },
+     {
+      "package": "libkrb5-3",
+      "mass": 261.7339970098596,
+      "project": "r28615",
+      "projectRank": 29
+     },
+     {
+      "package": "libkeyutils1",
+      "mass": 258.8295743305015,
+      "project": "r25140",
+      "projectRank": 30
+     },
+     {
+      "package": "libgdbm6",
+      "mass": 252.36024489661014,
+      "project": "r30046",
+      "projectRank": 31
+     },
+     {
+      "package": "perl",
+      "mass": 248.82467387382934,
+      "project": "r17619",
+      "projectRank": 33
+     },
+     {
+      "package": "libjs-sphinxdoc",
+      "mass": 247.71641606170488,
+      "project": "r256",
+      "projectRank": 32
+     },
+     {
+      "package": "perl-modules-5.36",
+      "mass": 247.6021634435211,
+      "project": "r32411",
+      "projectRank": 34
+     },
+     {
+      "package": "libperl5.36",
+      "mass": 247.56160788796555,
+      "project": "r14366",
+      "projectRank": 35
+     },
+     {
+      "package": "libgdbm-compat4",
+      "mass": 246.24320447230352,
+      "project": "r11650",
+      "projectRank": 36
+     },
+     {
+      "package": "libbsd0",
+      "mass": 245.08407521615223,
+      "project": "r3719",
+      "projectRank": 37
+     },
+     {
+      "package": "libexpat1",
+      "mass": 236.59891674387842,
+      "project": "r5115",
+      "projectRank": 38
+     },
+     {
+      "package": "libicu72",
+      "mass": 224.73759140997058,
+      "project": "r216",
+      "projectRank": 39
+     },
+     {
+      "package": "libuuid1",
+      "mass": 211.2594687177442,
+      "project": "r675",
+      "projectRank": 40
+     },
+     {
+      "package": "libtirpc3",
+      "mass": 178.4883248735532,
+      "project": "r1031",
+      "projectRank": 41
+     }
+    ],
+    "attribution": [
+     {
+      "rank": 1,
+      "project": "r0",
+      "pooledMass": 4394.7498039743,
+      "packages": 521,
+      "topPackage": "libgcc-s1",
+      "topPackageShare": 0.9534510121807067
+     },
+     {
+      "rank": 2,
+      "project": "r9",
+      "pooledMass": 4268.241184362814,
+      "packages": 159,
+      "topPackage": "gcc-12-base",
+      "topPackageShare": 0.9833520336800808
+     },
+     {
+      "rank": 3,
+      "project": "r28172",
+      "pooledMass": 1108.4967735106877,
+      "packages": 1,
+      "topPackage": "zlib1g",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 4,
+      "project": "r4",
+      "pooledMass": 991.9896016142274,
+      "packages": 224,
+      "topPackage": "libstdc++6",
+      "topPackageShare": 0.9305846651855847
+     },
+     {
+      "rank": 5,
+      "project": "r2486",
+      "pooledMass": 814.2935922794492,
+      "packages": 3,
+      "topPackage": "libgmp10",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 6,
+      "project": "r15928",
+      "pooledMass": 708.6701804887198,
+      "packages": 1,
+      "topPackage": "libzstd1",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 7,
+      "project": "r2200",
+      "pooledMass": 707.0111105827822,
+      "packages": 4,
+      "topPackage": "liblzma5",
+      "topPackageShare": 0.9999412645572004
+     },
+     {
+      "rank": 8,
+      "project": "r1937",
+      "pooledMass": 696.0553864197458,
+      "packages": 4,
+      "topPackage": "libmd0",
+      "topPackageShare": 0.9943030773074673
+     },
+     {
+      "rank": 9,
+      "project": "r24644",
+      "pooledMass": 667.763285743771,
+      "packages": 1,
+      "topPackage": "libpcre2-8-0",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 10,
+      "project": "r12087",
+      "pooledMass": 653.5701406303549,
+      "packages": 1,
+      "topPackage": "libselinux1",
+      "topPackageShare": 1
+     }
+    ]
+   }
+  }
+ },
+ "crates": {
+  "corpus": "crates-2022",
+  "armA": {
+   "project": {
+    "observer": "project partition",
+    "classes": 65573,
+    "l1Actual": 66501.08287854158,
+    "l1Bound": 69879.83448709438,
+    "ratio": 1.0508074675223529,
+    "conservationGap": 1.4406396076083183e-9,
+    "headSurvival40": 16
+   },
+   "randomNull": {
+    "observer": "random size-matched",
+    "classes": 65573,
+    "l1Actual": 93245.01599298266,
+    "l1Bound": 94743.82586709975,
+    "ratio": 1.0160738872545196,
+    "conservationGap": 4.678440745919943e-9,
+    "headSurvival40": 14
+   }
+  },
+  "armB": {
+   "project": {
+    "grouping": "project pooling",
+    "projects": 65573,
+    "conservationGap": 5.893525667488575e-10,
+    "buriedCount": 3,
+    "projectRankMedian": 20,
+    "projectRankWorst": 44,
+    "head": [
+     {
+      "package": "libc",
+      "mass": 2311.3404297411275,
+      "project": "github.com/rust-lang/libc",
+      "projectRank": 1
+     },
+     {
+      "package": "unicode-ident",
+      "mass": 1941.0073382558166,
+      "project": "github.com/dtolnay/unicode-ident",
+      "projectRank": 3
+     },
+     {
+      "package": "proc-macro2",
+      "mass": 1940.6223382558223,
+      "project": "github.com/dtolnay/proc-macro2",
+      "projectRank": 4
+     },
+     {
+      "package": "quote",
+      "mass": 1894.3307650776308,
+      "project": "github.com/dtolnay/quote",
+      "projectRank": 5
+     },
+     {
+      "package": "syn",
+      "mass": 1863.8938714984256,
+      "project": "github.com/dtolnay/syn",
+      "projectRank": 6
+     },
+     {
+      "package": "cfg-if",
+      "mass": 1341.0087882385037,
+      "project": "github.com/rust-lang/cfg-if",
+      "projectRank": 9
+     },
+     {
+      "package": "serde",
+      "mass": 1172.4571403832917,
+      "project": "github.com/serde-rs/serde",
+      "projectRank": 8
+     },
+     {
+      "package": "num-traits",
+      "mass": 998.9754487620796,
+      "project": "github.com/rust-num/num-traits",
+      "projectRank": 11
+     },
+     {
+      "package": "bitflags",
+      "mass": 928.0598703122527,
+      "project": "github.com/bitflags/bitflags",
+      "projectRank": 14
+     },
+     {
+      "package": "lazy_static",
+      "mass": 849.9914028677422,
+      "project": "github.com/rust-lang-nursery/lazy-static.rs",
+      "projectRank": 16
+     },
+     {
+      "package": "log",
+      "mass": 772.4897512553637,
+      "project": "github.com/rust-lang/log",
+      "projectRank": 17
+     },
+     {
+      "package": "winapi-i686-pc-windows-gnu",
+      "mass": 718.1163546574828,
+      "project": "github.com/retep998/winapi-rs",
+      "projectRank": 2
+     },
+     {
+      "package": "winapi-x86_64-pc-windows-gnu",
+      "mass": 718.1063546574828,
+      "project": "github.com/retep998/winapi-rs",
+      "projectRank": 2
+     },
+     {
+      "package": "winapi",
+      "mass": 717.2063546574826,
+      "project": "github.com/retep998/winapi-rs",
+      "projectRank": 2
+     },
+     {
+      "package": "rand_core",
+      "mass": 714.1033350321615,
+      "project": "github.com/rust-lang-nursery/rand",
+      "projectRank": 18
+     },
+     {
+      "package": "rand",
+      "mass": 643.8447333619984,
+      "project": "github.com/rust-random/rand",
+      "projectRank": 20
+     },
+     {
+      "package": "byteorder",
+      "mass": 629.2541005406291,
+      "project": "github.com/burntsushi/byteorder",
+      "projectRank": 21
+     },
+     {
+      "package": "hashbrown",
+      "mass": 530.3416321686565,
+      "project": "github.com/rust-lang/hashbrown",
+      "projectRank": 23
+     },
+     {
+      "package": "itoa",
+      "mass": 528.5121564437349,
+      "project": "github.com/dtolnay/itoa",
+      "projectRank": 24
+     },
+     {
+      "package": "ryu",
+      "mass": 491.4366050069774,
+      "project": "github.com/dtolnay/ryu",
+      "projectRank": 25
+     },
+     {
+      "package": "num-integer",
+      "mass": 489.0730996645749,
+      "project": "github.com/rust-num/num-integer",
+      "projectRank": 26
+     },
+     {
+      "package": "thiserror",
+      "mass": 465.59371209753164,
+      "project": "github.com/dtolnay/thiserror",
+      "projectRank": 13
+     },
+     {
+      "package": "thiserror-impl",
+      "mass": 465.5587120975318,
+      "project": "github.com/dtolnay/thiserror",
+      "projectRank": 13
+     },
+     {
+      "package": "regex-syntax",
+      "mass": 459.6889111462034,
+      "project": "github.com/rust-lang/regex",
+      "projectRank": 15
+     },
+     {
+      "package": "regex",
+      "mass": 452.1029506855868,
+      "project": "github.com/rust-lang/regex",
+      "projectRank": 15
+     },
+     {
+      "package": "serde_json",
+      "mass": 441.8305590340631,
+      "project": "github.com/serde-rs/json",
+      "projectRank": 28
+     },
+     {
+      "package": "indexmap",
+      "mass": 439.2075788915121,
+      "project": "github.com/indexmap-rs/indexmap",
+      "projectRank": 29
+     },
+     {
+      "package": "memchr",
+      "mass": 427.98072610123876,
+      "project": "github.com/burntsushi/memchr",
+      "projectRank": 30
+     },
+     {
+      "package": "pin-project-lite",
+      "mass": 415.19278531353024,
+      "project": "github.com/taiki-e/pin-project-lite",
+      "projectRank": 31
+     },
+     {
+      "package": "once_cell",
+      "mass": 319.3670043278968,
+      "project": "github.com/matklad/once_cell",
+      "projectRank": 36
+     },
+     {
+      "package": "bytes",
+      "mass": 318.5524789823666,
+      "project": "github.com/tokio-rs/bytes",
+      "projectRank": 37
+     },
+     {
+      "package": "futures-core",
+      "mass": 310.71371031793865,
+      "project": "github.com/rust-lang/futures-rs",
+      "projectRank": 7
+     },
+     {
+      "package": "textwrap",
+      "mass": 301.39505432403223,
+      "project": "github.com/mgeisler/textwrap",
+      "projectRank": 38
+     },
+     {
+      "package": "either",
+      "mass": 300.02779575652414,
+      "project": "github.com/rayon-rs/either",
+      "projectRank": 39
+     },
+     {
+      "package": "os_str_bytes",
+      "mass": 292.07481251707543,
+      "project": "github.com/dylni/os_str_bytes",
+      "projectRank": 40
+     },
+     {
+      "package": "clap",
+      "mass": 289.1602536432096,
+      "project": "github.com/clap-rs/clap",
+      "projectRank": 22
+     },
+     {
+      "package": "clap_lex",
+      "mass": 289.1388433867995,
+      "project": "github.com/clap-rs/clap",
+      "projectRank": 22
+     },
+     {
+      "package": "fnv",
+      "mass": 278.4840278959607,
+      "project": "github.com/servo/rust-fnv",
+      "projectRank": 41
+     },
+     {
+      "package": "nb",
+      "mass": 276.1816485929459,
+      "project": "github.com/rust-embedded/nb",
+      "projectRank": 42
+     },
+     {
+      "package": "anyhow",
+      "mass": 273.2887865112592,
+      "project": "github.com/dtolnay/anyhow",
+      "projectRank": 44
+     }
+    ],
+    "attribution": [
+     {
+      "rank": 1,
+      "project": "github.com/rust-lang/libc",
+      "pooledMass": 2311.3404297411275,
+      "packages": 3,
+      "topPackage": "libc",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 2,
+      "project": "github.com/retep998/winapi-rs",
+      "pooledMass": 2178.7961046681335,
+      "packages": 36,
+      "topPackage": "winapi-i686-pc-windows-gnu",
+      "topPackageShare": 0.32959318823771433
+     },
+     {
+      "rank": 3,
+      "project": "github.com/dtolnay/unicode-ident",
+      "pooledMass": 1941.0073382558166,
+      "packages": 1,
+      "topPackage": "unicode-ident",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 4,
+      "project": "github.com/dtolnay/proc-macro2",
+      "pooledMass": 1940.6223382558223,
+      "packages": 1,
+      "topPackage": "proc-macro2",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 5,
+      "project": "github.com/dtolnay/quote",
+      "pooledMass": 1894.4974317442975,
+      "packages": 2,
+      "topPackage": "quote",
+      "topPackageShare": 0.999912025921031
+     },
+     {
+      "rank": 6,
+      "project": "github.com/dtolnay/syn",
+      "pooledMass": 1865.4605848504332,
+      "packages": 6,
+      "topPackage": "syn",
+      "topPackageShare": 0.9991601466336352
+     },
+     {
+      "rank": 7,
+      "project": "github.com/rust-lang/futures-rs",
+      "pooledMass": 1625.5653301840464,
+      "packages": 10,
+      "topPackage": "futures-core",
+      "topPackageShare": 0.19114193969845536
+     },
+     {
+      "rank": 8,
+      "project": "github.com/serde-rs/serde",
+      "pooledMass": 1368.0123158043898,
+      "packages": 10,
+      "topPackage": "serde",
+      "topPackageShare": 0.8570515972978563
+     },
+     {
+      "rank": 9,
+      "project": "github.com/rust-lang/cfg-if",
+      "pooledMass": 1341.0087882385037,
+      "packages": 1,
+      "topPackage": "cfg-if",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 10,
+      "project": "github.com/microsoft/windows-rs",
+      "pooledMass": 1088.0922027943002,
+      "packages": 20,
+      "topPackage": "windows_aarch64_msvc",
+      "topPackageShare": 0.16582929723020565
+     }
+    ]
+   },
+   "randomNull": {
+    "grouping": "random size-matched pooling",
+    "projects": 65573,
+    "conservationGap": 3.055902197957039e-10,
+    "buriedCount": 1,
+    "projectRankMedian": 21,
+    "projectRankWorst": 41,
+    "head": [
+     {
+      "package": "libc",
+      "mass": 2311.3404297411275,
+      "project": "r375",
+      "projectRank": 1
+     },
+     {
+      "package": "unicode-ident",
+      "mass": 1941.0073382558166,
+      "project": "r66",
+      "projectRank": 2
+     },
+     {
+      "package": "proc-macro2",
+      "mass": 1940.6223382558223,
+      "project": "r37509",
+      "projectRank": 3
+     },
+     {
+      "package": "quote",
+      "mass": 1894.3307650776308,
+      "project": "r77",
+      "projectRank": 4
+     },
+     {
+      "package": "syn",
+      "mass": 1863.8938714984256,
+      "project": "r32187",
+      "projectRank": 5
+     },
+     {
+      "package": "cfg-if",
+      "mass": 1341.0087882385037,
+      "project": "r24580",
+      "projectRank": 6
+     },
+     {
+      "package": "serde",
+      "mass": 1172.4571403832917,
+      "project": "r57511",
+      "projectRank": 7
+     },
+     {
+      "package": "num-traits",
+      "mass": 998.9754487620796,
+      "project": "r308",
+      "projectRank": 8
+     },
+     {
+      "package": "bitflags",
+      "mass": 928.0598703122527,
+      "project": "r23340",
+      "projectRank": 9
+     },
+     {
+      "package": "lazy_static",
+      "mass": 849.9914028677422,
+      "project": "r3146",
+      "projectRank": 10
+     },
+     {
+      "package": "log",
+      "mass": 772.4897512553637,
+      "project": "r17132",
+      "projectRank": 11
+     },
+     {
+      "package": "winapi-i686-pc-windows-gnu",
+      "mass": 718.1163546574828,
+      "project": "r51722",
+      "projectRank": 12
+     },
+     {
+      "package": "winapi-x86_64-pc-windows-gnu",
+      "mass": 718.1063546574828,
+      "project": "r28480",
+      "projectRank": 13
+     },
+     {
+      "package": "winapi",
+      "mass": 717.2063546574826,
+      "project": "r57109",
+      "projectRank": 14
+     },
+     {
+      "package": "rand_core",
+      "mass": 714.1033350321615,
+      "project": "r30321",
+      "projectRank": 15
+     },
+     {
+      "package": "rand",
+      "mass": 643.8447333619984,
+      "project": "r4799",
+      "projectRank": 16
+     },
+     {
+      "package": "byteorder",
+      "mass": 629.2541005406291,
+      "project": "r43445",
+      "projectRank": 17
+     },
+     {
+      "package": "hashbrown",
+      "mass": 530.3416321686565,
+      "project": "r4624",
+      "projectRank": 19
+     },
+     {
+      "package": "itoa",
+      "mass": 528.5121564437349,
+      "project": "r723",
+      "projectRank": 20
+     },
+     {
+      "package": "ryu",
+      "mass": 491.4366050069774,
+      "project": "r3",
+      "projectRank": 18
+     },
+     {
+      "package": "num-integer",
+      "mass": 489.0730996645749,
+      "project": "r28364",
+      "projectRank": 21
+     },
+     {
+      "package": "thiserror",
+      "mass": 465.59371209753164,
+      "project": "r16431",
+      "projectRank": 22
+     },
+     {
+      "package": "thiserror-impl",
+      "mass": 465.5587120975318,
+      "project": "r33646",
+      "projectRank": 23
+     },
+     {
+      "package": "regex-syntax",
+      "mass": 459.6889111462034,
+      "project": "r26304",
+      "projectRank": 24
+     },
+     {
+      "package": "regex",
+      "mass": 452.1029506855868,
+      "project": "r19519",
+      "projectRank": 25
+     },
+     {
+      "package": "serde_json",
+      "mass": 441.8305590340631,
+      "project": "r6802",
+      "projectRank": 26
+     },
+     {
+      "package": "indexmap",
+      "mass": 439.2075788915121,
+      "project": "r6730",
+      "projectRank": 27
+     },
+     {
+      "package": "memchr",
+      "mass": 427.98072610123876,
+      "project": "r128",
+      "projectRank": 28
+     },
+     {
+      "package": "pin-project-lite",
+      "mass": 415.19278531353024,
+      "project": "r600",
+      "projectRank": 29
+     },
+     {
+      "package": "once_cell",
+      "mass": 319.3670043278968,
+      "project": "r54220",
+      "projectRank": 32
+     },
+     {
+      "package": "bytes",
+      "mass": 318.5524789823666,
+      "project": "r42884",
+      "projectRank": 33
+     },
+     {
+      "package": "futures-core",
+      "mass": 310.71371031793865,
+      "project": "r4884",
+      "projectRank": 34
+     },
+     {
+      "package": "textwrap",
+      "mass": 301.39505432403223,
+      "project": "r25071",
+      "projectRank": 36
+     },
+     {
+      "package": "either",
+      "mass": 300.02779575652414,
+      "project": "r6",
+      "projectRank": 31
+     },
+     {
+      "package": "os_str_bytes",
+      "mass": 292.07481251707543,
+      "project": "r241",
+      "projectRank": 37
+     },
+     {
+      "package": "clap",
+      "mass": 289.1602536432096,
+      "project": "r1639",
+      "projectRank": 38
+     },
+     {
+      "package": "clap_lex",
+      "mass": 289.1388433867995,
+      "project": "r22286",
+      "projectRank": 39
+     },
+     {
+      "package": "fnv",
+      "mass": 278.4840278959607,
+      "project": "r5",
+      "projectRank": 35
+     },
+     {
+      "package": "nb",
+      "mass": 276.1816485929459,
+      "project": "r1751",
+      "projectRank": 40
+     },
+     {
+      "package": "anyhow",
+      "mass": 273.2887865112592,
+      "project": "r50018",
+      "projectRank": 41
+     }
+    ],
+    "attribution": [
+     {
+      "rank": 1,
+      "project": "r375",
+      "pooledMass": 2312.098361408968,
+      "packages": 9,
+      "topPackage": "libc",
+      "topPackageShare": 0.9996721888305053
+     },
+     {
+      "rank": 2,
+      "project": "r66",
+      "pooledMass": 1941.9521857786951,
+      "packages": 24,
+      "topPackage": "unicode-ident",
+      "topPackageShare": 0.9995134547957474
+     },
+     {
+      "rank": 3,
+      "project": "r37509",
+      "pooledMass": 1940.6223382558223,
+      "packages": 1,
+      "topPackage": "proc-macro2",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 4,
+      "project": "r77",
+      "pooledMass": 1894.3539430773294,
+      "packages": 22,
+      "topPackage": "quote",
+      "topPackageShare": 0.9999877646942467
+     },
+     {
+      "rank": 5,
+      "project": "r32187",
+      "pooledMass": 1863.8938714984256,
+      "packages": 1,
+      "topPackage": "syn",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 6,
+      "project": "r24580",
+      "pooledMass": 1341.0087882385037,
+      "packages": 1,
+      "topPackage": "cfg-if",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 7,
+      "project": "r57511",
+      "pooledMass": 1172.4571403832917,
+      "packages": 1,
+      "topPackage": "serde",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 8,
+      "project": "r308",
+      "pooledMass": 1023.6708395488134,
+      "packages": 10,
+      "topPackage": "num-traits",
+      "topPackageShare": 0.9758756527658653
+     },
+     {
+      "rank": 9,
+      "project": "r23340",
+      "pooledMass": 928.0598703122527,
+      "packages": 1,
+      "topPackage": "bitflags",
+      "topPackageShare": 1
+     },
+     {
+      "rank": 10,
+      "project": "r3146",
+      "pooledMass": 849.9914028677422,
+      "packages": 2,
+      "topPackage": "lazy_static",
+      "topPackageShare": 1
+     }
+    ]
+   }
+  }
+ },
+ "cratesMeta": {
+  "status": "replication (coverage gate passed)",
+  "dumpDate": "2026-09-25",
+  "coverage": 0.8018688046992504
+ },
+ "verdicts": {
+  "claimA": "FIRES",
+  "claimB": "DEAD (K13b)"
+ },
+ "guesses": {
+  "g1": {
+   "statement": "arm-A project survival strictly below random null",
+   "value": "1 vs 2",
+   "right": true
+  },
+  "g2": {
+   "statement": "buried count < 40 - armA survival",
+   "value": "2 vs 39",
+   "right": true
+  },
+  "g3": {
+   "statement": "src:xz-utils inside project top-40 under pooling",
+   "value": 7,
+   "right": true
+  }
+ }
+}
