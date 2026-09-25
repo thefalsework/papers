@@ -181,6 +181,24 @@ resolves.
 the same evening to a private local file; strategy for active private
 correspondence doesn't belong in the public log.)
 
+OPPORTUNITY NOTED, NOT QUEUED (2026-09-25): Paradigm's Solidus —
+formally verified Solidity compiler in Lean, built by agents (~1,700
+Codex hours), open challenges. The fit is Spec Hunt (bounties for
+divergences between the solidity-lean formal semantics and real
+Solidity): conemass definition-audit ranking on the solidity-lean
+declaration graph = a search order for WHERE a spec divergence would
+be most consequential — the Prove2Me StochasticBandit analysis on a
+security-critical corpus with a public scoring mechanism that would
+measure the ranking's value (do ranked definitions yield divergences
+above baseline?). Their post independently validates two program
+lessons: "submissions may exploit subtle gaps in the formal
+verification" = exactness-lives-in-the-statement at industrial
+scale; their human gate on spec edits (agents drift/reward-hack) =
+the scheduler spec's agents-close-nodes-never-create-edges rule.
+DISCIPLINE if ever engaged: conemass does not find spec gaps; it
+ranks where gaps would matter. Fourth graph type, pre-alpha corpus —
+scope accordingly. Not before study 13 ships.
+
 STUDY 13 DESIGN AGREED, NOT YET REGISTERED (2026-09-24 evening; per
 the sit rule, registration no earlier than tomorrow). Question: does
 project/repository-level aggregation bury quiet criticality (the G2
