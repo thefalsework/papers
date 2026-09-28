@@ -1,0 +1,4 @@
+__pycache__/
+models/**/*.train.txt
+models/**/*.train.err
+data/main/

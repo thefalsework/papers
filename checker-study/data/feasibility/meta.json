@@ -1,0 +1,58 @@
+{
+  "builtAt": "2026-09-28T21:41:32.052960+00:00",
+  "profile": "feasibility",
+  "seed": 20260928,
+  "sizes": {
+    "train": 5000,
+    "heldout": 1000,
+    "test": 0
+  },
+  "formulas_tried": 54709,
+  "proofs_found": 7713,
+  "unique_formulas": 6190,
+  "search_budget": 4000,
+  "depth_max": 10,
+  "formula_size_hist": {
+    "train": {
+      "3": 2,
+      "5": 44,
+      "7": 400,
+      "9": 703,
+      "11": 705,
+      "13": 754,
+      "15": 769,
+      "17": 804,
+      "19": 819
+    },
+    "heldout": {
+      "3": 1,
+      "5": 8,
+      "7": 81,
+      "9": 140,
+      "11": 141,
+      "13": 151,
+      "15": 154,
+      "17": 159,
+      "19": 165
+    },
+    "test": {}
+  },
+  "term_size_stats": {
+    "train": {
+      "min": 2,
+      "median": 6,
+      "p90": 15,
+      "max": 47,
+      "mean": 7.87
+    },
+    "heldout": {
+      "min": 3,
+      "median": 6,
+      "p90": 15,
+      "max": 38,
+      "mean": 7.75
+    }
+  },
+  "max_sequence_tokens": 66,
+  "gen_seconds": 2.5
+}

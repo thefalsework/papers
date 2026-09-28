@@ -226,8 +226,14 @@ exterior only if it is exterior in both.
   only one rule is reported as rule-dependent.
 
 **Agreement:** Cohen's kappa between E1 and E2 zone assignments is
-reported for held-out proofs and separately for each condition.
-Enumerated proofs (C4) may sit where E1 is least reliable.
+reported for held-out proofs and separately for each condition, under
+both calibration rules. K-agree is evaluated at the registered
+dimension under the primary rule. Enumerated proofs (C4) may sit where
+E1 is least reliable.
+
+E2 has 19 raw features (10 constructor counts, term depth and size, 8
+formula features), so its d = 32 sensitivity run is capped at 19 and
+reported as such.
 
 ## Conditions
 
