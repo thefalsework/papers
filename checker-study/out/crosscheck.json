@@ -1,0 +1,50 @@
+{
+  "ranAt": "2026-09-28T21:37:19.353279+00:00",
+  "seed": 20260928,
+  "n_valid": 1000,
+  "n_invalid": 1000,
+  "formulas_tried_for_valid": 7077,
+  "search_budget": 4000,
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-w64-windows-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "lean_exit_code": 1,
+  "lean_accepted_valid": 1000,
+  "lean_rejected_invalid": 1000,
+  "disagreements": [],
+  "agree_all": true,
+  "invalid_reject_reasons": {
+    "pair against non-conjunction": 213,
+    "neutral has wrong type": 91,
+    "unbound variable": 118,
+    "abort on non-falsum": 36,
+    "injection against non-disjunction": 54,
+    "lambda against non-implication": 310,
+    "snd of non-pair": 31,
+    "fst of non-pair": 143,
+    "application of non-function": 2,
+    "case on non-disjunction": 2
+  },
+  "invalid_unbound_variable": 118,
+  "mutants_skipped_out_of_fragment": 98,
+  "invalid_well_formed_ill_typed": 882,
+  "valid_size_stats": {
+    "min": 2,
+    "median": 5,
+    "max": 47,
+    "mean": 6.99
+  },
+  "valid_depth_stats": {
+    "min": 2,
+    "median": 5,
+    "max": 10,
+    "mean": 4.99
+  },
+  "formula_size_stats": {
+    "min": 3,
+    "median": 11,
+    "max": 19,
+    "mean": 11.73
+  },
+  "gen_seconds": 0.32,
+  "lean_seconds": 12.36
+}

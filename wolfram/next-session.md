@@ -297,6 +297,35 @@ agent-written related-work notes get every citation checked by hand
 before the hash. CANONICAL COPY: the repo file checker-study/SPEC.md
 is the record from this point; any external draft copy is a draft.
 
+CHECKER STUDY BUILD STARTED BEFORE THE HASH (2026-09-28, 16:17, on
+"start now"). DEVIATION FROM THE SPEC'S OWN SEQUENCE (register, then
+build), recorded here: the generator, checker and Lean export carry no
+hypothesis-bearing choice, and the sit rule on registration was kept.
+Two spec edits made while building, both definitional and before
+registration: (1) "valid" now names the normal-form fragment
+explicitly — heads of app/fst/snd and scrutinees of case/abort must be
+neutral; a model output with a beta-redex is invalid even if Lean
+would accept it; (2) the cross-check clause names the Lean encoding
+(Type atoms, →/×/⊕/Empty) and says out-of-fragment mutants are skipped
+and counted, not compared. K-CHECK PASSED: 1,000 generated proofs all
+accepted by Lean 4.30.0-rc2 core, 1,000 mutants (884 well-formed
+ill-typed, 118 unbound-variable; 90 beta-redex mutants skipped) all
+rejected; 2,000/2,000 agreement; seed 20260928; results
+checker-study/out/crosscheck.json, artefact out/crosscheck.lean.
+Generator: random odd-size formula (3–19 symbols, 6 atoms + ⊥) →
+classical truth-table prefilter → randomised bounded normal-proof
+search (budget 4,000 nodes, depth ≤ 10 enforced on the finished term).
+Roughly 14% of random formulas yield a proof. Two engineering notes
+for the postscript: Lean's maxErrors cap (100) must be lifted on the
+command line or the check silently truncates — the first trial run
+reported 27 false disagreements for that reason; the generator can
+re-case on a hypothesis already cased, producing bloated but valid
+proofs (left as is; a property of the corpus distribution, recorded).
+Eta-long normal form identifies η at → and ∧ only; commuting
+conversions between case and lam/pair are not identified (SPEC
+promised η only). Next: corpus builder (Step 5 sizes), then the
+feasibility model — torch not yet installed on this machine.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive

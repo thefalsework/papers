@@ -34,7 +34,13 @@ than ordinary newness does?
 
 ### Definitions
 
-- **Valid:** the proof term type-checks against its prompt formula.
+- **Valid:** the proof term is in the normal-form fragment (heads of
+  application and projection, and scrutinees of case and abort, are
+  variables or eliminations of variables; no beta-redexes) and
+  type-checks against its prompt formula. An output containing a
+  beta-redex is invalid even if Lean would accept it; the fragment is
+  part of the definition. Terms use de Bruijn indices, so
+  alpha-normalisation is built in.
 - **Novel:** the proof term, in eta-long, alpha-normalized form, is not
   identical to any training proof term, whatever formula either proves.
   A training term reused for a new formula is not novel.
@@ -128,9 +134,12 @@ positives.
   Each term yields a (formula, proof) pair.
 - **Cross-check (gate):** translate 1,000 random valid terms and 1,000
   mutated invalid terms (at least half well-formed but ill-typed, not
-  parse errors) into Lean as `example : T := term`. The Python checker
-  and Lean must agree on all 2,000. Any disagreement stops the study
-  until fixed.
+  parse errors) into Lean 4 core as `def chk_i (p1 … p6 : Type) : T :=
+  term`, with → as →, ∧ as ×, ∨ as ⊕, ⊥ as `Empty`. The Python checker
+  and Lean must agree on all 2,000. Mutants that fall outside the
+  normal-form fragment (beta-redexes) are not typing disagreements and
+  are skipped and counted, not compared. Any disagreement stops the
+  study until fixed.
 
 ## Corpus
 
