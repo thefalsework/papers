@@ -237,6 +237,34 @@ were extracted; results in oracle-scanner/aggregation-blur.json
 (ranAt 2026-09-25T20:43:07.226Z). Claim A fires. Claim B is dead
 (K13b). Postscript in oracle-scanner/13-aggregation-blur.mjs.
 
+CHECKER STUDY SPEC DRAFTED, NOT REGISTERED (2026-09-28). File:
+checker-study/SPEC.md. Question: does a checker move valid outputs
+further out than ordinary newness does? Domain: IPL proofs as typed
+lambda terms (exact checker; Lean cross-check gate). Small transformer
+trained from scratch so the training set is known. Zones = estimated
+closing of the r-ball neighbourhood U of the training set in a
+PCA-reduced embedding (two embeddings, model and structural; exterior
+counts only if exterior in both): inside / crack / exterior. Base rate
+B = held-out proofs, so a small exterior fraction can FAIL H1 rather
+than confirm it. Conditions at matched token budget: unguided,
+filtered (valid subset), type-directed guided search, grammar null.
+H1 guided exterior > held-out base rate; H1m matched prompts; H2
+unguided cracks > grammar null; H3 invalid-in-cracks (generative
+problem 3). Kills: K-check, K2 (held-out crack fraction < 5% under
+both calibration rules = analogous to the ReLU pilot's vanishing
+remainder; feasibility phase ends there), K-agree, K1, K1m, K-H2.
+DISCIPLINE: does not test the four-position theorem; closing is the
+estimator, not a nucleus; partition appears in a reading paragraph
+only; no follow-up study in the spec; nothing to Levin's group.
+Registration is a later commit AFTER Step 0 (literature check:
+Balestriero–Pesenti–LeCun extrapolation, TDA holes, verifier-guided
+provers, memorization/novelty measures). Review notes absorbed before
+this commit: closing is of U not of the bare points (2r is correct);
+ball sampling not sphere; MC bias direction stated; K2 both-rule;
+B joint exterior; exact C3 budget; C2 ≡ unguided-valid collapsed to
+one contrast; H3 parseability rule; tertiles fixed on held-out;
+term-only novelty. Expected order of outcomes: K2 most likely.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
