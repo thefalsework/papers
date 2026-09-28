@@ -84,7 +84,7 @@ reframing condition below is not met; no located work places
 checker-accepted outputs relative to training geometry against a
 held-out base rate. Nearest precedents, to be cited and
 distinguished: Meehan, Chaudhuri, Dasgupta (2020) for the base-rate
-logic; Li, Tian et al. (arXiv:2604.18587) for guided-vs-unguided
+logic; Li, Tian, Wang (arXiv:2604.18587) for guided-vs-unguided
 distribution shift; Mendoza-Smith (arXiv:2606.28572) for containment
 relative to a train-only encoder; Somani (arXiv:2607.16997) for
 "conditional on success, was the route standard." One edit made as a

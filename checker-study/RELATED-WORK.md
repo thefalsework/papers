@@ -42,8 +42,8 @@ training-point distances, each condition against B) is added to the
   exponential-in-d* argument still applies to whether a fixed r
   captures held-out points, which is why r is calibrated on held-out
   data rather than fixed a priori.
-- **Bonnasse-Gahot and Nadal (2022)**, *Interpolation, extrapolation,
-  and local generalization in common neural networks*,
+- **Bonnasse-Gahot (2022)**, sole author, *Interpolation,
+  extrapolation, and local generalization in common neural networks*,
   arXiv:2207.08648. Reply to the above: in the low-dimensional
   intrinsic space of the last hidden layer (recovered by an
   autoencoder), most test points *are* inside the training hull, and
@@ -90,7 +90,7 @@ cheap descriptive to include.
 
 Closest on the "verifier-accepted vs training geometry" axis:
 
-- **Li, Tian, et al. (Tsinghua, 2026)**, *Compile to Compress: Boosting
+- **Li, Tian, Wang (Tsinghua, 2026)**, *Compile to Compress: Boosting
   Formal Theorem Provers by Compiler Outputs*, arXiv:2604.18587.
   Tests whether compiler-conditioned refinement produces a different
   distribution over Lean programs than unconditioned generation, via
@@ -138,13 +138,22 @@ Adjacent:
   Novelty of *statements* against a library, not outputs against
   training data.
 - **Patel, Rammal, Hayat, Munos, Kempe (FAIR, 2026)**, *Learning to
-  Discover Interesting Mathematics*, arXiv:2609.28603. Post-training
-  for "interestingness" (proof length / statement length) reduces
-  mathlib containment of generated statements from 91.9% to 30.6%;
-  iterated self-expanding library. **Bearing:** this is the
-  canonization loop the spec puts out of scope, run at scale with a
-  containment measure. Cite when explaining why retraining on
-  verified exterior outputs is a separate study.
+  Discover Interesting Mathematics*, arXiv:2609.28603. Defines a
+  theorem's interestingness as proof length over statement length,
+  shows it tracks downstream utility, and post-trains a 27B model to
+  predict premise-conditioned proof difficulty. Post-training a
+  conjecturer on this metric (§3.3) cuts substantial-or-full mathlib
+  overlap of generated statements from 91.9% to 30.6%. Separately
+  (§3.4), an inference-time discovery loop grows a premise set
+  P0 ⊂ P1 ⊂ … ⊂ PN over six rounds from 80 graph-theory premises,
+  promoting ten verified statements per round under four rules, with
+  frozen weights. **Bearing:** the §3.4 loop is a premise-growth
+  version of the canonization idea the spec puts out of scope, but it
+  is small (six rounds) and does not retrain; the overlap reduction
+  is a training effect on the conjecturer, not a loop effect. Cite
+  for the mathlib-containment measure of out-of-distribution
+  statements and for the loop's existence; do not cite it as
+  retraining-on-verified-outputs at scale.
 - **DeepMind (2026)**, *Advancing Mathematics Research with AI-Driven
   Formal Proof Search*, arXiv:2605.22763. AlphaEvolve-style
   evolutionary agents for formal proofs; notes the mismatch between
@@ -209,7 +218,21 @@ Adjacent:
    split.
 4. H3, invalid outputs by zone. No precedent located.
 
-## 6. Debts and gaps
+## 6. Corrections (2026-09-28, same day, external check of all six
+## primary citations)
+
+- Bonnasse-Gahot (arXiv:2207.08648) is sole author; "and Nadal" was
+  an error, fixed above.
+- Patel et al. (arXiv:2609.28603) was characterised as "the
+  canonization loop at scale." Wrong: the loop is inference-time
+  premise growth over six rounds with frozen weights, and the 91.9% →
+  30.6% overlap figure is from post-training the conjecturer, not
+  from the loop. Fixed above.
+- Meehan et al. 2020 (arXiv:2004.05675), Li–Tian–Wang
+  (arXiv:2604.18587), Mendoza-Smith (arXiv:2606.28572) and Somani
+  (arXiv:2607.16997) confirmed as described.
+
+## 7. Debts and gaps
 
 - Not searched: rough-set boundary region and formal concept analysis
   as alternative names for the crack zone (program-level bridge, not

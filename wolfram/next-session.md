@@ -271,17 +271,31 @@ nobody located places checker-accepted outputs relative to the
 training geometry of a from-scratch model against a held-out base
 rate. Must-cite ancestors: Meehan–Chaudhuri–Dasgupta 2020 (three-
 sample NN-distance data-copying test = the C3 − B logic, no
-checker); Li–Tian et al. 2604.18587 (compiler-conditioned outputs
+checker); Li–Tian–Wang 2604.18587 (compiler-conditioned outputs
 differ in distribution from unconditioned, edit-distance energy test,
 no training reference); Mendoza-Smith 2606.28572 (train-only encoder,
 k-NN + superlevel containment of proofs, one zone, human proofs);
 Somani 2607.16997 PriorProof (proposes human/model/search-variant
 comparison conditional on success; footprint surprisal, not
-geometry); Patel et al. 2609.28603 (the canonization loop at scale,
-out of scope here); Bonnasse-Gahot–Nadal 2207.08648 as the answer to
-Balestriero (reduce, then measure proximity). Spec edit before
-registration: Meehan Z_U added to always-reported (descriptive).
-Registration NOT yet done — sit rule, no earlier than tomorrow.
+geometry); Patel et al. 2609.28603 (interestingness = proof/statement
+length; inference-time premise-growth loop, six rounds, frozen
+weights — NOT retraining at scale); Bonnasse-Gahot 2207.08648, sole
+author, as the answer to Balestriero (reduce, then measure
+proximity). Spec edit before registration: Meehan Z_U added to
+always-reported (descriptive). Registration NOT yet done — sit rule,
+no earlier than tomorrow.
+
+CITATION CHECK ABSORBED (same day). All six primary citations
+externally verified as existing. Two characterisations corrected in
+RELATED-WORK.md §6: Bonnasse-Gahot is sole author (was
+"Bonnasse-Gahot–Nadal"); Patel et al. was mis-described as "the
+canonization loop at scale" — the loop exists (§3.4) but is
+inference-time premise growth over six rounds with frozen weights,
+and the 91.9%→30.6% mathlib-overlap figure is a post-training
+effect on the conjecturer (§3.3), not a loop effect. Lesson logged:
+agent-written related-work notes get every citation checked by hand
+before the hash. CANONICAL COPY: the repo file checker-study/SPEC.md
+is the record from this point; any external draft copy is a draft.
 
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
