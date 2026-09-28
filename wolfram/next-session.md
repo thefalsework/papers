@@ -265,6 +265,24 @@ B joint exterior; exact C3 budget; C2 ≡ unguided-valid collapsed to
 one contrast; H3 parseability rule; tertiles fixed on held-out;
 term-only novelty. Expected order of outcomes: K2 most likely.
 
+CHECKER STUDY STEP 0 DONE (2026-09-28, later). Note at
+checker-study/RELATED-WORK.md. Verdict: reframing condition NOT met —
+nobody located places checker-accepted outputs relative to the
+training geometry of a from-scratch model against a held-out base
+rate. Must-cite ancestors: Meehan–Chaudhuri–Dasgupta 2020 (three-
+sample NN-distance data-copying test = the C3 − B logic, no
+checker); Li–Tian et al. 2604.18587 (compiler-conditioned outputs
+differ in distribution from unconditioned, edit-distance energy test,
+no training reference); Mendoza-Smith 2606.28572 (train-only encoder,
+k-NN + superlevel containment of proofs, one zone, human proofs);
+Somani 2607.16997 PriorProof (proposes human/model/search-variant
+comparison conditional on success; footprint surprisal, not
+geometry); Patel et al. 2609.28603 (the canonization loop at scale,
+out of scope here); Bonnasse-Gahot–Nadal 2207.08648 as the answer to
+Balestriero (reduce, then measure proximity). Spec edit before
+registration: Meehan Z_U added to always-reported (descriptive).
+Registration NOT yet done — sit rule, no earlier than tomorrow.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive

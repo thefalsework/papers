@@ -79,6 +79,17 @@ samples is reported separately.
 No registration until this is done. The deliverable is a short
 related-work note committed beside the spec.
 
+**Status (2026-09-28): done.** See `RELATED-WORK.md`. Verdict: the
+reframing condition below is not met; no located work places
+checker-accepted outputs relative to training geometry against a
+held-out base rate. Nearest precedents, to be cited and
+distinguished: Meehan, Chaudhuri, Dasgupta (2020) for the base-rate
+logic; Li, Tian et al. (arXiv:2604.18587) for guided-vs-unguided
+distribution shift; Mendoza-Smith (arXiv:2606.28572) for containment
+relative to a train-only encoder; Somani (arXiv:2607.16997) for
+"conditional on success, was the route standard." One edit made as a
+result: the Meehan statistic added to the always-reported list.
+
 Areas to search:
 
 - Interpolation vs extrapolation in high dimension (Balestriero,
@@ -258,7 +269,10 @@ The unparseable fraction is reported alongside.
 
 **Always reported:** the full distributions of nearest-training-point
 distance per condition, zone fractions under both calibration rules and
-all three PCA dimensions, and per-seed results.
+all three PCA dimensions, per-seed results, and the Meehan et al.
+(2020) data-copying statistic Z_U (z-scored Mann–Whitney U on
+nearest-training-point distances, each condition against B, in each
+embedding). Z_U is descriptive; it carries no hypothesis.
 
 **Reporting rule:** every number in the postscript is taken from the
 results JSON, never from prose.
