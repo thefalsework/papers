@@ -1,0 +1,149 @@
+{
+  "ranAt": "2026-09-29T18:52:29.636824+00:00",
+  "profile": "feasibility",
+  "model_seed": 0,
+  "feasibility_results_file": "out/feasibility-seed0.json",
+  "reproduced_feasibility_zones": true,
+  "d": 16,
+  "zone_seed": 20260928,
+  "radii": {
+    "E1": {
+      "primary": 3.029567750259607,
+      "alternative": 5.734987036744859
+    },
+    "E2": {
+      "primary": 1.0377042351302272,
+      "alternative": 2.645403638919125
+    }
+  },
+  "counts": {
+    "train_pairs": 5000,
+    "train_distinct_terms": 2500,
+    "heldout_pairs": 1000,
+    "heldout_distinct_terms": 653,
+    "heldout_novel": 407,
+    "heldout_reused": 593,
+    "heldout_novel_rate": 0.407,
+    "stored_proofs_already_normal_form": true
+  },
+  "heldout_by_subset": {
+    "novel": {
+      "n": 407,
+      "zones": {
+        "primary": {
+          "E1": {
+            "inside": 0.019656019656019656,
+            "crack": 0.21867321867321868,
+            "exterior": 0.7616707616707616
+          },
+          "E2": {
+            "inside": 0.056511056511056514,
+            "crack": 0.08353808353808354,
+            "exterior": 0.85995085995086
+          }
+        },
+        "alternative": {
+          "E1": {
+            "inside": 0.8378378378378378,
+            "crack": 0.16216216216216217,
+            "exterior": 0.0
+          },
+          "E2": {
+            "inside": 0.7125307125307125,
+            "crack": 0.23832923832923833,
+            "exterior": 0.04914004914004914
+          }
+        }
+      },
+      "joint_exterior": {
+        "primary": 0.6781326781326781,
+        "alternative": 0.0
+      },
+      "kappa": {
+        "primary": 0.13226051650939033,
+        "alternative": 0.06269363951157307
+      }
+    },
+    "reused": {
+      "n": 593,
+      "zones": {
+        "primary": {
+          "E1": {
+            "inside": 0.3288364249578415,
+            "crack": 0.3591905564924115,
+            "exterior": 0.31197301854974707
+          },
+          "E2": {
+            "inside": 0.3777403035413153,
+            "crack": 0.3760539629005059,
+            "exterior": 0.24620573355817876
+          }
+        },
+        "alternative": {
+          "E1": {
+            "inside": 0.9662731871838112,
+            "crack": 0.03372681281618887,
+            "exterior": 0.0
+          },
+          "E2": {
+            "inside": 0.9949409780775716,
+            "crack": 0.00505902192242833,
+            "exterior": 0.0
+          }
+        }
+      },
+      "joint_exterior": {
+        "primary": 0.1315345699831366,
+        "alternative": 0.0
+      },
+      "kappa": {
+        "primary": 0.22528484536965637,
+        "alternative": 0.07885198609364447
+      }
+    },
+    "all": {
+      "n": 1000,
+      "zones": {
+        "primary": {
+          "E1": {
+            "inside": 0.203,
+            "crack": 0.302,
+            "exterior": 0.495
+          },
+          "E2": {
+            "inside": 0.247,
+            "crack": 0.257,
+            "exterior": 0.496
+          }
+        },
+        "alternative": {
+          "E1": {
+            "inside": 0.914,
+            "crack": 0.086,
+            "exterior": 0.0
+          },
+          "E2": {
+            "inside": 0.88,
+            "crack": 0.1,
+            "exterior": 0.02
+          }
+        }
+      },
+      "joint_exterior": {
+        "primary": 0.354,
+        "alternative": 0.0
+      },
+      "kappa": {
+        "primary": 0.3298496150624276,
+        "alternative": 0.14475090870215895
+      }
+    }
+  },
+  "novelty_rate_comparison": {
+    "heldout_proofs_novel_rate": 0.407,
+    "model_valid_samples_novel_rate": 0.10595611285266458,
+    "model_valid_novel": 169,
+    "model_valid": 1595
+  },
+  "seconds": 297.1
+}

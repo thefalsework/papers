@@ -387,3 +387,46 @@ under a dollar per run at home, a few dollars per run in the cloud.
 
 **Deliverables:** the registered spec, code, seeds and corpora, the
 results JSON, the feasibility note, and the postscript.
+
+## Postscript 2026-09-29: B restricted to term-novel held-out proofs
+
+Written after the feasibility analysis (`FEASIBILITY.md`, registration
+`a04cb9e`) and before any main-run data exists. No hypothesis, kill,
+rule or threshold is changed; this postscript fixes the population of
+one arm.
+
+**Finding.** The corpus builder deduplicates and splits by canonical
+formula, not by proof term. A de Bruijn term proves many formulas, so
+a held-out proof can be identical as a term to a training proof. In
+the feasibility corpus, 593 of 1,000 held-out proofs are identical to
+a training term and 407 are novel under this spec's definition; the
+5,000 training pairs contain 2,500 distinct terms
+(`out/heldout-novelty-seed0.json`). Found while writing the
+feasibility note, on 2026-09-29, before any condition had been run.
+
+**Decision.**
+
+1. B, the base rate in H1 (and in the H1 contrast's B term), is
+   restricted to held-out proofs that are novel as terms under the
+   Definitions section. Rationale: B stands for ordinary newness, and
+   H1's numerator counts only novel outputs; a reused term is not
+   newness, and including reused proofs would lower B's exterior
+   fraction and bias H1 in its own favour.
+2. Calibration is unchanged. Both radius rules stay fitted on the
+   full held-out set, as registered. The feasibility gates (K2,
+   K-agree, valid rate) stand as computed on the full held-out set.
+3. B computed over all held-out proofs is reported alongside as a
+   secondary descriptive, under both rules.
+4. The corpus is not regenerated. The main corpus will have the same
+   property; its held-out novelty count is reported in the results.
+5. Length-control tertile boundaries (Measures and analysis) remain
+   fixed on the full held-out set, as registered.
+
+**Known when this decision was made** (feasibility profile, d = 16,
+primary rule, from `out/heldout-novelty-seed0.json`): novel-only
+held-out joint exterior 0.678 against 0.354 for all held-out, so the
+restriction raises the bar H1 must clear; Cohen's kappa between E1 and
+E2 on the novel-only subset is 0.132, below the K-agree threshold
+that the registered test (on all held-out proofs) passed at 0.330.
+Both are recorded in the feasibility note as descriptives; neither
+changes a gate.

@@ -366,6 +366,57 @@ no GPU) froze repeatedly during the evening; the main build (5M
 params, 100k proofs, three seeds) needs the GPU machine or cloud as
 the spec says.
 
+CHECKER STUDY REGISTERED AND FEASIBILITY GO (2026-09-28, night).
+REGISTRATION HASH a04cb9e (spec header dated, sit-rule waiver,
+pre-hash disclosure, E2 = 20; text-only commit). Checkpoint seed 0
+committed at b6489df. Feasibility analysis then run at full size on
+this laptop, one thread, 790 s: out/feasibility-seed0.json. Verdict
+GO. K2 not fired: held-out crack fraction at d=16 is E1 0.302
+primary / 0.086 alternative, E2 0.257 / 0.100 (kill needs both rules
+below 0.05 in one embedding). K-agree not fired: kappa 0.330 under
+the primary rule (0.145 under the alternative rule — below 0.2, so
+alternative-rule zones are descriptive only in the main study;
+recorded now). Valid rate 0.498 (1,595/3,200), above the 0.20 floor;
+parse rate 0.962; only 169 valid samples were novel (10.6% of
+valid), a power concern for H1's per-prompt unit, not a kill. Joint
+held-out exterior 0.354 primary, 0.000 alternative. Meehan Z_U
+sanity E1 0.025, E2 -0.58. E2 is rank-deficient (16 components
+explain 1.000). 1,024-MC rerun clause not triggered (K2 not narrow
+under the primary rule); optional descriptive. Note at
+checker-study/FEASIBILITY.md with every number from the JSON;
+environment Python 3.13.7, torch 2.14.0+cpu. The debug run's guess
+that K-agree was most at risk was wrong in the safe direction — on
+the full held-out set; see next paragraph.
+
+HELD-OUT NOVELTY FOUND; POSTSCRIPT 2026-09-29 (before any main-run
+data). While writing the note, checked whether held-out proofs are
+novel as terms: they are not all. Corpus is split by canonical
+FORMULA, not by proof TERM, and one de Bruijn term proves many
+formulas. Feasibility corpus: 593 of 1,000 held-out proofs identical
+to a training term, 407 novel (40.7%); 5,000 training pairs hold
+only 2,500 distinct terms. Decision (SPEC.md postscript 2026-09-29,
+author's): B in H1 restricted to term-novel held-out proofs (B is
+ordinary newness, H1's numerator is novel-only; reused terms would
+lower B's exterior and favour H1); calibration and gates unchanged
+on the full held-out set; all-held-out B reported as secondary
+descriptive; corpus not regenerated; main results must report the
+main held-out novelty count. Recomputed on the same labels
+(05-heldout-novelty.py reproduces the run's radii and fractions,
+then splits; out/heldout-novelty-seed0.json): novel-only joint
+exterior 0.678 primary (vs 0.354 all; reused 0.132) — the bar for
+H1 goes UP. Novel-only kappa E1/E2 0.132 primary, 0.063 alternative:
+below 0.2 on the population B now uses; the registered K-agree (all
+held-out) passed at 0.330 and stands, but the agreement is carried
+by reused proofs. Novel-only E2 crack 0.084 primary. Model valid
+samples 10.6% novel vs held-out 40.7%: the model reuses training
+terms ~4x as often as the generator. Hardware: this laptop has no
+GPU (cuda False, 8 logical CPUs, 5.7 GB RAM, torch cpu build).
+Main-profile estimate here, scaled from the feasibility log (75.6
+s/epoch, 2 threads, 4,900 pairs, 808k params): ~5.9x params x 20x
+data = ~2.5 h/epoch, 50-75 h/seed, 150-225 h for 3 seeds = 6-9 days
+= not this laptop; use the NVIDIA machine (CUDA 12.6 build if
+Pascal) or cloud. No training started.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
