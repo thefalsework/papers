@@ -63,13 +63,18 @@ def main() -> int:
     ap.add_argument("--profile", default="feasibility")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--device", default="cpu")
+    ap.add_argument("--threads", type=int, default=2)
+    ap.add_argument("--quick", action="store_true", help="debug run on a subsample; never for a verdict")
     args = ap.parse_args()
-    torch.set_num_threads(2)
+    torch.set_num_threads(args.threads)
     t_start = time.time()
 
     data_dir = HERE / "data" / args.profile
     train = parse_items(load_jsonl(data_dir / "train.jsonl"))
     held = parse_items(load_jsonl(data_dir / "heldout.jsonl"))
+    n_valid_formulas = N_VALID_FORMULAS
+    if args.quick:
+        train, held, n_valid_formulas = train[:800], held[:200], 10
     ck = torch.load(HERE / "models" / args.profile / f"seed{args.seed}.pt", map_location=args.device)
     model = GPT(GPTConfig(**ck["config"])).to(args.device)
     model.load_state_dict(ck["state"])
@@ -158,7 +163,7 @@ def main() -> int:
     # ---- valid rate (step 6)
     rs = random.Random(ZONE_SEED + args.seed)
     gen = torch.Generator(device=args.device).manual_seed(ZONE_SEED + args.seed)
-    formulas = rs.sample(held, N_VALID_FORMULAS)
+    formulas = rs.sample(held, n_valid_formulas)
     n_tot = n_parse = n_valid = n_novel = 0
     n_per_formula_solved = 0
     t0 = time.time()
@@ -220,7 +225,8 @@ def main() -> int:
         "seconds": {"embed": round(embed_secs, 1), "sample": round(sample_secs, 1),
                     "total": round(time.time() - t_start, 1)},
     })
-    out = HERE / "out" / f"feasibility-seed{args.seed}.json"
+    results["quick_debug_run"] = args.quick
+    out = HERE / "out" / (f"feasibility-seed{args.seed}.json" if not args.quick else "feasibility-QUICK-DEBUG.json")
     out.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(json.dumps(verdict, indent=2))
     print("joint exterior held-out:", results["heldout_joint_exterior"])

@@ -1,20 +1,36 @@
 # Study spec: Does a checker move valid outputs beyond ordinary newness?
 
-**Draft committed 2026-09-28. NOT REGISTERED.** Registration is a later
-commit, after the literature check in Step 0, and is identified by that
-commit's hash. Until then this file may be edited; after it, changes go
-in a dated postscript.
+**REGISTERED 2026-09-28.** This commit is the registration; its hash is
+recorded in the status log (`wolfram/next-session.md`) and in the
+feasibility note. From this commit on, hypotheses, kills, rules and
+thresholds are frozen; changes go in a dated postscript. Step 0
+(literature check) was completed the same day, `RELATED-WORK.md`. The
+program's one-day sit rule between Step 0 and registration was waived
+by the author on the same day; recorded here so the waiver is visible.
 
 ## Status and framing
 
-This is a pre-registration draft. It is not registered until committed
-to the papers repo with a hash, after the literature check in Step 0.
+This is the registered spec (see header).
 
 The study asks one empirical question about generative models and
 checkers. It does not apply the four-position theorem to a transformer.
 Zones here are defined by an estimated closing of the training set in a
 registered embedding. The partition appears only in the reading
 paragraph near the end.
+
+Disclosure before registration: the generator, checker, corpus,
+model and analysis code were built and the feasibility model was
+trained before the hash (see status log, 2026-09-28). The analysis
+was not run at full size. A debug run of the analysis code on a
+subsample (800 training / 200 held-out items, an early checkpoint)
+was executed to test the code path, and its rough zone fractions were
+seen; they are recorded in the status log. No kill threshold, rule or
+hypothesis was changed after that run: K2 stays at 5%, K-agree at
+kappa 0.2, both calibration rules as written. The one spec edit made
+after it, the E2 raw feature count (20, not 19), is a count of the
+features the implementation computes, surfaced when the feature code
+first ran; it is not an outcome-driven change and does not touch any
+threshold.
 
 Prior work it follows: the ReLU phantom-mass pilot
 (`phantom-study/SPEC.md`; 80 runs: 2 datasets × 4 depths × 10 seeds;
@@ -231,9 +247,9 @@ both calibration rules. K-agree is evaluated at the registered
 dimension under the primary rule. Enumerated proofs (C4) may sit where
 E1 is least reliable.
 
-E2 has 19 raw features (10 constructor counts, term depth and size, 8
-formula features), so its d = 32 sensitivity run is capped at 19 and
-reported as such.
+E2 has 20 raw features (10 constructor counts including variables, term
+depth and size, 8 formula features), so its d = 32 sensitivity run is
+capped at 20 and reported as such.
 
 ## Conditions
 

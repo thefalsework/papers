@@ -326,6 +326,46 @@ conversions between case and lam/pair are not identified (SPEC
 promised η only). Next: corpus builder (Step 5 sizes), then the
 feasibility model — torch not yet installed on this machine.
 
+CHECKER STUDY: PIPELINE BUILT, FEASIBILITY MODEL TRAINED, ANALYSIS
+HELD FOR REGISTRATION (2026-09-28, evening). Committed at 1906d27:
+corpus builder (feasibility corpus 5,000 train / 1,000 held-out,
+stratified by formula size, one eta-long proof per canonical
+formula, disjoint), nanoGPT-style model, trainer, E1/E2 embeddings,
+PCA reducer, closing-based zone model with both calibration rules,
+feasibility script. Feasibility model seed 0: 807,936 parameters
+(spec says "about 1M"; the note must state 808k), 4×128×4, block 80,
+CPU at 2 threads, best validation loss 0.6219 at epoch 25, early
+stop at epoch 31 after patience 6, ~26 minutes. Checkpoint
+checker-study/models/feasibility/seed0.pt (not yet committed).
+ORDER CORRECTION (external): the feasibility ANALYSIS decides K2 and
+K-agree, so it must run only after the spec is registered; training
+was fine (validation loss is not an outcome measure), the analysis
+is not. Analysis therefore NOT run at full size. DISCLOSURE: to test
+the code path, a debug run of 04-feasibility.py was executed on a
+subsample (800 training / 200 held-out items, an epoch-1 checkpoint,
+10 formulas for the valid-rate check), output deleted. Numbers were
+seen: under the primary rule held-out zones roughly 0.1 inside / 0.4
+crack / 0.5 exterior in both embeddings; under the alternative rule
+roughly 0.9 / 0.08 / 0.0; kappa ~0.16 primary; valid rate 0.20 on 10
+formulas. These are not a verdict (wrong sample, wrong checkpoint)
+but they were visible before registration. No kill threshold, rule
+or hypothesis has been changed since; the two spec edits after the
+debug run are factual (E2 raw feature count corrected from 19 to
+20) and a --quick flag whose output is named QUICK-DEBUG and never a
+verdict. What the debug run suggests, recorded so it cannot be
+claimed as a prediction later: K2 is less likely to fire than
+expected under the primary rule; K-agree is the kill most at risk.
+SIT RULE WAIVED BY THE AUTHOR (2026-09-28, 18:05): registration
+committed the same day as Step 0, on instruction, after the order
+correction above (register BEFORE the feasibility analysis). The
+waiver is stated in the spec header. REGISTRATION HASH: see the
+commit titled "checker study: REGISTRATION" — recorded in the
+feasibility note when the analysis runs. Next: run
+04-feasibility.py at full size; write the go/no-go note. Machine note: this laptop (Ryzen 5 7520U, ~6 GB RAM,
+no GPU) froze repeatedly during the evening; the main build (5M
+params, 100k proofs, three seeds) needs the GPU machine or cloud as
+the spec says.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
