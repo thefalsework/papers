@@ -417,6 +417,67 @@ data = ~2.5 h/epoch, 50-75 h/seed, 150-225 h for 3 seeds = 6-9 days
 = not this laptop; use the NVIDIA machine (CUDA 12.6 build if
 Pascal) or cloud. No training started.
 
+CHECKER STUDY: MECHANICS TEST OF THE FOUR CONDITIONS (2026-09-29,
+afternoon; feasibility model seed 0; 20 freshly generated provable
+formulas, prompt seed 20260929+777, none in any feasibility set; NOT
+test prompts, NOT a result — plumbing only, no zones, no hypothesis
+statistic). Code: ipl/conditions.py + 06-conditions.py; outputs
+out/conditions-feasibility-seed0-mechanics-{mask,prune}.json. Design
+decisions for C3 and C4 fixed HERE, before any main-run data, since
+the spec fixes them only as "prune partial terms that fail the prefix
+check, backtrack, repair" and "bounded enumeration, size-matched":
+(1) budget unit = one multinomial draw from the model; C1's budget
+per prompt = draws over its 64 samples incl. EOS; C3 spends exactly
+that (asserted; 20/20 prompts matched, 11,607 = 11,607). (2) C3 =
+token-by-token sampling at T=1.0 with the checker filtering the
+vocabulary BEFORE each draw ("mask" mode: every draw is a non-refuted
+token; backtracks cost no draws); a partial term deeper than 10 (the
+generator's registered depth bound; holes have depth 1) is refuted;
+chronological backtracking (pop, forbid at position) is local repair;
+each attempt from the empty prefix is capped at max_new draws (the
+most one C1 sample can cost) then restarts; found token sequences
+forbid EOS across attempts so completions are distinct by
+construction; restart after each completion. (3) C4 = exhaustive
+size-indexed enumeration of normal proofs in the fragment (depth <=
+10, memo list cap 2,000, node cap 300k, max 400 distinct eta-long
+proofs, size cap 32) matched PER PROMPT to C2's unique valid outputs
+by count within proof-size tertiles fixed on the FULL held-out set
+(feasibility bounds 5.0 / 7.0, n = 1,000; asserted); shortfalls
+reported, not filled. (4) Novelty = one function
+(conditions.novelty_key) for every arm; training-term set
+fingerprinted (sha256 1bf53646...). (5) Seeding: every random stream
+is seeded by sha256(formula | arm | k) — C1 per sample k, C3 and C4
+per prompt — with uniforms from a CPU generator and inverse-CDF
+sampling, so device, batch layout and prompt order cannot change
+outputs; tests/test_batching.py checks one batch == 4 batches == 64
+singles, reversed prompt order, and C3 repeat on 3 fresh formulas
+(passed, 0 failures). TWO BUGS FOUND AND FIXED BY THE TEST: (a) first
+version drew then pruned: 88% of draws pruned, each backtrack cost
+~30 draws (one per alternative token), C3 found 15 unique proofs vs
+C2's 34 — fixed by masking before the draw; (b) chronological
+backtracking is a depth-first traversal and got trapped in subtrees
+the checker cannot refute (application heads still holes: "abort snd
+app ..."), e.g. one prompt with 53/64 valid C1 samples gave 0 C3
+completions in 544 draws — fixed by the per-attempt cap; the depth
+bound added at the same time. RESULTS (mask mode, final seeding,
+mechanics only): 1,280 C1 samples, 1,205 parsed, all terminated with
+EOS, 699 valid (115 valid-novel; 0 valid outputs deeper than 10, so
+the C3 depth bound removes nothing C1 produces); C2 31 unique (12
+novel); C3 33 unique (17 novel), 24 shared with C2, 9 C3-only, 7
+C2-only; 165 attempts hit the cap, 9,106 free backtracks; total
+budget 11,386 draws matched 20/20; C4 29 outputs (12 novel),
+shortfall 2 in the middle tertile, no enumeration cap hit. Prompts
+with >=1 valid novel output: C2 7, C3 8, both 7 (the H1 contrast
+entry rule would admit 7 of 20 here). Prune mode on the same C1
+samples: C3 33 unique (16 novel); prune mode is NOT run in the main
+study, the file is the record that it was considered. Runtime 97 s
+for 20 prompts at one thread on this laptop — main runs (2,000
+prompts, longer proofs from the 5M model) need the GPU machine and
+batching across prompts. All re-checks passed: every C2/C3/C4 output
+re-validated by the checker, novelty flags re-derived from the
+fingerprinted training set. Parameters fixed by SPEC.md postscript
+2026-09-29 ("Conditions: implementation parameters").
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive

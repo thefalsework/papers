@@ -430,3 +430,77 @@ E2 on the novel-only subset is 0.132, below the K-agree threshold
 that the registered test (on all held-out proofs) passed at 0.330.
 Both are recorded in the feasibility note as descriptives; neither
 changes a gate.
+
+## Postscript 2026-09-29: Conditions, implementation parameters
+
+Written after a mechanics test of the four conditions on 20 freshly
+generated formulas that are in no corpus set (status log, same date;
+`out/conditions-feasibility-seed0-mechanics-{mask,prune}.json`), and
+before any main-run data exists. The Conditions table fixes C3 only as
+"prune partial terms that fail the prefix check, backtrack, repair" and
+C4 only as "bounded enumeration, size distribution matched within size
+tertiles". The parameters below complete those descriptions. No
+hypothesis, kill, rule or threshold is changed.
+
+1. **Budget unit.** Compute is matched by model draws: one draw is one
+   token sampled from the model's next-token distribution. C1's budget
+   for a prompt is the total draws over its 64 samples, EOS included.
+   C3 spends exactly that number on the same prompt (asserted per
+   prompt). The checker's prefix checks and backtracking cost no
+   draws: C3 is constrained decoding, in which the checker masks
+   refuted continuations before each draw. A draw-then-prune
+   accounting was implemented and run in the mechanics test; it is not
+   used in the main study, and its output file is kept as the record
+   that it was considered.
+2. **C3 parameters.** Temperature 1.0 (sensitivity 0.7, as
+   registered). A partial term whose depth exceeds 10, the generator's
+   registered depth bound, is refuted (holes have depth 1, so no
+   completion is shallower); in the mechanics test C1 produced no
+   valid output deeper than 10. Backtracking is chronological: when no
+   continuation is viable, the last token is popped and forbidden at
+   its position. Each attempt, a descent from the empty prefix, is
+   capped at `max_new` draws, the most a single C1 sample can cost;
+   at the cap the attempt is abandoned and the search restarts from
+   the empty prefix. A token sequence that has already produced a
+   completion forbids EOS thereafter, so reported completions are
+   distinct by construction; the search restarts after each
+   completion and stops when the budget is spent or the space is
+   exhausted (recorded).
+3. **C4 parameters.** Exhaustive size-indexed enumeration of normal
+   proofs in the fragment, depth at most 10, deduplicated in eta-long
+   form, at most 400 distinct proofs per prompt (size cap 32; memo
+   list cap 2,000, node cap 300,000; every cap hit is recorded).
+   Matching is per prompt: C4 takes, in each proof-size tertile, as
+   many enumerated proofs, uniformly at random, as C2 has unique valid
+   outputs in that tertile. Tertile boundaries are the ones fixed on
+   the full held-out set. Shortfalls are reported, not filled.
+4. **Seeding.** Every random stream is seeded deterministically from
+   the prompt: SHA-256 of the formula tokens, the arm tag, and (for C1)
+   the sample index. Uniforms come from a CPU generator and tokens are
+   drawn by inverse CDF, so the device, the batch layout and the
+   prompt order cannot change outputs. `tests/test_batching.py` checks
+   this on fresh formulas and must pass before any main run.
+5. **Novelty** is computed by one function for every arm, against the
+   training-term set whose fingerprint is written into every results
+   file.
+6. **Zone computation.** The closing test compares distances with 2r
+   at a relative tolerance of 1e-9, so that inside ⊆ closing, which
+   holds exactly in the mathematics, cannot fail by rounding; the
+   nesting is asserted and halts the run if violated. The feasibility
+   labels and radii were re-derived under this tolerance and match
+   the committed file exactly.
+7. **Contrast collapse.** Under the per-arm entry rule (a prompt enters a
+   contrast only if every arm in it has at least one unique valid novel
+   output), C1-valid and C2 are the same output set per prompt, and the
+   prompts where both C1 and C3 have a valid novel output are exactly H1m's
+   matched set. C3 − C1-valid, C3 − C2 and H1m are therefore one statistic
+   and are reported once. H1 (C3 vs B, over all prompts where C3 has a valid
+   novel output) remains distinct from H1m, so K1m's reading (the checker
+   reaches new problems vs finds new solutions to the same problems) is
+   unchanged.
+8. **H2 decision rule.** H2 is evaluated per embedding at the primary rule
+   and d = 16. H2 passes only if it passes in both E1 and E2; passing in one
+   embedding only is reported as embedding-dependent. K-H2 is evaluated the
+   same way. C4 restricted to novel outputs is the primary comparison (same
+   like-with-like reasoning as the B decision); C4 over all outputs is
+   reported alongside as descriptive. Crack-in-both is descriptive.
