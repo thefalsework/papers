@@ -557,6 +557,28 @@ each tripping), 0 failures. tests/test_batching.py extended to C4's
 seeded matching (repeat and reversed order) and C3 against the real
 training-term set: 0 failures. Dry run of 07 -> 08 -> 09 on the
 held-out-derived throwaway file ran end to end; outputs deleted.
+Committed as b2c0701.
+
+CLOSURE AND FREEZE (2026-09-29). The reviewer session's closure pass
+(REVIEW-CLOSURE.md, committed): 20 CLOSED, 2 PARTIAL (test coverage
+of unequal per-prompt output counts; no C3-all descriptive row),
+0 OPEN, one new BLOCKER N1: K2 was evaluated on the main run but its
+consequence was not applied, so H1_status, the H2 verdict and
+claim_eligible could read "survives" with K2 fired. Fixed with a
+sentence added to postscript B ("If K2 fires on the main run, H1 and
+H2 are reported as unmeasurable (K2) and no claim is eligible"),
+implemented in 08 and 09 with a planted test (K2 fired in every seed
+-> no claim). Also from the closure notes: H1_status is None when K1
+is undefined; rule_dependent.K1m is None when either rule's K1m is
+null; postscript E's justification corrected (the top tertile is
+open-ended, so the cap can exclude proofs the top band could include;
+recorded via per-band C4 counts). Suites at the freeze: test_analysis
+56/56, test_checks 21/21, test_batching 0 failures on 3 fresh
+formulas. SPEC.md and the analysis chain (06-09, ipl/) are FROZEN from
+this commit: any change before or during the main run needs a
+BLOCKER-level reason and a dated postscript. Remaining closure notes
+(b, c, e, f, g and the two PARTIALs) are for the paper, not fixes.
+Next step: set up the cloud machine.
 
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the

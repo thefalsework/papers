@@ -395,25 +395,38 @@ def analyze(Z: dict, n_boot: int = N_BOOT, seed: int = BOOT_SEED) -> dict:
     # ---- registered verdicts at (primary, d_reg) with rule dependence
     reg = out["by_setting"]["primary"][d_reg]
     alt = out["by_setting"]["alternative"][d_reg] if "alternative" in out["by_setting"] else None
+    # postscript "Resolutions", item B: K2 fired -> H1 and H2 unmeasurable, no claim
+    if k2["fired"]:
+        h1_status = "unmeasurable (K2)"
+    elif k_agree["fired"]:
+        h1_status = "descriptive only (K-agree fired)"
+    elif reg["H1"]["K1_fired"] is None:
+        h1_status = None
+    else:
+        h1_status = "dead (K1)" if reg["H1"]["K1_fired"] else "survives"
+    h2_verdict = dict(reg["H2"]["U4"]["verdict"])
+    if k2["fired"]:
+        h2_verdict["H2"] = "unmeasurable (K2)"
     verdicts = {
         "setting": {"rule": "primary", "d": int(d_reg)},
         "K2_fired": k2["fired"], "K_agree_fired": k_agree["fired"],
-        "H1_status": "descriptive only (K-agree fired)" if k_agree["fired"] else ("dead (K1)" if reg["H1"]["K1_fired"] else "survives"),
+        "H1_status": h1_status,
         "K1_fired": reg["H1"]["K1_fired"], "H1_diff": reg["H1"]["diff"], "H1_ci95": reg["H1"]["ci95"],
         "K1m_fired": reg["H1m"]["K1m_fired"], "H1m_reversed": reg["H1m"]["reversed"],
         "H1m_diff": reg["H1m"]["diff"], "H1m_ci95": reg["H1m"]["ci95"],
         "H1_length_control_robust": reg["H1_length_control"]["robust"],
-        "H2": reg["H2"]["U4"]["verdict"],
+        "H2": h2_verdict,
         "n_prompts_H1": reg["H1"]["n_prompts_C3"], "n_prompts_H1m": reg["H1m"]["n_prompts"],
     }
     if alt is not None:
+        k1m_reg, k1m_alt = reg["H1m"]["K1m_fired"], alt["H1m"]["K1m_fired"]
         verdicts["alternative_rule"] = {
-            "K1_fired": alt["H1"]["K1_fired"], "K1m_fired": alt["H1m"]["K1m_fired"],
+            "K1_fired": alt["H1"]["K1_fired"], "K1m_fired": k1m_alt,
             "H2": alt["H2"]["U4"]["verdict"],
             "H1_length_control_robust": alt["H1_length_control"]["robust"]}
         verdicts["rule_dependent"] = {
             "K1": alt["H1"]["K1_fired"] != reg["H1"]["K1_fired"],
-            "K1m": alt["H1m"]["K1m_fired"] != reg["H1m"]["K1m_fired"],
+            "K1m": None if (k1m_reg is None or k1m_alt is None) else k1m_reg != k1m_alt,
             "H1_length_control_robust": alt["H1_length_control"]["robust"] != reg["H1_length_control"]["robust"],
             "H2": alt["H2"]["U4"]["verdict"]["H2"] != reg["H2"]["U4"]["verdict"]["H2"],
             "K2": bool(k2["rule_dependent_embeddings"])}

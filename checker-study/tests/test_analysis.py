@@ -174,6 +174,7 @@ def main() -> int:
     Ra, rega, Va = run(make_zones(np.random.default_rng(23), alt_all_inside=True), seed=6)
     expect(Va["rule_dependent"]["K1"] is True and Va["alternative_rule"]["K1_fired"] is True and Va["K1_fired"] is False, "rule dependence detected for K1", fails)
     expect(Va["rule_dependent"]["K2"] is True and Va["K2_fired"] is False, "K2 rule-dependent when cracks vanish under one rule only", fails)
+    expect(Va["alternative_rule"]["K1m_fired"] is None and Va["rule_dependent"]["K1m"] is None, "rule_dependent.K1m is None when one rule's K1m is null (note d)", fails)
 
     # 7. K-H2 fired in both embeddings, consistent labels -> dead
     Rd, regd, Vd = run(make_zones(np.random.default_rng(29), crack_C2=0.3, crack_C4=0.3), seed=7)
@@ -210,9 +211,19 @@ def main() -> int:
     zu = Rz["descriptives"]["E1"]["16"]["Z_U_vs_B_novel"]["U4"]
     expect(abs(zu) < 3.0, f"Z_U near zero when C4 has B's zone mix: {zu:.2f}", fails)
 
-    # 13. K2 fires: held-out cracks vanish under both rules
+    # 13. K2 fires: held-out cracks vanish under both rules -> H1 and H2 unmeasurable, no claim (item B)
     R2, _, V2 = run(make_zones(np.random.default_rng(47), crack_B=0.01), seed=14, nb=50)
     expect(V2["K2_fired"] is True and R2["gates"]["K2"]["fired_embeddings"] == ["E1", "E2"], f"K2 fires: {R2['gates']['K2']['crack_fraction']}", fails)
+    expect(V2["H1_status"] == "unmeasurable (K2)" and V2["H2"]["H2"] == "unmeasurable (K2)"
+           and V2["H2"]["by_embedding"] == {"E1": "survives", "E2": "survives"}, f"K2 fired: H1 {V2['H1_status']}, H2 {V2['H2']['H2']} (per-embedding K-H2 still recorded)", fails)
+    k2_three = [analysis.analyze(make_zones(np.random.default_rng(300 + s), crack_B=0.01, model_seed=s), n_boot=50, seed=s) for s in range(3)]
+    aggk = seeds_mod.aggregate(k2_three)
+    expect(aggk["claim_eligible"]["K2_clear_in_every_seed"] is False and aggk["claim_eligible"]["H1"] is False and aggk["claim_eligible"]["H2"] is False, "K2 fired in every seed: no claim eligible", fails)
+
+    # 13b. no C3 data at all: K1 undefined, H1_status None (note a)
+    Zno = make_zones(np.random.default_rng(59), c3_missing_every=1)
+    Rno, regno, Vno = run(Zno, seed=16, nb=50)
+    expect(Vno["K1_fired"] is None and Vno["H1_status"] is None and Vno["K1m_fired"] is None, f"no C3 novel output anywhere: K1 {Vno['K1_fired']}, H1_status {Vno['H1_status']}", fails)
 
     # 14. MC rerun trigger: held-out crack fraction near 0.05; rerun file does not re-trigger
     R3, _, _ = run(make_zones(np.random.default_rng(53), crack_B=0.06), seed=15, nb=50)

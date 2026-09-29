@@ -520,7 +520,9 @@ A. **H2 decision** (review 1, 2, 14). K-H2 is H2's only registered
    disagreement flag are removed.
 B. **Main-run gates** (review 3). K2 and K-agree are evaluated on the
    main-run held-out set as well as at feasibility. If K-agree fires on
-   the main run, H1 is descriptive only, per the kill table.
+   the main run, H1 is descriptive only, per the kill table. If K2 fires
+   on the main run, H1 and H2 are reported as unmeasurable (K2) and no
+   claim is eligible.
 C. **H3 representation** (review 5). All H3 rows are embedded as
    sampled, not normalized. C2/C3/C4 rows stay in normal form. Invalid
    rows carry their size in a separate, explicitly named field.
@@ -530,8 +532,11 @@ D. **H2 unit** (review 6). Cell fractions are averaged within each
    reported.
 E. **C4 size cap** (review 7). The cap is min(32, max(12, max C2 size
    + 2)), as implemented and used in the mechanics test. It excludes
-   only proofs larger than anything C2 produced plus two, which tertile
-   matching never selects.
+   only proofs larger than anything C2 produced plus two. The top
+   tertile is open-ended (size above the upper boundary), so the cap
+   can exclude proofs the top band could otherwise include and shapes
+   C4's top-band size distribution toward C2's; the effect is recorded
+   via the per-band C4 counts (item I).
 F. **K1m** (review 9). Null (not applicable) when K1 fired. If H1m's CI
    is entirely negative, K1m fires and the result is flagged "reversed".
 G. **Recorded choices** (review 10, 16, 18). Percentile bootstrap;

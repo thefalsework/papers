@@ -80,10 +80,13 @@ def aggregate(results: list[dict]) -> dict:
                   "K_agree_fired_by_seed": per_seed(lambda i: V[i]["K_agree_fired"])},
         "mc_rerun_recommended_by_seed": per_seed(lambda i: results[i]["mc_rerun"]["recommended"]),
     }
+    # postscript "Resolutions", item B: K2 fired in any seed -> no claim
+    k2_clear = all(v is False for v in out["gates"]["K2_fired_by_seed"].values())
     out["claim_eligible"] = {
-        "H1": bool(out["three_seeds"] and out["H1"]["same_direction"] and out["H1"]["verdict_agrees"]
+        "K2_clear_in_every_seed": k2_clear,
+        "H1": bool(out["three_seeds"] and k2_clear and out["H1"]["same_direction"] and out["H1"]["verdict_agrees"]
                    and all(v == "survives" for v in out["H1"]["status_by_seed"].values())),
-        "H2": bool(out["three_seeds"] and out["H2"]["verdict_agrees"]
+        "H2": bool(out["three_seeds"] and k2_clear and out["H2"]["verdict_agrees"]
                    and all(v == "survives" for v in out["H2"]["verdict_by_seed"].values())),
     }
     return out
