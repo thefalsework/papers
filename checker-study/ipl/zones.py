@@ -63,6 +63,12 @@ class ZoneModel:
         """Leave-one-out nearest-neighbour distance within the training set."""
         return self.tree.query(self.train, k=2)[0][:, 1]
 
+    # Relative tolerance on the 2r test. A point within r of a training point
+    # has every point of its r-ball within 2r by the triangle inequality, but
+    # floating-point rounding can put a boundary sample at 2r(1 + 1e-16); the
+    # tolerance keeps the mathematical nesting inside <= closing exact.
+    REL_TOL = 1e-9
+
     def in_closing(self, P: np.ndarray, r: float) -> np.ndarray:
         """Boolean per point: all MC samples in B(p, r) within 2r of training."""
         n = P.shape[0]
@@ -70,11 +76,17 @@ class ZoneModel:
         samples = P[:, None, :] + offsets
         d_center = self.nn_dist(P)
         d_samples = self.nn_dist(samples.reshape(-1, self.d)).reshape(n, self.n_mc)
-        return (d_center <= 2 * r) & (d_samples <= 2 * r).all(axis=1)
+        lim = 2 * r * (1 + self.REL_TOL)
+        return (d_center <= lim) & (d_samples <= lim).all(axis=1)
 
     def zones(self, P: np.ndarray, r: float) -> np.ndarray:
         inside = self.nn_dist(P) <= r
         inC = self.in_closing(P, r)
+        # Halting assertion (spec "Zones": closing is extensive, zones nest).
+        if not bool(inC[inside].all()):
+            raise AssertionError(
+                f"inside not contained in closing: {int((~inC[inside]).sum())} of {int(inside.sum())} "
+                f"inside points failed the closing test at r={r}")
         z = np.full(P.shape[0], EXTERIOR, dtype=int)
         z[inC] = CRACK
         z[inside] = INSIDE

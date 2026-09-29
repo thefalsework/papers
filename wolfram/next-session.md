@@ -478,6 +478,46 @@ re-validated by the checker, novelty flags re-derived from the
 fingerprinted training set. Parameters fixed by SPEC.md postscript
 2026-09-29 ("Conditions: implementation parameters").
 
+ANALYSIS CODE WRITTEN BEFORE ANY MAIN-RUN OUTCOME (2026-09-29).
+07-embed-zones.py turns a conditions file into one row per output (B
+= every held-out proof with its term-novel flag; C1 = every parsed
+raw sample, valid or not, for H3; C2/C3/C4 = unique valid outputs)
+with zone labels under both rules at d = 16/8/32 in E1 and E2, and
+nearest-training distances; it refuses mechanics-test files.
+08-analysis.py computes H1 (C3 joint exterior vs term-novel B,
+independent bootstrap of both means, 10,000 resamples), H1m (C3 - C2
+on the matched set; postscript item 7 records that C3 - C1-valid,
+C3 - C2 and H1m are one statistic, reported once), the length control
+per fixed tertile, H2 per embedding pooled over (prompt, tertile)
+cells with a cluster bootstrap over prompts — pass requires both E1
+and E2, one embedding only reads embedding-dependent, K-H2 read the
+same way, C4 novel-only primary, C4-all and crack-in-both descriptive
+(postscript item 8) — H3 enrichment by zone with a cluster
+bootstrap over prompts, per-condition kappa, Meehan Z_U per condition
+against B in each embedding, nn-distance quantiles, and the K1 / K1m
+/ K-H2 verdicts at (primary, d = 16) with rule-dependence flags.
+HALTING ASSERTIONS: inside <= closing (ipl/zones.py, at label time;
+2r compared at relative tolerance 1e-9, feasibility labels re-derived
+and identical); exact draw budget per prompt (06 at run time, 07 on
+the file); identical novelty (fingerprint match plus every arm's flag
+re-derived with conditions.novelty_key in 07); tertile boundaries
+from the full held-out set (06, 07 and 08 all recompute and compare).
+TESTS: tests/test_analysis.py builds synthetic zone files with
+planted effects — H1 effect recovered (diff 0.417, CI [0.36, 0.48]
+excluding zero) and a null case where K1 fires (CI [-0.078, 0.036]);
+H2 recovered (pooled diff 0.364, CI [0.29, 0.43], verdict "pass"
+with identical E1/E2 labels, "embedding-dependent" when only E1
+carries the effect); H3 crack enrichment recovered with CI above 1;
+kappa 1.0 for identical labels and ~0 for shuffled; Z_U ~0 (-0.44)
+for identical distance distributions and 20.3 for a planted shift;
+each halting assertion trips on a corrupted file — 23 checks, 0
+failures. Pipeline dry run: 07 then 08 on a
+conditions-shaped file whose "outputs" were 20 held-out proofs (no
+model output involved, nothing learned about any condition) ran end
+to end (1,100 rows, 1,009 s on this laptop, all checks certified);
+the dry-run outputs were deleted. The analysis code is now frozen for
+the independent review session; the main run waits for that review.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
