@@ -504,3 +504,44 @@ hypothesis, kill, rule or threshold is changed.
    same way. C4 restricted to novel outputs is the primary comparison (same
    like-with-like reasoning as the B decision); C4 over all outputs is
    reported alongside as descriptive. Crack-in-both is descriptive.
+
+## Postscript 2026-09-29: Resolutions of the independent review
+
+Written after the independent review of the analysis code against this
+spec (`REVIEW.md`, 22 items, committed with this postscript) and before
+any main-run data exists. Item numbers refer to `REVIEW.md`.
+
+A. **H2 decision** (review 1, 2, 14). K-H2 is H2's only registered
+   decision rule. Per embedding at the primary rule and d = 16: K-H2
+   fired → H2 dead; not fired → H2 survives. H2 survives overall only
+   if it survives in both E1 and E2; dead in both → dead; otherwise
+   embedding-dependent (neither survives nor dead). The difference CI
+   is reported as descriptive only. The "passes" test and the pass/kill
+   disagreement flag are removed.
+B. **Main-run gates** (review 3). K2 and K-agree are evaluated on the
+   main-run held-out set as well as at feasibility. If K-agree fires on
+   the main run, H1 is descriptive only, per the kill table.
+C. **H3 representation** (review 5). All H3 rows are embedded as
+   sampled, not normalized. C2/C3/C4 rows stay in normal form. Invalid
+   rows carry their size in a separate, explicitly named field.
+D. **H2 unit** (review 6). Cell fractions are averaged within each
+   prompt before pooling, so each prompt has equal weight. Prompts
+   dropped for having no tertile in common with C4 are counted and
+   reported.
+E. **C4 size cap** (review 7). The cap is min(32, max(12, max C2 size
+   + 2)), as implemented and used in the mechanics test. It excludes
+   only proofs larger than anything C2 produced plus two, which tertile
+   matching never selects.
+F. **K1m** (review 9). Null (not applicable) when K1 fired. If H1m's CI
+   is entirely negative, K1m fires and the result is flagged "reversed".
+G. **Recorded choices** (review 10, 16, 18). Percentile bootstrap;
+   independent two-sample bootstrap for H1 (different populations),
+   paired for H1m; 10,000 resamples enforced in registered runs (the
+   --n-boot override is refused for them); calibration by 20-step
+   bisection; tertiles by linear-interpolation quantiles with <= edges.
+H. **Monte Carlo rerun trigger** (review 15). "Narrowly" means a
+   registered verdict whose CI bound is within 0.02 of its threshold,
+   or a K2 crack fraction within 0.02 of 0.05. In that case rerun at
+   1,024 samples and report both.
+I. **C4 size bias** (review 11). Per-band C4-novel counts are reported
+   against C2 counts.

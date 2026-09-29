@@ -39,8 +39,24 @@ from .gen import DEPTH_MAX
 from .model import EOS, PAD, SEP, GPT, decode
 from .terms import (
     Abort, And, App, Bot, Case, Formula, Fst, Imp, Inl, Inr, Lam, Or, Pair,
-    Snd, Term, Var, parse_term, parse_term_full, term_depth, term_size, term_tokens,
+    Snd, Term, Var, parse_formula, parse_term, parse_term_full, term_depth, term_size, term_tokens,
 )
+
+# C4 enumeration (spec postscript 2026-09-29 "Conditions", item 3; "Resolutions", item E)
+C4_MAX_COUNT = 400
+C4_SIZE_CAP = 32
+
+
+def c4_size_cap(c2_sizes: list[int]) -> int:
+    """min(32, max(12, max C2 size + 2)); excludes only proofs larger than
+    anything C2 produced plus two, which tertile matching never selects."""
+    return min(C4_SIZE_CAP, max(12, (max(c2_sizes) + 2) if c2_sizes else 12))
+
+
+def conditions_name(profile: str, seed: int, temperature: float) -> str:
+    """Output stem shared by 06/07/08, so a sensitivity run at another
+    temperature cannot overwrite the registered one."""
+    return f"conditions-{profile}-seed{seed}-T{temperature:g}"
 
 
 # ----------------------------------------------------------------------------
@@ -54,8 +70,23 @@ def novelty_key(t: Term, goal: Formula) -> tuple:
 
 def train_term_set(train_items: list[dict]) -> frozenset:
     """Training proofs are stored in eta-long form; their token tuples are
-    the novelty reference."""
+    the novelty reference. assert_train_eta_long checks the premise."""
     return frozenset(tuple(it["proof"]) for it in train_items)
+
+
+def assert_train_eta_long(train_items: list[dict]) -> int:
+    """Halting check: every stored training proof equals its own eta-long
+    normal form, so raw stored tokens are a valid novelty reference."""
+    for it in train_items:
+        try:
+            goal, _ = parse_formula(it["formula"])
+            t = parse_term_full(it["proof"])
+            nf = tuple(term_tokens(normal_form(t, goal)))
+        except Exception as exc:  # parse failure or checker Reject: not a proof of its formula
+            raise AssertionError(f"training item is not a proof of its formula ({exc}): " + " ".join(it["proof"]))
+        if nf != tuple(it["proof"]):
+            raise AssertionError("training proof is not stored in eta-long normal form: " + " ".join(it["proof"]))
+    return len(train_items)
 
 
 def train_set_fingerprint(train_terms: frozenset) -> str:

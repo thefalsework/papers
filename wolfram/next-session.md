@@ -518,6 +518,46 @@ to end (1,100 rows, 1,009 s on this laptop, all checks certified);
 the dry-run outputs were deleted. The analysis code is now frozen for
 the independent review session; the main run waits for that review.
 
+INDEPENDENT REVIEW AND RESOLUTIONS (2026-09-29). A separate reviewer
+session read SPEC.md and the analysis chain and wrote REVIEW.md: 22
+items, 1 BLOCKER (H2's "passes" test existed only in code), 8
+SHOULD-FIX, 13 NOTE. Author decisions went into SPEC.md postscript
+"Resolutions of the independent review" (items A-I), committed with
+REVIEW.md and the fixes before any main-run data. Code: 08 reads H2
+from K-H2 alone (dead / survives per embedding; survives overall only
+in both, dead in both, else embedding-dependent; difference CI
+descriptive), evaluates K2 and K-agree on the main-run held-out set
+(K-agree fired makes H1 descriptive only), weights H2 by prompt with
+cell fractions averaged within prompt and counts prompts dropped for
+no common tertile, sets K1m null when K1 fired and flags a
+wholly-negative H1m CI "reversed", refuses --n-boot != 10,000 for the
+main profile, flags a Monte Carlo rerun when a verdict's CI bound is
+within 0.02 of its threshold or a K2 crack fraction is within 0.02 of
+0.05, reports per-band C2 / C4-novel counts, includes length-control
+robustness in the rule-dependence flags, and carries C3 restarts on
+cap, C4 shortfalls and cap hits, the held-out novelty count and the
+temperature. 07 embeds H3 rows as sampled with sampled_length as a
+separate field, asserts training proofs are stored eta-long, certifies
+K-check (crosscheck.json, 2,000 terms agreeing) and minimum competence
+(C1 valid rate >= 20%), re-checks that recorded-invalid parsed samples
+are invalid, accepts --n-mc for the 1,024 rerun, and puts the
+temperature in every filename (06 too; the two committed mechanics
+files predate the suffix). 09-seeds.py aggregates three seeds with the
+same-direction rule. TESTS: tests/test_analysis.py now plants every
+state — K1 fired with K1m null, K1m fired, reversed, length control
+not robust, rule dependence true (K1 and K2), K-H2 fired in both
+embeddings (dead), embedding-dependent, the entry rule excluding 30 of
+300 prompts, U4 differing from C4-all, H3 null and exterior
+enrichment, K2 fired, K-agree fired, rerun trigger and rerun file,
+three-seed agreement and disagreement, --n-boot refusal, and 11
+halting assertions — 52 checks, 0 failures. tests/test_checks.py
+exercises 07's checks on a generator-built corpus without a model: 20
+checks (clean pass, rows as sampled, run record, and 15 corruptions
+each tripping), 0 failures. tests/test_batching.py extended to C4's
+seeded matching (repeat and reversed order) and C3 against the real
+training-term set: 0 failures. Dry run of 07 -> 08 -> 09 on the
+held-out-derived throwaway file ran end to end; outputs deleted.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive

@@ -9,7 +9,8 @@ Prompt sources:
                    output is marked mechanics_test and is never analysed)
 
 Usage: python 06-conditions.py --profile feasibility --seed 0 --prompts fresh --n-prompts 20
-Writes out/conditions-<profile>-seed<k>[-mechanics].json.
+Writes out/conditions-<profile>-seed<k>-T<temperature>[-mechanics-<mode>].json
+(the two committed mechanics files predate the temperature suffix).
 """
 from __future__ import annotations
 
@@ -31,16 +32,14 @@ from ipl.check import is_valid  # noqa: E402
 from ipl.gen import DEPTH_MAX, random_formula, random_proof  # noqa: E402
 from ipl.model import GPT, GPTConfig, encode_pair  # noqa: E402
 from ipl.conditions import (  # noqa: E402
-    classify, enumerate_proofs, guided_search, match_by_tertile, prompt_seed, sample_counted,
-    tertile_boundaries, train_set_fingerprint, train_term_set,
+    C4_MAX_COUNT, C4_SIZE_CAP, c4_size_cap, classify, conditions_name, enumerate_proofs, guided_search,
+    match_by_tertile, prompt_seed, sample_counted, tertile_boundaries, train_set_fingerprint, train_term_set,
 )
 
 HERE = Path(__file__).parent
 N_SAMPLES = 64
 TEMPERATURE = 1.0
 SEED_BASE = 20260929
-C4_MAX_COUNT = 400
-C4_SIZE_CAP = 32
 
 
 def load_jsonl(p: Path):
@@ -158,7 +157,7 @@ def main() -> int:
 
         # ---- C4
         c2_sizes = [e["term_size"] for e in c2.values()]
-        max_size = min(C4_SIZE_CAP, max(12, (max(c2_sizes) + 2) if c2_sizes else 12))
+        max_size = c4_size_cap(c2_sizes)  # postscript "Resolutions", item E
         pool, enum_rec = enumerate_proofs(goal, max_size=max_size, max_count=C4_MAX_COUNT)
         for k, _ in pool:
             assert is_valid(parse_term_full(list(k)), goal), "C4 proof failed re-check"
@@ -228,7 +227,7 @@ def main() -> int:
         "prompts": records,
         "seconds": round(time.time() - t_start, 1),
     }
-    name = f"conditions-{args.profile}-seed{args.seed}" + (f"-mechanics-{args.c3_mode}" if mechanics else "")
+    name = conditions_name(args.profile, args.seed, args.temperature) + (f"-mechanics-{args.c3_mode}" if mechanics else "")
     path = HERE / "out" / f"{name}.json"
     path.write_text(json.dumps(out, indent=1), encoding="utf-8")
     print(json.dumps(totals, indent=2))
