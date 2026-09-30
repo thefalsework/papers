@@ -1,0 +1,139 @@
+{
+  "startedAt": "2026-09-30T15:19:40.003825+00:00",
+  "profile": "main",
+  "seed": 2,
+  "device": "cuda",
+  "n_params": 4772352,
+  "config": {
+    "n_layer": 6,
+    "n_embd": 256,
+    "n_head": 8,
+    "block_size": 96,
+    "dropout": 0.0,
+    "vocab_size": 34
+  },
+  "hyper": {
+    "batch": 128,
+    "lr_max": 0.0006,
+    "lr_min": 6e-05,
+    "epochs": 30,
+    "warmup": 300,
+    "patience": 4
+  },
+  "n_train": 98000,
+  "n_val": 2000,
+  "block_size": 96,
+  "epochs": [
+    {
+      "epoch": 0,
+      "train_loss": 0.97,
+      "val_loss": 0.5439,
+      "secs": 32.0
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.4528,
+      "val_loss": 0.3796,
+      "secs": 63.3
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3547,
+      "val_loss": 0.3081,
+      "secs": 94.7
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2911,
+      "val_loss": 0.2764,
+      "secs": 126.1
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2553,
+      "val_loss": 0.2424,
+      "secs": 157.4
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2324,
+      "val_loss": 0.2247,
+      "secs": 188.8
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2168,
+      "val_loss": 0.2089,
+      "secs": 220.2
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.2067,
+      "val_loss": 0.2039,
+      "secs": 251.5
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1972,
+      "val_loss": 0.1967,
+      "secs": 282.9
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.1902,
+      "val_loss": 0.1952,
+      "secs": 314.3
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.1834,
+      "val_loss": 0.1927,
+      "secs": 345.6
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.1776,
+      "val_loss": 0.185,
+      "secs": 377.0
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.1727,
+      "val_loss": 0.1852,
+      "secs": 408.4
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.1677,
+      "val_loss": 0.1823,
+      "secs": 439.7
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.1625,
+      "val_loss": 0.1875,
+      "secs": 471.1
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.1577,
+      "val_loss": 0.1846,
+      "secs": 502.4
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.1523,
+      "val_loss": 0.1847,
+      "secs": 533.7
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.1471,
+      "val_loss": 0.1907,
+      "secs": 565.0
+    }
+  ],
+  "best_val_loss": 0.18233940872551485,
+  "finishedAt": "2026-09-30T15:29:05.044247+00:00",
+  "train_seconds": 565.0
+}

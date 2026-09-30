@@ -1,0 +1,18 @@
+host: 147-224-158-242  started: 2026-09-30T15:19:34Z  commit: d29d19e02f228c2b14ce4b2fcff93a7784a84309
+GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-a62aee9a-b692-8bfb-ab84-a215c23512ba)
+GPU 1: NVIDIA A100-SXM4-80GB (UUID: GPU-991596b5-413b-d4b5-dc98-4336141ba169)
+GPU 2: NVIDIA A100-SXM4-80GB (UUID: GPU-f7e2287e-7feb-e5d9-7b24-993355aa6693)
+GPU 3: NVIDIA A100-SXM4-80GB (UUID: GPU-afb1a115-eda5-b896-1024-4b1c6b70cd66)
+GPU 4: NVIDIA A100-SXM4-80GB (UUID: GPU-0986e1f6-1ae8-daac-8c8a-6e01576d8a49)
+GPU 5: NVIDIA A100-SXM4-80GB (UUID: GPU-43d732a3-8cea-06e1-b27a-458720cf0f89)
+GPU 6: NVIDIA A100-SXM4-80GB (UUID: GPU-6d0bced2-9425-ce88-4047-30aa4eb53b0c)
+GPU 7: NVIDIA A100-SXM4-80GB (UUID: GPU-b05224ad-9d39-d5bc-fdb5-ba1e369c114f)
+training seed 0 -> GPU 0
+training seed 1 -> GPU 1
+training seed 2 -> GPU 2
+conditions/zones seed 0 T=1.0 -> GPU 0
+conditions/zones seed 0 T=0.7 -> GPU 3
+conditions/zones seed 1 T=1.0 -> GPU 1
+conditions/zones seed 1 T=0.7 -> GPU 4
+conditions/zones seed 2 T=1.0 -> GPU 2
+conditions/zones seed 2 T=0.7 -> GPU 5

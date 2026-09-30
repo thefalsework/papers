@@ -1,0 +1,131 @@
+{
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "n_seeds": 3,
+ "three_seeds": true,
+ "setting": {
+  "rule": "primary",
+  "d": 16
+ },
+ "H1": {
+  "diff_by_seed": {
+   "0": -0.0021679994723917684,
+   "1": -0.0032089578282400444,
+   "2": -0.016246250877140267
+  },
+  "same_direction": true,
+  "K1_fired_by_seed": {
+   "0": true,
+   "1": true,
+   "2": true
+  },
+  "verdict_agrees": true,
+  "status_by_seed": {
+   "0": "dead (K1)",
+   "1": "dead (K1)",
+   "2": "dead (K1)"
+  }
+ },
+ "H1m": {
+  "diff_by_seed": {
+   "0": 0.006515635613419621,
+   "1": 0.001564004761632368,
+   "2": -0.003425882049978645
+  },
+  "same_direction": false,
+  "K1m_fired_by_seed": {
+   "0": null,
+   "1": null,
+   "2": null
+  },
+  "reversed_by_seed": {
+   "0": null,
+   "1": null,
+   "2": null
+  },
+  "verdict_agrees": null
+ },
+ "H1_length_control": {
+  "robust_by_seed": {
+   "0": false,
+   "1": true,
+   "2": false
+  },
+  "agrees": false
+ },
+ "H2": {
+  "diff_descriptive_by_seed": {
+   "E1": {
+    "0": 0.01573800597337996,
+    "1": 0.022474433751029563,
+    "2": 0.01598078071001376
+   },
+   "E2": {
+    "0": 0.0072875562363709625,
+    "1": 0.005678117099042583,
+    "2": 0.011641460580751157
+   }
+  },
+  "same_direction": {
+   "E1": true,
+   "E2": true
+  },
+  "verdict_by_seed": {
+   "0": "embedding-dependent",
+   "1": "embedding-dependent",
+   "2": "survives"
+  },
+  "verdict_agrees": false
+ },
+ "H3": {
+  "crack_enrichment_minus_1_by_seed": {
+   "E1": {
+    "0": -0.9046769958936122,
+    "1": -0.9296177794632471,
+    "2": -0.9215999515574593
+   },
+   "E2": {
+    "0": -0.8408607939944265,
+    "1": -0.879516733786974,
+    "2": -0.8614911837633163
+   }
+  },
+  "same_direction": {
+   "E1": true,
+   "E2": true
+  }
+ },
+ "gates": {
+  "K2_fired_by_seed": {
+   "0": false,
+   "1": false,
+   "2": false
+  },
+  "K_agree_fired_by_seed": {
+   "0": false,
+   "1": false,
+   "2": false
+  }
+ },
+ "mc_rerun_recommended_by_seed": {
+  "0": true,
+  "1": true,
+  "2": true
+ },
+ "claim_eligible": {
+  "K2_clear_in_every_seed": true,
+  "H1": false,
+  "H2": false
+ },
+ "ranAt": "2026-09-30T22:12:56.798734+00:00",
+ "profile": "main",
+ "temperature": 0.7,
+ "files": [
+  "analysis-main-seed0-T0.7.json",
+  "analysis-main-seed1-T0.7.json",
+  "analysis-main-seed2-T0.7.json"
+ ]
+}

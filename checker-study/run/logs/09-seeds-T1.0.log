@@ -1,0 +1,13 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "claim_eligible": {
+    "K2_clear_in_every_seed": true,
+    "H1": false,
+    "H2": false
+  }
+}
+wrote /home/ubuntu/papers/checker-study/out/seeds-main-T1.json

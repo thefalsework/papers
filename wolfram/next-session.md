@@ -580,6 +580,68 @@ BLOCKER-level reason and a dated postscript. Remaining closure notes
 (b, c, e, f, g and the two PARTIALs) are for the paper, not fixes.
 Next step: set up the cloud machine.
 
+CHECKER STUDY MAIN RUN (2026-09-30, rented 8xA100 machine, commit
+d29d19e = bc3d688 + one approved runtime-only exception). Before the
+run: workers=-1 added to the two cKDTree.query calls in ipl/zones.py
+(SPEC.md postscript 2026-09-30) after byte-identical output was shown
+against the unmodified code on the feasibility corpus and on the main
+corpus at all six (embedding, d) settings (run/identity-check-
+workers.txt); orchestration by run/run-main.sh; logs in run/logs/.
+Environment: 8x A100-SXM4-80GB, 2x EPYC 7J13 (240 cores), 1.77 TB
+RAM, Python 3.10.12, PyTorch 2.14.0+cu130, NumPy 2.2.6, SciPy 1.15.3.
+Corpus 100,000 / 5,000 / 2,000 (seed 20260928), 1,433 of 5,000
+held-out proofs term-novel. Models 4,772,352 params, best val loss
+0.1808 / 0.1780 / 0.1823 (seeds 0/1/2). Six condition jobs (3 seeds x
+T=1.0, 0.7) in parallel, one per GPU; budget matched on 2,000/2,000
+prompts in every job. Wall-clock 6 h 53 min.
+GATES on the main held-out set (primary, d=16): K2 not fired in any
+seed (crack E1 0.161-0.193 / alt 0.097-0.106; E2 0.177-0.179 / alt
+0.085-0.086); K-agree kappa 0.383 / 0.396 / 0.389, not fired.
+H1 DEAD (K1) IN ALL THREE SEEDS at T=1.0: C3 - B(novel) joint
+exterior +0.002 [-0.026, +0.029], -0.007 [-0.034, +0.022], -0.011
+[-0.039, +0.016]; C3 0.82-0.85 vs B-novel 0.83-0.85. Same at T=0.7
+(-0.002, -0.003, -0.016; all CIs include zero). Against B over ALL
+held-out proofs the difference is +0.44 to +0.47 (descriptive): the
+2026-09-29 restriction of B to term-novel proofs decided the verdict,
+as its rationale said it should. K1m null. H1m +/-0.006, CIs include
+zero. Length control: tertile 0 empty (no novel term has size <= 5);
+robust in 1 of 3 seeds per temperature. Rule-dependent: under the
+alternative rule K1 does not fire in 4 of 6 jobs, but that rule leaves
+0.1-0.4% of B exterior and was declared descriptive at feasibility.
+H2 NOT CLAIM-ELIGIBLE: verdicts (K-H2, primary, d=16, C4 novel) are
+embedding-dependent / embedding-dependent / dead at T=1.0 and
+embedding-dependent / embedding-dependent / survives at T=0.7; E1
+survives in 5 of 6 jobs, E2 in 1; dead everywhere under the
+alternative rule. Descriptive C1 - C4 crack difference positive in
+every seed in both embeddings (E1 +0.012 to +0.022; E2 0.000 to
++0.012). Crack fractions are small everywhere (0.02-0.09).
+H3 (descriptive, no kill): invalid outputs are DEPLETED in cracks
+(enrichment 0.07-0.17, CIs below 1) and ENRICHED in the exterior
+(1.83-1.95) in every seed and temperature; the registered expectation
+(exterior at least as strong as crack) holds, the hypothesis as
+worded does not. Novel-only kappa low as foreseen (B-novel 0.10-0.16,
+U2/U3/U4 0.04-0.10). 09-seeds: claim_eligible H1 false, H2 false at
+both temperatures; K2 clear in every seed.
+DEVIATION - MONTE CARLO RERUN NOT PERFORMED: 08 recommends the
+1,024-sample rerun for all six jobs, in every case solely because
+K-H2's C4 CI upper bound is within 0.02 of C1's crack fraction (both
+embeddings); no H1 or K2 trigger. Crack fractions below 0.09 meet a
+0.02 tolerance almost automatically; Monte Carlo noise moves per-row
+labels while H2's uncertainty is dominated by the prompt-level
+bootstrap; H2 is already not claim-eligible. The 256-sample zones
+stage took 2.9-3.3 h per job with six in parallel, the rerun was
+estimated at 10-24 machine-hours, and run-main.sh stopped (exit 3)
+for the author's decision. Author's decision (option c): do not run
+it, for cost. Recorded in SPEC.md as a deviation from the registered
+plan, decided after the 256-sample results were seen; all reported
+results are 256-sample results.
+Committed: analysis-main-seed{0,1,2}-T{1,0.7}.json, seeds-main-
+T{1,0.7}.json, training logs, run logs, the results postscript;
+conditions (71 MB each), zones (47 MB each) and checkpoints (19 MB
+each) regenerate from the registered seeds and are archived off the
+repo. Next: the paper's results section from the postscript; the
+instance is terminated after the archive is pulled.
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive

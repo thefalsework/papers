@@ -1,0 +1,67 @@
+[2026-09-30T15:19:34Z] run-main.sh started; placement in /home/ubuntu/checker-run/logs/placement.txt
+[2026-09-30T15:19:34Z] stage 1 (train) start
+[2026-09-30T15:19:34Z] start 03-train-seed0 (GPU 0): /home/ubuntu/venv/bin/python 03-train.py --profile main --seed 0 --device cuda --threads 8
+[2026-09-30T15:19:34Z] start 03-train-seed1 (GPU 1): /home/ubuntu/venv/bin/python 03-train.py --profile main --seed 1 --device cuda --threads 8
+[2026-09-30T15:19:34Z] start 03-train-seed2 (GPU 2): /home/ubuntu/venv/bin/python 03-train.py --profile main --seed 2 --device cuda --threads 8
+[2026-09-30T15:28:42Z] end 03-train-seed0 rc=0
+[2026-09-30T15:29:06Z] end 03-train-seed2 rc=0
+[2026-09-30T15:30:17Z] end 03-train-seed1 rc=0
+[2026-09-30T15:30:17Z] stage 1 (train) end
+[2026-09-30T15:30:17Z] stage 2 (conditions) start
+[2026-09-30T15:30:17Z] start 06-conditions-seed0-T1.0 (GPU 0): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 0 --prompts test --temperature 1.0 --device cuda --threads 4
+[2026-09-30T15:30:17Z] start 06-conditions-seed0-T0.7 (GPU 3): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 0 --prompts test --temperature 0.7 --device cuda --threads 4
+[2026-09-30T15:30:17Z] start 06-conditions-seed1-T1.0 (GPU 1): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 1 --prompts test --temperature 1.0 --device cuda --threads 4
+[2026-09-30T15:30:17Z] start 06-conditions-seed1-T0.7 (GPU 4): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 1 --prompts test --temperature 0.7 --device cuda --threads 4
+[2026-09-30T15:30:17Z] start 06-conditions-seed2-T1.0 (GPU 2): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 2 --prompts test --temperature 1.0 --device cuda --threads 4
+[2026-09-30T15:30:17Z] start 06-conditions-seed2-T0.7 (GPU 5): /home/ubuntu/venv/bin/python 06-conditions.py --profile main --seed 2 --prompts test --temperature 0.7 --device cuda --threads 4
+[2026-09-30T18:09:15Z] end 06-conditions-seed1-T0.7 rc=0
+[2026-09-30T18:13:29Z] end 06-conditions-seed1-T1.0 rc=0
+[2026-09-30T18:13:36Z] end 06-conditions-seed0-T0.7 rc=0
+[2026-09-30T18:15:11Z] end 06-conditions-seed2-T0.7 rc=0
+[2026-09-30T18:50:31Z] end 06-conditions-seed0-T1.0 rc=0
+[2026-09-30T18:50:48Z] end 06-conditions-seed2-T1.0 rc=0
+[2026-09-30T18:50:48Z] stage 2 (conditions) end
+[2026-09-30T18:50:48Z] stage 3 (zones) start
+[2026-09-30T18:50:48Z] start 07-zones-seed0-T1.0 (GPU 0): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 0 --temperature 1.0 --device cuda --threads 4
+[2026-09-30T18:50:48Z] start 07-zones-seed0-T0.7 (GPU 3): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 0 --temperature 0.7 --device cuda --threads 4
+[2026-09-30T18:50:48Z] start 07-zones-seed1-T1.0 (GPU 1): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 1 --temperature 1.0 --device cuda --threads 4
+[2026-09-30T18:50:48Z] start 07-zones-seed1-T0.7 (GPU 4): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 1 --temperature 0.7 --device cuda --threads 4
+[2026-09-30T18:50:48Z] start 07-zones-seed2-T1.0 (GPU 2): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 2 --temperature 1.0 --device cuda --threads 4
+[2026-09-30T18:50:48Z] start 07-zones-seed2-T0.7 (GPU 5): /home/ubuntu/venv/bin/python 07-embed-zones.py --profile main --seed 2 --temperature 0.7 --device cuda --threads 4
+[2026-09-30T21:45:55Z] end 07-zones-seed0-T1.0 rc=0
+[2026-09-30T21:56:22Z] end 07-zones-seed2-T0.7 rc=0
+[2026-09-30T22:01:18Z] end 07-zones-seed2-T1.0 rc=0
+[2026-09-30T22:01:31Z] end 07-zones-seed1-T0.7 rc=0
+[2026-09-30T22:10:11Z] end 07-zones-seed1-T1.0 rc=0
+[2026-09-30T22:10:13Z] end 07-zones-seed0-T0.7 rc=0
+[2026-09-30T22:10:13Z] stage 3 (zones) end
+[2026-09-30T22:10:13Z] stage 4 (analysis) start
+[2026-09-30T22:10:13Z] start 08-analysis-seed0-T1.0 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 0 --temperature 1.0
+[2026-09-30T22:10:13Z] start 08-analysis-seed0-T0.7 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 0 --temperature 0.7
+[2026-09-30T22:10:13Z] start 08-analysis-seed1-T1.0 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 1 --temperature 1.0
+[2026-09-30T22:10:13Z] start 08-analysis-seed1-T0.7 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 1 --temperature 0.7
+[2026-09-30T22:10:13Z] start 08-analysis-seed2-T1.0 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 2 --temperature 1.0
+[2026-09-30T22:10:13Z] start 08-analysis-seed2-T0.7 (GPU -): /home/ubuntu/venv/bin/python 08-analysis.py --profile main --seed 2 --temperature 0.7
+[2026-09-30T22:12:47Z] end 08-analysis-seed0-T1.0 rc=0
+[2026-09-30T22:12:49Z] end 08-analysis-seed1-T0.7 rc=0
+[2026-09-30T22:12:53Z] end 08-analysis-seed2-T0.7 rc=0
+[2026-09-30T22:12:55Z] end 08-analysis-seed1-T1.0 rc=0
+[2026-09-30T22:12:55Z] end 08-analysis-seed0-T0.7 rc=0
+[2026-09-30T22:12:56Z] end 08-analysis-seed2-T1.0 rc=0
+[2026-09-30T22:12:56Z] stage 4 (analysis) end
+[2026-09-30T22:12:56Z] stage 5 (seeds) start
+[2026-09-30T22:12:56Z] start 09-seeds-T1.0 (GPU -): /home/ubuntu/venv/bin/python 09-seeds.py --profile main --seeds 0 1 2 --temperature 1.0
+[2026-09-30T22:12:56Z] start 09-seeds-T0.7 (GPU -): /home/ubuntu/venv/bin/python 09-seeds.py --profile main --seeds 0 1 2 --temperature 0.7
+[2026-09-30T22:12:56Z] end 09-seeds-T1.0 rc=0
+[2026-09-30T22:12:56Z] end 09-seeds-T0.7 rc=0
+[2026-09-30T22:12:56Z] stage 5 (seeds) end
+[2026-09-30T22:12:56Z] stage 6 (Monte Carlo rerun check) start
+[2026-09-30T22:12:57Z] seed 0 T=1.0: mc_rerun recommended=True; 256-sample zones stage took 10492s
+[2026-09-30T22:12:58Z] seed 0 T=0.7: mc_rerun recommended=True; 256-sample zones stage took 11959s
+[2026-09-30T22:12:59Z] seed 1 T=1.0: mc_rerun recommended=True; 256-sample zones stage took 11958s
+[2026-09-30T22:13:00Z] seed 1 T=0.7: mc_rerun recommended=True; 256-sample zones stage took 11437s
+[2026-09-30T22:13:00Z] seed 2 T=1.0: mc_rerun recommended=True; 256-sample zones stage took 11424s
+[2026-09-30T22:13:01Z] seed 2 T=0.7: mc_rerun recommended=True; 256-sample zones stage took 11126s
+[2026-09-30T22:13:01Z] NEEDS DECISION: the 1,024-sample rerun is recommended but would exceed two hours for: seed 0 T=1.0 (10492s at 256 samples) seed 0 T=0.7 (11959s at 256 samples) seed 1 T=1.0 (11958s at 256 samples) seed 1 T=0.7 (11437s at 256 samples) seed 2 T=1.0 (11424s at 256 samples) seed 2 T=0.7 (11126s at 256 samples)
+[2026-09-30T22:13:01Z] RUN STOPPED before those reruns (exit 3)
+EXIT=3

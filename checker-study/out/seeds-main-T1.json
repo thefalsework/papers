@@ -1,0 +1,131 @@
+{
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "n_seeds": 3,
+ "three_seeds": true,
+ "setting": {
+  "rule": "primary",
+  "d": 16
+ },
+ "H1": {
+  "diff_by_seed": {
+   "0": 0.001500689382698539,
+   "1": -0.006512935376429385,
+   "2": -0.011117873404370204
+  },
+  "same_direction": false,
+  "K1_fired_by_seed": {
+   "0": true,
+   "1": true,
+   "2": true
+  },
+  "verdict_agrees": true,
+  "status_by_seed": {
+   "0": "dead (K1)",
+   "1": "dead (K1)",
+   "2": "dead (K1)"
+  }
+ },
+ "H1m": {
+  "diff_by_seed": {
+   "0": 0.005622352083150793,
+   "1": -0.005890716598534619,
+   "2": -0.006235263955984188
+  },
+  "same_direction": false,
+  "K1m_fired_by_seed": {
+   "0": null,
+   "1": null,
+   "2": null
+  },
+  "reversed_by_seed": {
+   "0": null,
+   "1": null,
+   "2": null
+  },
+  "verdict_agrees": null
+ },
+ "H1_length_control": {
+  "robust_by_seed": {
+   "0": true,
+   "1": false,
+   "2": false
+  },
+  "agrees": false
+ },
+ "H2": {
+  "diff_descriptive_by_seed": {
+   "E1": {
+    "0": 0.0143774996866114,
+    "1": 0.02210398078303004,
+    "2": 0.012055314816200032
+   },
+   "E2": {
+    "0": 0.00019959013207100727,
+    "1": 0.007352707424832298,
+    "2": 0.002232979335480879
+   }
+  },
+  "same_direction": {
+   "E1": true,
+   "E2": true
+  },
+  "verdict_by_seed": {
+   "0": "embedding-dependent",
+   "1": "embedding-dependent",
+   "2": "dead"
+  },
+  "verdict_agrees": false
+ },
+ "H3": {
+  "crack_enrichment_minus_1_by_seed": {
+   "E1": {
+    "0": -0.9019293326348188,
+    "1": -0.8936118948904226,
+    "2": -0.9007493899026674
+   },
+   "E2": {
+    "0": -0.8349595287210095,
+    "1": -0.8542774708796094,
+    "2": -0.8470911193427119
+   }
+  },
+  "same_direction": {
+   "E1": true,
+   "E2": true
+  }
+ },
+ "gates": {
+  "K2_fired_by_seed": {
+   "0": false,
+   "1": false,
+   "2": false
+  },
+  "K_agree_fired_by_seed": {
+   "0": false,
+   "1": false,
+   "2": false
+  }
+ },
+ "mc_rerun_recommended_by_seed": {
+  "0": true,
+  "1": true,
+  "2": true
+ },
+ "claim_eligible": {
+  "K2_clear_in_every_seed": true,
+  "H1": false,
+  "H2": false
+ },
+ "ranAt": "2026-09-30T22:12:56.796348+00:00",
+ "profile": "main",
+ "temperature": 1.0,
+ "files": [
+  "analysis-main-seed0-T1.json",
+  "analysis-main-seed1-T1.json",
+  "analysis-main-seed2-T1.json"
+ ]
+}

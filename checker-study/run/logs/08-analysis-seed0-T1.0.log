@@ -1,0 +1,61 @@
+{
+  "setting": {
+    "rule": "primary",
+    "d": 16
+  },
+  "K2_fired": false,
+  "K_agree_fired": false,
+  "H1_status": "dead (K1)",
+  "K1_fired": true,
+  "H1_diff": 0.001500689382698539,
+  "H1_ci95": [
+    -0.026095696530584682,
+    0.02855039797263661
+  ],
+  "K1m_fired": null,
+  "H1m_reversed": null,
+  "H1m_diff": 0.005622352083150793,
+  "H1m_ci95": [
+    -0.004312720861091997,
+    0.0155712573343406
+  ],
+  "H1_length_control_robust": true,
+  "H2": {
+    "by_embedding": {
+      "E1": "survives",
+      "E2": "dead"
+    },
+    "H2": "embedding-dependent",
+    "K_H2_fired_by_embedding": {
+      "E1": false,
+      "E2": true
+    }
+  },
+  "n_prompts_H1": 969,
+  "n_prompts_H1m": 950,
+  "alternative_rule": {
+    "K1_fired": true,
+    "K1m_fired": null,
+    "H2": {
+      "by_embedding": {
+        "E1": "dead",
+        "E2": "dead"
+      },
+      "H2": "dead",
+      "K_H2_fired_by_embedding": {
+        "E1": true,
+        "E2": true
+      }
+    },
+    "H1_length_control_robust": false
+  },
+  "rule_dependent": {
+    "K1": false,
+    "K1m": null,
+    "H1_length_control_robust": true,
+    "H2": true,
+    "K2": false
+  }
+}
+{"n_mc_used": 256, "recommended": true, "reasons": ["K-H2 E1: C4 CI upper bound within 0.02 of C1's crack fraction", "K-H2 E2: C4 CI upper bound within 0.02 of C1's crack fraction"], "is_rerun": false}
+wrote /home/ubuntu/papers/checker-study/out/analysis-main-seed0-T1.json

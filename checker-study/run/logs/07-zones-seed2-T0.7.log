@@ -1,0 +1,8 @@
+E1 d=16 r_primary=2.335 r_alt=5.667
+E1 d= 8 r_primary=1.427 r_alt=3.403
+E1 d=32 r_primary=2.732 r_alt=6.714
+E2 d=16 r_primary=0.724 r_alt=1.975
+E2 d= 8 r_primary=0.330 r_alt=1.090
+E2 d=20 r_primary=0.718 r_alt=1.975
+{"k_check": {"certified": true, "terms": 2000, "crosscheck_ranAt": "2026-09-28T21:37:19.353279+00:00"}, "minimum_competence": {"certified": true, "c1_valid_rate": 0.9353046875, "threshold": 0.2, "n_samples": 128000, "n_valid": 119719}, "fingerprint_match": true, "train_eta_long_checked": 100000, "tertiles_from_full_heldout": true, "budget": {"prompts": 2000, "exhausted_root": 0, "total_draws": 1186264}} rows 174458
+wrote /home/ubuntu/papers/checker-study/out/zones-main-seed2-T0.7.json

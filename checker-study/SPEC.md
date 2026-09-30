@@ -639,3 +639,176 @@ main), stops on any job failure, logs placement and stage times, and
 runs the 1,024-sample rerun unasked only when it would take under two
 hours (four times a 256-sample zones stage of under 30 minutes),
 otherwise logging that the author's decision is needed and stopping.
+
+## Postscript 2026-09-30: Main-run results, and one deviation (the 1,024-sample rerun was not performed)
+
+Written on the rented machine after the main run finished, with every
+number read from the results files (`out/analysis-main-seed{0,1,2}-
+T{1,0.7}.json`, `out/seeds-main-T{1,0.7}.json`, `out/zones-main-*.json`,
+`out/conditions-main-*.json`, `models/main/seed*.log.json`). No
+hypothesis, kill, rule or threshold is changed. The last section
+records a deviation from the registered plan.
+
+**Run.** Code at `d29d19e` (`bc3d688` plus the runtime-only exception
+of the previous postscript). One machine: 8x NVIDIA A100-SXM4-80GB, 2x
+AMD EPYC 7J13 (240 cores), 1.77 TB RAM, Python 3.10.12, PyTorch
+2.14.0+cu130, NumPy 2.2.6, SciPy 1.15.3. Main corpus 100,000 / 5,000 /
+2,000 (corpus seed 20260928); 1,433 of the 5,000 held-out proofs are
+term-novel. Three models (seeds 0, 1, 2; 4,772,352 parameters), best
+validation loss 0.1808 / 0.1780 / 0.1823 at epochs 12 / 15 / 13, trained
+in 541 / 636 / 565 s. Six condition jobs (three seeds at T = 1.0, the
+registered temperature; three at T = 0.7, the registered sensitivity),
+one per GPU, 9,530 to 12,023 s each; the draw budget matched on
+2,000 of 2,000 prompts in every job (`budget_mismatch` 0,
+`c3_exhausted_root` 0). Zones with 256 Monte Carlo samples, 10,492 to
+11,959 s per job. Analysis with 10,000 bootstrap resamples over prompts.
+Wall clock 15:19:34Z to 22:13:01Z. Placement and stage logs are in
+`run/logs/`.
+
+**Gates** (main held-out set, 5,000 proofs, primary rule, d = 16; the
+radii depend only on the model, so T = 1.0 and T = 0.7 share them).
+
+| Seed | Held-out crack E1, primary / alt. | E2, primary / alt. | K2 | Kappa E1 vs E2 | K-agree |
+|---|---|---|---|---|---|
+| 0 | 0.193 / 0.097 | 0.179 / 0.086 | not fired | 0.383 | not fired |
+| 1 | 0.192 / 0.105 | 0.177 / 0.086 | not fired | 0.396 | not fired |
+| 2 | 0.161 / 0.105 | 0.178 / 0.086 | not fired | 0.389 | not fired |
+
+Competence: C1 valid rate 0.912 / 0.930 / 0.915 (T = 1.0) and 0.937 /
+0.949 / 0.935 (T = 0.7) of 128,000 samples per job; unparseable
+0.002 at T = 1.0 and 0.000 at T = 0.7. C1's valid outputs are
+term-novel in 25 to 27 percent of cases (29,605 / 116,717 for seed 0
+at T = 1.0; feasibility had 10.6 percent). Novel-only kappa is low, as
+`FEASIBILITY.md` anticipated: 0.10 to 0.16 on B-novel and 0.04 to 0.10
+on U2, U3 and U4.
+
+**H1 at T = 1.0** (primary rule, d = 16). Joint-exterior fraction of
+C3's novel outputs minus that of the term-novel held-out proofs
+(B-novel, n = 1,433), with the 95 percent bootstrap interval:
+
+| Seed | C3 novel (n prompts) | B-novel | Difference [95% CI] | K1 | H1 |
+|---|---|---|---|---|---|
+| 0 | 0.847 (969) | 0.846 | +0.002 [-0.026, +0.029] | fired | dead |
+| 1 | 0.823 (967) | 0.829 | -0.007 [-0.034, +0.022] | fired | dead |
+| 2 | 0.840 (979) | 0.851 | -0.011 [-0.039, +0.016] | fired | dead |
+
+`09-seeds`: K1 fired in every seed, verdicts agree, the sign of the
+difference does not (+, -, -), `claim_eligible.H1` false. The
+secondary descriptive against B over all 5,000 held-out proofs (joint
+exterior 0.380 / 0.383 / 0.381) is +0.467 [+0.443, +0.491], +0.440
+[+0.415, +0.465], +0.458 [+0.434, +0.482]: the restriction of B to
+term-novel proofs (postscript of 2026-09-29) decided the verdict, as
+its rationale said it should. K1m is null in every seed because K1
+fired; the matched H1m difference (C3 minus C2 on the same prompts,
+n = 950 / 958 / 965) is +0.006 [-0.004, +0.016], -0.006 [-0.016,
++0.004], -0.006 [-0.015, +0.002]. Length control: the small tertile
+(size <= 5) contains no novel C3 output and no novel held-out proof in
+any seed, so robustness rests on two bands; the difference is positive
+in both bands for seed 0 (+0.027, +0.004; robust) and in one band for
+seeds 1 (+0.070, -0.008) and 2 (+0.004, -0.005); `09` records
+`agrees` false.
+
+**H1 at T = 0.7.** Differences -0.002 [-0.030, +0.026], -0.003
+[-0.032, +0.025], -0.016 [-0.044, +0.011]; K1 fired in every seed, H1
+dead, all three negative (`same_direction` true), `claim_eligible.H1`
+false. H1m +0.007 [-0.004, +0.017], +0.002 [-0.009, +0.012], -0.003
+[-0.013, +0.005]. Length control robust in seed 1 only (bands +0.037,
++0.001; seed 0 +0.027, -0.000; seed 2 -0.014, -0.009).
+
+**H1 rule dependence.** Under the alternative rule K1 does not fire in
+four of the six jobs: T = 1.0 seed 2 (+0.0044 [+0.0010, +0.0081]) and
+T = 0.7 seeds 0, 1, 2 (+0.0087 [+0.0049, +0.0127], +0.0062 [+0.0025,
++0.0099], +0.0057 [+0.0023, +0.0094]); `rule_dependent.K1` is true
+there. The alternative rule leaves 0.0007 to 0.0035 of B-novel and
+0.0055 to 0.0101 of C3's novel outputs exterior, and was declared
+descriptive at feasibility (kappa 0.145 there; 0.097 to 0.106 crack
+here). It is reported, not used.
+
+**H1 sensitivity in d** (primary rule, T = 1.0). d = 8: -0.023
+[-0.053, +0.008], -0.020 [-0.051, +0.011], -0.034 [-0.065, -0.004];
+d = 32: +0.001 [-0.026, +0.028], +0.004 [-0.024, +0.033], -0.009
+[-0.036, +0.018]. K1 fires at every d in every seed and temperature;
+at d = 8 seed 2 the interval excludes zero on the negative side.
+
+**H2** (K-H2 on U4, C4's novel outputs; primary rule, d = 16). Crack
+fraction of C1's parsed outputs against C4's, with C4's interval and
+the descriptive difference:
+
+| T | Seed | E1: C1 / C4 [CI] | E2: C1 / C4 [CI] | Verdict |
+|---|---|---|---|---|
+| 1.0 | 0 | 0.072 / 0.058 [0.046, 0.071] | 0.026 / 0.026 [0.017, 0.034] | embedding-dependent (E1 survives, E2 dead) |
+| 1.0 | 1 | 0.086 / 0.064 [0.051, 0.077] | 0.031 / 0.024 [0.016, 0.032] | embedding-dependent (E1 survives, E2 dead) |
+| 1.0 | 2 | 0.067 / 0.054 [0.043, 0.067] | 0.029 / 0.027 [0.018, 0.036] | dead |
+| 0.7 | 0 | 0.075 / 0.059 [0.047, 0.072] | 0.032 / 0.025 [0.017, 0.034] | embedding-dependent (E1 survives, E2 dead) |
+| 0.7 | 1 | 0.090 / 0.067 [0.054, 0.081] | 0.029 / 0.023 [0.016, 0.032] | embedding-dependent (E1 survives, E2 dead) |
+| 0.7 | 2 | 0.069 / 0.053 [0.041, 0.065] | 0.034 / 0.023 [0.015, 0.031] | survives |
+
+Prompts entering H2: 991 / 991 / 999 (T = 1.0), 978 / 974 / 991
+(T = 0.7); none dropped for lack of a common tertile. `09-seeds`:
+verdicts do not agree across seeds at either temperature,
+`claim_eligible.H2` false. The descriptive difference C1 minus C4 is
+positive in every seed in both embeddings (E1 +0.014 / +0.022 /
++0.012 at T = 1.0, +0.016 / +0.022 / +0.016 at T = 0.7; E2 +0.000 /
++0.007 / +0.002 and +0.007 / +0.006 / +0.012). Under the alternative
+rule H2 is dead in both embeddings in all six jobs (`rule_dependent.H2`
+true wherever the primary verdict is not itself dead). The C4-all
+descriptive verdict is embedding-dependent in five jobs and dead in
+one (T = 1.0 seed 2). Sensitivity in d at T = 1.0: d = 8
+embedding-dependent / dead / dead, d = 32 embedding-dependent /
+survives / embedding-dependent.
+
+**H3** (descriptive; no kill). Invalid rate among parsed C1 outputs
+0.086 / 0.068 / 0.084 (T = 1.0), 0.063 / 0.050 / 0.064 (T = 0.7).
+Enrichment of invalid outputs by zone, primary rule, d = 16:
+
+| T | Seed | E1 inside / crack [CI] / exterior [CI] | E2 inside / crack [CI] / exterior [CI] |
+|---|---|---|---|
+| 1.0 | 0 | 0.011 / 0.098 [0.062, 0.142] / 1.896 [1.828, 1.970] | 0.103 / 0.165 [0.106, 0.246] / 1.827 [1.757, 1.901] |
+| 1.0 | 1 | 0.014 / 0.106 [0.076, 0.142] / 1.920 [1.850, 1.994] | 0.132 / 0.146 [0.086, 0.226] / 1.835 [1.757, 1.918] |
+| 1.0 | 2 | 0.016 / 0.099 [0.060, 0.148] / 1.923 [1.855, 1.999] | 0.062 / 0.153 [0.087, 0.239] / 1.861 [1.791, 1.933] |
+| 0.7 | 0 | 0.005 / 0.095 [0.050, 0.153] / 1.912 [1.841, 1.988] | 0.096 / 0.159 [0.077, 0.270] / 1.842 [1.763, 1.922] |
+| 0.7 | 1 | 0.009 / 0.070 [0.043, 0.103] / 1.947 [1.873, 2.024] | 0.134 / 0.120 [0.047, 0.222] / 1.857 [1.768, 1.950] |
+| 0.7 | 2 | 0.006 / 0.078 [0.038, 0.131] / 1.943 [1.871, 2.019] | 0.032 / 0.139 [0.051, 0.252] / 1.894 [1.818, 1.975] |
+
+Invalid outputs are depleted in the cracks (every crack interval lies
+below 1) and enriched in the exterior (every exterior interval lies
+above 1.7), in both embeddings, every seed and both temperatures. The
+registered expectation that exterior enrichment be at least as strong
+as crack enrichment holds; the hypothesis as worded (invalid outputs
+enriched in the cracks) does not.
+
+**Other zone fractions** (joint exterior, primary rule, d = 16,
+T = 1.0, seeds 0 / 1 / 2): U2 0.889 / 0.872 / 0.906, U3 0.903 / 0.880 /
+0.914, U4 0.936 / 0.927 / 0.942, C2-all 0.739 / 0.728 / 0.755, C4-all
+0.788 / 0.781 / 0.794, C1 parsed 0.393 / 0.386 / 0.394. The grammar
+null's novel outputs are more exterior than the checker-guided ones.
+
+**Run record.** C3 attempts that hit the cap and restarted: 10,828 /
+10,657 / 10,833 (T = 1.0), 10,623 / 10,501 / 10,710 (T = 0.7); C4
+shortfall 40 / 48 / 51 and 23 / 37 / 34 outputs per job, nearly all in
+the top tertile; C4 caps: `node_cap` 0, `list_cap` 27 to 31 prompts,
+`max_count` 353 to 377 prompts; tertile bounds 5.0 / 8.0 on the 5,000
+held-out proofs. Seed 0's E1 primary radius differs between the two
+temperature jobs in the seventh decimal (2.419725175 vs 2.419725624),
+which is GPU floating-point non-determinism in the E1 embedding; seeds
+1 and 2 agree to the last digit.
+
+**Deviation: the registered 1,024-sample rerun was not performed.**
+`08-analysis` recommends the 1,024-sample Monte Carlo rerun in all six
+jobs. In every job the only reason is the K-H2 trigger, in both
+embeddings: C4's crack interval has an upper bound within 0.02 of
+C1's crack fraction. No H1 trigger and no K2 trigger fired. All crack
+fractions in H2 lie below 0.09 and the widest C4 interval spans 0.027,
+so a 0.02 tolerance is met almost automatically at these magnitudes;
+the trigger was written for fractions near the feasibility values
+(0.2 to 0.3). Monte Carlo noise in the closing affects per-row labels,
+while H2's uncertainty is dominated by the prompt-level bootstrap
+variation the intervals report. H2 is in any case not claim-eligible:
+its verdicts disagree across seeds at both temperatures and across
+embeddings within five of six jobs. The 256-sample zones stage took
+10,492 to 11,959 s per job with six jobs sharing the machine; the rerun
+was estimated at 10 to 24 machine-hours, and the author decided not to
+run it for cost. This is a deviation from the registered plan, decided
+on 2026-09-30 after the 256-sample results had been seen. All results
+above are the 256-sample results, and any report of H2 must carry this
+note.

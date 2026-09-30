@@ -1,0 +1,20 @@
+params 4,772,352  block 96  train 98000  val 2000
+{'epoch': 0, 'train_loss': 0.9597, 'val_loss': 0.4971, 'secs': 32.5}
+{'epoch': 1, 'train_loss': 0.4263, 'val_loss': 0.3408, 'secs': 64.7}
+{'epoch': 2, 'train_loss': 0.3241, 'val_loss': 0.29, 'secs': 96.7}
+{'epoch': 3, 'train_loss': 0.2734, 'val_loss': 0.28, 'secs': 128.5}
+{'epoch': 4, 'train_loss': 0.2441, 'val_loss': 0.2669, 'secs': 160.0}
+{'epoch': 5, 'train_loss': 0.2236, 'val_loss': 0.2163, 'secs': 191.9}
+{'epoch': 6, 'train_loss': 0.2109, 'val_loss': 0.209, 'secs': 223.9}
+{'epoch': 7, 'train_loss': 0.2012, 'val_loss': 0.2124, 'secs': 255.7}
+{'epoch': 8, 'train_loss': 0.1936, 'val_loss': 0.2014, 'secs': 288.2}
+{'epoch': 9, 'train_loss': 0.187, 'val_loss': 0.1891, 'secs': 319.5}
+{'epoch': 10, 'train_loss': 0.1811, 'val_loss': 0.1852, 'secs': 351.1}
+{'epoch': 11, 'train_loss': 0.176, 'val_loss': 0.1892, 'secs': 383.0}
+{'epoch': 12, 'train_loss': 0.1714, 'val_loss': 0.1808, 'secs': 414.8}
+{'epoch': 13, 'train_loss': 0.1667, 'val_loss': 0.1874, 'secs': 446.4}
+{'epoch': 14, 'train_loss': 0.1622, 'val_loss': 0.1838, 'secs': 478.5}
+{'epoch': 15, 'train_loss': 0.1574, 'val_loss': 0.1842, 'secs': 509.8}
+{'epoch': 16, 'train_loss': 0.1529, 'val_loss': 0.1848, 'secs': 541.1}
+early stop
+best val 0.1808 saved /home/ubuntu/papers/checker-study/models/main/seed0.pt
