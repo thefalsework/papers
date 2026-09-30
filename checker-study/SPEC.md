@@ -550,3 +550,92 @@ H. **Monte Carlo rerun trigger** (review 15). "Narrowly" means a
    1,024 samples and report both.
 I. **C4 size bias** (review 11). Per-band C4-novel counts are reported
    against C2 counts.
+
+## Postscript 2026-09-30: Parallel nearest-neighbour queries in the zone model (runtime only)
+
+Written on the rented machine before any main-run zones exist (the main
+corpus is built and one training epoch was timed; no condition, zone or
+analysis file for the main profile exists). No hypothesis, kill, rule or
+threshold is changed. This is a performance exception to the freeze of
+`ipl/`, approved by the author, with the identity check below as its
+condition.
+
+**Change.** In `ipl/zones.py`, the two `cKDTree.query` calls
+(`ZoneModel.nn_dist` and `ZoneModel.train_nn_dist_loo`) receive
+`workers=-1`. Nothing else in that file or any other frozen file is
+changed. The Monte Carlo offsets, the random stream, the tree, the
+tolerance and the calibration procedure are untouched; `workers` only
+splits the query points across threads.
+
+**Reason.** Measured on this machine (main training set, 100,000
+points, 256 Monte Carlo samples per point): a single containment pass
+costs 31.9 / 4.0 / 76.0 ms per row in E1 at d = 16 / 8 / 32 and 35.6 /
+2.8 / 34.8 ms per row in E2 at d = 16 / 8 / 20 (the registered cap),
+185 ms per row summed over the six settings. With ~142,000 rows to
+label under two rules plus the 20-step calibration on 5,000 held-out
+rows, stage `07` would take about 20 hours per (seed, temperature) job
+on one core, and the registered 1,024-sample rerun four times that.
+The machine has 240 cores. With `workers=-1` the same work runs in
+minutes (see the runtime table in `run/identity-check-workers.txt`).
+
+**Identity check** (`run/identity-check-workers.txt`; scratch
+harness, not committed). The unmodified file and the modified file
+were run on identical saved embeddings, in the call order of
+`04-feasibility.py` / `07-embed-zones.py` (Reducer, ZoneModel with seed
+20260928 + d, held-out nearest distances, leave-one-out training
+distances, primary calibration, alternative calibration, labels under
+both rules), and their outputs (radii, every label, zone fractions,
+and SHA-256 of the nearest-distance arrays) compared as JSON bytes.
+
+(a) Feasibility corpus, all 1,000 held-out rows, E1 from the committed
+checkpoint on CPU, E2 structural, at every registered (embedding, d):
+**byte-identical in all six settings.**
+
+(b) Main corpus, 100,000 training points, first 1,000 held-out rows
+calibrated and labelled, E1 from an epoch-1 timing checkpoint (not a
+study model; the geometry is irrelevant to the identity test), E2
+structural, at every registered (embedding, d): **byte-identical in
+all six settings.** Runtimes, unmodified / modified, seconds: E1
+d = 16 581.5 / 16.5, d = 8 87.0 / 6.8, d = 32 1469.8 / 37.7; E2
+d = 16 868.9 / 16.0, d = 8 73.9 / 5.4, d = 20 862.2 / 17.6.
+
+**Cross-hardware comparison with the committed feasibility file**
+(`out/feasibility-seed0.json`, computed on the author's laptop). The
+unmodified code on this machine reproduces the laptop's values up to
+floating-point effects of the hardware and libraries, not of the
+change (the modified code gives the same bytes as the unmodified code
+here). Maximum differences per (embedding, d):
+
+| Setting | max abs. radius difference | held-out fractions (inside / crack / exterior), here vs committed |
+|---|---|---|
+| E1 d = 16 | 1.5e-6 | identical (0.203 / 0.302 / 0.495 primary; 0.914 / 0.086 / 0.000 alternative) |
+| E1 d = 8 | 2.4e-6 | identical |
+| E1 d = 32 | 4.0e-7 | identical |
+| E2 d = 8 | 4.9e-15 | identical |
+| E2 d = 16 | 1.8e-15 | one proof of 1,000 differs: primary 0.247 / 0.256 / 0.497 vs 0.247 / 0.257 / 0.496; alternative 0.880 / 0.101 / 0.019 vs 0.880 / 0.100 / 0.020 |
+| E2 d = 32 (capped at 20) | 1.1e-3 (primary; alternative 1.8e-15) | primary 0.214 / 0.285 / 0.501 vs 0.214 / 0.283 / 0.503; alternative 0.880 / 0.099 / 0.021 vs 0.880 / 0.101 / 0.019 |
+
+The E1 differences come from float32 hidden states computed by a
+different CPU and PyTorch build; the E2 d = 8 and d = 16 differences
+are the last bits of the PCA (LAPACK SVD), enough to move one
+boundary proof. The E2 d = 32 difference is larger for a known reason:
+E2 is rank-deficient (16 components explain 1.000 of the variance,
+recorded in `FEASIBILITY.md`), so components 17 to 20 span a numerical
+null space whose orientation is arbitrary and library-dependent, and
+coordinates along them are rounding noise that differs between
+machines. This affects only the d = 32 sensitivity setting, capped at
+20 as registered. No feasibility verdict changes: on this machine's
+labels the K2 crack fractions at d = 16 are E1 0.302 / 0.086 and E2
+0.256 / 0.101 (all above 0.05), K-agree kappa is 0.331 (committed
+0.330; threshold 0.2), and the joint exterior is 0.354 / 0.000
+(committed 0.354 / 0.000). The whole main run is computed on this one
+machine, so its results are internally consistent; the committed
+feasibility values stand as the record of the feasibility phase.
+
+**Orchestration.** The main run is driven by `run/run-main.sh`, a thin
+script that calls the frozen scripts in registered order with the
+registered arguments (seeds 0, 1, 2; temperatures 1.0 and 0.7; profile
+main), stops on any job failure, logs placement and stage times, and
+runs the 1,024-sample rerun unasked only when it would take under two
+hours (four times a 256-sample zones stage of under 30 minutes),
+otherwise logging that the author's decision is needed and stopping.

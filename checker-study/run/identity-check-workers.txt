@@ -1,0 +1,56 @@
+Identity check of the workers=-1 change in ipl/zones.py, 2026-09-30, this machine (2x AMD EPYC 7J13, 240 cores).
+Part (a): feasibility corpus (5,000 train / 1,000 held-out), E1 from models/feasibility/seed0.pt on CPU, E2 structural; all 1,000 held-out rows calibrated and labelled. Same call order as 04-feasibility.py.
+
+setting    orig==new (sha256 of JSON: radii, labels, fractions, nn-dist hashes)  
+E1 d=16  byte-identical=True  sha256 729bf61e0ef5 / 729bf61e0ef5
+           primary: r=3.029567229947195==3.029567229947195 labels_eq=True frac_eq=True alternative: r=5.734985541411297==5.734985541411297 labels_eq=True frac_eq=True
+           vs committed primary: r_here=3.029567229947195 r_committed=3.029567750259607 diff=-5.203e-07 fractions_here={'crack': 0.302, 'exterior': 0.495, 'inside': 0.203} committed={'inside': 0.203, 'crack': 0.302, 'exterior': 0.495} equal=True
+           vs committed alternative: r_here=5.734985541411297 r_committed=5.734987036744859 diff=-1.495e-06 fractions_here={'crack': 0.086, 'exterior': 0.0, 'inside': 0.914} committed={'inside': 0.914, 'crack': 0.086, 'exterior': 0.0} equal=True
+E1 d=8   byte-identical=True  sha256 3ca396ef2e94 / 3ca396ef2e94
+           primary: r=1.980291275946617==1.980291275946617 labels_eq=True frac_eq=True alternative: r=3.841319003534703==3.841319003534703 labels_eq=True frac_eq=True
+           vs committed primary: r_here=1.980291275946617 r_committed=1.9802907332489723 diff=+5.427e-07 fractions_here={'crack': 0.307, 'exterior': 0.499, 'inside': 0.194} committed={'inside': 0.194, 'crack': 0.307, 'exterior': 0.499} equal=True
+           vs committed alternative: r_here=3.841319003534703 r_committed=3.841321437446534 diff=-2.434e-06 fractions_here={'crack': 0.095, 'exterior': 0.005, 'inside': 0.9} committed={'inside': 0.9, 'crack': 0.095, 'exterior': 0.005} equal=True
+E1 d=32  byte-identical=True  sha256 f12fada96ede / f12fada96ede
+           primary: r=3.4012075612822734==3.4012075612822734 labels_eq=True frac_eq=True alternative: r=6.535659535164991==6.535659535164991 labels_eq=True frac_eq=True
+           vs committed primary: r_here=3.4012075612822734 r_committed=3.4012079426467556 diff=-3.814e-07 fractions_here={'crack': 0.305, 'exterior': 0.5, 'inside': 0.195} committed={'inside': 0.195, 'crack': 0.305, 'exterior': 0.5} equal=True
+           vs committed alternative: r_here=6.535659535164991 r_committed=6.535659130873271 diff=+4.043e-07 fractions_here={'crack': 0.101, 'exterior': 0.0, 'inside': 0.899} committed={'inside': 0.899, 'crack': 0.101, 'exterior': 0.0} equal=True
+E2 d=16  byte-identical=True  sha256 90aa7ebff732 / 90aa7ebff732
+           primary: r=1.0377042351302268==1.0377042351302268 labels_eq=True frac_eq=True alternative: r=2.6454036389191233==2.6454036389191233 labels_eq=True frac_eq=True
+           vs committed primary: r_here=1.0377042351302268 r_committed=1.0377042351302272 diff=-4.441e-16 fractions_here={'crack': 0.256, 'exterior': 0.497, 'inside': 0.247} committed={'inside': 0.247, 'crack': 0.257, 'exterior': 0.496} equal=False
+           vs committed alternative: r_here=2.6454036389191233 r_committed=2.645403638919125 diff=-1.776e-15 fractions_here={'crack': 0.101, 'exterior': 0.019, 'inside': 0.88} committed={'inside': 0.88, 'crack': 0.1, 'exterior': 0.02} equal=False
+E2 d=8   byte-identical=True  sha256 03a8da9537f5 / 03a8da9537f5
+           primary: r=0.5841017122105967==0.5841017122105967 labels_eq=True frac_eq=True alternative: r=1.740482619587017==1.740482619587017 labels_eq=True frac_eq=True
+           vs committed primary: r_here=0.5841017122105967 r_committed=0.5841017122105969 diff=-2.220e-16 fractions_here={'crack': 0.168, 'exterior': 0.502, 'inside': 0.33} committed={'inside': 0.33, 'crack': 0.168, 'exterior': 0.502} equal=True
+           vs committed alternative: r_here=1.740482619587017 r_committed=1.740482619587022 diff=-4.885e-15 fractions_here={'crack': 0.075, 'exterior': 0.027, 'inside': 0.898} committed={'inside': 0.898, 'crack': 0.075, 'exterior': 0.027} equal=True
+E2 d=32  byte-identical=True  sha256 3a4c19f90e35 / 3a4c19f90e35
+           primary: r=1.027618511474687==1.027618511474687 labels_eq=True frac_eq=True alternative: r=2.6454036389191233==2.6454036389191233 labels_eq=True frac_eq=True
+           vs committed primary: r_here=1.027618511474687 r_committed=1.0265435967137302 diff=+1.075e-03 fractions_here={'crack': 0.285, 'exterior': 0.501, 'inside': 0.214} committed={'inside': 0.214, 'crack': 0.283, 'exterior': 0.503} equal=False
+           vs committed alternative: r_here=2.6454036389191233 r_committed=2.645403638919125 diff=-1.776e-15 fractions_here={'crack': 0.099, 'exterior': 0.021, 'inside': 0.88} committed={'inside': 0.88, 'crack': 0.101, 'exterior': 0.019} equal=False
+ALL orig==new byte-identical: True
+
+Part (b): main corpus (100,000 train), first 1,000 held-out rows calibrated and labelled; E1 from an epoch-1 timing checkpoint (not a study model), E2 structural.
+
+setting    orig==new (sha256 of JSON: radii, labels, fractions, nn-dist hashes)  
+E1 d=16  byte-identical=True  sha256 38a698b63a6b / 38a698b63a6b
+           primary: r=2.69982226929735==2.69982226929735 labels_eq=True frac_eq=True alternative: r=5.455016311479188==5.455016311479188 labels_eq=True frac_eq=True
+E1 d=8   byte-identical=True  sha256 1570cc0c1c2d / 1570cc0c1c2d
+           primary: r=1.6822134347312074==1.6822134347312074 labels_eq=True frac_eq=True alternative: r=3.4900639060505==3.4900639060505 labels_eq=True frac_eq=True
+E1 d=32  byte-identical=True  sha256 49772ffb7dbd / 49772ffb7dbd
+           primary: r=2.9426260048293553==2.9426260048293553 labels_eq=True frac_eq=True alternative: r=6.128729881724175==6.128729881724175 labels_eq=True frac_eq=True
+E2 d=16  byte-identical=True  sha256 1f066d918091 / 1f066d918091
+           primary: r=0.7200361255634053==0.7200361255634053 labels_eq=True frac_eq=True alternative: r=1.9747765853059573==1.9747765853059573 labels_eq=True frac_eq=True
+E2 d=8   byte-identical=True  sha256 91805039319f / 91805039319f
+           primary: r=0.33233664487525205==0.33233664487525205 labels_eq=True frac_eq=True alternative: r=1.0904812424398087==1.0904812424398087 labels_eq=True frac_eq=True
+E2 d=32  byte-identical=True  sha256 93f1cf8e3a0a / 93f1cf8e3a0a
+           primary: r=0.7127341186670249==0.7127341186670249 labels_eq=True frac_eq=True alternative: r=1.9747765853059573==1.9747765853059573 labels_eq=True frac_eq=True
+ALL orig==new byte-identical: True
+
+Runtime in seconds, unmodified / modified (main corpus, 22 containment passes over 1,000 rows plus LOO on 100k):
+E1 d=16     581.5     16.5
+E1 d=8       87.0      6.8
+E1 d=32    1469.8     37.7
+E2 d=16     868.9     16.0
+E2 d=8       73.9      5.4
+E2 d=32     862.2     17.6
+
+Feasibility K-agree recomputed from this machine's d=16 labels: kappa primary 0.331239 (committed 0.3298496), alternative 0.144358 (committed 0.1447509); joint exterior 0.354 / 0.000 (committed 0.354 / 0.000).

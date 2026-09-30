@@ -57,11 +57,11 @@ class ZoneModel:
         self.d = train_reduced.shape[1]
 
     def nn_dist(self, P: np.ndarray) -> np.ndarray:
-        return self.tree.query(P, k=1)[0]
+        return self.tree.query(P, k=1, workers=-1)[0]
 
     def train_nn_dist_loo(self) -> np.ndarray:
         """Leave-one-out nearest-neighbour distance within the training set."""
-        return self.tree.query(self.train, k=2)[0][:, 1]
+        return self.tree.query(self.train, k=2, workers=-1)[0][:, 1]
 
     # Relative tolerance on the 2r test. A point within r of a training point
     # has every point of its r-ball within 2r by the triangle inequality, but
