@@ -642,6 +642,26 @@ each) regenerate from the registered seeds and are archived off the
 repo. Next: the paper's results section from the postscript; the
 instance is terminated after the archive is pulled.
 
+CHECKER STUDY WRITTEN UP (2026-10-05). checker-study/README.md is the
+report: verdict first (H1 dead K1 in 3/3 seeds at both temperatures;
+H1m null; H2 not claim-eligible; H3 inverted, descriptive; gates clear;
+the un-run 1,024-sample rerun carried as a deviation), then what was
+run, gates, H1 / H1m / H2 / H3 tables, other descriptives (zone
+fractions by condition, Z_U, novel-only kappa, run record), the
+deviation, a short [A]-tagged reading, files, reproduction. Every number
+re-read from out/analysis-main-*.json, out/seeds-main-*.json and
+models/main/seed*.log.json for the writeup, not copied from the
+postscript; all agree with the 2026-09-30 postscript. Framing: the
+B-novel restriction (postscript 2026-09-29) is named as the study's
+central result — against B-all the H1 difference is +0.44 to +0.47, so
+the registered-before-data restriction is what separated a null from a
+45-point artefact. Reading section records that the spec's [A] reading
+(checker crosses unforced ground; crack = remainder = hallucination
+locus) is what H1 would have confirmed and H3 would have located, and
+neither did; scope limited to one 4.8M model in propositional logic;
+Lean spine untouched. Archive copied from the cloud machine and verified
+against MANIFEST.sha256 (af2af5c, ignored in git).
+
 WOLFRAM-EXPERIMENT PROPOSAL, TEMPERED SHAPE (2026-09-24, after two
 rounds of external review of chat drafts; nothing hot reached the
 record — verified by grep). The one genuinely Wolfram-substantive
