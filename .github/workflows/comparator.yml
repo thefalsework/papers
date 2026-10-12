@@ -24,6 +24,14 @@ env:
   # lean4export publishes no v4.30.0-rc2 tag; v4.30.0 (same release, stable)
   # is the nearest compatible export version for our pinned toolchain.
   LEAN4EXPORT_TAG: v4.30.0
+  # landrun was previously built from an unpinned `main`. The last passing
+  # run (2026-07-13, 73173a3) used main as of f59e83d (2026-01-27); every run
+  # after the tools cache expired (first failure 2026-07-29) built a main
+  # that had moved on 2026-07-22 (go-landlock v0.9.0 / Landlock ABI v9,
+  # FS-only ruleset changes, ELF resolution changes). Pin to the known-good
+  # commit; bump CACHE_KEY_SUFFIX when any tool pin changes.
+  LANDRUN_COMMIT: f59e83dbb4fd0af584dec5091168d0b35c8410b7
+  CACHE_KEY_SUFFIX: v2
 
 jobs:
   comparator:
@@ -51,14 +59,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: tools
-          key: comparator-tools-${{ steps.toolchain.outputs.version }}-v1
+          key: comparator-tools-${{ steps.toolchain.outputs.version }}-${{ env.CACHE_KEY_SUFFIX }}
 
       - name: Build landrun
         if: steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           mkdir -p tools
-          git clone --depth 1 https://github.com/Zouuup/landrun.git tools/landrun-src
-          cd tools/landrun-src && go build -o ../landrun-bin/landrun cmd/landrun/main.go
+          git clone https://github.com/Zouuup/landrun.git tools/landrun-src
+          cd tools/landrun-src
+          git checkout "$LANDRUN_COMMIT"
+          go build -o ../landrun-bin/landrun cmd/landrun/main.go
 
       - name: Build lean4export (nearest tag, pinned project toolchain)
         if: steps.cache-tools.outputs.cache-hit != 'true'
