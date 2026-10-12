@@ -113,4 +113,27 @@ jobs:
         working-directory: lean
         run: |
           export PATH="$PATH:$GITHUB_WORKSPACE/tools/landrun-bin:$GITHUB_WORKSPACE/tools/lean4export/.lake/build/bin:$GITHUB_WORKSPACE/tools/comparator/.lake/build/bin"
-          lake env comparator config.json
+          set +e
+          lake env comparator config.json > comparator.log 2>&1
+          rc=$?
+          set -e
+          # Publish the verdict and environment to the job summary so the
+          # result is readable from the run page without log access.
+          {
+            echo "## comparator: exit $rc"
+            echo
+            echo '```'
+            echo "kernel: $(uname -r)"
+            echo "landrun: $(command -v landrun) ($(landrun --version 2>&1 | head -n1))"
+            echo "lean4export: $(command -v lean4export)"
+            echo "comparator: $(command -v comparator)"
+            echo "lean: $(lean --version)"
+            echo '```'
+            echo
+            echo '### output (last 6000 bytes)'
+            echo '```'
+            tail -c 6000 comparator.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat comparator.log
+          exit $rc
