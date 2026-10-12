@@ -108,6 +108,7 @@ jobs:
           lake build
           lake build Challenge
           lake build Solution
+          lake build ChallengeChecks
 
       - name: Run comparator
         working-directory: lean
@@ -136,4 +137,13 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           cat comparator.log
+          # Also surface the tail as check-run annotations: unlike logs and
+          # the step summary, annotations are readable on the public run page
+          # and via the unauthenticated REST API.
+          esc() { sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g'; }
+          echo "::notice title=comparator environment::kernel $(uname -r); landrun $(landrun --version 2>&1 | head -n1); lean $(lean --version)"
+          if [ "$rc" -ne 0 ]; then
+            echo "::error title=comparator exit $rc (log tail 1/2)::$(tail -c 6000 comparator.log | head -c 3000 | esc)"
+            echo "::error title=comparator exit $rc (log tail 2/2)::$(tail -c 3000 comparator.log | esc)"
+          fi
           exit $rc

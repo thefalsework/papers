@@ -172,27 +172,33 @@ fidelity:
   divergences: >-
     (1) ordinary_forces_card_ge_six adds [Fintype H]; the paper's Theorem 4.1
     states |H| >= 6 for any H, which for infinite H is carried by the
-    embedding theorem. (2) ordinary_gives_z6_embedding asserts existence of
-    an order-embedding Fin 3 x Fin 2 -> H; the paper's Theorem 4.2 exhibits
-    the specific map bot, g, not g, not not g, g or not g, top. The library
-    theorem div12OrderEmbedding is that map; the challenge statement is the
-    weaker existential. (3) twelve_unique_kernel is stated on Fin 3 x Fin 2
+    embedding theorem. (2) twelve_unique_kernel is stated on Fin 3 x Fin 2
     with Mathlib's product Heyting structure, not on the literal divisor
     lattice of 12; the order-isomorphism Div12 = Fin 3 x Fin 2 is
     kernel-checked in the library (div12OrderIsoChains) but is not part of
-    the challenge statement. (4) OrdinaryElement is the two-clause form
-    (not not a != a, not a != bot); the paper's section 2.1 uses the
-    three-clause form with a != bot added. The forms are equivalent (a = bot
-    is regular); the equivalence is checked in lean/.scratch_challenge_checks.lean.
-    (5) FourRegionsInhabited lists the regions in the order I, D, E, R
-    rather than the paper's I, R, E, D. (6) rnLadder's rung indexing follows
-    the paper's section 2.2; indexing conventions in the literature differ
-    and no rung-by-rung correspondence with Nishimura 1960 is claimed.
+    the challenge statement, because Mathlib has no Heyting structure on
+    the divisors of 12 to state it against. (3) OrdinaryElement is the
+    two-clause form (not not a != a, not a != bot); the paper's section 2.1
+    uses the three-clause form with a != bot added. The forms are equivalent
+    (a = bot is regular); the equivalence is kernel-checked in
+    lean/ChallengeChecks.lean (ordinaryElement_iff_three_clause). (4)
+    FourRegionsInhabited lists the regions in the order I, D, E, R rather
+    than the paper's I, R, E, D. (5) rnLadder's rung indexing follows the
+    paper's section 2.2; indexing conventions in the literature differ and
+    no rung-by-rung correspondence with Nishimura 1960 is claimed; the
+    challenge's normal-form statement is indexing-independent because
+    lean/ChallengeChecks.lean (rnLadder_generated) checks the converse
+    inclusion, making it a two-sided characterization of the generated set.
+    Closed 2026-10-12: ordinary_gives_z6_embedding was previously the
+    existential "some order-embedding Fin 3 x Fin 2 -> H exists"; it now
+    states that the paper's explicit map z6Landmarks g (bot, g, not g,
+    not not g, g or not g, top, in divisor order 1, 2, 3, 4, 6, 12)
+    preserves and reflects order, matching Theorem 4.2.
 
 review:
   status: agent-reviewed
   reviewers:
-    - "Chris Brink (human author; not a Lean reader): review of challenge statements against the paper's prose, not of proofs"
+    - "Chris Brink (human author; not a Lean reader): compared each challenge statement to the paper's theorem wording using an agent-prepared side-by-side, with the deviations disclosed under fidelity.divergences; did not review proofs"
     - "Independent AI model (cross-model pre-audit, 2026-07-12): OrdinaryElement vs Citkin's definition, redundancy of the compl constructor, non-bot guards in FourRegionsInhabited, rnLadder rungs 5-6"
   notes: >-
     No human Lean expert has reviewed the challenge statements. External
@@ -200,11 +206,16 @@ review:
     remains open. Comparator certifies that Solution proves the exact
     Challenge statements with the three standard axioms; it cannot certify
     that Challenge.lean says what the paper says. That gap is the one this
-    record is honest about. 2026-10-12: the human author re-read all six
-    challenge statements against the paper's theorem wording (side-by-side
-    with the paper's Theorems 3.2, 5.1, 5.2, 4.1, 4.2, 8.1(4)) and certified
-    them as stated, with the three weakenings listed under
-    fidelity.divergences (1)-(3) accepted as disclosed. Axioms re-audited
+    record is honest about. 2026-10-12: the human author, who does not read
+    Lean, compared each of the six challenge statements to the paper's
+    theorem wording (Theorems 3.2, 5.1, 5.2, 4.1, 4.2, 8.1(4)) using a
+    side-by-side prepared by the agent, which also stated the deviations;
+    the deviations are recorded under fidelity.divergences. Of the three
+    weakenings found, the Z6 embedding (Theorem 4.2) was closed the same
+    day by restating it on the paper's explicit map; the finite-only
+    cardinality bound (1) and the Fin 3 x Fin 2 domain (2) stand as
+    disclosed. The equivalences the review relied on are kernel-checked in
+    lean/ChallengeChecks.lean, built in CI. Axioms re-audited
     the same day with #print axioms against a fresh build: as listed per
     result above; no sorryAx, no Lean.ofReduceBool. CI status: the
     comparator workflow passed at 73173a3 (2026-07-13) and failed at the
@@ -246,7 +257,7 @@ alignment:
       lean: FalseWork.Lattice.div12OrderEmbedding
       module: lean/FalseWorkPapers/Examples/LadderCore.lean
       status: proved
-      note: "axioms: propext; challenge name ordinary_gives_z6_embedding (existential form)"
+      note: "axioms: propext; challenge name ordinary_gives_z6_embedding (explicit map z6Landmarks, order preserved and reflected)"
     - source: "Thm 5.1 Nishimura normal form"
       lean: FalseWork.Lattice.generatedBy_isLadderValue
       module: lean/FalseWorkPapers/Examples/NishimuraNormalForm.lean
@@ -332,7 +343,7 @@ verification:
   native_decide_in_scope: false
   audit_lines: lean/FalseWorkPapers/Examples/HeytingTypeInstance.lean
   last_passing_comparator_run: "2026-07-13, commit 73173a3"
-  statement_checks: lean/.scratch_challenge_checks.lean
+  statement_checks: lean/ChallengeChecks.lean  # lean_lib ChallengeChecks, built in CI
 
 # The files whose contents the claims above cover (the paper's section-10
 # audit table). Two files elsewhere under lean/FalseWorkPapers/Examples/

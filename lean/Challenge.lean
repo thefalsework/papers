@@ -96,13 +96,27 @@ theorem ordinary_forces_card_ge_six [Fintype H] {g : H} (hg : OrdinaryElement g)
     6 ≤ Fintype.card H := by
   sorry
 
-/-- **The Z₆ order-embedding.** Any Heyting algebra containing an ordinary
-element admits an order-embedding of the six-element lattice `Fin 3 × Fin 2`
-(the product of a three-chain and a two-chain under the componentwise order —
+/-- The paper's six landmarks `⊥, g, ¬g, ¬¬g, g ∨ ¬g, ⊤`, indexed by the points
+of `Fin 3 × Fin 2` read as (2-adic valuation, 3-adic valuation) of a divisor
+of 12: `(0,0) ↦ ⊥` (divisor 1), `(1,0) ↦ g` (2), `(0,1) ↦ gᶜ` (3),
+`(2,0) ↦ gᶜᶜ` (4), `(1,1) ↦ g ⊔ gᶜ` (6), `(2,1) ↦ ⊤` (12). -/
+def z6Landmarks (g : H) : Fin 3 × Fin 2 → H
+  | (⟨0, _⟩, ⟨0, _⟩) => ⊥
+  | (⟨1, _⟩, ⟨0, _⟩) => g
+  | (⟨0, _⟩, ⟨1, _⟩) => gᶜ
+  | (⟨2, _⟩, ⟨0, _⟩) => gᶜᶜ
+  | (⟨1, _⟩, ⟨1, _⟩) => g ⊔ gᶜ
+  | (⟨2, _⟩, ⟨1, _⟩) => ⊤
+
+/-- **The Z₆ order-embedding.** For any ordinary element `g` of a Heyting
+algebra, the explicit assignment `z6Landmarks g` of the six landmarks
+`⊥, g, ¬g, ¬¬g, g ∨ ¬g, ⊤` to the six-element lattice `Fin 3 × Fin 2` (the
+product of a three-chain and a two-chain under the componentwise order —
 equivalently, the divisor lattice of 12, or the one-generated Heyting algebra
-Z₆). -/
+Z₆) both preserves and reflects order; in particular it is an order-embedding
+and the six landmarks are pairwise distinct. -/
 theorem ordinary_gives_z6_embedding {g : H} (hg : OrdinaryElement g) :
-    Nonempty ((Fin 3 × Fin 2) ↪o H) := by
+    ∀ p q : Fin 3 × Fin 2, z6Landmarks g p ≤ z6Landmarks g q ↔ p ≤ q := by
   sorry
 
 /-- **The arithmetic instance at n = 12.** In the divisor lattice of 12 —
