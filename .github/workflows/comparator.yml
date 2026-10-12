@@ -25,13 +25,19 @@ env:
   # is the nearest compatible export version for our pinned toolchain.
   LEAN4EXPORT_TAG: v4.30.0
   # landrun was previously built from an unpinned `main`. The last passing
-  # run (2026-07-13, 73173a3) used main as of f59e83d (2026-01-27); every run
-  # after the tools cache expired (first failure 2026-07-29) built a main
-  # that had moved on 2026-07-22 (go-landlock v0.9.0 / Landlock ABI v9,
-  # FS-only ruleset changes, ELF resolution changes). Pin to the known-good
-  # commit; bump CACHE_KEY_SUFFIX when any tool pin changes.
-  LANDRUN_COMMIT: f59e83dbb4fd0af584dec5091168d0b35c8410b7
-  CACHE_KEY_SUFFIX: v2
+  # run (2026-07-13, 73173a3) built main as of 5ed4a3d (2025-10-01,
+  # v0.1.15+15, urfave/cli v2). On 2026-07-22 landrun merged PR #50, which
+  # upgraded to urfave/cli v3; v3's parser drops a bare "--" from the
+  # positional args, and comparator invokes `landrun ... lean4export <module>
+  # -- <decl>...`, so every run after the tools cache expired (first failure
+  # 2026-07-29) had lean4export read the declaration names as module names
+  # ("unknown module prefix 'four_regions_iff_ordinary'"). landrun main still
+  # has this behaviour (2026-10-12). Pin to the last urfave/cli v2 commit;
+  # bump CACHE_KEY_SUFFIX when any tool pin changes.
+  # (An earlier pin, f59e83d, was a PR #50 commit misread as main's tip and
+  # already carried urfave/cli v3: same failure.)
+  LANDRUN_COMMIT: 5ed4a3db3a4ad930d577215c6b9abaa19df7f99f
+  CACHE_KEY_SUFFIX: v3
 
 jobs:
   comparator:
