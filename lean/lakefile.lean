@@ -36,3 +36,10 @@ lean_lib «Challenge» where
 exact statements of `Challenge.lean`. -/
 lean_lib «Solution» where
   -- Single root module `Solution.lean`.
+
+/-- Kernel-checked sanity lemmas behind the human statement-matches-paper
+review of `Challenge.lean` (imports `Challenge` only). Not part of the
+comparator config; built in CI so the review's supporting equivalences are
+checked rather than asserted. -/
+lean_lib «ChallengeChecks» where
+  -- Single root module `ChallengeChecks.lean`.
