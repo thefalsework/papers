@@ -30,6 +30,7 @@ import FalseWorkPapers.Lattice.ApertureClosedForm
 import FalseWorkPapers.Lattice.ApertureClosedFormPi
 import FalseWorkPapers.Examples.ApertureAnchors
 import FalseWorkPapers.Examples.PerceptronRegular
+import FalseWorkPapers.Examples.PerceptronXor
 import FalseWorkPapers.Lattice.CoApertureClosedForm
 import FalseWorkPapers.Lattice.SecondLaw
 import FalseWorkPapers.Lattice.CapacityThreshold

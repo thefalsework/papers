@@ -2,7 +2,7 @@
 
 **Chris Brink**
 github.com/thefalsework/papers
-**Version.** Preprint v1.1, September 2026 — not yet submitted. (v1.1 corrects §7's instrument note: ε-closing is the estimator of the ¬¬-residual, not itself a nucleus; dated erratum in place. No result changes.)
+**Version.** Preprint v1.2, October 2026 — not yet submitted. (v1.2 adds Theorem 5.6, kernel-checked: the XOR region is regular, so Minsky–Papert's separability line and this note's regularity line are distinct; introduction and §5 updated, no prior result changes. v1.1 corrected §7's instrument note: ε-closing is the estimator of the ¬¬-residual, not itself a nucleus; dated erratum in place.)
 **Status discipline.** Every claim carries one of five grades: **[K]** kernel-checked in Lean 4 against Mathlib4 (no `sorry`, no `native_decide`, axiom audits at most `propext`, `Classical.choice`, `Quot.sound`); **[C]** classical mathematics, cited; **[R]** empirical result from a pre-registered protocol (spec and kill conditions committed before code, dated postscripts binding); **[A]** structural analogy, argued not proved; **[O]** open. The grades are load-bearing: nothing below claims more than its tag.
 
 ---
@@ -20,6 +20,8 @@ Levin (2026a, 2026b) identifies a phase transition in the epistemic character of
 This note supplies an exact algebraic counterpart to the transition, at the level of the devices themselves. The observation that makes it possible is trivial to state: a threshold unit's decision region {x : w·x > θ} is an open set, and the open sets of any topological space form a complete Heyting algebra (a frame) **[C]**. Threshold devices are therefore *elements* of the structures in which intuitionistic logic is interpreted, and questions about their logical character become computations, checkable in a proof kernel, rather than readings.
 
 The computations land as follows. A single unit is a **regular** element — its double negation is itself — and regular elements are exactly the ones around which this program's four-position partition is degenerate (§2). The lone perceptron is classical, and this is now a theorem with a mechanism: the unit's only undecidable locus is its own decision boundary, and double negation is precisely the operator that erases boundaries. Composing units changes the answer. The region (0,1) ∪ (1,2) — two same-class cells built from four units with lattice meets and joins, glued along an excluded wall — is **ordinary** in Citkin's sense: neither regular nor dense. Around it the four-position partition is non-degenerate, and its double-negation remainder is exactly the wall {1}: a set the healed region treats as interior, invisible to every classical (Boolean) reduction of the algebra. What ends at Levin's threshold, on this reading, is not logic but *Booleanness*; the logic of what remains is the intuitionistic logic of open regions, where excluded middle fails exactly at boundaries.
+
+A reader who knows the history of the perceptron will expect the story to be the XOR story: Rosenblatt's unit (1958), Novikoff's convergence theorem (1962), and the Minsky–Papert (1969) proof that no single unit computes exclusive-or, the result usually credited with helping to end the first wave of neural-network research. It is not that story, and the difference is a theorem. The XOR region in the plane, {(x,y) : xy < 0}, is the union of two opposite open quadrants; its closure adds the axes and the interior removes them again, because every point of either axis is adjacent to a quadrant where xy > 0. So ¬¬(XOR) = XOR: **the canonical function a single perceptron cannot compute is a regular element** (Theorem 5.6, kernel-checked). Two different lines are therefore drawn at depth two. Minsky and Papert's line is linear separability, what one unit can compute, and XOR falls on its far side. The line of this note is regularity, whether the region is classical, and XOR falls on its near side. Every half-space is regular, so separability implies regularity; the converse fails, with XOR as witness. Composition is *necessary* for non-classicality (every single unit is regular, §4) but not *sufficient*: what makes (0,1) ∪ (1,2) ordinary is not that it needs two layers but that it has a **seam**, a piece of boundary with the region on both sides and nothing else. XOR's boundary has an outside quadrant on one side of every axis point; the wall at x = 1 does not. The pilot in §7 finds this same distinction in trained networks, where seams of the second kind turn out to be non-generic.
 
 The remainder invites a quantitative question. Sections 5–6 develop the measure — phantom mass under one observer, the co-aperture as the total over all observers, with closed forms and an independence theorem, all kernel-checked — and §7 reports a pre-registered empirical pilot on the question the theorems raise but cannot answer: whether *trained* networks carry substantial phantom mass at scales that matter. The answer is negative, by the registered kill condition, with a mechanism (the phantom of trained ReLU nets concentrates at codimension-2 corners of the linear-region complex) and two surviving positive findings. We consider the negative result, obtained under a registered protocol with the case against written first, to be the most useful contribution of the note: it replaces an open speculation — flagged as open in the correspondence that motivated this work — with a checked answer.
 
@@ -77,6 +79,16 @@ i.e. (0,1) ∪ (1,2): two same-class cells glued along an excluded wall at x = 1
 
 Theorem 5.4 is the seam made exact. The point 1 is not in the region, but the region's regularization confidently includes it; it is undecidable from inside (any neighborhood of 1 meets both the region and its boundary structure) and invisible to every Boolean reduction (the regular elements of Opens ℝ, which form the classical shadow of the algebra, cannot separate composed from its healing). In Levin's vocabulary this is the algebraic form of manifold-membership undecidability — the hallucination locus — now located, for one worked device, at a specific point by a kernel-checked computation. We flag the interpretive step with its own grade: the identification of the ¬¬-remainder with Levin's hallucination mechanism is **[A]**; the geometry and algebra above it are **[K]**.
 
+**Minsky–Papert's line is not this line.** Composition was necessary to produce an ordinary element, since every single unit is regular. It is not sufficient, and the classic two-layer function shows it.
+
+**Definition 5.5 [K] (`xorRegion`).** The XOR region is the open set {(x,y) ∈ ℝ² : xy < 0} in Opens (ℝ × ℝ): exactly one of x > 0, y > 0, the union of the second and fourth open quadrants.
+
+**Theorem 5.6 [K] (`xorRegion_regular`, `xorRegion_not_dense`, `xorRegion_not_ordinary`, `xorRegion_seam`).** XOR is a **regular** element: ¬¬(XOR) = XOR. It is not dense (¬(XOR) contains the quadrants where xy > 0), hence not ordinary, so the four-position partition around it is degenerate; and its ¬¬-remainder is empty.
+
+*Proof.* cl(XOR) ⊆ {xy ≤ 0} by continuity of the product. For the interior: a point of {xy ≤ 0} not in XOR lies on an axis, say (0, b); the point (ε/2, b + ε/2) if b ≥ 0, or (−ε/2, b − ε/2) if b < 0, lies within ε of it and has positive product, so no neighborhood of an axis point is inside {xy ≤ 0}. Thus int(cl XOR) ⊆ XOR, and the reverse inclusion is the inflationarity of ¬¬. ∎
+
+The contrast with Theorem 5.4 is the general criterion in miniature. An open set is regular iff no piece of its boundary has the set on both sides and nothing else; a **seam** is exactly such a piece. The axes bounding XOR each have an outside quadrant on one side, so they are erased and re-erased by closure and interior without residue. The point 1 in (0,1) ∪ (1,2) has the region on both sides and is recovered by closure, never removed by interior. Non-separability (Minsky–Papert 1969, **[C]**) and ordinariness are therefore distinct properties that happen to both first appear at depth two: XOR has the first and not the second; the composed region has both (no half-line equals (0,1) ∪ (1,2)), and it is the second, not the first, that opens the four-fold. The famous "hard" function for the perceptron is on the classical side of the line this note draws, and what ends at Levin's threshold is not the thing the XOR story is usually taken to show.
+
 ## 6. The destruction ledger: phantom mass and the co-aperture
 
 The seam of §5 is one observer's blind spot at one element. The aggregate measure, developed to closed form in the companion aperture paper (Brink 2026d, §7 of the current version) and summarized here because §7 depends on it:
@@ -117,7 +129,7 @@ All statements were registered with hand-computed expectations before the Lean w
 
 ## 8. What this note claims, and what it does not
 
-Claimed: the bridge (threshold devices are Heyting elements; single units regular; composition ordinary; remainder = wall) **[K]**; the destruction ledger with closed forms and independence **[K]**; the registered negative result with its codimension-2 mechanism and the two survivors **[R]**.
+Claimed: the bridge (threshold devices are Heyting elements; single units regular; composition ordinary; remainder = wall; XOR regular, so separability and regularity are distinct lines) **[K]**; the destruction ledger with closed forms and independence **[K]**; the registered negative result with its codimension-2 mechanism and the two survivors **[R]**.
 
 Not claimed: that the ¬¬-remainder *is* Levin's hallucination mechanism (graded **[A]**, an interpretive identification); that any observer family beyond morphological closing sees nothing in trained nets (the honesty note); the corridor conjecture — that realizable regions are regular below the Cover transition, saturate toward density above it, and are ordinary exactly in between — which remains **[O]** and untouched; and any transfer of the pilot's negative result beyond ReLU MLPs of the tested class.
 
@@ -136,6 +148,7 @@ All formal results are in Lean 4 against Mathlib4; no `sorry`, no `native_decide
 | Composed ordinary (5.2) | `composed_not_regular`, `composed_not_dense`, `composed_ordinary` | ibid. |
 | Four-fold at composed (5.3) | `composed_allFourCells` | ibid. |
 | Remainder = wall (5.4) | `composed_seam` | ibid. |
+| XOR regular, not dense, not ordinary, no seam (5.6) | `xorRegion_regular`, `xorRegion_not_dense`, `xorRegion_not_ordinary`, `xorRegion_seam` | `Examples/PerceptronXor.lean` |
 | Confusion class (6.2) | `IsNucleus.le_apply_iff` | `Lattice/CoApertureClosedForm.lean` |
 | Chain closed form (6.4.1) | `coaperture_chain_add` | ibid. |
 | Exact multiplicativity (6.4.2) | `coaperture_pi` | ibid. |
@@ -149,9 +162,9 @@ Empirical artifacts: `phantom-study/SPEC.md` (registered spec, Phase 0 and Phase
 
 ## How to cite
 
-> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.1, September 2026. Zenodo. doi:10.5281/zenodo.22779865. (v1.0: 10.5281/zenodo.22715062; all versions: 10.5281/zenodo.22715061.)
+> Brink, C. (2026). *The perceptron is a classical element: threshold decision regions in the Heyting algebra of open sets, with a registered negative result on phantom mass in trained networks.* Preprint v1.2, October 2026. Zenodo, all versions: doi:10.5281/zenodo.22715061. (v1.1: 10.5281/zenodo.22779865; v1.0: 10.5281/zenodo.22715062. v1.2 not yet deposited.)
 
-The Lean formalization and the registered empirical artifacts are part of the citable object: `lean/FalseWorkPapers/Examples/PerceptronRegular.lean`, `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`, and `phantom-study/` at github.com/thefalsework/papers.
+The Lean formalization and the registered empirical artifacts are part of the citable object: `lean/FalseWorkPapers/Examples/PerceptronRegular.lean`, `lean/FalseWorkPapers/Examples/PerceptronXor.lean`, `lean/FalseWorkPapers/Lattice/CoApertureClosedForm.lean`, and `phantom-study/` at github.com/thefalsework/papers.
 
 ---
 
@@ -171,10 +184,13 @@ The Lean formalization and the registered empirical artifacts are part of the ci
 - Levin, I. (2026b). From symbols to geometry: an indexical epistemology of generative AI. *Synthese*, 208:132. doi:10.1007/s11229-026-05778-5.
 - Mac Lane, S., & Moerdijk, I. (1992). *Sheaves in Geometry and Logic.* Springer.
 - Mathlib Community (2026). Mathlib4. github.com/leanprover-community/mathlib4.
+- Minsky, M., & Papert, S. (1969). *Perceptrons: An Introduction to Computational Geometry.* MIT Press.
 - Montúfar, G., Pascanu, R., Cho, K., & Bengio, Y. (2014). On the number of linear regions of deep neural networks. *NeurIPS 2014*.
+- Novikoff, A. B. J. (1962). On convergence proofs on perceptrons. *Proceedings of the Symposium on the Mathematical Theory of Automata*, 12, 615–622.
 - Nguyen, Q., Mukkamala, M. C., & Hein, M. (2018). Neural networks should be wide enough to learn disconnected decision regions. *ICML 2018*.
 - Piwek, P., et al. (2023). Exact count of boundary pieces of ReLU classifiers: towards the proper complexity measure for classification. *UAI 2023 (PMLR 216)*.
 - Ramamurthy, K. N., Varshney, K. R., & Mody, K. (2019). Topological data analysis of decision boundaries with application to model selection. *ICML 2019*.
+- Rosenblatt, F. (1958). The perceptron: a probabilistic model for information storage and organization in the brain. *Psychological Review*, 65(6), 386–408.
 - Szegedy, C., et al. (2013). Intriguing properties of neural networks. arXiv:1312.6199.
 - Tanay, T., & Griffin, L. (2016). A boundary tilting perspective on the phenomenon of adversarial examples. arXiv:1608.07690.
 - Yang, Y., et al. (2020). Boundary thickness and robustness in learning models. *NeurIPS 2020*.
