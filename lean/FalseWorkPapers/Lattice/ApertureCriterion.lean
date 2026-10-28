@@ -44,6 +44,18 @@ Two consequences are drawn here.
   four-fold.  Only refinement that lowers the bottom — revealing a
   point beneath something the coarser observer took as ground — can.
 
+* **Witness triples** (`opens_subNucleus_iff_witnessTriple`).  A
+  *witness triple* for `k` is a 2-chain `c < x` with `c` inside `k`
+  and `x` outside, plus a point `u` outside `k` incomparable to both
+  — the join-irreducibles of Div12, with `k` as the tritone.  `j_S`
+  opens `k` iff `S` contains a triple *valid in `S`* (no point of
+  `S ∩ k` below `u`; every point of `S \ k` below `x` anchored by a
+  point of `S ∩ k`).  The coarsest opening observers are exactly the
+  triples themselves (`WitnessTriple.eq_of_subset_opens`): every
+  observer that keeps a distinction generative contains a
+  sub-observer seeing exactly the tritone lattice.  The triple form
+  was stated 2026-10-27; this file kernel-checks it.
+
 The sweep found that apertures are *not* order-convex in the nucleus
 lattice in general (12,355 of 31,910 non-empty apertures through seven
 points fail), and the smallest failure is in the aperture paper's own
@@ -54,6 +66,7 @@ data.  It is `decide`d here on the exponent poset of Div180
 the bottom: adding the point `1` beneath `4`.
 -/
 import FalseWorkPapers.Lattice.ObserverClassification
+import Mathlib.Data.Set.Card
 import Mathlib.Order.Minimal
 import Mathlib.Order.Preorder.Finite
 
@@ -250,6 +263,189 @@ theorem opens_subNucleus_of_subset_of_bot_eq [Finite P] {S T : Set P}
   obtain ⟨⟨m, hm, hmk⟩, ⟨s, hsS, hsk, hs⟩⟩ := h
   exact ⟨⟨m, (hmin m).mp hm, hmk⟩,
     ⟨s, hST hsS, hsk, fun m' hm' hm's => hs m' ((hmin m').mpr hm') hm's⟩⟩
+
+/-! ## Witness triples: every opening observer contains a Div12 -/
+
+/-- A **witness triple** for a down-set `k`: a 2-chain `c < x` with
+`c` inside `k` and `x` outside, plus a point `u` outside `k`
+incomparable to both.  The induced poset on `{c, x, u}` is a 2-chain
+plus a point — the join-irreducibles of Div12 — and the trace of `k`
+on it is the tritone. -/
+structure WitnessTriple (k : LowerSet P) where
+  c : P
+  x : P
+  u : P
+  c_mem : c ∈ k
+  x_notMem : x ∉ k
+  u_notMem : u ∉ k
+  c_lt_x : c < x
+  c_not_le_u : ¬ c ≤ u
+  u_not_le_x : ¬ u ≤ x
+
+namespace WitnessTriple
+
+variable {k : LowerSet P}
+
+/-- The three points of the triple, as a set. -/
+def carrier (t : WitnessTriple k) : Set P := {t.c, t.x, t.u}
+
+@[simp]
+theorem mem_carrier {t : WitnessTriple k} {y : P} :
+    y ∈ t.carrier ↔ y = t.c ∨ y = t.x ∨ y = t.u := by
+  simp [carrier]
+
+theorem c_mem_carrier (t : WitnessTriple k) : t.c ∈ t.carrier := by simp
+theorem x_mem_carrier (t : WitnessTriple k) : t.x ∈ t.carrier := by simp
+theorem u_mem_carrier (t : WitnessTriple k) : t.u ∈ t.carrier := by simp
+
+theorem c_ne_x (t : WitnessTriple k) : t.c ≠ t.x := t.c_lt_x.ne
+theorem c_ne_u (t : WitnessTriple k) : t.c ≠ t.u := fun h => t.c_not_le_u (h ▸ le_rfl)
+theorem x_ne_u (t : WitnessTriple k) : t.x ≠ t.u := fun h => t.u_not_le_x (h ▸ le_rfl)
+
+/-- `u` is incomparable to `c`. -/
+theorem u_not_le_c (t : WitnessTriple k) : ¬ t.u ≤ t.c :=
+  fun h => t.u_not_le_x (h.trans t.c_lt_x.le)
+
+/-- `x` is incomparable to `u`. -/
+theorem x_not_le_u (t : WitnessTriple k) : ¬ t.x ≤ t.u :=
+  fun h => t.c_not_le_u (t.c_lt_x.le.trans h)
+
+theorem ncard_carrier (t : WitnessTriple k) : t.carrier.ncard = 3 := by
+  classical
+  rw [Set.ncard_eq_three]
+  exact ⟨t.c, t.x, t.u, t.c_ne_x, t.c_ne_u, t.x_ne_u, rfl⟩
+
+/-- A triple is **valid in `S`** when `S` sees all three points, no
+point of `S ∩ k` lies below `u` (so `u` still witnesses non-density),
+and every point of `S \ k` below `x` is anchored by a point of
+`S ∩ k` (so `x` still witnesses non-regularity). -/
+def IsValidIn (t : WitnessTriple k) (S : Set P) : Prop :=
+  t.carrier ⊆ S ∧
+    (∀ y ∈ S, y ∈ k → ¬ y ≤ t.u) ∧
+    (∀ y ∈ S, y ∉ k → y ≤ t.x → ∃ z ∈ S, z ∈ k ∧ z ≤ y)
+
+/-- A witness triple is always valid in itself: `c ≰ u`, and the only
+point of the triple outside `k` below `x` is `x` itself, which `c`
+anchors. -/
+theorem valid_in_self (t : WitnessTriple k) : t.IsValidIn t.carrier := by
+  refine ⟨subset_rfl, ?_, ?_⟩
+  · intro y hy hyk hyu
+    rcases mem_carrier.mp hy with rfl | rfl | rfl
+    · exact t.c_not_le_u hyu
+    · exact t.x_notMem hyk
+    · exact t.u_notMem hyk
+  · intro y hy hyk hyx
+    rcases mem_carrier.mp hy with rfl | rfl | rfl
+    · exact (hyk t.c_mem).elim
+    · exact ⟨t.c, t.c_mem_carrier, t.c_mem, t.c_lt_x.le⟩
+    · exact (t.u_not_le_x hyx).elim
+
+end WitnessTriple
+
+/-- Every member of a finite set has an `S`-minimal point below it. -/
+theorem exists_minimal_le_mem [Finite P] {S : Set P} {s : P} (hs : s ∈ S) :
+    ∃ m, Minimal (· ∈ S) m ∧ m ≤ s := by
+  haveI : Finite ↥S := Subtype.finite
+  obtain ⟨m, hle, hmin⟩ :=
+    Finite.exists_le_minimal (p := fun _ : ↥S => True) (a := ⟨s, hs⟩) trivial
+  exact ⟨m.1, (isMin_subtype_iff m).mp (minimal_true.mp hmin),
+    Subtype.coe_le_coe.mp hle⟩
+
+/-- **The witness-triple theorem.**  `j_S` opens `k` iff `S` contains
+a witness triple valid in `S`.  Equivalent to
+`opens_subNucleus_iff_minimal`; the triple form makes the coarsest
+observers visible as copies of Div12. -/
+theorem opens_subNucleus_iff_witnessTriple [Finite P] (S : Set P)
+    (k : LowerSet P) :
+    Opens (subNucleus S) k ↔ ∃ t : WitnessTriple k, t.IsValidIn S := by
+  rw [opens_subNucleus_iff_minimal]
+  constructor
+  · rintro ⟨⟨m, hm, hmk⟩, ⟨s, hsS, hsk, hs⟩⟩
+    obtain ⟨c, hcMin, hcs⟩ := exists_minimal_le_mem hsS
+    have hck : c ∈ k := hs c hcMin hcs
+    have hclt : c < s := lt_of_le_of_ne hcs fun he => hsk (he ▸ hck)
+    have hmns : ¬ m ≤ s := fun hms => hmk (hs m hm hms)
+    have hcnm : ¬ c ≤ m := fun hcm =>
+      hmk (by rw [le_antisymm (hm.le_of_le hcMin.prop hcm) hcm]; exact hck)
+    refine ⟨⟨c, s, m, hck, hsk, hmk, hclt, hcnm, hmns⟩, ?_⟩
+    refine ⟨?_, ?_, ?_⟩
+    · intro y hy
+      rcases WitnessTriple.mem_carrier.mp hy with rfl | rfl | rfl
+      · exact hcMin.prop
+      · exact hsS
+      · exact hm.prop
+    · intro y hyS hyk hyu
+      exact hmk (by rw [le_antisymm (hm.le_of_le hyS hyu) hyu]; exact hyk)
+    · intro y hyS hyk hys
+      obtain ⟨m', hm'Min, hm'y⟩ := exists_minimal_le_mem hyS
+      exact ⟨m', hm'Min.prop, hs m' hm'Min (hm'y.trans hys), hm'y⟩
+  · rintro ⟨t, hcar, hnd, hnr⟩
+    obtain ⟨m, hmMin, hmu⟩ := exists_minimal_le_mem (hcar t.u_mem_carrier)
+    have hmk : m ∉ k := fun h => hnd m hmMin.prop h hmu
+    refine ⟨⟨m, hmMin, hmk⟩, ⟨t.x, hcar t.x_mem_carrier, t.x_notMem, ?_⟩⟩
+    intro m' hm'Min hm'x
+    by_contra hm'k
+    obtain ⟨z, hzS, hzk, hzm'⟩ := hnr m' hm'Min.prop hm'k hm'x
+    exact hm'k (by rw [le_antisymm (hm'Min.le_of_le hzS hzm') hzm']; exact hzk)
+
+/-- Every opening observer contains a sub-observer whose world is the
+tritone lattice, with `k` as the tritone. -/
+theorem exists_witnessTriple_subset [Finite P] {S : Set P} {k : LowerSet P}
+    (h : Opens (subNucleus S) k) :
+    ∃ t : WitnessTriple k, t.carrier ⊆ S ∧ Opens (subNucleus t.carrier) k := by
+  obtain ⟨t, hv⟩ := (opens_subNucleus_iff_witnessTriple S k).mp h
+  exact ⟨t, hv.1,
+    (opens_subNucleus_iff_witnessTriple t.carrier k).mpr ⟨t, t.valid_in_self⟩⟩
+
+/-- The coarsest observers that open `k` are exactly the witness
+triples: no proper subset of a triple opens `k`. -/
+theorem WitnessTriple.eq_of_subset_opens [Finite P] {k : LowerSet P}
+    (t : WitnessTriple k)
+    {T : Set P} (hT : T ⊆ t.carrier) (hopen : Opens (subNucleus T) k) :
+    T = t.carrier := by
+  obtain ⟨t', hv⟩ := (opens_subNucleus_iff_witnessTriple T k).mp hopen
+  have hsub : t'.carrier ⊆ t.carrier := hv.1.trans hT
+  have : t'.carrier = t.carrier :=
+    Set.eq_of_subset_of_ncard_le hsub (by simp [t'.ncard_carrier, t.ncard_carrier])
+  exact subset_antisymm hT (this ▸ hv.1)
+
+/-- An inclusion-minimal opening observer is a witness triple. -/
+theorem exists_witnessTriple_eq_carrier_of_minimal [Finite P]
+    {S : Set P} {k : LowerSet P}
+    (h : Opens (subNucleus S) k)
+    (hmin : ∀ T ⊆ S, Opens (subNucleus T) k → T = S) :
+    ∃ t : WitnessTriple k, S = t.carrier := by
+  obtain ⟨t, hv⟩ := (opens_subNucleus_iff_witnessTriple S k).mp h
+  have : t.carrier = S :=
+    hmin t.carrier hv.1
+      ((opens_subNucleus_iff_witnessTriple t.carrier k).mpr ⟨t, t.valid_in_self⟩)
+  exact ⟨t, this.symm⟩
+
+/-- **Positivity.**  Some observer opens `k` iff `P` contains a witness
+triple. -/
+theorem exists_opens_iff_exists_witnessTriple [Finite P] (k : LowerSet P) :
+    (∃ S, Opens (subNucleus S) k) ↔ Nonempty (WitnessTriple k) := by
+  constructor
+  · rintro ⟨S, h⟩
+    obtain ⟨t, _⟩ := (opens_subNucleus_iff_witnessTriple S k).mp h
+    exact ⟨t⟩
+  · rintro ⟨t⟩
+    exact ⟨t.carrier,
+      (opens_subNucleus_iff_witnessTriple t.carrier k).mpr ⟨t, t.valid_in_self⟩⟩
+
+/-- The identity (full-resolution) observer opens `k` iff some witness
+triple is unspoiled in `P`. -/
+theorem opens_univ_iff_exists_valid [Finite P] (k : LowerSet P) :
+    Opens (subNucleus Set.univ) k ↔ ∃ t : WitnessTriple k, t.IsValidIn Set.univ :=
+  opens_subNucleus_iff_witnessTriple Set.univ k
+
+/-- **Latency.**  `k` is latent — not ordinary at full resolution, yet
+some observer opens it — iff `P` contains witness triples and every
+one of them is spoiled in `P`. -/
+theorem latent_iff_all_triples_spoiled [Finite P] (k : LowerSet P) :
+    (¬ Opens (subNucleus Set.univ) k ∧ ∃ S, Opens (subNucleus S) k) ↔
+      Nonempty (WitnessTriple k) ∧ ∀ t : WitnessTriple k, ¬ t.IsValidIn Set.univ := by
+  rw [exists_opens_iff_exists_witnessTriple, opens_univ_iff_exists_valid, not_exists, and_comm]
 
 end Criterion
 

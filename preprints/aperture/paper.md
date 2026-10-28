@@ -22,12 +22,14 @@ kernel-checked independence from the aperture in both directions
 renumbered §§8–10.
 v0.5 (2026-10-28, repository text) adds the companion note `aperture-shape-note.md`:
 apertures are **not** order-convex in the nucleus lattice (first failure at five
-join-irreducibles, on Div180 at kernel 6, kernel-checked), and the structural statement
-that replaces convexity is a pointwise **aperture criterion** on down-set algebras
-(`lean/FalseWorkPapers/Lattice/ApertureCriterion.lean`): with M the minimal points the
-observer sees, j_S opens k iff some point of M is outside k and some seen point outside k
-has all its M-predecessors inside k. Consequence: refinement that keeps the observer's
-bottom never closes a four-fold; only refinement that lowers it can. No change to §§1–10.
+join-irreducibles, on Div180 at kernel 6, kernel-checked). The structural replacement is
+the **witness-triple theorem** (`opens_subNucleus_iff_witnessTriple`): j_S opens k iff S
+contains a 2-chain-plus-a-point valid in S — a copy of Div12 with k as the tritone — and
+the coarsest opening observers are exactly those triples. Equivalent pointwise form: with
+M the minimal points the observer sees, j_S opens k iff some point of M is outside k and
+some seen point outside k has all its M-predecessors inside k. Consequence: refinement
+that keeps the observer's bottom never closes a four-fold; only refinement that lowers it
+can. No change to §§1–10.
 **Cite as.** Brink, C. (2026). *The aperture of a distinction: observer-relative
 ordinariness in Heyting algebras.* Preprint v0.4, September 2026. Zenodo.
 doi:10.5281/zenodo.22715068.
@@ -252,7 +254,8 @@ The disanalogy, stated with equal weight **[O]**: nuclei model *static* resoluti
 | co-aperture divisor closed form (Thm 7.4.3) | [K] (`coaperture_closed_form_pi`, ibid.; every arity) |
 | aperture/co-aperture independence, both directions (Thm 7.5) | [K] (four `decide`d witnesses on Div24 and Div72, ibid.) |
 | co-aperture beyond products of chains; extremal/comparative structure | [O] |
-| aperture criterion via minimal points; fiber monotonicity (same bottom ⇒ refinement never closes) | [K] (`opens_subNucleus_iff_minimal`, `opens_subNucleus_of_subset_of_bot_eq`, `ApertureCriterion.lean`; see `aperture-shape-note.md`) |
+| witness-triple theorem: j_S opens k iff S contains a valid Div12-triple; coarsest observers are the triples; every opening observer contains a Div12 | [K] (`opens_subNucleus_iff_witnessTriple`, `exists_witnessTriple_subset`, `ApertureCriterion.lean`; see `aperture-shape-note.md`) |
+| aperture criterion via minimal points; fiber monotonicity (same bottom ⇒ refinement never closes) | [K] (`opens_subNucleus_iff_minimal`, `opens_subNucleus_of_subset_of_bot_eq`, ibid.) |
 | apertures not order-convex in the nucleus lattice (Div180, kernel 6) | [K] (`aperture_not_convex_div180`, ibid.); 39% of non-empty apertures through seven join-irreducibles [computed] (`wolfram/aperture-shape.mjs`) |
 | nuclei-as-observers mapping | [A] |
 | bridge from aperture to dynamical/temporal irreducibility | [O], explicitly untouched |
