@@ -41,4 +41,6 @@ import FalseWorkPapers.Lattice.AlexandrovBoolean
 import FalseWorkPapers.Lattice.BridgeDownSets
 import FalseWorkPapers.Lattice.ObserverClassification
 import FalseWorkPapers.Lattice.ApertureCriterion
+import FalseWorkPapers.Lattice.RiegerNishimuraAperture
+import FalseWorkPapers.Lattice.LatentFamily
 import FalseWorkPapers.Lattice.FalseworkInequality

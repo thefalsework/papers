@@ -56,6 +56,13 @@ Two consequences are drawn here.
   sub-observer seeing exactly the tritone lattice.  The triple form
   was stated 2026-10-27; this file kernel-checks it.
 
+* **Shape.**  The aperture is the union of the cones `{S | t.IsValidIn S}`
+  (`opens_subNucleus_iff_mem_union`).  A triple is *unspoilable* when
+  extra points never close it (`WitnessTriple.Unspoilable`); then its
+  cone is the principal up-set of the carrier.  The identity is the
+  unique opening observer iff `P` itself is a witness triple
+  (`rigid_aperture_iff`) — Div12 with `k` the tritone.
+
 The sweep found that apertures are *not* order-convex in the nucleus
 lattice in general (12,355 of 31,910 non-empty apertures through seven
 points fail), and the smallest failure is in the aperture paper's own
@@ -67,6 +74,7 @@ the bottom: adding the point `1` beneath `4`.
 -/
 import FalseWorkPapers.Lattice.ObserverClassification
 import Mathlib.Data.Set.Card
+import Mathlib.Data.Set.Lattice
 import Mathlib.Order.Minimal
 import Mathlib.Order.Preorder.Finite
 
@@ -446,6 +454,97 @@ theorem latent_iff_all_triples_spoiled [Finite P] (k : LowerSet P) :
     (¬ Opens (subNucleus Set.univ) k ∧ ∃ S, Opens (subNucleus S) k) ↔
       Nonempty (WitnessTriple k) ∧ ∀ t : WitnessTriple k, ¬ t.IsValidIn Set.univ := by
   rw [exists_opens_iff_exists_witnessTriple, opens_univ_iff_exists_valid, not_exists, and_comm]
+
+/-- The aperture is the union, over witness triples `t`, of the cones
+`{ S | t.IsValidIn S }`. -/
+theorem opens_subNucleus_iff_mem_union [Finite P] (S : Set P) (k : LowerSet P) :
+    Opens (subNucleus S) k ↔
+      S ∈ ⋃ t : WitnessTriple k, {S' : Set P | t.IsValidIn S'} := by
+  rw [opens_subNucleus_iff_witnessTriple, Set.mem_iUnion]
+  simp
+
+/-- A triple is **unspoilable** when extra points never close it: it is
+valid in every observer that sees its three points.  Then its cone is
+the principal up-set of the carrier. -/
+def WitnessTriple.Unspoilable {k : LowerSet P} (t : WitnessTriple k) : Prop :=
+  ∀ S : Set P, t.carrier ⊆ S → t.IsValidIn S
+
+theorem WitnessTriple.valid_iff_subset_of_unspoilable {k : LowerSet P}
+    (t : WitnessTriple k) (h : t.Unspoilable) (S : Set P) :
+    t.IsValidIn S ↔ t.carrier ⊆ S :=
+  ⟨fun hv => hv.1, h S⟩
+
+/-- Unspoilable iff nothing of `k` lies below `u`, and every point of
+`↓x \ k` already lies above `c` (so the carrier itself anchors
+non-regularity). -/
+theorem WitnessTriple.unspoilable_iff {k : LowerSet P} (t : WitnessTriple k) :
+    t.Unspoilable ↔
+      (∀ y, y ∈ k → ¬ y ≤ t.u) ∧ (∀ y, y ∉ k → y ≤ t.x → t.c ≤ y) := by
+  constructor
+  · intro h
+    constructor
+    · intro y hyk hyu
+      have hv := h Set.univ (fun _ _ => trivial)
+      exact hv.2.1 y trivial hyk hyu
+    · intro y hyk hyx
+      have hv := h (insert y t.carrier) (Set.subset_insert y t.carrier)
+      have hyS : y ∈ insert y t.carrier := Set.mem_insert y t.carrier
+      obtain ⟨z, hzS, hzk, hzy⟩ := hv.2.2 y hyS hyk hyx
+      rw [Set.mem_insert_iff] at hzS
+      rcases hzS with rfl | hz
+      · exact (hyk hzk).elim
+      · rcases WitnessTriple.mem_carrier.mp hz with rfl | rfl | rfl
+        · exact hzy
+        · exact (t.x_notMem hzk).elim
+        · exact (t.u_notMem hzk).elim
+  · intro ⟨hnd, hnr⟩ S hS
+    refine ⟨hS, fun y hyS hyk hyu => hnd y hyk hyu, ?_⟩
+    intro y hyS hyk hyx
+    exact ⟨t.c, hS t.c_mem_carrier, t.c_mem, hnr y hyk hyx⟩
+
+theorem opens_of_unspoilable [Finite P] {S : Set P} {k : LowerSet P}
+    (t : WitnessTriple k) (h : t.Unspoilable) (hS : t.carrier ⊆ S) :
+    Opens (subNucleus S) k :=
+  (opens_subNucleus_iff_witnessTriple S k).mpr ⟨t, h S hS⟩
+
+/-- If every witness triple has the same carrier and that triple is
+unspoilable, the aperture is the principal up-set of the carrier. -/
+theorem opens_iff_core_subset [Finite P] {k : LowerSet P}
+    (t : WitnessTriple k) (hu : t.Unspoilable)
+    (heq : ∀ t' : WitnessTriple k, t'.carrier = t.carrier) (S : Set P) :
+    Opens (subNucleus S) k ↔ t.carrier ⊆ S := by
+  constructor
+  · intro h
+    obtain ⟨t', hv⟩ := (opens_subNucleus_iff_witnessTriple S k).mp h
+    rw [← heq t']; exact hv.1
+  · exact fun hS => opens_of_unspoilable t hu hS
+
+/-- **Rigid ordinary.**  The identity is the unique opening observer iff
+`P` itself is a witness triple for `k` — i.e. `P` is the three-point
+poset of Div12, with `k` the tritone. -/
+theorem rigid_aperture_iff [Finite P] (k : LowerSet P) :
+    (∀ S, Opens (subNucleus S) k ↔ S = (Set.univ : Set P)) ↔
+      ∃ t : WitnessTriple k, t.carrier = Set.univ := by
+  constructor
+  · intro h
+    have hU : Opens (subNucleus Set.univ) k := (h _).mpr rfl
+    obtain ⟨t, hv⟩ := (opens_subNucleus_iff_witnessTriple _ k).mp hU
+    have hopen : Opens (subNucleus t.carrier) k :=
+      (opens_subNucleus_iff_witnessTriple t.carrier k).mpr ⟨t, t.valid_in_self⟩
+    exact ⟨t, (h t.carrier).mp hopen⟩
+  · rintro ⟨t, ht⟩ S
+    constructor
+    · intro hS
+      obtain ⟨t', hv⟩ := (opens_subNucleus_iff_witnessTriple S k).mp hS
+      have : t'.carrier = Set.univ := by
+        have hn : t'.carrier.ncard = t.carrier.ncard := by
+          simp [t'.ncard_carrier, t.ncard_carrier]
+        exact Set.eq_of_subset_of_ncard_le (fun _ _ => trivial)
+          (by simp [hn, ht])
+      exact Set.eq_univ_of_univ_subset (this ▸ hv.1)
+    · rintro rfl
+      exact (opens_subNucleus_iff_witnessTriple _ k).mpr
+        ⟨t, ht ▸ t.valid_in_self⟩
 
 end Criterion
 

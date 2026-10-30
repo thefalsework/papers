@@ -257,6 +257,9 @@ The disanalogy, stated with equal weight **[O]**: nuclei model *static* resoluti
 | witness-triple theorem: j_S opens k iff S contains a valid Div12-triple; coarsest observers are the triples; every opening observer contains a Div12 | [K] (`opens_subNucleus_iff_witnessTriple`, `exists_witnessTriple_subset`, `ApertureCriterion.lean`; see `aperture-shape-note.md`) |
 | aperture criterion via minimal points; fiber monotonicity (same bottom ⇒ refinement never closes) | [K] (`opens_subNucleus_iff_minimal`, `opens_subNucleus_of_subset_of_bot_eq`, ibid.) |
 | apertures not order-convex in the nucleus lattice (Div180, kernel 6) | [K] (`aperture_not_convex_div180`, ibid.); 39% of non-empty apertures through seven join-irreducibles [computed] (`wolfram/aperture-shape.mjs`) |
+| one-eighth law on Z_{2m}: unique unspoilable triple; Ap(g) = supersets of {q₁,q₂,q₃} | [K] (`opens_g_iff_core_subset`, `RiegerNishimuraAperture.lean`); odd truncations [computed] n=7..14 |
+| rigid ordinary: identity unique in Ap iff P is a witness triple | [K] (`rigid_aperture_iff`) |
+| two-chain latent family: two bottoms on Cₙ ⊔ Cₘ (n,m≥2) | [K] (`twoChain_latent`, `LatentFamily.lean`) |
 | nuclei-as-observers mapping | [A] |
 | bridge from aperture to dynamical/temporal irreducibility | [O], explicitly untouched |
 
